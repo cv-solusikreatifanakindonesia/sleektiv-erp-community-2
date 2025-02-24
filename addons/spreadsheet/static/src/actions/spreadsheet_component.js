@@ -1,12 +1,12 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { useSpreadsheetNotificationStore } from "@spreadsheet/hooks";
-import { Spreadsheet, Model } from "@odoo/o-spreadsheet";
-import { Component } from "@odoo/owl";
+import { Spreadsheet, Model } from "@sleektiv/o-spreadsheet";
+import { Component } from "@sleektiv/owl";
 
 /**
  * Component wrapping the <Spreadsheet> component from o-spreadsheet
- * to add user interactions extensions from odoo such as notifications,
+ * to add user interactions extensions from sleektiv such as notifications,
  * error dialogs, etc.
  */
 export class SpreadsheetComponent extends Component {

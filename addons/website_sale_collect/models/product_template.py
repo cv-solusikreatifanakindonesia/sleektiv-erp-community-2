@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
+from sleektiv import models
 
-from odoo.addons.website_sale_collect import utils
+from sleektiv.addons.website_sale_collect import utils
 
 
 class ProductTemplate(models.Model):

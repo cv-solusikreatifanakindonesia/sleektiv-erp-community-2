@@ -1,6 +1,6 @@
 import { getRunner } from "@web/../lib/hoot/main_runner";
 import { patch } from "@web/core/utils/patch";
-import { stores } from "@odoo/o-spreadsheet";
+import { stores } from "@sleektiv/o-spreadsheet";
 
 const { RendererStore } = stores;
 

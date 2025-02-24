@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { click, editInput, getFixture } from "@web/../tests/helpers/utils";
 import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";

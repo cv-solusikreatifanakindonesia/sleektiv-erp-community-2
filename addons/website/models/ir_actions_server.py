@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from werkzeug import urls
 
-from odoo import api, fields, models
-from odoo.http import request
-from odoo.tools.json import scriptsafe as json_scriptsafe
+from sleektiv import api, fields, models
+from sleektiv.http import request
+from sleektiv.tools.json import scriptsafe as json_scriptsafe
 
 
 class ServerAction(models.Model):

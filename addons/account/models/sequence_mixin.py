@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from datetime import date
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.misc import format_date
-from odoo.tools import frozendict, mute_logger, date_utils, SQL
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools.misc import format_date
+from sleektiv.tools import frozendict, mute_logger, date_utils, SQL
 
 import re
 from collections import defaultdict
@@ -339,7 +339,7 @@ class SequenceMixin(models.AbstractModel):
             format_values['seq'] = format_values['seq'] + 1
             sequence = format_string.format(**format_values)
             try:
-                with self.env.cr.savepoint(flush=False), mute_logger('odoo.sql_db'):
+                with self.env.cr.savepoint(flush=False), mute_logger('sleektiv.sql_db'):
                     self[self._sequence_field] = sequence
                     self.flush_recordset([self._sequence_field])
                     break

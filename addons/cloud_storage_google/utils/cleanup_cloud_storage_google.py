@@ -13,7 +13,7 @@ from urllib.parse import quote
 
 # +--------+ 3. search_read ir.attachments with cloud urls +---------+
 # |        | --------------------------------------------> |         |
-# |        | <-------------------------------------------- |  Odoo   |
+# |        | <-------------------------------------------- |  Sleektiv   |
 # |        | 4. used urls                                  |         |
 # |        |                                               |         |
 # | Script |                                               +---------+
@@ -32,11 +32,11 @@ from urllib.parse import quote
 # 1, 2, 3, 4 are done in batch
 # 5, 6 are done with threadpool
 
-# Odoo
-odoo_url = 'http://localhost:8069'
-odoo_db = 'odoo_db'
-odoo_username = 'admin'
-odoo_password = 'admin'
+# Sleektiv
+sleektiv_url = 'http://localhost:7073'
+sleektiv_db = 'sleektiv_db'
+sleektiv_username = 'admin'
+sleektiv_password = 'admin'
 
 # Google service account
 GOOGLE_CLOUD_STORAGE_ENDPOINT = 'https://storage.googleapis.com'
@@ -86,12 +86,12 @@ def split_every(n, iterable, piece_maker=tuple):
 
 
 def get_blobs_to_be_deleted(blob_urls, batch_size=1000):
-    common = xmlrpc.client.ServerProxy(f'{odoo_url}/xmlrpc/2/common')
-    uid = common.authenticate(odoo_db, odoo_username, odoo_password, {})
-    models = xmlrpc.client.ServerProxy(f'{odoo_url}/xmlrpc/2/object')
+    common = xmlrpc.client.ServerProxy(f'{sleektiv_url}/xmlrpc/2/common')
+    uid = common.authenticate(sleektiv_db, sleektiv_username, sleektiv_password, {})
+    models = xmlrpc.client.ServerProxy(f'{sleektiv_url}/xmlrpc/2/object')
     for blob_urls_ in split_every(batch_size, blob_urls):
         blob_urls_ = list(blob_urls_)
-        attachments = models.execute_kw(odoo_db, uid, odoo_password, 'ir.attachment', 'search_read', [
+        attachments = models.execute_kw(sleektiv_db, uid, sleektiv_password, 'ir.attachment', 'search_read', [
             [('type', '=', 'cloud_storage'), ('url', 'in', blob_urls_)],
             ['url']
         ])

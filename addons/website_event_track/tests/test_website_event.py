@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 # -*- coding: utf-8 -*-
 
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
-from odoo.tools.image import base64_to_image
+from sleektiv.tests import tagged
+from sleektiv.tests.common import TransactionCase
+from sleektiv.tools.image import base64_to_image
 from io import BytesIO
 from PIL import Image
 import base64

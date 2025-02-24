@@ -1,7 +1,7 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { press, queryOne } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, useState, xml } from "@odoo/owl";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { press, queryOne } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, useState, xml } from "@sleektiv/owl";
 import { getService, mountWithCleanup } from "../web_test_helpers";
 
 import { MainComponentsContainer } from "@web/core/main_components_container";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { renderToElement } from "@web/core/utils/render";
 import options from "@web_editor/js/editor/snippets.options";

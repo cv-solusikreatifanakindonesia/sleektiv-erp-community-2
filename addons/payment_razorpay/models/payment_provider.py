@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import hashlib
 import hmac
@@ -7,10 +7,10 @@ import pprint
 
 import requests
 
-from odoo import _, fields, models
-from odoo.exceptions import ValidationError
+from sleektiv import _, fields, models
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.payment_razorpay import const
+from sleektiv.addons.payment_razorpay import const
 
 
 _logger = logging.getLogger(__name__)

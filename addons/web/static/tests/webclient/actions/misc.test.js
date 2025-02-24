@@ -1,7 +1,7 @@
-import { expect, getFixture, test } from "@odoo/hoot";
-import { queryOne, scroll } from "@odoo/hoot-dom";
-import { animationFrame, Deferred } from "@odoo/hoot-mock";
-import { Component, onWillStart, xml } from "@odoo/owl";
+import { expect, getFixture, test } from "@sleektiv/hoot";
+import { queryOne, scroll } from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred } from "@sleektiv/hoot-mock";
+import { Component, onWillStart, xml } from "@sleektiv/owl";
 import {
     contains,
     defineActions,

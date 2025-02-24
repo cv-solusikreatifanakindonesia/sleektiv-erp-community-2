@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Honduras - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -13,7 +13,7 @@ Agrega una nomenclatura contable para Honduras. También incluye impuestos y la
 moneda Lempira. -- Adds accounting chart for Honduras. It also includes taxes
 and the Lempira currency.""",
     'author': 'Salvatore Josue Trimarchi Pinto',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'base',
         'account',

@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { queryRect } from "@odoo/hoot-dom";
-import { animationFrame, mockTouch } from "@odoo/hoot-mock";
-import { Component, reactive, useRef, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { queryRect } from "@sleektiv/hoot-dom";
+import { animationFrame, mockTouch } from "@sleektiv/hoot-mock";
+import { Component, reactive, useRef, useState, xml } from "@sleektiv/owl";
 import { contains, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { useDraggable } from "@web/core/utils/draggable";

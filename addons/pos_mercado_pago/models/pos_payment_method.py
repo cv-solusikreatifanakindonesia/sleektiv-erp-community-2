@@ -1,7 +1,7 @@
 import logging
 
-from odoo import fields, models, _
-from odoo.exceptions import AccessError, UserError
+from sleektiv import fields, models, _
+from sleektiv.exceptions import AccessError, UserError
 
 from .mercado_pago_pos_request import MercadoPagoPosRequest
 

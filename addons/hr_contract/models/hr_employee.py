@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from pytz import timezone, UTC
 from datetime import date, datetime, time
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
-from odoo.addons.resource.models.utils import Intervals
-from odoo.exceptions import UserError
+from sleektiv import _, api, fields, models
+from sleektiv.osv import expression
+from sleektiv.addons.resource.models.utils import Intervals
+from sleektiv.exceptions import UserError
 
 
 class EmployeePublic(models.Model):

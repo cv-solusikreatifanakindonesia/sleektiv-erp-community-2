@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from "@web/core/registry";
 import { ORM } from "@web/core/orm_service";

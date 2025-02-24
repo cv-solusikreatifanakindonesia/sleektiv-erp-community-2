@@ -1,6 +1,6 @@
 import re
-from odoo import models, fields, _
-from odoo.exceptions import UserError
+from sleektiv import models, fields, _
+from sleektiv.exceptions import UserError
 
 
 class ResCompany(models.Model):
@@ -60,7 +60,7 @@ class ResCompany(models.Model):
             -   T: Tax Invoice (Standard), S: Simplified Invoice, C & Z will be used in the future and should
                 always be 0
             For example: 1100 would mean the Solution will be generating Standard and Simplified invoices.
-            We can assume Odoo-powered EGS solutions will always generate both Standard & Simplified invoices
+            We can assume Sleektiv-powered EGS solutions will always generate both Standard & Simplified invoices
         :return:
         """
         return '1100'

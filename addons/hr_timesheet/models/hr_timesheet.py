@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from statistics import mode
 import re
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError, AccessError, ValidationError
-from odoo.osv import expression
-from odoo.tools import format_list
-from odoo.tools.translate import _
+from sleektiv import api, fields, models
+from sleektiv.exceptions import UserError, AccessError, ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools import format_list
+from sleektiv.tools.translate import _
 
 
 class AccountAnalyticLine(models.Model):

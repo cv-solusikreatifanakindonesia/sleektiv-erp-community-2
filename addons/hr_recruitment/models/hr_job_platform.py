@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.tools import email_normalize
+from sleektiv import api, fields, models
+from sleektiv.tools import email_normalize
 
 
 class JobPlatform(models.Model):

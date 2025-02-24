@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
-import { mockDate, mockTimeZone } from "@odoo/hoot-mock";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { mockDate, mockTimeZone } from "@sleektiv/hoot-mock";
 import { patchTranslations, patchWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { Domain } from "@web/core/domain";

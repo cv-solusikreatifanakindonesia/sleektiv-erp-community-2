@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import websiteSaleAddress from '@website_sale/js/address';
 

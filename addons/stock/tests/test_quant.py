@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from contextlib import closing
 from datetime import datetime, timedelta
 from unittest.mock import patch
 from ast import literal_eval
 
-from odoo import Command, fields
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, TransactionCase
-from odoo.exceptions import AccessError, UserError
+from sleektiv import Command, fields
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import Form, TransactionCase
+from sleektiv.exceptions import AccessError, UserError
 
 
 class StockQuant(TransactionCase):
@@ -600,7 +600,7 @@ class StockQuant(TransactionCase):
             'product_id': self.product_lot.id,
         })
 
-        from odoo.fields import Datetime
+        from sleektiv.fields import Datetime
         in_date1 = Datetime.now()
         self.env['stock.quant']._update_available_quantity(self.product_lot, self.stock_location, 1.0, lot_id=lot1, in_date=in_date1)
 

@@ -1,7 +1,7 @@
-import { describe, test } from "@odoo/hoot";
+import { describe, test } from "@sleektiv/hoot";
 import { deleteBackward, insertLineBreak, insertText, undo } from "../_helpers/user_actions";
 import { testEditor } from "../_helpers/editor";
-import { animationFrame } from "@odoo/hoot-mock";
+import { animationFrame } from "@sleektiv/hoot-mock";
 
 describe("range collapsed", () => {
     test("should not change the url when a link is not edited", async () => {
@@ -119,9 +119,9 @@ describe("range collapsed", () => {
             stepFunction: async (editor) => {
                 await animationFrame();
                 await insertLineBreak(editor);
-                await insertText(editor, "odoo.com");
+                await insertText(editor, "sleektiv.com");
             },
-            contentAfter: '<p>a<a href="https://google.com">google.com</a><br>odoo.com[]b</p>',
+            contentAfter: '<p>a<a href="https://google.com">google.com</a><br>sleektiv.com[]b</p>',
         });
     });
 });

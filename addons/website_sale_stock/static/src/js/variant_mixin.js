@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import VariantMixin from "@website_sale/js/sale_variant_mixin";
 import { renderToFragment } from "@web/core/utils/render";
 import { formatFloat } from "@web/core/utils/numbers";
 
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 /**
  * Addition to the variant_mixin._onChangeCombination

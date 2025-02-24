@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Ethiopia - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -16,7 +16,7 @@ This is the latest Ethiopian Odoo localization and consists of:
     - Regional State listings
     """,
     'author': 'Michael Telahun Makonnen <mmakonnen@gmail.com>',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'account',
     ],

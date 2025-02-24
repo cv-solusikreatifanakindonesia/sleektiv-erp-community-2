@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
 class EfakturProductCode(models.Model):
     _name = "l10n_id_efaktur_coretax.product.code"

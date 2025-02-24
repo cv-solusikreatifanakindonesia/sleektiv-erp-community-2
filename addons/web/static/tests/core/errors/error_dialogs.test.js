@@ -1,13 +1,13 @@
 import { browser } from "@web/core/browser/browser";
-import { describe, test, expect } from "@odoo/hoot";
-import { animationFrame, tick } from "@odoo/hoot-mock";
+import { describe, test, expect } from "@sleektiv/hoot";
+import { animationFrame, tick } from "@sleektiv/hoot-mock";
 import {
     mountWithCleanup,
     patchWithCleanup,
     mockService,
     makeDialogMockEnv,
 } from "@web/../tests/web_test_helpers";
-import { click, freezeTime, queryAllTexts } from "@odoo/hoot-dom";
+import { click, freezeTime, queryAllTexts } from "@sleektiv/hoot-dom";
 import {
     ClientErrorDialog,
     Error504Dialog,
@@ -44,7 +44,7 @@ test("ErrorDialog with traceback", async () => {
     await click("main button");
     await animationFrame();
     expect(queryAllTexts("main .clearfix p")).toEqual([
-        "Odoo Error",
+        "Sleektiv Error",
         "Something bad happened",
         "Occured on 2019-03-11 09:30:00 GMT",
     ]);
@@ -77,7 +77,7 @@ test("Client ErrorDialog with traceback", async () => {
     await click("main button");
     await animationFrame();
     expect(queryAllTexts("main .clearfix p")).toEqual([
-        "Odoo Client Error",
+        "Sleektiv Client Error",
         "Something bad happened",
         "Occured on 2019-03-11 09:30:00 GMT",
     ]);
@@ -146,7 +146,7 @@ test("WarningDialog", async () => {
     await mountWithCleanup(WarningDialog, {
         env,
         props: {
-            exceptionName: "odoo.exceptions.UserError",
+            exceptionName: "sleektiv.exceptions.UserError",
             message: "...",
             data: { arguments: ["Some strange unreadable message"] },
             close() {},
@@ -183,7 +183,7 @@ test("RedirectWarningDialog", async () => {
         },
     });
     expect(".o_dialog").toHaveCount(1);
-    expect("header .modal-title").toHaveText("Odoo Warning");
+    expect("header .modal-title").toHaveText("Sleektiv Warning");
     expect("main").toHaveText("Some strange unreadable message");
     expect(queryAllTexts("footer button")).toEqual(["Buy book on cryptography", "Close"]);
 
@@ -219,9 +219,9 @@ test("SessionExpiredDialog", async () => {
     await mountWithCleanup(SessionExpiredDialog, { env, props: { close() {} } });
     expect(".o_dialog").toHaveCount(1);
     expect(".o_dialog").toHaveCount(1);
-    expect("header .modal-title").toHaveText("Odoo Session Expired");
+    expect("header .modal-title").toHaveText("Sleektiv Session Expired");
     expect("main p").toHaveText(
-        "Your Odoo session expired. The current page is about to be refreshed."
+        "Your Sleektiv session expired. The current page is about to be refreshed."
     );
     expect(".o_dialog footer button").toHaveText("Close");
     await click(".o_dialog footer button");

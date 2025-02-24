@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponNumbersCommon
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.tests import tagged
-from odoo.tools.float_utils import float_compare
+from sleektiv.addons.sale_loyalty.tests.common import TestSaleCouponNumbersCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
+from sleektiv.tools.float_utils import float_compare
 
 
 @tagged('post_install', '-at_install')

@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.http import request
-from odoo.tools.translate import html_translate
+from sleektiv import api, fields, models
+from sleektiv.http import request
+from sleektiv.tools.translate import html_translate
 
-from odoo.addons.website.models import ir_http
+from sleektiv.addons.website.models import ir_http
 
 
 class ProductTemplate(models.Model):

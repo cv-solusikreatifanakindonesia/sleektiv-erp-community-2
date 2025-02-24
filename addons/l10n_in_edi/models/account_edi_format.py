@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 import json
@@ -9,10 +9,10 @@ import markupsafe
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import models, fields, api, _
-from odoo.tools import html_escape, float_is_zero, float_compare
-from odoo.exceptions import AccessError, ValidationError
-from odoo.addons.iap import jsonrpc
+from sleektiv import models, fields, api, _
+from sleektiv.tools import html_escape, float_is_zero, float_compare
+from sleektiv.exceptions import AccessError, ValidationError
+from sleektiv.addons.iap import jsonrpc
 import logging
 
 _logger = logging.getLogger(__name__)
@@ -131,7 +131,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "1005" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another sleektiv instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_authenticate(invoice.company_id)
                 if not authenticate_response.get("error"):
                     error = []
@@ -149,8 +149,8 @@ class AccountEdiFormat(models.Model):
                 })
                 if not response.get("error"):
                     error = []
-                    odoobot = self.env.ref("base.partner_root")
-                    invoice.message_post(author_id=odoobot.id, body=Markup(_(
+                    sleektivbot = self.env.ref("base.partner_root")
+                    invoice.message_post(author_id=sleektivbot.id, body=Markup(_(
                         "Somehow this invoice had been submited to government before." \
                         "<br/>Normally, this should not happen too often" \
                         "<br/>Just verify value of invoice by uploade json to government website " \
@@ -194,7 +194,7 @@ class AccountEdiFormat(models.Model):
             error_codes = [e.get("code") for e in error]
             if "1005" in error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happen when authenticate called from another odoo instance with same credentials (like. Demo/Test)
+                # This happen when authenticate called from another sleektiv instance with same credentials (like. Demo/Test)
                 authenticate_response = self._l10n_in_edi_authenticate(invoice.company_id)
                 if not authenticate_response.get("error"):
                     error = []
@@ -205,8 +205,8 @@ class AccountEdiFormat(models.Model):
             if "9999" in error_codes:
                 response = {}
                 error = []
-                odoobot = self.env.ref("base.partner_root")
-                invoice.message_post(author_id=odoobot.id, body=Markup(_(
+                sleektivbot = self.env.ref("base.partner_root")
+                invoice.message_post(author_id=sleektivbot.id, body=Markup(_(
                     "Somehow this invoice had been cancelled to government before." \
                     "<br/>Normally, this should not happen too often" \
                     "<br/>Just verify by logging into government website " \
@@ -679,7 +679,7 @@ class AccountEdiFormat(models.Model):
     def _l10n_in_edi_authenticate(self, company):
         params = {"password": company.sudo().l10n_in_edi_password}
         response = self._l10n_in_edi_connect_to_server(company, url_path="/iap/l10n_in_edi/1/authenticate", params=params)
-        # validity data-time in Indian standard time(UTC+05:30) so remove that gap and store in odoo
+        # validity data-time in Indian standard time(UTC+05:30) so remove that gap and store in sleektiv
         if "data" in response:
             tz = pytz.timezone("Asia/Kolkata")
             local_time = tz.localize(fields.Datetime.to_datetime(response["data"]["TokenExpiry"]))

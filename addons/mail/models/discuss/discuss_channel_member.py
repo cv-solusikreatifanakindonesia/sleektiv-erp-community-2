@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import requests
@@ -6,10 +6,10 @@ import uuid
 from markupsafe import Markup
 from datetime import timedelta
 
-from odoo import api, fields, models, _
-from odoo.addons.mail.tools.discuss import Store
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.osv import expression
+from sleektiv import api, fields, models, _
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.exceptions import AccessError, UserError, ValidationError
+from sleektiv.osv import expression
 from ...tools import jwt, discuss
 
 _logger = logging.getLogger(__name__)

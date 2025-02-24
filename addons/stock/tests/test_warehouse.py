@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import Command
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.tests import Form
+from sleektiv import Command
+from sleektiv.addons.stock.tests.common import TestStockCommon
+from sleektiv.tests import Form
 
 
 class TestWarehouse(TestStockCommon):

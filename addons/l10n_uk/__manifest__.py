@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'United Kingdom - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -13,7 +13,7 @@ This is the latest UK Odoo localisation necessary to run Odoo accounting for UK 
     - InfoLogic UK counties listing
     - a few other adaptations""",
     'author': 'SmartMode LTD',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/united_kingdom.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/united_kingdom.html',
     'depends': [
         'account',
         'base_iban',

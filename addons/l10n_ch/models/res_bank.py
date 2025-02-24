@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 from stdnum.util import clean
 
-from odoo import api, fields, models, _
-from odoo.addons.base.models.res_bank import sanitize_account_number
-from odoo.addons.base_iban.models.res_partner_bank import normalize_iban, pretty_iban, validate_iban
-from odoo.exceptions import ValidationError
-from odoo.tools import LazyTranslate
-from odoo.tools.misc import mod10r
+from sleektiv import api, fields, models, _
+from sleektiv.addons.base.models.res_bank import sanitize_account_number
+from sleektiv.addons.base_iban.models.res_partner_bank import normalize_iban, pretty_iban, validate_iban
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import LazyTranslate
+from sleektiv.tools.misc import mod10r
 
 _lt = LazyTranslate(__name__)
 

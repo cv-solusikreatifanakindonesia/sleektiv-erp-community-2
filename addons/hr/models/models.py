@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, tools, _
-from odoo.addons.mail.tools.alias_error import AliasError
+from sleektiv import models, tools, _
+from sleektiv.addons.mail.tools.alias_error import AliasError
 
 
 class BaseModel(models.AbstractModel):

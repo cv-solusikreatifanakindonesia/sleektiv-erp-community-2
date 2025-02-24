@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError, UserError
-from odoo import fields, Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged
+from sleektiv.exceptions import ValidationError, UserError
+from sleektiv import fields, Command
 
 import base64
 

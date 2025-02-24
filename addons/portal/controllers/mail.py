@@ -1,16 +1,16 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug import urls
 from werkzeug.exceptions import Forbidden, NotFound
 
-from odoo import http
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import consteq
-from odoo.addons.mail.controllers import mail
-from odoo.addons.mail.tools.discuss import Store
-from odoo.addons.portal.utils import get_portal_partner
-from odoo.exceptions import AccessError
+from sleektiv import http
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools import consteq
+from sleektiv.addons.mail.controllers import mail
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.addons.portal.utils import get_portal_partner
+from sleektiv.exceptions import AccessError
 
 
 class PortalChatter(http.Controller):

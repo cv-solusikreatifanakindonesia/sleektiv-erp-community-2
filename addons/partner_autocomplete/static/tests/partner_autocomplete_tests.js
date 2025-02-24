@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { browser } from "@web/core/browser/browser";
 import {
@@ -161,8 +161,8 @@ QUnit.module('partner_autocomplete', {
             else if (route.startsWith("https://autocomplete.clearbit.com/v1/companies/suggest")) {
                 return Promise.resolve([
                     {
-                        "name": "Odoo",
-                        "domain": "odoo.com",
+                        "name": "Sleektiv",
+                        "domain": "sleektiv.com",
                     },
                     {
                         "name": "MyCompany",
@@ -209,7 +209,7 @@ QUnit.module('partner_autocomplete', {
             autocompleteContainer,
             ".o-autocomplete--dropdown-item.partner_autocomplete_dropdown_many2one",
             6,
-            "Clearbit and Odoo autocomplete options should be shown"
+            "Clearbit and Sleektiv autocomplete options should be shown"
         );
 
         // Click on the first option - "First company"
@@ -262,7 +262,7 @@ QUnit.module('partner_autocomplete', {
             autocompleteContainer,
             ".o-autocomplete--dropdown-item",
             6,
-            "Clearbit and Odoo autocomplete options should be shown"
+            "Clearbit and Sleektiv autocomplete options should be shown"
         );
 
         // Click on the first option - "First company"
@@ -315,7 +315,7 @@ QUnit.module('partner_autocomplete', {
             autocompleteContainer,
             ".o-autocomplete--dropdown-item",
             3,
-            "Odoo read_by_vat options should be shown"
+            "Sleektiv read_by_vat options should be shown"
         );
 
         // Click on the first option - "First company"
@@ -389,7 +389,7 @@ QUnit.module('partner_autocomplete', {
             autocompleteContainer,
             ".o-autocomplete--dropdown-item",
             8,
-            "Clearbit and Odoo autocomplete options should be shown"
+            "Clearbit and Sleektiv autocomplete options should be shown"
         );
     });
 
@@ -408,7 +408,7 @@ QUnit.module('partner_autocomplete', {
             autocompleteContainer,
             ".o-autocomplete--dropdown-item",
             6,
-            "Clearbit and Odoo autocomplete options should be shown"
+            "Clearbit and Sleektiv autocomplete options should be shown"
         );
         // Click on the second option (include realistic events) - "Second company"
         await triggerEvent(

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
-from odoo import _, api, Command, fields, models
-from odoo.osv import expression
-from odoo.tools import float_compare, float_round, float_is_zero, OrderedSet
-from odoo.exceptions import ValidationError
+from sleektiv import _, api, Command, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import float_compare, float_round, float_is_zero, OrderedSet
+from sleektiv.exceptions import ValidationError
 
 
 class StockMoveLine(models.Model):
@@ -218,7 +218,7 @@ class StockMove(models.Model):
     manual_consumption = fields.Boolean(
         'Manual Consumption', compute='_compute_manual_consumption', store=True, readonly=False,
         help="When activated, then the registration of consumption for that component is recorded manually exclusively.\n"
-             "If not activated, and any of the components consumption is edited manually on the manufacturing order, Odoo assumes manual consumption also.")
+             "If not activated, and any of the components consumption is edited manually on the manufacturing order, Sleektiv assumes manual consumption also.")
 
     @api.depends('product_id')
     def _compute_manual_consumption(self):

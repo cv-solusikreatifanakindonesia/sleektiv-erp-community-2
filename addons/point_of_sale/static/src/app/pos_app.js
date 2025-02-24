@@ -2,7 +2,7 @@ import { Transition } from "@web/core/transition";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { Navbar } from "@point_of_sale/app/navbar/navbar";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { reactive, Component, onMounted, onWillStart } from "@odoo/owl";
+import { reactive, Component, onMounted, onWillStart } from "@sleektiv/owl";
 import { effect } from "@web/core/utils/reactive";
 import { batched } from "@web/core/utils/timing";
 import { deduceUrl } from "@point_of_sale/utils";
@@ -25,7 +25,7 @@ export class Chrome extends Component {
         window.posmodel = reactivePos;
         useOwnDebugContext();
 
-        if (odoo.use_pos_fake_tours) {
+        if (sleektiv.use_pos_fake_tours) {
             window.pos_fake_tour = useTours();
         }
 

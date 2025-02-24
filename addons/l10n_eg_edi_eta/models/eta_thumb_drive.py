@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 import hashlib
 import json
@@ -8,8 +8,8 @@ import pytz
 
 from asn1crypto import cms, core, x509, algos, tsp
 
-from odoo import models, fields, _
-from odoo.exceptions import ValidationError
+from sleektiv import models, fields, _
+from sleektiv.exceptions import ValidationError
 
 
 class EtaThumbDrive(models.Model):
@@ -87,7 +87,7 @@ class EtaThumbDrive(models.Model):
     def _get_host(self):
         # It should be on the loopback address or with a fully valid https host
         # in order to be an exception to the mixed-content restrictions
-        sign_host = self.env['ir.config_parameter'].sudo().get_param('l10n_eg_eta.sign.host', 'http://localhost:8069')
+        sign_host = self.env['ir.config_parameter'].sudo().get_param('l10n_eg_eta.sign.host', 'http://localhost:7073')
         if not sign_host:
             raise ValidationError(_('Please define the host of sign tool.'))
         return sign_host

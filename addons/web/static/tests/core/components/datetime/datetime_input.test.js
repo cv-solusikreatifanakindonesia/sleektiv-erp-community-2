@@ -1,7 +1,7 @@
-import { test, expect, describe } from "@odoo/hoot";
-import { Component, xml } from "@odoo/owl";
+import { test, expect, describe } from "@sleektiv/hoot";
+import { Component, xml } from "@sleektiv/owl";
 import { assertDateTimePicker, getPickerCell } from "../../datetime/datetime_test_helpers";
-import { animationFrame } from "@odoo/hoot-mock";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { DateTimeInput } from "@web/core/datetime/datetime_input";
 import {
     contains,
@@ -10,7 +10,7 @@ import {
     mountWithCleanup,
     serverState,
 } from "@web/../tests/web_test_helpers";
-import { click, edit, queryAll, queryFirst, select } from "@odoo/hoot-dom";
+import { click, edit, queryAll, queryFirst, select } from "@sleektiv/hoot-dom";
 
 const { DateTime } = luxon;
 

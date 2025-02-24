@@ -1,6 +1,6 @@
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv.expression import OR
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.osv.expression import OR
 
 
 class Bill(models.Model):

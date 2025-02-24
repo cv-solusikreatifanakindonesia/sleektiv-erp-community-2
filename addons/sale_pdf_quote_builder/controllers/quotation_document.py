@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import json
 import logging
 
-from odoo import _
-from odoo.http import Controller, request, route
+from sleektiv import _
+from sleektiv.http import Controller, request, route
 
-from odoo.addons.sale_pdf_quote_builder import utils
+from sleektiv.addons.sale_pdf_quote_builder import utils
 
 logger = logging.getLogger(__name__)
 

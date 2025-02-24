@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
 from werkzeug.urls import url_encode
 from werkzeug.exceptions import NotFound, Unauthorized
 
-from odoo import _, http
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.tools import consteq
-from odoo.addons.mail.controllers.discuss.public_page import PublicPageController
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import _, http
+from sleektiv.exceptions import AccessError
+from sleektiv.http import request
+from sleektiv.tools import consteq
+from sleektiv.addons.mail.controllers.discuss.public_page import PublicPageController
+from sleektiv.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from sleektiv.addons.mail.tools.discuss import Store
 
 _logger = logging.getLogger(__name__)
 
@@ -21,7 +21,7 @@ class MailController(http.Controller):
 
     @classmethod
     def _redirect_to_messaging(cls):
-        url = '/odoo/action-mail.action_discuss'
+        url = '/sleektiv/action-mail.action_discuss'
         return request.redirect(url)
 
     @classmethod
@@ -139,7 +139,7 @@ class MailController(http.Controller):
         # @see router.js: heuristics to discrimate a model name from an action path
         # is the presence of dots, or the prefix m- for models
         model_in_url = model if "." in model else "m-" + model
-        url = f'/odoo/{model_in_url}/{res_id}?{url_encode(url_params)}'
+        url = f'/sleektiv/{model_in_url}/{res_id}?{url_encode(url_params)}'
         return request.redirect(url)
 
     @http.route('/mail/view', type='http', auth='public')
@@ -221,11 +221,11 @@ class MailController(http.Controller):
                 raise Unauthorized()
 
         if message.model == 'discuss.channel':
-            url = f'/odoo/action-mail.action_discuss?active_id={message.res_id}&highlight_message_id={message_id}'
+            url = f'/sleektiv/action-mail.action_discuss?active_id={message.res_id}&highlight_message_id={message_id}'
         else:
             # @see commit c63d14a0485a553b74a8457aee158384e9ae6d3f
             # @see router.js: heuristics to discrimate a model name from an action path
             # is the presence of dots, or the prefix m- for models
             model_in_url = model if "." in (model := message.model) else "m-" + model
-            url = f'/odoo/{model_in_url}/{message.res_id}?highlight_message_id={message_id}'
+            url = f'/sleektiv/{model_in_url}/{message.res_id}?highlight_message_id={message_id}'
         return request.redirect(url)

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.tests.common import tagged, users
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.crm.tests.common import TestCrmCommon
+from sleektiv.tests.common import tagged, users
 
 @tagged('post_install', '-at_install')
 class TestCRMLeadSmartCalendar(TestCrmCommon):

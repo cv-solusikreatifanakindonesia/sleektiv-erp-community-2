@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 
-from odoo.tests.common import TransactionCase
-from odoo import Command
-from odoo.fields import Datetime
+from sleektiv.tests.common import TransactionCase
+from sleektiv import Command
+from sleektiv.fields import Datetime
 
 class TestHolidayContract(TransactionCase):
 

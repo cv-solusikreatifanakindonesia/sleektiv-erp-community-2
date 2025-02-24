@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta, datetime
 from freezegun import freeze_time
 
 from . import common
-from odoo import Command
-from odoo.tests import Form, tagged
+from sleektiv import Command
+from sleektiv.tests import Form, tagged
 
 
 @tagged('-at_install', 'post_install')

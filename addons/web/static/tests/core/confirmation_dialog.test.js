@@ -1,9 +1,9 @@
-import { expect, test, describe, destroy } from "@odoo/hoot";
-import { tick, Deferred } from "@odoo/hoot-mock";
-import { press } from "@odoo/hoot-dom";
+import { expect, test, describe, destroy } from "@sleektiv/hoot";
+import { tick, Deferred } from "@sleektiv/hoot-mock";
+import { press } from "@sleektiv/hoot-dom";
 import { mountWithCleanup, contains, makeDialogMockEnv } from "@web/../tests/web_test_helpers";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@sleektiv/owl";
 
 describe.current.tags("desktop");
 

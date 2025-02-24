@@ -25,7 +25,7 @@ import { KanbanCompiler } from "./kanban_compiler";
 import { KanbanCoverImageDialog } from "./kanban_cover_image_dialog";
 import { KanbanDropdownMenuWrapper } from "./kanban_dropdown_menu_wrapper";
 
-import { Component, onWillUpdateProps, useRef, useState } from "@odoo/owl";
+import { Component, onWillUpdateProps, useRef, useState } from "@sleektiv/owl";
 
 const { COLORS } = ColorList;
 
@@ -152,7 +152,7 @@ function isBinSize(value) {
  * like there's one <img> tag in the content. In such case, even if it's the
  * actual content, we consider it empty.
  *
- * @param {string|ReturnType<import("@odoo/owl").markup>} innerHTML
+ * @param {string|ReturnType<import("@sleektiv/owl").markup>} innerHTML
  * @returns {boolean} true if no content found or if containing only formatting tags
  */
 export function isHtmlEmpty(innerHTML = "") {

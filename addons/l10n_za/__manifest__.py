@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'South Africa - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -11,7 +11,7 @@ This is the latest basic South African localisation necessary to run Odoo in ZA:
     - a generic chart of accounts
     - SARS VAT Ready Structure""",
     'author': 'Paradigm Digital (https://www.paradigmdigital.co.za)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'account',
         'base_vat',

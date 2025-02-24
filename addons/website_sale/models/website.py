@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import SUPERUSER_ID, api, fields, models, tools
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools.translate import _, LazyTranslate
+from sleektiv import SUPERUSER_ID, api, fields, models, tools
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools.translate import _, LazyTranslate
 
 _lt = LazyTranslate(__name__)
 

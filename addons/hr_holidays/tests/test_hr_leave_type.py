@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo.exceptions import AccessError
-from odoo.tools import date_utils
+from sleektiv.exceptions import AccessError
+from sleektiv.tools import date_utils
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from sleektiv.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 class TestHrLeaveType(TestHrHolidaysCommon):

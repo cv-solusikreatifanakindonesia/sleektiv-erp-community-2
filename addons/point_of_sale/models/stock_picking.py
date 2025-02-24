@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_is_zero, float_compare
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tools import float_is_zero, float_compare
 
 from itertools import groupby
 from collections import defaultdict

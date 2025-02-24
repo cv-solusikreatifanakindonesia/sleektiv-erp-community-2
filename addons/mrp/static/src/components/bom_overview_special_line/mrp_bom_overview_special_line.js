@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { formatFloat, formatFloatTime, formatMonetary } from "@web/views/fields/formatters";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class BomOverviewSpecialLine extends Component {
     static template = "mrp.BomOverviewSpecialLine";

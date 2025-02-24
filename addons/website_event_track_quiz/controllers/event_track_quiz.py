@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.addons.website_event_track.controllers.event_track import EventTrackController
-from odoo.http import request
+from sleektiv import http
+from sleektiv.addons.website_event_track.controllers.event_track import EventTrackController
+from sleektiv.http import request
 
 
 class WebsiteEventTrackQuiz(EventTrackController):

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from markupsafe import Markup
 
-from odoo import api, Command, fields, models, SUPERUSER_ID, _
-from odoo.tools.float_utils import float_compare
-from odoo.exceptions import UserError
-from odoo.tools import format_list
-from odoo.tools.misc import OrderedSet
+from sleektiv import api, Command, fields, models, SUPERUSER_ID, _
+from sleektiv.tools.float_utils import float_compare
+from sleektiv.exceptions import UserError
+from sleektiv.tools import format_list
+from sleektiv.tools.misc import OrderedSet
 
 
 class PurchaseOrder(models.Model):

@@ -1,8 +1,8 @@
-// @odoo-module ignore
+// @sleektiv-module ignore
 
 /* eslint-disable no-restricted-globals */
-const cacheName = "odoo-sw-cache";
-const cachedRequests = ["/odoo/offline"];
+const cacheName = "sleektiv-sw-cache";
+const cachedRequests = ["/sleektiv/offline"];
 
 self.addEventListener("install", (event) => {
     event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(cachedRequests)));
@@ -16,9 +16,9 @@ const navigateOrDisplayOfflinePage = async (request) => {
             request.method === "GET" &&
             ["Failed to fetch", "Load failed"].includes(requestError.message)
         ) {
-            if (cachedRequests.includes("/odoo/offline")) {
+            if (cachedRequests.includes("/sleektiv/offline")) {
                 const cache = await caches.open(cacheName);
-                const cachedResponse = await cache.match("/odoo/offline");
+                const cachedResponse = await cache.match("/sleektiv/offline");
                 if (cachedResponse) {
                     return cachedResponse;
                 }
@@ -30,16 +30,16 @@ const navigateOrDisplayOfflinePage = async (request) => {
 
 const serveShareTarget = (event) => {
     // Redirect so the user can refresh the page without resending data.
-    event.respondWith(Response.redirect("/odoo?share_target=trigger"));
+    event.respondWith(Response.redirect("/sleektiv?share_target=trigger"));
     event.waitUntil(
         (async () => {
             // The page sends this message to tell the service worker it's ready to receive the file.
-            await waitingMessage("odoo_share_target");
+            await waitingMessage("sleektiv_share_target");
             const client = await self.clients.get(event.resultingClientId || event.clientId);
             const data = await event.request.formData();
             client.postMessage({
                 shared_files: data.getAll("externalMedia") || [],
-                action: "odoo_share_target_ack",
+                action: "sleektiv_share_target_ack",
             });
         })()
     );

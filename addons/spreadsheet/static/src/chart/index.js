@@ -1,16 +1,16 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
 
 const { chartComponentRegistry } = spreadsheet.registries;
 const { ChartJsComponent } = spreadsheet.components;
 
-chartComponentRegistry.add("odoo_bar", ChartJsComponent);
-chartComponentRegistry.add("odoo_line", ChartJsComponent);
-chartComponentRegistry.add("odoo_pie", ChartJsComponent);
+chartComponentRegistry.add("sleektiv_bar", ChartJsComponent);
+chartComponentRegistry.add("sleektiv_line", ChartJsComponent);
+chartComponentRegistry.add("sleektiv_pie", ChartJsComponent);
 
-import { OdooChartCorePlugin } from "./plugins/odoo_chart_core_plugin";
-import { ChartOdooMenuPlugin } from "./plugins/chart_odoo_menu_plugin";
-import { OdooChartUIPlugin } from "./plugins/odoo_chart_ui_plugin";
+import { SleektivChartCorePlugin } from "./plugins/sleektiv_chart_core_plugin";
+import { ChartSleektivMenuPlugin } from "./plugins/chart_sleektiv_menu_plugin";
+import { SleektivChartUIPlugin } from "./plugins/sleektiv_chart_ui_plugin";
 
-export { OdooChartCorePlugin, ChartOdooMenuPlugin, OdooChartUIPlugin };
+export { SleektivChartCorePlugin, ChartSleektivMenuPlugin, SleektivChartUIPlugin };

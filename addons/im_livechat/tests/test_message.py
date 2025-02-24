@@ -1,15 +1,15 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
 from markupsafe import Markup
 
-from odoo import Command, fields
-from odoo.exceptions import AccessError
-from odoo.tools.misc import limited_field_access_token
-from odoo.tests.common import users, tagged
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.mail.tools.discuss import Store
-from odoo.addons.im_livechat.tests.chatbot_common import ChatbotCase
+from sleektiv import Command, fields
+from sleektiv.exceptions import AccessError
+from sleektiv.tools.misc import limited_field_access_token
+from sleektiv.tests.common import users, tagged
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.addons.im_livechat.tests.chatbot_common import ChatbotCase
 
 
 @tagged('post_install', '-at_install')
@@ -30,7 +30,7 @@ class TestImLivechatMessage(ChatbotCase, MailCommon):
                 'password': self.password,
                 'name': 'Ernest Employee',
                 'notification_type': 'inbox',
-                'odoobot_state': 'disabled',
+                'sleektivbot_state': 'disabled',
                 'signature': '--\nErnest',
             },
             {

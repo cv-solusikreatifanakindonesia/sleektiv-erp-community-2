@@ -1,4 +1,4 @@
-/** @odoo-module alias=@mail/../tests/helpers/mock_python_environment default=false */
+/** @sleektiv-module alias=@mail/../tests/helpers/mock_python_environment default=false */
 
 import { pyEnvTarget } from "@bus/../tests/helpers/mock_python_environment";
 

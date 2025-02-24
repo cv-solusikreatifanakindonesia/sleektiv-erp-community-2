@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import HttpCase, tagged
+from sleektiv import Command
+from sleektiv.tests import HttpCase, tagged
 
-from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_sale.tests.common import WebsiteSaleCommon
-from odoo.addons.website_sale_loyalty.controllers.delivery import WebsiteSaleLoyaltyDelivery
+from sleektiv.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_sale.tests.common import WebsiteSaleCommon
+from sleektiv.addons.website_sale_loyalty.controllers.delivery import WebsiteSaleLoyaltyDelivery
 
 
 @tagged('post_install', '-at_install')

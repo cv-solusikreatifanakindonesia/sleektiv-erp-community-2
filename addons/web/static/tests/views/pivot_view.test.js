@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { expect, test } from "@odoo/hoot";
-import { queryAll, queryAllTexts, queryFirst, queryOne, queryText } from "@odoo/hoot-dom";
-import { Deferred, animationFrame, mockDate } from "@odoo/hoot-mock";
-import { markup } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAll, queryAllTexts, queryFirst, queryOne, queryText } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, mockDate } from "@sleektiv/hoot-mock";
+import { markup } from "@sleektiv/owl";
 import {
     contains,
     defineModels,

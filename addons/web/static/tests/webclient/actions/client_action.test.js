@@ -1,6 +1,6 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
-import { Component, onMounted, xml } from "@odoo/owl";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, onMounted, xml } from "@sleektiv/owl";
 import {
     contains,
     defineActions,
@@ -374,7 +374,7 @@ test("test next action on display_notification client action", async () => {
 });
 
 test("test reload client action", async () => {
-    redirect("/odoo?test=42");
+    redirect("/sleektiv?test=42");
     browser.location.search = "?test=42";
 
     patchWithCleanup(browser.history, {
@@ -425,19 +425,19 @@ test("test reload client action", async () => {
     });
     await runAllTimers();
     expect.verifySteps([
-        "replaceState /odoo?test=42",
+        "replaceState /sleektiv?test=42",
         "window_reload",
-        "pushState /odoo/action-2",
+        "pushState /sleektiv/action-2",
         "window_reload",
-        "pushState /odoo?menu_id=1",
+        "pushState /sleektiv?menu_id=1",
         "window_reload",
-        "pushState /odoo/action-1?menu_id=2",
+        "pushState /sleektiv/action-1?menu_id=2",
         "window_reload",
     ]);
 });
 
 test("test home client action", async () => {
-    redirect("/odoo");
+    redirect("/sleektiv");
     browser.location.search = "";
 
     patchWithCleanup(browser.location, {

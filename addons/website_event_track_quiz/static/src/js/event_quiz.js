@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { _t } from "@web/core/l10n/translation";
@@ -240,7 +240,7 @@ var Quiz = publicWidget.Widget.extend({
      * When clicking on an answer, this one should be marked as "checked".
      *
      * @private
-     * @param OdooEvent ev
+     * @param SleektivEvent ev
      */
     _onAnswerClick: function (ev) {
         ev.preventDefault();

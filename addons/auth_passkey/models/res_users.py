@@ -1,11 +1,11 @@
 import json
 
-from odoo import fields, models, _
-from odoo.tools import SQL
-from odoo.exceptions import AccessDenied
-from odoo.modules.registry import Registry
+from sleektiv import fields, models, _
+from sleektiv.tools import SQL
+from sleektiv.exceptions import AccessDenied
+from sleektiv.modules.registry import Registry
 
-from odoo.addons.base.models.res_users import check_identity
+from sleektiv.addons.base.models.res_users import check_identity
 from .._vendor.webauthn.helpers.exceptions import InvalidAuthenticationResponse
 
 

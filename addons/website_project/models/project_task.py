@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields
+from sleektiv import api, models, fields
 
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
 
-    # Need this field to check there is no email loops when Odoo reply automatically
+    # Need this field to check there is no email loops when Sleektiv reply automatically
     email_from = fields.Char('Email From')
     # Used to submit tasks from a contact form
     partner_name = fields.Char(string='Customer Name', related="partner_id.name", store=True, readonly=False, tracking=False)

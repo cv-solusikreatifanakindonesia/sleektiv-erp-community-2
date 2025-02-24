@@ -1,6 +1,6 @@
-from odoo import tools, fields
-from odoo.tests.common import tagged
-from odoo.addons.l10n_hu_edi.tests.common import L10nHuEdiTestCommon
+from sleektiv import tools, fields
+from sleektiv.tests.common import tagged
+from sleektiv.addons.l10n_hu_edi.tests.common import L10nHuEdiTestCommon
 
 from freezegun import freeze_time
 import base64

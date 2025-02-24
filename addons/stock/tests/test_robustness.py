@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError, ValidationError
-from odoo.tests.common import TransactionCase
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tests.common import TransactionCase
 
 
 class TestRobustness(TransactionCase):

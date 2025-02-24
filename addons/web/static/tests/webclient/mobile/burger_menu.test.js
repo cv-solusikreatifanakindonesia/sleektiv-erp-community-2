@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
 import {
     contains,
     defineActions,
@@ -10,8 +10,8 @@ import {
     patchWithCleanup,
 } from "@web/../tests/web_test_helpers";
 import { WebClient } from "@web/webclient/webclient";
-import { animationFrame } from "@odoo/hoot-mock";
-import { click, queryAll } from "@odoo/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { click, queryAll } from "@sleektiv/hoot-dom";
 import { config as transitionConfig } from "@web/core/transition";
 
 describe.current.tags("mobile");

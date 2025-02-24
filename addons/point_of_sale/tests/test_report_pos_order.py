@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-import odoo
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+import sleektiv
 
-from odoo.addons.point_of_sale.tests.common import TestPoSCommon
+from sleektiv.addons.point_of_sale.tests.common import TestPoSCommon
 
-@odoo.tests.tagged('post_install', '-at_install')
+@sleektiv.tests.tagged('post_install', '-at_install')
 class TestReportPoSOrder(TestPoSCommon):
 
     def setUp(self):
@@ -15,7 +15,7 @@ class TestReportPoSOrder(TestPoSCommon):
         """Test the margin and price_total of a PoS Order with no taxes."""
         product1 = self.create_product('Product 1', self.categ_basic, 150)
         self.categ_all = self.env['pos.category'].search([])
-        product1.write({'pos_categ_ids': [odoo.Command.set(self.categ_all.ids)]})
+        product1.write({'pos_categ_ids': [sleektiv.Command.set(self.categ_all.ids)]})
 
         self.open_new_session()
         session = self.pos_session

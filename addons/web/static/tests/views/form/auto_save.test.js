@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { unload } from "@odoo/hoot-dom";
-import { animationFrame, Deferred, mockSendBeacon } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { unload } from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred, mockSendBeacon } from "@sleektiv/hoot-mock";
 import {
     contains,
     defineActions,

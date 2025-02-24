@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-from odoo import api, models
+from sleektiv import api, models
 
 
 class Key(models.Model):

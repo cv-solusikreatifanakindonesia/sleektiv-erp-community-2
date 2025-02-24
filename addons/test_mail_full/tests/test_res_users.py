@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.test_mail_full.tests.common import TestMailFullCommon
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.test_mail_full.tests.common import TestMailFullCommon
 
 
 class TestResUsers(TestMailFullCommon):

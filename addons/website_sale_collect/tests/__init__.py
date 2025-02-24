@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from . import test_delivery_carrier
 from . import test_click_and_collect_flow

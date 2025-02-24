@@ -1,5 +1,5 @@
-from odoo import api, fields, models
-from odoo.tools.misc import get_lang
+from sleektiv import api, fields, models
+from sleektiv.tools.misc import get_lang
 
 
 class AccountMoveSendWizard(models.TransientModel):

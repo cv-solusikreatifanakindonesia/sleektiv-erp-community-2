@@ -1,12 +1,12 @@
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
-import { keyDown, press, queryAllTexts } from "@odoo/hoot-dom";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { keyDown, press, queryAllTexts } from "@sleektiv/hoot-dom";
 import {
     Deferred,
     advanceFrame,
     advanceTime,
     animationFrame,
     mockUserAgent,
-} from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-mock";
 import {
     contains,
     getService,
@@ -15,7 +15,7 @@ import {
     patchWithCleanup,
 } from "@web/../tests/web_test_helpers";
 
-import { Component, reactive, xml } from "@odoo/owl";
+import { Component, reactive, xml } from "@sleektiv/owl";
 
 import { useCommand } from "@web/core/commands/command_hook";
 import { HotkeyCommandItem } from "@web/core/commands/default_providers";

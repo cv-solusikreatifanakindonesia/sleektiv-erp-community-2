@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
-from odoo.addons.base.models.res_users import is_selection_groups
+from sleektiv import api, models
+from sleektiv.addons.base.models.res_users import is_selection_groups
 
 
 class ResUsers(models.Model):

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import tagged
-from odoo.addons.web.tests.test_login import TestWebLoginCommon
+from sleektiv.tests.common import tagged
+from sleektiv.addons.web.tests.test_login import TestWebLoginCommon
 
 
 @tagged('-at_install', 'post_install')

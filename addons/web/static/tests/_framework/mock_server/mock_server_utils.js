@@ -84,9 +84,9 @@ export function makeServerError({
 } = {}) {
     return makeErrorFromResponse({
         code: code || 200,
-        message: message || "Odoo Server Error",
+        message: message || "Sleektiv Server Error",
         data: {
-            name: errorName || `odoo.exceptions.${type || "UserError"}`,
+            name: errorName || `sleektiv.exceptions.${type || "UserError"}`,
             debug: "traceback",
             arguments: [],
             context: context || {},

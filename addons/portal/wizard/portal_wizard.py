@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
-from odoo.tools.translate import _
-from odoo.tools import email_normalize
-from odoo.exceptions import UserError
+from sleektiv.tools.translate import _
+from sleektiv.tools import email_normalize
+from sleektiv.exceptions import UserError
 
-from odoo import api, fields, models, Command
+from sleektiv import api, fields, models, Command
 
 
 _logger = logging.getLogger(__name__)

@@ -1,7 +1,7 @@
-from odoo import api, SUPERUSER_ID
-from odoo.osv import expression
-from odoo.release import version
-from odoo.tools import parse_version
+from sleektiv import api, SUPERUSER_ID
+from sleektiv.osv import expression
+from sleektiv.release import version
+from sleektiv.tools import parse_version
 
 FIXED_ACCOUNTS_TYPE = {
     'asset_prepayments': ['242'],

@@ -5,7 +5,7 @@ import * as ConfirmationPage from "@pos_self_order/../tests/tours/utils/confirma
 import * as LandingPage from "@pos_self_order/../tests/tours/utils/landing_page_util";
 import * as ProductPage from "@pos_self_order/../tests/tours/utils/product_page_util";
 import * as Numpad from "@point_of_sale/../tests/tours/utils/numpad_util";
-import { queryFirst } from "@odoo/hoot-dom";
+import { queryFirst } from "@sleektiv/hoot-dom";
 
 //
 const clickOrderNowAndWaitLocation = (location = "Take Out") => [

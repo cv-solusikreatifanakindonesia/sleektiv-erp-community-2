@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
@@ -6,13 +6,13 @@ from collections import OrderedDict
 from operator import itemgetter
 from markupsafe import Markup
 
-from odoo import conf, http, _
-from odoo.exceptions import AccessError, MissingError, UserError
-from odoo.http import request
-from odoo.osv.expression import AND, FALSE_DOMAIN
-from odoo.tools import groupby as groupbyelem
+from sleektiv import conf, http, _
+from sleektiv.exceptions import AccessError, MissingError, UserError
+from sleektiv.http import request
+from sleektiv.osv.expression import AND, FALSE_DOMAIN
+from sleektiv.tools import groupby as groupbyelem
 
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
+from sleektiv.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
 
 
 class ProjectCustomerPortal(CustomerPortal):

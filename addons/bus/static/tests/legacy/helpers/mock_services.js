@@ -1,4 +1,4 @@
-/** @odoo-module alias=@bus/../tests/helpers/mock_services default=false */
+/** @sleektiv-module alias=@bus/../tests/helpers/mock_services default=false */
 
 import { presenceService } from "@bus/services/presence_service";
 

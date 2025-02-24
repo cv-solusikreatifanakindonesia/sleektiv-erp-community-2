@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import TransactionCase, tagged
+from sleektiv.tests import TransactionCase, tagged
 from unittest.mock import patch
 
 @tagged('post_install', '-at_install')

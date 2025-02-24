@@ -241,4 +241,4 @@
       <cbc:PriceAmount currencyID="SAR">0</cbc:PriceAmount>
     </cac:Price>
   </cac:InvoiceLine>
-</Invoice>
+</Invoice> 

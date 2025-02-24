@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import io
 import json
 import logging
@@ -13,15 +13,15 @@ from base64 import b64decode, b64encode
 from math import floor
 from os.path import join as opj
 
-from odoo.http import request, Response
-from odoo import http, tools, _
-from odoo.tools.misc import file_open
-from odoo.tools.image import image_data_uri, binary_to_image
+from sleektiv.http import request, Response
+from sleektiv import http, tools, _
+from sleektiv.tools.misc import file_open
+from sleektiv.tools.image import image_data_uri, binary_to_image
 
 
 logger = logging.getLogger(__name__)
-DEFAULT_LIBRARY_ENDPOINT = 'https://media-api.odoo.com'
-DEFAULT_OLG_ENDPOINT = 'https://olg.api.odoo.com'
+DEFAULT_LIBRARY_ENDPOINT = 'https://media-api.sleektiv.com'
+DEFAULT_OLG_ENDPOINT = 'https://olg.api.sleektiv.com'
 
 
 def get_existing_attachment(IrAttachment, vals):

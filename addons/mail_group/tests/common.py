@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, tools
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.mail.tests.common import MailCommon
+from sleektiv import Command, tools
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.mail.tests.common import MailCommon
 
 
 class TestMailListCommon(MailCommon):

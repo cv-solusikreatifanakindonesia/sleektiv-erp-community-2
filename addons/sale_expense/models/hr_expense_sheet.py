@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from collections import Counter
 
-from odoo import fields, models, _
+from sleektiv import fields, models, _
 
 
 class HrExpenseSheet(models.Model):

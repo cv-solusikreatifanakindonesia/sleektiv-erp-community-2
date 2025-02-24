@@ -1,5 +1,5 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { reactive, toRaw } from "@odoo/owl";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { reactive, toRaw } from "@sleektiv/owl";
 
 const {
     DateTime,

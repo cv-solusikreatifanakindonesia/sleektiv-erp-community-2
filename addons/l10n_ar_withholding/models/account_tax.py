@@ -1,5 +1,5 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, fields, models
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import api, fields, models
 
 
 class AccountTax(models.Model):

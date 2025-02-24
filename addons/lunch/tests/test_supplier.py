@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import pytz
 
 from datetime import datetime, time, timedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.tests import common
+from sleektiv import fields
+from sleektiv.tests import common
 
-from odoo.addons.lunch.tests.common import TestsCommon
+from sleektiv.addons.lunch.tests.common import TestsCommon
 
 
 class TestSupplier(TestsCommon):

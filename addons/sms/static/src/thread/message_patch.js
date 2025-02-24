@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { Message } from "@mail/core/common/message";
 

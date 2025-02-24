@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.osv import expression
-from odoo.tools import float_compare, OrderedSet
+from sleektiv import api, fields, models, SUPERUSER_ID, _
+from sleektiv.osv import expression
+from sleektiv.tools import float_compare, OrderedSet
 
 
 class StockRule(models.Model):

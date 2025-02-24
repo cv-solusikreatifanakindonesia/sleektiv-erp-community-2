@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import models
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
+from sleektiv import models
+from sleektiv.tools import DEFAULT_SERVER_DATE_FORMAT
 
-from odoo.addons.hr_homeworking.models.hr_homeworking import DAYS
+from sleektiv.addons.hr_homeworking.models.hr_homeworking import DAYS
 
 
 class HrEmployeeBase(models.AbstractModel):

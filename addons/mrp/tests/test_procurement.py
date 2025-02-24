@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
-from odoo import fields
-from odoo.tests import Form
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo.exceptions import UserError
+from sleektiv import fields
+from sleektiv.tests import Form
+from sleektiv.addons.mrp.tests.common import TestMrpCommon
+from sleektiv.exceptions import UserError
 
 
 class TestProcurement(TestMrpCommon):

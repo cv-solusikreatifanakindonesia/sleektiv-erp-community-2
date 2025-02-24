@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
-from odoo.exceptions import ValidationError
-from odoo.http import request, route
+from sleektiv.exceptions import ValidationError
+from sleektiv.http import request, route
 
-from odoo.addons.base.models.ir_qweb_fields import nl2br_enclose
-from odoo.addons.website.controllers import main
-from odoo.addons.website.controllers.form import WebsiteForm
+from sleektiv.addons.base.models.ir_qweb_fields import nl2br_enclose
+from sleektiv.addons.website.controllers import main
+from sleektiv.addons.website.controllers.form import WebsiteForm
 
 
 class WebsiteSaleForm(WebsiteForm):

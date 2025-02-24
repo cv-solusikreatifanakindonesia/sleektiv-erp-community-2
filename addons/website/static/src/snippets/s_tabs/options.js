@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { uniqueId } from "@web/core/utils/functions";
 import options from "@web_editor/js/editor/snippets.options";

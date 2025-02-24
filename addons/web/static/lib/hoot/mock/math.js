@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { isNil, stringToNumber } from "../hoot_utils";
 

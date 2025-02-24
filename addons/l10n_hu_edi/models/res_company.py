@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 from datetime import timedelta
@@ -6,9 +6,9 @@ from itertools import islice
 
 from lxml import etree
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.addons.l10n_hu_edi.models.l10n_hu_edi_connection import L10nHuEdiConnection, L10nHuEdiConnectionError, XML_NAMESPACES
+from sleektiv import models, fields, _
+from sleektiv.exceptions import UserError
+from sleektiv.addons.l10n_hu_edi.models.l10n_hu_edi_connection import L10nHuEdiConnection, L10nHuEdiConnectionError, XML_NAMESPACES
 
 
 class ResCompany(models.Model):
@@ -117,8 +117,8 @@ class ResCompany(models.Model):
         overwritten by a new request, but the new request fails with a 'duplicate invoice' error.
 
         To do this, we request a list of all transactions made since l10n_hu_edi_last_transaction_recovery,
-        and then we query the last 10 transactions whose transaction IDs are unknown by Odoo. We try to
-        match them to invoices in Odoo, and if successful, update the invoice state.
+        and then we query the last 10 transactions whose transaction IDs are unknown by Sleektiv. We try to
+        match them to invoices in Sleektiv, and if successful, update the invoice state.
         """
 
         for company in self:

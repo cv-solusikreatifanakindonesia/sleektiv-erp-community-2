@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models
-from odoo.exceptions import UserError
-from odoo.addons.hr_homeworking.models.hr_homeworking import DAYS
+from sleektiv import _, api, models
+from sleektiv.exceptions import UserError
+from sleektiv.addons.hr_homeworking.models.hr_homeworking import DAYS
 
 class WorkLocation(models.Model):
     _inherit = "hr.work.location"

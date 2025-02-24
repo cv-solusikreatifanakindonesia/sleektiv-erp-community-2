@@ -23,15 +23,15 @@ from werkzeug.local import LocalStack
 from werkzeug.datastructures import ImmutableMultiDict, MultiDict
 from werkzeug.exceptions import BadRequest, HTTPException, ServiceUnavailable
 
-import odoo
-from odoo import api, modules
+import sleektiv
+from sleektiv import api, modules
 from .models.bus import dispatch
-from odoo.http import root, Request, Response, SessionExpiredException, get_default_session
-from odoo.modules.registry import Registry
-from odoo.service import model as service_model
-from odoo.service.server import CommonServer
-from odoo.service.security import check_session
-from odoo.tools import config, lazy_property
+from sleektiv.http import root, Request, Response, SessionExpiredException, get_default_session
+from sleektiv.modules.registry import Registry
+from sleektiv.service import model as service_model
+from sleektiv.service.server import CommonServer
+from sleektiv.service.security import check_session
+from sleektiv.tools import config, lazy_property
 
 _logger = logging.getLogger(__name__)
 
@@ -282,7 +282,7 @@ class Websocket:
         # Websocket start up
         self.__selector = (
             selectors.PollSelector()
-            if odoo.evented and hasattr(selectors, 'PollSelector')
+            if sleektiv.evented and hasattr(selectors, 'PollSelector')
             else selectors.DefaultSelector()
         )
         self.__selector.register(self.__socket, selectors.EVENT_READ)
@@ -957,7 +957,7 @@ class WebsocketConnectionHandler:
 
     @classmethod
     def _handle_public_configuration(cls, request):
-        if not os.getenv('ODOO_BUS_PUBLIC_SAMESITE_WS'):
+        if not os.getenv('SLEEKTIV_BUS_PUBLIC_SAMESITE_WS'):
             return
         headers = request.httprequest.headers
         origin_url = urlparse(headers.get('origin'))

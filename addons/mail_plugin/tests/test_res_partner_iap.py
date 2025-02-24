@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import psycopg2
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tools import mute_logger
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.tools import mute_logger
 
 
 class TestResPartnerIap(MailCommon):
 
-    @mute_logger("odoo.sql_db")
+    @mute_logger("sleektiv.sql_db")
     def test_res_partner_iap_constraint(self):
         partner = self.partner_employee
 

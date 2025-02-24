@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import { contains, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
-import { Component, useRef, xml } from "@odoo/owl";
+import { Component, useRef, xml } from "@sleektiv/owl";
 
 import { ViewButton } from "@web/views/view_button/view_button";
 import { useViewButtons } from "@web/views/view_button/view_button_hook";

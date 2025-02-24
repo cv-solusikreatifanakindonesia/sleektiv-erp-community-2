@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, time
 from dateutil.relativedelta import relativedelta
 from pytz import UTC
 
-from odoo import api, fields, models, _
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, get_lang
-from odoo.tools.float_utils import float_compare, float_round
-from odoo.exceptions import UserError
+from sleektiv import api, fields, models, _
+from sleektiv.tools import DEFAULT_SERVER_DATETIME_FORMAT, get_lang
+from sleektiv.tools.float_utils import float_compare, float_round
+from sleektiv.exceptions import UserError
 
 
 class PurchaseOrderLine(models.Model):
@@ -489,7 +489,7 @@ class PurchaseOrderLine(models.Model):
 
         Note: This method cannot be called with multiple records that have different products linked.
 
-        :raise odoo.exceptions.ValueError: ``len(self.product_id) != 1``
+        :raise sleektiv.exceptions.ValueError: ``len(self.product_id) != 1``
         :rtype: dict
         :return: A dict with the following structure:
             {

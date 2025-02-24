@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessDenied
+from sleektiv.exceptions import AccessDenied
 
-from odoo import api, models, SUPERUSER_ID
-from odoo.modules.registry import Registry
+from sleektiv import api, models, SUPERUSER_ID
+from sleektiv.modules.registry import Registry
 
 
 class Users(models.Model):

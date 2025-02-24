@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'ESC/POS Hardware Driver',
     'category': 'Sales/Point of Sale',
     'sequence': 6,
-    'website': 'https://www.odoo.com/app/point-of-sale-hardware',
+    'website': 'https://sleektiv.com/app/point-of-sale-hardware',
     'summary': 'Hardware Driver for ESC/POS Printers and Cashdrawers',
     'description': """
 ESC/POS Hardware Driver

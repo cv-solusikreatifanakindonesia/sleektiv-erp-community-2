@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, fields, models
-from odoo.exceptions import ValidationError
-from odoo.addons.l10n_in.models.iap_account import IAP_SERVICE_NAME
+from sleektiv import _, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.addons.l10n_in.models.iap_account import IAP_SERVICE_NAME
 
 
 class ResConfigSettings(models.TransientModel):

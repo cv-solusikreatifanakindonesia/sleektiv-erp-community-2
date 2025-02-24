@@ -32,10 +32,10 @@ export class PaymentRazorpay extends PaymentInterface {
     _call_razorpay(data, action) {
         return this.env.services.orm.silent
             .call("pos.payment.method", action, [[this.payment_method_id.id], data])
-            .catch(this._handle_odoo_connection_failure.bind(this));
+            .catch(this._handle_sleektiv_connection_failure.bind(this));
     }
 
-    _handle_odoo_connection_failure(data = {}) {
+    _handle_sleektiv_connection_failure(data = {}) {
         // handle timeout
         const line = this.pending_razorpay_line();
         if (line) {
@@ -43,7 +43,7 @@ export class PaymentRazorpay extends PaymentInterface {
         }
         this._showError(
             _t(
-                "Could not connect to the Odoo server, please check your internet connection and try again."
+                "Could not connect to the Sleektiv server, please check your internet connection and try again."
             )
         );
 

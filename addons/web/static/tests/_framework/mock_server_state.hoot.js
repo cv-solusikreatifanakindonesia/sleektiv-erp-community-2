@@ -1,9 +1,9 @@
 // ! WARNING: this module cannot depend on modules not ending with ".hoot" (except libs) !
 
-import { after, before, beforeEach, createJobScopedGetter } from "@odoo/hoot";
+import { after, before, beforeEach, createJobScopedGetter } from "@sleektiv/hoot";
 
-const { view_info } = odoo.__session_info__ || {};
-delete odoo.__session_info__;
+const { view_info } = sleektiv.__session_info__ || {};
+delete sleektiv.__session_info__;
 
 const { Settings } = luxon;
 
@@ -58,7 +58,7 @@ const SERVER_STATE_VALUES = {
     groupId: 11,
     lang: "en",
     multiLang: false,
-    odoobotId: 418,
+    sleektivbotId: 418,
     partnerId: 17,
     partnerName: "Mitchell Admin",
     publicPartnerId: 18,
@@ -82,9 +82,9 @@ const getServerStateValues = createJobScopedGetter(
 /** @type {Map<any, (state: ServerState) => any>} */
 const subscriptions = new Map([
     [
-        odoo,
+        sleektiv,
         ({ db, debug, serverVersion }) => ({
-            ...odoo,
+            ...sleektiv,
             debug,
             info: {
                 db,

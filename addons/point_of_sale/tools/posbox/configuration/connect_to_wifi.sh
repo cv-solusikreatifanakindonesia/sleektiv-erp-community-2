@@ -37,7 +37,7 @@ function get_conf () {
 # to reconnect to a previously chosen network
 function connect () {
 	WPA_PASS_FILE="/tmp/wpa_pass.txt"
-	CONF_FILE="/home/pi/odoo.conf"
+	CONF_FILE="/home/pi/sleektiv.conf"
 	CURRENT_WIFI_NETWORK_FILE="/tmp/current_wifi_network.txt" # used to repair connection when we lose it
 	LOST_WIFI_FILE="/tmp/lost_wifi.txt"
 	ESSID="${1}"

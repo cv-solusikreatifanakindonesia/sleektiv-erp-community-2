@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { AutoComplete } from "@web/core/autocomplete/autocomplete";
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@sleektiv/owl";
 
 export class AutoCompleteWithPages extends AutoComplete {
     static props = {

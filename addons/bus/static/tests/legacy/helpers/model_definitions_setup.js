@@ -1,4 +1,4 @@
-/** @odoo-module alias=@bus/../tests/helpers/model_definitions_setup default=false */
+/** @sleektiv-module alias=@bus/../tests/helpers/model_definitions_setup default=false */
 
 import { TEST_GROUP_IDS, TEST_USER_IDS } from "@bus/../tests/helpers/test_constants";
 import {
@@ -40,11 +40,11 @@ insertRecords("res.groups", [{ id: TEST_GROUP_IDS.groupUserId, name: "Internal U
 insertRecords("res.users", [
     {
         active: false,
-        display_name: "OdooBot",
+        display_name: "SleektivBot",
         login: "__system__",
-        id: TEST_USER_IDS.odoobotUserId,
+        id: TEST_USER_IDS.sleektivbotUserId,
         name: "Public user",
-        partner_id: TEST_USER_IDS.odoobotId,
+        partner_id: TEST_USER_IDS.sleektivbotId,
     },
     {
         display_name: "Your Company, Mitchell Admin",
@@ -79,9 +79,9 @@ insertRecords("res.partner", [
     },
     {
         active: false,
-        display_name: "OdooBot",
-        id: TEST_USER_IDS.odoobotId,
+        display_name: "SleektivBot",
+        id: TEST_USER_IDS.sleektivbotId,
         im_status: "bot",
-        name: "OdooBot",
+        name: "SleektivBot",
     },
 ]);

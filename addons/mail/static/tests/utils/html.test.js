@@ -5,8 +5,8 @@ import {
     htmlTrim,
 } from "@mail/utils/common/html";
 
-import { describe, expect, test } from "@odoo/hoot";
-import { markup } from "@odoo/owl";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { markup } from "@sleektiv/owl";
 
 const Markup = markup().constructor;
 

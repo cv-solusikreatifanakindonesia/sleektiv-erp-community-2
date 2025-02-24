@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
-from odoo.tools import format_amount
+from sleektiv import api, Command, fields, models, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools import format_amount
 
 ACCOUNT_DOMAIN = "['&', ('deprecated', '=', False), ('account_type', 'not in', ('asset_receivable','liability_payable','asset_cash','liability_credit_card','off_balance'))]"
 

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { describe, expect, getFixture, test } from "@odoo/hoot";
+import { describe, expect, getFixture, test } from "@sleektiv/hoot";
 import {
     click,
     formatXml,
@@ -20,8 +20,8 @@ import {
     queryRect,
     waitFor,
     waitForNone,
-} from "@odoo/hoot-dom";
-import { animationFrame, mockTouch } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { animationFrame, mockTouch } from "@sleektiv/hoot-mock";
 import { getParentFrame } from "@web/../lib/hoot-dom/helpers/dom";
 import { mountForTest, parseUrl, waitForIframes } from "../local_helpers";
 

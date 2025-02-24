@@ -1,6 +1,6 @@
 /** @ts-check */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { _t } from "@web/core/l10n/translation";
 
 export class TextFilterValue extends Component {

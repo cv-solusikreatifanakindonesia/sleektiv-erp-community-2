@@ -4,7 +4,7 @@ import { listView } from "@web/views/list/list_view";
 import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
 import { WebClient } from "@web/webclient/webclient";
 
-import { xml } from "@odoo/owl";
+import { xml } from "@sleektiv/owl";
 
 import {
     clickModalButton,
@@ -26,9 +26,9 @@ import {
     toggleSearchBarMenu,
 } from "@web/../tests/web_test_helpers";
 
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
-import { click, queryOne } from "@odoo/hoot-dom";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { click, queryOne } from "@sleektiv/hoot-dom";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
 
 class Partner extends models.Model {
     name = fields.Char({ string: "Displayed name" });

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { PublicWidget } from "@web/legacy/js/public/public_widget";
 

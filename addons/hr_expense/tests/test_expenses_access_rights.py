@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.exceptions import AccessError, UserError
-from odoo.tests import HttpCase, tagged, new_test_user
+from sleektiv import Command
+from sleektiv.exceptions import AccessError, UserError
+from sleektiv.tests import HttpCase, tagged, new_test_user
 
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.hr_expense.tests.common import TestExpenseCommon
+from sleektiv.addons.mail.tests.common import mail_new_test_user
 
 
 @tagged('-at_install', 'post_install')
@@ -145,5 +145,5 @@ class TestExpensesAccessRights(TestExpenseCommon, HttpCase):
                 }),
             ],
         })
-        self.start_tour("/odoo", 'hr_expense_access_rights_test_tour', login="test-expense")
+        self.start_tour("/sleektiv", 'hr_expense_access_rights_test_tour', login="test-expense")
         self.assertRecordValues(expense_sheet, [{'state': 'submit'}])

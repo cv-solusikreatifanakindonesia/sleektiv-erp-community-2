@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import contextlib
 
-from odoo import _, models, SUPERUSER_ID
-from odoo.exceptions import AccessError, MissingError, UserError
-from odoo.tools import consteq
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import _, models, SUPERUSER_ID
+from sleektiv.exceptions import AccessError, MissingError, UserError
+from sleektiv.tools import consteq
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class IrAttachment(models.Model):

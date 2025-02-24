@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.crm.tests import common as crm_common
-from odoo.exceptions import AccessError
-from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger
+from sleektiv.addons.crm.tests import common as crm_common
+from sleektiv.exceptions import AccessError
+from sleektiv.tests.common import tagged, users
+from sleektiv.tools import mute_logger
 
 
 @tagged('lead_manage', 'lead_lost')
@@ -103,7 +103,7 @@ class TestLeadConvert(crm_common.TestCrmCommon):
                           'Feedback should be included directly within tracking message')
 
     @users('user_sales_salesman')
-    @mute_logger('odoo.addons.base.models')
+    @mute_logger('sleektiv.addons.base.models')
     def test_lead_lost_crm_rights(self):
         """ Test ACLs of lost reasons management and usage """
         lead = self.lead_1.with_user(self.env.user)

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@sleektiv/owl";
 import { Job } from "../core/job";
 import { Test } from "../core/test";
 import { HootLink } from "./hoot_link";

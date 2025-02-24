@@ -1,4 +1,4 @@
-import { onWillDestroy } from "@odoo/owl";
+import { onWillDestroy } from "@sleektiv/owl";
 import { registry } from "@web/core/registry";
 import { FileViewer } from "./file_viewer";
 

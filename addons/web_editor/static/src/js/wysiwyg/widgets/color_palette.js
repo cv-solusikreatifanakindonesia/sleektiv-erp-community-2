@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { Colorpicker } from "@web/core/colorpicker/colorpicker";
 import customColors from "@web_editor/js/editor/custom_colors";
@@ -15,7 +15,7 @@ import {
     onWillStart,
     onMounted,
     onWillUpdateProps,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 
 export class ColorPalette extends Component {
     static template = 'web_editor.ColorPalette';

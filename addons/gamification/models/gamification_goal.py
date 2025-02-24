@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 import logging
 from datetime import date, datetime, timedelta
 
-from odoo import api, fields, models, _, exceptions
-from odoo.tools.safe_eval import safe_eval, time
+from sleektiv import api, fields, models, _, exceptions
+from sleektiv.tools.safe_eval import safe_eval, time
 
 _logger = logging.getLogger(__name__)
 

@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from hashlib import new as hashnew
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.payment_asiapay import const
+from sleektiv.addons.payment_asiapay import const
 
 
 class PaymentProvider(models.Model):
@@ -67,7 +67,7 @@ class PaymentProvider(models.Model):
 
         :param dict data: The data to sign.
         :param bool incoming: Whether the signature must be generated for an incoming (AsiaPay to
-                              Odoo) or outgoing (Odoo to AsiaPay) communication.
+                              Sleektiv) or outgoing (Sleektiv to AsiaPay) communication.
         :return: The calculated signature.
         :rtype: str
         """

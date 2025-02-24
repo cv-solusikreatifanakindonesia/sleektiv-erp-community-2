@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { goToCart, assertCartContains } from '@website_sale/js/tours/tour_utils';
 import { registerWebsitePreviewTour, clickOnEditAndWaitEditMode, clickOnSnippet, insertSnippet, selectElementInWeSelectWidget, clickOnSave, clickOnElement, assertPathName } from '@website/js/tours/tour_utils';

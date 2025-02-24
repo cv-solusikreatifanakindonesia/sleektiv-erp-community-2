@@ -1,5 +1,5 @@
-from odoo import models, _
-from odoo.exceptions import UserError
+from sleektiv import models, _
+from sleektiv.exceptions import UserError
 
 
 class AccountAccount(models.Model):

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 const PRODUCTION_DECORATORS = {
     draft: "secondary",

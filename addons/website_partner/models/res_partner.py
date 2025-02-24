@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models
-from odoo.tools.translate import html_translate
+from sleektiv import api, fields, models
+from sleektiv.tools.translate import html_translate
 
 
 class WebsiteResPartner(models.Model):

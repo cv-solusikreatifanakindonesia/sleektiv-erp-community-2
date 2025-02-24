@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { sortBy } from "@web/core/utils/arrays";
 
 class Group extends Component {

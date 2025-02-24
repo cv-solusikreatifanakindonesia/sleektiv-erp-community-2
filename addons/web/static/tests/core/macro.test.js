@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { click, edit, queryOne } from "@odoo/hoot-dom";
-import { advanceTime, animationFrame } from "@odoo/hoot-mock";
-import { Component, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { click, edit, queryOne } from "@sleektiv/hoot-dom";
+import { advanceTime, animationFrame } from "@sleektiv/hoot-mock";
+import { Component, useState, xml } from "@sleektiv/owl";
 import { mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { Macro } from "@web/core/macro";

@@ -1,10 +1,10 @@
-import odoo.tests
-from odoo.tools import mute_logger
+import sleektiv.tests
+from sleektiv.tools import mute_logger
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteError(odoo.tests.HttpCase):
+@sleektiv.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteError(sleektiv.tests.HttpCase):
 
-    @mute_logger('odoo.addons.http_routing.models.ir_http', 'odoo.http')
+    @mute_logger('sleektiv.addons.http_routing.models.ir_http', 'sleektiv.http')
     def test_01_run_test(self):
         self.start_tour("/test_error_view", 'test_error_website')

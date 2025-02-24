@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 /**
  * @typedef {import("@web/webclient/actions/action_service").ActionOptions} ActionOptions

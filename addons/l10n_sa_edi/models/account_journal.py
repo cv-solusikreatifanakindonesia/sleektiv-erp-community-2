@@ -8,9 +8,9 @@ from lxml import etree
 from markupsafe import Markup
 from requests.exceptions import HTTPError, RequestException
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.misc import file_open
+from sleektiv import _, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools.misc import file_open
 
 ZATCA_API_URLS = {
     "sandbox": "https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/",

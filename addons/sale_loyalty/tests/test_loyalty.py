@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.tests import new_test_user, tagged
-from odoo.tools.float_utils import float_compare
+from sleektiv.exceptions import ValidationError
+from sleektiv.fields import Command
+from sleektiv.tests import new_test_user, tagged
+from sleektiv.tools.float_utils import float_compare
 
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponCommon
+from sleektiv.addons.sale_loyalty.tests.common import TestSaleCouponCommon
 
 
 @tagged('post_install', '-at_install')

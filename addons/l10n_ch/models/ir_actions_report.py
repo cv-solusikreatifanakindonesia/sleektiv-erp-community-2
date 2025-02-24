@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import io
-from odoo import api, models
-from odoo.tools.pdf import OdooPdfFileReader, OdooPdfFileWriter
+from sleektiv import api, models
+from sleektiv.tools.pdf import SleektivPdfFileReader, SleektivPdfFileWriter
 from pathlib import Path
 from reportlab.graphics.shapes import Drawing as ReportLabDrawing, Image as ReportLabImage
 from reportlab.lib.units import mm
@@ -50,13 +50,13 @@ class IrActionsReport(models.Model):
                 )
 
                 for invoice_id, stream in qr_res.items():
-                    qr_pdf = OdooPdfFileReader(stream['stream'], strict=False)
-                    res_pdf = OdooPdfFileReader(res[invoice_id]['stream'], strict=False)
+                    qr_pdf = SleektivPdfFileReader(stream['stream'], strict=False)
+                    res_pdf = SleektivPdfFileReader(res[invoice_id]['stream'], strict=False)
 
                     last_page = res_pdf.getPage(-1)
                     last_page.mergePage(qr_pdf.getPage(0))
 
-                    output_pdf = OdooPdfFileWriter()
+                    output_pdf = SleektivPdfFileWriter()
 
                     # Add all pages from the original PDF except the last one
                     for page_num in range(res_pdf.getNumPages() - 1):

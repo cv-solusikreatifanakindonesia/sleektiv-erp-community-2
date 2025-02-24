@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from sleektiv import fields, models, api
 
 
 class AccountMoveLine(models.Model):

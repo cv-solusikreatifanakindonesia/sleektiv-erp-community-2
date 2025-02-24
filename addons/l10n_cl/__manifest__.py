@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Chile - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -9,7 +9,7 @@ Chilean accounting chart and tax localization.
 Plan contable chileno e impuestos de acuerdo a disposiciones vigentes.
     """,
     'author': 'Blanco Martín & Asociados',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/chile.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/chile.html',
     'category': 'Accounting/Localizations/Account Charts',
     'depends': [
         'contacts',

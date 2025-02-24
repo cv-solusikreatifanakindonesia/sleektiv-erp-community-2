@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
 {
@@ -11,7 +11,7 @@
     'description': """
 Ask questions, get answers, no distractions
         """,
-    'website': 'https://www.odoo.com/app/forum',
+    'website': 'https://sleektiv.com/app/forum',
     'depends': [
         'auth_signup',
         'website_mail',

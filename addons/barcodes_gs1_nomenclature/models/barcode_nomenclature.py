@@ -2,9 +2,9 @@ import re
 import datetime
 import calendar
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.barcode import get_barcode_check_digit
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools.barcode import get_barcode_check_digit
 
 FNC1_CHAR = '\x1D'
 

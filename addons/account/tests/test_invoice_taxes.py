@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0326
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged, Form
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged, Form
 
 
 @tagged('post_install', '-at_install')

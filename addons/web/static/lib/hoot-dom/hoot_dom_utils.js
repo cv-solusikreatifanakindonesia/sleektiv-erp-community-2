@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 /**
  * @typedef {ArgumentPrimitive | `${ArgumentPrimitive}[]` | null} ArgumentType

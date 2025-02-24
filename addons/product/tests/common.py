@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
+from sleektiv.fields import Command
 
-from odoo.addons.base.tests.common import BaseCommon
-from odoo.addons.uom.tests.common import UomCommon
+from sleektiv.addons.base.tests.common import BaseCommon
+from sleektiv.addons.uom.tests.common import UomCommon
 
 
 class ProductCommon(

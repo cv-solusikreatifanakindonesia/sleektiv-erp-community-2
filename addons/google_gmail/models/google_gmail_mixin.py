@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import logging
@@ -8,8 +8,8 @@ import requests
 
 from werkzeug.urls import url_encode, url_join
 
-from odoo import _, api, fields, models, tools
-from odoo.exceptions import AccessError, UserError
+from sleektiv import _, api, fields, models, tools
+from sleektiv.exceptions import AccessError, UserError
 
 _logger = logging.getLogger(__name__)
 

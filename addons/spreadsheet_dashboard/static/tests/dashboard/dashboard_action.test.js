@@ -1,6 +1,6 @@
-import { describe, expect, onError as onErrorHoot, test } from "@odoo/hoot";
-import { pointerDown, press, queryAll } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+import { describe, expect, onError as onErrorHoot, test } from "@sleektiv/hoot";
+import { pointerDown, press, queryAll } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { getBasicData } from "@spreadsheet/../tests/helpers/data";
 import { createSpreadsheetDashboard } from "@spreadsheet_dashboard/../tests/helpers/dashboard_action";
 import {
@@ -234,7 +234,7 @@ test("share dashboard from dashboard view", async function () {
     patchWithCleanup(browser.navigator.clipboard, {
         writeText: (url) => {
             expect.step("share url copied");
-            expect(url).toBe("localhost:8069/share/url/132465");
+            expect(url).toBe("localhost:7073/share/url/132465");
         },
     });
     const def = new Deferred();
@@ -244,7 +244,7 @@ test("share dashboard from dashboard view", async function () {
                 await def;
                 expect.step("dashboard_shared");
                 expect(args.model).toBe("spreadsheet.dashboard.share");
-                return "localhost:8069/share/url/132465";
+                return "localhost:7073/share/url/132465";
             }
         },
     });
@@ -255,7 +255,7 @@ test("share dashboard from dashboard view", async function () {
     def.resolve();
     await animationFrame();
     expect.verifySteps(["dashboard_shared", "share url copied"]);
-    expect(".o_field_CopyClipboardChar").toHaveText("localhost:8069/share/url/132465");
+    expect(".o_field_CopyClipboardChar").toHaveText("localhost:7073/share/url/132465");
     await contains(".fa-clone").click();
     expect.verifySteps(["share url copied"]);
 });
@@ -278,19 +278,19 @@ test("Changing filter values will create a new share", async function () {
         serverData,
         mockRPC: async function (route, args) {
             if (args.method === "action_get_share_url") {
-                return `localhost:8069/share/url/${++counter}`;
+                return `localhost:7073/share/url/${++counter}`;
             }
         },
     });
     await contains("i.fa-share-alt").click();
     await animationFrame();
-    expect(".o_field_CopyClipboardChar").toHaveText(`localhost:8069/share/url/1`);
+    expect(".o_field_CopyClipboardChar").toHaveText(`localhost:7073/share/url/1`);
 
     await contains("i.fa-share-alt").click(); // close share dropdown
 
     await contains("i.fa-share-alt").click();
     await animationFrame();
-    expect(".o_field_CopyClipboardChar").toHaveText(`localhost:8069/share/url/1`);
+    expect(".o_field_CopyClipboardChar").toHaveText(`localhost:7073/share/url/1`);
 
     await contains("i.fa-share-alt").click();
     const year = luxon.DateTime.local().year;
@@ -301,5 +301,5 @@ test("Changing filter values will create a new share", async function () {
 
     await contains("i.fa-share-alt").click();
     await animationFrame();
-    expect(".o_field_CopyClipboardChar").toHaveText(`localhost:8069/share/url/2`);
+    expect(".o_field_CopyClipboardChar").toHaveText(`localhost:7073/share/url/2`);
 });

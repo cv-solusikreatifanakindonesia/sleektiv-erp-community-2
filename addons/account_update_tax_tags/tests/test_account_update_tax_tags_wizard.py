@@ -1,9 +1,9 @@
 import time
 
-from odoo import Command
-from odoo.exceptions import UserError
-from odoo.tests import tagged, freeze_time
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv import Command
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged, freeze_time
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @freeze_time('2023-12-31')

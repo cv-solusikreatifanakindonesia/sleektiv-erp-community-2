@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import operator as py_operator
 from ast import literal_eval
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import float_is_zero, check_barcode_encoding
-from odoo.tools.float_utils import float_round
-from odoo.tools.mail import html2plaintext, is_html_empty
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
+from sleektiv.tools import float_is_zero, check_barcode_encoding
+from sleektiv.tools.float_utils import float_round
+from sleektiv.tools.mail import html2plaintext, is_html_empty
 
 OPERATORS = {
     '<': py_operator.lt,

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, timedelta
 
-from odoo import Command
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.addons.sale_stock.tests.common import TestSaleStockCommon
-from odoo.exceptions import RedirectWarning, UserError
-from odoo.tests import Form, tagged
+from sleektiv import Command
+from sleektiv.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from sleektiv.addons.sale_stock.tests.common import TestSaleStockCommon
+from sleektiv.exceptions import RedirectWarning, UserError
+from sleektiv.tests import Form, tagged
 
 
 @tagged('post_install', '-at_install')

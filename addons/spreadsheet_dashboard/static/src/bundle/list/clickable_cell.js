@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { SEE_RECORD_LIST, SEE_RECORD_LIST_VISIBLE } from "@spreadsheet/list/list_actions";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
 
 const { clickableCellRegistry } = spreadsheet.registries;
 

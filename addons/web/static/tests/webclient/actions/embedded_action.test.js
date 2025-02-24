@@ -1,5 +1,5 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { queryAllTexts } from "@odoo/hoot-dom";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { queryAllTexts } from "@sleektiv/hoot-dom";
 import {
     contains,
     defineActions,
@@ -14,7 +14,7 @@ import {
     webModels,
 } from "@web/../tests/web_test_helpers";
 
-import { mockTouch, runAllTimers } from "@odoo/hoot-mock";
+import { mockTouch, runAllTimers } from "@sleektiv/hoot-mock";
 import { browser } from "@web/core/browser/browser";
 import { router } from "@web/core/browser/router";
 import { user } from "@web/core/user";

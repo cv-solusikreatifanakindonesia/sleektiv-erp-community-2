@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, onWillStart, onWillUpdateProps, useState, useSubEnv, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, onWillStart, onWillUpdateProps, useState, useSubEnv, xml } from "@sleektiv/owl";
 import {
     defineModels,
     fields,

@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 from collections import defaultdict
 
 from dateutil.relativedelta import relativedelta
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.tools import SQL
-from odoo.tools.convert import convert_file
+from sleektiv import api, fields, models, SUPERUSER_ID, _
+from sleektiv.tools import SQL
+from sleektiv.tools.convert import convert_file
 
 
 class Job(models.Model):

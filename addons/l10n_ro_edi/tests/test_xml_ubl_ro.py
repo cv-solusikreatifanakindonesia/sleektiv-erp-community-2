@@ -1,7 +1,7 @@
-from odoo import Command
-from odoo.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -85,38 +85,38 @@ class TestUBLRO(TestUBLCommon):
     def test_export_invoice(self):
         invoice = self.create_move("out_invoice", currency_id=self.company.currency_id.id)
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_sleektiv/ciusro_out_invoice.xml')
 
     def test_export_credit_note(self):
         refund = self.create_move("out_refund", currency_id=self.company.currency_id.id)
         attachment = self.get_attachment(refund)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_refund.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_sleektiv/ciusro_out_refund.xml')
 
     def test_export_invoice_different_currency(self):
         invoice = self.create_move("out_invoice")
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice_different_currency.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_sleektiv/ciusro_out_invoice_different_currency.xml')
 
     def test_export_invoice_without_country_code_prefix_in_vat(self):
         self.company_data['company'].write({'vat': '1234567897'})
         self.partner_a.write({'vat': '1234567897'})
         invoice = self.create_move("out_invoice", currency_id=self.company.currency_id.id)
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice_no_prefix_vat.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_sleektiv/ciusro_out_invoice_no_prefix_vat.xml')
 
     def test_export_no_vat_but_have_company_registry(self):
         self.company_data['company'].write({'vat': False, 'company_registry': 'RO1234567897'})
         self.partner_a.write({'vat': False, 'company_registry': 'RO1234567897'})
         invoice = self.create_move("out_invoice", currency_id=self.company.currency_id.id)
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_sleektiv/ciusro_out_invoice.xml')
 
     def test_export_no_vat_but_have_company_registry_without_prefix(self):
         self.company_data['company'].write({'vat': False, 'company_registry': '1234567897'})
         self.partner_a.write({'vat': False, 'company_registry': '1234567897'})
         invoice = self.create_move("out_invoice", currency_id=self.company.currency_id.id)
         attachment = self.get_attachment(invoice)
-        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_odoo/ciusro_out_invoice_no_prefix_vat.xml')
+        self._assert_invoice_attachment(attachment, xpaths=None, expected_file_path='from_sleektiv/ciusro_out_invoice_no_prefix_vat.xml')
 
     def test_export_no_vat_and_no_company_registry_raises_error(self):
         self.company_data['company'].write({'vat': False, 'company_registry': False})

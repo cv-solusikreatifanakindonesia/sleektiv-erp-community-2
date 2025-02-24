@@ -1,16 +1,16 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import pprint
 
 from werkzeug import urls
 
-from odoo import _, models
-from odoo.exceptions import UserError, ValidationError
+from sleektiv import _, models
+from sleektiv.exceptions import UserError, ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_flutterwave import const
-from odoo.addons.payment_flutterwave.controllers.main import FlutterwaveController
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment_flutterwave import const
+from sleektiv.addons.payment_flutterwave.controllers.main import FlutterwaveController
 
 
 _logger = logging.getLogger(__name__)

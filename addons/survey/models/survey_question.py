@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import collections
 import contextlib
@@ -8,8 +8,8 @@ import json
 import operator
 from textwrap import shorten
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError, ValidationError
+from sleektiv import api, fields, models, tools, _
+from sleektiv.exceptions import UserError, ValidationError
 
 
 class SurveyQuestion(models.Model):

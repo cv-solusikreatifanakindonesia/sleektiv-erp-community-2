@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
 
-from odoo import tests
-from odoo.addons.test_event_full.tests.common import TestWEventCommon
+from sleektiv import tests
+from sleektiv.addons.test_event_full.tests.common import TestWEventCommon
 
 
 @tests.common.tagged('event_online', 'post_install', '-at_install')

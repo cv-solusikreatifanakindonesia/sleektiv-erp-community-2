@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
 from ast import literal_eval
-from odoo import fields, models, _, api
-from odoo.exceptions import UserError
-from odoo.fields import Datetime
+from sleektiv import fields, models, _, api
+from sleektiv.exceptions import UserError
+from sleektiv.fields import Datetime
 
 _logger = logging.getLogger(__name__)
 

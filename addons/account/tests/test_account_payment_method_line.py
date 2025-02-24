@@ -1,5 +1,5 @@
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged, Form
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged, Form
 
 
 @tagged('post_install', '-at_install')

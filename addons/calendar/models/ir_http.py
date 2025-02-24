@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import BadRequest
 
-from odoo import models
-from odoo.http import request
+from sleektiv import models
+from sleektiv.http import request
 
 
 class IrHttp(models.AbstractModel):

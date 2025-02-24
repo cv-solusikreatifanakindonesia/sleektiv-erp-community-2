@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, Command
-from odoo.tools.misc import limited_field_access_token
-from odoo.tests import HttpCase
-from odoo.tests.common import tagged
+from sleektiv import fields, Command
+from sleektiv.tools.misc import limited_field_access_token
+from sleektiv.tests import HttpCase
+from sleektiv.tests.common import tagged
 
 
 @tagged("post_install", "-at_install")

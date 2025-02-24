@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import HttpCase, tagged, new_test_user
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.tests import HttpCase, tagged, new_test_user
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
 
 @tagged('post_install', '-at_install')
 class TestControllersRoute(HttpCaseWithUserDemo, HttpCaseWithUserPortal):
@@ -34,7 +34,7 @@ class TestControllersRoute(HttpCaseWithUserDemo, HttpCaseWithUserPortal):
         req = self.url_open(url)
         self.assertEqual(req.status_code, 200, "Response should = OK")
 
-        # changed behavior in Odoo 16+: the GET request to /rate/{access_token}/int
+        # changed behavior in Sleektiv 16+: the GET request to /rate/{access_token}/int
         # will not trigger a consume of the rating. User needs to submit the Form
         details = [
             (self.user_demo.login, rating_test_1, rating_test_1.access_token, False),

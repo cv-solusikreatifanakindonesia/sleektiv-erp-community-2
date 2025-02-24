@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from "@web/core/registry";
 import { redirect } from "@web/core/utils/urls";
@@ -43,7 +43,7 @@ registry.category("web_tour.tours").add('sale_signature', {
     }, {
         trigger: '#quote_content',
         run: function () {
-            redirect("/odoo");
+            redirect("/sleektiv");
         },  // Avoid race condition at the end of the tour by returning to the home page.
     },
     {

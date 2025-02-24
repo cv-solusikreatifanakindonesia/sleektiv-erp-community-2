@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.utm.models.utm_mixin import UtmMixin
-from odoo.addons.utm.tests.common import TestUTMCommon
-from odoo.tests import tagged
+from sleektiv.addons.utm.models.utm_mixin import UtmMixin
+from sleektiv.addons.utm.tests.common import TestUTMCommon
+from sleektiv.tests import tagged
 
 
 @tagged("utm", "post_install", "-at_install")

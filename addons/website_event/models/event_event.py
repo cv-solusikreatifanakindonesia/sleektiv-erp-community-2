@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
 from dateutil.relativedelta import relativedelta
@@ -8,10 +8,10 @@ import werkzeug.urls
 
 from pytz import utc, timezone
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools.misc import get_lang, format_date
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools.misc import get_lang, format_date
 
 GOOGLE_CALENDAR_URL = 'https://www.google.com/calendar/render?'
 

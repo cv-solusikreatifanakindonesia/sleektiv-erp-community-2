@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { _t } from "@web/core/l10n/translation";
@@ -26,7 +26,7 @@ options.registry.mailing_list_subscribe = options.Class.extend({
                         reload: false,
                         onSuccess: () => {
                             window.location.href =
-                                "/odoo/action-mass_mailing.action_view_mass_mailing_lists";
+                                "/sleektiv/action-mass_mailing.action_view_mass_mailing_lists";
                         },
                     });
                 },

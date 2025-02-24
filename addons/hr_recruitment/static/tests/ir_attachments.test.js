@@ -6,8 +6,8 @@ import {
     start,
     startServer,
 } from "@mail/../tests/mail_test_helpers";
-import { expect, test } from "@odoo/hoot";
-import { animationFrame } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { defineModels, models } from "@web/../tests/web_test_helpers";
 
 class HrApplicant extends models.ServerModel {

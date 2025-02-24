@@ -1,5 +1,5 @@
-from odoo import _
-from odoo.addons.portal.controllers.portal import CustomerPortal
+from sleektiv import _
+from sleektiv.addons.portal.controllers.portal import CustomerPortal
 
 
 class PortalAccount(CustomerPortal):

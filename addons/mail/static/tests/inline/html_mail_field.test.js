@@ -1,8 +1,8 @@
 import { setSelection } from "@html_editor/../tests/_helpers/selection";
 import { insertText } from "@html_editor/../tests/_helpers/user_actions";
 import { HtmlMailField } from "@mail/views/web/fields/html_mail_field/html_mail_field";
-import { after, before, beforeEach, expect, test } from "@odoo/hoot";
-import { press, queryOne } from "@odoo/hoot-dom";
+import { after, before, beforeEach, expect, test } from "@sleektiv/hoot";
+import { press, queryOne } from "@sleektiv/hoot-dom";
 import {
     contains,
     defineModels,
@@ -13,10 +13,10 @@ import {
     patchWithCleanup,
 } from "@web/../tests/web_test_helpers";
 import { mailModels } from "../mail_test_helpers";
-import { animationFrame } from "@odoo/hoot-mock";
+import { animationFrame } from "@sleektiv/hoot-mock";
 
 function setSelectionInHtmlField(selector = "p", fieldName = "body") {
-    const anchorNode = queryOne(`[name='${fieldName}'] .odoo-editor-editable ${selector}`);
+    const anchorNode = queryOne(`[name='${fieldName}'] .sleektiv-editor-editable ${selector}`);
     setSelection({ anchorNode, anchorOffset: 0 });
     return anchorNode;
 }
@@ -89,7 +89,7 @@ test("HtmlMail save inline html", async function () {
     setSelectionInHtmlField();
     await insertText(htmlEditor, "/heading1");
     await press("enter");
-    expect(".odoo-editor-editable").toHaveInnerHTML("<h1> first </h1>");
+    expect(".sleektiv-editor-editable").toHaveInnerHTML("<h1> first </h1>");
 
     await contains(".o_form_button_save").click();
     expect.verifySteps(["web_save"]);

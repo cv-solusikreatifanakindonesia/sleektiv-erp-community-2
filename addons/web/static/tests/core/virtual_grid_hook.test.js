@@ -1,7 +1,7 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
-import { resize, scroll } from "@odoo/hoot-dom";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
-import { Component, useRef, xml } from "@odoo/owl";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
+import { resize, scroll } from "@sleektiv/hoot-dom";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, useRef, xml } from "@sleektiv/owl";
 import { mountWithCleanup, patchWithCleanup } from "@web/../tests/web_test_helpers";
 import { localization } from "@web/core/l10n/localization";
 import { useVirtualGrid } from "@web/core/virtual_grid_hook";

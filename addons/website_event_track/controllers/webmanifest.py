@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
-from odoo import http
-from odoo.http import request
-from odoo.tools.misc import file_open
-from odoo.tools.translate import _
+from sleektiv import http
+from sleektiv.http import request
+from sleektiv.tools.misc import file_open
+from sleektiv.tools.translate import _
 
 
 class TrackManifest(http.Controller):
@@ -50,7 +50,7 @@ class TrackManifest(http.Controller):
         if request.website.cdn_activated:
             cdn_url = request.website.cdn_url.replace('"','%22').replace('\x5c','%5C')
             js_cdn_url = '"%s"' % cdn_url
-        body = body.replace('__ODOO_CDN_URL__', js_cdn_url)
+        body = body.replace('__SLEEKTIV_CDN_URL__', js_cdn_url)
         response = request.make_response(body, [
             ('Content-Type', 'text/javascript'),
             ('Service-Worker-Allowed', request.env['ir.http']._url_for('/event')),

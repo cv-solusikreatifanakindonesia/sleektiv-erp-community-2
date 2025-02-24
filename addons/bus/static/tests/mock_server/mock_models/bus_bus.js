@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { before } from "@odoo/hoot";
+import { before } from "@sleektiv/hoot";
 import { MockServer, models } from "@web/../tests/web_test_helpers";
 import { registry } from "@web/core/registry";
 import { patchWebsocketWorkerWithCleanup } from "../../mock_websocket";

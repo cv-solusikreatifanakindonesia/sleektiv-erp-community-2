@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
 from collections import OrderedDict
 from random import randint, sample
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.addons.website_event.controllers.main import WebsiteEventController
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import format_duration
+from sleektiv import http
+from sleektiv.addons.website_event.controllers.main import WebsiteEventController
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools import format_duration
 
 
 class ExhibitorController(WebsiteEventController):

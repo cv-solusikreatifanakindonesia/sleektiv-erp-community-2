@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from urllib.parse import quote
 
@@ -8,8 +8,8 @@ try:
 except ImportError:
     service_account = Request = None
 
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import UserError
+from sleektiv.tests.common import TransactionCase
+from sleektiv.exceptions import UserError
 
 from .. import uninstall_hook
 

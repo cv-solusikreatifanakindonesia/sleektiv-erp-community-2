@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
-from odoo.addons.website_slides.controllers.main import WebsiteSlides
+from sleektiv.http import request
+from sleektiv.addons.website_slides.controllers.main import WebsiteSlides
 
 
 class WebsiteSlidesForum(WebsiteSlides):

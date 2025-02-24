@@ -1,7 +1,7 @@
-from odoo import Command
-from odoo.tests.common import tagged
+from sleektiv import Command
+from sleektiv.tests.common import tagged
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged("-at_install", "post_install", "post_install_l10n")

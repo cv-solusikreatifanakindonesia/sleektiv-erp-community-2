@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo.fields import Command
-from odoo.tests import tagged
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
-from odoo.addons.sale.tests.product_configurator_common import TestProductConfiguratorCommon
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_sale.controllers.product_configurator import (
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
+from sleektiv.addons.sale.tests.product_configurator_common import TestProductConfiguratorCommon
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_sale.controllers.product_configurator import (
     WebsiteSaleProductConfiguratorController,
 )
-from odoo.addons.website_sale.tests.common import WebsiteSaleCommon
+from sleektiv.addons.website_sale.tests.common import WebsiteSaleCommon
 
 
 @tagged('post_install', '-at_install')

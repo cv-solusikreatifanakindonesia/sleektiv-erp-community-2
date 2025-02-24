@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import date, datetime
 
-from odoo.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
-from odoo.tests.common import users, warmup, tagged
+from sleektiv.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
+from sleektiv.tests.common import users, warmup, tagged
 
 
 @tagged('work_entry_holidays_perf')

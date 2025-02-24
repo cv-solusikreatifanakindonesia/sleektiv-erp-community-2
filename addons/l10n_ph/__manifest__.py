@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Philippines - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -7,7 +7,7 @@
     'category': 'Accounting/Localizations/Account Charts',
     'version': '1.1',
     'author': 'Odoo PS',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/philippines.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/philippines.html',
     'depends': [
         'account',
         'base_vat',

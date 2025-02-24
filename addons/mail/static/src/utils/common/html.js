@@ -1,4 +1,4 @@
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 import { htmlEscape, setElementContent } from "@web/core/utils/html";
 

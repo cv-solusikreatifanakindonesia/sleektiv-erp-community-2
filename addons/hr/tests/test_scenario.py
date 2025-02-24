@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import TransactionCase
+from sleektiv.tests.common import TransactionCase
 
 
 class TestHrScenario(TransactionCase):

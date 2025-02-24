@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import logging
@@ -7,17 +7,17 @@ from collections import defaultdict
 from datetime import timedelta
 from itertools import groupby
 
-from odoo import SUPERUSER_ID, _, api, fields, models
-from odoo.exceptions import (
+from sleektiv import SUPERUSER_ID, _, api, fields, models
+from sleektiv.exceptions import (
     AccessError,
     RedirectWarning,
     UserError,
     ValidationError,
 )
-from odoo.fields import Command
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import (
+from sleektiv.fields import Command
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools import (
     create_index,
     float_is_zero,
     format_amount,
@@ -25,9 +25,9 @@ from odoo.tools import (
     is_html_empty,
     SQL,
 )
-from odoo.tools.mail import html_keep_url
+from sleektiv.tools.mail import html_keep_url
 
-from odoo.addons.payment import utils as payment_utils
+from sleektiv.addons.payment import utils as payment_utils
 
 _logger = logging.getLogger(__name__)
 

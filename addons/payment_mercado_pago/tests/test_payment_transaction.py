@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 from urllib.parse import quote as url_quote
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from sleektiv.tests import tagged
+from sleektiv.tools import mute_logger
 
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_mercado_pago.tests.common import MercadoPagoCommon
+from sleektiv.addons.payment.tests.http_common import PaymentHttpCommon
+from sleektiv.addons.payment_mercado_pago.tests.common import MercadoPagoCommon
 
 
 @tagged('post_install', '-at_install')
@@ -45,12 +45,12 @@ class TestPaymentTransaction(MercadoPagoCommon, PaymentHttpCommon):
             'payment_methods': {'installments': 1},
         })
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment.models.payment_transaction')
     def test_no_input_missing_from_redirect_form(self):
         """ Test that the `api_url` key is not omitted from the rendering values. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_mercado_pago.models.payment_transaction.PaymentTransaction'
+            'sleektiv.addons.payment_mercado_pago.models.payment_transaction.PaymentTransaction'
             '._get_specific_rendering_values', return_value={'api_url': 'https://dummy.com'}
         ):
             processing_values = tx._get_processing_values()
@@ -64,19 +64,19 @@ class TestPaymentTransaction(MercadoPagoCommon, PaymentHttpCommon):
         successful payment. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_mercado_pago.models.payment_provider.PaymentProvider'
+            'sleektiv.addons.payment_mercado_pago.models.payment_provider.PaymentProvider'
             '._mercado_pago_make_request', return_value=self.verification_data
         ):
             tx._process_notification_data(self.redirect_notification_data)
         self.assertEqual(tx.state, 'done')
 
-    @mute_logger('odoo.addons.payment_mercado_pago.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_mercado_pago.models.payment_transaction')
     def test_processing_notification_data_rejects_transaction(self):
         """ Test that the transaction state is set to 'error' when the notification data indicate a status of
         404 error payment. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_mercado_pago.models.payment_provider.PaymentProvider'
+            'sleektiv.addons.payment_mercado_pago.models.payment_provider.PaymentProvider'
             '._mercado_pago_make_request', return_value=self.verification_data_for_error_state
         ):
             tx._process_notification_data(self.redirect_notification_data)

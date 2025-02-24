@@ -1,4 +1,4 @@
-/** @odoo-modules **/
+/** @sleektiv-modules **/
 
 import { _t } from "@web/core/l10n/translation";
 import { Dialog } from "@web/core/dialog/dialog";
@@ -6,8 +6,8 @@ import { useChildRef, useService } from "@web/core/utils/hooks";
 import { user } from "@web/core/user";
 import weSnippetEditor from "@web_editor/js/editor/snippets.editor";
 import wSnippetOptions from "@website/js/editor/snippets.options";
-import * as OdooEditorLib from "@web_editor/js/editor/odoo-editor/src/utils/utils";
-import { Component, onMounted, onWillStart, useEffect, useRef, useState } from "@odoo/owl";
+import * as SleektivEditorLib from "@web_editor/js/editor/sleektiv-editor/src/utils/utils";
+import { Component, onMounted, onWillStart, useEffect, useRef, useState } from "@sleektiv/owl";
 import { throttleForAnimation } from "@web/core/utils/timing";
 import { applyTextHighlight, switchTextHighlight } from "@website/js/text_processing";
 import { registry } from "@web/core/registry";
@@ -15,8 +15,8 @@ import { registry } from "@web/core/registry";
 const snippetsEditorRegistry = registry.category("snippets_editor");
 snippetsEditorRegistry.add("no_parent_editor_snippets", ["s_popup", "o_mega_menu"]);
 
-const getDeepRange = OdooEditorLib.getDeepRange;
-const getTraversedNodes = OdooEditorLib.getTraversedNodes;
+const getDeepRange = SleektivEditorLib.getDeepRange;
+const getTraversedNodes = SleektivEditorLib.getTraversedNodes;
 
 const FontFamilyPickerUserValueWidget = wSnippetOptions.FontFamilyPickerUserValueWidget;
 
@@ -383,8 +383,8 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
      * @override
      */
     _getDragAndDropOptions(options = {}) {
-        // TODO: This is currently not in use by Odoo's D&D
-        // There is currently no way in Odoo D&D to offset the edge scrolling.
+        // TODO: This is currently not in use by Sleektiv's D&D
+        // There is currently no way in Sleektiv D&D to offset the edge scrolling.
         // When there is, this code should be adapted.
         const finalOptions = super._getDragAndDropOptions(...arguments);
         if (!options.offsetElements || !options.offsetElements.$top) {
@@ -398,7 +398,7 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      * @param {string} gmapRequestEventName
      */
     async _handleGMapRequest(ev, gmapRequestEventName) {
@@ -430,7 +430,7 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
      * @return {Selection|null}
      */
     _getSelection() {
-        return this.options.wysiwyg.odooEditor.document.getSelection();
+        return this.options.wysiwyg.sleektivEditor.document.getSelection();
     }
     /**
      * @override
@@ -443,7 +443,7 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
 
         // As the toolbar displays css variable that are customizable by users,
         // we have the recompute the font size selector values.
-        this.options.wysiwyg.odooEditor.computeFontSizeSelectorValues();
+        this.options.wysiwyg.sleektivEditor.computeFontSizeSelectorValues();
     }
     /**
     * @override
@@ -510,7 +510,7 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
         // Check if the text has already the current option activated.
         let selectedTextEl = this._getSelectedTextElement(classSelector);
         if (selectedTextEl) {
-            const restoreCursor = OdooEditorLib.preserveCursor(this.$body[0].ownerDocument);
+            const restoreCursor = SleektivEditorLib.preserveCursor(this.$body[0].ownerDocument);
             // Unwrap the selected text content and disable the option.
             const selectedTextParent = selectedTextEl.parentNode;
             while (selectedTextEl.firstChild) {
@@ -525,8 +525,8 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
             }
             selectedTextParent.removeChild(selectedTextEl);
             // Update the option's UI.
-            this.options.wysiwyg.odooEditor.historyResetLatestComputedSelection();
-            this.options.wysiwyg.odooEditor.historyStep(true);
+            this.options.wysiwyg.sleektivEditor.historyResetLatestComputedSelection();
+            this.options.wysiwyg.sleektivEditor.historyStep(true);
             restoreCursor();
             if (this.options.enableTranslation) {
                 $(selectedTextParent).trigger("content_changed");
@@ -556,7 +556,7 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
                 this._activateSnippet($snippet, false).then(() => {
                     textOptionsPostActivate($snippet);
                 });
-                this.options.wysiwyg.odooEditor.historyStep();
+                this.options.wysiwyg.sleektivEditor.historyStep();
                 return true;
             } else {
                 this.notification.add(
@@ -612,14 +612,14 @@ export class WebsiteSnippetsMenu extends weSnippetEditor.SnippetsMenu {
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onGMapAPIRequest(ev) {
         this._handleGMapRequest(ev, 'gmap_api_request');
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onGMapAPIKeyRequest(ev) {
         this._handleGMapRequest(ev, 'gmap_api_key_request');

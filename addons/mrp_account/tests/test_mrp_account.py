@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo.addons.stock_account.tests.test_account_move import TestAccountMoveStockCommon
-from odoo.tests import Form, tagged
-from odoo.tests.common import new_test_user
-from odoo import fields, Command
+from sleektiv.addons.mrp.tests.common import TestMrpCommon
+from sleektiv.addons.stock_account.tests.test_account_move import TestAccountMoveStockCommon
+from sleektiv.tests import Form, tagged
+from sleektiv.tests.common import new_test_user
+from sleektiv import fields, Command
 
 
 class TestMrpAccount(TestMrpCommon):

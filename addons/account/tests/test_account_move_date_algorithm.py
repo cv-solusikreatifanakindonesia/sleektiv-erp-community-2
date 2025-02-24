@@ -3,9 +3,9 @@ from contextlib import closing
 
 import freezegun
 
-from odoo import fields, Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
+from sleektiv import fields, Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged
 
 
 @tagged('post_install', '-at_install')

@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { SampleServer } from "@web/model/sample_server";
 
 const {

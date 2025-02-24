@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import markupsafe
 import re
 
-from odoo import api, fields, models, release
-from odoo.tools import LazyTranslate
+from sleektiv import api, fields, models, release
+from sleektiv.tools import LazyTranslate
 
 _lt = LazyTranslate(__name__)
 
@@ -15,14 +15,14 @@ L10N_ES_TBAI_LICENSE_DICT = {
         'license_name': _lt('Production license'),  # all agencies
         'license_number': 'TBAIGI5A266A7CCDE1EC',
         'license_nif': 'N0251909H',
-        'software_name': 'Odoo SA',
+        'software_name': 'Sleektiv SA',
         'software_version': release.version,
     },
     'araba': {
         'license_name': _lt('Test license (Araba)'),
         'license_number': 'TBAIARbjjMClHKH00849',
         'license_nif': 'N0251909H',
-        'software_name': 'Odoo SA',
+        'software_name': 'Sleektiv SA',
         'software_version': release.version,
     },
     'bizkaia': {
@@ -36,7 +36,7 @@ L10N_ES_TBAI_LICENSE_DICT = {
         'license_name': _lt('Test license (Gipuzkoa)'),
         'license_number': 'TBAIGIPRE00000000965',
         'license_nif': 'N0251909H',
-        'software_name': 'Odoo SA',
+        'software_name': 'Sleektiv SA',
         'software_version': release.version,
     },
 }

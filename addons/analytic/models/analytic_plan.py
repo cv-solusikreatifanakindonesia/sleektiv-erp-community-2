@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from random import randint
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import ormcache, make_index_name, create_index
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools import ormcache, make_index_name, create_index
 
 
 class AccountAnalyticPlan(models.Model):

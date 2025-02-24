@@ -10,9 +10,9 @@ import {
     startServer,
     triggerHotkey,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, getFixture, test } from "@odoo/hoot";
+import { describe, getFixture, test } from "@sleektiv/hoot";
 
-import { queryFirst } from "@odoo/hoot-dom";
+import { queryFirst } from "@sleektiv/hoot-dom";
 
 describe.current.tags("desktop");
 defineMailModels();

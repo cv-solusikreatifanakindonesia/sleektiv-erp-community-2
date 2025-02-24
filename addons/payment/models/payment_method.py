@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from sleektiv import Command, _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.const import REPORT_REASONS_MAPPING
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment.const import REPORT_REASONS_MAPPING
 
 
 class PaymentMethod(models.Model):
@@ -70,7 +70,7 @@ class PaymentMethod(models.Model):
     )
     support_refund = fields.Selection(
         string="Refund",
-        help="Refund is a feature allowing to refund customers directly from the payment in Odoo.",
+        help="Refund is a feature allowing to refund customers directly from the payment in Sleektiv.",
         selection=[
             ('none', "Unsupported"),
             ('full_only', "Full Only"),

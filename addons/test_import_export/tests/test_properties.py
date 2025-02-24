@@ -1,5 +1,5 @@
 import json
-from odoo.tests.common import RecordCapturer, HttpCase
+from sleektiv.tests.common import RecordCapturer, HttpCase
 
 
 class TestPropertiesExportImport(HttpCase):

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.addons.hr_expense.tests.common import TestExpenseCommon
+from sleektiv.addons.sale.tests.common import TestSaleCommon
+from sleektiv.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

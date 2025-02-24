@@ -1,5 +1,5 @@
-from odoo import api, fields, models
-from odoo.tools import frozendict
+from sleektiv import api, fields, models
+from sleektiv.tools import frozendict
 
 
 

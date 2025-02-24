@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { browser } from "@web/core/browser/browser";
 import { click, getFixture, patchWithCleanup, editInput } from "@web/../tests/helpers/utils";

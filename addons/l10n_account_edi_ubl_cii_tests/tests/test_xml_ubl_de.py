@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import Command
-from odoo.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
+from sleektiv.tests import tagged
 import base64
 
 
@@ -130,7 +130,7 @@ class TestUBLDE(TestUBLCommon):
                     <attribute name="filename">{invoice.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/xrechnung_ubl_out_invoice.xml',
+            expected_file_path='from_sleektiv/xrechnung_ubl_out_invoice.xml',
         )
         self.assertEqual(attachment.name[-10:], "ubl_de.xml")
         self._assert_imported_invoice_from_etree(invoice, attachment)
@@ -171,7 +171,7 @@ class TestUBLDE(TestUBLCommon):
                     <attribute name="filename">{invoice.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/xrechnung_ubl_out_invoice_without_vat.xml',
+            expected_file_path='from_sleektiv/xrechnung_ubl_out_invoice_without_vat.xml',
         )
         self._assert_imported_invoice_from_etree(invoice, attachment)
 
@@ -228,7 +228,7 @@ class TestUBLDE(TestUBLCommon):
                     <attribute name="filename">{refund.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/xrechnung_ubl_out_refund.xml',
+            expected_file_path='from_sleektiv/xrechnung_ubl_out_refund.xml',
         )
         self.assertEqual(attachment.name[-10:], "ubl_de.xml")
         self._assert_imported_invoice_from_etree(refund, attachment)
@@ -239,7 +239,7 @@ class TestUBLDE(TestUBLCommon):
 
     def test_import_invoice_xml(self):
         self._assert_imported_invoice_from_file(
-            subfolder='tests/test_files/from_odoo',
+            subfolder='tests/test_files/from_sleektiv',
             filename='xrechnung_ubl_out_invoice.xml',
             invoice_vals={
                 'currency_id': self.other_currency.id,

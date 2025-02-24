@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import lxml.html
 
-from odoo.addons.test_mass_mailing.tests.common import TestMassMailCommon
-from odoo.fields import Command
-from odoo.tests.common import users, tagged
-from odoo.tools import mute_logger
+from sleektiv.addons.test_mass_mailing.tests.common import TestMassMailCommon
+from sleektiv.fields import Command
+from sleektiv.tests.common import users, tagged
+from sleektiv.tools import mute_logger
 
 
 @tagged('mailing_manage')
@@ -33,7 +33,7 @@ class TestMailingTest(TestMassMailCommon):
         })
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_render_mixin')
+    @mute_logger('sleektiv.addons.mail.models.mail_render_mixin')
     def test_mailing_test_button(self):
         mailing = self.test_mailing_bl.with_env(self.env)
         mailing_test = self.env['mailing.mailing.test'].create({
@@ -76,7 +76,7 @@ class TestMailingTest(TestMassMailCommon):
             mailing_test.send_mail_test()
 
     @users('user_marketing')
-    @mute_logger('odoo.addons.mail.models.mail_render_mixin')
+    @mute_logger('sleektiv.addons.mail.models.mail_render_mixin')
     def test_mailing_test_button_links(self):
         """This tests that the link provided by the View in Browser snippet is correctly replaced
         when sending a test mailing while the Unsubscribe button's link isn't, to preserve the testing route

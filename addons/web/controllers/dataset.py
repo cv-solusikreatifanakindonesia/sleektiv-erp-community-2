@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import warnings
 from werkzeug.exceptions import NotFound
 
-from odoo import http
-from odoo.api import call_kw
-from odoo.http import request
-from odoo.models import check_method_name
+from sleektiv import http
+from sleektiv.api import call_kw
+from sleektiv.http import request
+from sleektiv.models import check_method_name
 from .utils import clean_action
 
 

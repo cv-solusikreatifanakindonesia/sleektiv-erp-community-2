@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import re
 
 from werkzeug.urls import url_encode
 
-from odoo import _
+from sleektiv import _
 
 logger = logging.getLogger(__name__)
 

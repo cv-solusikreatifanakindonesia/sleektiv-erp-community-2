@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import werkzeug.urls
 
-from odoo import http
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website_google_map.controllers.main import GoogleMap
-from odoo.tools.translate import _
-from odoo.http import request
+from sleektiv import http
+from sleektiv.addons.website.models.ir_http import sitemap_qs2dom
+from sleektiv.addons.website_google_map.controllers.main import GoogleMap
+from sleektiv.tools.translate import _
+from sleektiv.http import request
 
 
 class WebsiteCustomer(GoogleMap):

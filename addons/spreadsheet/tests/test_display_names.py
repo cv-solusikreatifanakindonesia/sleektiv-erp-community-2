@@ -1,4 +1,4 @@
-from odoo.tests.common import TransactionCase, new_test_user
+from sleektiv.tests.common import TransactionCase, new_test_user
 
 
 class TestDisplayNames(TransactionCase):

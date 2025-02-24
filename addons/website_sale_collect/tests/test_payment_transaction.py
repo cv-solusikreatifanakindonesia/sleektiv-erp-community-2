@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import HttpCase, tagged
-from odoo.tools import mute_logger
+from sleektiv.tests import HttpCase, tagged
+from sleektiv.tools import mute_logger
 
-from odoo.addons.website_sale_collect.tests.common import ClickAndCollectCommon
+from sleektiv.addons.website_sale_collect.tests.common import ClickAndCollectCommon
 
 
 @tagged('post_install', '-at_install')
@@ -17,7 +17,7 @@ class TestOnSitePaymentTransaction(HttpCase, ClickAndCollectCommon):
             state='pending',
             payment_method_id=self.provider.payment_method_ids.id,
         )
-        with mute_logger('odoo.addons.sale.models.payment_transaction'):
+        with mute_logger('sleektiv.addons.sale.models.payment_transaction'):
             tx._post_process()
 
         self.assertEqual(order.state, 'sale')

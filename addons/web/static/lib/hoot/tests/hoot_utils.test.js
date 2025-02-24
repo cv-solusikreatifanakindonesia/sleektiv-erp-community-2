@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { isIterable, isRegExpFilter } from "@web/../lib/hoot-dom/hoot_dom_utils";
 import {
     deepEqual,

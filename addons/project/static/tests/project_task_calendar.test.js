@@ -1,6 +1,6 @@
-import { expect, test, beforeEach, describe } from "@odoo/hoot";
-import { mockDate, animationFrame, runAllTimers } from "@odoo/hoot-mock";
-import { click, queryOne } from "@odoo/hoot-dom";
+import { expect, test, beforeEach, describe } from "@sleektiv/hoot";
+import { mockDate, animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
+import { click, queryOne } from "@sleektiv/hoot-dom";
 
 import { mountView, onRpc } from "@web/../tests/web_test_helpers";
 

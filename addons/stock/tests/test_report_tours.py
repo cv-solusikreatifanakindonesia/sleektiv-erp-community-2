@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import HttpCase, tagged
+from sleektiv.tests import HttpCase, tagged
 
 
 @tagged('-at_install', 'post_install')
 class TestStockReportTour(HttpCase):
 
     def _get_report_url(self):
-        return '/odoo/action-stock.product_template_action_product'
+        return '/sleektiv/action-stock.product_template_action_product'
 
     def test_stock_route_diagram_report(self):
         """ Open the route diagram report."""

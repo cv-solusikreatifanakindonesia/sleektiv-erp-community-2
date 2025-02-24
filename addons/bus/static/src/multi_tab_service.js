@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@sleektiv/owl";
 
 let multiTabId = 0;
 /**

@@ -1,4 +1,4 @@
-import { useState } from "@odoo/owl";
+import { useState } from "@sleektiv/owl";
 import { ChatGPTDialog } from '@web_editor/js/wysiwyg/widgets/chatgpt_dialog';
 
 export class ChatGPTTranslateDialog extends ChatGPTDialog {

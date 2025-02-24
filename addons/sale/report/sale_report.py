@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
-from odoo.addons.sale.models.sale_order import SALE_ORDER_STATE
+from sleektiv.addons.sale.models.sale_order import SALE_ORDER_STATE
 
 
 class SaleReport(models.Model):

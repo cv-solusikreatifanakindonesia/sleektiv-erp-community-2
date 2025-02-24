@@ -10,19 +10,19 @@ from lxml import etree
 from pytz import timezone
 from requests.exceptions import RequestException
 
-from odoo import _, api, fields, models, release
-from odoo.addons.l10n_es_edi_sii.models.account_edi_format import PatchedHTTPAdapter
-from odoo.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
-from odoo.addons.l10n_es_edi_tbai.models.xml_utils import (
+from sleektiv import _, api, fields, models, release
+from sleektiv.addons.l10n_es_edi_sii.models.account_edi_format import PatchedHTTPAdapter
+from sleektiv.addons.l10n_es_edi_tbai.models.l10n_es_edi_tbai_agencies import get_key
+from sleektiv.addons.l10n_es_edi_tbai.models.xml_utils import (
     NS_MAP,
     calculate_references_digests,
     canonicalize_node,
     cleanup_xml_signature,
 )
-from odoo.exceptions import UserError
-from odoo.tools import get_lang
-from odoo.tools.float_utils import float_repr, float_round
-from odoo.tools.xml_utils import cleanup_xml_node
+from sleektiv.exceptions import UserError
+from sleektiv.tools import get_lang
+from sleektiv.tools.float_utils import float_repr, float_round
+from sleektiv.tools.xml_utils import cleanup_xml_node
 
 CRC8_TABLE = [
     0x00, 0x07, 0x0E, 0x09, 0x1C, 0x1B, 0x12, 0x15, 0x38, 0x3F, 0x36, 0x31, 0x24, 0x23, 0x2A, 0x2D,
@@ -376,7 +376,7 @@ class L10nEsEdiTbaiDocument(models.Model):
     def _get_header_values(self):
         return {
             'tbai_version': self.L10N_ES_TBAI_VERSION,
-            'odoo_version': release.version,
+            'sleektiv_version': release.version,
         }
 
     @api.model

@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta
 
-from odoo import models
-from odoo.http import request, SessionExpiredException
-from odoo.tools import OrderedSet
-from odoo.osv import expression
-from odoo.service import security
+from sleektiv import models
+from sleektiv.http import request, SessionExpiredException
+from sleektiv.tools import OrderedSet
+from sleektiv.osv import expression
+from sleektiv.service import security
 from ..models.bus import dispatch
 from ..websocket import wsrequest
 
@@ -83,7 +83,7 @@ class IrWebsocket(models.AbstractModel):
             A dict containing the following keys:
             - channels (set of str): The list of channels to subscribe to.
             - last (int): The last known notification id.
-            - missed_presences (odoo.models.Recordset): The missed presences.
+            - missed_presences (sleektiv.models.Recordset): The missed presences.
 
         :raise ValueError: If the list of channels is not a list of strings.
         """
@@ -92,10 +92,10 @@ class IrWebsocket(models.AbstractModel):
         # sudo - bus.bus: reading non-sensitive last bus id.
         last = 0 if last > self.env["bus.bus"].sudo()._bus_last_id() else last
         str_presence_channels = {
-            c for c in channels if isinstance(c, str) and c.startswith("odoo-presence-")
+            c for c in channels if isinstance(c, str) and c.startswith("sleektiv-presence-")
         }
         presence_channels = self._build_presence_channel_list(
-            [tuple(c.replace("odoo-presence-", "").split("_")) for c in str_presence_channels]
+            [tuple(c.replace("sleektiv-presence-", "").split("_")) for c in str_presence_channels]
         )
         # There is a gap between a subscription client side (which is debounced)
         # and the actual subcription thus presences can be missed. Send a

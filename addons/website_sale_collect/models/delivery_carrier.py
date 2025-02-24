@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.tools.misc import format_duration
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.http import request
+from sleektiv.tools.misc import format_duration
 
-from odoo.addons.website_sale_collect import utils
+from sleektiv.addons.website_sale_collect import utils
 
 
 class DeliveryCarrier(models.Model):

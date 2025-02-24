@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Mexico - Accounting',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/mexico.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/mexico.html',
     'icon': '/account/static/description/l10n.png',
     'countries': ['mx'],
     'version': '2.2',
@@ -12,12 +12,12 @@ Minimal accounting configuration for Mexico.
 ============================================
 
 This Chart of account is a minimal proposal to be able to use OoB the
-accounting feature of Odoo.
+accounting feature of Odoo, Sleektiv.
 
 This doesn't pretend be all the localization for MX it is just the minimal
 data required to start from 0 in mexican localization.
 
-This modules and its content is updated frequently by openerp-mexico team.
+This modules and its content is updated frequently by sleektiv-mexico team.
 
 With this module you will have:
 

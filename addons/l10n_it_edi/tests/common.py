@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 from lxml import etree
 
-from odoo import tools
-from odoo.tests import tagged
-from odoo.tools.misc import file_open
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv import tools
+from sleektiv.tests import tagged
+from sleektiv.tools.misc import file_open
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo.exceptions import ValidationError
-from odoo.addons.hr_contract.tests.common import TestContractCommon
-from odoo.tests import tagged
+from sleektiv.exceptions import ValidationError
+from sleektiv.addons.hr_contract.tests.common import TestContractCommon
+from sleektiv.tests import tagged
 
 @tagged('test_contracts')
 class TestHrContracts(TestContractCommon):

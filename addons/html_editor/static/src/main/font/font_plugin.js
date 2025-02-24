@@ -19,7 +19,7 @@ import { _t } from "@web/core/l10n/translation";
 import { FontSelector } from "./font_selector";
 import { getBaseContainerSelector } from "@html_editor/utils/base_container";
 import { withSequence } from "@html_editor/utils/resource";
-import { reactive } from "@odoo/owl";
+import { reactive } from "@sleektiv/owl";
 
 export const fontItems = [
     {

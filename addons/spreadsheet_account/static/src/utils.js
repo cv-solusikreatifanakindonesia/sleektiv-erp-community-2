@@ -1,13 +1,13 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 // @ts-check
 
-import { helpers } from "@odoo/o-spreadsheet";
+import { helpers } from "@sleektiv/o-spreadsheet";
 
 const { getFunctionsFromTokens } = helpers;
 
 /**
- * @typedef {import("@odoo/o-spreadsheet").Token} Token
- * @typedef  {import("@spreadsheet/helpers/odoo_functions_helpers").OdooFunctionDescription} OdooFunctionDescription
+ * @typedef {import("@sleektiv/o-spreadsheet").Token} Token
+ * @typedef  {import("@spreadsheet/helpers/sleektiv_functions_helpers").SleektivFunctionDescription} SleektivFunctionDescription
  */
 
 /**
@@ -15,15 +15,15 @@ const { getFunctionsFromTokens } = helpers;
  * @returns {number}
  */
 export function getNumberOfAccountFormulas(tokens) {
-    return getFunctionsFromTokens(tokens, ["ODOO.BALANCE", "ODOO.CREDIT", "ODOO.DEBIT", "ODOO.RESIDUAL", "ODOO.PARTNER.BALANCE"]).length;
+    return getFunctionsFromTokens(tokens, ["SLEEKTIV.BALANCE", "SLEEKTIV.CREDIT", "SLEEKTIV.DEBIT", "SLEEKTIV.RESIDUAL", "SLEEKTIV.PARTNER.BALANCE"]).length;
 }
 
 /**
  * Get the first Account function description of the given formula.
  *
  * @param {Token[]} tokens
- * @returns {OdooFunctionDescription | undefined}
+ * @returns {SleektivFunctionDescription | undefined}
  */
 export function getFirstAccountFunction(tokens) {
-    return getFunctionsFromTokens(tokens, ["ODOO.BALANCE", "ODOO.CREDIT", "ODOO.DEBIT", "ODOO.RESIDUAL", "ODOO.PARTNER.BALANCE"])[0];
+    return getFunctionsFromTokens(tokens, ["SLEEKTIV.BALANCE", "SLEEKTIV.CREDIT", "SLEEKTIV.DEBIT", "SLEEKTIV.RESIDUAL", "SLEEKTIV.PARTNER.BALANCE"])[0];
 }

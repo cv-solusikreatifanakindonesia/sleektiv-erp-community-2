@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Guatemala - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -13,7 +13,7 @@ Agrega una nomenclatura contable para Guatemala. También icluye impuestos y
 la moneda del Quetzal. -- Adds accounting chart for Guatemala. It also includes
 taxes and the Quetzal currency.""",
     'author': 'José Rodrigo Fernández Menegazzo',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'base',
         'account',

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
+from sleektiv.http import request
 
-from odoo.addons.website_mass_mailing.controllers.main import MassMailController
-from odoo.addons.website_sale.controllers.main import WebsiteSale as WebsiteSaleController
+from sleektiv.addons.website_mass_mailing.controllers.main import MassMailController
+from sleektiv.addons.website_sale.controllers.main import WebsiteSale as WebsiteSaleController
 
 
 class WebsiteSale(WebsiteSaleController):

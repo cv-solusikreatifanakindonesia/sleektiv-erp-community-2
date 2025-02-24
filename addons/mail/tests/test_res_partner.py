@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from contextlib import contextmanager
 from markupsafe import Markup
 from unittest.mock import patch
 from uuid import uuid4
 
-from odoo import tools
-from odoo.addons.base.models.res_partner import Partner
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.tests import Form, tagged, users
-from odoo.tools import mute_logger
+from sleektiv import tools
+from sleektiv.addons.base.models.res_partner import Partner
+from sleektiv.addons.mail.tests.common import MailCommon, mail_new_test_user
+from sleektiv.tests import Form, tagged, users
+from sleektiv.tools import mute_logger
 
 
 @tagged('res_partner', 'mail_tools')
@@ -509,7 +509,7 @@ class TestPartner(MailCommon):
                 self.assertEqual(partner.email, expected_email)
 
     @users('admin')
-    @mute_logger('odoo.addons.base.partner.merge', 'odoo.tests')
+    @mute_logger('sleektiv.addons.base.partner.merge', 'sleektiv.tests')
     def test_partner_merge_wizards(self):
         Partner = self.env['res.partner']
 

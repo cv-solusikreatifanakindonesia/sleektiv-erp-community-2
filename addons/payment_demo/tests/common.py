@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.payment.tests.common import PaymentCommon
+from sleektiv.addons.payment.tests.common import PaymentCommon
 
 
 class PaymentDemoCommon(PaymentCommon):

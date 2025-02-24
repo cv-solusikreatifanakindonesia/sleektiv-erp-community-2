@@ -1,4 +1,4 @@
-from odoo import models, _
+from sleektiv import models, _
 
 
 class StockRule(models.Model):

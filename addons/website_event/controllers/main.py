@@ -8,13 +8,13 @@ from ast import literal_eval
 from collections import Counter
 from werkzeug.exceptions import NotFound
 
-from odoo import fields, http, _
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools.misc import get_lang
-from odoo.tools import lazy
-from odoo.exceptions import UserError
+from sleektiv import fields, http, _
+from sleektiv.addons.website.controllers.main import QueryURL
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools.misc import get_lang
+from sleektiv.tools import lazy
+from sleektiv.exceptions import UserError
 
 class WebsiteEventController(http.Controller):
 

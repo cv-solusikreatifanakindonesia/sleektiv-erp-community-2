@@ -1,5 +1,5 @@
-from odoo import models, api, _
-from odoo.exceptions import UserError
+from sleektiv import models, api, _
+from sleektiv.exceptions import UserError
 
 
 class StockQuant(models.Model):

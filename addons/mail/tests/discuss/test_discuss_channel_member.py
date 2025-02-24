@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tests.common import new_test_user, tagged
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.exceptions import AccessError, UserError, ValidationError
+from sleektiv.tests.common import new_test_user, tagged
 
 
 @tagged("post_install", "-at_install")

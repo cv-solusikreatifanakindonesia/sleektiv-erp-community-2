@@ -1,12 +1,12 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 registry.category("web_tour.tours").add("sale_tour", {
-    url: "/odoo",
+    url: "/sleektiv",
     steps: () => [
         stepUtils.showAppsMenuItem(),
         {

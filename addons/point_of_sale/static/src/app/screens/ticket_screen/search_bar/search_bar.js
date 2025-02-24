@@ -1,4 +1,4 @@
-import { Component, useExternalListener, useState } from "@odoo/owl";
+import { Component, useExternalListener, useState } from "@sleektiv/owl";
 import { useAutofocus, useService } from "@web/core/utils/hooks";
 
 /**

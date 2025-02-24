@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import io
 import unittest
 
@@ -7,7 +7,7 @@ try:
 except ImportError:
     load_workbook = None
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class TestPhCommon(AccountTestInvoicingCommon):

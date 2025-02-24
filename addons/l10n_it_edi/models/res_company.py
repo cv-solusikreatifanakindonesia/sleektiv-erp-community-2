@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
 
 TAX_SYSTEM = [
     ("RF01", "[RF01] Ordinario"),
@@ -148,7 +148,7 @@ class ResCompany(models.Model):
                     'name': _("Settings"),
                     'type': 'ir.actions.act_url',
                     'target': 'self',
-                    'url': '/odoo/settings#italian_edi',
+                    'url': '/sleektiv/settings#italian_edi',
                 },
             }
         return errors

@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, models, _
-from odoo.exceptions import UserError
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import api, models, _
+from sleektiv.exceptions import UserError
 
 class AccountMoveSendWizard(models.TransientModel):
     _inherit = 'account.move.send.wizard'

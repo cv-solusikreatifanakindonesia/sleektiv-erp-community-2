@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import logging
@@ -7,10 +7,10 @@ import werkzeug
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.tools import consteq
+from sleektiv import http
+from sleektiv.exceptions import UserError
+from sleektiv.http import request
+from sleektiv.tools import consteq
 
 _logger = logging.getLogger(__name__)
 
@@ -73,4 +73,4 @@ class MicrosoftOutlookController(http.Controller):
             'microsoft_outlook_access_token_expiration': expiration,
         })
 
-        return request.redirect(f'/odoo/{model_name}/{rec_id}')
+        return request.redirect(f'/sleektiv/{model_name}/{rec_id}')

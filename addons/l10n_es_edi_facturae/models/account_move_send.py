@@ -1,7 +1,7 @@
 import logging
 
-from odoo import _, models, SUPERUSER_ID
-from odoo.exceptions import UserError
+from sleektiv import _, models, SUPERUSER_ID
+from sleektiv.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

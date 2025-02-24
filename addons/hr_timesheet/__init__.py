@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from . import controllers
 from . import models
 from . import report
 from . import wizard
 
-from odoo import fields
+from sleektiv import fields
 
-from odoo.addons.project import _check_exists_collaborators_for_project_sharing
+from sleektiv.addons.project import _check_exists_collaborators_for_project_sharing
 
 
 def create_internal_project(env):

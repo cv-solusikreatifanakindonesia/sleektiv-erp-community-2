@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from random import randint
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import float_compare, float_is_zero, clean_context
-from odoo.tools.misc import format_date, groupby
+from sleektiv import api, Command, fields, models, _
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools import float_compare, float_is_zero, clean_context
+from sleektiv.tools.misc import format_date, groupby
 
 MAP_REPAIR_TO_PICKING_LOCATIONS = {
     'location_id': 'default_location_src_id',

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 from collections import defaultdict
 import itertools
 
-from odoo import api, fields, models
-from odoo.http import request
-from odoo.osv import expression
+from sleektiv import api, fields, models
+from sleektiv.http import request
+from sleektiv.osv import expression
 
 
 class UtmMixin(models.AbstractModel):
@@ -54,9 +54,9 @@ class UtmMixin(models.AbstractModel):
         # methods of utm.mixin, but will ignore overridden method on crm.lead
         return [
             # ("URL_PARAMETER", "FIELD_NAME_MIXIN", "NAME_IN_COOKIES")
-            ('utm_campaign', 'campaign_id', 'odoo_utm_campaign'),
-            ('utm_source', 'source_id', 'odoo_utm_source'),
-            ('utm_medium', 'medium_id', 'odoo_utm_medium'),
+            ('utm_campaign', 'campaign_id', 'sleektiv_utm_campaign'),
+            ('utm_source', 'source_id', 'sleektiv_utm_source'),
+            ('utm_medium', 'medium_id', 'sleektiv_utm_medium'),
         ]
 
     def _tracking_models(self):

@@ -1,4 +1,4 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import {
     click,
     hover,
@@ -9,9 +9,9 @@ import {
     queryAllTexts,
     queryAllValues,
     queryFirst,
-} from "@odoo/hoot-dom";
-import { Deferred, animationFrame, mockDate, mockTimeZone } from "@odoo/hoot-mock";
-import { Component, onWillUpdateProps, xml } from "@odoo/owl";
+} from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, mockDate, mockTimeZone } from "@sleektiv/hoot-mock";
+import { Component, onWillUpdateProps, xml } from "@sleektiv/owl";
 import {
     SELECTORS,
     clickOnButtonDeleteNode,

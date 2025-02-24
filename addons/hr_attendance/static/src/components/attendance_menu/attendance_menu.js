@@ -1,7 +1,7 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@sleektiv/owl";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 import { useDropdownState } from "@web/core/dropdown/dropdown_hooks";

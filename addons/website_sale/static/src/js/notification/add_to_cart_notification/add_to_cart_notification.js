@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { formatCurrency } from "@web/core/currency";
 
 export class AddToCartNotification extends Component {

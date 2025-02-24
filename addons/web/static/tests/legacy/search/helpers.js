@@ -1,6 +1,6 @@
-/** @odoo-module alias=@web/../tests/search/helpers default=false */
+/** @sleektiv-module alias=@web/../tests/search/helpers default=false */
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@sleektiv/owl";
 import { makeTestEnv } from "@web/../tests/helpers/mock_env";
 import {
     click,

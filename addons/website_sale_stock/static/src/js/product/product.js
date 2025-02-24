@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { patch } from '@web/core/utils/patch';
 import { Product } from '@sale/js/product/product';

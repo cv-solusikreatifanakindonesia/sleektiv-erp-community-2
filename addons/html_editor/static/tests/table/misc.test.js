@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import { setupEditor } from "../_helpers/editor";
-import { click, queryAll, queryFirst, waitFor } from "@odoo/hoot-dom";
-import { animationFrame, tick } from "@odoo/hoot-mock";
+import { click, queryAll, queryFirst, waitFor } from "@sleektiv/hoot-dom";
+import { animationFrame, tick } from "@sleektiv/hoot-mock";
 import { setSelection } from "../_helpers/selection";
 import { execCommand } from "../_helpers/userCommands";
 

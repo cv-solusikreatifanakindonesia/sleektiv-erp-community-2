@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.http import request
-from odoo.osv import expression
+from sleektiv import api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.http import request
+from sleektiv.osv import expression
 
 
 class SaleOrder(models.Model):

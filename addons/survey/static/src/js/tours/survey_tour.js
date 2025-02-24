@@ -1,13 +1,13 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 registry.category("web_tour.tours").add('survey_tour', {
-    url: "/odoo",
+    url: "/sleektiv",
     steps: () => [
     ...stepUtils.goToAppSteps('survey.menu_surveys', markup(_t("Ready to change the way you <b>gather data</b>?"))),
 {
@@ -31,7 +31,7 @@ registry.category("web_tour.tours").add('survey_tour', {
 },
 {
     trigger: 'button[type=submit]',
-    content: _t("Whenever you pick an answer, Odoo saves it for you."),
+    content: _t("Whenever you pick an answer, Sleektiv saves it for you."),
     tooltipPosition: 'bottom',
     run: "click",
 },

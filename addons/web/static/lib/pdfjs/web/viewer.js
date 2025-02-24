@@ -1400,7 +1400,7 @@ class BasePreferences {
     supportsPinchToZoom: true
   });
   #defaults = Object.freeze({
-    // Odoo
+    // Sleektiv
     annotationEditorMode: -1,
     annotationMode: 2,
     cursorToolOnLoad: 0,
@@ -1412,11 +1412,11 @@ class BasePreferences {
     enableML: false,
     enablePermissions: false,
     enablePrintAutoRotate: true,
-    // Odoo: don't support scripting (#115302)
+    // Sleektiv: don't support scripting (#115302)
     enableScripting: false,
-    // Odoo: disable stamp editor
+    // Sleektiv: disable stamp editor
     enableStampEditor: false,
-    // Odoo: open links in new tabs to keep odoo document (#84594)
+    // Sleektiv: open links in new tabs to keep sleektiv document (#84594)
     externalLinkTarget: 2,
     highlightEditorColors: "yellow=#FFFF98,green=#53FFBC,blue=#80EBFF,pink=#FFCBE6,red=#FF4F5F",
     historyUpdateUrl: false,
@@ -1435,7 +1435,7 @@ class BasePreferences {
     disableRange: false,
     disableStream: false,
     enableXfa: true,
-    // Odoo: support dark mode
+    // Sleektiv: support dark mode
     viewerCssTheme: document.cookie.includes("color_scheme=dark") ? 2 : 1
   });
   #prefs = Object.create(null);
@@ -6814,7 +6814,7 @@ window.print = function () {
       return activeServiceOnEntry.performPrint();
     }).catch(function () {}).then(function () {
       if (activeServiceOnEntry.active) {
-        // ODOO Patch: https://github.com/mozilla/pdf.js/issues/10630#issuecomment-855754913
+        // SLEEKTIV Patch: https://github.com/mozilla/pdf.js/issues/10630#issuecomment-855754913
         setTimeout(abort, 1000);
       }
     });
@@ -12857,7 +12857,7 @@ const PDFViewerApplication = {
     });
     pagesPromise.then(() => {
       this._unblockDocumentLoadEvent();
-      // Odoo: don't support scripting (#115302)
+      // Sleektiv: don't support scripting (#115302)
       // this._initializeAutoPrint(pdfDocument, openActionPromise);
     }, reason => {
       this._documentError("pdfjs-loading-error", {
@@ -14443,4 +14443,4 @@ var __webpack_exports__PDFViewerApplicationConstants = __webpack_exports__.PDFVi
 var __webpack_exports__PDFViewerApplicationOptions = __webpack_exports__.PDFViewerApplicationOptions;
 export { __webpack_exports__PDFViewerApplication as PDFViewerApplication, __webpack_exports__PDFViewerApplicationConstants as PDFViewerApplicationConstants, __webpack_exports__PDFViewerApplicationOptions as PDFViewerApplicationOptions };
 
-//# sourceMappingURL=viewer.js.map
+//# sourceMappingURL=viewer.js.map 

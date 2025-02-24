@@ -2,9 +2,9 @@
 
 import re
 
-from odoo import api, models
-from odoo.exceptions import UserError, ValidationError
-from odoo. tools import LazyTranslate
+from sleektiv import api, models
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv. tools import LazyTranslate
 
 _lt = LazyTranslate(__name__)  # TODO pass env to functions and remove _lt
 

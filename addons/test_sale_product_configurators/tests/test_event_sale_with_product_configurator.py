@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.tests import HttpCase, tagged
+from sleektiv import fields
+from sleektiv.tests import HttpCase, tagged
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged('post_install', '-at_install')
@@ -113,7 +113,7 @@ class TestEventProductConfiguratorUi(AccountTestInvoicingCommon, HttpCase):
             cls.event_product_template.optional_product_ids = [cls.product_product_memorabilia.id,]
 
     def test_event_using_product_configurator(self):
-        self.start_tour("/odoo", 'event_sale_with_product_configurator_tour', login='salesman')
+        self.start_tour("/sleektiv", 'event_sale_with_product_configurator_tour', login='salesman')
 
         sale_order = self.env['sale.order'].search([('create_uid', "=", self.salesman.id)])
 

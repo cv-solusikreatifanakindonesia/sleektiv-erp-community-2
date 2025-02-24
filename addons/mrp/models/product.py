@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import collections
 from datetime import timedelta
 import operator as py_operator
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.float_utils import float_round, float_is_zero
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools.float_utils import float_round, float_is_zero
 
 
 OPERATORS = {

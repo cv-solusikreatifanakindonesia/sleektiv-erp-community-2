@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from sleektiv.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 class TestDashboard(TestHrHolidaysCommon):

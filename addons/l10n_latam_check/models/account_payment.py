@@ -1,6 +1,6 @@
-from odoo import fields, models, api, Command, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import format_date
+from sleektiv import fields, models, api, Command, _
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tools.misc import format_date
 
 
 class AccountPayment(models.Model):

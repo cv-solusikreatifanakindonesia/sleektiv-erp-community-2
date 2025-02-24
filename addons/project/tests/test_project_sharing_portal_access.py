@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
@@ -6,10 +6,10 @@ from collections import OrderedDict
 from lxml import etree
 from re import search
 
-from odoo import Command
-from odoo.tools import mute_logger, config
-from odoo.exceptions import AccessError
-from odoo.tests import HttpCase, tagged
+from sleektiv import Command
+from sleektiv.tools import mute_logger, config
+from sleektiv.exceptions import AccessError
+from sleektiv.tests import HttpCase, tagged
 
 from .test_project_sharing import TestProjectSharingCommon
 
@@ -130,7 +130,7 @@ class TestProjectSharingPortalAccess(TestProjectSharingCommon):
 
 
 class TestProjectSharingChatterAccess(TestProjectSharingCommon, HttpCase):
-    @mute_logger('odoo.addons.http_routing.models.ir_http', 'odoo.http')
+    @mute_logger('sleektiv.addons.http_routing.models.ir_http', 'sleektiv.http')
     def test_post_chatter_as_portal_user(self):
         self.project_no_collabo.privacy_visibility = 'portal'
         message = self.get_project_share_link()

@@ -1,5 +1,5 @@
-import { before, expect } from "@odoo/hoot";
-import { queryAllTexts, queryOne } from "@odoo/hoot-dom";
+import { before, expect } from "@sleektiv/hoot";
+import { queryAllTexts, queryOne } from "@sleektiv/hoot-dom";
 import { contains, findComponent, preloadBundle } from "@web/../tests/web_test_helpers";
 
 import { ensureArray } from "@web/core/utils/arrays";

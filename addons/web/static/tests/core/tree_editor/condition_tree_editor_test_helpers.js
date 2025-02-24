@@ -1,9 +1,9 @@
-import { queryAll, queryAllTexts, queryOne, queryText, queryValue } from "@odoo/hoot-dom";
+import { queryAll, queryAllTexts, queryOne, queryText, queryValue } from "@sleektiv/hoot-dom";
 import { contains, fields, models } from "@web/../tests/web_test_helpers";
 
 /**
- * @typedef {import("@odoo/hoot-dom").FillOptions} FillOptions
- * @typedef {import("@odoo/hoot-dom").Target} Target
+ * @typedef {import("@sleektiv/hoot-dom").FillOptions} FillOptions
+ * @typedef {import("@sleektiv/hoot-dom").Target} Target
  */
 
 function getValue(root) {

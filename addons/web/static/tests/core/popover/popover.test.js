@@ -1,7 +1,7 @@
-import { expect, getFixture, test } from "@odoo/hoot";
-import { queryOne, resize, scroll, waitFor } from "@odoo/hoot-dom";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { expect, getFixture, test } from "@sleektiv/hoot";
+import { queryOne, resize, scroll, waitFor } from "@sleektiv/hoot-dom";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import { mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { Popover } from "@web/core/popover/popover";

@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, timedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.exceptions import ValidationError
+from sleektiv import Command
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.sale_loyalty.tests.common import TestSaleCouponCommon
+from sleektiv.addons.sale_loyalty.tests.common import TestSaleCouponCommon
 
 
 class TestProgramRules(TestSaleCouponCommon):

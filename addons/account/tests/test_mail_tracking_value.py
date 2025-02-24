@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests import Form
-from odoo.tests.common import tagged
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.tests import Form
+from sleektiv.tests.common import tagged
 
 
 @tagged('post_install', '-at_install')

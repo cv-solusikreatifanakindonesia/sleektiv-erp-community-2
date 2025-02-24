@@ -1,5 +1,5 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { advanceTime } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { advanceTime } from "@sleektiv/hoot-mock";
 import { browser } from "@web/core/browser/browser";
 import { onRpc, mountWebClient } from "@web/../tests/web_test_helpers";
 import {

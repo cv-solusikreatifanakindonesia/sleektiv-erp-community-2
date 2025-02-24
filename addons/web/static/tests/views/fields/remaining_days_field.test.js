@@ -1,6 +1,6 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
-import { click, edit, queryAll, queryAllTexts, queryOne } from "@odoo/hoot-dom";
-import { animationFrame, mockDate } from "@odoo/hoot-mock";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
+import { click, edit, queryAll, queryAllTexts, queryOne } from "@sleektiv/hoot-dom";
+import { animationFrame, mockDate } from "@sleektiv/hoot-mock";
 import { getPickerCell } from "@web/../tests/core/datetime/datetime_test_helpers";
 import { defineModels, fields, models, mountView, onRpc } from "@web/../tests/web_test_helpers";
 

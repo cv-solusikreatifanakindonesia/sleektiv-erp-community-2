@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class WarningNotification extends Component {
     static template = "website_sale.warningNotification";

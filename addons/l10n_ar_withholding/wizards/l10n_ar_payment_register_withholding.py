@@ -1,10 +1,10 @@
 # pylint: disable=protected-access
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import logging
 
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
-from odoo import models, fields, api
+from sleektiv import models, fields, api
 
 _logger = logging.getLogger(__name__)
 

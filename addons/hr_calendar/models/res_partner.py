@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from pytz import UTC, timezone
 from datetime import datetime
 from collections import defaultdict
 from functools import reduce
 
-from odoo import api, models
+from sleektiv import api, models
 
-from odoo.osv import expression
-from odoo.addons.resource.models.utils import Intervals
+from sleektiv.osv import expression
+from sleektiv.addons.resource.models.utils import Intervals
 
 
 class Partner(models.Model):

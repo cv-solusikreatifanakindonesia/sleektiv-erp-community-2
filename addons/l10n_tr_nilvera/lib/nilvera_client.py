@@ -4,7 +4,7 @@ from datetime import datetime
 from json import JSONDecodeError
 from pprint import pformat
 
-from odoo.exceptions import UserError
+from sleektiv.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -75,7 +75,7 @@ class NilveraClient:
         if response.status_code in {401, 403}:
             raise UserError("Oops, seems like you're unauthorised to do this. Try another API key with more rights or contact Nilvera.")
         elif 403 < response.status_code < 600:
-            raise UserError("Odoo could not perform this action at the moment, try again later.\n%s - %s" % (response.reason, response.code))
+            raise UserError("Sleektiv could not perform this action at the moment, try again later.\n%s - %s" % (response.reason, response.code))
 
         try:
             return response.json()

@@ -1,4 +1,4 @@
-/** @odoo-modules */
+/** @sleektiv-modules */
 
 import { registry } from "@web/core/registry";
 

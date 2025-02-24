@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import uuid
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import fields, sql_db, tools, Command
-from odoo.tests import new_test_user, tagged
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from sleektiv import fields, sql_db, tools, Command
+from sleektiv.tests import new_test_user, tagged
+from sleektiv.addons.l10n_it_edi.tests.common import TestItEdi
 
 import logging
 _logger = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ class TestItEdiImport(TestItEdi):
 
     def test_receive_invalid_xml(self):
         xml_decode = self.env['ir.attachment']._decode_edi_l10n_it_edi
-        with tools.mute_logger("odoo.addons.l10n_it_edi.models.ir_attachment"):
+        with tools.mute_logger("sleektiv.addons.l10n_it_edi.models.ir_attachment"):
             self.assertEqual([], xml_decode("none.xml", None))
             self.assertEqual([], xml_decode("empty.xml", ""))
             self.assertEqual([], xml_decode("invalid.xml", "invalid"))
@@ -218,7 +218,7 @@ class TestItEdiImport(TestItEdi):
 
         with (patch.object(proxy_user.__class__, '_decrypt_data', return_value=self.fake_test_content),
               patch.object(sql_db.Cursor, "commit", mock_commit),
-              tools.mute_logger("odoo.addons.l10n_it_edi.models.account_move")):
+              tools.mute_logger("sleektiv.addons.l10n_it_edi.models.account_move")):
             for dummy in range(2):
                 processed = self.env['account.move']._l10n_it_edi_process_downloads({
                     '999999999': {

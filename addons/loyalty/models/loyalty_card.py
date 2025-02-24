@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from uuid import uuid4
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import format_amount
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import format_amount
 
 
 class LoyaltyCard(models.Model):

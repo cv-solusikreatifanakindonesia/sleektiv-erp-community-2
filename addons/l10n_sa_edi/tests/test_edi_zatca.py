@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 from freezegun import freeze_time
 import logging
 from pytz import timezone
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tools import misc
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.tools import misc
 
 from .common import TestSaEdiCommon
 

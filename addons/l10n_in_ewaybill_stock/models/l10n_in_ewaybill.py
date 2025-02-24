@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import json
@@ -10,9 +10,9 @@ from datetime import datetime
 
 import psycopg2.errors
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.addons.l10n_in_ewaybill_stock.tools.ewaybill_api import EWayBillApi, EWayBillError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.addons.l10n_in_ewaybill_stock.tools.ewaybill_api import EWayBillApi, EWayBillError
 
 
 _logger = logging.getLogger(__name__)
@@ -371,12 +371,12 @@ class Ewaybill(models.Model):
             raise UserError(_('This document is being sent by another process already.')) from None
 
     def _handle_internal_warning_if_present(self, response):
-        if warnings := response.get('odoo_warning'):
+        if warnings := response.get('sleektiv_warning'):
             for warning in warnings:
                 if warning.get('message_post'):
-                    odoobot = self.env.ref("base.partner_root")
+                    sleektivbot = self.env.ref("base.partner_root")
                     self.message_post(
-                        author_id=odoobot.id,
+                        author_id=sleektivbot.id,
                         body=warning.get('message')
                     )
                 else:
@@ -426,10 +426,10 @@ class Ewaybill(models.Model):
         response_values = {
             'name': response_data.get("ewayBillNo"),
             'state': 'generated',
-            'ewaybill_date': self._indian_timezone_to_odoo_utc(
+            'ewaybill_date': self._indian_timezone_to_sleektiv_utc(
                 response_data['ewayBillDate']
             ),
-            'ewaybill_expiry_date': self._indian_timezone_to_odoo_utc(
+            'ewaybill_expiry_date': self._indian_timezone_to_sleektiv_utc(
                 response_data.get('validUpto')
             ),
         }
@@ -438,7 +438,7 @@ class Ewaybill(models.Model):
         self._cr.commit()
 
     @api.model
-    def _indian_timezone_to_odoo_utc(self, str_date, time_format='%d/%m/%Y %I:%M:%S %p'):
+    def _indian_timezone_to_sleektiv_utc(self, str_date, time_format='%d/%m/%Y %I:%M:%S %p'):
         """
             This method is used to convert date from Indian timezone to UTC
         """

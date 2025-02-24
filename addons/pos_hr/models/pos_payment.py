@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from sleektiv import models, fields, api
 
 
 class PosPayment(models.Model):

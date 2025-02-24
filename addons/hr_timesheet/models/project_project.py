@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
 
-from odoo import api, fields, models
-from odoo.exceptions import RedirectWarning, ValidationError
-from odoo.tools import SQL
-from odoo.tools.translate import _
+from sleektiv import api, fields, models
+from sleektiv.exceptions import RedirectWarning, ValidationError
+from sleektiv.tools import SQL
+from sleektiv.tools.translate import _
 
 
 class Project(models.Model):

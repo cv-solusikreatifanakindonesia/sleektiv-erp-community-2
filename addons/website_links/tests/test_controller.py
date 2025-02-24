@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import tagged
-from odoo.tests.common import HttpCase
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.tests import tagged
+from sleektiv.tests.common import HttpCase
 
 
 @tagged('post_install', '-at_install')

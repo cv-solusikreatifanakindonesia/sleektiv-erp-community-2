@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<sleektiv>
     <template id="arabic_english_invoice" inherit_id="l10n_gcc_invoice.arabic_english_invoice">
         <xpath expr="//div[@name='due_date']" position="after">
             <div class="row" t-if="o.delivery_date" name="delivery_date">
@@ -112,4 +112,4 @@
             <attribute name="class">clearfix pt-2 pb-2</attribute>
         </xpath>
     </template>
-</odoo>
+</sleektiv>

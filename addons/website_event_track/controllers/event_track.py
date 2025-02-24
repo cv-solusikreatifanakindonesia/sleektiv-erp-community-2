@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
 from collections import defaultdict
@@ -14,11 +14,11 @@ import json
 import operator
 import pytz
 
-from odoo import exceptions, http, fields, tools, _
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import is_html_empty, plaintext2html
-from odoo.tools.misc import babel_locale_parse
+from sleektiv import exceptions, http, fields, tools, _
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools import is_html_empty, plaintext2html
+from sleektiv.tools.misc import babel_locale_parse
 
 
 class EventTrackController(http.Controller):

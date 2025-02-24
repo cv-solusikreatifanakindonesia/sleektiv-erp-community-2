@@ -1,7 +1,7 @@
 import { convertBrToLineBreak } from "@mail/utils/common/format";
 import { mailDataHelpers } from "@mail/../tests/mock_server/mail_mock_server";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 import {
     Command,

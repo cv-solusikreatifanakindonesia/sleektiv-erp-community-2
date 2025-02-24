@@ -1,4 +1,4 @@
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class L10nInTestInvoicingCommon(AccountTestInvoicingCommon):

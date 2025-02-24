@@ -1,5 +1,5 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { click, queryAll } from "@odoo/hoot-dom";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { click, queryAll } from "@sleektiv/hoot-dom";
 import {
     defineModels,
     fields,

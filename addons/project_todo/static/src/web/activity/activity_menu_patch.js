@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { ActivityMenu } from "@mail/core/web/activity_menu";
@@ -71,4 +71,4 @@ patch(ActivityMenu.prototype, {
         }
         return super.openActivityGroup(...arguments);
     },
-});
+}); 

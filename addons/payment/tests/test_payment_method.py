@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError
-from odoo.models import Command
-from odoo.tests import tagged
+from sleektiv.exceptions import UserError
+from sleektiv.models import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.const import REPORT_REASONS_MAPPING
-from odoo.addons.payment.tests.common import PaymentCommon
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment.const import REPORT_REASONS_MAPPING
+from sleektiv.addons.payment.tests.common import PaymentCommon
 
 
 @tagged('-at_install', 'post_install')

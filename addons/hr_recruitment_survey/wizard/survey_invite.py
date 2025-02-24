@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 
-from odoo import fields, models, _
-from odoo.tools.misc import clean_context
+from sleektiv import fields, models, _
+from sleektiv.tools.misc import clean_context
 
 
 class SurveyInvite(models.TransientModel):

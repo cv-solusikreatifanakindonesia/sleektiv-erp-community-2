@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import { Component, useRef } from "@odoo/owl";
+import { Component, useRef } from "@sleektiv/owl";
 import { useBus, useService } from "@web/core/utils/hooks";
 
 export class UploadButton extends Component {

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { registerWebsitePreviewTour } from '@website/js/tours/tour_utils';
 

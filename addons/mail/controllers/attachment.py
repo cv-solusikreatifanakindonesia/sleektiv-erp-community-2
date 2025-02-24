@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import io
 import logging
@@ -6,13 +6,13 @@ import zipfile
 
 from werkzeug.exceptions import NotFound
 
-from odoo import _, http
-from odoo.exceptions import AccessError
-from odoo.http import request, content_disposition
+from sleektiv import _, http
+from sleektiv.exceptions import AccessError
+from sleektiv.http import request, content_disposition
 
-from odoo.tools import consteq
+from sleektiv.tools import consteq
 from ..models.discuss.mail_guest import add_guest_to_context
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv.addons.mail.tools.discuss import Store
 
 logger = logging.getLogger(__name__)
 

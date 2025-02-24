@@ -4,9 +4,9 @@ import base64
 from freezegun import freeze_time
 from os.path import join as opj
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo import fields
-from odoo.tools import misc
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv import fields
+from sleektiv.tools import misc
 
 from lxml import etree
 

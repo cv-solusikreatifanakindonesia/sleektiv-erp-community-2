@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
 
 class AccountTax(models.Model):

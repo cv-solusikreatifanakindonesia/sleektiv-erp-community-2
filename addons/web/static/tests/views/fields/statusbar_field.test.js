@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { click, edit, press, queryAllTexts, queryAttribute, queryFirst } from "@odoo/hoot-dom";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { click, edit, press, queryAllTexts, queryAttribute, queryFirst } from "@sleektiv/hoot-dom";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
 import {
     clickSave,
     defineActions,
@@ -15,7 +15,7 @@ import {
     onRpc,
     serverState,
 } from "@web/../tests/web_test_helpers";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@sleektiv/owl";
 import { WebClient } from "@web/webclient/webclient";
 
 class Partner extends models.Model {

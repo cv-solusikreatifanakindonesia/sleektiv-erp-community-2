@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.addons.website_event.tests.common import OnlineEventCase
-from odoo.tests.common import users
+from sleektiv import fields
+from sleektiv.addons.website_event.tests.common import OnlineEventCase
+from sleektiv.tests.common import users
 
 
 class TestEventWebsiteTrack(OnlineEventCase):

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, Command
-from odoo.tests import Form, HttpCase, new_test_user
-from odoo.tools.float_utils import float_round
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import fields, Command
+from sleektiv.tests import Form, HttpCase, new_test_user
+from sleektiv.tools.float_utils import float_round
 
-from odoo.addons.product.tests.common import ProductCommon
+from sleektiv.addons.product.tests.common import ProductCommon
 
 import json
 import base64

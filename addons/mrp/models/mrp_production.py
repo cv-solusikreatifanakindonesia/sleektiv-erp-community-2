@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import datetime
@@ -10,14 +10,14 @@ from ast import literal_eval
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _, Command, SUPERUSER_ID
-from odoo.addons.web.controllers.utils import clean_action
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import float_compare, float_round, float_is_zero, format_datetime
-from odoo.tools.misc import OrderedSet, format_date, groupby as tools_groupby, topological_sort
+from sleektiv import api, fields, models, _, Command, SUPERUSER_ID
+from sleektiv.addons.web.controllers.utils import clean_action
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools import float_compare, float_round, float_is_zero, format_datetime
+from sleektiv.tools.misc import OrderedSet, format_date, groupby as tools_groupby, topological_sort
 
-from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
+from sleektiv.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
 
 SIZE_BACK_ORDER_NUMERING = 3
 

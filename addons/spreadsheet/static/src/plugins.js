@@ -1,15 +1,15 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { CorePlugin, UIPlugin } from "@odoo/o-spreadsheet";
-
-/**
- * An o-spreadsheet core plugin with access to all custom Odoo plugins
- * @type {import("@spreadsheet").OdooCorePluginConstructor}
- **/
-export const OdooCorePlugin = CorePlugin;
+import { CorePlugin, UIPlugin } from "@sleektiv/o-spreadsheet";
 
 /**
- * An o-spreadsheet UI plugin with access to all custom Odoo plugins
- * @type {import("@spreadsheet").OdooUIPluginConstructor}
+ * An o-spreadsheet core plugin with access to all custom Sleektiv plugins
+ * @type {import("@spreadsheet").SleektivCorePluginConstructor}
  **/
-export const OdooUIPlugin = UIPlugin;
+export const SleektivCorePlugin = CorePlugin;
+
+/**
+ * An o-spreadsheet UI plugin with access to all custom Sleektiv plugins
+ * @type {import("@spreadsheet").SleektivUIPluginConstructor}
+ **/
+export const SleektivUIPlugin = UIPlugin;

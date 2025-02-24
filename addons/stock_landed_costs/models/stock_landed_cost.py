@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
-from odoo.tools.float_utils import float_is_zero
+from sleektiv import api, fields, models, tools, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools.float_utils import float_is_zero
 
 
 SPLIT_METHOD = [

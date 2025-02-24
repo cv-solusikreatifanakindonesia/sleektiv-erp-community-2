@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from contextlib import contextmanager
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import Form, tagged
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import Form, tagged
 from unittest.mock import patch
 
 

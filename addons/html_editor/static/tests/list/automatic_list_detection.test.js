@@ -1,10 +1,10 @@
-import { expect, test } from "@odoo/hoot";
-import { press } from "@odoo/hoot-dom";
+import { expect, test } from "@sleektiv/hoot";
+import { press } from "@sleektiv/hoot-dom";
 import { setupEditor } from "../_helpers/editor";
 import { insertText } from "../_helpers/user_actions";
 import { getContent } from "../_helpers/selection";
 import { unformat } from "../_helpers/format";
-import { animationFrame } from "@odoo/hoot-mock";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { execCommand } from "../_helpers/userCommands";
 
 test("typing '1. ' should create number list", async () => {

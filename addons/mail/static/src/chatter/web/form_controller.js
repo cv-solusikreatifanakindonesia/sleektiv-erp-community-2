@@ -1,6 +1,6 @@
 import { createDocumentFragmentFromContent } from "@mail/utils/common/html";
 
-import { useSubEnv } from "@odoo/owl";
+import { useSubEnv } from "@sleektiv/owl";
 
 import { x2ManyCommands } from "@web/core/orm_service";
 import { useService } from "@web/core/utils/hooks";

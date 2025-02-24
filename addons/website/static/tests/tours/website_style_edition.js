@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import weUtils from "@web_editor/js/common/utils";
 import {

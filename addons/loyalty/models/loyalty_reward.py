@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 import json
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.osv import expression
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.osv import expression
 
 
 class LoyaltyReward(models.Model):

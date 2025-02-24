@@ -1,5 +1,5 @@
-import { start } from "@odoo/hoot";
-import { whenReady } from "@odoo/owl";
+import { start } from "@sleektiv/hoot";
+import { whenReady } from "@sleektiv/owl";
 
 import "./core/expect.test.js";
 import "./core/runner.test.js";

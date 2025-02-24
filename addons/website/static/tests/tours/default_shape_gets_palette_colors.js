@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { queryFirst } from "@odoo/hoot-dom";
+import { queryFirst } from "@sleektiv/hoot-dom";
 import {
     changeOption,
     clickOnSnippet,

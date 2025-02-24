@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
-from odoo import _, api, fields, models
+from sleektiv import _, api, fields, models
 
 
 class SaleOrder(models.Model):

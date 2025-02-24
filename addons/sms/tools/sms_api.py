@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import exceptions
-from odoo.addons.iap.tools import iap_tools
-from odoo.tools.translate import _, LazyTranslate
+from sleektiv import exceptions
+from sleektiv.addons.iap.tools import iap_tools
+from sleektiv.tools.translate import _, LazyTranslate
 
 _lt = LazyTranslate(__name__)
 
@@ -27,12 +27,12 @@ ERROR_MESSAGES = {
     'too_many_attempts': _lt("You tried too many times. Please retry later."),
 
     # Default error
-    'unknown_error': _lt("An unknown error occurred. Please contact Odoo support if this error persists."),
+    'unknown_error': _lt("An unknown error occurred. Please contact Sleektiv support if this error persists."),
 }
 
 
 class SmsApi:
-    DEFAULT_ENDPOINT = 'https://sms.api.odoo.com'
+    DEFAULT_ENDPOINT = 'https://sms.api.sleektiv.com'
 
     def __init__(self, env, account=None):
         self.env = env

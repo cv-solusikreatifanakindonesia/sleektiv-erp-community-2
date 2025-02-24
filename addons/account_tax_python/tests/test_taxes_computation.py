@@ -1,6 +1,6 @@
-from odoo.addons.account.tests.test_tax import TestTaxCommon
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError
+from sleektiv.addons.account.tests.test_tax import TestTaxCommon
+from sleektiv.tests import tagged
+from sleektiv.exceptions import ValidationError
 
 
 @tagged('post_install', '-at_install')

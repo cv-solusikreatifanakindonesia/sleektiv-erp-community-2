@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import common
+from sleektiv.tests import common
 
 
 class TestStockLocationSearch(common.TransactionCase):

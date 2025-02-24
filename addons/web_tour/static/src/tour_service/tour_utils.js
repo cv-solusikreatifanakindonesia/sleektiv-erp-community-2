@@ -1,5 +1,5 @@
-/** @odoo-module **/
-import * as hoot from "@odoo/hoot-dom";
+/** @sleektiv-module **/
+import * as hoot from "@sleektiv/hoot-dom";
 import { _t } from "@web/core/l10n/translation";
 
 /**

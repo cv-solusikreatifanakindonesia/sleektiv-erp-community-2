@@ -3,10 +3,10 @@ from typing import Literal
 import markupsafe
 import requests
 
-from odoo import api, fields, models, _
-from odoo.addons.l10n_ro_edi_stock.models.l10n_ro_edi_stock_document import DOCUMENT_STATES
-from odoo.addons.l10n_ro_edi_stock.models.etransport_api import ETransportAPI
-from odoo.exceptions import UserError
+from sleektiv import api, fields, models, _
+from sleektiv.addons.l10n_ro_edi_stock.models.l10n_ro_edi_stock_document import DOCUMENT_STATES
+from sleektiv.addons.l10n_ro_edi_stock.models.etransport_api import ETransportAPI
+from sleektiv.exceptions import UserError
 
 OPERATION_TYPES = [
     ('10', "Intra-community purchase"),

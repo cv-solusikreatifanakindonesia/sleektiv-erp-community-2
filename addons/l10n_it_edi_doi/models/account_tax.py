@@ -1,5 +1,5 @@
-from odoo import api, models, _
-from odoo.exceptions import UserError
+from sleektiv import api, models, _
+from sleektiv.exceptions import UserError
 
 
 class AccountTax(models.Model):

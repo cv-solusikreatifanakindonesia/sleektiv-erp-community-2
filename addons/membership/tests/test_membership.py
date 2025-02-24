@@ -5,9 +5,9 @@ from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
 import time
-from odoo.addons.membership.tests.common import TestMembershipCommon
-from odoo.tests import tagged
-from odoo import fields
+from sleektiv.addons.membership.tests.common import TestMembershipCommon
+from sleektiv.tests import tagged
+from sleektiv import fields
 
 
 @tagged('post_install', '-at_install')

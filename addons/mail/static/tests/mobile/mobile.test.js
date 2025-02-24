@@ -9,8 +9,8 @@ import {
     start,
     startServer,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, test } from "@odoo/hoot";
-import { Deferred } from "@odoo/hoot-mock";
+import { describe, test } from "@sleektiv/hoot";
+import { Deferred } from "@sleektiv/hoot-mock";
 
 describe.current.tags("desktop");
 defineMailModels();

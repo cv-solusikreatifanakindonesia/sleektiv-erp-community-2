@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import math
 
-from odoo import api, fields, models, _
+from sleektiv import api, fields, models, _
 
 
 class ResourceCalendarAttendance(models.Model):

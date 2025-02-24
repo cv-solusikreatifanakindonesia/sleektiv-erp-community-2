@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import tools
-import odoo
-from odoo.addons.point_of_sale.tests.common import TestPoSCommon
+from sleektiv import tools
+import sleektiv
+from sleektiv.addons.point_of_sale.tests.common import TestPoSCommon
 
-@odoo.tests.tagged('post_install', '-at_install')
+@sleektiv.tests.tagged('post_install', '-at_install')
 class TestPoSStock(TestPoSCommon):
     """ Tests for anglo saxon accounting scenario.
     """
@@ -270,7 +270,7 @@ class TestPoSStock(TestPoSCommon):
         self.assertEqual(expense_account_move_line.balance, 0.0, "Expense account should be 0.0")
 
     def test_stock_user_without_pos_permissions_can_create_product(self):
-        stock_manager = odoo.tests.common.new_test_user(
+        stock_manager = sleektiv.tests.common.new_test_user(
             self.env, 'temp_stock_manager', 'stock.group_stock_manager',
         )
         self.env['product.product'].with_user(stock_manager).create({

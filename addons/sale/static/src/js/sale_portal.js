@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { PortalHomeCounters } from '@portal/js/portal';
 

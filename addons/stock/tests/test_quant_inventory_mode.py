@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.tests import Form, TransactionCase
-from odoo.exceptions import AccessError, UserError
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.tests import Form, TransactionCase
+from sleektiv.exceptions import AccessError, UserError
 
 
 class TestEditableQuant(TransactionCase):

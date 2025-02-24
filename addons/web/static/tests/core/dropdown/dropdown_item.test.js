@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { click } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { click } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 
 import { mountWithCleanup, patchWithCleanup } from "@web/../tests/web_test_helpers";
 import { Dropdown } from "@web/core/dropdown/dropdown";

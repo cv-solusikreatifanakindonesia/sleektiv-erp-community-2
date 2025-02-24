@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.crm_iap_mine.tests.common import MockIAPReveal  # MockIAPEnrich
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
+from sleektiv.addons.crm.tests.common import TestCrmCommon
+from sleektiv.addons.crm_iap_mine.tests.common import MockIAPReveal  # MockIAPEnrich
+from sleektiv.addons.website.tests.test_website_visitor import MockVisitor
 
 
 class TestCrmFullCommon(TestCrmCommon, MockIAPReveal, MockVisitor):

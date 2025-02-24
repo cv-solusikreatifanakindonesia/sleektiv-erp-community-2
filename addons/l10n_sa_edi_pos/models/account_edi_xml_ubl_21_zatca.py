@@ -1,4 +1,4 @@
-from odoo import models
+from sleektiv import models
 
 
 class AccountEdiXmlUBL21Zatca(models.AbstractModel):

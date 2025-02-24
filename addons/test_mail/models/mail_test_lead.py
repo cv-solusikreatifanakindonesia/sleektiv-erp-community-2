@@ -1,5 +1,5 @@
-from odoo import fields, models, _
-from odoo.tools.mail import parse_contact_from_email
+from sleektiv import fields, models, _
+from sleektiv.tools.mail import parse_contact_from_email
 
 
 class MailTestTLead(models.Model):

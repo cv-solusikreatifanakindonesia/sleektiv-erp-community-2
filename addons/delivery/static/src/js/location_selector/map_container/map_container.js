@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import {
     LocationSchedule
 } from '@delivery/js/location_selector/location_schedule/location_schedule';
 import { Map } from '@delivery/js/location_selector/map/map';
-import { Component, onWillStart, useState } from '@odoo/owl';
+import { Component, onWillStart, useState } from '@sleektiv/owl';
 import { AssetsLoadingError, loadCSS, loadJS } from '@web/core/assets';
 import { _t } from '@web/core/l10n/translation';
 

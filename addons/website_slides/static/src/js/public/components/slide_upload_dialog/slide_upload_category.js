@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, onMounted, onWillStart, useState } from "@odoo/owl";
+import { Component, onMounted, onWillStart, useState } from "@sleektiv/owl";
 import { getDataURLFromFile } from "@web/core/utils/urls";
 import { rpc } from "@web/core/network/rpc";
 import { uniqueId } from "@web/core/utils/functions";

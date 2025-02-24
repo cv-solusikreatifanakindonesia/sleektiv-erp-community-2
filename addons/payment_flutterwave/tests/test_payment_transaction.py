@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from sleektiv.tests import tagged
+from sleektiv.tools import mute_logger
 
-from odoo.addons.payment_flutterwave.tests.common import FlutterwaveCommon
+from sleektiv.addons.payment_flutterwave.tests.common import FlutterwaveCommon
 
 
 @tagged('post_install', '-at_install')
@@ -15,18 +15,18 @@ class TestPaymentTransaction(FlutterwaveCommon):
         """ Test that the rendered values are conform to the transaction fields. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_flutterwave.models.payment_provider.PaymentProvider'
+            'sleektiv.addons.payment_flutterwave.models.payment_provider.PaymentProvider'
             '._flutterwave_make_request', return_value={'data': {'link': 'https://dummy.com'}}
         ):
             rendering_values = tx._get_specific_rendering_values(None)
         self.assertDictEqual(rendering_values, {'api_url': 'https://dummy.com'})
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment.models.payment_transaction')
     def test_no_input_missing_from_redirect_form(self):
         """ Test that the `api_url` key is not omitted from the rendering values. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_flutterwave.models.payment_transaction.PaymentTransaction'
+            'sleektiv.addons.payment_flutterwave.models.payment_transaction.PaymentTransaction'
             '._get_specific_rendering_values', return_value={'api_url': 'https://dummy.com'}
         ):
             processing_values = tx._get_processing_values()
@@ -40,7 +40,7 @@ class TestPaymentTransaction(FlutterwaveCommon):
         successful payment. """
         tx = self._create_transaction(flow='redirect')
         with patch(
-            'odoo.addons.payment_flutterwave.models.payment_provider.PaymentProvider'
+            'sleektiv.addons.payment_flutterwave.models.payment_provider.PaymentProvider'
             '._flutterwave_make_request', return_value=self.verification_data
         ):
             tx._process_notification_data(self.redirect_notification_data)
@@ -51,10 +51,10 @@ class TestPaymentTransaction(FlutterwaveCommon):
         include token data. """
         tx = self._create_transaction(flow='redirect', tokenize=True)
         with patch(
-            'odoo.addons.payment_flutterwave.models.payment_provider.PaymentProvider'
+            'sleektiv.addons.payment_flutterwave.models.payment_provider.PaymentProvider'
             '._flutterwave_make_request', return_value=self.verification_data
         ), patch(
-            'odoo.addons.payment_flutterwave.models.payment_transaction.PaymentTransaction'
+            'sleektiv.addons.payment_flutterwave.models.payment_transaction.PaymentTransaction'
             '._flutterwave_tokenize_from_notification_data'
         ) as tokenize_mock:
             tx._process_notification_data(self.redirect_notification_data)

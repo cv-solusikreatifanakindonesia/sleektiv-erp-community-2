@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import http, _
-from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.addons.website_sale.controllers.delivery import Delivery
+from sleektiv import http, _
+from sleektiv.addons.website_sale.controllers.main import WebsiteSale
+from sleektiv.addons.website_sale.controllers.delivery import Delivery
 
-from odoo.exceptions import AccessDenied, UserError
-from odoo.http import request
+from sleektiv.exceptions import AccessDenied, UserError
+from sleektiv.http import request
 
 
 class MondialRelay(http.Controller):

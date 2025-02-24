@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
+from sleektiv import api, fields, models, _
 
-from odoo.exceptions import ValidationError, UserError
-from odoo.osv.expression import AND
+from sleektiv.exceptions import ValidationError, UserError
+from sleektiv.osv.expression import AND
 
 
 class LunchOrder(models.Model):

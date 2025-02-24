@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from lxml.html import document_fromstring
 
-import odoo.tests
+import sleektiv.tests
 
 
-class TestUrlCommon(odoo.tests.HttpCase):
+class TestUrlCommon(sleektiv.tests.HttpCase):
     def setUp(self):
         super(TestUrlCommon, self).setUp()
-        self.domain = 'http://' + odoo.tests.HOST
+        self.domain = 'http://' + sleektiv.tests.HOST
         self.website = self.env['website'].create({
             'name': 'test base url',
             'domain': self.domain,
@@ -25,7 +25,7 @@ class TestUrlCommon(odoo.tests.HttpCase):
         self.assertEqual(canonical_link[0].attrib["href"], canonical_url)
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@sleektiv.tests.tagged('-at_install', 'post_install')
 class TestBaseUrl(TestUrlCommon):
     def test_01_base_url(self):
         ICP = self.env['ir.config_parameter']
@@ -67,8 +67,8 @@ class TestBaseUrl(TestUrlCommon):
             ("https://www.monsite.com", "https://www.monsite.com"),
             ("http://www.monsite.com", "http://www.monsite.com"),
             # respect port
-            ("www.monsite.com:8069", "https://www.monsite.com:8069"),
-            ("www.monsite.com:8069/", "https://www.monsite.com:8069"),
+            ("www.monsite.com:7073", "https://www.monsite.com:7073"),
+            ("www.monsite.com:7073/", "https://www.monsite.com:7073"),
             # no guess wwww
             ("monsite.com", "https://monsite.com"),
             # mix
@@ -87,8 +87,8 @@ class TestBaseUrl(TestUrlCommon):
         self._assertCanonical('/fr_FR', self.website.get_base_url() + '/fr')
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestGetBaseUrl(odoo.tests.TransactionCase):
+@sleektiv.tests.tagged('-at_install', 'post_install')
+class TestGetBaseUrl(sleektiv.tests.TransactionCase):
     def test_01_get_base_url(self):
         # Setup
         web_base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')

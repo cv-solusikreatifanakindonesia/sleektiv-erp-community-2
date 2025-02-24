@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { CrmKanbanModel } from "@crm/views/crm_kanban/crm_kanban_model";
 import { deserializeDateTime } from "@web/core/l10n/dates";

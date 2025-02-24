@@ -1,4 +1,4 @@
-import { useRef, useState, onPatched } from "@odoo/owl";
+import { useRef, useState, onPatched } from "@sleektiv/owl";
 import { useAutofocus } from "@web/core/utils/hooks";
 import { debounce } from "@web/core/utils/timing";
 import { TModelInput } from "@point_of_sale/app/generic_components/inputs/t_model_input";

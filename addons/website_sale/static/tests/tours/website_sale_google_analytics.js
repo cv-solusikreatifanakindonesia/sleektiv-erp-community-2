@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from "@web/core/registry";
 import * as tourUtils from "@website_sale/js/tours/tour_utils";
 
-odoo.loader.bus.addEventListener("module-started", (e) => {
+sleektiv.loader.bus.addEventListener("module-started", (e) => {
     if (e.detail.moduleName === "@website_sale/js/website_sale_tracking") {
         //import websiteSaleTracking from "@website_sale/js/website_sale_tracking";
         e.detail.module[Symbol.for("default")].include({

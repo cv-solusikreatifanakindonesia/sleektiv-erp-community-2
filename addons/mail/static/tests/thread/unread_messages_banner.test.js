@@ -12,8 +12,8 @@ import {
     startServer,
     step,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, test } from "@odoo/hoot";
-import { tick } from "@odoo/hoot-mock";
+import { describe, test } from "@sleektiv/hoot";
+import { tick } from "@sleektiv/hoot-mock";
 import { Command, getService, onRpc, serverState, withUser } from "@web/../tests/web_test_helpers";
 import { rpc } from "@web/core/network/rpc";
 

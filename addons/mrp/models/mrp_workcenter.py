@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import json
 
 from babel.dates import format_date
@@ -9,12 +9,12 @@ from functools import partial
 from pytz import timezone
 from random import randint
 
-from odoo import api, exceptions, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.addons.resource.models.utils import make_aware, Intervals
-from odoo.tools.date_utils import start_of, end_of
-from odoo.tools.float_utils import float_compare, float_round
-from odoo.tools.misc import get_lang
+from sleektiv import api, exceptions, fields, models, _
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.addons.resource.models.utils import make_aware, Intervals
+from sleektiv.tools.date_utils import start_of, end_of
+from sleektiv.tools.float_utils import float_compare, float_round
+from sleektiv.tools.misc import get_lang
 
 
 class MrpWorkcenter(models.Model):

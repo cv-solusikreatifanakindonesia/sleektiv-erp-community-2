@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo import _, models, fields, api
-from odoo.tools import mod10r
+from sleektiv import _, models, fields, api
+from sleektiv.tools import mod10r
 
 
 class AccountPayment(models.Model):

@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class ProductCard extends Component {
     static template = "point_of_sale.ProductCard";

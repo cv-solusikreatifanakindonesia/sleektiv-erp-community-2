@@ -1,14 +1,14 @@
-/** @odoo-module */
+/** @sleektiv-module */
 // @ts-check
 
 import { LoadingDataError } from "@spreadsheet/o_spreadsheet/errors";
 import { RPCError } from "@web/core/network/rpc";
 import { KeepLast } from "@web/core/utils/concurrency";
-import { CellErrorType, EvaluationError } from "@odoo/o-spreadsheet";
+import { CellErrorType, EvaluationError } from "@sleektiv/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
 
 /**
- * @typedef {import("./odoo_data_provider").OdooDataProvider} OdooDataProvider
+ * @typedef {import("./sleektiv_data_provider").SleektivDataProvider} SleektivDataProvider
  * @typedef {import("./server_data").ServerData} ServerData
  */
 
@@ -25,11 +25,11 @@ import { _t } from "@web/core/l10n/translation";
 export class LoadableDataSource {
     /**
      * @param {Object} param0
-     * @param {OdooDataProvider} param0.odooDataProvider
+     * @param {SleektivDataProvider} param0.sleektivDataProvider
      */
-    constructor({ odooDataProvider }) {
+    constructor({ sleektivDataProvider }) {
         /** @protected */
-        this.odooDataProvider = odooDataProvider;
+        this.sleektivDataProvider = sleektivDataProvider;
 
         /**
          * Last time that this dataSource has been updated
@@ -48,11 +48,11 @@ export class LoadableDataSource {
     }
 
     get _orm() {
-        return this.odooDataProvider.orm;
+        return this.sleektivDataProvider.orm;
     }
 
     get serverData() {
-        return this.odooDataProvider.serverData;
+        return this.sleektivDataProvider.serverData;
     }
 
     /**
@@ -64,7 +64,7 @@ export class LoadableDataSource {
      */
     async load(params) {
         if (params && params.reload) {
-            this.odooDataProvider.cancelPromise(this._loadPromise);
+            this.sleektivDataProvider.cancelPromise(this._loadPromise);
             this._loadPromise = undefined;
         }
         if (!this._loadPromise) {
@@ -96,7 +96,7 @@ export class LoadableDataSource {
                     this._lastUpdate = Date.now();
                     this._isFullyLoaded = true;
                 });
-            await this.odooDataProvider.notifyWhenPromiseResolves(this._loadPromise);
+            await this.sleektivDataProvider.notifyWhenPromiseResolves(this._loadPromise);
         }
         return this._loadPromise;
     }
@@ -159,7 +159,7 @@ export class ModelNotFoundError extends Error {}
  *
  * @param {ServerData} serverData
  * @param {string} model
- * @returns {Promise<import("@spreadsheet").OdooFields>}
+ * @returns {Promise<import("@spreadsheet").SleektivFields>}
  */
 export async function getFields(serverData, model) {
     try {

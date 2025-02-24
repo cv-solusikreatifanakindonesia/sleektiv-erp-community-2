@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo.fields import Datetime as FieldsDatetime
-from odoo.tests.common import users
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_event.controllers.main import WebsiteEventController
-from odoo.addons.event.tests.common import EventCase
+from sleektiv.fields import Datetime as FieldsDatetime
+from sleektiv.tests.common import users
+from sleektiv.addons.website.tests.test_website_visitor import MockVisitor
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_event.controllers.main import WebsiteEventController
+from sleektiv.addons.event.tests.common import EventCase
 
 
 class TestEventData(EventCase, MockVisitor):

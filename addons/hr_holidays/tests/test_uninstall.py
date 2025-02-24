@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
-from odoo.tests import tagged, TransactionCase
+from sleektiv.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from sleektiv.tests import tagged, TransactionCase
 
 
 @tagged('-at_install', 'post_install')

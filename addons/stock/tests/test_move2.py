@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.exceptions import UserError
+from sleektiv.addons.stock.tests.common import TestStockCommon
+from sleektiv.exceptions import UserError
 
-from odoo import Command
-from odoo.tests import Form
-from odoo.tools import float_is_zero, float_compare
+from sleektiv import Command
+from sleektiv.tests import Form
+from sleektiv.tools import float_is_zero, float_compare
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta

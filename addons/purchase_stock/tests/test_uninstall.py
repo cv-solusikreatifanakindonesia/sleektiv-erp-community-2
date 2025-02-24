@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
-from odoo.addons.purchase_stock.models.purchase_order_line import PurchaseOrderLine
-from odoo.tests.common import tagged
+from sleektiv import fields
+from sleektiv.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from sleektiv.addons.purchase_stock.models.purchase_order_line import PurchaseOrderLine
+from sleektiv.tests.common import tagged
 
 from .common import PurchaseTestCommon
 

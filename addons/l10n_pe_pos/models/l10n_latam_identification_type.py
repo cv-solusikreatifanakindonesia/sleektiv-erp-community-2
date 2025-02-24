@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api
+from sleektiv import models, api
 
 
 class L10nLatamIdentificationType(models.Model):

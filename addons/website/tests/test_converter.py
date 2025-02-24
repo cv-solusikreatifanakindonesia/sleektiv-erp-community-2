@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import threading
 
-from odoo.tests.common import BaseCase
-from odoo.modules.registry import Registry
+from sleektiv.tests.common import BaseCase
+from sleektiv.modules.registry import Registry
 
 
 class TestSlugUnslug(BaseCase):

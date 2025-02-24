@@ -1,7 +1,7 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
-import { click, manuallyDispatchProgrammaticEvent, queryOne } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, markup, xml } from "@odoo/owl";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
+import { click, manuallyDispatchProgrammaticEvent, queryOne } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, markup, xml } from "@sleektiv/owl";
 import { getService, mountWithCleanup, patchWithCleanup } from "@web/../tests/web_test_helpers";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { user } from "@web/core/user";

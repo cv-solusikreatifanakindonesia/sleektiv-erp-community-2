@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
-from odoo.addons.point_of_sale.tests.common_setup_methods import setup_product_combo_items
-from odoo.addons.point_of_sale.tests.common import archive_products
-from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
-from odoo import Command
+import sleektiv.tests
+from sleektiv.addons.point_of_sale.tests.common_setup_methods import setup_product_combo_items
+from sleektiv.addons.point_of_sale.tests.common import archive_products
+from sleektiv.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
+from sleektiv import Command
 
-@odoo.tests.tagged('post_install', '-at_install')
+@sleektiv.tests.tagged('post_install', '-at_install')
 class TestFrontendCommon(TestPointOfSaleHttpCommon):
 
     @classmethod

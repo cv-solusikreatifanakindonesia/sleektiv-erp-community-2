@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import time
 from datetime import datetime
@@ -6,11 +6,11 @@ from unittest.mock import patch
 
 from dateutil.relativedelta import relativedelta
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_razorpay.tests.common import RazorpayCommon
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment_razorpay.tests.common import RazorpayCommon
 
 
 @tagged('post_install', '-at_install')
@@ -91,7 +91,7 @@ class TestPaymentTransaction(RazorpayCommon):
         tx1 = self._create_transaction('redirect', reference='tx1', tokenize=True)
         tx1._process_notification_data(self.tokenize_payment_data)
         with patch(
-            'odoo.addons.payment_razorpay.models.payment_transaction.PaymentTransaction'
+            'sleektiv.addons.payment_razorpay.models.payment_transaction.PaymentTransaction'
             '._razorpay_tokenize_from_notification_data'
         ) as tokenize_mock:
             # Create the second transaction with the first transaction's token.
@@ -108,7 +108,7 @@ class TestPaymentTransaction(RazorpayCommon):
         include token data. """
         tx = self._create_transaction('direct', tokenize=True)
         with patch(
-            'odoo.addons.payment_razorpay.models.payment_transaction.PaymentTransaction'
+            'sleektiv.addons.payment_razorpay.models.payment_transaction.PaymentTransaction'
             '._razorpay_tokenize_from_notification_data'
         ) as tokenize_mock:
             tx._process_notification_data(self.tokenize_payment_data)

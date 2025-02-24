@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { ListController } from "@web/views/list/list_controller";
 

@@ -1,4 +1,4 @@
-import { describe, test } from "@odoo/hoot";
+import { describe, test } from "@sleektiv/hoot";
 import { deleteBackward } from "../_helpers/user_actions";
 import { testEditor } from "../_helpers/editor";
 

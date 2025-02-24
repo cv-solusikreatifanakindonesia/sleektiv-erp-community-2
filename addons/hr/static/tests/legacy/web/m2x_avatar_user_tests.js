@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
 import { start } from "@mail/../tests/helpers/test_utils";
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
@@ -10,7 +10,7 @@ import {
 } from "@web/../tests/helpers/utils";
 import { registry } from "@web/core/registry";
 import { browser } from "@web/core/browser/browser";
-import { EventBus } from "@odoo/owl";
+import { EventBus } from "@sleektiv/owl";
 import { AvatarCardPopover } from "@mail/discuss/web/avatar_card/avatar_card_popover";
 import { patchAvatarCardPopover } from "@hr/components/avatar_card/avatar_card_popover_patch";
 
@@ -60,14 +60,14 @@ QUnit.module("M2XAvatarUser", ({ beforeEach }) => {
         });
         const userId = pyEnv["res.users"].create({
             name: "Mario",
-            email: "Mario@odoo.test",
-            work_email: "Mario@odoo.pro",
+            email: "Mario@sleektiv.test",
+            work_email: "Mario@sleektiv.pro",
             im_status: "online",
             phone: "+78786987",
             work_phone: "+585555555",
             job_title: "sub manager",
             department_id: departmentId,
-            work_location_name: "Odoo",
+            work_location_name: "Sleektiv",
             work_location_type: "office",
         });
         const mockRPC = (route, args) => {
@@ -126,9 +126,9 @@ QUnit.module("M2XAvatarUser", ({ beforeEach }) => {
             "Mario",
             "sub manager",
             "Managemment",
-            "Mario@odoo.pro",
+            "Mario@sleektiv.pro",
             "+585555555",
-            "Odoo",
+            "Sleektiv",
         ]);
         // Close card
         await click(document, ".o_action_manager");

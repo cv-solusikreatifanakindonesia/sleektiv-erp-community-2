@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 from unittest import mock
 from unittest.mock import patch
 
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
+from sleektiv import fields
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -314,7 +314,7 @@ class TestVNEDI(AccountTestInvoicingCommon):
         # Trying to cancel a sent invoice should result in an action to open the cancellation wizard.
         action = invoice.button_request_cancel()
         self.assertEqual(action['res_model'], 'l10n_vn_edi_viettel.cancellation')
-        with patch('odoo.addons.l10n_vn_edi_viettel.models.account_move._l10n_vn_edi_send_request', return_value=(None, None)):
+        with patch('sleektiv.addons.l10n_vn_edi_viettel.models.account_move._l10n_vn_edi_send_request', return_value=(None, None)):
             self.env['l10n_vn_edi_viettel.cancellation'].create({
                 'invoice_id': invoice.id,
                 'reason': 'Unwanted',
@@ -341,7 +341,7 @@ class TestVNEDI(AccountTestInvoicingCommon):
         }
 
         # Do a few tests to ensure that the access token is handled correctly.
-        with patch('odoo.addons.l10n_vn_edi_viettel.models.account_move._l10n_vn_edi_send_request', return_value=(request_response, None)):
+        with patch('sleektiv.addons.l10n_vn_edi_viettel.models.account_move._l10n_vn_edi_send_request', return_value=(request_response, None)):
             # First ensure that fetching the token will set the value correctly on the company.
             with freeze_time('2024-01-01 02:00:00'):
                 invoice._l10n_vn_edi_get_access_token()
@@ -380,7 +380,7 @@ class TestVNEDI(AccountTestInvoicingCommon):
             'expires_in': '60',
         }
 
-        with patch('odoo.addons.l10n_vn_edi_viettel.models.account_move.AccountMove._l10n_vn_edi_fetch_invoice_pdf_file_data', return_value=pdf_response), \
-             patch('odoo.addons.l10n_vn_edi_viettel.models.account_move.AccountMove._l10n_vn_edi_fetch_invoice_xml_file_data', return_value=xml_response), \
-             patch('odoo.addons.l10n_vn_edi_viettel.models.account_move._l10n_vn_edi_send_request', return_value=(request_response, None)):
+        with patch('sleektiv.addons.l10n_vn_edi_viettel.models.account_move.AccountMove._l10n_vn_edi_fetch_invoice_pdf_file_data', return_value=pdf_response), \
+             patch('sleektiv.addons.l10n_vn_edi_viettel.models.account_move.AccountMove._l10n_vn_edi_fetch_invoice_xml_file_data', return_value=xml_response), \
+             patch('sleektiv.addons.l10n_vn_edi_viettel.models.account_move._l10n_vn_edi_send_request', return_value=(request_response, None)):
             self.env['account.move.send.wizard'].with_context(active_model=invoice._name, active_ids=invoice.ids).create({}).action_send_and_print()

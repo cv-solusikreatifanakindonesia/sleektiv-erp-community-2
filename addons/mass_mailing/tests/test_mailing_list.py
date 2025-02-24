@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.mass_mailing.tests.common import MassMailCommon
-from odoo.tests import Form, tagged, users
+from sleektiv import exceptions
+from sleektiv.addons.mass_mailing.tests.common import MassMailCommon
+from sleektiv.tests import Form, tagged, users
 
 
 @tagged('mailing_list')

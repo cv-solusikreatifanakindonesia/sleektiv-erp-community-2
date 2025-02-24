@@ -1,5 +1,5 @@
-from odoo import api, SUPERUSER_ID
-from odoo.tools import sql
+from sleektiv import api, SUPERUSER_ID
+from sleektiv.tools import sql
 
 def migrate(cr, version):
     env = api.Environment(cr, SUPERUSER_ID, {})

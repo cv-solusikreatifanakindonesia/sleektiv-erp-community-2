@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request, route
+from sleektiv.http import request, route
 
-from odoo.addons.sale.controllers.combo_configurator import SaleComboConfiguratorController
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from sleektiv.addons.sale.controllers.combo_configurator import SaleComboConfiguratorController
+from sleektiv.addons.website_sale.controllers.main import WebsiteSale
 
 
 class WebsiteSaleComboConfiguratorController(SaleComboConfiguratorController, WebsiteSale):

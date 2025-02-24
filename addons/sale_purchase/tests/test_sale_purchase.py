@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.exceptions import UserError, AccessError
-from odoo.tests import tagged
-from odoo.addons.sale_purchase.tests.common import TestCommonSalePurchaseNoChart
+from sleektiv import Command
+from sleektiv.exceptions import UserError, AccessError
+from sleektiv.tests import tagged
+from sleektiv.addons.sale_purchase.tests.common import TestCommonSalePurchaseNoChart
 
 
 @tagged('-at_install', 'post_install')

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import random
@@ -6,11 +6,11 @@ import time
 
 from decorator import decorator
 
-from odoo.fields import Command
-from odoo.tests import tagged
-from odoo.tests.common import users, warmup
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
+from sleektiv.tests.common import users, warmup
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from sleektiv.addons.base.tests.common import TransactionCaseWithUserDemo
 
 _logger = logging.getLogger(__name__)
 

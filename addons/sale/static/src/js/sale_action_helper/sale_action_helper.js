@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 import { SaleActionHelperDialog } from "./sale_action_helper_dialog"
 

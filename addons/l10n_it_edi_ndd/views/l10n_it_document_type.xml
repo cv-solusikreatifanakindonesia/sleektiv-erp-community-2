@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<sleektiv>
 
     <!-- Useful for the search more of the field -->
     <record id="l10n_it_document_type_tree" model="ir.ui.view">
@@ -13,4 +13,4 @@
         </field>
     </record>
 
-</odoo>
+</sleektiv>

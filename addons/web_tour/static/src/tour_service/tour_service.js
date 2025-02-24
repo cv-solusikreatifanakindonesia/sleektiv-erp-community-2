@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { markup, whenReady, validate } from "@odoo/owl";
+import { markup, whenReady, validate } from "@sleektiv/owl";
 import { browser } from "@web/core/browser/browser";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -261,8 +261,8 @@ export const tourService = {
             }
         }
 
-        odoo.startTour = startTour;
-        odoo.isTourReady = (tourName) => getTourFromRegistry(tourName).wait_for.then(() => true);
+        sleektiv.startTour = startTour;
+        sleektiv.isTourReady = (tourName) => getTourFromRegistry(tourName).wait_for.then(() => true);
 
         return {
             startTour,

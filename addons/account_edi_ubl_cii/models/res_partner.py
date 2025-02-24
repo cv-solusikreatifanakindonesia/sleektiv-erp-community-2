@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 from stdnum.fr import siret
 
-from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
-from odoo.addons.account_edi_ubl_cii.models.account_edi_common import EAS_MAPPING
-from odoo.addons.account.models.company import PEPPOL_DEFAULT_COUNTRIES
+from sleektiv import models, fields, api, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.addons.account_edi_ubl_cii.models.account_edi_common import EAS_MAPPING
+from sleektiv.addons.account.models.company import PEPPOL_DEFAULT_COUNTRIES
 
 
 class ResPartner(models.Model):
@@ -138,7 +138,7 @@ class ResPartner(models.Model):
         return {
             'ubl_bis3': {'countries': list(PEPPOL_DEFAULT_COUNTRIES), 'on_peppol': True, 'sequence': 200},
             'xrechnung': {'countries': ['DE'], 'on_peppol': True},
-            'ubl_a_nz': {'countries': ['NZ', 'AU'], 'on_peppol': False},  # Not yet available through Odoo's Access Point, although it's a Peppol valid format
+            'ubl_a_nz': {'countries': ['NZ', 'AU'], 'on_peppol': False},  # Not yet available through Sleektiv's Access Point, although it's a Peppol valid format
             'nlcius': {'countries': ['NL'], 'on_peppol': True},
             'ubl_sg': {'countries': ['SG'], 'on_peppol': False},  # Same.
             'facturx': {'countries': ['FR'], 'on_peppol': False},

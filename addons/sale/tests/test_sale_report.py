@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
-from odoo.fields import Command
-from odoo.tests import tagged
-from odoo.tools.float_utils import float_compare
+from sleektiv import fields
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
+from sleektiv.tools.float_utils import float_compare
 
-from odoo.addons.sale.tests.common import SaleCommon
+from sleektiv.addons.sale.tests.common import SaleCommon
 
 
 @tagged('-at_install', 'post_install')

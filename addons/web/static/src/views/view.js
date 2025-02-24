@@ -20,7 +20,7 @@ import {
     toRaw,
     useSubEnv,
     reactive,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { session } from "@web/session";
 
 const viewRegistry = registry.category("views");

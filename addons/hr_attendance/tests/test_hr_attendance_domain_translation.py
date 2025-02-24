@@ -1,6 +1,6 @@
 import time
 
-from odoo.tests.common import tagged, TransactionCase
+from sleektiv.tests.common import tagged, TransactionCase
 
 
 @tagged('attendance_searchbar_user_domain')

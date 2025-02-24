@@ -1,6 +1,6 @@
 import { Dialog } from "@web/core/dialog/dialog";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class FormErrorDialog extends Component {
     static template = "web.FormErrorDialog";

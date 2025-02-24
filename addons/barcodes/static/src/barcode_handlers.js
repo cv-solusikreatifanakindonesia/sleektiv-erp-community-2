@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { getVisibleElements } from "@web/core/utils/ui";
 import { Macro } from "@web/core/macro";
-import { click, edit } from "@odoo/hoot-dom";
+import { click, edit } from "@sleektiv/hoot-dom";
 
 function clickOnButton(selector) {
     const button = document.body.querySelector(selector);

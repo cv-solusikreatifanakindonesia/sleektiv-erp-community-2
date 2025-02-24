@@ -21,7 +21,7 @@ class MercadoPagoPosRequest:
         :return The JSON-formatted content of the response.
 
         Note: The platform id below is not secret, and is just used to
-        quantify the amount of Odoo users on Mercado's backend.
+        quantify the amount of Sleektiv users on Mercado's backend.
         """
         endpoint = MERCADO_PAGO_API_ENDPOINT + endpoint
         header = {

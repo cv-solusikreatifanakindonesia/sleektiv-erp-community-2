@@ -2,7 +2,7 @@ import { ChatGPTPromptDialog } from "@html_editor/main/chatgpt/chatgpt_prompt_di
 
 import { htmlJoin } from "@mail/utils/common/html";
 
-import { Component, markup } from "@odoo/owl";
+import { Component, markup } from "@sleektiv/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";

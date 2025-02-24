@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 from stdnum.it import codicefiscale, iva
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
 
 
 class ResPartner(models.Model):

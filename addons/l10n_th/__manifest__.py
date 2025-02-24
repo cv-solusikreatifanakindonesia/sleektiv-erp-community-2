@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Thailand - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -12,7 +12,7 @@ Chart of Accounts for Thailand.
 Thai accounting chart and localization.
     """,
     'author': 'Almacom (http://almacom.co.th/)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/thailand.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/thailand.html',
     'depends': [
         'account_qr_code_emv',
         'account',

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Colombia - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -7,7 +7,7 @@
     'category': 'Accounting/Localizations/Account Charts',
     'description': 'Colombian Accounting and Tax Preconfiguration',
     'author': 'David Arnold (XOE Solutions)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/colombia.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/colombia.html',
     'depends': [
         'account_debit_note',
         'l10n_latam_base',

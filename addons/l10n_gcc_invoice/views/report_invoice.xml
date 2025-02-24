@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<sleektiv>
     <template id="arabic_english_invoice">
         <t t-call="web.external_layout">
             <t t-set="o" t-value="o.with_context(lang=lang)" />
@@ -580,7 +580,7 @@
         </t>
     </template>
 
-    <!-- Workaround for Studio reports, see odoo/odoo#60660 -->
+    <!-- Workaround for Studio reports, see sleektiv/sleektiv#60660 -->
     <template id="report_invoice" inherit_id="account.report_invoice">
         <xpath expr='//t[@t-call="account.report_invoice_document"]' position="after">
             <t t-elif="o._get_name_invoice_report() == 'l10n_gcc_invoice.arabic_english_invoice'"
@@ -588,4 +588,4 @@
                t-lang="lang"/>
         </xpath>
     </template>
-</odoo>
+</sleektiv>

@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { useService } from "@web/core/utils/hooks";
 import { Domain } from '@web/core/domain';
 import { SearchModel } from '@web/search/search_model';
-import { onWillStart, useState } from "@odoo/owl";
+import { onWillStart, useState } from "@sleektiv/owl";
 
 export class PageSearchModel extends SearchModel {
     /**

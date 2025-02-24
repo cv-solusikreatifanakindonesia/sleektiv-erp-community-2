@@ -1,9 +1,9 @@
 // ! WARNING: this module cannot depend on modules not ending with ".hoot" (except libs) !
 
-import { describe, dryRun, globals, start, stop } from "@odoo/hoot";
-import { Deferred, microTick } from "@odoo/hoot-dom";
-import { watchKeys, watchListeners } from "@odoo/hoot-mock";
-import { whenReady } from "@odoo/owl";
+import { describe, dryRun, globals, start, stop } from "@sleektiv/hoot";
+import { Deferred, microTick } from "@sleektiv/hoot-dom";
+import { watchKeys, watchListeners } from "@sleektiv/hoot-mock";
+import { whenReady } from "@sleektiv/owl";
 
 import { mockBrowserFactory } from "./mock_browser.hoot";
 import { mockCurrencyFactory } from "./mock_currency.hoot";
@@ -25,7 +25,7 @@ import { mockUserFactory } from "./mock_user.hoot";
  */
 
 const { fetch: realFetch } = globals;
-const { define, loader } = odoo;
+const { define, loader } = sleektiv;
 
 //-----------------------------------------------------------------------------
 // Internal
@@ -381,7 +381,7 @@ const __gcAndLogMemory = async (label, testCount) => {
     console.log(...logs);
 };
 
-/** @extends {OdooModuleLoader} */
+/** @extends {SleektivModuleLoader} */
 class ModuleSetLoader extends loader.constructor {
     cleanups = [];
 
@@ -395,8 +395,8 @@ class ModuleSetLoader extends loader.constructor {
         this.modules = new Map(loader.modules);
         this.moduleSet = moduleSet;
 
-        odoo.define = this.define.bind(this);
-        odoo.loader = this;
+        sleektiv.define = this.define.bind(this);
+        sleektiv.loader = this;
     }
 
     /**
@@ -418,8 +418,8 @@ class ModuleSetLoader extends loader.constructor {
     }
 
     cleanup() {
-        odoo.define = define;
-        odoo.loader = loader;
+        sleektiv.define = define;
+        sleektiv.loader = loader;
 
         while (this.cleanups.length) {
             this.cleanups.pop()();
@@ -445,7 +445,7 @@ class ModuleSetLoader extends loader.constructor {
 
     setup() {
         this.cleanups.push(
-            watchKeys(window.odoo),
+            watchKeys(window.sleektiv),
             watchKeys(window, ALLOWED_GLOBAL_KEYS),
             watchListeners()
         );
@@ -487,21 +487,21 @@ const ALLOWED_GLOBAL_KEYS = [
     "L", // Leaflet
     "lamejs", // LameJS
     "luxon", // Luxon
-    "odoo",
+    "sleektiv",
     "owl",
 ];
 const AUTO_INCLUDED_ADDONS = {
     /**
-     * spreadsheet addons defines a module that does not starts with `@spreadsheet` but `@odoo` (`@odoo/o-spreadsheet)
-     * To ensure that this module is loaded, we have to include `odoo` in the dependencies
+     * spreadsheet addons defines a module that does not starts with `@spreadsheet` but `@sleektiv` (`@sleektiv/o-spreadsheet)
+     * To ensure that this module is loaded, we have to include `sleektiv` in the dependencies
      */
-    spreadsheet: ["odoo"],
+    spreadsheet: ["sleektiv"],
     /**
      * Add all view types by default
      */
     web_enterprise: ["web_gantt", "web_grid", "web_map"],
 };
-const CSRF_TOKEN = odoo.csrf_token;
+const CSRF_TOKEN = sleektiv.csrf_token;
 const DEFAULT_ADDONS = ["base", "web"];
 const MODULE_MOCKS_BY_NAME = new Map([
     // Fixed modules
@@ -517,7 +517,7 @@ const MODULE_MOCKS_BY_REGEX = new Map([
     // Fixed modules
     [/\.bundle\.xml$/, makeFixedFactory],
 ]);
-const R_DEFAULT_MODULE = /^@odoo\/(owl|hoot)/;
+const R_DEFAULT_MODULE = /^@sleektiv\/(owl|hoot)/;
 const R_PATH_ADDON = /^[@/]?(\w+)/;
 const TEMPLATE_MODULE_NAME = "@web/core/templates";
 

@@ -72,10 +72,10 @@ export const CLIPBOARD_WHITELISTS = {
         "table-bordered",
         /^padding-/,
         /^shadow/,
-        // Odoo colors
+        // Sleektiv colors
         /^text-o-/,
         /^bg-o-/,
-        // Odoo lists
+        // Sleektiv lists
         "o_checked",
         "o_checklist",
         "oe-nested",
@@ -217,11 +217,11 @@ export class ClipboardPlugin extends Plugin {
         }
         const dataHtmlElement = this.document.createElement("data");
         dataHtmlElement.append(clonedContents);
-        const odooHtml = dataHtmlElement.innerHTML;
-        const odooText = selection.textContent();
-        ev.clipboardData.setData("text/plain", odooText);
-        ev.clipboardData.setData("text/html", odooHtml);
-        ev.clipboardData.setData("application/vnd.odoo.odoo-editor", odooHtml);
+        const sleektivHtml = dataHtmlElement.innerHTML;
+        const sleektivText = selection.textContent();
+        ev.clipboardData.setData("text/plain", sleektivText);
+        ev.clipboardData.setData("text/html", sleektivHtml);
+        ev.clipboardData.setData("application/vnd.sleektiv.sleektiv-editor", sleektivHtml);
         if (commonAncestor && commonAncestor.nodeType === Node.ELEMENT_NODE) {
             this.dispatchTo("normalize_handlers", commonAncestor);
         }
@@ -244,7 +244,7 @@ export class ClipboardPlugin extends Plugin {
         selection = this.dependencies.selection.getEditableSelection();
 
         this.handlePasteUnsupportedHtml(selection, ev.clipboardData) ||
-            this.handlePasteOdooEditorHtml(ev.clipboardData) ||
+            this.handlePasteSleektivEditorHtml(ev.clipboardData) ||
             this.handlePasteHtml(selection, ev.clipboardData) ||
             this.handlePasteText(selection, ev.clipboardData);
 
@@ -265,14 +265,14 @@ export class ClipboardPlugin extends Plugin {
     /**
      * @param {DataTransfer} clipboardData
      */
-    handlePasteOdooEditorHtml(clipboardData) {
-        const odooEditorHtml = clipboardData.getData("application/vnd.odoo.odoo-editor");
+    handlePasteSleektivEditorHtml(clipboardData) {
+        const sleektivEditorHtml = clipboardData.getData("application/vnd.sleektiv.sleektiv-editor");
         const textContent = clipboardData.getData("text/plain");
         if (ONLY_LINK_REGEX.test(textContent)) {
             return false;
         }
-        if (odooEditorHtml) {
-            const fragment = parseHTML(this.document, odooEditorHtml);
+        if (sleektivEditorHtml) {
+            const fragment = parseHTML(this.document, sleektivEditorHtml);
             this.dependencies.sanitize.sanitize(fragment);
             if (fragment.hasChildNodes()) {
                 this.dependencies.dom.insert(fragment);
@@ -609,7 +609,7 @@ export class ClipboardPlugin extends Plugin {
         if (ev.target.nodeName === "IMG") {
             this.dragImage = ev.target instanceof HTMLElement && ev.target;
             ev.dataTransfer.setData(
-                "application/vnd.odoo.odoo-editor-node",
+                "application/vnd.sleektiv.sleektiv-editor-node",
                 this.dragImage.outerHTML
             );
         }
@@ -640,7 +640,7 @@ export class ClipboardPlugin extends Plugin {
         }
 
         const dataTransfer = (ev.originalEvent || ev).dataTransfer;
-        const imageNodeHTML = ev.dataTransfer.getData("application/vnd.odoo.odoo-editor-node");
+        const imageNodeHTML = ev.dataTransfer.getData("application/vnd.sleektiv.sleektiv-editor-node");
         const image =
             imageNodeHTML &&
             this.dragImage &&
@@ -737,7 +737,7 @@ function getImageUrl(file) {
     });
 }
 
-// @phoenix @todo: move to Odoo plugin?
+// @phoenix @todo: move to Sleektiv plugin?
 /**
  * Returns true if the provided node can suport html content.
  *

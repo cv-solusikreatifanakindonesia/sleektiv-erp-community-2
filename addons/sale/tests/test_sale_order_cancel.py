@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests.common import users
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.tests.common import users
 
-from odoo.addons.sale.tests.common import SaleCommon
-from odoo.addons.sales_team.tests.common import TestSalesCommon
+from sleektiv.addons.sale.tests.common import SaleCommon
+from sleektiv.addons.sales_team.tests.common import TestSalesCommon
 
 
 class TestSaleOrderCancel(SaleCommon, TestSalesCommon):

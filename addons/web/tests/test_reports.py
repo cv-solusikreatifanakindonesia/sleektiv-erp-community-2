@@ -1,11 +1,11 @@
-import odoo.tests
+import sleektiv.tests
 
-from odoo.addons.website.tools import MockRequest
+from sleektiv.addons.website.tools import MockRequest
 
 
-class TestReports(odoo.tests.HttpCase):
+class TestReports(sleektiv.tests.HttpCase):
     def test_report_session_cookie(self):
-        """ Asserts wkhtmltopdf forwards the user session when requesting resources to Odoo, such as images,
+        """ Asserts wkhtmltopdf forwards the user session when requesting resources to Sleektiv, such as images,
         and that the resource is correctly returned as expected.
         """
         partner_id = self.env.user.partner_id.id

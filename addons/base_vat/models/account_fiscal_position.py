@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models, _
-from odoo.exceptions import ValidationError
+from sleektiv import api, models, _
+from sleektiv.exceptions import ValidationError
 
 
 class AccountFiscalPosition(models.Model):

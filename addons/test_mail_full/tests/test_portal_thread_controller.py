@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo
-from odoo.addons.mail.tests.test_thread_controller import (
+import sleektiv
+from sleektiv.addons.mail.tests.test_thread_controller import (
     MessagePostSubTestData,
     TestThreadControllerCommon,
 )
 
 
-@odoo.tests.tagged("-at_install", "post_install")
+@sleektiv.tests.tagged("-at_install", "post_install")
 class TestPortalThreadController(TestThreadControllerCommon):
     def test_message_post_access_portal_no_partner(self):
         """Test access of message post for portal without partner."""

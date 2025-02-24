@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta, time
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.event.tests.common import EventCase
-from odoo.addons.event_crm.tests.common import EventCrmCase
-from odoo.addons.mail.tests.common import mail_new_test_user, MailCommon
-from odoo.addons.sales_team.tests.common import TestSalesCommon
-from odoo.addons.sms.tests.common import SMSCase
-from odoo.addons.website.tests.test_website_visitor import MockVisitor
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
+from sleektiv.addons.base.tests.test_ir_cron import CronMixinCase
+from sleektiv.addons.event.tests.common import EventCase
+from sleektiv.addons.event_crm.tests.common import EventCrmCase
+from sleektiv.addons.mail.tests.common import mail_new_test_user, MailCommon
+from sleektiv.addons.sales_team.tests.common import TestSalesCommon
+from sleektiv.addons.sms.tests.common import SMSCase
+from sleektiv.addons.website.tests.test_website_visitor import MockVisitor
 
 
 class TestEventFullCommon(EventCrmCase, TestSalesCommon, MockVisitor):

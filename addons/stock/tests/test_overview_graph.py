@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo.addons.base.tests.common import BaseCommon
+from sleektiv.addons.base.tests.common import BaseCommon
 from freezegun import freeze_time
 
 

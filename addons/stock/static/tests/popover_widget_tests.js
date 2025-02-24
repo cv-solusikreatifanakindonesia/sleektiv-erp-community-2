@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { getFixture, click } from "@web/../tests/helpers/utils";
 

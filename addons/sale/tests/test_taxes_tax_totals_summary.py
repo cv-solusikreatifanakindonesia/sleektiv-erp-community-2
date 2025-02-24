@@ -1,6 +1,6 @@
-from odoo.addons.account.tests.test_taxes_tax_totals_summary import TestTaxesTaxTotalsSummary
-from odoo.addons.sale.tests.common import TestTaxCommonSale
-from odoo.tests import tagged
+from sleektiv.addons.account.tests.test_taxes_tax_totals_summary import TestTaxesTaxTotalsSummary
+from sleektiv.addons.sale.tests.common import TestTaxCommonSale
+from sleektiv.tests import tagged
 
 
 @tagged('post_install', '-at_install')

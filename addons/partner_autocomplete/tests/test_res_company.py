@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common
-from odoo.addons.partner_autocomplete.tests.common import MockIAPPartnerAutocomplete
+from sleektiv.tests import common
+from sleektiv.addons.partner_autocomplete.tests.common import MockIAPPartnerAutocomplete
 
 class TestResCompany(common.TransactionCase, MockIAPPartnerAutocomplete):
 
@@ -50,11 +50,11 @@ class TestResCompany(common.TransactionCase, MockIAPPartnerAutocomplete):
         company_1.website = "http://superwebsite.com"
         self.assertEqual(company_1._get_company_domain(), 'superwebsite.com')
 
-        company_1.website = "http://localhost:8069/%7Eguido/Python.html"
+        company_1.website = "http://localhost:7073/%7Eguido/Python.html"
         self.assertEqual(company_1._get_company_domain(), False)
 
-        company_1.website = "http://runbot.odoo.com"
-        self.assertEqual(company_1._get_company_domain(), 'odoo.com')
+        company_1.website = "http://runbot.sleektiv.com"
+        self.assertEqual(company_1._get_company_domain(), 'sleektiv.com')
 
         company_1.website = "http://www.example.com/biniou"
         self.assertEqual(company_1._get_company_domain(), False)

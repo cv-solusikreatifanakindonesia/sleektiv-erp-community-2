@@ -14,4 +14,4 @@
             <div class="text-center"><t t-esc="state.cols"/>x<t t-esc="state.rows"/></div>
         </div>
     </t>
-</templates>
+</templates> 

@@ -12,7 +12,7 @@ const PREVIEW_MSG_MAX_SIZE = 350; // optimal for native English speakers
  */
 export class OutOfFocusService {
     /**
-     * @param {import("@web/env").OdooEnv} env
+     * @param {import("@web/env").SleektivEnv} env
      * @param {Partial<import("services").Services>} services
      */
     constructor(env, services) {
@@ -37,7 +37,7 @@ export class OutOfFocusService {
         }
         const author = message.author;
         let notificationTitle;
-        let icon = "/mail/static/src/img/odoobot_transparent.png";
+        let icon = "/mail/static/src/img/sleektivbot_transparent.png";
         if (!author) {
             notificationTitle = _t("New message");
         } else {
@@ -90,7 +90,7 @@ export class OutOfFocusService {
      */
     sendNotification({ message, sound = true, title, type, icon }) {
         if (!this.canSendNativeNotification) {
-            this.sendOdooNotification(message, { sound, title, type });
+            this.sendSleektivNotification(message, { sound, title, type });
             return;
         }
         if (!this.multiTab.isOnMainTab()) {
@@ -103,7 +103,7 @@ export class OutOfFocusService {
             // So we fallback to the notification service in this case
             // https://bugs.chromium.org/p/chromium/issues/detail?id=481856
             if (error.message.includes("ServiceWorkerRegistration")) {
-                this.sendOdooNotification(message, { sound, title, type });
+                this.sendSleektivNotification(message, { sound, title, type });
             } else {
                 throw error;
             }
@@ -114,7 +114,7 @@ export class OutOfFocusService {
      * @param {string} message
      * @param {Object} options
      */
-    async sendOdooNotification(message, options) {
+    async sendSleektivNotification(message, options) {
         const { sound } = options;
         delete options.sound;
         this.closeFuncs.push(this.notificationService.add(message, options));
@@ -173,7 +173,7 @@ export class OutOfFocusService {
 export const outOfFocusService = {
     dependencies: ["multi_tab", "notification"],
     /**
-     * @param {import("@web/env").OdooEnv} env
+     * @param {import("@web/env").SleektivEnv} env
      * @param {Partial<import("services").Services>} services
      */
     start(env, services) {

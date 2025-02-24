@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import math
 import re
 
 from werkzeug import urls
 
-from odoo import http, tools, _, SUPERUSER_ID
-from odoo.exceptions import AccessDenied, AccessError, MissingError, UserError, ValidationError
-from odoo.http import content_disposition, Controller, request, route
-from odoo.tools import consteq
+from sleektiv import http, tools, _, SUPERUSER_ID
+from sleektiv.exceptions import AccessDenied, AccessError, MissingError, UserError, ValidationError
+from sleektiv.http import content_disposition, Controller, request, route
+from sleektiv.tools import consteq
 
 # --------------------------------------------------
 # Misc tools

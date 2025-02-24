@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from base64 import b64decode
 from datetime import datetime
@@ -12,11 +12,11 @@ import time
 from werkzeug.exceptions import InternalServerError
 from zlib import adler32
 
-from odoo import http, tools
+from sleektiv import http, tools
 
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices, manager
-from odoo.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers.event_manager import event_manager
+from sleektiv.addons.hw_drivers.main import iot_devices, manager
+from sleektiv.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 
@@ -82,15 +82,15 @@ class DriverController(http.Controller):
         """
         Downloads the log file
         """
-        log_path = tools.config['logfile'] or "/var/log/odoo/odoo-server.log"
+        log_path = tools.config['logfile'] or "/var/log/sleektiv/sleektiv-server.log"
         try:
             stat = os.stat(log_path)
         except FileNotFoundError:
             raise InternalServerError("Log file has not been found. Check your Log file configuration.")
         check = adler32(log_path.encode())
-        log_file_name = f"iot-odoo-{gethostname()}-{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
+        log_file_name = f"iot-sleektiv-{gethostname()}-{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
         # intentionally don't use Stream.from_path as the path used is not in the addons path
-        # for instance, for the iot-box it will be in /var/log/odoo
+        # for instance, for the iot-box it will be in /var/log/sleektiv
         return http.Stream(
                 type='path',
                 path=log_path,

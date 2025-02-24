@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
-from odoo import api, fields, models
-from odoo.addons.sms.tools.sms_api import ERROR_MESSAGES, SmsApi
-from odoo.exceptions import ValidationError
+from sleektiv import api, fields, models
+from sleektiv.addons.sms.tools.sms_api import ERROR_MESSAGES, SmsApi
+from sleektiv.exceptions import ValidationError
 
 
 class SMSAccountSender(models.TransientModel):

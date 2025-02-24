@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict, OrderedDict
 
-from odoo import _, api, models
-from odoo.tools import float_compare, float_is_zero, format_date
+from sleektiv import _, api, models
+from sleektiv.tools import float_compare, float_is_zero, format_date
 
 
 class ReceptionReport(models.AbstractModel):

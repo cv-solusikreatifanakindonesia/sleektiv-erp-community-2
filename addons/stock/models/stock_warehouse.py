@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import namedtuple
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.tools import format_list
-from odoo.tools.translate import _, LazyTranslate
+from sleektiv import api, fields, models
+from sleektiv.exceptions import UserError, RedirectWarning
+from sleektiv.tools import format_list
+from sleektiv.tools.translate import _, LazyTranslate
 
 _lt = LazyTranslate(__name__)
 

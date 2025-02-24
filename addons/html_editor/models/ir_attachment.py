@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from urllib.parse import quote
 
-from odoo import api, models, fields
-from odoo.tools.image import base64_to_image
-from odoo.exceptions import UserError
+from sleektiv import api, models, fields
+from sleektiv.tools.image import base64_to_image
+from sleektiv.exceptions import UserError
 
 SUPPORTED_IMAGE_MIMETYPES = {
     'image/gif': '.gif',

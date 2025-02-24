@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.l10n_ar.tests.common import TestAr
-from odoo.tests import tagged
-from odoo import Command
+from sleektiv.addons.l10n_ar.tests.common import TestAr
+from sleektiv.tests import tagged
+from sleektiv import Command
 from datetime import datetime
 
 

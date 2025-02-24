@@ -1,4 +1,4 @@
-import { Component, onMounted, onRendered, onWillDestroy, onWillStart, xml } from "@odoo/owl";
+import { Component, onMounted, onRendered, onWillDestroy, onWillStart, xml } from "@sleektiv/owl";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
 
 export class DropdownPopover extends Component {

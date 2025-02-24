@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged, Form
-from odoo import fields, Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import tagged, Form
+from sleektiv import fields, Command
 
 
 @tagged('post_install', '-at_install')

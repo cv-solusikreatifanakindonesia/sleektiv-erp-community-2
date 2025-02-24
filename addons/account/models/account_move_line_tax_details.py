@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models
-from odoo.tools import SQL
+from sleektiv import api, models
+from sleektiv.tools import SQL
 
 
 class AccountMoveLine(models.Model):

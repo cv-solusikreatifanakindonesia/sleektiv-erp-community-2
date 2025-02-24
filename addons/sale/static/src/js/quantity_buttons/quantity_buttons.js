@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component } from '@odoo/owl';
+import { Component } from '@sleektiv/owl';
 
 export class QuantityButtons extends Component {
     static template = 'sale.QuantityButtons';

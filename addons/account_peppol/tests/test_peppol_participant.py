@@ -3,9 +3,9 @@ from contextlib import contextmanager
 from requests import Session, PreparedRequest, Response
 from psycopg2 import IntegrityError
 
-from odoo.exceptions import ValidationError, UserError
-from odoo.tests.common import tagged, TransactionCase, freeze_time
-from odoo.tools import mute_logger
+from sleektiv.exceptions import ValidationError, UserError
+from sleektiv.tests.common import tagged, TransactionCase, freeze_time
+from sleektiv.tools import mute_logger
 
 ID_CLIENT = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 FAKE_UUID = 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy'
@@ -177,7 +177,7 @@ class TestPeppolParticipant(TransactionCase):
             self.env['account_edi_proxy_client.user']._cron_peppol_get_participant_status()
             self.assertEqual(company.account_peppol_proxy_state, 'rejected')
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('sleektiv.sql_db')
     def test_create_duplicate_participant(self):
         # should not be possible to create a duplicate participant
         wizard = self.env['peppol.registration'].create(self._get_participant_vals())

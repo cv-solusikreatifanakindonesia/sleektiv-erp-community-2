@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 from base64 import b64decode
 
-from odoo import models
+from sleektiv import models
 
 _logger = logging.getLogger(__name__)
 

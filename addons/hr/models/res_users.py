@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 
-from odoo import api, models, fields, _, SUPERUSER_ID
-from odoo.exceptions import AccessError
-from odoo.tools.misc import clean_context
+from sleektiv import api, models, fields, _, SUPERUSER_ID
+from sleektiv.exceptions import AccessError
+from sleektiv.tools.misc import clean_context
 
 
 HR_READABLE_FIELDS = [

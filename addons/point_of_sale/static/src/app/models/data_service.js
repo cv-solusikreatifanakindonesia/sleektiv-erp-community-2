@@ -2,7 +2,7 @@ import { Reactive, effect } from "@web/core/utils/reactive";
 import { createRelatedModels } from "@point_of_sale/app/models/related_models";
 import { registry } from "@web/core/registry";
 import { Mutex } from "@web/core/utils/concurrency";
-import { markRaw } from "@odoo/owl";
+import { markRaw } from "@sleektiv/owl";
 import { batched } from "@web/core/utils/timing";
 import IndexedDB from "./utils/indexed_db";
 import { DataServiceOptions } from "./data_service_options";
@@ -69,7 +69,7 @@ export class PosData extends Reactive {
     }
 
     intializeWebsocket() {
-        this.onNotified = getOnNotified(this.bus, odoo.access_token);
+        this.onNotified = getOnNotified(this.bus, sleektiv.access_token);
     }
 
     reconnectWebSocket() {
@@ -99,7 +99,7 @@ export class PosData extends Reactive {
     }
 
     get databaseName() {
-        return `config-id_${odoo.pos_config_id}_${odoo.access_token}`;
+        return `config-id_${sleektiv.pos_config_id}_${sleektiv.access_token}`;
     }
 
     initIndexedDB() {
@@ -234,7 +234,7 @@ export class PosData extends Reactive {
     async loadInitialData() {
         try {
             return await this.orm.call("pos.session", "load_data", [
-                odoo.pos_session_id,
+                sleektiv.pos_session_id,
                 PosData.modelToLoad,
             ]);
         } catch (error) {

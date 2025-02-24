@@ -1,4 +1,4 @@
-import * as hoot from "@odoo/hoot-dom";
+import * as hoot from "@sleektiv/hoot-dom";
 
 export class TourHelpers {
     /**
@@ -141,7 +141,7 @@ export class TourHelpers {
      */
     async editor(text, selector) {
         const element = this._get_action_element(selector);
-        const InEditor = Boolean(element.closest(".odoo-editor-editable"));
+        const InEditor = Boolean(element.closest(".sleektiv-editor-editable"));
         if (!InEditor) {
             throw new Error("run 'editor' always on an element in an editor");
         }

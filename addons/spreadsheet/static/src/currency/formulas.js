@@ -1,15 +1,15 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
 const { arg, toString, toJsDate, toNumber } = spreadsheet.helpers;
 const { functionRegistry } = spreadsheet.registries;
 
-functionRegistry.add("ODOO.CURRENCY.RATE", {
+functionRegistry.add("SLEEKTIV.CURRENCY.RATE", {
     description: _t(
         "This function takes in two currency codes as arguments, and returns the exchange rate from the first currency to the second as float."
     ),
-    category: "Odoo",
+    category: "Sleektiv",
     compute: function (currencyFrom, currencyTo, date, companyId) {
         const from = toString(currencyFrom);
         const to = toString(currencyTo);

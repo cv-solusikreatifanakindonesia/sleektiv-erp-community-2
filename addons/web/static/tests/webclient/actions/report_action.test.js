@@ -1,5 +1,5 @@
-import { afterEach, expect, test } from "@odoo/hoot";
-import { runAllTimers } from "@odoo/hoot-mock";
+import { afterEach, expect, test } from "@sleektiv/hoot";
+import { runAllTimers } from "@sleektiv/hoot-mock";
 import {
     contains,
     defineActions,

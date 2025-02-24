@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import threading
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import _, api, fields, models
-from odoo.addons.mail.tools.discuss import Store
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.misc import clean_context
+from sleektiv import _, api, fields, models
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tools.misc import clean_context
 
 import logging
 

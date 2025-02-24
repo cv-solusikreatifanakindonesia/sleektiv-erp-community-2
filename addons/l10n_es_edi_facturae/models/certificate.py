@@ -2,7 +2,7 @@ import base64
 
 from cryptography import x509
 
-from odoo import fields, models
+from sleektiv import fields, models
 
 
 class Certificate(models.Model):

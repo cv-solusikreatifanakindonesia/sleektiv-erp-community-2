@@ -1,6 +1,6 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { queryAllTexts } from "@odoo/hoot-dom";
-import { Deferred, animationFrame, runAllTimers } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { queryAllTexts } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
 
 import {
     Command,

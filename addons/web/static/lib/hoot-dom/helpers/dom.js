@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { HootDomError, getTag, isFirefox, isIterable, parseRegExp } from "../hoot_dom_utils";
 import { waitUntil } from "./time";

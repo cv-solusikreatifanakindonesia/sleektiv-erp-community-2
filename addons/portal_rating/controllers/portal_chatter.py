@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.osv import expression
+from sleektiv.osv import expression
 
-from odoo.addons.portal.controllers import mail
+from sleektiv.addons.portal.controllers import mail
 
 
 class PortalChatter(mail.PortalChatter):

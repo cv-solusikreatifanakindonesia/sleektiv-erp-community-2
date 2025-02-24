@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools.safe_eval import safe_eval
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools.safe_eval import safe_eval
 
 
 REGEX_FORMULA_OBJECT = re.compile(r'((?:product\[\')(?P<field>\w+)(?:\'\]))+')

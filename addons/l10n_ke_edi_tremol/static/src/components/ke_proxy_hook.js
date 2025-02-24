@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { useState } from "@odoo/owl";
+import { useState } from "@sleektiv/owl";
 import { rpc } from "@web/core/network/rpc";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
@@ -25,7 +25,7 @@ export function useKEProxy({onAllSent}) {
      */
     async function postInvoices(invoices) {
 
-        // Ping the server to prevent posting to the device when there is no connection to the odoo server
+        // Ping the server to prevent posting to the device when there is no connection to the sleektiv server
         try {
             await rpc("/web/webclient/version_info", {});
         } catch (e) {
@@ -65,7 +65,7 @@ export function useKEProxy({onAllSent}) {
                         state.message = _t("Posting the invoice %s has failed with the message: \n %s", name, e.message);
                         break;
                     case 'updateInvoice':
-                        state.message = _t("Error trying to connect to Odoo. Check your internet connection. Error message: %s", e.message);
+                        state.message = _t("Error trying to connect to Sleektiv. Check your internet connection. Error message: %s", e.message);
                         break;
                     default:
                         state.message = _t("Unexpected Error:\n %s", e.message);

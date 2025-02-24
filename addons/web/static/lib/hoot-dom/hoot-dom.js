@@ -1,4 +1,4 @@
-/** @odoo-module alias=@odoo/hoot-dom default=false */
+/** @sleektiv-module alias=@sleektiv/hoot-dom default=false */
 
 /**
  * @typedef {import("./helpers/dom").Dimensions} Dimensions

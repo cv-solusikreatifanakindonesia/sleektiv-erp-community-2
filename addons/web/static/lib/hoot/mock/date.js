@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { getTimeOffset, isTimeFreezed, resetTimeOffset } from "@web/../lib/hoot-dom/helpers/time";
 

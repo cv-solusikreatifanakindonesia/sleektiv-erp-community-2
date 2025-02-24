@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, useEffect, useState } from "@odoo/owl";
+import { Component, useEffect, useState } from "@sleektiv/owl";
 
 export class ImportDataProgress extends Component {
     static template = "ImportDataProgress";

@@ -1,11 +1,11 @@
 # # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from .common import TestWorkEntryBase
 
 from datetime import datetime
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 
 @tagged('-at_install', 'post_install')
 class TestGlobalTimeOff(TestWorkEntryBase):

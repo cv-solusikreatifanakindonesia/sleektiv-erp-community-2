@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.addons.test_mail_sms.tests.common import TestSMSRecipients
-from odoo.tests import tagged
+from sleektiv.addons.base.tests.test_ir_cron import CronMixinCase
+from sleektiv.addons.sms.tests.common import SMSCommon
+from sleektiv.addons.test_mail_sms.tests.common import TestSMSRecipients
+from sleektiv.tests import tagged
 
 
 @tagged('sms_post')

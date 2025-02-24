@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { describe, expect, test } from "@odoo/hoot";
-import { queryOne } from "@odoo/hoot-dom";
-import { watchListeners } from "@odoo/hoot-mock";
-import { EventBus } from "@odoo/owl";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { queryOne } from "@sleektiv/hoot-dom";
+import { watchListeners } from "@sleektiv/hoot-mock";
+import { EventBus } from "@sleektiv/owl";
 import { mountForTest, parseUrl } from "../local_helpers";
 
 describe(parseUrl(import.meta.url), () => {

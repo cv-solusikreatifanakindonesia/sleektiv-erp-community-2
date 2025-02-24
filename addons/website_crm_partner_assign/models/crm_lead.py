@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import random
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import AccessDenied, AccessError, UserError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import AccessDenied, AccessError, UserError
 
 
 class CrmLead(models.Model):

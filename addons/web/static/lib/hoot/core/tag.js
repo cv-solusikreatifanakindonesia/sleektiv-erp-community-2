@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { isIterable } from "@web/../lib/hoot-dom/hoot_dom_utils";
 import { HootError, levenshtein, normalize, stringToNumber } from "../hoot_utils";

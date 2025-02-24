@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import datetime
 import logging
@@ -9,10 +9,10 @@ import threading
 from ast import literal_eval
 from markupsafe import Markup
 
-from odoo import api, exceptions, fields, models, _
-from odoo.osv import expression
-from odoo.tools import float_compare, float_round, SQL
-from odoo.tools.safe_eval import safe_eval
+from sleektiv import api, exceptions, fields, models, _
+from sleektiv.osv import expression
+from sleektiv.tools import float_compare, float_round, SQL
+from sleektiv.tools.safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)
 

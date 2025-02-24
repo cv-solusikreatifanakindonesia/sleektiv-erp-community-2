@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, tools
-from odoo.osv import expression
-from odoo.tools import SQL
+from sleektiv import fields, models, tools
+from sleektiv.osv import expression
+from sleektiv.tools import SQL
 
 
 class VendorDelayReport(models.Model):

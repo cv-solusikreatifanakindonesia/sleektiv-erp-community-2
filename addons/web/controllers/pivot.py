@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import deque
 import io
@@ -7,10 +7,10 @@ import json
 
 from werkzeug.datastructures import FileStorage
 
-from odoo import http, _
-from odoo.http import content_disposition, request
-from odoo.tools import osutil
-from odoo.tools.misc import xlsxwriter
+from sleektiv import http, _
+from sleektiv.http import content_disposition, request
+from sleektiv.tools import osutil
+from sleektiv.tools.misc import xlsxwriter
 
 
 class TableExporter(http.Controller):

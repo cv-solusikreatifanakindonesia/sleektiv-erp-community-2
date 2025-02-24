@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import datetime
 from collections import namedtuple
 
-from odoo import fields
-from odoo.tests import tagged
-from odoo.exceptions import ValidationError
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from sleektiv import fields
+from sleektiv.tests import tagged
+from sleektiv.exceptions import ValidationError
+from sleektiv.addons.l10n_it_edi.tests.common import TestItEdi
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

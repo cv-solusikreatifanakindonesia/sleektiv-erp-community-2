@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo.tests.common import TransactionCase
-from odoo.tools.misc import file_open
+from sleektiv.tests.common import TransactionCase
+from sleektiv.tools.misc import file_open
 
 class TestProductConfiguratorCommon(TransactionCase):
 

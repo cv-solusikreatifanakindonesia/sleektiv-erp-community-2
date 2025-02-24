@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { queryAll } from "@odoo/hoot-dom";
+import { queryAll } from "@sleektiv/hoot-dom";
 import { registry } from "@web/core/registry";
 
 registry.category("web_tour.tours").add('mailing_activities_split', {
-    url: '/odoo',
+    url: '/sleektiv',
     steps: () => [
         {
             content: 'Open Activity Systray',

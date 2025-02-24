@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import math
 import re
 from datetime import datetime
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError, ValidationError, AccessError
-from odoo.osv import expression
-from odoo.tools import sql, SQL
-from odoo.tools.json import scriptsafe as json_safe
+from sleektiv import api, fields, models, tools, _
+from sleektiv.exceptions import UserError, ValidationError, AccessError
+from sleektiv.osv import expression
+from sleektiv.tools import sql, SQL
+from sleektiv.tools.json import scriptsafe as json_safe
 
 _logger = logging.getLogger(__name__)
 

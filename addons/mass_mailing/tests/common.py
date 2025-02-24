@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import datetime
 import random
@@ -8,10 +8,10 @@ import werkzeug
 
 from unittest.mock import patch
 
-from odoo.tools import email_normalize, mail
-from odoo.addons.link_tracker.tests.common import MockLinkTracker
-from odoo.addons.mail.tests.common import MailCase, MailCommon, mail_new_test_user
-from odoo.sql_db import Cursor
+from sleektiv.tools import email_normalize, mail
+from sleektiv.addons.link_tracker.tests.common import MockLinkTracker
+from sleektiv.addons.mail.tests.common import MailCase, MailCommon, mail_new_test_user
+from sleektiv.sql_db import Cursor
 
 
 class MassMailCase(MailCase, MockLinkTracker):
@@ -260,7 +260,7 @@ class MassMailCase(MailCase, MockLinkTracker):
         email = self._find_sent_mail_wemail(trace.email)
         self.assertTrue(bool(email))
         for (_url_href, link_url, _dummy, label) in re.findall(mail.HTML_TAG_URL_REGEX, email['body']):
-            if label == click_label and '/r/' in link_url:  # shortened link, like 'http://localhost:8069/r/LBG/m/53'
+            if label == click_label and '/r/' in link_url:  # shortened link, like 'http://localhost:7073/r/LBG/m/53'
                 parsed_url = werkzeug.urls.url_parse(link_url)
                 path_items = parsed_url.path.split('/')
                 code, trace_id = path_items[2], int(path_items[4])

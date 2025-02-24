@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import common, new_test_user
-from odoo import fields
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.tests import common, new_test_user
+from sleektiv import fields
 
 
 class TestFleet(common.TransactionCase):

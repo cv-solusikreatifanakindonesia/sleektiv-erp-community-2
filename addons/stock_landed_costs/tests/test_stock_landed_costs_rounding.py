@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
-from odoo.fields import Date
-from odoo.tests import tagged, Form
+from sleektiv import Command
+from sleektiv.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
+from sleektiv.fields import Date
+from sleektiv.tests import tagged, Form
 
 
 @tagged('post_install', '-at_install')

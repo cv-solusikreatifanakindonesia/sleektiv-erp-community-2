@@ -1,13 +1,13 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 registry.category("web_tour.tours").add('project_tour', {
-    url: "/odoo",
+    url: "/sleektiv",
     steps: () => [stepUtils.showAppsMenuItem(), {
     isActive: ["community"],
     trigger: '.o_app[data-menu-xmlid="project.menu_main_pm"]',
@@ -194,7 +194,7 @@ registry.category("web_tour.tours").add('project_tour', {
 {
     isActive: ["auto"],
     trigger: ".o_form_button_save",
-    content: markup(_t("You have unsaved changes - no worries! Odoo will automatically save it as you navigate.<br/> You can discard these changes from here or manually save your task.<br/>Let's save it manually.")),
+    content: markup(_t("You have unsaved changes - no worries! Sleektiv will automatically save it as you navigate.<br/> You can discard these changes from here or manually save your task.<br/>Let's save it manually.")),
     tooltipPosition: "bottom",
     run: "click",
 },

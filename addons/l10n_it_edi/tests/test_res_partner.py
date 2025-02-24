@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.exceptions import UserError
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase, tagged
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.exceptions import UserError
+from sleektiv.tests import Form
+from sleektiv.tests.common import TransactionCase, tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

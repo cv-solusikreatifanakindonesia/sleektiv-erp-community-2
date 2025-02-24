@@ -1,8 +1,8 @@
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tools.float_utils import float_compare
-from odoo.addons.l10n_jo_edi.tests.jo_edi_common import JoEdiCommon
-from odoo.addons.l10n_jo_edi.models.account_edi_xml_ubl_21_jo import JO_MAX_DP
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.tools.float_utils import float_compare
+from sleektiv.addons.l10n_jo_edi.tests.jo_edi_common import JoEdiCommon
+from sleektiv.addons.l10n_jo_edi.models.account_edi_xml_ubl_21_jo import JO_MAX_DP
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -66,8 +66,8 @@ class TestJoEdiPrecision(JoEdiCommon):
         The JoFotara portal, however, has no tolerance with rounding errors up to 9 decimal places.
         Hence, the reported values are expected to be up to 9 decimal places,
         and the aggregated units should match reported totals up to 9 decimal places.
-        Moreover, reported totals have to equal (or at least be as close as possible) to totals stored in Odoo.
-        And since the JOD has precision of 3 decimal places, everything is stored in Odoo approximated to 3 decimal places.
+        Moreover, reported totals have to equal (or at least be as close as possible) to totals stored in Sleektiv.
+        And since the JOD has precision of 3 decimal places, everything is stored in Sleektiv approximated to 3 decimal places.
         -------------------------------------------------------------------------------
         This method runs validations in a fashion similar to those running on the JoFotara portal.
         It returns all the errors encountered as a string.

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 
-from odoo.tests import common, tagged
-from odoo.addons.web_editor import tools
+from sleektiv.tests import common, tagged
+from sleektiv.addons.web_editor import tools
 
 
 @tagged('post_install', '-at_install')

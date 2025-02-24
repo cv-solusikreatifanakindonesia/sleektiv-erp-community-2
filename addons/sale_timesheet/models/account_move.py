@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
+from sleektiv import api, fields, models, _
+from sleektiv.osv import expression
 
 
 class AccountMove(models.Model):

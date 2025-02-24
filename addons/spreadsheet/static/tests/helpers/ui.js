@@ -1,9 +1,9 @@
-import { Model, Spreadsheet } from "@odoo/o-spreadsheet";
+import { Model, Spreadsheet } from "@sleektiv/o-spreadsheet";
 import { loadBundle } from "@web/core/assets";
 
-import { getFixture } from "@odoo/hoot";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { getFixture } from "@sleektiv/hoot";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import { useSpreadsheetNotificationStore } from "@spreadsheet/hooks";
 import { PublicReadonlySpreadsheet } from "@spreadsheet/public_readonly_app/public_readonly";
 import { mountWithCleanup } from "@web/../tests/web_test_helpers";

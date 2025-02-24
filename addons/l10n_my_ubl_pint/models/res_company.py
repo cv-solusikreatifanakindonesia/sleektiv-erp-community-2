@@ -1,5 +1,5 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import models, fields
 
 
 class ResCompany(models.Model):

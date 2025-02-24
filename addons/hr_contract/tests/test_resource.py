@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import date, datetime
 from pytz import utc, timezone
 
-from odoo.addons.resource.models.utils import Intervals, sum_intervals
-from odoo.fields import Date
+from sleektiv.addons.resource.models.utils import Intervals, sum_intervals
+from sleektiv.fields import Date
 
 from .common import TestContractCommon
 

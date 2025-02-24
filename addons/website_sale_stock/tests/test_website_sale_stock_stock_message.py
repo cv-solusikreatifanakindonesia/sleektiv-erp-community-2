@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.addons.sale.tests.product_configurator_common import TestProductConfiguratorCommon
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
+from sleektiv.tests import tagged
+from sleektiv.addons.sale.tests.product_configurator_common import TestProductConfiguratorCommon
+from sleektiv.addons.base.tests.common import HttpCaseWithUserPortal
 
 @tagged('post_install', '-at_install')
 class TestWebsiteSaleStockProductConfigurator(TestProductConfiguratorCommon, HttpCaseWithUserPortal):

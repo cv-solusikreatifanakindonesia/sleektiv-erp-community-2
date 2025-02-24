@@ -302,4 +302,4 @@ account_template_7499_0101,74990101,Other general expenses,expense,"",0,Буса
 account_template_9101_0101,91010101,Income tax expense for the reporting period,expense,"",0,Тайлант үеийн орлогын албан татварын зардал
 account_template_9102_0101,91020101,Deferred tax expense,expense,"",0,Хойшлогдсон татварын зардал
 account_template_9103_0101,91030101,Other comprehensive non-taxable income,expense,"",0,Татвар ногдохгүй бусад дэлгэрэнгүй орлого
-account_template_9301_0101,93010101,The source of the first balance,expense,"",0,Эхний үлдэгдлийн эх үүсвэр
+account_template_9301_0101,93010101,The source of the first balance,expense,"",0,Эхний үлдэгдлийн эх үүсвэр 

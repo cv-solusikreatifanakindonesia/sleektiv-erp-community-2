@@ -1,7 +1,7 @@
 import * as Dialog from "@point_of_sale/../tests/tours/utils/dialog_util";
 import { negate } from "@point_of_sale/../tests/tours/utils/common";
 const { DateTime } = luxon;
-import { waitFor } from "@odoo/hoot-dom";
+import { waitFor } from "@sleektiv/hoot-dom";
 
 export function confirmPopup() {
     return [Dialog.confirm()];

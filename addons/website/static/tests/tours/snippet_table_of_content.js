@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { isVisible } from '@odoo/hoot-dom';
+import { isVisible } from '@sleektiv/hoot-dom';
 import {
     clickOnEditAndWaitEditMode,
     clickOnSave,

@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Slovak - Accounting',
     'icon': '/account/static/description/l10n.png',
     'countries': ['sk'],
     'version': '1.0',
     'author': '26HOUSE (http://www.26house.com)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Slovakia accounting chart and localization: Chart of Accounts 2020, basic VAT rates +

@@ -1,4 +1,4 @@
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 import { escape } from "@web/core/utils/strings";
 

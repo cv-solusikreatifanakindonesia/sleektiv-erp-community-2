@@ -1,5 +1,5 @@
-from odoo import models
-from odoo.exceptions import UserError
+from sleektiv import models
+from sleektiv.exceptions import UserError
 
 
 class AccountMoveSendWizard(models.TransientModel):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form, tagged
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo import Command
+from sleektiv.tests import Form, tagged
+from sleektiv.addons.mrp.tests.common import TestMrpCommon
+from sleektiv import Command
 
 
 @tagged('post_install', '-at_install')

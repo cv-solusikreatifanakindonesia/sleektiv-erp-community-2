@@ -1,6 +1,6 @@
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import check_barcode_encoding
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import check_barcode_encoding
 
 
 class AcRoleType(models.Model):

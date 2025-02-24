@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Croatia - Accounting (Kuna)',
     'icon': '/account/static/description/l10n.png',
@@ -32,7 +32,7 @@ Izvori podataka:
 
 """,
     'version': '13.0',
-    'author': 'OpenERP Croatian Community',
+    'author': 'Sleektiv Croatian Community',
     'category': 'Accounting/Localizations/Account Charts',
     'depends': [
         'account',

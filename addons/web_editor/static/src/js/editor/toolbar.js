@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { utils as uiUtils } from "@web/core/ui/ui_service";
 import { ColorPalette } from "@web_editor/js/wysiwyg/widgets/color_palette";
@@ -9,7 +9,7 @@ import {
     onWillStart,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 
 import { useService } from "@web/core/utils/hooks";
 import { user } from "@web/core/user";

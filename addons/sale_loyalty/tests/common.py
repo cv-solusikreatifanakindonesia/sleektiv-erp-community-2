@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
+from sleektiv.exceptions import ValidationError
+from sleektiv.fields import Command
 
-from odoo.addons.sale.tests.common import SaleCommon
+from sleektiv.addons.sale.tests.common import SaleCommon
 
 
 class TestSaleCouponCommon(SaleCommon):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ctypes
 import evdev
@@ -16,12 +16,12 @@ import time
 import urllib3
 from usb import util
 
-from odoo import http
-from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
+from sleektiv import http
+from sleektiv.addons.hw_drivers.controllers.proxy import proxy_drivers
+from sleektiv.addons.hw_drivers.driver import Driver
+from sleektiv.addons.hw_drivers.event_manager import event_manager
+from sleektiv.addons.hw_drivers.main import iot_devices
+from sleektiv.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 xlib = ctypes.cdll.LoadLibrary('libX11.so.6')
@@ -94,7 +94,7 @@ class KeyboardUSBDriver(Driver):
 
     @classmethod
     def send_layouts_list(cls):
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_sleektiv_server_url()
         if server:
             urllib3.disable_warnings()
             pm = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -193,19 +193,19 @@ class KeyboardUSBDriver(Driver):
                 - variant (str): An optional key to represent the variant of the
                                  selected layout
         """
-        file_path = helpers.path_file('odoo-keyboard-layouts.conf')
+        file_path = helpers.path_file('sleektiv-keyboard-layouts.conf')
         if file_path.exists():
             data = json.loads(file_path.read_text())
         else:
             data = {}
         data[self.device_identifier] = layout
-        helpers.write_file('odoo-keyboard-layouts.conf', json.dumps(data))
+        helpers.write_file('sleektiv-keyboard-layouts.conf', json.dumps(data))
 
     def load_layout(self):
         """Read the layout from the saved filed and set it as current layout.
         If no file or no layout is found we use 'us' by default.
         """
-        file_path = helpers.path_file('odoo-keyboard-layouts.conf')
+        file_path = helpers.path_file('sleektiv-keyboard-layouts.conf')
         if file_path.exists():
             data = json.loads(file_path.read_text())
             layout = data.get(self.device_identifier, {'layout': 'us'})
@@ -225,7 +225,7 @@ class KeyboardUSBDriver(Driver):
         scanner_name = ['barcode', 'scanner', 'reader']
         is_scanner = any(x in device_name for x in scanner_name) or self.dev.interface_protocol == '0'
 
-        file_path = helpers.path_file('odoo-keyboard-is-scanner.conf')
+        file_path = helpers.path_file('sleektiv-keyboard-is-scanner.conf')
         if file_path.exists():
             data = json.loads(file_path.read_text())
             is_scanner = data.get(self.device_identifier, {}).get('is_scanner', is_scanner)
@@ -233,7 +233,7 @@ class KeyboardUSBDriver(Driver):
 
     def _keyboard_input(self, scancode):
         """Deal with a keyboard input. Send the character corresponding to the
-        pressed key represented by its scancode to the connected Odoo instance.
+        pressed key represented by its scancode to the connected Sleektiv instance.
 
         Args:
             scancode (int): The scancode of the pressed key.
@@ -267,13 +267,13 @@ class KeyboardUSBDriver(Driver):
         We need that in order to keep the selected type of device after a reboot.
         """
         is_scanner = {'is_scanner': data.get('is_scanner')}
-        file_path = helpers.path_file('odoo-keyboard-is-scanner.conf')
+        file_path = helpers.path_file('sleektiv-keyboard-is-scanner.conf')
         if file_path.exists():
             data = json.loads(file_path.read_text())
         else:
             data = {}
         data[self.device_identifier] = is_scanner
-        helpers.write_file('odoo-keyboard-is-scanner.conf', json.dumps(data))
+        helpers.write_file('sleektiv-keyboard-is-scanner.conf', json.dumps(data))
         self._set_device_type('scanner') if is_scanner.get('is_scanner') else self._set_device_type()
 
     def _update_layout(self, data):

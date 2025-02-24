@@ -1,8 +1,8 @@
 import logging
 
-from odoo.addons.auth_totp.tests.test_totp import TestTOTPMixin
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
-from odoo.tests import tagged
+from sleektiv.addons.auth_totp.tests.test_totp import TestTOTPMixin
+from sleektiv.addons.base.tests.common import HttpCaseWithUserPortal
+from sleektiv.tests import tagged
 
 _logger = logging.getLogger(__name__)
 

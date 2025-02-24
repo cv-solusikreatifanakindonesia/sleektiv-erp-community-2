@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import tools
-from odoo.tests.common import tagged
-from odoo.exceptions import UserError
-from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
-from odoo.addons.l10n_hu_edi.tests.common import L10nHuEdiTestCommon
+from sleektiv import tools
+from sleektiv.tests.common import tagged
+from sleektiv.exceptions import UserError
+from sleektiv.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
+from sleektiv.addons.l10n_hu_edi.tests.common import L10nHuEdiTestCommon
 
 import requests
 from unittest import mock
@@ -245,5 +245,5 @@ class L10nHuEdiTestFlowsMocked(L10nHuEdiTestCommon, TestAccountMoveSendCommon):
             def close(self):
                 pass
 
-        with mock.patch('odoo.addons.l10n_hu_edi.models.l10n_hu_edi_connection.requests.Session', side_effect=MockedSession, autospec=True):
+        with mock.patch('sleektiv.addons.l10n_hu_edi.models.l10n_hu_edi_connection.requests.Session', side_effect=MockedSession, autospec=True):
             yield

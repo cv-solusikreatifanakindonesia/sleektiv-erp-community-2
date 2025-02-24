@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Germany - Accounting',
@@ -7,7 +7,7 @@
     'countries': ['de'],
     'author': 'openbig.org (http://www.openbig.org)',
     'version': '2.0',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/germany.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/germany.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Dieses  Modul beinhaltet einen deutschen Kontenrahmen basierend auf dem SKR03 oder SKR04.

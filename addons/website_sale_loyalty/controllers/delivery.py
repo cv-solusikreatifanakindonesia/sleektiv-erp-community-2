@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from functools import partial
 
-from odoo.http import request
+from sleektiv.http import request
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.website_sale.controllers.delivery import Delivery
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.website_sale.controllers.delivery import Delivery
 
 
 class WebsiteSaleLoyaltyDelivery(Delivery):

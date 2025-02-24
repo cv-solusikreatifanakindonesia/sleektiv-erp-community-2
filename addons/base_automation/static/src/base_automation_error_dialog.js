@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { RPCErrorDialog } from "@web/core/errors/error_dialogs";
 import { registry } from "@web/core/registry";

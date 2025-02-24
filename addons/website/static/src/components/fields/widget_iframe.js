@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from '@web/core/registry';
 import { useBus } from "@web/core/utils/hooks";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@sleektiv/owl";
 import { standardFieldProps } from '@web/views/fields/standard_field_props';
 
 class FieldIframePreview extends Component {

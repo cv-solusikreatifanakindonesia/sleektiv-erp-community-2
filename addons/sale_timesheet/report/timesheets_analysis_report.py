@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, api
+from sleektiv import fields, models, api
 
-from odoo.addons.sale_timesheet.models.hr_timesheet import TIMESHEET_INVOICE_TYPES
+from sleektiv.addons.sale_timesheet.models.hr_timesheet import TIMESHEET_INVOICE_TYPES
 
 
 class TimesheetsAnalysisReport(models.Model):

@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAllTexts } from "@odoo/hoot-dom";
-import { Deferred, animationFrame, mockDate } from "@odoo/hoot-mock";
-import { onRendered } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAllTexts } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, mockDate } from "@sleektiv/hoot-mock";
+import { onRendered } from "@sleektiv/owl";
 import {
     contains,
     defineModels,

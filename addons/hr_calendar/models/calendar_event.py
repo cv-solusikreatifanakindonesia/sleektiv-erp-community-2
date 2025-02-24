@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from dateutil.relativedelta import relativedelta
 from pytz import UTC
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
-from odoo.addons.resource.models.utils import Intervals, sum_intervals, timezone_datetime
+from sleektiv.addons.resource.models.utils import Intervals, sum_intervals, timezone_datetime
 
 
 class CalendarEvent(models.Model):

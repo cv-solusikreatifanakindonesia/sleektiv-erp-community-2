@@ -1,6 +1,6 @@
 import { HtmlUpgradeManager } from "@html_editor/html_migrations/html_upgrade_manager";
 import { stripVersion } from "@html_editor/html_migrations/html_migrations_utils";
-import { stripHistoryIds } from "@html_editor/others/collaboration/collaboration_odoo_plugin";
+import { stripHistoryIds } from "@html_editor/others/collaboration/collaboration_sleektiv_plugin";
 import {
     COLLABORATION_PLUGINS,
     DYNAMIC_PLACEHOLDER_PLUGINS,
@@ -13,7 +13,7 @@ import {
 } from "@html_editor/others/embedded_components/embedding_sets";
 import { normalizeHTML } from "@html_editor/utils/html";
 import { Wysiwyg } from "@html_editor/wysiwyg";
-import { Component, markup, status, useRef, useState } from "@odoo/owl";
+import { Component, markup, status, useRef, useState } from "@sleektiv/owl";
 import { localization } from "@web/core/l10n/localization";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
@@ -343,7 +343,7 @@ export const htmlField = {
                 "embedded_components" in options ? options.embedded_components : true,
             sandboxedPreview: Boolean(options.sandboxedPreview),
             cssReadonlyAssetId: options.cssReadonly,
-            codeview: Boolean(odoo.debug && options.codeview),
+            codeview: Boolean(sleektiv.debug && options.codeview),
         };
     },
 };

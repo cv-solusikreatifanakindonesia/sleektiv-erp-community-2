@@ -1,4 +1,4 @@
-import { markRaw, reactive, toRaw } from "@odoo/owl";
+import { markRaw, reactive, toRaw } from "@sleektiv/owl";
 import { isRecord } from "./misc";
 
 /** @param {RecordList} reclist */

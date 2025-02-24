@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import psycopg2
 import re
 
-from odoo import _, api, fields, models, Command, SUPERUSER_ID
-from odoo.exceptions import UserError
-from odoo.modules.registry import Registry
-from odoo.tools.safe_eval import safe_eval
+from sleektiv import _, api, fields, models, Command, SUPERUSER_ID
+from sleektiv.exceptions import UserError
+from sleektiv.modules.registry import Registry
+from sleektiv.tools.safe_eval import safe_eval
 
 
 class DeliveryCarrier(models.Model):
@@ -148,7 +148,7 @@ class DeliveryCarrier(models.Model):
             'domain': [['name', '=like', 'delivery_%'], ['name', 'not in', exclude_apps]],
             'type': 'ir.actions.act_window',
             'help': _('''<p class="o_view_nocontent">
-                    Buy Odoo Enterprise now to get more providers.
+                    Buy Sleektiv Enterprise now to get more providers.
                 </p>'''),
         }
 

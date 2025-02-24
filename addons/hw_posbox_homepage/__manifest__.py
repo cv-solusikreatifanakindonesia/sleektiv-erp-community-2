@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'IoT Box Homepage',
     'category': 'Sales/Point of Sale',
     'sequence': 6,
-    'website': 'https://www.odoo.com/app/point-of-sale-hardware',
+    'website': 'https://sleektiv.com/app/point-of-sale-hardware',
     'summary': 'A homepage for the IoT Box',
     'description': """
 IoT Box Homepage

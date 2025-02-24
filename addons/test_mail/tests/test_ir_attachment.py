@@ -1,7 +1,7 @@
 import base64
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.tests import tagged, users
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.tests import tagged, users
 
 
 @tagged("ir_attachment")

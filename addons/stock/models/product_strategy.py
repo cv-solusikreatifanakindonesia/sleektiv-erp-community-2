@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.osv import expression
-from odoo.exceptions import UserError
-from odoo.tools.float_utils import float_compare
+from sleektiv import _, api, fields, models
+from sleektiv.osv import expression
+from sleektiv.exceptions import UserError
+from sleektiv.tools.float_utils import float_compare
 
 
 class RemovalStrategy(models.Model):

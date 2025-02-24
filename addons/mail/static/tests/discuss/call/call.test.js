@@ -15,9 +15,9 @@ import {
 } from "@mail/../tests/mail_test_helpers";
 import { mailDataHelpers } from "@mail/../tests/mock_server/mail_mock_server";
 
-import { describe, expect, test } from "@odoo/hoot";
-import { hover, queryFirst } from "@odoo/hoot-dom";
-import { mockUserAgent } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { hover, queryFirst } from "@sleektiv/hoot-dom";
+import { mockUserAgent } from "@sleektiv/hoot-mock";
 import {
     Command,
     mockService,
@@ -53,7 +53,7 @@ test("basic rendering", async () => {
     await contains("[title='Raise Hand']");
     await contains("[title='Enter Full Screen']");
     // screen sharing not available in mobile OS
-    mockUserAgent("Chrome/0.0.0 Android (OdooMobile; Linux; Android 13; Odoo TestSuite)");
+    mockUserAgent("Chrome/0.0.0 Android (SleektivMobile; Linux; Android 13; Sleektiv TestSuite)");
     expect(isMobileOS()).toBe(true);
     await contains("[title='Share Screen']", { count: 0 });
 });
@@ -74,12 +74,12 @@ test("keep the `more` popover active when hovering it", async () => {
     await contains(enterFullScreenSelector);
 });
 
-test("no call with odoobot", async () => {
+test("no call with sleektivbot", async () => {
     const pyEnv = await startServer();
     const channelId = pyEnv["discuss.channel"].create({
         channel_member_ids: [
             Command.create({ partner_id: serverState.partnerId }),
-            Command.create({ partner_id: serverState.odoobotId }),
+            Command.create({ partner_id: serverState.sleektivbotId }),
         ],
         channel_type: "chat",
     });

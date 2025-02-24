@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
+from sleektiv import api, models
 
-from odoo.addons.spreadsheet.utils.formatting import (
+from sleektiv.addons.spreadsheet.utils.formatting import (
     strftime_format_to_spreadsheet_date_format,
     strftime_format_to_spreadsheet_time_format,
 )
@@ -16,17 +16,17 @@ class Lang(models.Model):
         """Return the list of locales available for a spreadsheet."""
         langs = self.with_context(active_test=False).search([])
 
-        spreadsheet_locales = [lang._odoo_lang_to_spreadsheet_locale() for lang in langs]
+        spreadsheet_locales = [lang._sleektiv_lang_to_spreadsheet_locale() for lang in langs]
         return spreadsheet_locales
 
     @api.model
     def _get_user_spreadsheet_locale(self):
-        """Convert the odoo lang to a spreadsheet locale."""
+        """Convert the sleektiv lang to a spreadsheet locale."""
         lang = self._lang_get(self.env.user.lang)
-        return lang._odoo_lang_to_spreadsheet_locale()
+        return lang._sleektiv_lang_to_spreadsheet_locale()
 
-    def _odoo_lang_to_spreadsheet_locale(self):
-        """Convert an odoo lang to a spreadsheet locale."""
+    def _sleektiv_lang_to_spreadsheet_locale(self):
+        """Convert an sleektiv lang to a spreadsheet locale."""
         return {
             "name": self.name,
             "code": self.code,

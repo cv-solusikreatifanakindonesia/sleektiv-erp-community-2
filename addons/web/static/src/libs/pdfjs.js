@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { isMobileOS } from "@web/core/browser/feature_detection";
 import { loadJS } from "@web/core/assets";

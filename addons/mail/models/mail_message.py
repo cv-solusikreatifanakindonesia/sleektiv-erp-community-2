@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import re
@@ -6,12 +6,12 @@ import textwrap
 from binascii import Error as binascii_error
 from collections import defaultdict
 
-from odoo import _, api, fields, models, modules, tools
-from odoo.exceptions import AccessError
-from odoo.osv import expression
-from odoo.tools import clean_context, format_list, groupby, SQL
-from odoo.tools.misc import OrderedSet
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import _, api, fields, models, modules, tools
+from sleektiv.exceptions import AccessError
+from sleektiv.osv import expression
+from sleektiv.tools import clean_context, format_list, groupby, SQL
+from sleektiv.tools.misc import OrderedSet
+from sleektiv.addons.mail.tools.discuss import Store
 
 _logger = logging.getLogger(__name__)
 _image_dataurl = re.compile(r'(data:image/[a-z]+?);base64,([a-z0-9+/\n]{3,}=*)\n*([\'"])(?: data-filename="([^"]*)")?', re.I)

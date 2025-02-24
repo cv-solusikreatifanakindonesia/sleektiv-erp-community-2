@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { patchTranslations } from "@web/../tests/web_test_helpers";
 
 import {
@@ -17,14 +17,14 @@ describe.current.tags("headless");
 
 test("escape", () => {
     expect(escape("<a>this is a link</a>")).toBe("&lt;a&gt;this is a link&lt;/a&gt;");
-    expect(escape(`<a href="https://www.odoo.com">odoo<a>`)).toBe(
-        `&lt;a href=&quot;https://www.odoo.com&quot;&gt;odoo&lt;a&gt;`
+    expect(escape(`<a href="https://www.sleektiv.com">sleektiv<a>`)).toBe(
+        `&lt;a href=&quot;https://www.sleektiv.com&quot;&gt;sleektiv&lt;a&gt;`
     );
-    expect(escape(`<a href='https://www.odoo.com'>odoo<a>`)).toBe(
-        `&lt;a href=&#x27;https://www.odoo.com&#x27;&gt;odoo&lt;a&gt;`
+    expect(escape(`<a href='https://www.sleektiv.com'>sleektiv<a>`)).toBe(
+        `&lt;a href=&#x27;https://www.sleektiv.com&#x27;&gt;sleektiv&lt;a&gt;`
     );
-    expect(escape("<a href='https://www.odoo.com'>Odoo`s website<a>")).toBe(
-        `&lt;a href=&#x27;https://www.odoo.com&#x27;&gt;Odoo&#x60;s website&lt;a&gt;`
+    expect(escape("<a href='https://www.sleektiv.com'>Sleektiv`s website<a>")).toBe(
+        `&lt;a href=&#x27;https://www.sleektiv.com&#x27;&gt;Sleektiv&#x60;s website&lt;a&gt;`
     );
 });
 
@@ -32,8 +32,8 @@ test("escapeRegExp", () => {
     expect(escapeRegExp("")).toBe("");
     expect(escapeRegExp("wowl")).toBe("wowl");
     expect(escapeRegExp("[wowl]")).toBe("\\[wowl\\]");
-    expect(escapeRegExp("[wowl.odoo]")).toBe("\\[wowl\\.odoo\\]");
-    expect(escapeRegExp("^odoo.define([.]*)$")).toBe("\\^odoo\\.define\\(\\[\\.\\]\\*\\)\\$");
+    expect(escapeRegExp("[wowl.sleektiv]")).toBe("\\[wowl\\.sleektiv\\]");
+    expect(escapeRegExp("^sleektiv.define([.]*)$")).toBe("\\^sleektiv\\.define\\(\\[\\.\\]\\*\\)\\$");
     expect(escapeRegExp("[.*+?^${}()|[]\\")).toBe("\\[\\.\\*\\+\\?\\^\\$\\{\\}\\(\\)\\|\\[\\]\\\\");
 });
 
@@ -119,11 +119,11 @@ test("unaccent", () => {
 test("isEmail", () => {
     expect(isEmail("")).toBe(false);
     expect(isEmail("test")).toBe(false);
-    expect(isEmail("test@odoo")).toBe(false);
-    expect(isEmail("test@odoo@odoo.com")).toBe(false);
-    expect(isEmail("te st@odoo.com")).toBe(false);
+    expect(isEmail("test@sleektiv")).toBe(false);
+    expect(isEmail("test@sleektiv@sleektiv.com")).toBe(false);
+    expect(isEmail("te st@sleektiv.com")).toBe(false);
 
-    expect(isEmail("test@odoo.com")).toBe(true);
+    expect(isEmail("test@sleektiv.com")).toBe(true);
 });
 
 test("isNumeric", () => {

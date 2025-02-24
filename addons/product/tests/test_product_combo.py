@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
 
-from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Command
-from odoo.tools import mute_logger
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.fields import Command
+from sleektiv.tools import mute_logger
 
-from odoo.addons.product.tests.common import ProductCommon
+from sleektiv.addons.product.tests.common import ProductCommon
 
 
 class TestProductCombo(ProductCommon):
@@ -95,7 +95,7 @@ class TestProductCombo(ProductCommon):
                 ],
             })
 
-    @mute_logger('odoo.sql_db')
+    @mute_logger('sleektiv.sql_db')
     def test_nested_combos_raises(self):
         combo = self.env['product.combo'].create({
             'name': "Test combo",

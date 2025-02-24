@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields
-from odoo.tools import groupby
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import models, fields
+from sleektiv.tools import groupby
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class MailMessageReaction(models.Model):

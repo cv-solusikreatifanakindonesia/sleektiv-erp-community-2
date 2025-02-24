@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo import Command, fields
-from odoo.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
-from odoo.addons.sales_team.tests.common import TestSalesCommon
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests.common import tagged, users
-from odoo.tools import float_compare
+from sleektiv import Command, fields
+from sleektiv.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
+from sleektiv.addons.sales_team.tests.common import TestSalesCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests.common import tagged, users
+from sleektiv.tools import float_compare
 
 
 class TestEventBoothSaleWData(TestEventBoothSaleCommon, TestSalesCommon):

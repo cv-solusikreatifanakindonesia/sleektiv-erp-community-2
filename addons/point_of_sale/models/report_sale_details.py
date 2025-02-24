@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
 
 import pytz
 
-from odoo import api, fields, models, _
-from odoo.osv.expression import AND
-from odoo.tools import SQL
+from sleektiv import api, fields, models, _
+from sleektiv.osv.expression import AND
+from sleektiv.tools import SQL
 
 
 class ReportSaleDetails(models.AbstractModel):

@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request, route
-from odoo.addons.product.controllers.catalog import ProductCatalogController
+from sleektiv.http import request, route
+from sleektiv.addons.product.controllers.catalog import ProductCatalogController
 
 
 class ProjectPurchaseCatalogController(ProductCatalogController):

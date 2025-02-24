@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import NotFound
 
-from odoo import _
-from odoo.http import route, request
-from odoo.addons.mail.controllers.attachment import AttachmentController
-from odoo.exceptions import AccessError
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from sleektiv import _
+from sleektiv.http import route, request
+from sleektiv.addons.mail.controllers.attachment import AttachmentController
+from sleektiv.exceptions import AccessError
+from sleektiv.addons.mail.models.discuss.mail_guest import add_guest_to_context
 
 
 class LivechatAttachmentController(AttachmentController):

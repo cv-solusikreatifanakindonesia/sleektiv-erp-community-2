@@ -1,5 +1,5 @@
-from odoo import _, api, models
-from odoo.exceptions import UserError
+from sleektiv import _, api, models
+from sleektiv.exceptions import UserError
 
 
 class MailTemplate(models.Model):

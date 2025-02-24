@@ -1,4 +1,4 @@
-from odoo import models, fields, api, Command
+from sleektiv import models, fields, api, Command
 
 
 class AccountPaymentRegister(models.TransientModel):

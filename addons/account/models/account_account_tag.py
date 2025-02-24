@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _
-from odoo import osv
-from odoo.tools.sql import SQL
-from odoo.exceptions import UserError
+from sleektiv import api, fields, models, _
+from sleektiv import osv
+from sleektiv.tools.sql import SQL
+from sleektiv.exceptions import UserError
 
 
 class AccountAccountTag(models.Model):

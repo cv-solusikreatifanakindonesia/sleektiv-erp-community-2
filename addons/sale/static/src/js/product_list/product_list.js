@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { formatCurrency } from "@web/core/currency";
 import { _t } from "@web/core/l10n/translation";
 import { Product } from "../product/product";

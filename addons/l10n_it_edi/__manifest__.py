@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Italy - E-invoicing',
@@ -13,7 +13,7 @@
 E-invoice implementation
     """,
     'category': 'Accounting/Localizations/EDI',
-    'website': 'http://www.odoo.com/',
+    'website': 'http://https://sleektiv.com/',
     'data': [
         'security/ir.model.access.csv',
         'data/invoice_it_template.xml',

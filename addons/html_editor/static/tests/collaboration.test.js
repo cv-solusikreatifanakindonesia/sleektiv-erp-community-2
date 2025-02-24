@@ -14,10 +14,10 @@ import {
     StateChangeManager,
 } from "@html_editor/others/embedded_component_utils";
 import { parseHTML } from "@html_editor/utils/html";
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
-import { click, manuallyDispatchProgrammaticEvent } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
-import { onMounted, onWillDestroy, xml } from "@odoo/owl";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { click, manuallyDispatchProgrammaticEvent } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { onMounted, onWillDestroy, xml } from "@sleektiv/owl";
 import { patchWithCleanup } from "@web/../tests/web_test_helpers";
 import {
     applyConcurrentActions,

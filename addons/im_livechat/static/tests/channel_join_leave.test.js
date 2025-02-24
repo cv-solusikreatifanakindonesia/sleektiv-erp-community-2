@@ -8,7 +8,7 @@ import {
     startServer,
     triggerHotkey,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, test } from "@odoo/hoot";
+import { describe, test } from "@sleektiv/hoot";
 
 describe.current.tags("desktop");
 defineLivechatModels();

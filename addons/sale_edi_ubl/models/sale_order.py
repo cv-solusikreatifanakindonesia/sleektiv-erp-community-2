@@ -1,4 +1,4 @@
-from odoo import _, api, models, Command
+from sleektiv import _, api, models, Command
 
 
 class SaleOrder(models.Model):

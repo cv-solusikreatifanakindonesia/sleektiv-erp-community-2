@@ -1,3 +1,3 @@
-// @odoo-module ignore
+// @sleektiv-module ignore
 
-window.__odooIgnoreMissingDependencies = false;
+window.__sleektivIgnoreMissingDependencies = false;

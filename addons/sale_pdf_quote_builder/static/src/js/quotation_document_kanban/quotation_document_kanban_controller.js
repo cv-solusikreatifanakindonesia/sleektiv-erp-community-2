@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { onWillRender } from "@odoo/owl";
+import { onWillRender } from "@sleektiv/owl";
 import { UploadButton } from '@product/js/product_document_kanban/upload_button/upload_button';
 import { KanbanController } from '@web/views/kanban/kanban_controller';
 

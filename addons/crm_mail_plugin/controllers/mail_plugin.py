@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
-from odoo.http import request
-from odoo.tools.misc import formatLang
+from sleektiv.http import request
+from sleektiv.tools.misc import formatLang
 
-from odoo.addons.mail_plugin.controllers import mail_plugin
+from sleektiv.addons.mail_plugin.controllers import mail_plugin
 
 _logger = logging.getLogger(__name__)
 

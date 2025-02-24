@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Saudi Arabia - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -9,7 +9,7 @@
     'description': """
 Odoo Arabic localization for most Saudi Arabia.
 """,
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/saudi_arabia.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/saudi_arabia.html',
     'depends': [
         'l10n_gcc_invoice',
         'account',

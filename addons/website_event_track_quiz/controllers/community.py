@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import math
 
-from odoo import http
-from odoo.addons.website_event.controllers.community import EventCommunityController
-from odoo.http import request
+from sleektiv import http
+from sleektiv.addons.website_event.controllers.community import EventCommunityController
+from sleektiv.http import request
 
 
 class WebsiteEventTrackQuizCommunityController(EventCommunityController):

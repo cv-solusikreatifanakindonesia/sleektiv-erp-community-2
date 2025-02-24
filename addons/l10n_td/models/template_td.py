@@ -1,5 +1,5 @@
-from odoo import models, _
-from odoo.addons.account.models.chart_template import template
+from sleektiv import models, _
+from sleektiv.addons.account.models.chart_template import template
 
 
 class AccountChartTemplate(models.AbstractModel):

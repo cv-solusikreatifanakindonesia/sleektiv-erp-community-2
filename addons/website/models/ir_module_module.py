@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 from collections import defaultdict, OrderedDict
 
-from odoo import api, fields, models
-from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
-from odoo.exceptions import MissingError
-from odoo.http import request
-from odoo.modules.module import get_manifest
-from odoo.tools import escape_psql, split_every, SQL
+from sleektiv import api, fields, models
+from sleektiv.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
+from sleektiv.exceptions import MissingError
+from sleektiv.http import request
+from sleektiv.modules.module import get_manifest
+from sleektiv.tools import escape_psql, split_every, SQL
 
 _logger = logging.getLogger(__name__)
 

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import hashlib
 import hmac
@@ -8,14 +8,14 @@ from datetime import datetime
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import http
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.tools.misc import file_open
+from sleektiv import http
+from sleektiv.exceptions import ValidationError
+from sleektiv.http import request
+from sleektiv.tools.misc import file_open
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_stripe import utils as stripe_utils
-from odoo.addons.payment_stripe.const import HANDLED_WEBHOOK_EVENTS
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment_stripe import utils as stripe_utils
+from sleektiv.addons.payment_stripe.const import HANDLED_WEBHOOK_EVENTS
 
 
 _logger = logging.getLogger(__name__)

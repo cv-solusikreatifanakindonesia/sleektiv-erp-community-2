@@ -1,9 +1,9 @@
 # coding: utf-8
 from datetime import datetime
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.addons.account_edi.tests.common import AccountEdiTestCommon
 
 
 @tagged('post_install_l10n', '-at_install', 'post_install')

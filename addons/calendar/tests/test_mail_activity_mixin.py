@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, time
 from dateutil.relativedelta import relativedelta
 
 import pytz
 
-from odoo import Command
-from odoo import tests
-from odoo.addons.mail.tests.common import MailCommon
+from sleektiv import Command
+from sleektiv import tests
+from sleektiv.addons.mail.tests.common import MailCommon
 
 
 @tests.tagged('mail_activity_mixin')

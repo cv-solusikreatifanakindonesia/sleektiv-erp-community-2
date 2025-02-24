@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields, _
-from odoo.addons.account.models.chart_template import template
-from odoo import Command
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import models, fields, _
+from sleektiv.addons.account.models.chart_template import template
+from sleektiv import Command
 
 
 class AccountChartTemplate(models.AbstractModel):

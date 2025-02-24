@@ -1,4 +1,4 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import {
     defineActions,
     defineModels,

@@ -1,6 +1,6 @@
-from odoo import http
-from odoo.http import request
-from odoo.addons.web.controllers.binary import Binary
+from sleektiv import http
+from sleektiv.http import request
+from sleektiv.addons.web.controllers.binary import Binary
 
 
 class WebsiteBinary(Binary):

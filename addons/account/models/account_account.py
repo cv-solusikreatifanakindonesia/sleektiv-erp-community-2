@@ -5,10 +5,10 @@ import itertools
 import re
 import json
 
-from odoo import api, fields, models, _, Command
-from odoo.osv import expression
-from odoo.exceptions import UserError, ValidationError, RedirectWarning
-from odoo.tools import SQL, Query
+from sleektiv import api, fields, models, _, Command
+from sleektiv.osv import expression
+from sleektiv.exceptions import UserError, ValidationError, RedirectWarning
+from sleektiv.tools import SQL, Query
 
 
 ACCOUNT_REGEX = re.compile(r'(?:(\S*\d+\S*))?(.*)')
@@ -169,7 +169,7 @@ class AccountAccount(models.Model):
             )
 
             # Can't have spaces because of how stupidly the `Model._read_group_orderby` method is written
-            # see https://github.com/odoo/odoo/blob/2a3466e8f86bc08594391658e08ba3416fb8307b/odoo/models.py#L2222
+            # see https://github.com/sleektiv/sleektiv/blob/2a3466e8f86bc08594391658e08ba3416fb8307b/sleektiv/models.py#L2222
             return SQL(
                 "COALESCE("
                 "%(code_store)s->>%(active_company_root_id)s,"

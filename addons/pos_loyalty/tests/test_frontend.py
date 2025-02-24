@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, timedelta
 
-from odoo import Command
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
-from odoo.addons.point_of_sale.tests.common_setup_methods import setup_product_combo_items
+from sleektiv.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
+from sleektiv.addons.point_of_sale.tests.common_setup_methods import setup_product_combo_items
 
 
 @tagged("post_install", "-at_install")

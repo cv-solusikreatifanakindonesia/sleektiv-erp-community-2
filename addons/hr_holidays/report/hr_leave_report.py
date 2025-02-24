@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
-from odoo.osv import expression
+from sleektiv import api, fields, models, tools, _
+from sleektiv.osv import expression
 
 
 class LeaveReport(models.Model):

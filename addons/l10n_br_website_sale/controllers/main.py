@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import _lt
-from odoo.http import request
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import _lt
+from sleektiv.http import request
 
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from sleektiv.addons.website_sale.controllers.main import WebsiteSale
 
 
 class L10nBRWebsiteSale(WebsiteSale):

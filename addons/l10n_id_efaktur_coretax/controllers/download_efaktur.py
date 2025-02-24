@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import io
 import zipfile
 
-from odoo import http, _
-from odoo.http import request, content_disposition
-# from odoo.addons.account.controllers.download_docs import _get_headers
+from sleektiv import http, _
+from sleektiv.http import request, content_disposition
+# from sleektiv.addons.account.controllers.download_docs import _get_headers
 
 def _get_headers(filename, filetype, content):
     return [

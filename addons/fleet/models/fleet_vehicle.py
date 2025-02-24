@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.addons.fleet.models.fleet_vehicle_model import FUEL_TYPES
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.addons.fleet.models.fleet_vehicle_model import FUEL_TYPES
 
 
 #Some fields don't have the exact same name

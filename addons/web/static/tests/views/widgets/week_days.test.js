@@ -1,5 +1,5 @@
-import { expect, test } from "@odoo/hoot";
-import { click, queryAllTexts } from "@odoo/hoot-dom";
+import { expect, test } from "@sleektiv/hoot";
+import { click, queryAllTexts } from "@sleektiv/hoot-dom";
 import {
     clickSave,
     defineModels,

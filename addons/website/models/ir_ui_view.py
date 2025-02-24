@@ -1,15 +1,15 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import uuid
 import werkzeug
 
-from odoo import api, fields, models
-from odoo import tools
-from odoo.addons.website.tools import add_form_signature
-from odoo.exceptions import AccessError
-from odoo.osv import expression
-from odoo.http import request
+from sleektiv import api, fields, models
+from sleektiv import tools
+from sleektiv.addons.website.tools import add_form_signature
+from sleektiv.exceptions import AccessError
+from sleektiv.osv import expression
+from sleektiv.http import request
 
 _logger = logging.getLogger(__name__)
 

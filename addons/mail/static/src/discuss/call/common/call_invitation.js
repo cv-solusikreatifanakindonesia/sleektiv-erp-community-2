@@ -1,4 +1,4 @@
-import { Component, onWillUnmount, useRef, useState } from "@odoo/owl";
+import { Component, onWillUnmount, useRef, useState } from "@sleektiv/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

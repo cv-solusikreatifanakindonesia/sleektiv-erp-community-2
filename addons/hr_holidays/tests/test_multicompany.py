@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime
 
-from odoo import tests
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from sleektiv import tests
+from sleektiv.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 
 @tests.tagged('post_install', '-at_install')

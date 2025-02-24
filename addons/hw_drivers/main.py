@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from traceback import format_exc
 import json
 import platform
@@ -8,8 +8,8 @@ from threading import Thread
 import time
 import urllib3
 
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.websocket_client import WebsocketClient
+from sleektiv.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers.websocket_client import WebsocketClient
 
 _logger = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ class Manager(Thread):
 
     def send_alldevices(self, iot_client=None):
         """
-        This method send IoT Box and devices information to Odoo database
+        This method send IoT Box and devices information to Sleektiv database
         """
         if self.server_url:
             subject = helpers.get_conf('subject')
@@ -92,8 +92,8 @@ class Manager(Thread):
             _logger.info('Ignoring sending the devices to the database: no associated database')
 
     def run(self):
-        """Thread that will load interfaces and drivers and contact the odoo server with the updates"""
-        self.server_url = helpers.get_odoo_server_url()
+        """Thread that will load interfaces and drivers and contact the sleektiv server with the updates"""
+        self.server_url = helpers.get_sleektiv_server_url()
         helpers.start_nginx_server()
 
         _logger.info("IoT Box Image version: %s", helpers.get_version(detailed_version=True))

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import logging
 import os
 
-from odoo import _, api, fields, models, SUPERUSER_ID
-from odoo.addons.event.tools.esc_label_tools import print_event_attendees, setup_printer, layout_96x82, layout_96x134
-from odoo.tools import email_normalize, email_normalize_all
-from odoo.exceptions import AccessError, ValidationError
+from sleektiv import _, api, fields, models, SUPERUSER_ID
+from sleektiv.addons.event.tools.esc_label_tools import print_event_attendees, setup_printer, layout_96x82, layout_96x134
+from sleektiv.tools import email_normalize, email_normalize_all
+from sleektiv.exceptions import AccessError, ValidationError
 _logger = logging.getLogger(__name__)
 
 

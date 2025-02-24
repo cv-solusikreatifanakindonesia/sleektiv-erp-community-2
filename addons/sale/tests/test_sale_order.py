@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 from unittest.mock import patch
 
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.fields import Command
-from odoo.tests import Form, tagged
+from sleektiv import fields
+from sleektiv.exceptions import AccessError, UserError, ValidationError
+from sleektiv.fields import Command
+from sleektiv.tests import Form, tagged
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.sale.tests.common import SaleCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')
@@ -477,7 +477,7 @@ class TestSaleOrder(SaleCommon):
     def test_so_discount_is_not_reset(self):
         """ Discounts should not be recomputed on order confirmation """
         with patch(
-            'odoo.addons.sale.models.sale_order_line.SaleOrderLine'
+            'sleektiv.addons.sale.models.sale_order_line.SaleOrderLine'
             '._compute_discount'
         ) as patched:
             self.sale_order.action_confirm()

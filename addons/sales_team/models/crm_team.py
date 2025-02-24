@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import random
@@ -8,10 +8,10 @@ from babel.dates import format_date
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.release import version
-from odoo.tools import SQL
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.release import version
+from sleektiv.tools import SQL
 
 
 class CrmTeam(models.Model):

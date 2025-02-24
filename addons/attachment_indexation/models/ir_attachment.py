@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import io
 import logging
 import xml.dom.minidom
 import zipfile
 
-from odoo import api, models
-from odoo.tools.lru import LRU
+from sleektiv import api, models
+from sleektiv.tools.lru import LRU
 
 _logger = logging.getLogger(__name__)
 

@@ -1,4 +1,4 @@
-import { App } from "@odoo/owl";
+import { App } from "@sleektiv/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";

@@ -18,11 +18,11 @@ import { hasTouch, isBrowserFirefox, isIOS } from "../browser/feature_detection"
  * @property {Record<string, any>} [defaultParams]
  * Setup hooks
  * @property {{
- *  addListener: typeof import("@odoo/owl")["useExternalListener"];
- *  setup: typeof import("@odoo/owl")["useEffect"];
- *  teardown: typeof import("@odoo/owl")["onWillUnmount"];
+ *  addListener: typeof import("@sleektiv/owl")["useExternalListener"];
+ *  setup: typeof import("@sleektiv/owl")["useEffect"];
+ *  teardown: typeof import("@sleektiv/owl")["onWillUnmount"];
  *  throttle: typeof import("./timing")["useThrottleForAnimation"];
- *  wrapState: typeof import("@odoo/owl")["reactive"];
+ *  wrapState: typeof import("@sleektiv/owl")["reactive"];
  * }} setupHooks
  * Build hooks
  * @property {(params: DraggableBuildHandlerParams) => any} onComputeParams

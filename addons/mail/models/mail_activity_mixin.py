@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
 import logging
 import pytz
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import SQL
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import SQL
 
 _logger = logging.getLogger(__name__)
 

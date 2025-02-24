@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import sleektiv.tests
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsiteSequence(odoo.tests.TransactionCase):
+@sleektiv.tests.common.tagged('post_install', '-at_install')
+class TestWebsiteSequence(sleektiv.tests.TransactionCase):
 
     def setUp(self):
         super(TestWebsiteSequence, self).setUp()

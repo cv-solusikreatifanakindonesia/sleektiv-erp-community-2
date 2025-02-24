@@ -1,4 +1,4 @@
-import { Component, onWillRender, onWillUpdateProps, useState } from "@odoo/owl";
+import { Component, onWillRender, onWillUpdateProps, useState } from "@sleektiv/owl";
 import { _t } from "@web/core/l10n/translation";
 import {
     MAX_VALID_DATE,

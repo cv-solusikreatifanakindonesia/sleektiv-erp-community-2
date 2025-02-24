@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError, ValidationError
+from sleektiv.exceptions import UserError, ValidationError
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
-from odoo.tools import format_list
-from odoo.tools.misc import unquote
+from sleektiv import api, fields, models, _
+from sleektiv.osv import expression
+from sleektiv.tools import format_list
+from sleektiv.tools.misc import unquote
 
 TIMESHEET_INVOICE_TYPES = [
     ('billable_time', 'Billed on Timesheets'),

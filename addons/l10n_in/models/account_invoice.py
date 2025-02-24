@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 import re
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError, RedirectWarning, UserError
-from odoo.tools.image import image_data_uri
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError, RedirectWarning, UserError
+from sleektiv.tools.image import image_data_uri
 
 
 class AccountMove(models.Model):

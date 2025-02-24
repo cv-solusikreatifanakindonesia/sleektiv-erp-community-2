@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, fields, http
-from odoo.exceptions import AccessError, MissingError, ValidationError
-from odoo.http import request
+from sleektiv import _, fields, http
+from sleektiv.exceptions import AccessError, MissingError, ValidationError
+from sleektiv.http import request
 
-from odoo.addons.account.controllers import portal
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers.portal import PaymentPortal
+from sleektiv.addons.account.controllers import portal
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment.controllers.portal import PaymentPortal
 
 
 class PortalAccount(portal.PortalAccount, PaymentPortal):

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.tests.common import HttpCase, tagged, users
+from sleektiv import Command
+from sleektiv.addons.crm.tests.common import TestCrmCommon
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.tests.common import HttpCase, tagged, users
 
 
 @tagged("post_install", "-at_install")

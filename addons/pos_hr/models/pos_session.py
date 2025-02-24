@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, api, _
-from odoo.tools import plaintext2html
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import fields, models, api, _
+from sleektiv.tools import plaintext2html
 
 
 class PosSession(models.Model):

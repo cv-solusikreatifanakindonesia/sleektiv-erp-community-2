@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import contextlib
 import io
 import zipfile
 
-from odoo import api, models, fields, _
-from odoo.exceptions import UserError
+from sleektiv import api, models, fields, _
+from sleektiv.exceptions import UserError
 
 
 class L10nHuEdiTaxAuditExport(models.TransientModel):

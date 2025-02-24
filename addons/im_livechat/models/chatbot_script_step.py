@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, models, fields
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.osv import expression
-from odoo.tools import html2plaintext, is_html_empty, email_normalize, plaintext2html
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import _, api, models, fields
+from sleektiv.exceptions import ValidationError
+from sleektiv.fields import Command
+from sleektiv.osv import expression
+from sleektiv.tools import html2plaintext, is_html_empty, email_normalize, plaintext2html
+from sleektiv.addons.mail.tools.discuss import Store
 
 from collections import defaultdict
 from markupsafe import Markup

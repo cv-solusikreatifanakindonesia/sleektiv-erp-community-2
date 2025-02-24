@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
-from odoo.addons.website_slides.tests.common import SlidesCase
-from odoo.exceptions import ValidationError
-from odoo.tests.common import users
+from sleektiv.addons.website_slides.tests.common import SlidesCase
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests.common import users
 
 
 class TestSurvey(SlidesCase):

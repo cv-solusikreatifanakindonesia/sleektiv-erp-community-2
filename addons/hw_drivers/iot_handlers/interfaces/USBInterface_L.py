@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from usb import core
 
-from odoo.addons.hw_drivers.interface import Interface
+from sleektiv.addons.hw_drivers.interface import Interface
 
 
 class USBInterface(Interface):

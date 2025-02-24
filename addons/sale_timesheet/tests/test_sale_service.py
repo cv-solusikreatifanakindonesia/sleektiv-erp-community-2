@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
-from odoo.exceptions import UserError, ValidationError
-from odoo.tests import tagged
+from sleektiv.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

@@ -1,5 +1,5 @@
 import { session } from "@web/session";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { FormLabel } from "../form_label";
 import { DocumentationLink } from "@web/views/widgets/documentation_link/documentation_link";
 

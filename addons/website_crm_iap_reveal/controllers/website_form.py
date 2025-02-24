@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import json
 
-from odoo import http
-from odoo.addons.website.controllers.form import WebsiteForm
-from odoo.http import request
+from sleektiv import http
+from sleektiv.addons.website.controllers.form import WebsiteForm
+from sleektiv.http import request
 
 
 class ContactController(WebsiteForm):

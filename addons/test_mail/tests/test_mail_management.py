@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.tests import tagged
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.addons.test_mail.tests.common import TestRecipients
+from sleektiv.tests import tagged
 
 
 @tagged('mail_management')

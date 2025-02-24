@@ -1,7 +1,7 @@
 import json
 
-from odoo import http
-from odoo.http import request
+from sleektiv import http
+from sleektiv.http import request
 
 
 class TestsSharedJsPython(http.Controller):

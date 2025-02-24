@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
 
-from odoo.addons.sale_gelato import const, utils
+from sleektiv.addons.sale_gelato import const, utils
 
 
 class ProviderGelato(models.Model):
@@ -72,7 +72,7 @@ class ProviderGelato(models.Model):
         # Fetch the delivery price from Gelato.
         payload = {
             'orderReferenceId': order.id,
-            'customerReferenceId': f'Odoo Partner #{order.partner_id.id}',
+            'customerReferenceId': f'Sleektiv Partner #{order.partner_id.id}',
             'currency': order.currency_id.name,
             'allowMultipleQuotes': 'true',
             'products': order._gelato_prepare_items_payload(),

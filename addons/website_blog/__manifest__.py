@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Blog',
     'category': 'Website/Website',
     'sequence': 200,
-    'website': 'https://www.odoo.com/app/blog',
+    'website': 'https://sleektiv.com/app/blog',
     'summary': 'Publish blog posts, announces, news',
     'version': '1.1',
     'depends': ['website_mail', 'website_partner'],

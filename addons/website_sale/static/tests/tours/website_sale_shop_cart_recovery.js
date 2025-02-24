@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { queryOne } from "@odoo/hoot-dom";
+import { queryOne } from "@sleektiv/hoot-dom";
 import { browser } from "@web/core/browser/browser";
 import { registry } from "@web/core/registry";
 import * as tourUtils from "@website_sale/js/tours/tour_utils";
@@ -37,7 +37,7 @@ registry.category("web_tour.tours").add('shop_cart_recovery', {
         trigger: '.oe_login_form input[name="redirect"]:hidden',
         run() {
             const orderId = browser.localStorage.getItem(orderIdKey);
-            const url = "/odoo/action-sale.action_orders/" + orderId;
+            const url = "/sleektiv/action-sale.action_orders/" + orderId;
             this.anchor.value = url;
         }
     },

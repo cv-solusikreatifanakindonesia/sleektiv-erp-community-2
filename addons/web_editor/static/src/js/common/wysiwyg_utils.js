@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 export function isImg(node) {
     return (node && (node.nodeName === "IMG" || (node.className && node.className.match(/(^|\s)(media_iframe_video|o_image|fa)(\s|$)/i))));
@@ -14,4 +14,4 @@ export function isImg(node) {
 export function ancestors(node, stopElement) {
     if (!node || !node.parentElement || node === stopElement) return [];
     return [node.parentElement, ...ancestors(node.parentElement, stopElement)];
-}
+} 

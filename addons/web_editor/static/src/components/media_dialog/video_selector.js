@@ -1,11 +1,11 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { rpc } from "@web/core/network/rpc";
 import { useAutofocus, useService } from '@web/core/utils/hooks';
 import { debounce } from '@web/core/utils/timing';
 
-import { Component, useState, useRef, onMounted, onWillStart } from "@odoo/owl";
+import { Component, useState, useRef, onMounted, onWillStart } from "@sleektiv/owl";
 
 class VideoOption extends Component {
     static template = "web_editor.VideoOption";

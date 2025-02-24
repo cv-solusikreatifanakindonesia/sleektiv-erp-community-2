@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import tools
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.addons.website.controllers import form
-from odoo.http import request
+from sleektiv import tools
+from sleektiv.addons.phone_validation.tools import phone_validation
+from sleektiv.addons.website.controllers import form
+from sleektiv.http import request
 
 
 class WebsiteForm(form.WebsiteForm):

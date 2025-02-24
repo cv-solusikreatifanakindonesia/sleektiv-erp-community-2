@@ -1,4 +1,4 @@
-/** @odoo-module alias=@web/../tests/setup default=false */
+/** @sleektiv-module alias=@web/../tests/setup default=false */
 
 import { assets } from "@web/core/assets";
 import { user, _makeUser } from "@web/core/user";
@@ -14,7 +14,7 @@ import { loadLanguages } from "@web/core/l10n/translation";
 transitionConfig.disabled = true;
 
 import { patch } from "@web/core/utils/patch";
-import { App, EventBus, whenReady } from "@odoo/owl";
+import { App, EventBus, whenReady } from "@sleektiv/owl";
 import { currencies } from "@web/core/currency";
 import { cookie } from "@web/core/browser/cookie";
 import { router } from "@web/core/browser/router";
@@ -31,7 +31,7 @@ function forceLocaleAndTimezoneWithCleanup() {
 
 function makeMockLocation() {
     return Object.assign(document.createElement("a"), {
-        href: window.location.origin + "/odoo",
+        href: window.location.origin + "/sleektiv",
         assign(url) {
             this.href = url;
         },
@@ -210,8 +210,8 @@ function patchBodyAddEventListener() {
     });
 }
 
-function patchOdoo() {
-    patchWithCleanup(odoo, {
+function patchSleektiv() {
+    patchWithCleanup(sleektiv, {
         debug: "",
     });
 }
@@ -242,7 +242,7 @@ function patchSessionInfo() {
         db: "test",
         is_admin: true,
         is_system: true,
-        username: "thewise@odoo.com",
+        username: "thewise@sleektiv.com",
         name: "Mitchell",
         partner_id: 7,
         uid: 7,
@@ -365,7 +365,7 @@ export async function setupTests() {
         patchCookie();
         patchBodyAddEventListener();
         patchEventBus();
-        patchOdoo();
+        patchSleektiv();
         patchSessionInfo();
         patchOwlApp();
     });

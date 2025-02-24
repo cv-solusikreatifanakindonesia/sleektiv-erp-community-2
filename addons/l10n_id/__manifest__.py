@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Indonesian - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -11,7 +11,7 @@ This is the latest Indonesian Odoo localisation necessary to run Odoo accounting
     - generic Indonesian chart of accounts
     - tax structure""",
     'author': 'vitraining.com',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/indonesia.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/indonesia.html',
     'depends': [
         'account',
         'base_iban',

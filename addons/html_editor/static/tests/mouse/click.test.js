@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import { setupEditor, testEditor } from "../_helpers/editor";
-import { pointerDown, pointerUp, waitUntil } from "@odoo/hoot-dom";
-import { tick } from "@odoo/hoot-mock";
+import { pointerDown, pointerUp, waitUntil } from "@sleektiv/hoot-dom";
+import { tick } from "@sleektiv/hoot-mock";
 import { leftPos, rightPos } from "@html_editor/utils/position";
 import { getContent, setSelection } from "../_helpers/selection";
 

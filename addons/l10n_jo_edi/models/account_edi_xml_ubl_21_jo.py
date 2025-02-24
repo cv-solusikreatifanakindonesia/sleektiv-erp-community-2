@@ -1,9 +1,9 @@
 from functools import wraps
 from types import SimpleNamespace
 
-from odoo import models
-from odoo.tools import float_repr
-from odoo.tools.float_utils import float_round
+from sleektiv import models
+from sleektiv.tools import float_repr
+from sleektiv.tools.float_utils import float_round
 
 
 # There is a need for this dummy currency because:

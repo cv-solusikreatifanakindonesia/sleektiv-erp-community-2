@@ -1,4 +1,4 @@
-import { Component, useExternalListener, useState } from "@odoo/owl";
+import { Component, useExternalListener, useState } from "@sleektiv/owl";
 
 export class ProductInfoPopup extends Component {
     static template = "pos_self_order.ProductInfoPopup";

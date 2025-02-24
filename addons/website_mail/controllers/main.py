@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from collections import defaultdict
-from odoo import http, _
-from odoo.http import request
-from odoo.exceptions import UserError
+from sleektiv import http, _
+from sleektiv.http import request
+from sleektiv.exceptions import UserError
 
 
 class WebsiteMail(http.Controller):

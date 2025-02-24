@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Sales',
@@ -35,7 +35,7 @@ The Dashboard for the Sales Manager will include
 * My Quotations
 * Monthly Turnover (Graph)
     """,
-    'website': 'https://www.odoo.com/app/sales',
+    'website': 'https://sleektiv.com/app/sales',
     'depends': ['sale', 'digest'],
     'data': [
         'data/digest_data.xml',

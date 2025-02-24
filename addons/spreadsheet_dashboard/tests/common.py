@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests.common import TransactionCase, new_test_user
+from sleektiv import Command
+from sleektiv.tests.common import TransactionCase, new_test_user
 
 class DashboardTestCommon(TransactionCase):
     @classmethod

@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import common, tagged
+from sleektiv import Command
+from sleektiv.tests import common, tagged
 
 
 @tagged('-at_install', 'post_install')

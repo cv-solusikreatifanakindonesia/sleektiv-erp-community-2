@@ -1,6 +1,6 @@
-from odoo import models, fields, release, _
+from sleektiv import models, fields, release, _
 from datetime import datetime
-from odoo.exceptions import UserError
+from sleektiv.exceptions import UserError
 
 class ComplianceLetter(models.TransientModel):
     _name = 'compliance.letter.wizard'
@@ -13,7 +13,7 @@ class ComplianceLetter(models.TransientModel):
             raise UserError(_("Compliance letters can only be created for companies registered in Malta. Please ensure the company's country is set to Malta."))
 
         data = {
-            "version": self._get_odoo_version(),
+            "version": self._get_sleektiv_version(),
             "date": self._get_formatted_date(),
             "name": self.company_id.name,
             "vat": self.company_id.vat,
@@ -29,5 +29,5 @@ class ComplianceLetter(models.TransientModel):
         formatted_date = date_obj.strftime(f"%B {day}{day_suffix}, %Y")
         return formatted_date
 
-    def _get_odoo_version(self):
+    def _get_sleektiv_version(self):
         return release.major_version

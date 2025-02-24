@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import binascii
 import json
 
 from io import BytesIO
 from PIL import Image
 
-from odoo.tests.common import HttpCase, new_test_user, tagged
-from odoo.tools.json import scriptsafe as json_safe
-from odoo.tools.misc import file_open
+from sleektiv.tests.common import HttpCase, new_test_user, tagged
+from sleektiv.tools.json import scriptsafe as json_safe
+from sleektiv.tools.misc import file_open
 
 
 @tagged('-at_install', 'post_install')

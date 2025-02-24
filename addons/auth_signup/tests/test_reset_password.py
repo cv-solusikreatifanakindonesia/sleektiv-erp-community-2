@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
-from odoo.exceptions import UserError
-from odoo.addons.mail.models.mail_mail import MailDeliveryException
-from odoo.tests.common import HttpCase
+from sleektiv.exceptions import UserError
+from sleektiv.addons.mail.models.mail_mail import MailDeliveryException
+from sleektiv.tests.common import HttpCase
 from werkzeug.urls import url_parse
 
 
@@ -33,7 +33,7 @@ class TestResetPassword(HttpCase):
 
         self.assertNotIn("signup_email", url_parse(self.test_user.partner_id._get_signup_url()).decode_query(), "query should not contain 'signup_email'")
 
-    @patch('odoo.addons.mail.models.mail_mail.MailMail.send')
+    @patch('sleektiv.addons.mail.models.mail_mail.MailMail.send')
     def test_reset_password_mail_server_error(self, mock_send):
         """
         Test that action_reset_password() method raises UserError and _action_reset_password() method raises MailDeliveryException.

@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import float_compare, float_round
-from odoo.tools.misc import clean_context
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import float_compare, float_round
+from sleektiv.tools.misc import clean_context
 
 
 class MrpUnbuild(models.Model):

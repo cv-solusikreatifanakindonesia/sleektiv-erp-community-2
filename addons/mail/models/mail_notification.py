@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models
-from odoo.exceptions import AccessError
-from odoo.tools.translate import _
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import api, fields, models
+from sleektiv.exceptions import AccessError
+from sleektiv.tools.translate import _
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class MailNotification(models.Model):

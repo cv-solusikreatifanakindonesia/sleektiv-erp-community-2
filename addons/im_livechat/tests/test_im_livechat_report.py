@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 
-from odoo.addons.im_livechat.tests.common import TestImLivechatCommon
-from odoo.tests.common import tagged
+from sleektiv.addons.im_livechat.tests.common import TestImLivechatCommon
+from sleektiv.tests.common import tagged
 
 
 @tagged("post_install", "-at_install")

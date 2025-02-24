@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component } from '@odoo/owl';
+import { Component } from '@sleektiv/owl';
 import publicWidget from '@web/legacy/js/public/public_widget';
 
 publicWidget.registry.TermsAndConditionsCheckbox = publicWidget.Widget.extend({

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common
-from odoo.tests.common import tagged
+from sleektiv.tests import common
+from sleektiv.tests.common import tagged
 
 
 class TestUTMCommon(common.TransactionCase):

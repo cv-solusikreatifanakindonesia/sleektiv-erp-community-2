@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { Dialog } from "@web/core/dialog/dialog";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 
 export class companyStateDialog extends Component {
@@ -16,7 +16,7 @@ export class companyStateDialog extends Component {
     }
 
     redirect() {
-        window.location = "/odoo/companies/" + this.pos.company.id;
+        window.location = "/sleektiv/companies/" + this.pos.company.id;
     }
 
     onClose() {

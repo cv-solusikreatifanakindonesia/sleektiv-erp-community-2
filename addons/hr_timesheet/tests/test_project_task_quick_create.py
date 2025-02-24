@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
-from odoo.tests import Form
+from sleektiv.addons.hr_timesheet.tests.test_timesheet import TestCommonTimesheet
+from sleektiv.tests import Form
 
 
 class TestProjectTaskQuickCreate(TestCommonTimesheet):

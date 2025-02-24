@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.tools import format_list
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import format_list
 
 
 

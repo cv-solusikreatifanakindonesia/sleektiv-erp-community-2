@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import logging
@@ -7,8 +7,8 @@ from datetime import timedelta
 import requests
 from requests.exceptions import ConnectionError as RequestConnectionError, Timeout as RequestTimeout
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

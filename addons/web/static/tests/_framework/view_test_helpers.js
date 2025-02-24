@@ -1,7 +1,7 @@
-import { after, expect, getFixture } from "@odoo/hoot";
-import { click, formatXml, queryAll, queryAllTexts } from "@odoo/hoot-dom";
-import { animationFrame, Deferred, tick } from "@odoo/hoot-mock";
-import { Component, onMounted, useSubEnv, xml } from "@odoo/owl";
+import { after, expect, getFixture } from "@sleektiv/hoot";
+import { click, formatXml, queryAll, queryAllTexts } from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred, tick } from "@sleektiv/hoot-mock";
+import { Component, onMounted, useSubEnv, xml } from "@sleektiv/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { MainComponentsContainer } from "@web/core/main_components_container";
 import { View, getDefaultConfig } from "@web/views/view";
@@ -14,7 +14,7 @@ import { MockServer } from "./mock_server/mock_server";
  * @typedef {{
  *  arch?: string;
  *  config?: Record<string, any>;
- *  env?: import("@web/env").OdooEnv;
+ *  env?: import("@web/env").SleektivEnv;
  *  resId?: number;
  *  resModel: string;
  *  searchViewArch?: string;
@@ -31,7 +31,7 @@ import { MockServer } from "./mock_server/mock_server";
  *  text?: string;
  * }} SelectorOptions
  *
- * @typedef {import("@odoo/hoot-dom").FormatXmlOptions} FormatXmlOptions
+ * @typedef {import("@sleektiv/hoot-dom").FormatXmlOptions} FormatXmlOptions
  * @typedef {import("./mock_server/mock_model").ViewType} ViewType
  */
 

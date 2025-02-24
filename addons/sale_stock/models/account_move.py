@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import models, api
-from odoo.tools import float_is_zero, float_compare
-from odoo.tools.misc import formatLang
+from sleektiv import models, api
+from sleektiv.tools import float_is_zero, float_compare
+from sleektiv.tools.misc import formatLang
 
 
 class AccountMove(models.Model):

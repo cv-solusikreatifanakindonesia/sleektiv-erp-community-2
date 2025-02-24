@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from . import ir_http
-from odoo import models
+from sleektiv import models
 
 
 class BaseModel(models.AbstractModel):

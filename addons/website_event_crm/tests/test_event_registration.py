@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo.addons.event_crm.tests.common import TestEventCrmCommon
-from odoo.tests.common import RecordCapturer, tagged, users
+from sleektiv.addons.event_crm.tests.common import TestEventCrmCommon
+from sleektiv.tests.common import RecordCapturer, tagged, users
 
 
 @tagged('event_crm', 'post_install', '-at_install')

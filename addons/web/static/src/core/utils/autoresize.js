@@ -1,4 +1,4 @@
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@sleektiv/owl";
 import { browser } from "../browser/browser";
 
 /**

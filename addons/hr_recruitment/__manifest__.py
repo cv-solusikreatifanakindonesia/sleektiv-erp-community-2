@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Recruitment',
@@ -7,7 +7,7 @@
     'category': 'Human Resources/Recruitment',
     'sequence': 90,
     'summary': 'Track your recruitment pipeline',
-    'website': 'https://www.odoo.com/app/recruitment',
+    'website': 'https://sleektiv.com/app/recruitment',
     'depends': [
         'hr',
         'calendar',

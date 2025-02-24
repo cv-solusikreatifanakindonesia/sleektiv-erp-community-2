@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
 import { getFirstListFunction } from "../list_helpers";
 import { Domain } from "@web/core/domain";
 import { ListDataSource } from "../list_data_source";
 import { globalFiltersFieldMatchers } from "@spreadsheet/global_filters/plugins/global_filters_core_plugin";
-import { OdooUIPlugin } from "@spreadsheet/plugins";
+import { SleektivUIPlugin } from "@spreadsheet/plugins";
 
 const { astToFormula, constants } = spreadsheet;
 const { isEvaluationError } = spreadsheet.helpers;
@@ -15,7 +15,7 @@ const { PIVOT_TABLE_CONFIG } = constants;
  * @typedef {import("./list_core_plugin").SpreadsheetList} SpreadsheetList
  */
 
-export class ListUIPlugin extends OdooUIPlugin {
+export class ListUIPlugin extends SleektivUIPlugin {
     static getters = /** @type {const} */ ([
         "getListComputedDomain",
         "getListHeaderValue",
@@ -62,27 +62,27 @@ export class ListUIPlugin extends OdooUIPlugin {
      */
     handle(cmd) {
         switch (cmd.type) {
-            case "INSERT_ODOO_LIST": {
+            case "INSERT_SLEEKTIV_LIST": {
                 const { id, linesNumber } = cmd;
                 this._setupListDataSource(id, linesNumber);
                 break;
             }
-            case "INSERT_ODOO_LIST_WITH_TABLE": {
-                this.dispatch("INSERT_ODOO_LIST", cmd);
+            case "INSERT_SLEEKTIV_LIST_WITH_TABLE": {
+                this.dispatch("INSERT_SLEEKTIV_LIST", cmd);
                 this._addTable(cmd);
                 break;
             }
-            case "RE_INSERT_ODOO_LIST_WITH_TABLE": {
-                this.dispatch("RE_INSERT_ODOO_LIST", cmd);
+            case "RE_INSERT_SLEEKTIV_LIST_WITH_TABLE": {
+                this.dispatch("RE_INSERT_SLEEKTIV_LIST", cmd);
                 this._addTable(cmd);
                 break;
             }
-            case "DUPLICATE_ODOO_LIST": {
+            case "DUPLICATE_SLEEKTIV_LIST": {
                 this._setupListDataSource(cmd.newListId, 0);
                 break;
             }
             case "REFRESH_ALL_DATA_SOURCES":
-                this._refreshOdooLists();
+                this._refreshSleektivLists();
                 break;
             case "ADD_GLOBAL_FILTER":
             case "EDIT_GLOBAL_FILTER":
@@ -91,8 +91,8 @@ export class ListUIPlugin extends OdooUIPlugin {
             case "CLEAR_GLOBAL_FILTER_VALUE":
                 this._addDomains();
                 break;
-            case "UPDATE_ODOO_LIST":
-            case "UPDATE_ODOO_LIST_DOMAIN": {
+            case "UPDATE_SLEEKTIV_LIST":
+            case "UPDATE_SLEEKTIV_LIST_DOMAIN": {
                 const listDefinition = this.getters.getListModelDefinition(cmd.listId);
                 const dataSourceId = this._getListDataSourceId(cmd.listId);
                 this.lists[dataSourceId] = new ListDataSource(this.custom, listDefinition);
@@ -122,9 +122,9 @@ export class ListUIPlugin extends OdooUIPlugin {
 
                 const updateCommands = cmd.commands.filter(
                     (cmd) =>
-                        cmd.type === "UPDATE_ODOO_LIST_DOMAIN" ||
-                        cmd.type === "UPDATE_ODOO_LIST" ||
-                        cmd.type === "INSERT_ODOO_LIST"
+                        cmd.type === "UPDATE_SLEEKTIV_LIST_DOMAIN" ||
+                        cmd.type === "UPDATE_SLEEKTIV_LIST" ||
+                        cmd.type === "INSERT_SLEEKTIV_LIST"
                 );
                 for (const cmd of updateCommands) {
                     if (!this.getters.isExistingList(cmd.listId)) {
@@ -188,16 +188,16 @@ export class ListUIPlugin extends OdooUIPlugin {
      * Refresh the cache of a list
      * @param {string} listId Id of the list
      */
-    _refreshOdooList(listId) {
+    _refreshSleektivList(listId) {
         this.getters.getListDataSource(listId).load({ reload: true });
     }
 
     /**
      * Refresh the cache of all the lists
      */
-    _refreshOdooLists() {
+    _refreshSleektivLists() {
         for (const listId of this.getters.getListIds()) {
-            this._refreshOdooList(listId);
+            this._refreshSleektivList(listId);
         }
     }
 

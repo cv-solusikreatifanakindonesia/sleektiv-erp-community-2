@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.exceptions import UserError
-from odoo.tests import Form, users
-from odoo.tools.misc import format_date
-from odoo.tests.common import HttpCase, tagged
+from sleektiv import Command, fields
+from sleektiv.exceptions import UserError
+from sleektiv.tests import Form, users
+from sleektiv.tools.misc import format_date
+from sleektiv.tests.common import HttpCase, tagged
 
-from odoo.addons.mrp.tests.common import TestMrpCommon
+from sleektiv.addons.mrp.tests.common import TestMrpCommon
 
 
 class TestMrpOrder(TestMrpCommon):
@@ -5103,7 +5103,7 @@ class TestTourMrpOrder(HttpCase):
         })
 
         self.assertEqual(len(mo.move_raw_ids), 0)
-        url = f'/odoo/action-mrp.mrp_production_action/{mo.id}'
+        url = f'/sleektiv/action-mrp.mrp_production_action/{mo.id}'
 
         self.start_tour(url, 'test_mrp_production_product_catalog', login='admin')
         self.assertEqual(len(mo.move_raw_ids), 1)
@@ -5156,7 +5156,7 @@ class TestTourMrpOrder(HttpCase):
         mo = mo_form.save()
 
         action_id = self.env.ref('mrp.menu_mrp_production_action').action
-        url = f'/odoo/action-{action_id.id}/{mo.id}'
+        url = f'/sleektiv/action-{action_id.id}/{mo.id}'
         self.start_tour(url, "test_manufacturing_and_byproduct_sm_to_sml_synchronization", login="admin", timeout=100)
         self.assertEqual(mo.move_raw_ids.quantity, 7)
         self.assertEqual(mo.move_raw_ids.move_line_ids.quantity, 7)

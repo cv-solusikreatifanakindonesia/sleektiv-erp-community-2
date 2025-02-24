@@ -1,5 +1,5 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
-import { mockDate, mockTimeZone } from "@odoo/hoot-mock";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
+import { mockDate, mockTimeZone } from "@sleektiv/hoot-mock";
 import {
     defineParams,
     makeMockEnv,

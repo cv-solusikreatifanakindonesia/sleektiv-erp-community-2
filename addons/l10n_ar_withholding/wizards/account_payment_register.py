@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo import models, fields, api, Command, _
-from odoo.exceptions import ValidationError
-from odoo.exceptions import UserError
+from sleektiv import models, fields, api, Command, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.exceptions import UserError
 from datetime import datetime
 
 _logger = logging.getLogger(__name__)

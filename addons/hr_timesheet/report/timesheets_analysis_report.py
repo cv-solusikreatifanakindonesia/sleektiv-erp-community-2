@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.tools.sql import drop_view_if_exists, SQL
+from sleektiv import api, fields, models
+from sleektiv.tools.sql import drop_view_if_exists, SQL
 
 
 class TimesheetsAnalysisReport(models.Model):

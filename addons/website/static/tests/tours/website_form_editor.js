@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import {
     changeOption,
@@ -18,7 +18,7 @@ const NB_NON_ESSENTIAL_REQUIRED_FIELDS_IN_DEFAULT_FORM = 2;
 const ESSENTIAL_FIELDS_VALID_DATA_FOR_DEFAULT_FORM = [
     {
         name: 'email_from',
-        value: 'admin@odoo.com',
+        value: 'admin@sleektiv.com',
     },
     {
         name: 'subject',
@@ -241,7 +241,7 @@ registerWebsitePreviewTour("website_form_editor_tour", {
         content: "Check that 'Conditional Visibility Check 5' is not in the list of the renamed field",
         trigger: "we-customizeblock-option.snippet-option-WebsiteFieldEditor we-select[data-name='hidden_condition_opt']:not(:has(we-button:contains('Conditional Visibility Check 5')))",
     },
-    ...addExistingField('email_cc', 'text', 'Test conditional visibility', false, {visibility: CONDITIONALVISIBILITY, condition: 'odoo'}),
+    ...addExistingField('email_cc', 'text', 'Test conditional visibility', false, {visibility: CONDITIONALVISIBILITY, condition: 'sleektiv'}),
     {
         content: "Ensure that the description has correctly been added on the field",
         trigger: ":iframe .s_website_form_field:contains('Test conditional visibility') .s_website_form_field_description",
@@ -472,7 +472,7 @@ registerWebsitePreviewTour("website_form_editor_tour", {
         trigger: ':iframe #wrapwrap',
         run: () => {
             const wysiwyg = $('iframe:not(.o_ignore_in_tour)').contents().find('#wrapwrap').data('wysiwyg');
-            wysiwyg.odooEditor.historyStep(true);
+            wysiwyg.sleektivEditor.historyStep(true);
         },
     },
     // Edit the submit button using linkDialog.

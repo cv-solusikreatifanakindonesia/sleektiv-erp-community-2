@@ -1,4 +1,4 @@
-from odoo import models
+from sleektiv import models
 
 class DecimalPrecision(models.Model):
     _inherit = 'decimal.precision'

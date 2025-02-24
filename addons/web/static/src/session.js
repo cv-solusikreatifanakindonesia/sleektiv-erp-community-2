@@ -1,2 +1,2 @@
-export const session = odoo.__session_info__ || {};
-delete odoo.__session_info__;
+export const session = sleektiv.__session_info__ || {};
+delete sleektiv.__session_info__;

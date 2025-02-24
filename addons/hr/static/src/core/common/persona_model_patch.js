@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
 import { Persona } from "@mail/core/common/persona_model";
 

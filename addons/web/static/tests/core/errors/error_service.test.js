@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
-import { manuallyDispatchProgrammaticEvent } from "@odoo/hoot-dom";
-import { Deferred, advanceTime, animationFrame } from "@odoo/hoot-mock";
-import { Component, OwlError, onError, onWillStart, xml } from "@odoo/owl";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { manuallyDispatchProgrammaticEvent } from "@sleektiv/hoot-dom";
+import { Deferred, advanceTime, animationFrame } from "@sleektiv/hoot-mock";
+import { Component, OwlError, onError, onWillStart, xml } from "@sleektiv/owl";
 import {
     makeMockEnv,
     mockService,

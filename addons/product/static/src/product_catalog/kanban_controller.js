@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { KanbanController } from "@web/views/kanban/kanban_controller";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 import { useDebounced } from "@web/core/utils/timing";
 import { _t } from "@web/core/l10n/translation";

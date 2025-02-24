@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import SUPERUSER_ID
-from odoo.addons.crm.tests import common as crm_common
-from odoo.fields import Datetime
-from odoo.tests import Form, tagged, users
+from sleektiv import SUPERUSER_ID
+from sleektiv.addons.crm.tests import common as crm_common
+from sleektiv.fields import Datetime
+from sleektiv.tests import Form, tagged, users
 
 @tagged('lead_manage')
 class TestLeadConvertForm(crm_common.TestLeadConvertCommon):

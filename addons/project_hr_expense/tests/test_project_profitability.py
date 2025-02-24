@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.hr_expense.tests.common import TestExpenseCommon
-from odoo.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon
-from odoo.tests.common import tagged
+from sleektiv.addons.hr_expense.tests.common import TestExpenseCommon
+from sleektiv.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon
+from sleektiv.tests.common import tagged
 
 
 class TestProjectHrExpenseProfitabilityCommon(TestExpenseCommon):

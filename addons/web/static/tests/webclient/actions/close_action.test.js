@@ -1,5 +1,5 @@
-import { expect, test } from "@odoo/hoot";
-import { animationFrame, Deferred } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { animationFrame, Deferred } from "@sleektiv/hoot-mock";
 import {
     contains,
     defineActions,

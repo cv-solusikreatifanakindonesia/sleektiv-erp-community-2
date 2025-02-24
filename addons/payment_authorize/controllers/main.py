@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import pprint
 
-from odoo import _, http
-from odoo.exceptions import ValidationError
-from odoo.http import request
+from sleektiv import _, http
+from sleektiv.exceptions import ValidationError
+from sleektiv.http import request
 
-from odoo.addons.payment import utils as payment_utils
+from sleektiv.addons.payment import utils as payment_utils
 
 _logger = logging.getLogger(__name__)
 

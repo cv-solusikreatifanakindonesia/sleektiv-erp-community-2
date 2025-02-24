@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 import json
 from datetime import timedelta
 
-from odoo import api, Command, fields, models
-from odoo.addons.mail.tools.discuss import Store
-from odoo.addons.rating.models import rating_data
-from odoo.exceptions import UserError
-from odoo.osv.expression import AND
-from odoo.tools import get_lang, SQL
-from odoo.tools.misc import unquote
-from odoo.tools.translate import _
+from sleektiv import api, Command, fields, models
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.addons.rating.models import rating_data
+from sleektiv.exceptions import UserError
+from sleektiv.osv.expression import AND
+from sleektiv.tools import get_lang, SQL
+from sleektiv.tools.misc import unquote
+from sleektiv.tools.translate import _
 from .project_update import STATUS_COLOR
 from .project_task import CLOSED_STATES
 

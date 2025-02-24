@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
@@ -7,21 +7,21 @@ from datetime import datetime
 from werkzeug.exceptions import Forbidden, NotFound
 from werkzeug.urls import url_decode, url_encode, url_parse
 
-from odoo import fields
-from odoo.exceptions import ValidationError
-from odoo.fields import Command
-from odoo.http import request, route
-from odoo.osv import expression
-from odoo.tools import clean_context, float_round, groupby, lazy, single_email_re, str2bool, SQL
-from odoo.tools.json import scriptsafe as json_scriptsafe
-from odoo.tools.translate import _
+from sleektiv import fields
+from sleektiv.exceptions import ValidationError
+from sleektiv.fields import Command
+from sleektiv.http import request, route
+from sleektiv.osv import expression
+from sleektiv.tools import clean_context, float_round, groupby, lazy, single_email_re, str2bool, SQL
+from sleektiv.tools.json import scriptsafe as json_scriptsafe
+from sleektiv.tools.translate import _
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.controllers import portal as payment_portal
-from odoo.addons.portal.controllers.portal import _build_url_w_params
-from odoo.addons.sale.controllers import portal as sale_portal
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment.controllers import portal as payment_portal
+from sleektiv.addons.portal.controllers.portal import _build_url_w_params
+from sleektiv.addons.sale.controllers import portal as sale_portal
+from sleektiv.addons.website.controllers.main import QueryURL
+from sleektiv.addons.website.models.ir_http import sitemap_qs2dom
 
 
 class TableCompute:

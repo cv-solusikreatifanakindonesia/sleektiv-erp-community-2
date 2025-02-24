@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { registry } from "@web/core/registry";
 import { SlideCategoryListRenderer } from "./slide_category_list_renderer";

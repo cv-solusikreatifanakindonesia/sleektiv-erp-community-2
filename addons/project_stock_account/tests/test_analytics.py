@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import ValidationError
-from odoo.addons.stock.tests.common import TestStockCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.addons.stock.tests.common import TestStockCommon
 
 
 class TestAnalytics(TestStockCommon):

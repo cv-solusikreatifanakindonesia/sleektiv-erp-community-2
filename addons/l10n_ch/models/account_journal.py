@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api
+from sleektiv import models, fields, api
 
-from odoo.exceptions import ValidationError
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.base_iban.models.res_partner_bank import validate_iban
-from odoo.addons.base.models.res_bank import sanitize_account_number
+from sleektiv.addons.base_iban.models.res_partner_bank import validate_iban
+from sleektiv.addons.base.models.res_bank import sanitize_account_number
 
 
 class AccountJournal(models.Model):
@@ -14,7 +14,7 @@ class AccountJournal(models.Model):
 
     invoice_reference_model = fields.Selection(selection_add=[
         ('ch', 'Switzerland')
-    ], ondelete={'ch': lambda recs: recs.write({'invoice_reference_model': 'odoo'})})
+    ], ondelete={'ch': lambda recs: recs.write({'invoice_reference_model': 'sleektiv'})})
 
     def _process_reference_for_sale_order(self, order_reference):
         '''

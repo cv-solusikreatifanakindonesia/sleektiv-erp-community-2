@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAllTexts } from "@odoo/hoot-dom";
-import { mockTimeZone } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAllTexts } from "@sleektiv/hoot-dom";
+import { mockTimeZone } from "@sleektiv/hoot-mock";
 import { mockService, mountWithCleanup, preloadBundle } from "@web/../tests/web_test_helpers";
 import { FAKE_MODEL, clickDate, selectDateRange } from "./calendar_test_helpers";
 

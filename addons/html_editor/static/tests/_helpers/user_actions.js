@@ -1,8 +1,8 @@
 import { closestBlock } from "@html_editor/utils/blocks";
 import { endPos } from "@html_editor/utils/position";
 import { findInSelection } from "@html_editor/utils/selection";
-import { click, manuallyDispatchProgrammaticEvent, press, waitFor } from "@odoo/hoot-dom";
-import { tick } from "@odoo/hoot-mock";
+import { click, manuallyDispatchProgrammaticEvent, press, waitFor } from "@sleektiv/hoot-dom";
+import { tick } from "@sleektiv/hoot-mock";
 import { setSelection } from "./selection";
 import { execCommand } from "./userCommands";
 
@@ -266,8 +266,8 @@ export function pasteHtml(editor, html) {
  * @param {Editor} editor
  * @param {string} html
  */
-export function pasteOdooEditorHtml(editor, html) {
-    return pasteData(editor, html, "application/vnd.odoo.odoo-editor");
+export function pasteSleektivEditorHtml(editor, html) {
+    return pasteData(editor, html, "application/vnd.sleektiv.sleektiv-editor");
 }
 /**
  * @param {Node} node

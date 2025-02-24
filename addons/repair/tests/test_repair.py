@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.exceptions import UserError
-from odoo.tests import tagged, common, Form
-from odoo.tools import float_compare, float_is_zero
+from sleektiv import Command
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged, common, Form
+from sleektiv.tools import float_compare, float_is_zero
 
 
 @tagged('post_install', '-at_install')

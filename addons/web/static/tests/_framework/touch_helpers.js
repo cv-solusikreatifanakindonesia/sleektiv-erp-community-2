@@ -1,10 +1,10 @@
-import { queryFirst } from "@odoo/hoot-dom";
-import { advanceTime } from "@odoo/hoot-mock";
+import { queryFirst } from "@sleektiv/hoot-dom";
+import { advanceTime } from "@sleektiv/hoot-mock";
 import { contains } from "./dom_test_helpers";
 
 /**
- * @typedef {import("@odoo/hoot-dom").PointerOptions} PointerOptions
- * @typedef {import("@odoo/hoot-dom").Target} Target
+ * @typedef {import("@sleektiv/hoot-dom").PointerOptions} PointerOptions
+ * @typedef {import("@sleektiv/hoot-dom").Target} Target
  */
 
 /**

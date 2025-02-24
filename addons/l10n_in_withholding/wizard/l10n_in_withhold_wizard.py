@@ -1,8 +1,8 @@
 from markupsafe import Markup
 
-from odoo import _, api, Command, fields, models
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import float_compare
+from sleektiv import _, api, Command, fields, models
+from sleektiv.exceptions import ValidationError, UserError
+from sleektiv.tools import float_compare
 
 
 class L10nInWithholdWizard(models.TransientModel):

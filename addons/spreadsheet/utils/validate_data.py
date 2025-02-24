@@ -5,19 +5,19 @@ import re
 
 markdown_link_regex = r"^\[([^\[]+)\]\((.+)\)$"
 
-xml_id_url_prefix = "odoo://ir_menu_xml_id/"
+xml_id_url_prefix = "sleektiv://ir_menu_xml_id/"
 
-odoo_view_link_prefix = "odoo://view/"
+sleektiv_view_link_prefix = "sleektiv://view/"
 
 
-def odoo_charts(data):
-    """return all odoo chart definition in the spreadsheet"""
+def sleektiv_charts(data):
+    """return all sleektiv chart definition in the spreadsheet"""
     figures = []
     for sheet in data.get("sheets", []):
         figures += [
             dict(figure["data"], id=figure["id"])
             for figure in sheet.get("figures", [])
-            if figure["tag"] == "chart" and figure["data"]["type"].startswith("odoo_")
+            if figure["tag"] == "chart" and figure["data"]["type"].startswith("sleektiv_")
         ]
     return figures
 
@@ -25,7 +25,7 @@ def odoo_charts(data):
 def links_urls(data):
     """return all markdown links in cells"""
     urls = []
-    link_prefix = "odoo://view/"
+    link_prefix = "sleektiv://view/"
     for sheet in data.get("sheets", []):
         for cell in sheet.get("cells", {}).values():
             content = cell.get("content", "")
@@ -35,14 +35,14 @@ def links_urls(data):
     return urls
 
 
-def odoo_view_links(data):
+def sleektiv_view_links(data):
     """return all view definitions embedded in link cells.
-    urls looks like odoo://view/{... view data...}
+    urls looks like sleektiv://view/{... view data...}
     """
     return [
-        json.loads(url[len(odoo_view_link_prefix):])
+        json.loads(url[len(sleektiv_view_link_prefix):])
         for url in links_urls(data)
-        if url.startswith(odoo_view_link_prefix)
+        if url.startswith(sleektiv_view_link_prefix)
     ]
 
 
@@ -128,9 +128,9 @@ def chart_fields(chart):
 def filter_fields(data):
     """return all field names used in global filter definitions"""
     fields_by_model = defaultdict(set)
-    charts = odoo_charts(data)
-    odoo_version = data.get("odooVersion", 1)
-    if odoo_version < 5:
+    charts = sleektiv_charts(data)
+    sleektiv_version = data.get("sleektivVersion", 1)
+    if sleektiv_version < 5:
         for filter_definition in data.get("globalFilters", []):
             for pivot_id, matching in filter_definition.get("pivotFields", dict()).items():
                 model = data["pivots"][pivot_id]["model"]
@@ -144,7 +144,7 @@ def filter_fields(data):
                 fields_by_model[model].add(matching["field"])
     else:
         for pivot in data["pivots"].values():
-            if pivot.get("type", "ODOO") == "ODOO":
+            if pivot.get("type", "SLEEKTIV") == "SLEEKTIV":
                 model = pivot["model"]
                 field = pivot.get("fieldMatching", {}).get("chain")
                 if field:
@@ -163,7 +163,7 @@ def filter_fields(data):
     return dict(fields_by_model)
 
 
-def odoo_view_fields(view):
+def sleektiv_view_fields(view):
     return view["action"]["modelName"], set(domain_fields(view["action"]["domain"]))
 
 
@@ -177,12 +177,12 @@ def extract_fields(extract_fn, items):
 
 def fields_in_spreadsheet(data):
     """return all fields, grouped by model, used in the spreadsheet"""
-    odoo_pivots = (pivot for pivot in data.get("pivots", dict()).values() if pivot.get("type", "ODOO") == "ODOO")
+    sleektiv_pivots = (pivot for pivot in data.get("pivots", dict()).values() if pivot.get("type", "SLEEKTIV") == "SLEEKTIV")
     all_fields = chain(
         extract_fields(list_fields, data.get("lists", dict()).values()).items(),
-        extract_fields(pivot_fields, odoo_pivots).items(),
-        extract_fields(chart_fields, odoo_charts(data)).items(),
-        extract_fields(odoo_view_fields, odoo_view_links(data)).items(),
+        extract_fields(pivot_fields, sleektiv_pivots).items(),
+        extract_fields(chart_fields, sleektiv_charts(data)).items(),
+        extract_fields(sleektiv_view_fields, sleektiv_view_links(data)).items(),
         filter_fields(data).items(),
     )
     fields_by_model = defaultdict(set)
@@ -193,7 +193,7 @@ def fields_in_spreadsheet(data):
 
 def menus_xml_ids_in_spreadsheet(data):
 
-    return set(data.get("chartOdooMenusReferences", {}).values()) | {
+    return set(data.get("chartSleektivMenusReferences", {}).values()) | {
         url[len(xml_id_url_prefix):]
         for url in links_urls(data)
         if url.startswith(xml_id_url_prefix)

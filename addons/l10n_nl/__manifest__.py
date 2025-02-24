@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Netherlands - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -6,7 +6,7 @@
     'version': '3.4',
     'category': 'Accounting/Localizations/Account Charts',
     'author': 'Onestein (http://www.onestein.eu)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/netherlands.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/netherlands.html',
     'depends': [
         'base_iban',
         'base_vat',

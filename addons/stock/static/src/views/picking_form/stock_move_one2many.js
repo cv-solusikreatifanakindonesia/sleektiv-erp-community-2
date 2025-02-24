@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from "@web/core/registry";
 import { AutoColumnWidthListRenderer } from "@stock/views/list/auto_column_width_list_renderer";

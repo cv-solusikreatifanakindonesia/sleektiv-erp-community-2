@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import threading
 
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
 
-from odoo.osv import expression
+from sleektiv.osv import expression
 
 import logging
 _logger = logging.getLogger(__name__)

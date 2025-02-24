@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import pytz
 
@@ -10,13 +10,13 @@ from operator import itemgetter
 from pytz import timezone
 from random import randint
 
-from odoo.http import request
-from odoo import models, fields, api, exceptions, _
-from odoo.addons.resource.models.utils import Intervals
-from odoo.osv.expression import AND, OR
-from odoo.tools.float_utils import float_is_zero
-from odoo.exceptions import AccessError
-from odoo.tools import convert, format_duration, format_time, format_datetime
+from sleektiv.http import request
+from sleektiv import models, fields, api, exceptions, _
+from sleektiv.addons.resource.models.utils import Intervals
+from sleektiv.osv.expression import AND, OR
+from sleektiv.tools.float_utils import float_is_zero
+from sleektiv.exceptions import AccessError
+from sleektiv.tools import convert, format_duration, format_time, format_datetime
 
 def get_google_maps_url(latitude, longitude):
     return "https://maps.google.com?q=%s,%s" % (latitude, longitude)

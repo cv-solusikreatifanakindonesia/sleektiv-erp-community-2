@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 
-import odoo
-from odoo import _, api, fields, models, tools
-from odoo.osv import expression
-from odoo.tools.misc import limited_field_access_token
-from odoo.addons.mail.tools.discuss import Store
+import sleektiv
+from sleektiv import _, api, fields, models, tools
+from sleektiv.osv import expression
+from sleektiv.tools.misc import limited_field_access_token
+from sleektiv.addons.mail.tools.discuss import Store
 
 class Partner(models.Model):
     """ Update partner to add a field about notification preferences. Add a generic opt-out field that can be used
@@ -36,10 +36,10 @@ class Partner(models.Model):
 
     def _compute_im_status(self):
         super()._compute_im_status()
-        odoobot_id = self.env['ir.model.data']._xmlid_to_res_id('base.partner_root')
-        odoobot = self.env['res.partner'].browse(odoobot_id)
-        if odoobot in self:
-            odoobot.im_status = 'bot'
+        sleektivbot_id = self.env['ir.model.data']._xmlid_to_res_id('base.partner_root')
+        sleektivbot = self.env['res.partner'].browse(sleektivbot_id)
+        if sleektivbot in self:
+            sleektivbot.im_status = 'bot'
 
     # pseudo computes
 

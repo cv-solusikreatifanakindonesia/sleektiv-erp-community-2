@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
-from odoo.tools import file_open
-from odoo.addons.web.controllers import webmanifest
+from sleektiv.http import request
+from sleektiv.tools import file_open
+from sleektiv.addons.web.controllers import webmanifest
 
 
 class WebManifest(webmanifest.WebManifest):

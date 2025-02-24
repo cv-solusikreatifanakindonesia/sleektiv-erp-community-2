@@ -1,5 +1,5 @@
-import { expect, getFixture, test } from "@odoo/hoot";
-import { Component, xml } from "@odoo/owl";
+import { expect, getFixture, test } from "@sleektiv/hoot";
+import { Component, xml } from "@sleektiv/owl";
 import { mountWithCleanup } from "@web/../tests/web_test_helpers";
 import { ErrorHandler } from "@web/core/utils/components";
 

@@ -1,8 +1,8 @@
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import _, api, models, modules, tools
-from odoo.exceptions import UserError
+from sleektiv import _, api, models, modules, tools
+from sleektiv.exceptions import UserError
 
 
 class AccountMoveSend(models.AbstractModel):

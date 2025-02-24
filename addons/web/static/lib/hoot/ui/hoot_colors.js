@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { reactive, useState } from "@odoo/owl";
+import { reactive, useState } from "@sleektiv/owl";
 import { STORAGE, storageGet, storageSet } from "../hoot_utils";
 
 /**

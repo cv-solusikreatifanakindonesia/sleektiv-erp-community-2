@@ -2,7 +2,7 @@
  * Provides a way to start JS code for public contents.
  */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import Class from "@web/legacy/js/core/class";
 import { loadBundle, loadCSS, loadJS } from '@web/core/assets';
 import { SERVICES_METADATA } from "@web/core/utils/hooks";
@@ -78,17 +78,17 @@ const ParentedMixin = {
     },
 };
 
-function OdooEvent(target, name, data) {
+function SleektivEvent(target, name, data) {
     this.target = target;
     this.name = name;
     this.data = Object.create(null);
     Object.assign(this.data, data);
     this.stopped = false;
 }
-OdooEvent.prototype.stopPropagation = function () {
+SleektivEvent.prototype.stopPropagation = function () {
     this.stopped = true;
 };
-OdooEvent.prototype.is_stopped = function () {
+SleektivEvent.prototype.is_stopped = function () {
     return this.stopped;
 };
 
@@ -224,7 +224,7 @@ const EventDispatcherMixin = Object.assign({}, ParentedMixin, {
      *
      * Other methods will fix the bound method to what it is when creating the
      * binding/proxy, which is fine in most javascript code but problematic in
-     * Odoo where developers may want to replace existing callbacks with theirs.
+     * Sleektiv where developers may want to replace existing callbacks with theirs.
      *
      * The semantics of this precisely replace closing over the method call.
      *
@@ -286,7 +286,7 @@ const EventDispatcherMixin = Object.assign({}, ParentedMixin, {
         return this;
     },
     "trigger_up": function (name, info) {
-        var event = new OdooEvent(this, name, info);
+        var event = new SleektivEvent(this, name, info);
         //console.info('event: ', name, info);
         this._trigger_up(event);
         return event;

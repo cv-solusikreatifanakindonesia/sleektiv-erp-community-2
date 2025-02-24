@@ -1,6 +1,6 @@
 
-from odoo import Command, http, _
-from odoo.http import request
+from sleektiv import Command, http, _
+from sleektiv.http import request
 
 
 class ProjectClient(http.Controller):

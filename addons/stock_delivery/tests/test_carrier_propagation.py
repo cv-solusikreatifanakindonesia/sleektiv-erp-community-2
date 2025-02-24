@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch, DEFAULT
-from odoo import Command
-from odoo.exceptions import UserError
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase
+from sleektiv import Command
+from sleektiv.exceptions import UserError
+from sleektiv.tests import Form
+from sleektiv.tests.common import TransactionCase
 
 
 class TestCarrierPropagation(TransactionCase):
@@ -273,7 +273,7 @@ class TestCarrierPropagation(TransactionCase):
             self.assertEqual(sale_orders[i].picking_ids.carrier_id.id, sale_orders[i].carrier_id.id)
         pickings = sale_orders.picking_ids
         pickings.action_assign()
-        picking_class = 'odoo.addons.stock_delivery.models.stock_picking.StockPicking'
+        picking_class = 'sleektiv.addons.stock_delivery.models.stock_picking.StockPicking'
         with patch(picking_class + '.send_to_shipper', new=fail_send_to_shipper(pickings[1])):
             pickings.with_user(alien).button_validate()
         # both pickings should be validated but and activity should have been created for the invalid picking

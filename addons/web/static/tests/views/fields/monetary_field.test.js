@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAll, queryAllTexts, queryFirst } from "@odoo/hoot-dom";
-import { Deferred, animationFrame } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAll, queryAllTexts, queryFirst } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame } from "@sleektiv/hoot-mock";
 
 import {
     clickSave,

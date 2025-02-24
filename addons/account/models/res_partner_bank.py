@@ -4,9 +4,9 @@ from collections import defaultdict
 
 import werkzeug
 import werkzeug.exceptions
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools.image import image_data_uri
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tools.image import image_data_uri
 
 
 class ResPartnerBank(models.Model):

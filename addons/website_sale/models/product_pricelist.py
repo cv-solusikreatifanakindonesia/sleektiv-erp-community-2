@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.website.models import ir_http
+from sleektiv.addons.website.models import ir_http
 
 
 class ProductPricelist(models.Model):
@@ -60,7 +60,7 @@ class ProductPricelist(models.Model):
             if vals.get('company_id') and not vals.get('website_id'):
                 # l10n modules install will change the company currency, creating a
                 # pricelist for that currency. Do not use user's company in that
-                # case as module install are done with OdooBot (company 1)
+                # case as module install are done with SleektivBot (company 1)
                 # YTI FIXME: The fix is not at the correct place
                 # It be set when we actually create the pricelist
                 self = self.with_context(default_company_id=vals['company_id'])

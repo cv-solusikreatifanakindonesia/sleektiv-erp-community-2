@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
 
-from odoo.tests import tagged
-from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from sleektiv.tests import tagged
+from sleektiv.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
+from sleektiv.addons.l10n_it_edi.tests.common import TestItEdi
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestItAccountMoveSend(TestItEdi, TestAccountMoveSendCommon):
@@ -37,7 +37,7 @@ class TestItAccountMoveSend(TestItEdi, TestAccountMoveSendCommon):
             return {}
 
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._get_default_extra_edis',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._get_default_extra_edis',
                 _get_default_extra_edis
         ):
             self.env['account.move.send']._generate_and_send_invoices(invoice1 + invoice2)
@@ -63,7 +63,7 @@ class TestItAccountMoveSend(TestItEdi, TestAccountMoveSendCommon):
             return {}
 
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._get_default_extra_edis',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._get_default_extra_edis',
                 _get_default_extra_edis
         ):
             self.env['account.move.send']._generate_and_send_invoices(invoice1 + invoice2)

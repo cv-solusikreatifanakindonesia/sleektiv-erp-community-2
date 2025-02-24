@@ -1,11 +1,11 @@
-import { reactive } from "@odoo/owl";
+import { reactive } from "@sleektiv/owl";
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 
 export class DiscussCoreCommon {
     /**
-     * @param {import("@web/env").OdooEnv} env
+     * @param {import("@web/env").SleektivEnv} env
      * @param {Partial<import("services").Services>} services
      */
     constructor(env, services) {
@@ -23,7 +23,7 @@ export class DiscussCoreCommon {
             () =>
                 this.store.imStatusTrackedPersonas.forEach((p) => {
                     const model = p.type === "partner" ? "res.partner" : "mail.guest";
-                    this.busService.addChannel(`odoo-presence-${model}_${p.id}`);
+                    this.busService.addChannel(`sleektiv-presence-${model}_${p.id}`);
                 }),
             { once: true }
         );
@@ -55,7 +55,7 @@ export class DiscussCoreCommon {
             const lastMessageId = this.store.getLastMessageId();
             const message = this.store.Message.insert(
                 {
-                    author: this.store.odoobot,
+                    author: this.store.sleektivbot,
                     body,
                     id: lastMessageId + 0.01,
                     is_note: true,
@@ -176,7 +176,7 @@ export class DiscussCoreCommon {
             }
         }
         if (
-            !channel.isCorrespondentOdooBot &&
+            !channel.isCorrespondentSleektivBot &&
             channel.channel_type !== "channel" &&
             this.store.self.type === "partner" &&
             channel.selfMember
@@ -214,7 +214,7 @@ export const discussCoreCommon = {
         "presence",
     ],
     /**
-     * @param {import("@web/env").OdooEnv} env
+     * @param {import("@web/env").SleektivEnv} env
      * @param {Partial<import("services").Services>} services
      */
     start(env, services) {

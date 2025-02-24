@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from sleektiv import Command, _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
 
-from odoo.addons.sale_gelato import utils
+from sleektiv.addons.sale_gelato import utils
 
 
 class ProductTemplate(models.Model):

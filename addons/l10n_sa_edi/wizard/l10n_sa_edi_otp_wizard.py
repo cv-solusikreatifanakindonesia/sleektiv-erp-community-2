@@ -1,5 +1,5 @@
-from odoo import fields, models, _, api
-from odoo.exceptions import UserError
+from sleektiv import fields, models, _, api
+from sleektiv.exceptions import UserError
 
 
 class RequestZATCAOtp(models.TransientModel):

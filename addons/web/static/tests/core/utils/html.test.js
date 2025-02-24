@@ -1,8 +1,8 @@
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 const Markup = markup().constructor;
 
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { htmlEscape, isHtmlEmpty, setElementContent } from "@web/core/utils/html";
 
 describe.current.tags("headless");

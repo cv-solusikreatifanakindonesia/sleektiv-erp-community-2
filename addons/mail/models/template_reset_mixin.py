@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
 from lxml import etree
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import UserError
-from odoo.modules.module import get_resource_from_path
-from odoo.tools.convert import xml_import
-from odoo.tools.misc import file_path
-from odoo.tools.translate import TranslationImporter, get_po_paths
+from sleektiv import api, fields, models, tools, _
+from sleektiv.exceptions import UserError
+from sleektiv.modules.module import get_resource_from_path
+from sleektiv.tools.convert import xml_import
+from sleektiv.tools.misc import file_path
+from sleektiv.tools.translate import TranslationImporter, get_po_paths
 
 
 class TemplateResetMixin(models.AbstractModel):

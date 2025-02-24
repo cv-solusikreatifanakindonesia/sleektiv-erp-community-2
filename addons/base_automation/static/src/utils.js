@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 export const TRIGGER_FILTERS = {
     on_create_or_write: (f) => true,

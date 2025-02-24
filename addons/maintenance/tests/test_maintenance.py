@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import time
 
-from odoo.tests import Form
-from odoo.tests.common import tagged, TransactionCase
+from sleektiv.tests import Form
+from sleektiv.tests.common import tagged, TransactionCase
 
 
 class TestEquipmentCommon(TransactionCase):

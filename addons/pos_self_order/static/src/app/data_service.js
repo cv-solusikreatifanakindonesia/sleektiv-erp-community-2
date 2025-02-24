@@ -9,7 +9,7 @@ patch(PosData.prototype, {
         return await rpc(`/pos-self/data/${parseInt(configId)}`);
     },
     get databaseName() {
-        return `self_order-${odoo.access_token}`;
+        return `self_order-${sleektiv.access_token}`;
     },
     initIndexedDB() {
         return session.data.self_ordering_mode === "mobile"

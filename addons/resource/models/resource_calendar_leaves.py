@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, time
 from dateutil.relativedelta import relativedelta
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
 
 
 class ResourceCalendarLeaves(models.Model):

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, fields, models
-from odoo.addons.rating.models import rating_data
-from odoo.osv import expression
-from odoo.tools.float_utils import float_compare
+from sleektiv import api, fields, models
+from sleektiv.addons.rating.models import rating_data
+from sleektiv.osv import expression
+from sleektiv.tools.float_utils import float_compare
 
 
 class RatingParentMixin(models.AbstractModel):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
 {
@@ -8,7 +8,7 @@
     'category': 'Sales/CRM',
     'sequence': 15,
     'summary': 'Track leads and close opportunities',
-    'website': 'https://www.odoo.com/app/crm',
+    'website': 'https://sleektiv.com/app/crm',
     'depends': [
         'base_setup',
         'sales_team',

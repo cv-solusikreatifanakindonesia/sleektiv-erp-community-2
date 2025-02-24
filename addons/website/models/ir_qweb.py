@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 import logging
 
 from collections import OrderedDict
 from urllib3.util import parse_url
 
-from odoo import models
-from odoo.http import request
-from odoo.tools import lazy
-from odoo.addons.base.models.assetsbundle import AssetsBundle
-from odoo.osv import expression
-from odoo.addons.website.models import ir_http
-from odoo.exceptions import AccessError
+from sleektiv import models
+from sleektiv.http import request
+from sleektiv.tools import lazy
+from sleektiv.addons.base.models.assetsbundle import AssetsBundle
+from sleektiv.osv import expression
+from sleektiv.addons.website.models import ir_http
+from sleektiv.exceptions import AccessError
 
 
 _logger = logging.getLogger(__name__)

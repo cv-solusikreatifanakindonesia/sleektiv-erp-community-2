@@ -1,9 +1,9 @@
-import { Component, onWillStart, xml } from "@odoo/owl";
-import { test, expect, beforeEach, getFixture } from "@odoo/hoot";
+import { Component, onWillStart, xml } from "@sleektiv/owl";
+import { test, expect, beforeEach, getFixture } from "@sleektiv/hoot";
 import { getService, mountWithCleanup } from "@web/../tests/web_test_helpers";
-import { animationFrame } from "@odoo/hoot-mock";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { MainComponentsContainer } from "@web/core/main_components_container";
-import { click, press } from "@odoo/hoot-dom";
+import { click, press } from "@sleektiv/hoot-dom";
 import { Deferred } from "@web/core/utils/concurrency";
 
 let target;

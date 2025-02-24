@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import pprint
@@ -6,10 +6,10 @@ import pprint
 import requests
 from werkzeug import urls
 
-from odoo import _, fields, models, service
-from odoo.exceptions import ValidationError
+from sleektiv import _, fields, models, service
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.payment_mollie import const
+from sleektiv.addons.payment_mollie import const
 
 _logger = logging.getLogger(__name__)
 
@@ -53,14 +53,14 @@ class PaymentProvider(models.Model):
         endpoint = f'/v2/{endpoint.strip("/")}'
         url = urls.url_join('https://api.mollie.com/', endpoint)
 
-        odoo_version = service.common.exp_version()['server_version']
+        sleektiv_version = service.common.exp_version()['server_version']
         module_version = self.env.ref('base.module_payment_mollie').installed_version
         headers = {
             "Accept": "application/json",
             "Authorization": f'Bearer {self.mollie_api_key}',
             "Content-Type": "application/json",
             # See https://docs.mollie.com/integration-partners/user-agent-strings
-            "User-Agent": f'Odoo/{odoo_version} MollieNativeOdoo/{module_version}',
+            "User-Agent": f'Sleektiv/{sleektiv_version} MollieNativeSleektiv/{module_version}',
         }
 
         try:

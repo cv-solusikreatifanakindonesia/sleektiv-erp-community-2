@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
 import { AWAY_DELAY, imStatusService } from "@bus/im_status_service";
 import { patch } from "@web/core/utils/patch";

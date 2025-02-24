@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime, timedelta
 
-from odoo.tests import Form, TransactionCase
-from odoo import Command
+from sleektiv.tests import Form, TransactionCase
+from sleektiv import Command
 
 
 class TestReportsCommon(TransactionCase):

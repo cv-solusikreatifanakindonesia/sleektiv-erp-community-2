@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
 from dateutil.relativedelta import relativedelta
@@ -10,14 +10,14 @@ import logging
 import math
 import werkzeug
 
-from odoo import fields, http, tools, _
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website_profile.controllers.main import WebsiteProfile
-from odoo.exceptions import AccessError, ValidationError, UserError, MissingError
-from odoo.http import request, Response
-from odoo.osv import expression
-from odoo.tools import consteq, email_split
+from sleektiv import fields, http, tools, _
+from sleektiv.addons.website.controllers.main import QueryURL
+from sleektiv.addons.website.models.ir_http import sitemap_qs2dom
+from sleektiv.addons.website_profile.controllers.main import WebsiteProfile
+from sleektiv.exceptions import AccessError, ValidationError, UserError, MissingError
+from sleektiv.http import request, Response
+from sleektiv.osv import expression
+from sleektiv.tools import consteq, email_split
 
 _logger = logging.getLogger(__name__)
 
@@ -69,14 +69,14 @@ class WebsiteSlides(WebsiteProfile):
     def _set_viewed_slide(self, slide, quiz_attempts_inc=False):
         if not slide.channel_id.is_member:
             if not isinstance(request.session.get('viewed_slides'), dict):
-                # Compatibility layer with Odoo 15.0,
+                # Compatibility layer with Sleektiv 15.0,
                 # where `viewed_slides` are stored as `list` in sessions.
                 # For performance concerns, `viewed_slides` is changed to a dict,
-                # but sessions coming from Odoo 15.0 after an upgrade should still be compatible.
-                # This compatibility layer regarding `viewed_slides` must remain from Odoo 16.0 and above,
+                # but sessions coming from Sleektiv 15.0 after an upgrade should still be compatible.
+                # This compatibility layer regarding `viewed_slides` must remain from Sleektiv 16.0 and above,
                 # as this is possible to do a jump of multiple versions in one go,
                 # and carry the sessions with the upgrade.
-                # e.g. upgrade from Odoo 15.0 to 18.0.
+                # e.g. upgrade from Sleektiv 15.0 to 18.0.
                 request.session.viewed_slides = dict.fromkeys(request.session.get('viewed_slides', []), 1)
             viewed_slides = request.session['viewed_slides']
             # Convert `slide.id` to string is necessary because of the JSON format of the session

@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { describe, expect, makeExpect, test } from "@odoo/hoot";
-import { check, manuallyDispatchProgrammaticEvent, tick } from "@odoo/hoot-dom";
-import { Component, xml } from "@odoo/owl";
+import { describe, expect, makeExpect, test } from "@sleektiv/hoot";
+import { check, manuallyDispatchProgrammaticEvent, tick } from "@sleektiv/hoot-dom";
+import { Component, xml } from "@sleektiv/owl";
 import { mountForTest, parseUrl } from "../local_helpers";
 
 import { Test } from "../../core/test";

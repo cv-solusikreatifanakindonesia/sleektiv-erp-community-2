@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request, route
+from sleektiv.exceptions import AccessError, MissingError
+from sleektiv.http import request, route
 
-from odoo.addons.sale.controllers import portal as sale_portal
+from sleektiv.addons.sale.controllers import portal as sale_portal
 
 
 class CustomerPortal(sale_portal.CustomerPortal):

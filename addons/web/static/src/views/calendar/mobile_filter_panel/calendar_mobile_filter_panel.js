@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { getColor } from "../colors";
 
 export class CalendarMobileFilterPanel extends Component {

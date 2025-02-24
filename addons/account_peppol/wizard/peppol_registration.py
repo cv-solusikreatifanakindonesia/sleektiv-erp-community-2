@@ -1,15 +1,15 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import contextlib
 try:
     import phonenumbers
 except ImportError:
     phonenumbers = None
 
-from odoo import _, api, fields, models, modules
-from odoo.exceptions import UserError, ValidationError
+from sleektiv import _, api, fields, models, modules
+from sleektiv.exceptions import UserError, ValidationError
 
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-from odoo.addons.account_peppol.tools.demo_utils import handle_demo
+from sleektiv.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from sleektiv.addons.account_peppol.tools.demo_utils import handle_demo
 
 
 class PeppolRegistration(models.TransientModel):
@@ -115,7 +115,7 @@ class PeppolRegistration(models.TransientModel):
             if not wizard.smp_registration:
                 peppol_warnings['company_on_another_smp'] = {
                     'message': _("Your company is already registered on another Access Point for receiving invoices."
-                                 "We will register you on Odoo as a sender only.")
+                                 "We will register you on Sleektiv as a sender only.")
                 }
             wizard.peppol_warnings = peppol_warnings or False
 

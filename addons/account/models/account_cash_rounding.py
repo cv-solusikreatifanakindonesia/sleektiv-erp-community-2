@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api, _
-from odoo.tools import float_round
-from odoo.exceptions import ValidationError
+from sleektiv import models, fields, api, _
+from sleektiv.tools import float_round
+from sleektiv.exceptions import ValidationError
 
 
 class AccountCashRounding(models.Model):

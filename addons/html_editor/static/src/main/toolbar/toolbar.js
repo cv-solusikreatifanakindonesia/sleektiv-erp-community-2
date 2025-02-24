@@ -1,4 +1,4 @@
-import { Component, useState, validate } from "@odoo/owl";
+import { Component, useState, validate } from "@sleektiv/owl";
 
 export class Toolbar extends Component {
     static template = "html_editor.Toolbar";

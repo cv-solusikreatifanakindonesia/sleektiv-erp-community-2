@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import werkzeug.urls
 
-from odoo import _, api, Command, fields, models
+from sleektiv import _, api, Command, fields, models
 
 
 class SMSComposer(models.TransientModel):

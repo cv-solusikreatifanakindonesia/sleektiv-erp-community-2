@@ -1,7 +1,7 @@
-from odoo import Command, fields
+from sleektiv import Command, fields
 
-from odoo.addons.purchase.tests.test_purchase_invoice import TestPurchaseToInvoiceCommon
-from odoo.tests import tagged
+from sleektiv.addons.purchase.tests.test_purchase_invoice import TestPurchaseToInvoiceCommon
+from sleektiv.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

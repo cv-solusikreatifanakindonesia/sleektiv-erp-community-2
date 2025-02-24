@@ -1,6 +1,6 @@
-from odoo import Command
-from odoo.tools import misc
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv import Command
+from sleektiv.tools import misc
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 class JoEdiCommon(AccountTestInvoicingCommon):

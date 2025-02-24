@@ -1,5 +1,5 @@
-import { animationFrame } from "@odoo/hoot-mock";
-import { describe, expect, test, beforeEach } from "@odoo/hoot";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { describe, expect, test, beforeEach } from "@sleektiv/hoot";
 import {
     defineSpreadsheetActions,
     defineSpreadsheetModels,

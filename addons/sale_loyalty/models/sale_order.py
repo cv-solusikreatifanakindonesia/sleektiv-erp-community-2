@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import itertools
 import random
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-from odoo.fields import Command
-from odoo.osv import expression
-from odoo.tools import float_round, lazy, str2bool
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.fields import Command
+from sleektiv.osv import expression
+from sleektiv.tools import float_round, lazy, str2bool
 
 
 def _generate_random_reward_code():

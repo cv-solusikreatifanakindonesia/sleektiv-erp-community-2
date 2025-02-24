@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import route
-from odoo.addons.mail.controllers.thread import ThreadController
-from odoo.addons.im_livechat.tools.misc import force_guest_env
+from sleektiv.http import route
+from sleektiv.addons.mail.controllers.thread import ThreadController
+from sleektiv.addons.im_livechat.tools.misc import force_guest_env
 
 
 class LivechatThreadController(ThreadController):

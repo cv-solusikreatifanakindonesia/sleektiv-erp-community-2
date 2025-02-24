@@ -1,7 +1,7 @@
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { setupEditor, testEditor } from "../_helpers/editor";
-import { tick } from "@odoo/hoot-mock";
-import { press } from "@odoo/hoot-dom";
+import { tick } from "@sleektiv/hoot-mock";
+import { press } from "@sleektiv/hoot-dom";
 import { simulateArrowKeyPress } from "../_helpers/user_actions";
 import { getContent, setSelection } from "../_helpers/selection";
 import { unformat } from "../_helpers/format";

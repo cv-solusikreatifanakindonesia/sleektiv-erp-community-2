@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.tools.translate import LazyTranslate
+from sleektiv import api, fields, models
+from sleektiv.tools.translate import LazyTranslate
 
 _lt = LazyTranslate(__name__)
 

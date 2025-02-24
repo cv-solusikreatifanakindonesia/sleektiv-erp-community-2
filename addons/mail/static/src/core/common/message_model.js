@@ -7,7 +7,7 @@ import {
 } from "@mail/utils/common/format";
 import { createDocumentFragmentFromContent } from "@mail/utils/common/html";
 
-import { toRaw } from "@odoo/owl";
+import { toRaw } from "@sleektiv/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { stateToUrl } from "@web/core/browser/router";

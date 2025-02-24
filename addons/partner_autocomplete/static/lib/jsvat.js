@@ -1325,4 +1325,4 @@ var checkVATNumber = (function (){
     XIVATCheckDigit = GBVATCheckDigit;  // Northern Ireland VAT numbers follow the same rules as GB
 
     return checkVATNumber;
-})();
+})(); 

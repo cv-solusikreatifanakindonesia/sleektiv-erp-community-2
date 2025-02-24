@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import logging
@@ -9,12 +9,12 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, http, SUPERUSER_ID, _
-from odoo.exceptions import UserError
-from odoo.http import request, content_disposition
-from odoo.osv import expression
-from odoo.tools import format_datetime, format_date, is_html_empty
-from odoo.addons.base.models.ir_qweb import keep_query
+from sleektiv import fields, http, SUPERUSER_ID, _
+from sleektiv.exceptions import UserError
+from sleektiv.http import request, content_disposition
+from sleektiv.osv import expression
+from sleektiv.tools import format_datetime, format_date, is_html_empty
+from sleektiv.addons.base.models.ir_qweb import keep_query
 
 _logger = logging.getLogger(__name__)
 

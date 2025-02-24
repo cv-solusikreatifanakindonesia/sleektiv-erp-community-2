@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models, _, Command
-from odoo.osv import expression
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import frozendict, groupby, html2plaintext, is_html_empty, split_every
-from odoo.tools.float_utils import float_repr, float_round, float_compare
-from odoo.tools.misc import clean_context, formatLang
-from odoo.tools.translate import html_translate
+from sleektiv import api, fields, models, _, Command
+from sleektiv.osv import expression
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tools import frozendict, groupby, html2plaintext, is_html_empty, split_every
+from sleektiv.tools.float_utils import float_repr, float_round, float_compare
+from sleektiv.tools.misc import clean_context, formatLang
+from sleektiv.tools.translate import html_translate
 
 from collections import defaultdict
 from markupsafe import Markup

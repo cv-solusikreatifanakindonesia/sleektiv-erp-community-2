@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo import tests
-from odoo.tests import Form, new_test_user, TransactionCase
-from odoo.exceptions import ValidationError
+from sleektiv import tests
+from sleektiv.tests import Form, new_test_user, TransactionCase
+from sleektiv.exceptions import ValidationError
 
 
 @tests.tagged('access_rights', 'post_install', '-at_install')

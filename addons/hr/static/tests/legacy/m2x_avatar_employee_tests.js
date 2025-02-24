@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
 import { startServer } from "@bus/../tests/helpers/mock_python_environment";
 import { openFormView, start } from "@mail/../tests/helpers/test_utils";

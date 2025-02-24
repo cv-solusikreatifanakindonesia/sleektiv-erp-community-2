@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.exceptions import AccessError
-from odoo.http import request
+from sleektiv import http
+from sleektiv.exceptions import AccessError
+from sleektiv.http import request
 
 
 class HrOrgChartController(http.Controller):

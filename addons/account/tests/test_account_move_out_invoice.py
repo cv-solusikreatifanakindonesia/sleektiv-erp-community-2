@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=bad-whitespace
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import Form, tagged
-from odoo import fields, Command
-from odoo.exceptions import UserError
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import Form, tagged
+from sleektiv import fields, Command
+from sleektiv.exceptions import UserError
 
 from collections import defaultdict
 from unittest.mock import patch

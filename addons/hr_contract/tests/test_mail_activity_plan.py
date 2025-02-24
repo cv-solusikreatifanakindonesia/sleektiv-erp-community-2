@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
 
-from odoo import fields
-from odoo.addons.hr.tests.test_mail_activity_plan import ActivityScheduleHRCase
-from odoo.tests import tagged, users
+from sleektiv import fields
+from sleektiv.addons.hr.tests.test_mail_activity_plan import ActivityScheduleHRCase
+from sleektiv.tests import tagged, users
 
 
 @tagged('mail_activity', 'mail_activity_plan')

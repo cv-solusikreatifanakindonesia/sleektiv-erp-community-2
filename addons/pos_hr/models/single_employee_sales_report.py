@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, models
-from odoo.osv.expression import AND
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import api, models
+from sleektiv.osv.expression import AND
 
 
 class SingleEmployeeSalesReport(models.AbstractModel):

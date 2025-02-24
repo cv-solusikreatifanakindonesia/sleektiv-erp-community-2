@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { SearchPanel } from "@web/search/search_panel/search_panel";
-import { useState } from "@odoo/owl";
+import { useState } from "@sleektiv/owl";
 
 
 export class ProductCatalogSearchPanel extends SearchPanel {

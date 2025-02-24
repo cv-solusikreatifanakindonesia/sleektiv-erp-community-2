@@ -4,9 +4,9 @@ from collections import defaultdict, OrderedDict
 from datetime import date, datetime, time, timedelta
 import json
 
-from odoo import api, fields, models, _
-from odoo.tools import float_compare, float_round, format_date, float_is_zero
-from odoo.exceptions import UserError
+from sleektiv import api, fields, models, _
+from sleektiv.tools import float_compare, float_round, format_date, float_is_zero
+from sleektiv.exceptions import UserError
 
 
 class ReportBomStructure(models.AbstractModel):

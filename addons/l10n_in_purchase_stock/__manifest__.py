@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': "India Purchase and Warehouse Management",
@@ -12,7 +12,7 @@ Get the warehouse address if the bill is created from the Purchase Order
 So this module is to get the warehouse address if the bill is created from Purchase Order
     """,
 
-    'website': "https://www.odoo.com",
+    'website': "https://sleektiv.com",
     'category': 'Accounting/Localizations/Purchase',
     'version': '1.0',
 

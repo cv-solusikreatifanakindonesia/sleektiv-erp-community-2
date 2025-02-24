@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from lxml import etree
 
-from odoo.fields import Command
-from odoo.tests import Form, TransactionCase
-from odoo.exceptions import AccessError, RedirectWarning, UserError, ValidationError
+from sleektiv.fields import Command
+from sleektiv.tests import Form, TransactionCase
+from sleektiv.exceptions import AccessError, RedirectWarning, UserError, ValidationError
 
 
 class TestCommonTimesheet(TransactionCase):

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
 class ProjectStageDelete(models.TransientModel):
     _name = 'project.project.stage.delete.wizard'

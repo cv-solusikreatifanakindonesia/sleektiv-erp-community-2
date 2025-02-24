@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
+from sleektiv import api, fields, models, _
 
-from odoo.tools import SQL
-from odoo.exceptions import UserError
+from sleektiv.tools import SQL
+from sleektiv.exceptions import UserError
 
 
 class PurchaseBillMatch(models.Model):

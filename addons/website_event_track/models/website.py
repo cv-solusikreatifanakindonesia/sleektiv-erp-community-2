@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
 import base64
 
-from odoo import api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools.image import ImageProcess
-from odoo.tools.translate import _
+from sleektiv import api, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools.image import ImageProcess
+from sleektiv.tools.translate import _
 
 
 class Website(models.Model):

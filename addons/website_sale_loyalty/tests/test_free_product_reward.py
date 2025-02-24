@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.tests.common import HttpCase
-from odoo.tests import tagged
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_sale_loyalty.controllers.main import WebsiteSale
+from sleektiv import http
+from sleektiv.tests.common import HttpCase
+from sleektiv.tests import tagged
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_sale_loyalty.controllers.main import WebsiteSale
 
 @tagged('post_install', '-at_install')
 class TestFreeProductReward(HttpCase):

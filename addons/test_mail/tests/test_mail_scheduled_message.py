@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.base.tests.test_ir_cron import CronMixinCase
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.models.mail_test_lead import MailTestTLead
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.fields import Datetime as FieldDatetime
-from odoo.tests import tagged, users
-from odoo.tools import mute_logger
+from sleektiv.addons.base.tests.test_ir_cron import CronMixinCase
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.addons.test_mail.models.mail_test_lead import MailTestTLead
+from sleektiv.addons.test_mail.tests.common import TestRecipients
+from sleektiv.exceptions import AccessError, UserError, ValidationError
+from sleektiv.fields import Datetime as FieldDatetime
+from sleektiv.tests import tagged, users
+from sleektiv.tools import mute_logger
 from unittest.mock import patch
 
 
@@ -164,7 +164,7 @@ class TestScheduledMessageBusiness(TestScheduledMessage, CronMixinCase):
 
             with self.mock_datetime_and_now('2022-12-24 14:00:00'),\
                 patch.object(MailTestTLead, '_message_post_after_hook', _message_post_after_hook),\
-                mute_logger('odoo.addons.mail.models.mail_scheduled_message'):
+                mute_logger('sleektiv.addons.mail.models.mail_scheduled_message'):
                 self.env['mail.scheduled.message'].with_user(self.user_root)._post_messages_cron()
             # one scheduled message failed, only one mail should be sent
             self.assertEqual(len(self._new_mails), 1)

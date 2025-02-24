@@ -1,18 +1,18 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import pytz
 import uuid
 from datetime import datetime, timedelta
 from functools import wraps
 
-from odoo.tools import consteq
-from odoo import _, api, fields, models
-from odoo.http import request
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import UserError
-from odoo.tools.misc import limited_field_access_token
-from odoo.addons.bus.websocket import wsrequest
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv.tools import consteq
+from sleektiv import _, api, fields, models
+from sleektiv.http import request
+from sleektiv.addons.base.models.res_partner import _tz_get
+from sleektiv.exceptions import UserError
+from sleektiv.tools.misc import limited_field_access_token
+from sleektiv.addons.bus.websocket import wsrequest
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 def add_guest_to_context(func):

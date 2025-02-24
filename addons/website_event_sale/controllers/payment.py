@@ -1,5 +1,5 @@
-from odoo.http import request
-from odoo.addons.website_sale.controllers.payment import PaymentPortal
+from sleektiv.http import request
+from sleektiv.addons.website_sale.controllers.payment import PaymentPortal
 
 
 class PaymentPortalOnsite(PaymentPortal):

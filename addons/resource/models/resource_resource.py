@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 from pytz import timezone
 
-from odoo import api, fields, models
-from odoo.addons.base.models.res_partner import _tz_get
+from sleektiv import api, fields, models
+from sleektiv.addons.base.models.res_partner import _tz_get
 
 from .utils import timezone_datetime, make_aware, Intervals
 

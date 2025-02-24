@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_mrp.tests.test_multistep_manufacturing import TestMultistepManufacturing
-from odoo.tests import common
+from sleektiv.addons.sale_mrp.tests.test_multistep_manufacturing import TestMultistepManufacturing
+from sleektiv.tests import common
 
 
 @common.tagged('post_install', '-at_install')

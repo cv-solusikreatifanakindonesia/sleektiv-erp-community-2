@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import re
@@ -6,7 +6,7 @@ import requests
 
 from werkzeug.urls import url_parse
 
-from odoo import api, models
+from sleektiv import api, models
 
 
 class Assets(models.AbstractModel):

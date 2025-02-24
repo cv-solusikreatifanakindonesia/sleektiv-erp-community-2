@@ -1,7 +1,7 @@
 import json
 
-from odoo import _, fields, models
-from odoo.tools import file_open
+from sleektiv import _, fields, models
+from sleektiv.tools import file_open
 
 
 class SpreadsheetDashboard(models.Model):

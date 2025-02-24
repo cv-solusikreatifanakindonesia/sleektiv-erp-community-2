@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from sleektiv.tests import tagged
+from sleektiv.tools import mute_logger
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_aps.controllers.main import APSController
-from odoo.addons.payment_aps.tests.common import APSCommon
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment_aps.controllers.main import APSController
+from sleektiv.addons.payment_aps.tests.common import APSCommon
 
 
 @tagged('post_install', '-at_install')
@@ -19,8 +19,8 @@ class TestPaymentTransaction(APSCommon):
 
     def test_no_item_missing_from_rendering_values(self):
         """ Test that the rendered values are conform to the transaction fields. """
-        self.env['ir.config_parameter'].set_param('web.base.url', 'http://127.0.0.1:8069')
-        self.patch(self, 'base_url', lambda: 'http://127.0.0.1:8069')
+        self.env['ir.config_parameter'].set_param('web.base.url', 'http://127.0.0.1:7073')
+        self.patch(self, 'base_url', lambda: 'http://127.0.0.1:7073')
 
         tx = self._create_transaction(flow='redirect')
 
@@ -41,7 +41,7 @@ class TestPaymentTransaction(APSCommon):
         }
         self.assertEqual(tx._get_specific_rendering_values(None), expected_values)
 
-    @mute_logger('odoo.addons.payment.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment.models.payment_transaction')
     def test_no_input_missing_from_redirect_form(self):
         """ Test that the no key is not omitted from the rendering values. """
         tx = self._create_transaction(flow='redirect')

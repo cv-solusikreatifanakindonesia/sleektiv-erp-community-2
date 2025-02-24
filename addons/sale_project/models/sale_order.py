@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 from collections import defaultdict
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import UserError
-from odoo.osv.expression import AND, NEGATIVE_TERM_OPERATORS, TERM_OPERATORS_NEGATION
-from odoo.addons.project.models.project_task import CLOSED_STATES
+from sleektiv import api, fields, models, _, Command
+from sleektiv.exceptions import UserError
+from sleektiv.osv.expression import AND, NEGATIVE_TERM_OPERATORS, TERM_OPERATORS_NEGATION
+from sleektiv.addons.project.models.project_task import CLOSED_STATES
 
 
 class SaleOrder(models.Model):

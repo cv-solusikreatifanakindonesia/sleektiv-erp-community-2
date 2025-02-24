@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import hashlib
@@ -9,11 +9,11 @@ from wsgiref.handlers import format_date_time
 
 import requests
 
-from odoo import _, fields, models
-from odoo.exceptions import ValidationError
-from odoo.fields import Datetime
+from sleektiv import _, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.fields import Datetime
 
-from odoo.addons.payment_worldline import const
+from sleektiv.addons.payment_worldline import const
 
 
 _logger = logging.getLogger(__name__)

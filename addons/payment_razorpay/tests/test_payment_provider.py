@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 
-from odoo.addons.payment_razorpay.tests.common import RazorpayCommon
+from sleektiv.addons.payment_razorpay.tests.common import RazorpayCommon
 
 
 @tagged('post_install', '-at_install')

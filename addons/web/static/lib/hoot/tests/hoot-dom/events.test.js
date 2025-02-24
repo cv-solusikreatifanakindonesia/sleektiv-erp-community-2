@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { after, describe, expect, getFixture, test } from "@odoo/hoot";
+import { after, describe, expect, getFixture, test } from "@sleektiv/hoot";
 import {
     clear,
     click,
@@ -25,9 +25,9 @@ import {
     setInputFiles,
     setInputRange,
     uncheck,
-} from "@odoo/hoot-dom";
-import { advanceTime, animationFrame, mockFetch, mockTouch, mockUserAgent } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+} from "@sleektiv/hoot-dom";
+import { advanceTime, animationFrame, mockFetch, mockTouch, mockUserAgent } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import { EventList } from "@web/../lib/hoot-dom/helpers/events";
 import { mountForTest, parseUrl, waitForIframes } from "../local_helpers";
 

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, useRef, useState, xml } from "@odoo/owl";
+import { Component, useRef, useState, xml } from "@sleektiv/owl";
 import { getActiveElement } from "@web/../lib/hoot-dom/helpers/dom";
 import { isRegExpFilter, parseRegExp } from "@web/../lib/hoot-dom/hoot_dom_utils";
 import { Suite } from "../core/suite";

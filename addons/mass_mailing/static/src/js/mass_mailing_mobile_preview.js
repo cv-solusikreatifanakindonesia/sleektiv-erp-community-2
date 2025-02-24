@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, markup, useEffect, useRef } from "@odoo/owl";
+import { Component, markup, useEffect, useRef } from "@sleektiv/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { escape } from "@web/core/utils/strings";
 export class MassMailingMobilePreviewDialog extends Component {

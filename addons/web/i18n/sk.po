@@ -7467,7 +7467,7 @@ msgid ""
 "You need to start Odoo with at least two workers to print a pdf version of "
 "the reports."
 msgstr ""
-"Treba nakonfigurovať Odoo: odoo.conf min (workers =2) pre tlač PDF verzie "
+"Treba nakonfigurovať Odoo: sleektiv.conf min (workers =2) pre tlač PDF verzie "
 "výkazov."
 
 #. module: web

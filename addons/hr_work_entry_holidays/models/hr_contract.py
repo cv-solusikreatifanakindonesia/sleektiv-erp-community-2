@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import pytz
 
-from odoo import models
-from odoo.osv.expression import OR
+from sleektiv import models
+from sleektiv.osv.expression import OR
 
 
 class HrContract(models.Model):
@@ -61,5 +61,5 @@ class HrContract(models.Model):
         domain = super()._get_sub_leave_domain()
         return OR([
             domain,
-            [('holiday_id.employee_id', 'in', self.employee_id.ids)] # see https://github.com/odoo/enterprise/pull/15091
+            [('holiday_id.employee_id', 'in', self.employee_id.ids)] # see https://github.com/sleektiv/enterprise/pull/15091
         ])

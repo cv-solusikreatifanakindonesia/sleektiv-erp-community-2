@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { mount, reactive, whenReady } from "@odoo/owl";
+import { mount, reactive, whenReady } from "@sleektiv/owl";
 import { getRunner } from "../main_runner";
 import { patchWindow } from "../mock/window";
 import { generateStyleSheets, setColorRoot } from "./hoot_colors";

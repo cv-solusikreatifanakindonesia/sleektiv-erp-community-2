@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo import Command
-from odoo.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
-from odoo.fields import Datetime as FieldsDatetime
-from odoo.tests import Form, users
+from sleektiv import Command
+from sleektiv.addons.event_booth_sale.tests.common import TestEventBoothSaleCommon
+from sleektiv.fields import Datetime as FieldsDatetime
+from sleektiv.tests import Form, users
 
 
 class TestEventData(TestEventBoothSaleCommon):

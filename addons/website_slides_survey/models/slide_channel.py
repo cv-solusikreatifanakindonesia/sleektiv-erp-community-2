@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
+from sleektiv import api, fields, models, _
+from sleektiv.osv import expression
 
 class ChannelUsersRelation(models.Model):
     _inherit = 'slide.channel.partner'

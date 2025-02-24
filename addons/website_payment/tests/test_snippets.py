@@ -1,12 +1,12 @@
-import odoo
-import odoo.tests
+import sleektiv
+import sleektiv.tests
 import logging
 
 _logger = logging.getLogger(__name__)
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestSnippets(odoo.tests.HttpCase):
+@sleektiv.tests.common.tagged('post_install', '-at_install')
+class TestSnippets(sleektiv.tests.HttpCase):
 
     def test_01_donation(self):
         payment_demo = self.env['ir.module.module']._get('payment_demo')

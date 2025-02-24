@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
 from werkzeug.urls import url_join
 
-from odoo import _, fields, models
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-from odoo.exceptions import UserError
+from sleektiv import _, fields, models
+from sleektiv.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from sleektiv.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -30,8 +30,8 @@ class AccountEdiProxyClientUser(models.Model):
         # We do not use demo with MyInvois as during a demo, showing the invoice on the pre-prod platform will be better.
         urls['l10n_my_edi'] = {
             'demo': False,
-            'prod': 'https://l10n-my-edi.api.odoo.com',
-            'test': self.env['ir.config_parameter'].sudo().get_param('l10n_my_edi_test_server_url', 'https://l10n-my-edi.test.odoo.com'),
+            'prod': 'https://l10n-my-edi.api.sleektiv.com',
+            'test': self.env['ir.config_parameter'].sudo().get_param('l10n_my_edi_test_server_url', 'https://l10n-my-edi.test.sleektiv.com'),
         }
         return urls
 

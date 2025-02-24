@@ -1,13 +1,13 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, onWillStart, useChildSubEnv, useState } from "@odoo/owl";
+import { Component, onWillStart, useChildSubEnv, useState } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 import { download } from "@web/core/network/download";
 
 import { useSpreadsheetNotificationStore } from "@spreadsheet/hooks";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
-import { Spreadsheet, Model, registries } from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
+import { Spreadsheet, Model, registries } from "@sleektiv/o-spreadsheet";
 import { _t } from "@web/core/l10n/translation";
 import { useSpreadsheetPrint } from "../hooks";
 

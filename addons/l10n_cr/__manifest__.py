@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Costa Rica - Accounting',
     'icon': '/account/static/description/l10n.png',
     'countries': ['cr'],
-    'url': 'https://github.com/CLEARCORP/odoo-costa-rica',
+    'url': 'https://github.com/CLEARCORP/sleektiv-costa-rica',
     'author': 'ClearCorp S.A.',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Chart of accounts for Costa Rica.
@@ -18,7 +18,7 @@ Includes:
     * account.chart.template
 
 Everything is in English with Spanish translation. Further translations are welcome,
-please go to http://translations.launchpad.net/openerp-costa-rica.
+please go to http://translations.launchpad.net/sleektiv-costa-rica.
     """,
     'depends': [
         'account',

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 from datetime import datetime, timedelta
 
-from odoo import Command
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.exceptions import UserError
-from odoo.tests import Form, tagged, freeze_time
+from sleektiv import Command
+from sleektiv.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from sleektiv.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import Form, tagged, freeze_time
 
 
 @freeze_time("2021-01-14 09:12:15")

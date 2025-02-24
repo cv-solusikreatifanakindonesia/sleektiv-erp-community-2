@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { listView } from '@web/views/list/list_view';
 import { registry } from "@web/core/registry";

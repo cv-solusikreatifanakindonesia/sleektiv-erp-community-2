@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import os
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools.mimetypes import guess_mimetype
-from odoo.tools.misc import format_date
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools.mimetypes import guess_mimetype
+from sleektiv.tools.misc import format_date
 
 
 class IrAttachment(models.Model):

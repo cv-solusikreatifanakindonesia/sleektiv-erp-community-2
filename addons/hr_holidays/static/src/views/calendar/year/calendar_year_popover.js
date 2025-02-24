@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { Dialog } from "@web/core/dialog/dialog";
 

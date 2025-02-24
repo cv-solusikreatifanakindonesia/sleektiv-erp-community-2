@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 
-from odoo import _, fields, models, tools
-from odoo.tools.misc import file_open
+from sleektiv import _, fields, models, tools
+from sleektiv.tools.misc import file_open
 
 
 class TestMassMailing(models.TransientModel):

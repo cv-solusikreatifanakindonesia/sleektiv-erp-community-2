@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import jinja2
 import json
@@ -12,14 +12,14 @@ import time
 import werkzeug
 import urllib3
 
-from odoo import http
-from odoo.addons.hw_drivers.browser import Browser, BrowserState
-from odoo.addons.hw_drivers.connection_manager import connection_manager
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.tools.helpers import Orientation
-from odoo.tools.misc import file_path
+from sleektiv import http
+from sleektiv.addons.hw_drivers.browser import Browser, BrowserState
+from sleektiv.addons.hw_drivers.connection_manager import connection_manager
+from sleektiv.addons.hw_drivers.driver import Driver
+from sleektiv.addons.hw_drivers.main import iot_devices
+from sleektiv.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers.tools.helpers import Orientation
+from sleektiv.tools.misc import file_path
 
 path = os.path.realpath(os.path.join(os.path.dirname(__file__), '../../views'))
 loader = jinja2.FileSystemLoader(path)
@@ -46,7 +46,7 @@ class DisplayDriver(Driver):
         if self.device_identifier != 'distant_display':
             self._x_screen = device.get('x_screen', '0')
             self.browser = Browser(
-                self.url or 'http://localhost:8069/point_of_sale/display/' + self.device_identifier,
+                self.url or 'http://localhost:7073/point_of_sale/display/' + self.device_identifier,
                 self._x_screen,
                 os.environ.copy(),
             )
@@ -71,7 +71,7 @@ class DisplayDriver(Driver):
     def run(self):
         while self.device_identifier != 'distant_display' and not self._stopped.is_set() and "pos_customer_display" not in self.url:
             time.sleep(60)
-            if self.url != 'http://localhost:8069/point_of_sale/display/' + self.device_identifier and self.browser.state != BrowserState.KIOSK:
+            if self.url != 'http://localhost:7073/point_of_sale/display/' + self.device_identifier and self.browser.state != BrowserState.KIOSK:
                 # Refresh the page every minute
                 self.browser.refresh()
 
@@ -79,7 +79,7 @@ class DisplayDriver(Driver):
         self.url = (
             url
             or helpers.load_browser_state()[0]
-            or 'http://localhost:8069/point_of_sale/display/' + self.device_identifier
+            or 'http://localhost:7073/point_of_sale/display/' + self.device_identifier
         )
 
         browser_state = BrowserState.KIOSK if "/pos-self/" in self.url else BrowserState.FULLSCREEN
@@ -87,14 +87,14 @@ class DisplayDriver(Driver):
 
     def load_url(self):
         url = None
-        if helpers.get_odoo_server_url():
+        if helpers.get_sleektiv_server_url():
             # disable certifiacte verification
             urllib3.disable_warnings()
             http = urllib3.PoolManager(cert_reqs='CERT_NONE')
             try:
                 response = http.request(
                     'GET',
-                    "%s/iot/box/%s/display_url" % (helpers.get_odoo_server_url(), helpers.get_mac_address())
+                    "%s/iot/box/%s/display_url" % (helpers.get_sleektiv_server_url(), helpers.get_mac_address())
                 )
                 if response.status == 200:
                     data = json.loads(response.data.decode('utf8'))
@@ -131,7 +131,7 @@ class DisplayController(http.Controller):
     def customer_facing_display(self, action, pos_id=None, access_token=None, data=None):
         display = self.ensure_display()
         if action in ['open', 'open_kiosk']:
-            origin = helpers.get_odoo_server_url()
+            origin = helpers.get_sleektiv_server_url()
             if action == 'open_kiosk':
                 url = f"{origin}/pos-self/{pos_id}?access_token={access_token}"
                 display.set_orientation(Orientation.RIGHT)
@@ -184,7 +184,7 @@ class DisplayController(http.Controller):
             display_identifier = default_display.device_identifier
 
         return pos_display_template.render({
-            'title': "Odoo -- Point of Sale",
+            'title': "Sleektiv -- Point of Sale",
             'breadcrumb': 'POS Client display',
             'display_ifaces': display_ifaces,
             'display_identifier': display_identifier,

@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.addons.base.models.res_partner import WARNING_MESSAGE, WARNING_HELP
-from odoo.osv import expression
+from sleektiv import api, fields, models
+from sleektiv.addons.base.models.res_partner import WARNING_MESSAGE, WARNING_HELP
+from sleektiv.osv import expression
 
 
 class ResPartner(models.Model):

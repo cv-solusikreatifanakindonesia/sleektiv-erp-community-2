@@ -1,4 +1,4 @@
-import { Component, useEffect } from "@odoo/owl";
+import { Component, useEffect } from "@sleektiv/owl";
 
 export class Loader extends Component {
     static template = "point_of_sale.Loader";

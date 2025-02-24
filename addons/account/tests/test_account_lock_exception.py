@@ -2,11 +2,11 @@ from datetime import timedelta
 
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.addons.account.models.company import SOFT_LOCK_DATE_FIELDS
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tests import new_test_user, tagged
+from sleektiv import Command, fields
+from sleektiv.addons.account.models.company import SOFT_LOCK_DATE_FIELDS
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import new_test_user, tagged
 
 
 @tagged('post_install', '-at_install')

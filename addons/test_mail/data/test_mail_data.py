@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 MAIL_TEMPLATE = """Return-Path: {return_path}
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -46,7 +46,7 @@ Content-Transfer-Encoding: quoted-printable
 MAIL_TEMPLATE_EXTRA_HTML = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -89,7 +89,7 @@ Content-Transfer-Encoding: quoted-printable
 
 MAIL_TEMPLATE_PLAINTEXT = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 To: {to}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -108,7 +108,7 @@ Sylvie
 MAIL_TEMPLATE_HTML = """Return-Path: {return_path}
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -146,7 +146,7 @@ X-Spam-Status: No, score=-2.6 required=5.0 tests=BAYES_00,FREEMAIL_FROM,
     HTML_MESSAGE,RCVD_IN_DNSWL_LOW autolearn=unavailable version=3.3.1
 Received: from mail-ie0-f173.google.com (mail-ie0-f173.google.com [209.85.223.173])
     by mail1.grosbedon.com (Postfix) with ESMTPS id 9BBD7BFAAA
-    for <raoul@openerp.fr>; Fri, 23 Aug 2013 13:17:55 +0200 (CEST)
+    for <raoul@sleektiv.fr>; Fri, 23 Aug 2013 13:17:55 +0200 (CEST)
 Received: by mail-ie0-f173.google.com with SMTP id qd12so575130ieb.4
         for <raoul@grosbedon.fr>; Fri, 23 Aug 2013 04:17:54 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
@@ -309,7 +309,7 @@ SGVsbG8gd29ybGQK
 MAIL_MULTIPART_INVALID_ENCODING = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -359,7 +359,7 @@ Q2hhdXNz77+977+9ZSBkZSBCcnV4ZWxsZXM8L2NiYzpTdHJlZXROYW1lPg0KPC9JbnZvaWNlPg0K
 MAIL_MULTIPART_OMITTED_CHARSET_XML = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -403,7 +403,7 @@ PEludm9pY2U+Q2hhdXNzw6llIGRlIEJydXhlbGxlczwvSW52b2ljZT4=
 MAIL_MULTIPART_OMITTED_CHARSET_CSV = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -445,7 +445,7 @@ Content-Type: text/csv; name="bis3.csv"
 MAIL_MULTIPART_OMITTED_CHARSET_TXT = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 To: {to}
 cc: {cc}
-Received: by mail1.openerp.com (Postfix, from userid 10002)
+Received: by mail1.sleektiv.com (Postfix, from userid 10002)
     id 5DF9ABFB2A; Fri, 10 Aug 2012 16:16:39 +0200 (CEST)
 From: {email_from}
 Subject: {subject}
@@ -512,7 +512,7 @@ Received: by mail.example.com (Postfix, from userid 10002)
     id E8166BFACB; Fri, 23 Aug 2013 13:18:02 +0200 (CEST)
 From: "Bruce Wayne" <bruce@wayneenterprises.com>
 Subject: test
-Message-ID: <c0c20fdd-a38e-b296-865b-d9232bf30ce5@odoo.com>
+Message-ID: <c0c20fdd-a38e-b296-865b-d9232bf30ce5@sleektiv.com>
 Date: Mon, 26 Aug 2019 16:55:09 +0200
 MIME-Version: 1.0
 Content-Type: multipart/mixed;
@@ -651,13 +651,13 @@ AAAAACwAAAAAAgACAAAEA3DJFQA7
 MAIL_EML_ATTACHMENT = """Subject: Re: test attac
 From: {email_from}
 To: {to}
-References: <f3b9f8f8-28fa-2543-cab2-7aa68f679ebb@odoo.com>
-Message-ID: <cb7eaf62-58dc-2017-148c-305d0c78892f@odoo.com>
+References: <f3b9f8f8-28fa-2543-cab2-7aa68f679ebb@sleektiv.com>
+Message-ID: <cb7eaf62-58dc-2017-148c-305d0c78892f@sleektiv.com>
 Date: Wed, 14 Mar 2018 14:26:58 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
  Thunderbird/52.6.0
 MIME-Version: 1.0
-In-Reply-To: <f3b9f8f8-28fa-2543-cab2-7aa68f679ebb@odoo.com>
+In-Reply-To: <f3b9f8f8-28fa-2543-cab2-7aa68f679ebb@sleektiv.com>
 Content-Type: multipart/mixed;
  boundary="------------A6B5FD5F68F4D73ECD739009"
 Content-Language: en-US
@@ -681,7 +681,7 @@ Content-Transfer-Encoding: 8bit
 Content-Disposition: attachment;
  filename="original_msg.eml"
 
-Delivered-To: anon2@gmail1.openerp.com
+Delivered-To: anon2@gmail1.sleektiv.com
 Received: by 10.46.1.170 with SMTP id f42csp2379722lji;
         Mon, 5 Mar 2018 01:19:23 -0800 (PST)
 X-Google-Smtp-Source: AG47ELsYTlAcblMxfnaEENQuF+MFoac5Q07wieyw0cybq/qOX4+DmayqoQILkiWT+NiTOcnr/ACO
@@ -706,33 +706,33 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
          7wXuo/gpYe6E2cPuS2opei8AzjEhYTNzlYXTPvaoxCCTTjfGTaPv22TeRDehuIXngSEl
          Nmmw==
 ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@odoo.com header.s=mail header.b=MCzhjB9b;
-       spf=pass (google.com: domain of soup@odoo.com designates 149.202.180.44 as permitted sender) smtp.mailfrom=soup@odoo.com;
-       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=odoo.com
-Return-Path: <soup@odoo.com>
-Received: from mail2.odoo.com (mail2.odoo.com. [149.202.180.44])
+       dkim=pass header.i=@sleektiv.com header.s=mail header.b=MCzhjB9b;
+       spf=pass (google.com: domain of soup@sleektiv.com designates 149.202.180.44 as permitted sender) smtp.mailfrom=soup@sleektiv.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sleektiv.com
+Return-Path: <soup@sleektiv.com>
+Received: from mail2.sleektiv.com (mail2.sleektiv.com. [149.202.180.44])
         by mx.google.com with ESMTPS id y4si4279200wmy.148.2018.03.05.01.19.22
         (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
         Mon, 05 Mar 2018 01:19:23 -0800 (PST)
-Received-SPF: pass (google.com: domain of soup@odoo.com designates 149.202.180.44 as permitted sender) client-ip=149.202.180.44;
+Received-SPF: pass (google.com: domain of soup@sleektiv.com designates 149.202.180.44 as permitted sender) client-ip=149.202.180.44;
 Authentication-Results: mx.google.com;
-       dkim=pass header.i=@odoo.com header.s=mail header.b=MCzhjB9b;
-       spf=pass (google.com: domain of soup@odoo.com designates 149.202.180.44 as permitted sender) smtp.mailfrom=soup@odoo.com;
-       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=odoo.com
+       dkim=pass header.i=@sleektiv.com header.s=mail header.b=MCzhjB9b;
+       spf=pass (google.com: domain of soup@sleektiv.com designates 149.202.180.44 as permitted sender) smtp.mailfrom=soup@sleektiv.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=sleektiv.com
 Received: from [10.10.31.24] (unknown [91.183.114.50])
 	(Authenticated sender: soup)
-	by mail2.odoo.com (Postfix) with ESMTPSA id 7B571A4085
-	for <what@odoo.com>; Mon,  5 Mar 2018 10:19:21 +0100 (CET)
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=odoo.com; s=mail;
+	by mail2.sleektiv.com (Postfix) with ESMTPSA id 7B571A4085
+	for <what@sleektiv.com>; Mon,  5 Mar 2018 10:19:21 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=sleektiv.com; s=mail;
 	t=1520241562; bh=L2r7Sp/vjogIdM1k8H9zDGDjnhKolsTTLLjndnFC4Jc=;
 	h=To:From:Subject:Date:From;
 	b=MCzhjB9bnsrJ3uKjq+GjujFxmtrq3fc7Vv7Vg2C72EPKnkxgqy6yPjWKtXbBlaiT3
 	 YjKI24aiSQlOeOPQiqFgiDzeqqemNDp+CRuhoYz1Vbz+ESRaHtkWRLb7ZjvohS2k7e
 	 RTq7tUxY2nUL2YrNHV7DFYtJVBwiTuyLP6eAiJdE=
-To: what@odoo.com
-From: Soup <soup@odoo.com>
+To: what@sleektiv.com
+From: Soup <soup@sleektiv.com>
 Subject: =?UTF-8?Q?Soupe_du_jour_:_Pois_cass=c3=a9s?=
-Message-ID: <a05d8334-7b7c-df68-c96a-4a88ed19f31b@odoo.com>
+Message-ID: <a05d8334-7b7c-df68-c96a-4a88ed19f31b@sleektiv.com>
 Date: Mon, 5 Mar 2018 10:19:21 +0100
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
  Thunderbird/52.6.0
@@ -743,7 +743,7 @@ Content-Language: en-US
 X-Spam-Status: No, score=-1.2 required=5.0 tests=ALL_TRUSTED,BAYES_00,
 	HTML_IMAGE_ONLY_08,HTML_MESSAGE,T_REMOTE_IMAGE autolearn=no
 	autolearn_force=no version=3.4.0
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on mail2.odoo.com
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on mail2.sleektiv.com
 
 This is a multi-part message in MIME format.
 --------------1F2D18B1129FC2F0B9EECF50
@@ -755,10 +755,10 @@ Résultat de recherche d'images pour "dessin la princesse au petit pois"
 --
 Soup
 
-Odoo S.A.
+Sleektiv S.A.
 Chaussée de Namur, 40
 B-1367 Grand Rosière
-Web: http://www.odoo.com
+Web: http://www.sleektiv.com
 
 
 --------------1F2D18B1129FC2F0B9EECF50
@@ -778,10 +778,10 @@ src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjCNAadd3NDM8g9w0P_-g
     <pre class="moz-signature" cols="72">--
 Soup
 
-Odoo S.A.
+Sleektiv S.A.
 Chaussée de Namur, 40
 B-1367 Grand Rosière
-Web: <a class="moz-txt-link-freetext" href="http://www.odoo.com">http://www.odoo.com</a> </pre>
+Web: <a class="moz-txt-link-freetext" href="http://www.sleektiv.com">http://www.sleektiv.com</a> </pre>
   </body>
 </html>
 
@@ -799,7 +799,7 @@ From: {email_from}
 To: {to}
 Message-Id: <20191224103207.415713014C@example.com>
 Return-Path: <MAILER-DAEMON>
-Delivered-To: odoo+82240-account.invoice-19177@mycompany.example.com
+Delivered-To: sleektiv+82240-account.invoice-19177@mycompany.example.com
 Received: by example.com (Postfix) id 415713014C; Tue, 24 Dec
  2019 11:32:07 +0100 (CET)
 Auto-Submitted: auto-replied
@@ -837,13 +837,13 @@ Received: by example.com (Postfix) id 415713014C; Tue, 24 Dec
 Content-Type: multipart/mixed; boundary="===============3600759226158551994=="
 MIME-Version: 1.0
 Message-Id: {msg_id}
-references: <1571814481.189281940460205.799582441238467-openerp-19177-account.invoice@mycompany.example.com>
+references: <1571814481.189281940460205.799582441238467-sleektiv-19177-account.invoice@mycompany.example.com>
 Subject: Test
 From: "Test" <noreply+srglvrz-gmail.com@mycompany.example.com>
 Reply-To: "MY COMPANY" <info@mycompany.example.com>
 To: "Test" <test@anothercompany.example.com>
 Date: Tue, 24 Dec 2019 10:32:05 -0000
-X-Odoo-Objects: account.invoice-19177
+X-Sleektiv-Objects: account.invoice-19177
 
 --16063919151.b32bE0eD.7--"""
 
@@ -926,9 +926,9 @@ To: generic@mydomain.com
 Subject: Re: xxxx (Ref PO1)
 Date: Sat, 14 Apr 2018 02:11:42 +0000
 Message-Id: <em67f5c44a-xxxx-xxxx-xxxx-69f56d618a94@wswin7hg4n4l1ce>
-In-Reply-To: <829228111124527.1111111602.256611118262939-openerp-129-xxxx.xxxx@ip-1-1-1-1>
-References: <867911111953277.1523671337.187951111160400-openerp-129-xxxx.xxxx@ip-1-1-1-1>
- <867911111953277.1523671337.256611118262939-openerp-129-xxxx.xxxx@ip-1-1-1-1>
+In-Reply-To: <829228111124527.1111111602.256611118262939-sleektiv-129-xxxx.xxxx@ip-1-1-1-1>
+References: <867911111953277.1523671337.187951111160400-sleektiv-129-xxxx.xxxx@ip-1-1-1-1>
+ <867911111953277.1523671337.256611118262939-sleektiv-129-xxxx.xxxx@ip-1-1-1-1>
 Reply-To: "xxxx xxxx" <xxxx@xxxx.com>
 User-Agent: eM_Client/7.0.26687.0
 Mime-Version: 1.0
@@ -985,7 +985,7 @@ xxxx@xxxx.com</a>&gt;</div>
 <div>Subject: xxxx</div><div><br /></div=
 >
 <div id=3D"x00b4101ba6e64ce"><blockquote cite=3D"829228972724527.1523671602=
-.256660938262939-openerp-129-xxxx.xxxx@ip-1-1-1-1" type=3D"cite"=
+.256660938262939-sleektiv-129-xxxx.xxxx@ip-1-1-1-1" type=3D"cite"=
  class=3D"cite2">
 <table border=3D"0" width=3D"100%" cellpadding=3D"0" bgcolor=3D"#ededed"=
  style=3D"padding: 20px; background-color: #ededed" summary=3D"o_mail_notif=
@@ -1074,7 +1074,7 @@ aa.com" style=3D"text-decoration:none; color: white;">info@aust-mfg.com</a>=
                       </tr>
                       <tr>
                         <td align=3D"center">
-                            Powered by <a href=3D"https://www.odoo.com">Odo=
+                            Powered by <a href=3D"https://www.sleektiv.com">Odo=
 o</a>.
                         </td>
                       </tr>
@@ -1158,13 +1158,13 @@ DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=test.ironsky; s=mail;
 Content-Type: multipart/mixed; boundary="===============7355787381227985247=="
 MIME-Version: 1.0
 Message-Id: {extra}
-references: <670034078674109.1555335454.587288856506348-openerp-32-project.task@aaa>
+references: <670034078674109.1555335454.587288856506348-sleektiv-32-project.task@aaa>
 Subject: Re: Test
 From: Mitchell Admin <admin@yourcompany.example.com>
 Reply-To: YourCompany Research & Development <aaa+catchall@test.ironsky>
 To: Raoul <{email_from}>
 Date: Mon, 15 Apr 2019 13:40:24 -0000
-X-Odoo-Objects: project.project-3, ,project.task-32
+X-Sleektiv-Objects: project.project-3, ,project.task-32
 X-Spam-Status: No, score=-2.0 required=5.0 tests=ALL_TRUSTED,BAYES_00,
     DKIM_ADSP_NXDOMAIN,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE
     shortcircuit=no autolearn=no autolearn_force=no version=3.4.2
@@ -1208,7 +1208,7 @@ OyI+T2RvbzwvYT4uCjwvcD4KPC9kaXY+CiAgICAgICAg
 
 
 MAIL_BOUNCE_QP_RFC822_HEADERS = """\
-Received: by mailserver.odoo.com (Postfix)
+Received: by mailserver.sleektiv.com (Postfix)
         id EA0B917B8E4; Tue, 29 Feb 2023 11:11:11 +0100 (CET)
 From: {email_from} 
 Subject: Undelivered Mail Returned to Sender
@@ -1216,13 +1216,13 @@ To: {email_to}
 Auto-Submitted: auto-replied
 MIME-Version: 1.0
 Content-Type: multipart/report; report-type=delivery-status;
-        boundary="DFFDC17AA03.1673346179/mailserver.odoo.com"
-Message-Id: <40230110102259.EA0B917B8E4@mailserver.odoo.com>
+        boundary="DFFDC17AA03.1673346179/mailserver.sleektiv.com"
+Message-Id: <40230110102259.EA0B917B8E4@mailserver.sleektiv.com>
 Content-Transfer-Encoding: 7bit
 Delivered-To: {delivered_to}
 Return-Path: <>
 
---DFFDC17AA03.1673346179/mailserver.odoo.com
+--DFFDC17AA03.1673346179/mailserver.sleektiv.com
 Content-Description: Notification
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
@@ -1236,13 +1236,13 @@ be delivered to one or more recipients.
 ply to
     RCPT TO command)
 
---DFFDC17AA03.1673346179/mailserver.odoo.com
+--DFFDC17AA03.1673346179/mailserver.sleektiv.com
 Content-Description: Delivery report
 Content-Type: message/delivery-status
 
-Reporting-MTA: dns; mailserver.odoo.com
+Reporting-MTA: dns; mailserver.sleektiv.com
 X-Postfix-Queue-ID: DFFDC17AA03
-X-Postfix-Sender: rfc822; bounce@xxx.odoo.com
+X-Postfix-Sender: rfc822; bounce@xxx.sleektiv.com
 Arrival-Date: Tue, 29 Feb 2023 10:10:10 +0100 (CET)
 
 Final-Recipient: rfc822; rdesfrdgtfdrfesd@outlook.com
@@ -1253,40 +1253,40 @@ Remote-MTA: dns; outlook-com.olc.protection.outlook.com
 Diagnostic-Code: smtp; 550 5.5.0 Requested action not taken: mailbox
     unavailable (S2017062302).
 
---DFFDC17AA03.1673346179/mailserver.odoo.com
+--DFFDC17AA03.1673346179/mailserver.sleektiv.com
 Content-Description: Undelivered Message Headers
 Content-Type: text/rfc822-headers
 Content-Transfer-Encoding: quoted-printable
 
-Return-Path: <bounce@xxx.odoo.com>
-Received: from eupp00.odoo.com (00.72.79.34.bc.googleusercontent.com [34.=
+Return-Path: <bounce@xxx.sleektiv.com>
+Received: from eupp00.sleektiv.com (00.72.79.34.bc.googleusercontent.com [34.=
 79.72.00])
-        by mailserver.odoo.com (Postfix) with ESMTPS id DFFDC17AA03;
+        by mailserver.sleektiv.com (Postfix) with ESMTPS id DFFDC17AA03;
         Tue, 10 Jan 2023 11:22:57 +0100 (CET)
 DKIM-Signature: v=3D1; a=3Drsa-sha256; c=3Dsimple/simple; d=3Dxxx.be;
-        s=3Dodoo; t=3D1673346178;
+        s=3Dsleektiv; t=3D1673346178;
         bh=3DYPJOqkUi8B28X1MrRUsgmsL8KRz/ZIkpbYyc6wNITXA=3D;
         h=3Dreferences:Subject:From:Reply-To:To:Date:From;
         b=3DCMqh7mUvpgUw+JpCeGluv1+MZ3y6EsXd0acmsfzpYBjcoy1InvD6FLT1/lQCcgetf
          cGyL/8R4vvDKATyE0AtOIpoYDsbpnMoiYWqaSXnDVuLTrEZzyrK/2j10ZTnHZ2uDTC
          b7wPjFfQ9pted/t6CAUhVT1XydDNalSwEZovy/QI=3D
-Message-Id: <368396033905967.1673346177.695352554321289-openerp-11-sale.o=
+Message-Id: <368396033905967.1673346177.695352554321289-sleektiv-11-sale.o=
 rder@eupp00>
-references: <792105153140463.1673746527.352018594741821-openerp-11-sale.o=
-rder@xxx.odoo.com> <368396033905967.1673346177.695352554321289-openerp-11=
+references: <792105153140463.1673746527.352018594741821-sleektiv-11-sale.o=
+rder@xxx.sleektiv.com> <368396033905967.1673346177.695352554321289-sleektiv-11=
 -sale.order@eupp00>
 Subject: Thi is a SO (Ref SO/11)
 From: info@xxx.odoo.com
-Reply-To: "SO/11" <catchall@xxx.odoo.com=
+Reply-To: "SO/11" <catchall@xxx.sleektiv.com=
 >
 To: "rdesfrdgtfdrfesd@outlook.com" <rdesfrdgtfdrfesd@outlook.com>
 Date: Tue, 29 Feb 2023 06:09:06 -0000
-X-Odoo-Objects: sale.order-11
+X-Sleektiv-Objects: sale.order-11
 MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary=3D"=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
 =3D=3D=3D=3D=3D5706316606908750110=3D=3D"
 
---DFFDC17AA03.1673346179/mailserver.odoo.com--
+--DFFDC17AA03.1673346179/mailserver.sleektiv.com--
 
 """
 
@@ -1406,7 +1406,7 @@ PDF_PARSED = b'''%PDF-1.1\n%\xc2\xa5\xc2\xb1\xc3\xab\n\n1 0 obj\n  << /Type /Cat
 
 THAI_EMAIL_WINDOWS_874 = '''\
 From: Thai Customer <outlook_windows@outlook.com>
-To: "Thai Odoo User" <thai-user@odoo.com>
+To: "Thai Sleektiv User" <thai-user@sleektiv.com>
 Subject: =?windows-874?B?4MPX6M2n?=
 Thread-Topic: =?windows-874?B?4MPX6M2n?=
 Thread-Index: AQHahRQ4qiMBoXtK0U2XwaGg8w9Y9g==

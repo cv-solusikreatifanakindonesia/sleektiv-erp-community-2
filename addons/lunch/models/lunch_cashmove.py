@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.tools import float_round
+from sleektiv import api, fields, models, _
+from sleektiv.tools import float_round
 
 
 class LunchCashMove(models.Model):

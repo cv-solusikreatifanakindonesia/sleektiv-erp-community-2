@@ -1,12 +1,12 @@
-from odoo.tests.common import users
-from odoo.exceptions import AccessError
-from odoo.addons.project.tests.test_access_rights import TestAccessRights
+from sleektiv.tests.common import users
+from sleektiv.exceptions import AccessError
+from sleektiv.addons.project.tests.test_access_rights import TestAccessRights
 
 class TestAccessRightsTodo(TestAccessRights):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.private_task = cls.env['project.task'].create({'name': 'OdooBot Private Task'})
+        cls.private_task = cls.env['project.task'].create({'name': 'SleektivBot Private Task'})
 
     @users('Internal user')
     def test_internal_cannot_rud_private_task(self):

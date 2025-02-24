@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { addFakeModel, addModelNamesToFetch } from '@bus/../tests/helpers/model_definitions_helpers';
 

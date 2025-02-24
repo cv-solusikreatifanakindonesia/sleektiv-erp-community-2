@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.exceptions import UserError, AccessError
-from odoo.tests.common import users
+from sleektiv.addons.mail.tests.common import MailCommon, mail_new_test_user
+from sleektiv.exceptions import UserError, AccessError
+from sleektiv.tests.common import users
 
 
 class TestPortalWizard(MailCommon):

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import contextlib
@@ -6,10 +6,10 @@ import contextlib
 from datetime import timedelta
 from markupsafe import Markup
 
-from odoo import fields
-from odoo.exceptions import AccessError
-from odoo.addons.l10n_in_edi_ewaybill.models.error_codes import ERROR_CODES
-from odoo.tools import _, LazyTranslate
+from sleektiv import fields
+from sleektiv.exceptions import AccessError
+from sleektiv.addons.l10n_in_edi_ewaybill.models.error_codes import ERROR_CODES
+from sleektiv.tools import _, LazyTranslate
 _lt = LazyTranslate(__name__)
 
 
@@ -20,7 +20,7 @@ class EWayBillError(Exception):
 
     def __init__(self, response):
         self.error_json = self._set_missing_error_message(response)
-        self.error_json.setdefault('odoo_warning', [])
+        self.error_json.setdefault('sleektiv_warning', [])
         self.error_codes = self.get_error_codes()
         super().__init__(response)
 
@@ -120,14 +120,14 @@ class EWayBillApi:
             return response
         except EWayBillError as e:
             if "no-credit" in e.error_codes:
-                e.error_json['odoo_warning'].append({
+                e.error_json['sleektiv_warning'].append({
                     'message': self.env['account.edi.format']._l10n_in_edi_get_iap_buy_credits_message(self.company)
                 })
                 raise
 
             if '238' in e.error_codes:
                 # Invalid token eror then create new token and send generate request again.
-                # This happens when authenticate called from another odoo instance with same credentials
+                # This happens when authenticate called from another sleektiv instance with same credentials
                 # (like. Demo/Test)
                 with contextlib.suppress(EWayBillError):
                     self._ewaybill_authenticate()
@@ -139,7 +139,7 @@ class EWayBillApi:
             if operation_type == "cancel" and "312" in e.error_codes:
                 # E-waybill is already canceled
                 # this happens when timeout from the Government portal but IRN is generated
-                e.error_json['odoo_warning'].append({
+                e.error_json['sleektiv_warning'].append({
                     'message': Markup("%s<br/>%s:<br/>%s") % (
                         self.DEFAULT_HELP_MESSAGE % 'cancelled',
                         _("Error"),
@@ -175,7 +175,7 @@ class EWayBillApi:
         )
         # Add warning that ewaybill was already generated
         response.update({
-            'odoo_warning': [{
+            'sleektiv_warning': [{
                 'message': self.DEFAULT_HELP_MESSAGE % 'generated',
                 'message_post': True
             }]

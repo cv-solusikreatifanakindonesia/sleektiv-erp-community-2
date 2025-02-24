@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { SaleOrderLineProductField } from '@sale/js/sale_product_field';
 import { x2ManyCommands } from "@web/core/orm_service";

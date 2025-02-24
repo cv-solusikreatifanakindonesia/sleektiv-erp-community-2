@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import re
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, AccessError, ValidationError
-from odoo.addons.l10n_in.models.iap_account import IAP_SERVICE_NAME
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError, AccessError, ValidationError
+from sleektiv.addons.l10n_in.models.iap_account import IAP_SERVICE_NAME
 
 _logger = logging.getLogger(__name__)
 

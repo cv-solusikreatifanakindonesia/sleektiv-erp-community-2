@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.exceptions import ValidationError
-from odoo.tests.common import tagged
+from sleektiv.addons.sale.tests.common import TestSaleCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests.common import tagged
 from psycopg2.errors import NotNullViolation
 
 

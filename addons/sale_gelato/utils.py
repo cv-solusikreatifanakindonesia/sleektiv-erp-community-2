@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
 import requests
 
-from odoo import _
-from odoo.exceptions import UserError
+from sleektiv import _
+from sleektiv.exceptions import UserError
 
 
 _logger = logging.getLogger(__name__)

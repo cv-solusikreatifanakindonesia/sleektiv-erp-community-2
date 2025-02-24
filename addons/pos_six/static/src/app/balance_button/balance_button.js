@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
 
 export class BalanceButton extends Component {

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import date, datetime
 from freezegun import freeze_time
 
-from odoo.tests import new_test_user
-from odoo.tests.common import tagged, TransactionCase
+from sleektiv.tests import new_test_user
+from sleektiv.tests.common import tagged, TransactionCase
 
 @tagged('post_install', '-at_install', 'hr_attendance_overtime')
 class TestHrAttendanceOvertime(TransactionCase):

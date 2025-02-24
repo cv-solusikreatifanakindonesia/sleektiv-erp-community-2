@@ -1,4 +1,4 @@
-import { after } from "@odoo/hoot";
+import { after } from "@sleektiv/hoot";
 import { serverState } from "./mock_server_state.hoot";
 import { patchWithCleanup } from "./patch_test_helpers";
 

@@ -1,4 +1,4 @@
-import { toRaw } from "@odoo/owl";
+import { toRaw } from "@sleektiv/owl";
 import {
     ATTR_SYM,
     FIELD_DEFINITION_SYM,
@@ -25,9 +25,9 @@ export class Record {
     /** @type {import("./record_internal").RecordInternal} */
     _;
     static id;
-    /** @type {import("@web/env").OdooEnv} */
+    /** @type {import("@web/env").SleektivEnv} */
     static env;
-    /** @type {import("@web/env").OdooEnv} */
+    /** @type {import("@web/env").SleektivEnv} */
     env;
     /** @type {Object<string, Record>} */
     static records;

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
 
-from odoo.addons.test_crm_full.tests.common import TestCrmFullCommon
-from odoo.tests import Form, users, warmup, tagged
+from sleektiv.addons.test_crm_full.tests.common import TestCrmFullCommon
+from sleektiv.tests import Form, users, warmup, tagged
 
 
 @tagged('crm_performance', 'post_install', '-at_install', '-standard')

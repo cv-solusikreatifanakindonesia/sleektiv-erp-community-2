@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
 from markupsafe import Markup
 from psycopg2.errors import LockNotAvailable
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
 
 TBAI_REFUND_REASONS = [
     ('R1', "R1: Art. 80.1, 80.2, 80.6 and rights founded error"),

@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from urllib.parse import urlparse
-import odoo.tests
+import sleektiv.tests
 import lxml
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestIsMultiLang(odoo.tests.HttpCase):
+@sleektiv.tests.common.tagged('post_install', '-at_install')
+class TestIsMultiLang(sleektiv.tests.HttpCase):
 
     def test_01_is_multilang_url(self):
         website = self.env['website'].search([], limit=1)

@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-from odoo import _, fields, models
+from sleektiv import _, fields, models
 
 
 class MailTrackingDurationMixin(models.AbstractModel):

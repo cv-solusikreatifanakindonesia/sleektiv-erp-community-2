@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { registry } from "@web/core/registry";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
 class ChangeLine extends Component {

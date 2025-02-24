@@ -1,7 +1,7 @@
-import { before, destroy, expect, getFixture, test } from "@odoo/hoot";
-import { manuallyDispatchProgrammaticEvent, queryOne, scroll } from "@odoo/hoot-dom";
-import { Deferred, animationFrame } from "@odoo/hoot-mock";
-import { Component, xml, useRef, onMounted } from "@odoo/owl";
+import { before, destroy, expect, getFixture, test } from "@sleektiv/hoot";
+import { manuallyDispatchProgrammaticEvent, queryOne, scroll } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame } from "@sleektiv/hoot-mock";
+import { Component, xml, useRef, onMounted } from "@sleektiv/owl";
 import { defineParams, mountWithCleanup } from "@web/../tests/web_test_helpers";
 import { usePosition } from "@web/core/position/position_hook";
 

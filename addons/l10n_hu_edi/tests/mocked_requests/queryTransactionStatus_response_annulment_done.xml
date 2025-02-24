@@ -4,7 +4,7 @@
     xmlns:ns3="http://schemas.nav.gov.hu/OSA/3.0/base"
     xmlns:ns4="http://schemas.nav.gov.hu/OSA/3.0/data">
     <header>
-        <requestId>ODOO88f933af5e3345188d56a53b59</requestId>
+        <requestId>SLEEKTIV88f933af5e3345188d56a53b59</requestId>
         <timestamp>2024-03-12T10:50:56.365Z</timestamp>
         <requestVersion>3.0</requestVersion>
         <headerVersion>1.0</headerVersion>
@@ -14,11 +14,11 @@
     </result>
     <ns2:software>
         <ns2:softwareId>BE477472701-170100</ns2:softwareId>
-        <ns2:softwareName>Odoo Enterprise</ns2:softwareName>
+        <ns2:softwareName>Sleektiv Enterprise</ns2:softwareName>
         <ns2:softwareOperation>ONLINE_SERVICE</ns2:softwareOperation>
         <ns2:softwareMainVersion>17.0+e</ns2:softwareMainVersion>
-        <ns2:softwareDevName>Odoo SA</ns2:softwareDevName>
-        <ns2:softwareDevContact>andu@odoo.com</ns2:softwareDevContact>
+        <ns2:softwareDevName>Sleektiv SA</ns2:softwareDevName>
+        <ns2:softwareDevContact>andu@sleektiv.com</ns2:softwareDevContact>
         <ns2:softwareDevCountryCode>BE</ns2:softwareDevCountryCode>
         <ns2:softwareDevTaxNumber>477472701</ns2:softwareDevTaxNumber>
     </ns2:software>
@@ -42,4 +42,4 @@
             <ns2:annulmentVerificationStatus>VERIFICATION_DONE</ns2:annulmentVerificationStatus>
         </ns2:annulmentData>
     </ns2:processingResults>
-</ns2:QueryTransactionStatusResponse>
+</ns2:QueryTransactionStatusResponse> 

@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import ValidationError
-from odoo.tests.common import TransactionCase
-from odoo.tests import Form
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests.common import TransactionCase
+from sleektiv.tests import Form
 
 
 class TestMrpAnalyticAccount(TransactionCase):

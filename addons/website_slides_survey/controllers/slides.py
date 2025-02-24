@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import werkzeug
 import werkzeug.utils
 import werkzeug.exceptions
 
-from odoo import _
-from odoo import http
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.osv import expression
+from sleektiv import _
+from sleektiv import http
+from sleektiv.exceptions import AccessError
+from sleektiv.http import request
+from sleektiv.osv import expression
 
-from odoo.addons.website_slides.controllers.main import WebsiteSlides
+from sleektiv.addons.website_slides.controllers.main import WebsiteSlides
 
 
 class WebsiteSlidesSurvey(WebsiteSlides):

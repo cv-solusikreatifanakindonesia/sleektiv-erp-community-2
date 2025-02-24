@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import time
 
-from odoo.fields import Command
-from odoo.tests import tagged
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.product.tests.common import ProductCommon
+from sleektiv.addons.product.tests.common import ProductCommon
 
 
 @tagged('post_install', '-at_install')

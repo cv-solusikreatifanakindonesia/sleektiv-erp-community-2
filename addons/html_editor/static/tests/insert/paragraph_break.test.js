@@ -1,6 +1,6 @@
-import { describe, test } from "@odoo/hoot";
-import { press, waitFor } from "@odoo/hoot-dom";
-import { tick } from "@odoo/hoot-mock";
+import { describe, test } from "@sleektiv/hoot";
+import { press, waitFor } from "@sleektiv/hoot-dom";
+import { tick } from "@sleektiv/hoot-mock";
 import { testEditor } from "../_helpers/editor";
 import { insertText, splitBlock } from "../_helpers/user_actions";
 import { unformat } from "../_helpers/format";

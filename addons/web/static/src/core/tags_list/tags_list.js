@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class TagsList extends Component {
     static template = "web.TagsList";

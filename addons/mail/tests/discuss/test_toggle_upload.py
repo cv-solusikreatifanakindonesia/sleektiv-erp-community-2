@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from requests.exceptions import HTTPError
 
-from odoo import Command, http
-from odoo.tests.common import tagged, HttpCase
-from odoo.tools import file_open, mute_logger
+from sleektiv import Command, http
+from sleektiv.tests.common import tagged, HttpCase
+from sleektiv.tools import file_open, mute_logger
 
 
 @tagged("post_install", "-at_install")
@@ -35,7 +35,7 @@ class TestToggleUpload(HttpCase):
         guest = self.env["mail.guest"].create({"name": "Guest"})
         channel.write({"channel_member_ids": [Command.create({"guest_id": guest.id})]})
         self.assertFalse(channel.allow_public_upload)
-        with mute_logger("odoo.http"), file_open("addons/web/__init__.py") as file:
+        with mute_logger("sleektiv.http"), file_open("addons/web/__init__.py") as file:
             response = self.url_open(
                 "/mail/attachment/upload",
                 {

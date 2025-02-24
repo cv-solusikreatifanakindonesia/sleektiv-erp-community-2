@@ -1,6 +1,6 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { press, queryAllTexts, queryOne, scroll } from "@odoo/hoot-dom";
-import { advanceFrame, animationFrame } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { press, queryAllTexts, queryOne, scroll } from "@sleektiv/hoot-dom";
+import { advanceFrame, animationFrame } from "@sleektiv/hoot-mock";
 import {
     contains,
     defineModels,

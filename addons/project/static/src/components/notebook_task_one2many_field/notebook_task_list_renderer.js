@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { useState } from "@odoo/owl";
+import { useState } from "@sleektiv/owl";
 
 import { _t } from "@web/core/l10n/translation";
 

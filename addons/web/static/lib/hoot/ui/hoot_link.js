@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, useState, xml } from "@odoo/owl";
+import { Component, useState, xml } from "@sleektiv/owl";
 import { FILTER_KEYS } from "../core/config";
 import { createUrlFromId } from "../core/url";
 

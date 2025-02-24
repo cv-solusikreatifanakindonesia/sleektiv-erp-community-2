@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import hashlib
 import logging
 
-from odoo import fields, models
+from sleektiv import fields, models
 
-from odoo.addons.payment_aps import const
+from sleektiv.addons.payment_aps import const
 
 
 _logger = logging.getLogger(__name__)
@@ -51,8 +51,8 @@ class PaymentProvider(models.Model):
         """ Compute the signature for the provided data according to the APS documentation.
 
         :param dict data: The data to sign.
-        :param bool incoming: Whether the signature must be generated for an incoming (APS to Odoo)
-                              or outgoing (Odoo to APS) communication.
+        :param bool incoming: Whether the signature must be generated for an incoming (APS to Sleektiv)
+                              or outgoing (Sleektiv to APS) communication.
         :return: The calculated signature.
         :rtype: str
         """

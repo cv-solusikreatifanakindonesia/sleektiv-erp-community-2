@@ -34,10 +34,10 @@ export class PaymentVivaWallet extends PaymentInterface {
     _call_viva_wallet(data, action) {
         return this.env.services.orm.silent
             .call("pos.payment.method", action, [[this.payment_method_id.id], data])
-            .catch(this._handle_odoo_connection_failure.bind(this));
+            .catch(this._handle_sleektiv_connection_failure.bind(this));
     }
 
-    _handle_odoo_connection_failure(data = {}) {
+    _handle_sleektiv_connection_failure(data = {}) {
         // handle timeout
         var line = this.pending_viva_wallet_line();
         if (line) {
@@ -45,7 +45,7 @@ export class PaymentVivaWallet extends PaymentInterface {
         }
         this._show_error(
             _t(
-                "Could not connect to the Odoo server, please check your internet connection and try again."
+                "Could not connect to the Sleektiv server, please check your internet connection and try again."
             )
         );
 
@@ -130,7 +130,7 @@ export class PaymentVivaWallet extends PaymentInterface {
         );
 
         if (!notification) {
-            this._handle_odoo_connection_failure();
+            this._handle_sleektiv_connection_failure();
             return;
         }
 

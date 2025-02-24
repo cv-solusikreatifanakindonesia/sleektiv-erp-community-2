@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { clamp } from "@web/core/utils/numbers";
 import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
@@ -9,7 +9,7 @@ import options from "@web_editor/js/editor/snippets.options";
 import weUtils from "@web_editor/js/common/utils";
 import * as gridUtils from "@web_editor/js/common/grid_layout_utils";
 import { escape } from "@web/core/utils/strings";
-import { closestElement, isUnremovable } from "@web_editor/js/editor/odoo-editor/src/utils/utils";
+import { closestElement, isUnremovable } from "@web_editor/js/editor/sleektiv-editor/src/utils/utils";
 import { debounce, throttleForAnimation } from "@web/core/utils/timing";
 import { uniqueId } from "@web/core/utils/functions";
 import { sortBy, unique } from "@web/core/utils/arrays";
@@ -25,7 +25,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { LinkTools } from '@web_editor/js/wysiwyg/widgets/link_tools';
 import {
     touching,
@@ -37,7 +37,7 @@ import { _t } from "@web/core/l10n/translation";
 import { renderToElement } from "@web/core/utils/render";
 import { RPCError } from "@web/core/network/rpc";
 import { ColumnLayoutMixin } from "@web_editor/js/common/column_layout_mixin";
-import { Tooltip as OdooTooltip } from "@web/core/tooltip/tooltip";
+import { Tooltip as SleektivTooltip } from "@web/core/tooltip/tooltip";
 import { AddSnippetDialog } from "@web_editor/js/editor/add_snippet_dialog";
 import { scrollTo } from "@web_editor/js/common/scrolling";
 
@@ -412,7 +412,7 @@ var SnippetEditor = publicWidget.Widget.extend({
      * @returns {Promise}
      */
     removeSnippet: async function (shouldRecordUndo = true) {
-        this.options.wysiwyg.odooEditor.unbreakableStepUnactive();
+        this.options.wysiwyg.sleektivEditor.unbreakableStepUnactive();
         this.toggleOverlay(false);
         await this.toggleOptions(false);
         // If it is an invisible element, we must close it before deleting it
@@ -553,7 +553,7 @@ var SnippetEditor = publicWidget.Widget.extend({
         $(window).trigger('resize');
 
         if (shouldRecordUndo) {
-            this.options.wysiwyg.odooEditor.historyStep();
+            this.options.wysiwyg.sleektivEditor.historyStep();
         }
     },
     /**
@@ -731,7 +731,7 @@ var SnippetEditor = publicWidget.Widget.extend({
         this.$target.after($clone);
 
         if (recordUndo) {
-            this.options.wysiwyg.odooEditor.historyStep(true);
+            this.options.wysiwyg.sleektivEditor.historyStep(true);
         }
         await new Promise(resolve => {
             this.trigger_up('call_for_each_child_snippet', {
@@ -1041,9 +1041,9 @@ var SnippetEditor = publicWidget.Widget.extend({
             // resizing the grid and the dropzone.
             self.dragState.dragHelperEl.remove();
             self.dragState.backgroundGridEl.remove();
-            self.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+            self.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
             gridUtils._resizeGrid(rowEl);
-            self.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+            self.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
             const rowCount = parseInt(rowEl.dataset.rowCount);
             previousDropzoneEl.style.gridRowEnd = Math.max(rowCount + 1, 1);
         }
@@ -1081,9 +1081,9 @@ var SnippetEditor = publicWidget.Widget.extend({
      * @private
      */
     _onDragAndDropStart({ helper, addStyle }) {
-        this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+        this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
         this.trigger_up('drag_and_drop_start');
-        this.options.wysiwyg.odooEditor.automaticStepUnactive();
+        this.options.wysiwyg.sleektivEditor.automaticStepUnactive();
         var self = this;
         this.dragState = {};
         const rowEl = this.$target[0].parentNode;
@@ -1113,10 +1113,10 @@ var SnippetEditor = publicWidget.Widget.extend({
             if (allowGridMode) {
                 // Toggle grid mode if it is not already on.
                 if (!rowEl.classList.contains('o_grid_mode')) {
-                    this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+                    this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
                     const containerEl = rowEl.parentNode;
                     gridUtils._toggleGridMode(containerEl);
-                    this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+                    this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
                 }
 
                 // Computing the moving column width and height in terms of columns
@@ -1306,9 +1306,9 @@ var SnippetEditor = publicWidget.Widget.extend({
             // If the column doesn't come from a grid mode snippet.
             if (!this.$target[0].classList.contains('o_grid_item')) {
                 // Converting the column to grid.
-                this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+                this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
                 const spans = gridUtils._convertColumnToGrid(rowEl, this.$target[0], this.dragState.columnWidth, this.dragState.columnHeight);
-                this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+                this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
                 this.dragState.columnColCount = spans.columnColCount;
                 this.dragState.columnRowCount = spans.columnRowCount;
 
@@ -1330,7 +1330,7 @@ var SnippetEditor = publicWidget.Widget.extend({
             const rowCount = Math.max(rowEl.dataset.rowCount, columnRowCount);
             $dropzone[0].style.gridRowEnd = rowCount + 1;
 
-            this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
             // Setting the moving grid item, the background grid and
             // the drag helper z-indexes. The grid item z-index is set
             // to its original one if we are in its starting grid, or
@@ -1354,7 +1354,7 @@ var SnippetEditor = publicWidget.Widget.extend({
             this.$target[0].style.position = 'absolute';
             this.$target[0].style.removeProperty('grid-area');
             rowEl.style.position = 'relative';
-            this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
 
             // Storing useful information and adding an event listener.
             this.dragState.startingHeight = rowEl.clientHeight;
@@ -1384,9 +1384,9 @@ var SnippetEditor = publicWidget.Widget.extend({
                 // resizing the grid and the dropzone.
                 this.dragState.dragHelperEl.remove();
                 this.dragState.backgroundGridEl.remove();
-                this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+                this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
                 gridUtils._resizeGrid(rowEl);
-                this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+                this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
                 const rowCount = parseInt(rowEl.dataset.rowCount);
                 dropzone.el.style.gridRowEnd = Math.max(rowCount + 1, 1);
             }
@@ -1410,9 +1410,9 @@ var SnippetEditor = publicWidget.Widget.extend({
      * @param {Object} ui
      */
     _onDragAndDropStop({ x, y }) {
-        this.options.wysiwyg.odooEditor.automaticStepActive();
-        this.options.wysiwyg.odooEditor.automaticStepSkipStack();
-        this.options.wysiwyg.odooEditor.unbreakableStepUnactive();
+        this.options.wysiwyg.sleektivEditor.automaticStepActive();
+        this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
+        this.options.wysiwyg.sleektivEditor.unbreakableStepUnactive();
 
         const rowEl = this.$target[0].parentNode;
         if (rowEl && rowEl.classList.contains('o_grid_mode')) {
@@ -1440,14 +1440,14 @@ var SnippetEditor = publicWidget.Widget.extend({
             gridUtils._gridCleanUp(rowEl, this.$target[0]);
             this.dragState.dragHelperEl.remove();
             this.dragState.backgroundGridEl.remove();
-            this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
             gridUtils._resizeGrid(rowEl);
-            this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
         } else if (this.$target[0].classList.contains('o_grid_item') && this.dropped) {
             // Case when dropping a grid item in a non-grid dropzone.
-            this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
             gridUtils._convertToNormalColumn(this.$target[0]);
-            this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
         }
 
         // TODO lot of this is duplicated code of the d&d feature of snippets
@@ -1465,19 +1465,19 @@ var SnippetEditor = publicWidget.Widget.extend({
                     // If the column doesn't come from a snippet in grid mode,
                     // convert it.
                     if (!this.$target[0].classList.contains('o_grid_item')) {
-                        this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+                        this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
                         const spans = gridUtils._convertColumnToGrid(rowEl, this.$target[0], this.dragState.columnWidth, this.dragState.columnHeight);
-                        this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+                        this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
                         this.dragState.columnColCount = spans.columnColCount;
                         this.dragState.columnRowCount = spans.columnRowCount;
                     }
 
                     // Placing it in the top left corner.
-                    this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+                    this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
                     this.$target[0].style.gridArea = `1 / 1 / ${1 + this.dragState.columnRowCount} / ${1 + this.dragState.columnColCount}`;
                     const rowCount = Math.max(rowEl.dataset.rowCount, this.dragState.columnRowCount);
                     rowEl.dataset.rowCount = rowCount;
-                    this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+                    this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
 
                     // Setting the grid item z-index.
                     if (rowEl === this.dragState.startingGrid) {
@@ -1489,9 +1489,9 @@ var SnippetEditor = publicWidget.Widget.extend({
                     if (this.$target[0].classList.contains('o_grid_item')) {
                         // Case when a grid column is dropped near a non-grid
                         // dropzone.
-                        this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+                        this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
                         gridUtils._convertToNormalColumn(this.$target[0]);
-                        this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+                        this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
                     }
                 }
 
@@ -1502,9 +1502,9 @@ var SnippetEditor = publicWidget.Widget.extend({
         // Resize the grid from where the column came from (if any), as it may
         // have not been resized if the column did not go over it.
         if (this.dragState.startingGrid) {
-            this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
             gridUtils._resizeGrid(this.dragState.startingGrid);
-            this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropMoveSnippet');
+            this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropMoveSnippet');
         }
 
         this.$editable.find('.oe_drop_zone').remove();
@@ -1526,7 +1526,7 @@ var SnippetEditor = publicWidget.Widget.extend({
         this.$body.removeClass('move-important');
         $clone.remove();
 
-        this.options.wysiwyg.odooEditor.observerActive('dragAndDropMoveSnippet');
+        this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropMoveSnippet');
         if (this.dropped) {
             if (prev) {
                 this.$target.insertAfter(prev);
@@ -1559,7 +1559,7 @@ var SnippetEditor = publicWidget.Widget.extend({
                 && this.$target[0].style.gridArea === this.dragState.prevGridArea)
             : this._dropSiblings.prev === this.$target.prev()[0] && this._dropSiblings.next === this.$target.next()[0];
         if (!samePositionAsStart) {
-            this.options.wysiwyg.odooEditor.historyStep();
+            this.options.wysiwyg.sleektivEditor.historyStep();
         }
 
         this.dragState.restore();
@@ -1602,7 +1602,7 @@ var SnippetEditor = publicWidget.Widget.extend({
      * specific action/react to a specific event.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onOptionUpdate: function (ev) {
         var self = this;
@@ -1648,7 +1648,7 @@ var SnippetEditor = publicWidget.Widget.extend({
     },
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onSnippetOptionVisibilityUpdate: function (ev) {
         if (this.options.wysiwyg.isSaving()) {
@@ -1905,7 +1905,7 @@ class SnippetsMenu extends Component {
 
         this.snippetsMenuRef = useRef("snippets-menu");
 
-        // Odoo Editor uses the HTML Element to bind commands.
+        // Sleektiv Editor uses the HTML Element to bind commands.
         this.toolbarWrapperRef = useRef("toolbar-wrapper");
         // SnippetOptions are still rendered using legacy widgets.
         // TODO: remove this ref when Options are rendered using OWL.
@@ -1961,11 +1961,11 @@ class SnippetsMenu extends Component {
 
             // Bind removeFormat button
             const titleButtons = this.customizePanel.querySelector("#o_we_editor_toolbar_container > we-title");
-            this.options.wysiwyg.odooEditor.bindExecCommand(titleButtons);
+            this.options.wysiwyg.sleektivEditor.bindExecCommand(titleButtons);
 
-            // Get table container and bind commands to Odoo Editor.
+            // Get table container and bind commands to Sleektiv Editor.
             const customizeTableBlock = this.customizePanel.querySelector('#o-we-editor-table-container');
-            this.options.wysiwyg.odooEditor.bindExecCommand(customizeTableBlock);
+            this.options.wysiwyg.sleektivEditor.bindExecCommand(customizeTableBlock);
             // TODO: Remove this and instead, use a callback once the editor is
             // ready, or make the parent component independent of SnippetsMenu
             // being mounted.
@@ -2086,7 +2086,7 @@ class SnippetsMenu extends Component {
         this.options.wysiwyg.setupToolbar(toolbarEl);
         this._addToolbar();
         this._checkEditorToolbarVisibilityCallback = this._checkEditorToolbarVisibility.bind(this);
-        $(this.options.wysiwyg.odooEditor.document.body).on('click', this._checkEditorToolbarVisibilityCallback);
+        $(this.options.wysiwyg.sleektivEditor.document.body).on('click', this._checkEditorToolbarVisibilityCallback);
 
         // Prepare snippets editor environment
         this.$snippetEditorArea = $('<div/>', {
@@ -2258,20 +2258,20 @@ class SnippetsMenu extends Component {
 
             this._updateInvisibleDOM();
         }, 500);
-        this.options.wysiwyg.odooEditor.addEventListener('historyUndo', refreshSnippetEditors);
-        this.options.wysiwyg.odooEditor.addEventListener('historyRedo', refreshSnippetEditors);
+        this.options.wysiwyg.sleektivEditor.addEventListener('historyUndo', refreshSnippetEditors);
+        this.options.wysiwyg.sleektivEditor.addEventListener('historyRedo', refreshSnippetEditors);
 
         const $autoFocusEls = $('.o_we_snippet_autofocus');
         this._activateSnippet($autoFocusEls.length ? $autoFocusEls.first() : false);
 
         return Promise.all(defs).then(() => {
             const updateHistoryButtons = () => {
-                this.state.canRedo = this.options.wysiwyg.odooEditor.historyCanRedo();
-                this.state.canUndo = this.options.wysiwyg.odooEditor.historyCanUndo();
+                this.state.canRedo = this.options.wysiwyg.sleektivEditor.historyCanRedo();
+                this.state.canUndo = this.options.wysiwyg.sleektivEditor.historyCanUndo();
             };
-            this.options.wysiwyg.odooEditor.addEventListener('historyStep', updateHistoryButtons);
-            this.options.wysiwyg.odooEditor.addEventListener('observerApply', () => {
-                $(this.options.wysiwyg.odooEditor.editable).trigger('content_changed');
+            this.options.wysiwyg.sleektivEditor.addEventListener('historyStep', updateHistoryButtons);
+            this.options.wysiwyg.sleektivEditor.addEventListener('observerApply', () => {
+                $(this.options.wysiwyg.sleektivEditor.editable).trigger('content_changed');
             });
             // Trigger a resize event once entering edit mode as the snippets
             // menu will take part of the screen width (delayed because of
@@ -2788,7 +2788,7 @@ class SnippetsMenu extends Component {
      */
     _updateInvisibleDOM() {
         return this._execWithLoadingEffect(async () => {
-            this.options.wysiwyg.odooEditor.automaticStepSkipStack();
+            this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
             this.invisibleDOMMap = new Map();
             const isMobile = this._isMobile();
             const invisibleSelector = `.o_snippet_invisible, ${isMobile ? '.o_snippet_mobile_invisible' : '.o_snippet_desktop_invisible'}`;
@@ -3665,13 +3665,13 @@ class SnippetsMenu extends Component {
                 const prom = new Promise(resolve => dragAndDropResolve = () => resolve());
                 this._mutex.exec(() => prom);
 
-                const doc = this.options.wysiwyg.odooEditor.document;
+                const doc = this.options.wysiwyg.sleektivEditor.document;
                 $(doc.body).addClass('oe_dropzone_active');
 
-                this.options.wysiwyg.odooEditor.automaticStepUnactive();
+                this.options.wysiwyg.sleektivEditor.automaticStepUnactive();
 
                 this.$el.find('.oe_snippet_thumbnail').addClass('o_we_ongoing_insertion');
-                this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropCreateSnippet');
+                this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropCreateSnippet');
 
                 dropped = false;
                 const snippetKey = element.closest('.oe_snippet').dataset.snippetKey;
@@ -3759,10 +3759,10 @@ class SnippetsMenu extends Component {
                 this._onDropZoneOut();
             },
             onDragEnd: async ({ x, y, helper }) => {
-                const doc = this.options.wysiwyg.odooEditor.document;
+                const doc = this.options.wysiwyg.sleektivEditor.document;
                 $(doc.body).removeClass('oe_dropzone_active');
-                this.options.wysiwyg.odooEditor.automaticStepUnactive();
-                this.options.wysiwyg.odooEditor.automaticStepSkipStack();
+                this.options.wysiwyg.sleektivEditor.automaticStepUnactive();
+                this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
                 $toInsert.removeClass('oe_snippet_body');
                 $scrollingElement.off('scroll.scrolling_element');
                 if (isSnippetGroup) {
@@ -3802,7 +3802,7 @@ class SnippetsMenu extends Component {
                     $toInsert.detach();
                 }
 
-                this.options.wysiwyg.odooEditor.observerActive('dragAndDropCreateSnippet');
+                this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropCreateSnippet');
 
                 if (dropped) {
                     if (prev) {
@@ -3819,9 +3819,9 @@ class SnippetsMenu extends Component {
 
                     const isSnippetGroup = $target[0].matches(".s_snippet_group");
                     if (!isSnippetGroup) {
-                        this.options.wysiwyg.odooEditor.observerUnactive('dragAndDropCreateSnippet');
+                        this.options.wysiwyg.sleektivEditor.observerUnactive('dragAndDropCreateSnippet');
                         await this._scrollToSnippet($target, this.$scrollable);
-                        this.options.wysiwyg.odooEditor.observerActive('dragAndDropCreateSnippet');
+                        this.options.wysiwyg.sleektivEditor.observerActive('dragAndDropCreateSnippet');
                         browser.setTimeout(async () => {
                             // Free the mutex now to allow following operations
                             // (mutexed as well).
@@ -3831,8 +3831,8 @@ class SnippetsMenu extends Component {
                                 // Restore editor to its normal edition state, also
                                 // make sure the undroppable snippets are updated.
                                 this._disableUndroppableSnippets();
-                                this.options.wysiwyg.odooEditor.unbreakableStepUnactive();
-                                this.options.wysiwyg.odooEditor.historyStep();
+                                this.options.wysiwyg.sleektivEditor.unbreakableStepUnactive();
+                                this.options.wysiwyg.sleektivEditor.historyStep();
                                 this.$el.find('.oe_snippet_thumbnail').removeClass('o_we_ongoing_insertion');
                             });
                         });
@@ -4208,7 +4208,7 @@ class SnippetsMenu extends Component {
             // If empty oe_structure, encourage using snippets in there by
             // making them "wizz" in the panel.
             this._activateSnippet(false).then(() => {
-                this.$el.find('.oe_snippet').odooBounce();
+                this.$el.find('.oe_snippet').sleektivBounce();
             });
             return;
         }
@@ -4218,7 +4218,7 @@ class SnippetsMenu extends Component {
      * Called when a child editor asks for insertion zones to be enabled.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onActivateInsertionZones(ev) {
         this._activateInsertionZones(ev.data.$selectorSiblings, ev.data.$selectorChildren, ev.data.canBeSanitizedUnless, ev.data.toInsertInline, ev.data.selectorGrids, ev.data.fromIframe);
@@ -4240,7 +4240,7 @@ class SnippetsMenu extends Component {
      * snippet of a DOM element.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onCallForEachChildSnippet(ev) {
         this._callForEachChildSnippet(ev.data.$snippet, ev.data.callback)
@@ -4250,7 +4250,7 @@ class SnippetsMenu extends Component {
      * Called when the overlay dimensions/positions should be recomputed.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onOverlaysCoverUpdate(ev) {
         this.snippetEditors.forEach(editor => {
@@ -4265,7 +4265,7 @@ class SnippetsMenu extends Component {
      * call the _onClone methods if the element's editor has one.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     async _onCloneSnippet(ev) {
         ev.stopPropagation();
@@ -4279,7 +4279,7 @@ class SnippetsMenu extends Component {
      * Called when a child editor asks to clean the UI of a snippet.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onCleanUIRequest(ev) {
         const targetEditors = this.snippetEditors.filter(editor => {
@@ -4310,7 +4310,7 @@ class SnippetsMenu extends Component {
      * Called when a snippet has moved in the page.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     async _onSnippetDragAndDropStop(ev) {
         this.snippetEditorDragging = false;
@@ -4374,7 +4374,7 @@ class SnippetsMenu extends Component {
      * Returns the droppable snippet from which a dropped snippet originates.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onFindSnippetTemplate(ev) {
         const snippet = [...this.snippets.values()].find((snippet) => {
@@ -4396,7 +4396,7 @@ class SnippetsMenu extends Component {
      * Calls back if the specified element is selected.
      *
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onIsElementSelected(ev) {
         for (const editor of this.snippetEditors) {
@@ -4495,10 +4495,10 @@ class SnippetsMenu extends Component {
      */
     _onMouseDown(ev) {
         const $blockedArea = $('#wrapwrap'); // TODO should get that element another way
-        this.options.wysiwyg.odooEditor.automaticStepSkipStack();
+        this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
         $blockedArea.addClass('o_we_no_pointer_events');
         const reenable = () => {
-            this.options.wysiwyg.odooEditor.automaticStepSkipStack();
+            this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
             $blockedArea.removeClass('o_we_no_pointer_events');
         };
         // Use a setTimeout fallback to avoid locking the editor if the mouseup
@@ -4536,7 +4536,7 @@ class SnippetsMenu extends Component {
         if (this.hideShownTooltip) {
             this.hideShownTooltip();
         }
-        this.hideShownTooltip = this.popover.add(snippetEl, OdooTooltip, {
+        this.hideShownTooltip = this.popover.add(snippetEl, SleektivTooltip, {
             tooltip: _t("Drag and drop the building block."),
         });
         this._hideSnippetTooltips(1500);
@@ -4553,7 +4553,7 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onGetSnippetVersions(ev) {
         const snippet = [...this.snippets.values()].find((snippet) => snippet.name === ev.data.snippetName);
@@ -4591,7 +4591,7 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     async _onRemoveSnippet(ev) {
         ev.stopPropagation();
@@ -4612,7 +4612,7 @@ class SnippetsMenu extends Component {
         if (data.invalidateSnippetCache) {
             this.invalidateSnippetCache = true;
         }
-        // If it's an OdooEvent sent by sub-widgets, we prevent the event
+        // If it's an SleektivEvent sent by sub-widgets, we prevent the event
         // from triggering the request on the parent.
         ev.stopped = true;
         this._buttonClick(async (after) => {
@@ -4642,14 +4642,14 @@ class SnippetsMenu extends Component {
             const $els = this.getEditableArea().find('.oe_structure.oe_empty').addBack('.oe_structure.oe_empty');
             for (const el of $els) {
                 if (!el.children.length) {
-                    $(el).odooBounce('o_we_snippet_area_animation');
+                    $(el).sleektivBounce('o_we_snippet_area_animation');
                 }
             }
         }
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      * @param {Object} ev.data
      * @param {function} ev.data.exec
      */
@@ -4658,7 +4658,7 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onSnippetEditorDestroyed(ev) {
         ev.stopPropagation();
@@ -4684,7 +4684,7 @@ class SnippetsMenu extends Component {
     /**
      * @see _snippetOptionUpdate
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onSnippetOptionUpdate(ev) {
         ev.stopPropagation();
@@ -4695,7 +4695,7 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     async _onSnippetOptionVisibilityUpdate(ev) {
         if (this.options.wysiwyg.isSaving()) {
@@ -4709,7 +4709,7 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onSnippetThumbnailURLRequest(ev) {
         if (!ev.data.key) {
@@ -4786,7 +4786,7 @@ class SnippetsMenu extends Component {
      */
     _checkEditorToolbarVisibility(e) {
         const $toolbarTableContainer = this.$('#o-we-editor-table-container');
-        const selection = this.options.wysiwyg.odooEditor.document.getSelection();
+        const selection = this.options.wysiwyg.sleektivEditor.document.getSelection();
         const range = selection && selection.rangeCount && selection.getRangeAt(0);
         const $currentSelectionTarget = $(range && range.commonAncestorContainer);
         // Do not  toggle visibility if the target is inside the toolbar ( eg.
@@ -4889,10 +4889,10 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onRequestEditable(ev) {
-        ev.data.callback($(this.options.wysiwyg.odooEditor.editable));
+        ev.data.callback($(this.options.wysiwyg.sleektivEditor.editable));
     }
     /**
      * Enable loading effects
@@ -5056,7 +5056,7 @@ class SnippetsMenu extends Component {
     }
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onOpenAddSnippetDialog(ev) {
         this._openAddSnippetDialog(ev.data.snippetGroup, ev.data.initialSnippetEl);
@@ -5080,7 +5080,7 @@ class SnippetsMenu extends Component {
                     snippet.name === initialSnippetEl.dataset.snippet
                 ).group;
 
-            this.options.wysiwyg.odooEditor.historyPauseSteps();
+            this.options.wysiwyg.sleektivEditor.historyPauseSteps();
             if (isSnippetGroupClicked) {
                 const thumbnailEl = initialSnippetEl.querySelector(".oe_snippet_thumbnail");
                 thumbnailEl.classList.add("o_we_ongoing_insertion");
@@ -5130,7 +5130,7 @@ class SnippetsMenu extends Component {
                 if (dropZoneEls) {
                     dropZoneEls.forEach(dropZoneEl => dropZoneEl.remove());
                 }
-                this.options.wysiwyg.odooEditor.historyUnpauseSteps();
+                this.options.wysiwyg.sleektivEditor.historyUnpauseSteps();
                 for (const snippetThumbnail of snippetThumbnails) {
                     snippetThumbnail.classList.remove('o_we_ongoing_insertion');
                 }
@@ -5158,16 +5158,16 @@ class SnippetsMenu extends Component {
                         // button is clicked.
                         hookEl.parentNode.insertBefore(snippetEl, hookEl);
                         hookEl.parentNode.removeChild(hookEl);
-                        this.options.wysiwyg.odooEditor.automaticStepSkipStack();
+                        this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
                         await this._scrollToSnippet($(snippetEl), this.$scrollable);
-                        this.options.wysiwyg.odooEditor.historyUnpauseSteps();
+                        this.options.wysiwyg.sleektivEditor.historyUnpauseSteps();
                         browser.setTimeout(async () => {
                             resolve();
                             await this.callPostSnippetDrop($(snippetEl), () => {
                                 // Restore editor to its normal edition state, also
                                 // make sure the undroppable snippets are updated.
                                 this._disableUndroppableSnippets();
-                                this.options.wysiwyg.odooEditor.historyStep();
+                                this.options.wysiwyg.sleektivEditor.historyStep();
                                 for (const snippetThumbnail of snippetThumbnails) {
                                     snippetThumbnail.classList.remove('o_we_ongoing_insertion');
                                 }
@@ -5191,8 +5191,8 @@ class SnippetsMenu extends Component {
                             initialSnippetEl.remove();
                         }
                         if (!isSnippetChosen) {
-                            this.options.wysiwyg.odooEditor.automaticStepSkipStack();
-                            this.options.wysiwyg.odooEditor.historyUnpauseSteps();
+                            this.options.wysiwyg.sleektivEditor.automaticStepSkipStack();
+                            this.options.wysiwyg.sleektivEditor.historyUnpauseSteps();
                             for (const snippetThumbnail of snippetThumbnails) {
                                 snippetThumbnail.classList.remove('o_we_ongoing_insertion');
                             }
@@ -5244,7 +5244,7 @@ class SnippetsMenu extends Component {
         // TODO: Should be the app name, not the snippet name ... Maybe both ?
         const bodyText = _t("Do you want to install %s App?", snippetName);
         const linkText = _t("More info about this app.");
-        const linkUrl = '/odoo/action-base.open_module_tree/' + encodeURIComponent(moduleID);
+        const linkUrl = '/sleektiv/action-base.open_module_tree/' + encodeURIComponent(moduleID);
         this.dialog.add(ConfirmationDialog, {
             title: _t("Install %s", snippetName),
             body: markup(`${escape(bodyText)}\n<a href="${linkUrl}" target="_blank">${escape(linkText)}</a>`),

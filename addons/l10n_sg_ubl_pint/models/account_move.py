@@ -1,6 +1,6 @@
 import uuid
 
-from odoo import models
+from sleektiv import models
 
 
 class AccountMove(models.Model):

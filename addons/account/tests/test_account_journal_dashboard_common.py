@@ -1,8 +1,8 @@
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tools.misc import format_amount
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.tools.misc import format_amount
 
 
 @tagged('post_install', '-at_install')

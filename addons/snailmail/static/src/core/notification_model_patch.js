@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { Notification } from "@mail/core/common/notification_model";
 import { patch } from "@web/core/utils/patch";

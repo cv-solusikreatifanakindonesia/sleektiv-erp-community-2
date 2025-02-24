@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
-from odoo.http import route
-from odoo.addons.mail.controllers.discuss.binary import BinaryController
-from odoo.addons.im_livechat.tools.misc import downgrade_to_public_user, force_guest_env
+from sleektiv.http import route
+from sleektiv.addons.mail.controllers.discuss.binary import BinaryController
+from sleektiv.addons.im_livechat.tools.misc import downgrade_to_public_user, force_guest_env
 
 
 class LivechatBinaryController(BinaryController):

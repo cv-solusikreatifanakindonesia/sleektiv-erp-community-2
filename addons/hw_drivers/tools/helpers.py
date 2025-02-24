@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import configparser
 import contextlib
@@ -25,9 +25,9 @@ from threading import Thread, Lock
 import time
 import zipfile
 
-from odoo import http, release, service
-from odoo.tools.func import lazy_property
-from odoo.tools.misc import file_path
+from sleektiv import http, release, service
+from sleektiv.tools.func import lazy_property
+from sleektiv.tools.misc import file_path
 
 lock = Lock()
 _logger = logging.getLogger(__name__)
@@ -54,7 +54,7 @@ class CertificateStatus(Enum):
 
 class IoTRestart(Thread):
     """
-    Thread to restart odoo server in IoT Box when we must return a answer before
+    Thread to restart sleektiv server in IoT Box when we must return a answer before
     """
     def __init__(self, delay):
         Thread.__init__(self)
@@ -99,7 +99,7 @@ def check_certificate():
     Check if the current certificate is up to date or not authenticated
     :return CheckCertificateStatus
     """
-    server = get_odoo_server_url()
+    server = get_sleektiv_server_url()
 
     if not server:
         _logger.info('Ignoring the nginx certificate check without a connected database')
@@ -126,7 +126,7 @@ def check_certificate():
     for key in cert.get_subject().get_components():
         if key[0] == b'CN':
             cn = key[1].decode('utf-8')
-    if cn == 'OdooTempIoTBoxCertificate' or datetime.datetime.now() > cert_end_date:
+    if cn == 'SleektivTempIoTBoxCertificate' or datetime.datetime.now() > cert_end_date:
         message = 'Your certificate %s must be updated' % cn
         _logger.info(message)
         return {"status": CertificateStatus.NEED_REFRESH}
@@ -138,10 +138,10 @@ def check_certificate():
 
 def check_git_branch():
     """
-    Check if the local branch is the same than the connected Odoo DB and
+    Check if the local branch is the same than the connected Sleektiv DB and
     checkout to match it if needed.
     """
-    server = get_odoo_server_url()
+    server = get_sleektiv_server_url()
     urllib3.disable_warnings()
     http = urllib3.PoolManager(cert_reqs='CERT_NONE')
     try:
@@ -153,7 +153,7 @@ def check_git_branch():
         )
 
         if response.status == 200:
-            git = ['git', '--work-tree=/home/pi/odoo/', '--git-dir=/home/pi/odoo/.git']
+            git = ['git', '--work-tree=/home/pi/sleektiv/', '--git-dir=/home/pi/sleektiv/.git']
 
             db_branch = json.loads(response.data)['result']['server_serie'].replace('~', '-')
             if not subprocess.check_output(git + ['ls-remote', 'origin', db_branch]):
@@ -163,7 +163,7 @@ def check_git_branch():
                 subprocess.check_output(git + ['symbolic-ref', '-q', '--short', 'HEAD']).decode('utf-8').rstrip()
             )
             _logger.info(
-                "Current IoT Box local git branch: %s / Associated Odoo database's git branch: %s",
+                "Current IoT Box local git branch: %s / Associated Sleektiv database's git branch: %s",
                 local_branch,
                 db_branch,
             )
@@ -173,14 +173,14 @@ def check_git_branch():
                     with writable():
                         subprocess.run(git + ['branch', '-m', db_branch], check=True)
                         subprocess.run(git + ['remote', 'set-branches', 'origin', db_branch], check=True)
-                        _logger.info("Updating odoo folder to the branch %s", db_branch)
+                        _logger.info("Updating sleektiv folder to the branch %s", db_branch)
                         subprocess.run(
-                            ['/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh'], check=True
+                            ['/home/pi/sleektiv/addons/point_of_sale/tools/posbox/configuration/posbox_update.sh'], check=True
                         )
                 except subprocess.CalledProcessError:
                     _logger.exception("Failed to update the code with git.")
                 finally:
-                    odoo_restart()
+                    sleektiv_restart()
     except Exception:
         _logger.exception('An error occurred while trying to update the code with git')
 
@@ -188,7 +188,7 @@ def check_image():
     """
     Check if the current image of IoT Box is up to date
     """
-    url = 'https://nightly.odoo.com/master/iotbox/SHA1SUMS.txt'
+    url = 'https://nightly.sleektiv.com/master/iotbox/SHA1SUMS.txt'
     urllib3.disable_warnings()
     http = urllib3.PoolManager(cert_reqs='CERT_NONE')
     response = http.request('GET', url)
@@ -210,7 +210,7 @@ def check_image():
 
 def save_conf_server(url, token, db_uuid, enterprise_code):
     """
-    Save server configurations in odoo.conf
+    Save server configurations in sleektiv.conf
     :param url: The URL of the server
     :param token: The token to authenticate the server
     :param db_uuid: The database UUID
@@ -295,12 +295,12 @@ def get_ssid():
 
 
 @cache
-def get_odoo_server_url():
-    """Get the URL of the linked Odoo database.
+def get_sleektiv_server_url():
+    """Get the URL of the linked Sleektiv database.
     If the IoT Box is in access point mode, it will return ``None`` to avoid
     connecting to the server.
 
-    :return: The URL of the linked Odoo database.
+    :return: The URL of the linked Sleektiv database.
     :rtype: str or None
     """
     return None if access_point() else get_conf('remote_server')
@@ -313,7 +313,7 @@ def get_token():
 
 def get_commit_hash():
     return subprocess.run(
-        ['git', '--work-tree=/home/pi/odoo/', '--git-dir=/home/pi/odoo/.git', 'rev-parse', '--short', 'HEAD'],
+        ['git', '--work-tree=/home/pi/sleektiv/', '--git-dir=/home/pi/sleektiv/.git', 'rev-parse', '--short', 'HEAD'],
         stdout=subprocess.PIPE,
         check=True,
     ).stdout.decode('ascii').strip()
@@ -322,7 +322,7 @@ def get_commit_hash():
 @cache
 def get_version(detailed_version=False):
     if platform.system() == 'Linux':
-        image_version = read_file_first_line('/var/odoo/iotbox_version')
+        image_version = read_file_first_line('/var/sleektiv/iotbox_version')
     elif platform.system() == 'Windows':
         # updated manually when big changes are made to the windows virtual IoT
         image_version = '23.11'
@@ -348,14 +348,14 @@ def get_wifi_essid():
 
 def load_certificate():
     """
-    Send a request to Odoo with customer db_uuid and enterprise_code to get a true certificate
+    Send a request to Sleektiv with customer db_uuid and enterprise_code to get a true certificate
     """
     db_uuid = get_conf('db_uuid')
     enterprise_code = get_conf('enterprise_code')
     if not (db_uuid and enterprise_code):
         return "ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL"
 
-    url = 'https://www.odoo.com/odoo-enterprise/iot/x509'
+    url = 'https://www.sleektiv.com/sleektiv-enterprise/iot/x509'
     data = {
         'params': {
             'db_uuid': db_uuid,
@@ -372,7 +372,7 @@ def load_certificate():
             headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         )
     except Exception as e:
-        _logger.exception("An error occurred while trying to reach odoo.com servers.")
+        _logger.exception("An error occurred while trying to reach sleektiv.com servers.")
         return "ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION\n\n%s" % e
 
     if response.status != 200:
@@ -394,7 +394,7 @@ def load_certificate():
         Path(get_path_nginx()).joinpath('conf/nginx-cert.key').write_text(result['private_key_pem'])
     time.sleep(3)
     if platform.system() == 'Windows':
-        odoo_restart(0)
+        sleektiv_restart(0)
     elif platform.system() == 'Linux':
         start_nginx_server()
     return True
@@ -407,7 +407,7 @@ def delete_iot_handlers():
     try:
         iot_handlers = Path(file_path(f'hw_drivers/iot_handlers'))
         filenames = [
-            f"odoo/addons/hw_drivers/iot_handlers/{file.relative_to(iot_handlers)}"
+            f"sleektiv/addons/hw_drivers/iot_handlers/{file.relative_to(iot_handlers)}"
             for file in iot_handlers.glob('**/*')
             if file.is_file()
         ]
@@ -418,9 +418,9 @@ def delete_iot_handlers():
 
 def download_iot_handlers(auto=True):
     """
-    Get the drivers from the configured Odoo server
+    Get the drivers from the configured Sleektiv server
     """
-    server = get_odoo_server_url()
+    server = get_sleektiv_server_url()
     if server:
         urllib3.disable_warnings()
         pm = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -430,20 +430,20 @@ def download_iot_handlers(auto=True):
             if resp.data:
                 delete_iot_handlers()
                 with writable():
-                    path = path_file('odoo', 'addons', 'hw_drivers', 'iot_handlers')
+                    path = path_file('sleektiv', 'addons', 'hw_drivers', 'iot_handlers')
                     zip_file = zipfile.ZipFile(io.BytesIO(resp.data))
                     zip_file.extractall(path)
         except Exception:
             _logger.exception('Could not reach configured server to download IoT handlers')
 
 def compute_iot_handlers_addon_name(handler_kind, handler_file_name):
-    return "odoo.addons.hw_drivers.iot_handlers.{handler_kind}.{handler_name}".\
+    return "sleektiv.addons.hw_drivers.iot_handlers.{handler_kind}.{handler_name}".\
         format(handler_kind=handler_kind, handler_name=handler_file_name.removesuffix('.py'))
 
 def load_iot_handlers():
     """
-    This method loads local files: 'odoo/addons/hw_drivers/iot_handlers/drivers' and
-    'odoo/addons/hw_drivers/iot_handlers/interfaces'
+    This method loads local files: 'sleektiv/addons/hw_drivers/iot_handlers/drivers' and
+    'sleektiv/addons/hw_drivers/iot_handlers/interfaces'
     And execute these python drivers and interfaces
     """
     for directory in ['interfaces', 'drivers']:
@@ -467,9 +467,9 @@ def list_file_by_os(file_list):
         return [x.name for x in Path(file_list).glob('*[!L].*')]
 
 
-def odoo_restart(delay=0):
+def sleektiv_restart(delay=0):
     """
-    Restart Odoo service
+    Restart Sleektiv service
     :param delay: Delay in seconds before restarting the service (Default: 0)
     """
     IR = IoTRestart(delay)
@@ -477,13 +477,13 @@ def odoo_restart(delay=0):
 
 
 def path_file(*args):
-    """Return the path to the file from IoT Box root or Windows Odoo
+    """Return the path to the file from IoT Box root or Windows Sleektiv
     server folder
     :return: The path to the file
     """
     platform_os = platform.system()
     if platform_os == 'Linux':
-        return Path("~pi", *args).expanduser() # Path.home() returns odoo user's home instead of pi's
+        return Path("~pi", *args).expanduser() # Path.home() returns sleektiv user's home instead of pi's
     elif platform_os == 'Windows':
         return Path().absolute().parent.joinpath('server', *args)
 
@@ -526,7 +526,7 @@ def download_from_url(download_url, path_to_filename):
     This function downloads from its 'download_url' argument and
     saves the result in 'path_to_filename' file
     The 'path_to_filename' needs to be a valid path + file name
-    (Example: 'C:\\Program Files\\Odoo\\downloaded_file.zip')
+    (Example: 'C:\\Program Files\\Sleektiv\\downloaded_file.zip')
     """
     try:
         request_response = requests.get(download_url, timeout=60)
@@ -541,7 +541,7 @@ def unzip_file(path_to_filename, path_to_extract):
     This function unzips 'path_to_filename' argument to
     the path specified by 'path_to_extract' argument
     and deletes the originally used .zip file
-    Example: unzip_file('C:\\Program Files\\Odoo\\downloaded_file.zip', 'C:\\Program Files\\Odoo\\new_folder'))
+    Example: unzip_file('C:\\Program Files\\Sleektiv\\downloaded_file.zip', 'C:\\Program Files\\Sleektiv\\new_folder'))
     Will extract all the contents of 'downloaded_file.zip' to the 'new_folder' location)
     """
     try:
@@ -563,41 +563,41 @@ def get_hostname():
 
 def update_conf(values, section='iot.box'):
     """
-    Update odoo.conf with the given key and value.
+    Update sleektiv.conf with the given key and value.
     :param values: The dictionary of key-value pairs to update the config with.
     :param section: The section to update the key-value pairs in (Default: iot.box).
     """
-    _logger.debug("Updating odoo.conf with values: %s", values)
+    _logger.debug("Updating sleektiv.conf with values: %s", values)
     conf = get_conf()
     get_conf.cache_clear()  # Clear the cache to get the updated config
 
     if not conf.has_section(section):
-        _logger.debug("Creating new section '%s' in odoo.conf", section)
+        _logger.debug("Creating new section '%s' in sleektiv.conf", section)
         conf.add_section(section)
 
     for key, value in values.items():
         conf.set(section, key, value) if value else conf.remove_option(section, key)
 
-    write_file("odoo.conf", conf)
+    write_file("sleektiv.conf", conf)
 
 
 @cache
 def get_conf(key=None, section='iot.box'):
     """
-    Get the value of the given key from odoo.conf, or the full config if no key is provided.
+    Get the value of the given key from sleektiv.conf, or the full config if no key is provided.
     :param key: The key to get the value of.
     :param section: The section to get the key from (Default: iot.box).
     :return: The value of the key provided or None if it doesn't exist, or full conf object if no key is provided.
     """
     conf = configparser.ConfigParser()
-    conf.read(path_file("odoo.conf"))
+    conf.read(path_file("sleektiv.conf"))
 
     return conf.get(section, key, fallback=None) if key else conf  # Return the key's value or the configparser object
 
 
 def disconnect_from_server():
     """Disconnect the IoT Box from the server, clears associated caches"""
-    get_odoo_server_url.cache_clear()
+    get_sleektiv_server_url.cache_clear()
     update_conf({
         'remote_server': '',
         'token': '',

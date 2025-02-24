@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.addons.mail.tests.test_mail_activity import ActivityScheduleCase
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged, users
-from odoo.tools.misc import format_date
+from sleektiv import Command, fields
+from sleektiv.addons.mail.tests.test_mail_activity import ActivityScheduleCase
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import Form, tagged, users
+from sleektiv.tools.misc import format_date
 
 
 @tagged('mail_activity', 'mail_activity_plan')

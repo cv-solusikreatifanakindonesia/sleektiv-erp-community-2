@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import HttpCase, tagged
-from odoo.tools import mute_logger
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.tests import HttpCase, tagged
+from sleektiv.tools import mute_logger
 
-from odoo.addons.base.tests.common import BaseUsersCommon, HttpCaseWithUserPortal
-from odoo.addons.sale.tests.common import SaleCommon
+from sleektiv.addons.base.tests.common import BaseUsersCommon, HttpCaseWithUserPortal
+from sleektiv.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')
 class TestAccessRightsControllers(BaseUsersCommon, HttpCase, SaleCommon):
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.addons.base.models.ir_rule')
+    @mute_logger('sleektiv.addons.base.models.ir_model', 'sleektiv.addons.base.models.ir_rule')
     def test_access_controller(self):
         private_so = self.sale_order
         portal_so = self.sale_order.copy()

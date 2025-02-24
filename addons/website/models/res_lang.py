@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, tools, _
-from odoo.addons.base.models.res_lang import LangDataDict, LangData
-from odoo.exceptions import UserError
-from odoo.http import request
+from sleektiv import models, tools, _
+from sleektiv.addons.base.models.res_lang import LangDataDict, LangData
+from sleektiv.exceptions import UserError
+from sleektiv.http import request
 
 
 class Lang(models.Model):

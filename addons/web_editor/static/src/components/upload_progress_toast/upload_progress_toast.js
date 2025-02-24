@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @sleektiv-module */
 import { useService } from '@web/core/utils/hooks';
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@sleektiv/owl";
 
 export class ProgressBar extends Component {
     static template = "web_editor.ProgressBar";

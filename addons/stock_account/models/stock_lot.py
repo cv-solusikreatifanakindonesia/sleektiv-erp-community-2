@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import float_compare, float_round
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import float_compare, float_round
 
 
 class StockLot(models.Model):

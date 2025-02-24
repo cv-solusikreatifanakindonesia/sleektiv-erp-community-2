@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 from datetime import datetime
 from pytz import timezone
-from odoo.addons.hr_calendar.tests.common import TestHrCalendarCommon
+from sleektiv.addons.hr_calendar.tests.common import TestHrCalendarCommon
 
 
 @tagged('event_interval')

@@ -3,11 +3,11 @@ from datetime import datetime, timedelta
 from markupsafe import Markup
 from unittest.mock import patch, MagicMock
 
-from odoo import fields
+from sleektiv import fields
 
-from odoo.tests.common import HttpCase
+from sleektiv.tests.common import HttpCase
 
-from odoo.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
+from sleektiv.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
 
 def mock_get_token(user):
     return f"TOKEN_FOR_USER_{user.id}"
@@ -62,7 +62,7 @@ class TestCommon(HttpCase):
             user.microsoft_calendar_token_validity = fields.Datetime.now() + timedelta(hours=1)
 
         # -----------------------------------------------------------------------------------------
-        # To create Odoo events
+        # To create Sleektiv events
         # -----------------------------------------------------------------------------------------
         self.start_date = datetime(2021, 9, 22, 10, 0, 0, 0)
         self.end_date = datetime(2021, 9, 22, 11, 0, 0, 0)
@@ -72,7 +72,7 @@ class TestCommon(HttpCase):
             days=self.recurrent_event_interval * self.recurrent_events_count
         )
 
-        # simple event values to create a Odoo event
+        # simple event values to create a Sleektiv event
         self.simple_event_values = {
             "name": "simple_event",
             "description": "my simple event",
@@ -103,7 +103,7 @@ class TestCommon(HttpCase):
         }
 
         # -----------------------------------------------------------------------------------------
-        # Expected values for Odoo events converted to Outlook events (to be posted through API)
+        # Expected values for Sleektiv events converted to Outlook events (to be posted through API)
         # -----------------------------------------------------------------------------------------
 
         # simple event values converted in the Outlook format to be posted through the API
@@ -237,10 +237,10 @@ class TestCommon(HttpCase):
         self.simple_event_from_outlook_attendee.update(isOrganizer=False)
 
         # -----------------------------------------------------------------------------------------
-        # Expected values for Outlook events converted to Odoo events
+        # Expected values for Outlook events converted to Sleektiv events
         # -----------------------------------------------------------------------------------------
 
-        self.expected_odoo_event_from_outlook = {
+        self.expected_sleektiv_event_from_outlook = {
             "name": "simple_event",
             "description": Markup('<p>my simple event</p>'),
             "active": True,
@@ -251,7 +251,7 @@ class TestCommon(HttpCase):
             "ms_universal_event_id": "456",
             "partner_ids": [self.organizer_user.partner_id.id, self.attendee_user.partner_id.id],
         }
-        self.expected_odoo_recurrency_from_outlook = {
+        self.expected_sleektiv_recurrency_from_outlook = {
             'active': True,
             'byday': '1',
             'count': 0,
@@ -396,7 +396,7 @@ class TestCommon(HttpCase):
             for d in self.recurrent_event_from_outlook_organizer
         ]
 
-        self.expected_odoo_recurrency_events_from_outlook = [
+        self.expected_sleektiv_recurrency_events_from_outlook = [
             {
                 "name": "recurrent event",
                 "user_id": self.organizer_user,
@@ -415,7 +415,7 @@ class TestCommon(HttpCase):
         ]
         self.env.cr.postcommit.clear()
 
-    def sync_odoo_recurrences_with_outlook_feature(self):
+    def sync_sleektiv_recurrences_with_outlook_feature(self):
         """
         Returns the status of the recurrence synchronization feature with Outlook.
         True if it is active and False otherwise. This function guides previous tests to abort before they are checked.
@@ -461,7 +461,7 @@ class TestCommon(HttpCase):
         )
         already_created = self.recurrent_base_event
 
-        # Currently, it is forbidden to create recurrences in Odoo. A trick for deactivating the checking
+        # Currently, it is forbidden to create recurrences in Sleektiv. A trick for deactivating the checking
         # is needed below in this test setup: deactivating the synchronization during recurrences creation.
         sync_previous_state = self.env.user.microsoft_synchronization_stopped
         self.env.user.microsoft_synchronization_stopped = False
@@ -493,32 +493,32 @@ class TestCommon(HttpCase):
         # Rollback the synchronization status after setup.
         self.env.user.microsoft_synchronization_stopped = sync_previous_state
 
-    def assert_odoo_event(self, odoo_event, expected_values):
+    def assert_sleektiv_event(self, sleektiv_event, expected_values):
         """
-        Assert that an Odoo event has the same values than in the expected_values dictionary,
+        Assert that an Sleektiv event has the same values than in the expected_values dictionary,
         for the keys present in expected_values.
         """
         self.assertTrue(expected_values)
 
-        odoo_event_values = odoo_event.read(list(expected_values.keys()))[0]
+        sleektiv_event_values = sleektiv_event.read(list(expected_values.keys()))[0]
         for k, v in expected_values.items():
             if k in ("user_id", "recurrence_id"):
                 v = (v.id, v.name) if v else False
 
             if isinstance(v, list):
-                self.assertListEqual(sorted(v), sorted(odoo_event_values.get(k)), msg=f"'{k}' mismatch")
+                self.assertListEqual(sorted(v), sorted(sleektiv_event_values.get(k)), msg=f"'{k}' mismatch")
             else:
-                self.assertEqual(v, odoo_event_values.get(k), msg=f"'{k}' mismatch")
+                self.assertEqual(v, sleektiv_event_values.get(k), msg=f"'{k}' mismatch")
 
-    def assert_odoo_recurrence(self, odoo_recurrence, expected_values):
+    def assert_sleektiv_recurrence(self, sleektiv_recurrence, expected_values):
         """
-        Assert that an Odoo recurrence has the same values than in the expected_values dictionary,
+        Assert that an Sleektiv recurrence has the same values than in the expected_values dictionary,
         for the keys present in expected_values.
         """
-        odoo_recurrence_values = odoo_recurrence.read(list(expected_values.keys()))[0]
+        sleektiv_recurrence_values = sleektiv_recurrence.read(list(expected_values.keys()))[0]
 
         for k, v in expected_values.items():
-            self.assertEqual(v, odoo_recurrence_values.get(k), msg=f"'{k}' mismatch")
+            self.assertEqual(v, sleektiv_recurrence_values.get(k), msg=f"'{k}' mismatch")
 
     def assert_dict_equal(self, dict1, dict2):
 

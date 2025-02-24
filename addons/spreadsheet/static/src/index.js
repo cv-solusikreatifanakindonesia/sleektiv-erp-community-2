@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 /**
  * This file is meant to load the different subparts of the module
@@ -12,33 +12,33 @@
  *                filters
  *                /\    \
  *               /  \    \
- *           pivot  list  Odoo chart
+ *           pivot  list  Sleektiv chart
  */
 
 /** TODO: Introduce a position parameter to the plugin registry in order to load them in a specific order */
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
 const { corePluginRegistry, coreViewsPluginRegistry } = spreadsheet.registries;
 
 import { GlobalFiltersCorePlugin, GlobalFiltersUIPlugin } from "@spreadsheet/global_filters/index";
-import { PivotOdooCorePlugin, PivotUIGlobalFilterPlugin } from "@spreadsheet/pivot/index"; // list depends on filter for its getters
+import { PivotSleektivCorePlugin, PivotUIGlobalFilterPlugin } from "@spreadsheet/pivot/index"; // list depends on filter for its getters
 import { ListCorePlugin, ListUIPlugin } from "@spreadsheet/list/index"; // pivot depends on filter for its getters
 import {
-    ChartOdooMenuPlugin,
-    OdooChartCorePlugin,
-    OdooChartUIPlugin,
-} from "@spreadsheet/chart/index"; // Odoochart depends on filter for its getters
+    ChartSleektivMenuPlugin,
+    SleektivChartCorePlugin,
+    SleektivChartUIPlugin,
+} from "@spreadsheet/chart/index"; // Sleektivchart depends on filter for its getters
 import { PivotCoreGlobalFilterPlugin } from "./pivot/plugins/pivot_core_global_filter_plugin";
-import { PivotOdooUIPlugin } from "./pivot/plugins/pivot_odoo_ui_plugin";
+import { PivotSleektivUIPlugin } from "./pivot/plugins/pivot_sleektiv_ui_plugin";
 
-corePluginRegistry.add("OdooGlobalFiltersCorePlugin", GlobalFiltersCorePlugin);
-corePluginRegistry.add("PivotOdooCorePlugin", PivotOdooCorePlugin);
-corePluginRegistry.add("OdooPivotGlobalFiltersCorePlugin", PivotCoreGlobalFilterPlugin);
-corePluginRegistry.add("OdooListCorePlugin", ListCorePlugin);
-corePluginRegistry.add("odooChartCorePlugin", OdooChartCorePlugin);
-corePluginRegistry.add("chartOdooMenuPlugin", ChartOdooMenuPlugin);
+corePluginRegistry.add("SleektivGlobalFiltersCorePlugin", GlobalFiltersCorePlugin);
+corePluginRegistry.add("PivotSleektivCorePlugin", PivotSleektivCorePlugin);
+corePluginRegistry.add("SleektivPivotGlobalFiltersCorePlugin", PivotCoreGlobalFilterPlugin);
+corePluginRegistry.add("SleektivListCorePlugin", ListCorePlugin);
+corePluginRegistry.add("sleektivChartCorePlugin", SleektivChartCorePlugin);
+corePluginRegistry.add("chartSleektivMenuPlugin", ChartSleektivMenuPlugin);
 
-coreViewsPluginRegistry.add("OdooGlobalFiltersUIPlugin", GlobalFiltersUIPlugin);
-coreViewsPluginRegistry.add("OdooPivotGlobalFilterUIPlugin", PivotUIGlobalFilterPlugin);
-coreViewsPluginRegistry.add("OdooListUIPlugin", ListUIPlugin);
-coreViewsPluginRegistry.add("odooChartUIPlugin", OdooChartUIPlugin);
-coreViewsPluginRegistry.add("odooPivotUIPlugin", PivotOdooUIPlugin);
+coreViewsPluginRegistry.add("SleektivGlobalFiltersUIPlugin", GlobalFiltersUIPlugin);
+coreViewsPluginRegistry.add("SleektivPivotGlobalFilterUIPlugin", PivotUIGlobalFilterPlugin);
+coreViewsPluginRegistry.add("SleektivListUIPlugin", ListUIPlugin);
+coreViewsPluginRegistry.add("sleektivChartUIPlugin", SleektivChartUIPlugin);
+coreViewsPluginRegistry.add("sleektivPivotUIPlugin", PivotSleektivUIPlugin);

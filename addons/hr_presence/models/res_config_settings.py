@@ -1,5 +1,5 @@
 
-from odoo import models
+from sleektiv import models
 
 
 class ResConfigSettings(models.TransientModel):

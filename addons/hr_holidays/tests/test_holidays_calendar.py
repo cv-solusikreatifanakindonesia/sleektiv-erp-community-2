@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, timedelta
 
-from odoo.osv import expression
+from sleektiv.osv import expression
 
-from odoo.addons.base.tests.common import HttpCase
-from odoo.tests.common import tagged
-from odoo.tests.common import users
+from sleektiv.addons.base.tests.common import HttpCase
+from sleektiv.tests.common import tagged
+from sleektiv.tests.common import users
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from sleektiv.addons.hr_holidays.tests.common import TestHrHolidaysCommon
 
 @tagged('post_install', '-at_install', 'holiday_calendar')
 class TestHolidaysCalendar(HttpCase, TestHrHolidaysCommon):

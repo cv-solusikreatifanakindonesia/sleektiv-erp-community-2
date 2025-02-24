@@ -7,7 +7,7 @@
 This module integrate with the ETA Portal to automatically sign and send your invoices to the tax Authority.
 Special thanks to Plementus <info@plementus.com> for their help in developing this module.
     """,
-    'website': 'https://www.odoo.com',
+    'website': 'https://sleektiv.com',
     'category': 'account',
     'version': '0.2',
     'license': 'LGPL-3',

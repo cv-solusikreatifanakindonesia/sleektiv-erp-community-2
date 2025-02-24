@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { registry } from "@web/core/registry";
 import { fillTemporalService } from "@crm/views/fill_temporal_service";

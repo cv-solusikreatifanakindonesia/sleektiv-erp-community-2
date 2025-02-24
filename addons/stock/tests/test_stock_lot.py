@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.tests import Form
-from odoo.exceptions import ValidationError
+from sleektiv import Command
+from sleektiv.addons.stock.tests.common import TestStockCommon
+from sleektiv.tests import Form
+from sleektiv.exceptions import ValidationError
 
 
 class TestLotSerial(TestStockCommon):

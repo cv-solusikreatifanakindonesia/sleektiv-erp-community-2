@@ -1,5 +1,5 @@
-from odoo import http
-from odoo.tests import tagged, HttpCase
+from sleektiv import http
+from sleektiv.tests import tagged, HttpCase
 
 
 @tagged("-at_install", "post_install")

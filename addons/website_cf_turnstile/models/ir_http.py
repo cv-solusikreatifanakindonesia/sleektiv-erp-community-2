@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import logging
 import requests
 
-from odoo import api, models, _
-from odoo.http import request
-from odoo.exceptions import UserError, ValidationError
+from sleektiv import api, models, _
+from sleektiv.http import request
+from sleektiv.exceptions import UserError, ValidationError
 
 logger = logging.getLogger(__name__)
 

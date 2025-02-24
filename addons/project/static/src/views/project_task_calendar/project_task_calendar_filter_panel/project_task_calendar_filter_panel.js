@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { CalendarFilterPanel } from "@web/views/calendar/filter_panel/calendar_filter_panel";
 

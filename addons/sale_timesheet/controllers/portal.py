@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import NotFound
 
-from odoo import http, _
-from odoo.exceptions import AccessError, MissingError
-from odoo.http import request
-from odoo.osv import expression
+from sleektiv import http, _
+from sleektiv.exceptions import AccessError, MissingError
+from sleektiv.http import request
+from sleektiv.osv import expression
 
-from odoo.addons.account.controllers.portal import PortalAccount
-from odoo.addons.hr_timesheet.controllers.portal import TimesheetCustomerPortal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
-from odoo.addons.project.controllers.portal import ProjectCustomerPortal
+from sleektiv.addons.account.controllers.portal import PortalAccount
+from sleektiv.addons.hr_timesheet.controllers.portal import TimesheetCustomerPortal
+from sleektiv.addons.portal.controllers.portal import pager as portal_pager
+from sleektiv.addons.project.controllers.portal import ProjectCustomerPortal
 
 
 class PortalProjectAccount(PortalAccount, ProjectCustomerPortal):

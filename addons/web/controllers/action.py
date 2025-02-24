@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
-from odoo import _
-from odoo.exceptions import UserError, MissingError, AccessError
-from odoo.http import Controller, request, route
+from sleektiv import _
+from sleektiv.exceptions import UserError, MissingError, AccessError
+from sleektiv.http import Controller, request, route
 from .utils import clean_action
 from werkzeug.exceptions import BadRequest
 

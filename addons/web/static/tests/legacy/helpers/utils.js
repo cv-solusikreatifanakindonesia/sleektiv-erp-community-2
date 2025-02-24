@@ -1,4 +1,4 @@
-/** @odoo-module alias=@web/../tests/helpers/utils default=false */
+/** @sleektiv-module alias=@web/../tests/helpers/utils default=false */
 
 import { getTemplate } from "@web/core/templates";
 import { browser } from "@web/core/browser/browser";
@@ -24,7 +24,7 @@ import {
     onWillUnmount,
     onWillUpdateProps,
     useComponent,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 
 /**
  * @typedef {keyof HTMLElementEventMap | keyof WindowEventMap} EventType

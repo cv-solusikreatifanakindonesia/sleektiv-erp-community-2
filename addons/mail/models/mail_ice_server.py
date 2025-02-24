@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
-from odoo.addons.mail.tools.discuss import get_twilio_credentials
+from sleektiv import fields, models
+from sleektiv.addons.mail.tools.discuss import get_twilio_credentials
 import logging
 import requests
 

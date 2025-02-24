@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _
+from sleektiv import api, fields, models, _
 
 
 class ApplicantSendMail(models.TransientModel):

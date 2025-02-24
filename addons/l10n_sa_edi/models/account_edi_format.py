@@ -3,9 +3,9 @@ from hashlib import sha256
 from base64 import b64decode, b64encode
 from lxml import etree
 from datetime import datetime
-from odoo import models, fields, _, api
-from odoo.exceptions import UserError
-from odoo.tools import format_list
+from sleektiv import models, fields, _, api
+from sleektiv.exceptions import UserError
+from sleektiv.tools import format_list
 
 
 class AccountEdiFormat(models.Model):

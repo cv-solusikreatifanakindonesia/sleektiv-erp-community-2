@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class SnailmailNotificationPopover extends Component {
     static template = "snailmail.SnailmailNotificationPopover";

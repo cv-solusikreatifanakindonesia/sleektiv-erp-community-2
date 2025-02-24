@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import sleektiv.tests
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestUi(odoo.tests.HttpCase):
+@sleektiv.tests.tagged('post_install', '-at_install')
+class TestUi(sleektiv.tests.HttpCase):
 
     @classmethod
     def setUpClass(cls):
@@ -12,7 +12,7 @@ class TestUi(odoo.tests.HttpCase):
         cls.env['res.config.settings'].create({'group_project_milestone': True}).execute()
 
     def test_01_project_tour(self):
-        self.start_tour("/odoo", 'project_tour', login="admin")
+        self.start_tour("/sleektiv", 'project_tour', login="admin")
 
     def test_project_task_history(self):
         """This tour will check that the history works properly."""
@@ -31,4 +31,4 @@ class TestUi(odoo.tests.HttpCase):
             'project_id': project2.id,
         })
 
-        self.start_tour('/odoo', 'project_task_history_tour', login='admin')
+        self.start_tour('/sleektiv', 'project_task_history_tour', login='admin')

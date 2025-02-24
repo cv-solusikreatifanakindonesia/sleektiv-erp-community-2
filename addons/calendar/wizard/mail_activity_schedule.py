@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.exceptions import UserError
-from odoo.tools.translate import _
+from sleektiv import models
+from sleektiv.exceptions import UserError
+from sleektiv.tools.translate import _
 
 
 class MailActivitySchedule(models.TransientModel):

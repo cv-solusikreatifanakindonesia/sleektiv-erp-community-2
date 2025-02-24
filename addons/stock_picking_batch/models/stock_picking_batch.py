@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv.expression import AND
-from odoo.tools import float_is_zero, format_list
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.osv.expression import AND
+from sleektiv.tools import float_is_zero, format_list
 
 class StockPickingBatch(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']

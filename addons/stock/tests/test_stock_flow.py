@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged
-from odoo.tools import mute_logger, float_round
-from odoo import fields
+from sleektiv.addons.stock.tests.common import TestStockCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import Form, tagged
+from sleektiv.tools import mute_logger, float_round
+from sleektiv import fields
 
 
 class TestStockFlow(TestStockCommon):
@@ -25,7 +25,7 @@ class TestStockFlow(TestStockCommon):
             'name': 'My Company (Chicago)-demo',
         })
 
-    @mute_logger('odoo.addons.base.models.ir_model', 'odoo.models')
+    @mute_logger('sleektiv.addons.base.models.ir_model', 'sleektiv.models')
     def test_00_picking_create_and_transfer_quantity(self):
         """ Basic stock operation on incoming and outgoing shipment. """
         LotObj = self.env['stock.lot']

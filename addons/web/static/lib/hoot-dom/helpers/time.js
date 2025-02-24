@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { HootDomError } from "../hoot_dom_utils";
 

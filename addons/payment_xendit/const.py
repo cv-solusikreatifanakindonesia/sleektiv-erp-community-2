@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 # The currencies supported by Xendit, in ISO 4217 format.
 SUPPORTED_CURRENCIES = [

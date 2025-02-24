@@ -1,5 +1,5 @@
-from odoo import http
-from odoo.http import request
+from sleektiv import http
+from sleektiv.http import request
 
 class DashboardShareRoute(http.Controller):
     @http.route(['/dashboard/share/<int:share_id>/<token>'], type='http', auth='public')

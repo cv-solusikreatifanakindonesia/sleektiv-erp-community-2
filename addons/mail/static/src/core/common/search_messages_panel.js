@@ -1,4 +1,4 @@
-import { Component, useState, onWillUpdateProps } from "@odoo/owl";
+import { Component, useState, onWillUpdateProps } from "@sleektiv/owl";
 import { ActionPanel } from "@mail/discuss/core/common/action_panel";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";

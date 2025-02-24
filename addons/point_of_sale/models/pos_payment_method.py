@@ -1,5 +1,5 @@
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError, ValidationError
 
 
 class PosPaymentMethod(models.Model):

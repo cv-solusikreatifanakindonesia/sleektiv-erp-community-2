@@ -1,9 +1,9 @@
-/** @odoo-module alias=@web/../tests/mobile/core/action_swiper_tests default=false */
+/** @sleektiv-module alias=@web/../tests/mobile/core/action_swiper_tests default=false */
 
-import { Component, onPatched, xml } from "@odoo/owl";
+import { Component, onPatched, xml } from "@sleektiv/owl";
 import { Deferred } from "@web/core/utils/concurrency";
 import { ActionSwiper } from "@web/core/action_swiper/action_swiper";
-import { beforeEach, expect, test } from "@odoo/hoot";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
 import { defineParams } from "../_framework/mock_server/mock_server";
 import {
     contains,
@@ -13,8 +13,8 @@ import {
     swipeLeft,
     swipeRight,
 } from "@web/../tests/web_test_helpers";
-import { queryFirst, hover } from "@odoo/hoot-dom";
-import { advanceTime, animationFrame, mockTouch } from "@odoo/hoot-mock";
+import { queryFirst, hover } from "@sleektiv/hoot-dom";
+import { advanceTime, animationFrame, mockTouch } from "@sleektiv/hoot-mock";
 
 beforeEach(() => {
     mockTouch(true);

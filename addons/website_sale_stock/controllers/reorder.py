@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website_sale.controllers import reorder
-from odoo.http import request, route
+from sleektiv.addons.website_sale.controllers import reorder
+from sleektiv.http import request, route
 
 
 class CustomerPortal(reorder.CustomerPortal):

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.im_livechat.tests import chatbot_common
-from odoo.exceptions import ValidationError
-from odoo.tests.common import tagged, new_test_user
+from sleektiv import Command
+from sleektiv.addons.im_livechat.tests import chatbot_common
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests.common import tagged, new_test_user
 
 @tagged("post_install", "-at_install")
 class ChatbotCase(chatbot_common.ChatbotCase):

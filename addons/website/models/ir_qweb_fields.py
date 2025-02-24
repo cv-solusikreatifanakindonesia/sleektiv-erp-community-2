@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from lxml import etree
 from markupsafe import Markup
 
-from odoo import api, models, _
-from odoo.addons.website.tools import add_form_signature
+from sleektiv import api, models, _
+from sleektiv.addons.website.tools import add_form_signature
 
 
 class Contact(models.AbstractModel):

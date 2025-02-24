@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class ImportDataColumnError extends Component {

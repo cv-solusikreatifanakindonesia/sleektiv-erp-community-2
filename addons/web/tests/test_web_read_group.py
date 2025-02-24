@@ -1,5 +1,5 @@
-from odoo import fields
-from odoo.tests import common
+from sleektiv import fields
+from sleektiv.tests import common
 
 
 @common.tagged('post_install', '-at_install')

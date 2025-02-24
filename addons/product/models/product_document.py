@@ -1,8 +1,8 @@
 
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
 
 
 class ProductDocument(models.Model):
@@ -28,7 +28,7 @@ class ProductDocument(models.Model):
             if attachment.type == 'url' and attachment.url and\
                 not attachment.url.startswith(('https://', 'http://', 'ftp://')):
                 raise ValidationError(_(
-                    "Please enter a valid URL.\nExample: https://www.odoo.com\n\nInvalid URL: %s",
+                    "Please enter a valid URL.\nExample: https://www.sleektiv.com\n\nInvalid URL: %s",
                     attachment.url
                 ))
 

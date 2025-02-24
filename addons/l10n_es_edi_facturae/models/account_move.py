@@ -7,11 +7,11 @@ from hashlib import sha1
 from lxml import etree
 from markupsafe import Markup
 
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import float_round, float_repr, date_utils, SQL
-from odoo.tools.xml_utils import cleanup_xml_node, find_xml_value
-from odoo.addons.l10n_es_edi_facturae.xml_utils import (
+from sleektiv import Command, _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import float_round, float_repr, date_utils, SQL
+from sleektiv.tools.xml_utils import cleanup_xml_node, find_xml_value
+from sleektiv.addons.l10n_es_edi_facturae.xml_utils import (
     NS_MAP,
     _canonicalize_node,
     _reference_digests,
@@ -739,7 +739,7 @@ class AccountMove(models.Model):
         return taxes
 
     def _search_product_for_import(self, item_description):
-        # Exported Odoo XML will have item_description = "[default_code] name".
+        # Exported Sleektiv XML will have item_description = "[default_code] name".
         # We can check if it follows the same format and search for the product with the default code and the name.
         code_and_name = re.match(r"(\[(?P<default_code>.*?)\]\s)?(?P<name>.*)", item_description).groupdict()
         product = self.env['product.product']._retrieve_product(**code_and_name)

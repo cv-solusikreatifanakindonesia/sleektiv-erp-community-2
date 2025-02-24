@@ -1,13 +1,13 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
     import { registry } from "@web/core/registry";
     import { stepUtils } from "@web_tour/tour_service/tour_utils";
     import { _t } from "@web/core/l10n/translation";
 
-    import { markup } from "@odoo/owl";
+    import { markup } from "@sleektiv/owl";
 
     registry.category("web_tour.tours").add('mass_mailing_tour', {
-        url: '/odoo',
+        url: '/sleektiv',
         steps: () => [stepUtils.showAppsMenuItem(), {
         isActive: ["enterprise"],
         trigger: '.o_app[data-menu-xmlid="mass_mailing.mass_mailing_menu_root"]',

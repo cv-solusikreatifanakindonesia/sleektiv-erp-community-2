@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from threading import Thread, Event
 
-from odoo.addons.hw_drivers.main import drivers, iot_devices
-from odoo.tools.lru import LRU
+from sleektiv.addons.hw_drivers.main import drivers, iot_devices
+from sleektiv.tools.lru import LRU
 
 
 class DriverMetaClass(type):

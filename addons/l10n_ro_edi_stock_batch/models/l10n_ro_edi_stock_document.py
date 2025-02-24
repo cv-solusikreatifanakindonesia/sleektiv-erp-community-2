@@ -1,4 +1,4 @@
-from odoo import models, fields
+from sleektiv import models, fields
 
 
 class L10nRoEdiStockDocument(models.Model):

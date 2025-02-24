@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
 
 class MailTracking(models.Model):
@@ -207,7 +207,7 @@ class MailTracking(models.Model):
     def _format_display_value(self, field_type, new=True):
         """ Format value of 'mail.tracking.value', according to the field type.
 
-        :param str field_type: Odoo field type;
+        :param str field_type: Sleektiv field type;
         :param bool new: if True, display the 'new' value. Otherwise display
           the 'old' one.
         """

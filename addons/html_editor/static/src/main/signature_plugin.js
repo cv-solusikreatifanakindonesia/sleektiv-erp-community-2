@@ -4,7 +4,7 @@ import { parseHTML } from "@html_editor/utils/html";
 import { user } from "@web/core/user";
 import { withSequence } from "@html_editor/utils/resource";
 import { renderToString } from "@web/core/utils/render";
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 import { isEmptyBlock, paragraphRelatedElementsSelector } from "@html_editor/utils/dom_info";
 
 export const SIGNATURE_CLASS = "o-signature-container";

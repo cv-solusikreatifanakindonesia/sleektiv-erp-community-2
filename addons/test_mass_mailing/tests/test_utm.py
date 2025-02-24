@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.test_mass_mailing.tests import common
-from odoo.tests import tagged, users
+from sleektiv.addons.test_mass_mailing.tests import common
+from sleektiv.tests import tagged, users
 
 
 @tagged("utm")

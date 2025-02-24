@@ -1,4 +1,4 @@
-import { describe, test } from "@odoo/hoot";
+import { describe, test } from "@sleektiv/hoot";
 
 import { Persona } from "@mail/core/common/persona_model";
 import { startServer, start, openDiscuss, contains } from "@mail/../tests/mail_test_helpers";

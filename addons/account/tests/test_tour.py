@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import sleektiv.tests
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingHttpCommon
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingHttpCommon
 
 
-@odoo.tests.tagged('post_install_l10n', 'post_install', '-at_install')
+@sleektiv.tests.tagged('post_install_l10n', 'post_install', '-at_install')
 class TestUi(AccountTestInvoicingHttpCommon):
 
     @classmethod
@@ -61,7 +61,7 @@ class TestUi(AccountTestInvoicingHttpCommon):
             ('state', '=', 'draft'),
         ]).unlink()
 
-        self.start_tour("/odoo", 'account_tour', login="admin")
+        self.start_tour("/sleektiv", 'account_tour', login="admin")
 
     def test_01_account_tax_groups_tour(self):
         self.env.ref('base.user_admin').write({
@@ -86,4 +86,4 @@ class TestUi(AccountTestInvoicingHttpCommon):
         })
         product.supplier_taxes_id = new_tax
 
-        self.start_tour("/odoo", 'account_tax_group', login="admin")
+        self.start_tour("/sleektiv", 'account_tax_group', login="admin")

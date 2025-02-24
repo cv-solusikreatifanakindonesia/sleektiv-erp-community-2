@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
 
-import { Component, useSubEnv } from "@odoo/owl";
+import { Component, useSubEnv } from "@sleektiv/owl";
 const { registries } = spreadsheet;
 const { figureRegistry } = registries;
 

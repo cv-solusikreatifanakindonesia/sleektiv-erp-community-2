@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, fields
-from odoo.tests import Form, tagged
-from odoo.tools.float_utils import float_round, float_compare
+from sleektiv import Command, fields
+from sleektiv.tests import Form, tagged
+from sleektiv.tools.float_utils import float_round, float_compare
 
-from odoo.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
-from odoo.addons.mrp_account.tests.test_bom_price import TestBomPriceCommon
+from sleektiv.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
+from sleektiv.addons.mrp_account.tests.test_bom_price import TestBomPriceCommon
 
 
 @tagged('post_install', '-at_install')

@@ -61,15 +61,15 @@ export class Homepage extends Component {
         }
     }
 
-    async restartOdooService() {
+    async restartSleektivService() {
         try {
             await this.store.rpc({
-                url: "/hw_posbox_homepage/restart_odoo_service",
+                url: "/hw_posbox_homepage/restart_sleektiv_service",
             });
 
             this.state.waitRestart = true;
         } catch {
-            console.warn("Error while restarting Odoo Service");
+            console.warn("Error while restarting Sleektiv Service");
         }
     }
 
@@ -89,7 +89,7 @@ export class Homepage extends Component {
         <div class="bg-white p-4 rounded overflow-auto position-relative" style="width: 100%; max-width: 600px;">
             <div class="position-absolute end-0 top-0 mt-3 me-4 d-flex gap-1">
                 <IconButton onClick.bind="toggleAdvanced" icon="this.store.advanced ? 'fa-cog' : 'fa-cogs'" />
-                <IconButton onClick.bind="restartOdooService" icon="'fa-power-off'" />
+                <IconButton onClick.bind="restartSleektivService" icon="'fa-power-off'" />
             </div>
             <div class="d-flex mb-4 flex-column align-items-center justify-content-center">
                 <h4 class="text-center m-0">IoT Box - <t t-esc="state.data.hostname" /></h4>
@@ -123,7 +123,7 @@ export class Homepage extends Component {
                     <WifiDialog />
                 </t>
             </SingleData>
-            <SingleData name="'Odoo database connected'" value="state.data.server_status" icon="'fa-link'">
+            <SingleData name="'Sleektiv database connected'" value="state.data.server_status" icon="'fa-link'">
 				<t t-set-slot="button">
 					<ServerDialog />
 				</t>
@@ -143,8 +143,8 @@ export class Homepage extends Component {
             <hr class="mt-5" />
             <FooterButtons />
             <div class="d-flex justify-content-center gap-2 mt-2">
-                <a href="https://www.odoo.com/fr_FR/help" target="_blank" class="link-primary">Help</a>
-                <a href="https://www.odoo.com/documentation/master/applications/general/iot.html" target="_blank" class="link-primary">Documentation</a>
+                <a href="https://www.sleektiv.com/fr_FR/help" target="_blank" class="link-primary">Help</a>
+                <a href="https://www.sleektiv.com/documentation/master/applications/general/iot.html" target="_blank" class="link-primary">Documentation</a>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { Dropzone } from "@web/core/dropzone/dropzone";
 
 export class MailAttachmentDropzone extends Component {

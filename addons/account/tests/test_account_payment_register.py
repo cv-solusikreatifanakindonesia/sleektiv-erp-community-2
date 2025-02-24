@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged, users
-from odoo import fields, Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged, users
+from sleektiv import fields, Command
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, Command
-from odoo.exceptions import UserError
-from odoo.tests import tagged, Form
-from odoo.tests.common import Like
+from sleektiv import fields, Command
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged, Form
+from sleektiv.tests.common import Like
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged('post_install', '-at_install')

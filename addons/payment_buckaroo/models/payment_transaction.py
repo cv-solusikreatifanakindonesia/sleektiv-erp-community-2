@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
 from werkzeug import urls
 
-from odoo import _, models
-from odoo.exceptions import ValidationError
+from sleektiv import _, models
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.payment_buckaroo import const
-from odoo.addons.payment_buckaroo.controllers.main import BuckarooController
+from sleektiv.addons.payment_buckaroo import const
+from sleektiv.addons.payment_buckaroo.controllers.main import BuckarooController
 
 _logger = logging.getLogger(__name__)
 

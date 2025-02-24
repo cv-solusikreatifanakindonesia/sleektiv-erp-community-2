@@ -2,9 +2,9 @@
 # Copyright (C) 2013-2015 Akretion (http://www.akretion.com)
 import csv
 import io
-from odoo.tools import float_is_zero, SQL
-from odoo import fields, models, api
-from odoo.tools.misc import get_lang
+from sleektiv.tools import float_is_zero, SQL
+from sleektiv import fields, models, api
+from sleektiv.tools.misc import get_lang
 from stdnum.fr import siren
 
 
@@ -98,7 +98,7 @@ class FecExportWizard(models.TransientModel):
 
     def generate_fec(self):
         # We choose to implement the flat file instead of the XML file for 2 reasons :
-        # 1) the XSD file impose to have the label on the account.move, but Odoo has the label on the account.move.line,
+        # 1) the XSD file impose to have the label on the account.move, but Sleektiv has the label on the account.move.line,
         # so that's a  problem !
         # 2) CSV files are easier to read/use for a regular accountant. So it will be easier for the accountant to check
         # the file before sending it to the fiscal administration

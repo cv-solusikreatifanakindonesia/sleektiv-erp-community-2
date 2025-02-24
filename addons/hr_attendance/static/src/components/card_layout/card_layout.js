@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, useState, onWillUnmount } from "@odoo/owl";
+import { Component, useState, onWillUnmount } from "@sleektiv/owl";
 
 const { DateTime } = luxon;
 export class CardLayout extends Component {

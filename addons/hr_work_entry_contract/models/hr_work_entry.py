@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import pytz
 
 from collections import defaultdict
 from itertools import chain
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from odoo.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import ValidationError
+from sleektiv.addons.hr_work_entry_contract.models.hr_work_intervals import WorkIntervals
 
 
 class HrWorkEntry(models.Model):

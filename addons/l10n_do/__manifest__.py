@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Dominican Republic - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -73,7 +73,7 @@ en Odoo):
 11010101 Caja General
     """,
     'author': 'Gustavo Valverde - iterativo | Consultores de Odoo (http://iterativo.do)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'account',
         'base_iban',

@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { patch } from '@web/core/utils/patch';
-import { useSubEnv } from '@odoo/owl';
+import { useSubEnv } from '@sleektiv/owl';
 import {
     ProductConfiguratorDialog
 } from '@sale/js/product_configurator_dialog/product_configurator_dialog';

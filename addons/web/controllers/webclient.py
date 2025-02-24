@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import logging
@@ -10,12 +10,12 @@ import werkzeug.utils
 import werkzeug.wrappers
 import werkzeug.wsgi
 
-import odoo
-import odoo.modules.registry
-from odoo import http
-from odoo.modules import get_manifest
-from odoo.http import request
-from odoo.tools.misc import file_path
+import sleektiv
+import sleektiv.modules.registry
+from sleektiv import http
+from sleektiv.modules import get_manifest
+from sleektiv.http import request
+from sleektiv.tools.misc import file_path
 from .utils import _local_web_translations
 
 
@@ -36,7 +36,7 @@ class WebClient(http.Controller):
         lang = request.env.context['lang'].partition('_')[0]
 
         if mods is None:
-            mods = odoo.conf.server_wide_modules or []
+            mods = sleektiv.conf.server_wide_modules or []
             if request.db:
                 mods = request.env.registry._init_modules.union(mods)
 
@@ -65,7 +65,7 @@ class WebClient(http.Controller):
         if mods:
             mods = mods.split(',')
         elif mods is None:
-            mods = list(request.env.registry._init_modules) + (odoo.conf.server_wide_modules or [])
+            mods = list(request.env.registry._init_modules) + (sleektiv.conf.server_wide_modules or [])
 
         if lang and lang not in {code for code, _ in request.env['res.lang'].sudo().get_installed()}:
             lang = None
@@ -86,7 +86,7 @@ class WebClient(http.Controller):
 
     @http.route('/web/webclient/version_info', type='json', auth="none")
     def version_info(self):
-        return odoo.service.common.exp_version()
+        return sleektiv.service.common.exp_version()
 
     @http.route('/web/tests', type='http', auth='user', readonly=True)
     def unit_tests_suite(self, mod=None, **kwargs):

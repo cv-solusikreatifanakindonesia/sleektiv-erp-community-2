@@ -1,4 +1,4 @@
-import { Component, onMounted, onWillUnmount, useState } from "@odoo/owl";
+import { Component, onMounted, onWillUnmount, useState } from "@sleektiv/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { cookie } from "@web/core/browser/cookie";
 import { useService } from "@web/core/utils/hooks";

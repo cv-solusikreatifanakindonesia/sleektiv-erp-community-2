@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAll, queryAllTexts } from "@odoo/hoot-dom";
-import { animationFrame, Deferred } from "@odoo/hoot-mock";
-import { Component, onWillStart, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAll, queryAllTexts } from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred } from "@sleektiv/hoot-mock";
+import { Component, onWillStart, xml } from "@sleektiv/owl";
 import {
     contains,
     defineActions,
@@ -204,7 +204,7 @@ test("clicking quickly on breadcrumbs...", async () => {
 
 test.tags("desktop");
 test("execute a new action while loading a lazy-loaded controller", async () => {
-    redirect("/odoo/action-4/2?cids=1");
+    redirect("/sleektiv/action-4/2?cids=1");
 
     let def;
     onRpc("partner", "web_search_read", () => def);

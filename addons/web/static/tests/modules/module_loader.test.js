@@ -1,10 +1,10 @@
-import { expect, getFixture, test } from "@odoo/hoot";
-import { microTick, tick } from "@odoo/hoot-dom";
+import { expect, getFixture, test } from "@sleektiv/hoot";
+import { microTick, tick } from "@sleektiv/hoot-dom";
 import { patchWithCleanup } from "@web/../tests/web_test_helpers";
 import { browser } from "@web/core/browser/browser";
 
-/** @type {typeof OdooModuleLoader} */
-const ModuleLoader = Object.getPrototypeOf(odoo.loader.constructor);
+/** @type {typeof SleektivModuleLoader} */
+const ModuleLoader = Object.getPrototypeOf(sleektiv.loader.constructor);
 
 test.tags("headless");
 test("define: simple case", async () => {

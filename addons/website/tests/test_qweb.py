@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import http
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.addons.website.tools import MockRequest
-from odoo.tests.common import TransactionCase
+from sleektiv import http
+from sleektiv.addons.base.tests.common import TransactionCaseWithUserDemo
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.tests.common import TransactionCase
 
 
 class TestQweb(TransactionCaseWithUserDemo):

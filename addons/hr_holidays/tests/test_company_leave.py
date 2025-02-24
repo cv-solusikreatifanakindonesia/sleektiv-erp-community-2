@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase, warmup
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.tests.common import TransactionCase, warmup
 
 
 @tagged('company_leave')

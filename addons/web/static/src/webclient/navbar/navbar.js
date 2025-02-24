@@ -15,7 +15,7 @@ import {
     useRef,
     useState,
     onWillUnmount,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 const systrayRegistry = registry.category("systray");
 
 const getBoundingClientRect = Element.prototype.getBoundingClientRect;
@@ -201,7 +201,7 @@ export class NavBar extends Component {
     }
 
     getMenuItemHref(payload) {
-        return `/odoo/${payload.actionPath || "action-" + payload.actionID}`;
+        return `/sleektiv/${payload.actionPath || "action-" + payload.actionID}`;
     }
 
     _closeAppMenuSidebar() {

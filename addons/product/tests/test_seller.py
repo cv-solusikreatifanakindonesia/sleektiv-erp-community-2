@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import first, Command
-from odoo.tests import tagged, TransactionCase
-from odoo.tools import float_compare
+from sleektiv.fields import first, Command
+from sleektiv.tests import tagged, TransactionCase
+from sleektiv.tools import float_compare
 
 
 @tagged('post_install', '-at_install')

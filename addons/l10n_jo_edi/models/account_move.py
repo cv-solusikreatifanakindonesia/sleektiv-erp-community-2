@@ -3,7 +3,7 @@ import requests
 import uuid
 from werkzeug.urls import url_encode
 
-from odoo import _, api, fields, models
+from sleektiv import _, api, fields, models
 
 JOFOTARA_URL = "https://backend.jofotara.gov.jo/core/invoices/"
 

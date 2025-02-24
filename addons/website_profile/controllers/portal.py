@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.portal.controllers import portal
-from odoo.http import request
+from sleektiv.addons.portal.controllers import portal
+from sleektiv.http import request
 
 
 class CustomerPortal(portal.CustomerPortal):

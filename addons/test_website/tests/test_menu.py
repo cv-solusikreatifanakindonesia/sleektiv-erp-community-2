@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from lxml import html
 
-from odoo.tests import tagged, HttpCase
+from sleektiv.tests import tagged, HttpCase
 
 
 @tagged('post_install', '-at_install')

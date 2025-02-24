@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
-from odoo.tools.misc import mod10r
+from sleektiv import models, fields, api, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools.misc import mod10r
 
 L10N_CH_QRR_NUMBER_LENGTH = 27
 

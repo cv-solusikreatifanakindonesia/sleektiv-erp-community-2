@@ -1,4 +1,4 @@
-from odoo import _, api, exceptions, fields, models, osv
+from sleektiv import _, api, exceptions, fields, models, osv
 
 
 class MassMailing(models.Model):

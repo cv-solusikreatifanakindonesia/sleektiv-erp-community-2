@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import api, Command, fields, models, _
-from odoo.exceptions import AccessError, UserError
-from odoo.tools import format_list
-from odoo.tools.sql import column_exists, create_column
+from sleektiv import api, Command, fields, models, _
+from sleektiv.exceptions import AccessError, UserError
+from sleektiv.tools import format_list
+from sleektiv.tools.sql import column_exists, create_column
 
 
 class SaleOrderLine(models.Model):

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-import odoo.tests
-from odoo.osv import expression
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+import sleektiv.tests
+from sleektiv.osv import expression
 
 
-@odoo.tests.tagged('post_install', '-at_install', 'assets_bundle')
-class BusWebTests(odoo.tests.HttpCase):
+@sleektiv.tests.tagged('post_install', '-at_install', 'assets_bundle')
+class BusWebTests(sleektiv.tests.HttpCase):
 
     def test_bundle_sends_bus(self):
         """

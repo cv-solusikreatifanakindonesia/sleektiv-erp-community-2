@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import werkzeug
 from collections import OrderedDict
 
-from odoo import conf, http, _
-from odoo.http import request
-from odoo.exceptions import AccessError, MissingError
-from odoo.addons.portal.controllers import portal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
+from sleektiv import conf, http, _
+from sleektiv.http import request
+from sleektiv.exceptions import AccessError, MissingError
+from sleektiv.addons.portal.controllers import portal
+from sleektiv.addons.portal.controllers.portal import pager as portal_pager
 
 
 class CustomerPortal(portal.CustomerPortal):

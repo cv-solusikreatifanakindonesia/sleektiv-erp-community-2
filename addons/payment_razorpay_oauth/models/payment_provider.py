@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import pprint
@@ -8,13 +8,13 @@ from urllib.parse import urlencode
 
 import requests
 
-from odoo import _, fields, models
-from odoo.exceptions import RedirectWarning, ValidationError
-from odoo.http import request
+from sleektiv import _, fields, models
+from sleektiv.exceptions import RedirectWarning, ValidationError
+from sleektiv.http import request
 
-from odoo.addons.payment_razorpay import const
-from odoo.addons.payment_razorpay_oauth import const as oauth_const
-from odoo.addons.payment_razorpay_oauth.controllers.onboarding import RazorpayController
+from sleektiv.addons.payment_razorpay import const
+from sleektiv.addons.payment_razorpay_oauth import const as oauth_const
+from sleektiv.addons.payment_razorpay_oauth.controllers.onboarding import RazorpayController
 
 
 _logger = logging.getLogger(__name__)

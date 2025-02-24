@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import sleektiv
 
 
 def db_list(force=False, host=None):
     return []
 
-odoo.http.db_list = db_list
+sleektiv.http.db_list = db_list

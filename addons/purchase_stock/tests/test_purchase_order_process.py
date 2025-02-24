@@ -1,6 +1,6 @@
-from odoo import Command, fields
-from odoo.tests import tagged
-from odoo.tools import float_compare
+from sleektiv import Command, fields
+from sleektiv.tests import tagged
+from sleektiv.tools import float_compare
 from .common import PurchaseTestCommon
 
 

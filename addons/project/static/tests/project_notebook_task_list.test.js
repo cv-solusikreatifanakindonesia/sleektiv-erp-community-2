@@ -1,6 +1,6 @@
-import { beforeEach, expect, describe, test } from "@odoo/hoot";
-import { click } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+import { beforeEach, expect, describe, test } from "@sleektiv/hoot";
+import { click } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { mountView } from "@web/../tests/web_test_helpers";
 
 import { defineProjectModels, ProjectProject, ProjectTask } from "./project_models";

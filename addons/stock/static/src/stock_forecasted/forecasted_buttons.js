@@ -1,8 +1,8 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class ForecastedButtons extends Component {
     static template = "stock.ForecastedButtons";

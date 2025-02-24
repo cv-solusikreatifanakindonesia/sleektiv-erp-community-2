@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models
-from odoo.api import Environment
-from odoo.fields import Datetime
-from odoo.http import request
-from odoo.modules.registry import Registry
-from odoo.addons.bus.websocket import wsrequest
+from sleektiv import models
+from sleektiv.api import Environment
+from sleektiv.fields import Datetime
+from sleektiv.http import request
+from sleektiv.modules.registry import Registry
+from sleektiv.addons.bus.websocket import wsrequest
 
 class IrWebsocket(models.AbstractModel):
     _inherit = 'ir.websocket'

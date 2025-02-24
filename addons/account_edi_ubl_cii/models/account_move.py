@@ -1,4 +1,4 @@
-from odoo import _, api, fields, models, Command
+from sleektiv import _, api, fields, models, Command
 
 
 class AccountMove(models.Model):

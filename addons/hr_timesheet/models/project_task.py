@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 
 from collections import defaultdict
 
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError, RedirectWarning
-from odoo.tools import SQL
-from odoo.addons.rating.models.rating_data import OPERATOR_MAPPING
+from sleektiv import models, fields, api, _
+from sleektiv.exceptions import UserError, RedirectWarning
+from sleektiv.tools import SQL
+from sleektiv.addons.rating.models.rating_data import OPERATOR_MAPPING
 
 
 PROJECT_TASK_READABLE_FIELDS = {

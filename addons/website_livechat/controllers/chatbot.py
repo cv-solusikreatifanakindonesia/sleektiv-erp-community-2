@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
-from odoo import http, Command, fields
-from odoo.http import request
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import http, Command, fields
+from sleektiv.http import request
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class WebsiteLivechatChatbotScriptController(http.Controller):

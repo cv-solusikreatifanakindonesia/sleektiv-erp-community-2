@@ -66,7 +66,7 @@ if [ ! -d $CLONE_DIR ]; then
 addons/hw_*
 addons/point_of_sale/tools/posbox/configuration
 odoo/
-odoo-bin" | tee --append .git/info/sparse-checkout > /dev/null
+sleektiv-bin" | tee --append .git/info/sparse-checkout > /dev/null
     git read-tree -mu HEAD
 fi
 

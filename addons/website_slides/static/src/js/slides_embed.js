@@ -1,4 +1,4 @@
-// @odoo-module ignore
+// @sleektiv-module ignore
 /**
  * This is a minimal version of the PDFViewer widget.
  * It is NOT use in the website_slides module, but it is called when embedding
@@ -240,7 +240,7 @@ $(function () {
             }
         );
 
-        // To avoid create a dependancy to openerpframework.js, we use JQuery AJAX to post data instead of ajax.jsonRpc
+        // To avoid create a dependancy to sleektivframework.js, we use JQuery AJAX to post data instead of ajax.jsonRpc
         $('.oe_slide_js_share_email button').on('click', function () {
             var widget = $('.oe_slide_js_share_email');
             var input = widget.find('input');

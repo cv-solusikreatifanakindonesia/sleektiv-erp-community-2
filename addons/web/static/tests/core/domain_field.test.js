@@ -1,6 +1,6 @@
-import { expect, getFixture, test } from "@odoo/hoot";
-import { queryAllTexts, scroll } from "@odoo/hoot-dom";
-import { Deferred, animationFrame, mockDate } from "@odoo/hoot-mock";
+import { expect, getFixture, test } from "@sleektiv/hoot";
+import { queryAllTexts, scroll } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, mockDate } from "@sleektiv/hoot-mock";
 import { getPickerCell } from "@web/../tests/core/datetime/datetime_test_helpers";
 import { SELECTORS } from "@web/../tests/core/domain_selector/domain_selector_helpers";
 import {

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from collections import defaultdict
-from odoo import api, fields, models, _
+from sleektiv import api, fields, models, _
 
 
 class StockLot(models.Model):

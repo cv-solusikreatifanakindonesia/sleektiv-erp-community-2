@@ -1,7 +1,7 @@
 import { defineMailModels } from "@mail/../tests/mail_test_helpers";
-import { describe, expect, test } from "@odoo/hoot";
-import { click, select } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { click, select } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { defineModels, fields, models, mountView, onRpc } from "@web/../tests/web_test_helpers";
 
 class EventMail extends models.Model {

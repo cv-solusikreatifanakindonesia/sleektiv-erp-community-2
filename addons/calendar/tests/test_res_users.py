@@ -1,4 +1,4 @@
-from odoo.tests.common import TransactionCase
+from sleektiv.tests.common import TransactionCase
 
 
 class TestResUsers(TransactionCase):

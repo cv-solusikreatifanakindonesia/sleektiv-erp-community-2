@@ -1,4 +1,4 @@
-import { expect, getFixture, test } from "@odoo/hoot";
+import { expect, getFixture, test } from "@sleektiv/hoot";
 import {
     getNextFocusableElement,
     press,
@@ -6,10 +6,10 @@ import {
     queryAllTexts,
     queryFirst,
     queryOne,
-} from "@odoo/hoot-dom";
-import { Deferred, animationFrame, mockTimeZone, runAllTimers } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, mockTimeZone, runAllTimers } from "@sleektiv/hoot-mock";
 
-import { onWillDestroy, onWillStart, reactive, useState } from "@odoo/owl";
+import { onWillDestroy, onWillStart, reactive, useState } from "@sleektiv/owl";
 import { getPickerCell } from "@web/../tests/core/datetime/datetime_test_helpers";
 import {
     clickFieldDropdown,
@@ -7981,7 +7981,7 @@ test("display correct value after validation error", async () => {
     expect.errors(1);
 
     function validationHandler(env, error, originalError) {
-        if (originalError.data.name === "odoo.exceptions.ValidationError") {
+        if (originalError.data.name === "sleektiv.exceptions.ValidationError") {
             return true;
         }
     }
@@ -8955,7 +8955,7 @@ test("one2many form view with action button", async () => {
     // onClose handler, executed because the python method does not return
     // any action, or an ir.action.act_window_close) ; this test ensures that
     // it reloads the fields of the opened view (i.e. the form in this case).
-    // See https://github.com/odoo/odoo/issues/24189
+    // See https://github.com/sleektiv/sleektiv/issues/24189
     mockService("action", {
         doActionButton(params) {
             Partner._records[1].name = "new name";

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 API_VERSION = '2019-05-16'  # The API version of Stripe implemented in this module
 
 # Stripe proxy URL
-PROXY_URL = 'https://stripe.api.odoo.com/api/stripe/'
+PROXY_URL = 'https://stripe.api.sleektiv.com/api/stripe/'
 
 # The codes of the payment methods to activate when Stripe is activated.
 DEFAULT_PAYMENT_METHOD_CODES = {

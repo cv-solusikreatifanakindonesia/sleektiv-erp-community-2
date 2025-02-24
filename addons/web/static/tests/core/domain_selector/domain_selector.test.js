@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAll, queryAllAttributes, queryAllTexts } from "@odoo/hoot-dom";
-import { animationFrame, mockDate, mockTimeZone, runAllTimers } from "@odoo/hoot-mock";
-import { Component, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAll, queryAllAttributes, queryAllTexts } from "@sleektiv/hoot-dom";
+import { animationFrame, mockDate, mockTimeZone, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, useState, xml } from "@sleektiv/owl";
 
 import {
     getPickerApplyButton,

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import time
@@ -9,7 +9,7 @@ try:
 except ImportError:
     pass
 
-from odoo.tests import common
+from sleektiv.tests import common
 from .common import WebsocketCase
 from ..websocket import CloseCode, Websocket
 

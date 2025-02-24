@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Japan - Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -18,11 +18,11 @@ Note:
 
 * Fiscal positions '内税' and '外税' have been added to handle special requirements which might arise from POS implementation. [1]  Under normal circumstances, you might not need to use those at all.
 
-[1] See https://github.com/odoo/odoo/pull/6470 for detail.
+[1] See https://github.com/sleektiv/sleektiv/pull/6470 for detail.
 
     """,
     'author': 'Quartile Limited (https://www.quartile.co/)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'account',
     ],

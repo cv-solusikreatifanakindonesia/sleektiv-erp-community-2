@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.api import Environment
-import odoo.tests
-from odoo.tools import html2plaintext
+from sleektiv.api import Environment
+import sleektiv.tests
+from sleektiv.tools import html2plaintext
 
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_hr_recruitment.controllers.main import WebsiteHrRecruitment
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_hr_recruitment.controllers.main import WebsiteHrRecruitment
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestWebsiteHrRecruitmentForm(odoo.tests.HttpCase):
+@sleektiv.tests.tagged('post_install', '-at_install')
+class TestWebsiteHrRecruitmentForm(sleektiv.tests.HttpCase):
     def test_tour(self):
         job_guru = self.env['hr.job'].create({
             'name': 'Guru',
@@ -23,7 +23,7 @@ class TestWebsiteHrRecruitmentForm(odoo.tests.HttpCase):
 
         self.start_tour(self.env['website'].get_client_action_url('/jobs'), 'website_hr_recruitment_tour_edit_form', login='admin')
 
-        with odoo.tests.RecordCapturer(self.env['hr.applicant'], []) as capt:
+        with sleektiv.tests.RecordCapturer(self.env['hr.applicant'], []) as capt:
             self.start_tour("/", 'website_hr_recruitment_tour')
 
         # check result

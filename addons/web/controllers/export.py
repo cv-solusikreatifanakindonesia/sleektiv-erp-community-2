@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import csv
 import datetime
 import functools
@@ -11,11 +11,11 @@ from collections import OrderedDict
 
 from werkzeug.exceptions import InternalServerError
 
-from odoo import http
-from odoo.exceptions import UserError
-from odoo.http import content_disposition, request
-from odoo.tools import lazy_property, osutil
-from odoo.tools.misc import xlsxwriter
+from sleektiv import http
+from sleektiv.exceptions import UserError
+from sleektiv.http import content_disposition, request
+from sleektiv.tools import lazy_property, osutil
+from sleektiv.tools.misc import xlsxwriter
 
 
 _logger = logging.getLogger(__name__)
@@ -530,7 +530,7 @@ class ExportFormat(object):
         return f"{model_description} ({base})"
 
     def from_data(self, fields, columns_headers, rows):
-        """ Conversion method from Odoo's export data to whatever the
+        """ Conversion method from Sleektiv's export data to whatever the
         current export class outputs
 
         :params list fields: a list of fields to export
@@ -598,7 +598,7 @@ class CSVExport(ExportFormat, http.Controller):
             _logger.exception("Exception during request handling.")
             payload = json.dumps({
                 'code': 200,
-                'message': "Odoo Server Error",
+                'message': "Sleektiv Server Error",
                 'data': http.serialize_exception(exc)
             })
             raise InternalServerError(payload) from exc
@@ -646,7 +646,7 @@ class ExcelExport(ExportFormat, http.Controller):
             _logger.exception("Exception during request handling.")
             payload = json.dumps({
                 'code': 200,
-                'message': "Odoo Server Error",
+                'message': "Sleektiv Server Error",
                 'data': http.serialize_exception(exc)
             })
             raise InternalServerError(payload) from exc

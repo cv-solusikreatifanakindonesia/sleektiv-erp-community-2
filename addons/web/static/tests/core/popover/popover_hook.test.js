@@ -1,6 +1,6 @@
-import { test, expect, getFixture, destroy } from "@odoo/hoot";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { test, expect, getFixture, destroy } from "@sleektiv/hoot";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { contains, mountWithCleanup } from "@web/../tests/web_test_helpers";
 

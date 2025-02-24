@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.tools.float_utils import float_compare
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.tools.float_utils import float_compare
 
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon as Common
+from sleektiv.addons.sale.tests.common import TestSaleCommon
+from sleektiv.addons.project.tests.test_project_profitability import TestProjectProfitabilityCommon as Common
 
 
 class TestProjectProfitabilityCommon(Common):

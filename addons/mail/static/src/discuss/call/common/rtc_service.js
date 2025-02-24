@@ -4,7 +4,7 @@ import { monitorAudio } from "@mail/discuss/call/common/media_monitoring";
 import { rpc } from "@web/core/network/rpc";
 import { closeStream, onChange } from "@mail/utils/common/misc";
 
-import { reactive } from "@odoo/owl";
+import { reactive } from "@sleektiv/owl";
 
 import { browser } from "@web/core/browser/browser";
 import { _t } from "@web/core/l10n/translation";
@@ -32,9 +32,9 @@ function subscribe(target, event, f) {
  */
 
 /**
- * @return {Promise<{ SfuClient: import("@mail/../lib/odoo_sfu/odoo_sfu").SfuClient, SFU_CLIENT_STATE: import("@mail/../lib/odoo_sfu/odoo_sfu").SFU_CLIENT_STATE }>}
+ * @return {Promise<{ SfuClient: import("@mail/../lib/sleektiv_sfu/sleektiv_sfu").SfuClient, SFU_CLIENT_STATE: import("@mail/../lib/sleektiv_sfu/sleektiv_sfu").SFU_CLIENT_STATE }>}
  */
-const loadSfuAssets = memoize(async () => await loadBundle("mail.assets_odoo_sfu"));
+const loadSfuAssets = memoize(async () => await loadBundle("mail.assets_sleektiv_sfu"));
 
 export const CONNECTION_TYPES = { P2P: "p2p", SERVER: "server" };
 const SCREEN_CONFIG = {
@@ -87,13 +87,13 @@ function hasTurn(iceServers) {
 class Network {
     /** @type {import("@mail/discuss/call/common/peer_to_peer").PeerToPeer} */
     p2p;
-    /** @type {import("@mail/../lib/odoo_sfu/odoo_sfu").SfuClient} */
+    /** @type {import("@mail/../lib/sleektiv_sfu/sleektiv_sfu").SfuClient} */
     sfu;
     /** @type {[{ name: string, f: EventListener }]} */
     _listeners = [];
     /**
      * @param {import("@mail/discuss/call/common/peer_to_peer").PeerToPeer} p2p
-     * @param {import("@mail/../lib/odoo_sfu/odoo_sfu").SfuClient} [sfu]
+     * @param {import("@mail/../lib/sleektiv_sfu/sleektiv_sfu").SfuClient} [sfu]
      */
     constructor(p2p, sfu) {
         this.p2p = p2p;
@@ -126,7 +126,7 @@ class Network {
 
     /**
      * add a SFU to the network.
-     * @param {import("@mail/../lib/odoo_sfu/odoo_sfu").SfuClient} sfu
+     * @param {import("@mail/../lib/sleektiv_sfu/sleektiv_sfu").SfuClient} sfu
      */
     addSfu(sfu) {
         if (this.sfu) {
@@ -221,7 +221,7 @@ export class Rtc extends Record {
      * @type {Network}
      */
     network;
-    /** @type {import("@mail/../lib/odoo_sfu/odoo_sfu").SfuClient} */
+    /** @type {import("@mail/../lib/sleektiv_sfu/sleektiv_sfu").SfuClient} */
     sfuClient = undefined;
 
     /** @type {Object<string, boolean>} The keys are action names and the values are booleans indicating whether each action is active */
@@ -551,7 +551,7 @@ export class Rtc extends Record {
     async _loadSfu() {
         const load = async () => {
             await loadSfuAssets();
-            const sfuModule = odoo.loader.modules.get("@mail/../lib/odoo_sfu/odoo_sfu");
+            const sfuModule = sleektiv.loader.modules.get("@mail/../lib/sleektiv_sfu/sleektiv_sfu");
             this.SFU_CLIENT_STATE = sfuModule.SFU_CLIENT_STATE;
             this.sfuClient = new sfuModule.SfuClient();
         };
@@ -1540,7 +1540,7 @@ export const rtcService = {
         "notification",
     ],
     /**
-     * @param {import("@web/env").OdooEnv} env
+     * @param {import("@web/env").SleektivEnv} env
      * @param {Partial<import("services").Services>} services
      */
     start(env, services) {

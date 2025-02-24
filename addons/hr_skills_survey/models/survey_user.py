@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models
-from odoo.osv import expression
-from odoo.tools import html2plaintext
+from sleektiv import fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import html2plaintext
 
 
 class SurveyUserInput(models.Model):

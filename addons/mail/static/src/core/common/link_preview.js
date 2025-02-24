@@ -1,6 +1,6 @@
 import { LinkPreviewConfirmDelete } from "@mail/core/common/link_preview_confirm_delete";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 import { useService } from "@web/core/utils/hooks";
 

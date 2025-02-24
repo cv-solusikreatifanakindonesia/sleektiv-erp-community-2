@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo
+import sleektiv
 
-from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
-from odoo import Command
+from sleektiv.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
+from sleektiv import Command
 
-@odoo.tests.tagged('post_install_l10n', 'post_install', '-at_install')
+@sleektiv.tests.tagged('post_install_l10n', 'post_install', '-at_install')
 class TestPoSSaleL10NBe(TestPointOfSaleHttpCommon):
 
     @classmethod
@@ -71,7 +71,7 @@ class TestPoSSaleL10NBe(TestPointOfSaleHttpCommon):
         self.start_pos_tour('PosSettleOrderIsInvoice', login="accountman")
 
 
-@odoo.tests.tagged('post_install_l10n', 'post_install', '-at_install')
+@sleektiv.tests.tagged('post_install_l10n', 'post_install', '-at_install')
 class TestPoSSaleL10NBeNormalCompany(TestPointOfSaleHttpCommon):
     def test_settle_order_can_invoice(self):
         """This test makes sure that you can invoice a settled order when l10n_be is installed"""

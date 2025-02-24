@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.addons.account.models.company import PEPPOL_DEFAULT_COUNTRIES
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.addons.account.models.company import PEPPOL_DEFAULT_COUNTRIES
 
 
 class AccountMove(models.Model):

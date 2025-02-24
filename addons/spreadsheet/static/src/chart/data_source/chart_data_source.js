@@ -1,10 +1,10 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { OdooViewsDataSource } from "@spreadsheet/data_sources/odoo_views_data_source";
+import { SleektivViewsDataSource } from "@spreadsheet/data_sources/sleektiv_views_data_source";
 import { _t } from "@web/core/l10n/translation";
 import { GraphModel as ChartModel } from "@web/views/graph/graph_model";
 
-export class ChartDataSource extends OdooViewsDataSource {
+export class ChartDataSource extends SleektivViewsDataSource {
     /**
      * @override
      * @param {Object} services Services (see DataSource)

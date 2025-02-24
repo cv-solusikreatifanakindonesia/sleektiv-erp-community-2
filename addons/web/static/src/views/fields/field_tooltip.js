@@ -7,7 +7,7 @@ export function getTooltipInfo(params) {
     const info = {
         viewMode: params.viewMode,
         resModel: params.resModel,
-        debug: Boolean(odoo.debug),
+        debug: Boolean(sleektiv.debug),
         field: {
             name: params.field.name,
             label: params.field.string,

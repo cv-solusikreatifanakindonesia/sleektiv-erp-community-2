@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { useHotkey } from "../hotkeys/hotkey_hook";
 import { DateTimePicker } from "./datetime_picker";
 

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 
-from odoo import tools
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.fields import Date
-from odoo.tests import Form, tagged, users, loaded_demo_data
-from odoo.tests.common import TransactionCase
+from sleektiv import tools
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.fields import Date
+from sleektiv.tests import Form, tagged, users, loaded_demo_data
+from sleektiv.tests.common import TransactionCase
 
 
 @tagged('crm_lead_pls')

@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import _, models
+from sleektiv import _, models
 
 class EmployeeResumeReport(models.AbstractModel):
     _name = 'report.hr_skills.report_employee_cv'

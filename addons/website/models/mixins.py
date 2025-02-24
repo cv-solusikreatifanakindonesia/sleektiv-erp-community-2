@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import re
 
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models, _
-from odoo.addons.website.tools import text_from_html
-from odoo.http import request
-from odoo.osv import expression
-from odoo.exceptions import AccessError
-from odoo.tools import escape_psql
-from odoo.tools.json import scriptsafe as json_safe
+from sleektiv import api, fields, models, _
+from sleektiv.addons.website.tools import text_from_html
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.exceptions import AccessError
+from sleektiv.tools import escape_psql
+from sleektiv.tools.json import scriptsafe as json_safe
 
 logger = logging.getLogger(__name__)
 

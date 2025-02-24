@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import tools, _
-from odoo.http import route, request
-from odoo.addons.mass_mailing.controllers import main
+from sleektiv import tools, _
+from sleektiv.http import route, request
+from sleektiv.addons.mass_mailing.controllers import main
 
 
 class MassMailController(main.MassMailController):

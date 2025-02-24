@@ -1,4 +1,4 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
 import { Store } from "@mail/core/common/store_service";
 

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
     /*
      * The "deferredPrompt" Promise will resolve only if the "beforeinstallprompt" event

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, tools, _
-from odoo.tools import is_html_empty
+from sleektiv import models, fields, tools, _
+from sleektiv.tools import is_html_empty
 
 
 class MailActivity(models.Model):

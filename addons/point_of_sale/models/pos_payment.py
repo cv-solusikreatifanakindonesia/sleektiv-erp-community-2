@@ -1,6 +1,6 @@
-from odoo import api, fields, models, _
-from odoo.tools import formatLang, float_is_zero
-from odoo.exceptions import ValidationError
+from sleektiv import api, fields, models, _
+from sleektiv.tools import formatLang, float_is_zero
+from sleektiv.exceptions import ValidationError
 
 
 class PosPayment(models.Model):

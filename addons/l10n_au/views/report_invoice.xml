@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<sleektiv>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document" primary="True">
         <xpath expr="//div[hasclass('page')]/t[@t-set='layout_document_title']" position="replace">
             <t t-set="layout_document_title">
@@ -16,7 +16,7 @@
         </xpath>
     </template>
 
-    <!-- Workaround for Studio reports, see odoo/odoo#60660 -->
+    <!-- Workaround for Studio reports, see sleektiv/sleektiv#60660 -->
     <template id="report_invoice" inherit_id="account.report_invoice">
         <xpath expr='//t[@t-call="account.report_invoice_document"]' position="after">
             <t t-elif="o._get_name_invoice_report() == 'l10n_au.report_invoice_document'"
@@ -24,4 +24,4 @@
                t-lang="lang"/>
         </xpath>
     </template>
-</odoo>
+</sleektiv>

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import pprint
@@ -7,9 +7,9 @@ from urllib.parse import urlencode
 
 from werkzeug.exceptions import Forbidden
 
-from odoo import _, fields
-from odoo.exceptions import ValidationError
-from odoo.http import Controller, request, route
+from sleektiv import _, fields
+from sleektiv.exceptions import ValidationError
+from sleektiv.http import Controller, request, route
 
 
 _logger = logging.getLogger(__name__)
@@ -31,7 +31,7 @@ class RazorpayController(Controller):
         """
         _logger.info("Returning from authorization with data:\n%s", pprint.pformat(data))
 
-        # Retrieve the Razorpay data and Odoo metadata from the redirect data.
+        # Retrieve the Razorpay data and Sleektiv metadata from the redirect data.
         provider_id = int(data['provider_id'])
         authorization_code = data.get('authorization_code')
         csrf_token = data['csrf_token']
@@ -46,7 +46,7 @@ class RazorpayController(Controller):
 
         # Request and set the OAuth tokens on the provider.
         action = request.env.ref('payment.action_payment_provider')
-        redirect_url = f'/odoo/action-{action.id}/{int(provider_sudo.id)}'
+        redirect_url = f'/sleektiv/action-{action.id}/{int(provider_sudo.id)}'
         if not authorization_code: # The user cancelled the authorization.
             return request.redirect(redirect_url)
         try:

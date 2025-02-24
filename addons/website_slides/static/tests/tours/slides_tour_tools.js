@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { getDataURLFromFile } from "@web/core/utils/urls";
 

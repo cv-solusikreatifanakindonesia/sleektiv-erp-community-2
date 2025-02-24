@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
-from odoo.tests import tagged
-from odoo import Command
+from sleektiv.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
+from sleektiv.tests import tagged
+from sleektiv import Command
 
 from lxml import etree
 
@@ -143,7 +143,7 @@ class TestUBLNL(TestUBLCommon):
                     <attribute name="filename">{invoice.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/nlcius_out_invoice.xml',
+            expected_file_path='from_sleektiv/nlcius_out_invoice.xml',
         )
         self.assertEqual(attachment.name[-10:], "nlcius.xml")
         self._assert_imported_invoice_from_etree(invoice, attachment)
@@ -201,7 +201,7 @@ class TestUBLNL(TestUBLCommon):
                     <attribute name="filename">{refund.invoice_pdf_report_id.name}</attribute>
                 </xpath>
             ''',
-            expected_file_path='from_odoo/nlcius_out_refund.xml',
+            expected_file_path='from_sleektiv/nlcius_out_refund.xml',
         )
         self.assertEqual(attachment.name[-10:], "nlcius.xml")
         self._assert_imported_invoice_from_etree(refund, attachment)
@@ -231,7 +231,7 @@ class TestUBLNL(TestUBLCommon):
     def test_import_invoice_xml(self):
         # test files https://github.com/peppolautoriteit-nl/validation ?
         self._assert_imported_invoice_from_file(
-            subfolder='tests/test_files/from_odoo',
+            subfolder='tests/test_files/from_sleektiv',
             filename='nlcius_out_invoice.xml',
             invoice_vals={
                 'currency_id': self.other_currency.id,

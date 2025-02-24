@@ -1,7 +1,7 @@
 import logging
 
-from odoo import api, models
-from odoo.exceptions import AccessError
+from sleektiv import api, models
+from sleektiv.exceptions import AccessError
 
 _logger = logging.getLogger(__name__)
 

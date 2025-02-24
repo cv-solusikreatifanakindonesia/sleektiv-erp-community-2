@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
+from sleektiv import Command
 
-from odoo.addons.project_purchase.tests.test_project_profitability import TestProjectPurchaseProfitability
+from sleektiv.addons.project_purchase.tests.test_project_profitability import TestProjectPurchaseProfitability
 
 
 class TestProjectPurchase(TestProjectPurchaseProfitability):

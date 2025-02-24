@@ -1,4 +1,4 @@
-import { reactive, toRaw } from "@odoo/owl";
+import { reactive, toRaw } from "@sleektiv/owl";
 import { uuidv4 } from "@point_of_sale/utils";
 
 const ID_CONTAINER = {};

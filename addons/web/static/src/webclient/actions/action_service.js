@@ -26,7 +26,7 @@ import {
     xml,
     reactive,
     status,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { downloadReport, getReportUrl } from "./reports/utils";
 import { zip } from "@web/core/utils/arrays";
 import { isHtmlEmpty } from "@web/core/utils/html";

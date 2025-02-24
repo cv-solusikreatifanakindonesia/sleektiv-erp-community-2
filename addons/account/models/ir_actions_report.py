@@ -2,10 +2,10 @@
 from collections import OrderedDict
 from zlib import error as zlib_error
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import pdf
-from odoo.tools.pdf import PdfReadError, PdfStreamError
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools import pdf
+from sleektiv.tools.pdf import PdfReadError, PdfStreamError
 
 
 class IrActionsReport(models.Model):

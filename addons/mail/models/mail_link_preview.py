@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 import requests
@@ -6,10 +6,10 @@ import requests
 from datetime import timedelta
 from lxml import html
 
-from odoo import api, models, fields, tools
-from odoo.tools.misc import OrderedSet
-from odoo.addons.mail.tools.discuss import Store
-from odoo.addons.mail.tools.link_preview import get_link_preview_from_url
+from sleektiv import api, models, fields, tools
+from sleektiv.tools.misc import OrderedSet
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.addons.mail.tools.link_preview import get_link_preview_from_url
 
 
 class LinkPreview(models.Model):
@@ -44,7 +44,7 @@ class LinkPreview(models.Model):
             preview.source_url: preview for preview in message.sudo().link_preview_ids
         }
         ignore_pattern = (
-            re.compile(f"{re.escape(request_url)}(odoo|web|chat)(/|$|#|\\?)") if request_url else None
+            re.compile(f"{re.escape(request_url)}(sleektiv|web|chat)(/|$|#|\\?)") if request_url else None
         )
         for url in urls:
             if ignore_pattern and ignore_pattern.match(url):

@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models
-from odoo.addons.resource.models.utils import HOURS_PER_DAY
+from sleektiv import _, api, fields, models
+from sleektiv.addons.resource.models.utils import HOURS_PER_DAY
 
 
 class HrLeaveAllocationGenerateMultiWizard(models.TransientModel):

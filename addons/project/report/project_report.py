@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, tools
+from sleektiv import fields, models, tools
 
-from odoo.addons.rating.models.rating_data import RATING_LIMIT_MIN, RATING_TEXT
+from sleektiv.addons.rating.models.rating_data import RATING_LIMIT_MIN, RATING_TEXT
 
 class ReportProjectTaskUser(models.Model):
     _name = "report.project.task.user"

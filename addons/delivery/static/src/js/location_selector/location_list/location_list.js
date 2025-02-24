@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { Location } from '@delivery/js/location_selector/location/location';
-import { Component, onMounted, useEffect } from '@odoo/owl';
+import { Component, onMounted, useEffect } from '@sleektiv/owl';
 
 export class LocationList extends Component {
     static components = { Location };

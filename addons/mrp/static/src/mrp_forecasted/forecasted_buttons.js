@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 import { ForecastedButtons } from "@stock/stock_forecasted/forecasted_buttons";
 import { patch } from "@web/core/utils/patch";
-import { onWillStart } from "@odoo/owl";
+import { onWillStart } from "@sleektiv/owl";
 
 patch(ForecastedButtons.prototype, {
     setup() {

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from base64 import b64decode
 from cups import IPPError, IPP_PRINTER_IDLE, IPP_PRINTER_PROCESSING, IPP_PRINTER_STOPPED
@@ -11,15 +11,15 @@ from PIL import Image, ImageOps
 import re
 import subprocess
 
-from odoo import http
-from odoo.addons.hw_drivers.connection_manager import connection_manager
-from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.iot_handlers.interfaces.PrinterInterface_L import PPDs, conn, cups_lock
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.websocket_client import send_to_controller
+from sleektiv import http
+from sleektiv.addons.hw_drivers.connection_manager import connection_manager
+from sleektiv.addons.hw_drivers.controllers.proxy import proxy_drivers
+from sleektiv.addons.hw_drivers.driver import Driver
+from sleektiv.addons.hw_drivers.event_manager import event_manager
+from sleektiv.addons.hw_drivers.iot_handlers.interfaces.PrinterInterface_L import PPDs, conn, cups_lock
+from sleektiv.addons.hw_drivers.main import iot_devices
+from sleektiv.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers.websocket_client import send_to_controller
 
 _logger = logging.getLogger(__name__)
 
@@ -169,7 +169,7 @@ class PrinterDriver(Driver):
             self.send_status()
 
     def send_status(self):
-        """ Sends the current status of the printer to the connected Odoo instance.
+        """ Sends the current status of the printer to the connected Sleektiv instance.
         """
         self.data = {
             'value': '',
@@ -378,7 +378,7 @@ class PrinterDriver(Driver):
             ips_filtered = [i for i in ips if i != '127.0.0.1']
             main_ips = ips_filtered and ips_filtered[0] or '127.0.0.1'
             mac = '\nMAC Address:\n%s\n' % helpers.get_mac_address()
-            homepage = '\nHomepage:\nhttp://%s:8069\n\n' % main_ips
+            homepage = '\nHomepage:\nhttp://%s:7073\n\n' % main_ips
 
         code = connection_manager.pairing_code
         if code:

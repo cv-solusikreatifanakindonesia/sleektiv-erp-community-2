@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 from datetime import datetime
 
 from pytz import UTC
 
-from odoo import _, api, models
-from odoo.addons.account_edi_ubl_cii.models.account_edi_xml_ubl_20 import UBL_NAMESPACES
+from sleektiv import _, api, models
+from sleektiv.addons.account_edi_ubl_cii.models.account_edi_xml_ubl_20 import UBL_NAMESPACES
 
 # Far from ideal, but no better solution yet.
 COUNTRY_CODE_MAP = {
@@ -172,7 +172,7 @@ class AccountEdiXmlUBLMyInvoisMY(models.AbstractModel):
         vals.pop('additional_street_name', None)
 
         # The API expects the iso3166-2 code for the state, in the same way as it expects the iso3166 code for the countries.
-        # In Odoo, we mostly use these (although there is no standard format) so we'll try to use what Odoo gives us.
+        # In Sleektiv, we mostly use these (although there is no standard format) so we'll try to use what Sleektiv gives us.
         # For malaysia, the codes where updated, but we use a mapping to ensure that outdated data will still end up correct.
         subentity_code = partner.state_id.code or ''
 

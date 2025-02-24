@@ -2,8 +2,8 @@
 from hashlib import sha256
 from base64 import b64encode
 from lxml import etree
-from odoo import models, fields
-from odoo.tools.misc import file_path
+from sleektiv import models, fields
+from sleektiv.tools.misc import file_path
 import re
 
 TAX_EXEMPTION_CODES = ['VATEX-SA-29', 'VATEX-SA-29-7', 'VATEX-SA-30']

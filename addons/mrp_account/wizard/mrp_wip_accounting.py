@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime, time
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, _, api, Command
-from odoo.exceptions import UserError
-from odoo.tools import format_list
+from sleektiv import fields, models, _, api, Command
+from sleektiv.exceptions import UserError
+from sleektiv.tools import format_list
 
 
 class MrpWipAccountingLine(models.TransientModel):

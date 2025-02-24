@@ -1,4 +1,4 @@
-import { Component, onMounted, useRef, useState } from "@odoo/owl";
+import { Component, onMounted, useRef, useState } from "@sleektiv/owl";
 import { useSelfOrder } from "@pos_self_order/app/self_order_service";
 import { attributeFlatter, attributeFormatter } from "@pos_self_order/app/utils";
 import { floatIsZero } from "@web/core/utils/numbers";

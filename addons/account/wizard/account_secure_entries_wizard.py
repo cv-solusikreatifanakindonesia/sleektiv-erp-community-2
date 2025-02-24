@@ -1,9 +1,9 @@
 from datetime import timedelta
 
-from odoo import Command, api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools import format_list
+from sleektiv import Command, api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
+from sleektiv.tools import format_list
 
 
 class AccountSecureEntries(models.TransientModel):

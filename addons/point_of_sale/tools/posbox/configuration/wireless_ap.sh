@@ -11,7 +11,7 @@ function get_conf () {
 }
 
 FORCE_HOST_AP="${1}"
-CONF_FILE="/home/pi/odoo.conf"
+CONF_FILE="/home/pi/sleektiv.conf"
 COUNTER=0
 ESSID=$(get_conf "wifi_ssid" "${CONF_FILE}")
 PASSWORD=$(get_conf "wifi_password" "${CONF_FILE}")

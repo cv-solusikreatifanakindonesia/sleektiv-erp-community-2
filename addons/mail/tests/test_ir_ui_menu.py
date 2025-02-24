@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import Mock, patch
 
-from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.tests import tagged, users
-from odoo.tests.common import warmup
+from sleektiv.addons.mail.tests.common import MailCommon, mail_new_test_user
+from sleektiv.tests import tagged, users
+from sleektiv.tests.common import warmup
 
 
 @tagged('mail_thread')

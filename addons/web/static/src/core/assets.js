@@ -1,4 +1,4 @@
-import { Component, onWillStart, whenReady, xml } from "@odoo/owl";
+import { Component, onWillStart, whenReady, xml } from "@sleektiv/owl";
 import { session } from "@web/session";
 import { registry } from "./registry";
 

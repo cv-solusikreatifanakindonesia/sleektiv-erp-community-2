@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, api, fields, _
-from odoo.tools.float_utils import float_compare
+from sleektiv import models, api, fields, _
+from sleektiv.tools.float_utils import float_compare
 
 
 class AccountMove(models.Model):

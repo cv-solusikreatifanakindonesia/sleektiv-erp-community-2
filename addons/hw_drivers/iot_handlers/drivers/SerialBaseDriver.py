@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import namedtuple
 from contextlib import contextmanager
@@ -9,8 +9,8 @@ from threading import Lock
 import time
 import traceback
 
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.driver import Driver
+from sleektiv.addons.hw_drivers.event_manager import event_manager
+from sleektiv.addons.hw_drivers.driver import Driver
 
 _logger = logging.getLogger(__name__)
 

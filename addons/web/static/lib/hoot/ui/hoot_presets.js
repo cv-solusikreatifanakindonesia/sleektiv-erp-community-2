@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, useRef, useState, xml } from "@odoo/owl";
+import { Component, useRef, useState, xml } from "@sleektiv/owl";
 import { refresh } from "../core/url";
 import { useWindowListener } from "../hoot_utils";
 

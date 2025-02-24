@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError
-from odoo.fields import Command
-from odoo.tests import tagged
+from sleektiv.exceptions import UserError
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.account_edi_ubl_cii.tests.test_ubl_cii import TestAccountEdiUblCii
+from sleektiv.addons.account_edi_ubl_cii.tests.test_ubl_cii import TestAccountEdiUblCii
 
 
 @tagged('post_install', '-at_install')

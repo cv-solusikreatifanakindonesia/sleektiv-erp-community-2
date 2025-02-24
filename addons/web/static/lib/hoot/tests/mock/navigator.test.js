@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { describe, expect, test } from "@odoo/hoot";
-import { mockSendBeacon, mockTouch, mockVibrate } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { mockSendBeacon, mockTouch, mockVibrate } from "@sleektiv/hoot-mock";
 import { parseUrl } from "../local_helpers";
 
 /**

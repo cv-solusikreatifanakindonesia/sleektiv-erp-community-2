@@ -1,30 +1,30 @@
-// @odoo-module ignore
+// @sleektiv-module ignore
 
 //-----------------------------------------------------------------------------
-// Odoo Web Boostrap Code
+// Sleektiv Web Boostrap Code
 //-----------------------------------------------------------------------------
 
-(function (odoo) {
+(function (sleektiv) {
     "use strict";
 
-    if (odoo.loader) {
+    if (sleektiv.loader) {
         // Allows for duplicate calls to `module_loader`: only the first one is
         // executed.
         return;
     }
 
     class ModuleLoader {
-        /** @type {OdooModuleLoader["bus"]} */
+        /** @type {SleektivModuleLoader["bus"]} */
         bus = new EventTarget();
-        /** @type {OdooModuleLoader["checkErrorProm"]} */
+        /** @type {SleektivModuleLoader["checkErrorProm"]} */
         checkErrorProm = null;
-        /** @type {OdooModuleLoader["factories"]} */
+        /** @type {SleektivModuleLoader["factories"]} */
         factories = new Map();
-        /** @type {OdooModuleLoader["failed"]} */
+        /** @type {SleektivModuleLoader["failed"]} */
         failed = new Set();
-        /** @type {OdooModuleLoader["jobs"]} */
+        /** @type {SleektivModuleLoader["jobs"]} */
         jobs = new Set();
-        /** @type {OdooModuleLoader["modules"]} */
+        /** @type {SleektivModuleLoader["modules"]} */
         modules = new Map();
 
         /**
@@ -34,13 +34,13 @@
             this.root = root;
         }
 
-        /** @type {OdooModuleLoader["addJob"]} */
+        /** @type {SleektivModuleLoader["addJob"]} */
         addJob(name) {
             this.jobs.add(name);
             this.startModules();
         }
 
-        /** @type {OdooModuleLoader["define"]} */
+        /** @type {SleektivModuleLoader["define"]} */
         define(name, deps, factory, lazy = false) {
             if (typeof name !== "string") {
                 throw new Error(`Module name should be a string, got: ${String(name)}`);
@@ -59,7 +59,7 @@
             this.factories.set(name, {
                 deps,
                 fn: factory,
-                ignoreMissingDeps: globalThis.__odooIgnoreMissingDependencies,
+                ignoreMissingDeps: globalThis.__sleektivIgnoreMissingDependencies,
             });
             if (!lazy) {
                 this.addJob(name);
@@ -70,7 +70,7 @@
             }
         }
 
-        /** @type {OdooModuleLoader["findErrors"]} */
+        /** @type {SleektivModuleLoader["findErrors"]} */
         findErrors(moduleNames) {
             /**
              * @param {Iterable<string>} currentModuleNames
@@ -137,7 +137,7 @@
             return errors;
         }
 
-        /** @type {OdooModuleLoader["findJob"]} */
+        /** @type {SleektivModuleLoader["findJob"]} */
         findJob() {
             for (const job of this.jobs) {
                 if (this.factories.get(job).deps.every((dep) => this.modules.has(dep))) {
@@ -147,7 +147,7 @@
             return null;
         }
 
-        /** @type {OdooModuleLoader["reportErrors"]} */
+        /** @type {SleektivModuleLoader["reportErrors"]} */
         async reportErrors(errors) {
             if (!Object.keys(errors).length) {
                 return;
@@ -182,7 +182,7 @@
             }
         }
 
-        /** @type {OdooModuleLoader["startModules"]} */
+        /** @type {SleektivModuleLoader["startModules"]} */
         startModules() {
             let job;
             while ((job = this.findJob())) {
@@ -190,13 +190,13 @@
             }
         }
 
-        /** @type {OdooModuleLoader["startModule"]} */
+        /** @type {SleektivModuleLoader["startModule"]} */
         startModule(name) {
-            /** @type {(dependency: string) => OdooModule} */
+            /** @type {(dependency: string) => SleektivModule} */
             const require = (dependency) => this.modules.get(dependency);
             this.jobs.delete(name);
             const factory = this.factories.get(name);
-            /** @type {OdooModule | null} */
+            /** @type {SleektivModule | null} */
             let module = null;
             try {
                 module = factory.fn(require);
@@ -214,12 +214,12 @@
         }
     }
 
-    if (odoo.debug && !new URLSearchParams(location.search).has("debug")) {
+    if (sleektiv.debug && !new URLSearchParams(location.search).has("debug")) {
         // remove debug mode if not explicitely set in url
-        odoo.debug = "";
+        sleektiv.debug = "";
     }
 
     const loader = new ModuleLoader();
-    odoo.define = loader.define.bind(loader);
-    odoo.loader = loader;
-})((globalThis.odoo ||= {}));
+    sleektiv.define = loader.define.bind(loader);
+    sleektiv.loader = loader;
+})((globalThis.sleektiv ||= {}));

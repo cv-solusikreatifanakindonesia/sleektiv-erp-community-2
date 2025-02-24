@@ -17,8 +17,8 @@ import {
     startServer,
     triggerHotkey,
 } from "@mail/../tests/mail_test_helpers";
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
-import { Deferred, animationFrame, tick } from "@odoo/hoot-mock";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { Deferred, animationFrame, tick } from "@sleektiv/hoot-mock";
 import {
     Command,
     getService,
@@ -29,7 +29,7 @@ import {
 } from "@web/../tests/web_test_helpers";
 
 import { Composer } from "@mail/core/common/composer";
-import { queryFirst } from "@odoo/hoot-dom";
+import { queryFirst } from "@sleektiv/hoot-dom";
 
 describe.current.tags("desktop");
 defineMailModels();
@@ -327,7 +327,7 @@ test("composer textarea content is retained when changing channel then going bac
 test("add an emoji after a partner mention", async () => {
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "testpartner@odoo.com",
+        email: "testpartner@sleektiv.com",
         name: "TestPartner",
     });
     const channelId = pyEnv["discuss.channel"].create({
@@ -399,7 +399,7 @@ test("pending mentions are kept when toggling composer", async () => {
 test("composer suggestion should match with input selection", async () => {
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "testpartner@odoo.com",
+        email: "testpartner@sleektiv.com",
         name: "Luigi",
     });
     const channelId = pyEnv["discuss.channel"].create({
@@ -569,7 +569,7 @@ test("quick edit last self-message from UP arrow", async () => {
 test("Select composer suggestion via Enter does not send the message", async () => {
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "shrek@odoo.com",
+        email: "shrek@sleektiv.com",
         name: "Shrek",
     });
     pyEnv["res.users"].create({ partner_id: partnerId });
@@ -729,12 +729,12 @@ test("remove an uploading attachment", async () => {
 test("Show recipient list when there is more than 5 followers.", async () => {
     const pyEnv = await startServer();
     const partnerIds = pyEnv["res.partner"].create([
-        { name: "test name 1", email: "test1@odoo.com" },
-        { name: "test name 2", email: "test2@odoo.com" },
-        { name: "test name 3", email: "test3@odoo.com" },
-        { name: "test name 4", email: "test4@odoo.com" },
-        { name: "test name 5", email: "test5@odoo.com" },
-        { name: "test name 6", email: "test6@odoo.com" },
+        { name: "test name 1", email: "test1@sleektiv.com" },
+        { name: "test name 2", email: "test2@sleektiv.com" },
+        { name: "test name 3", email: "test3@sleektiv.com" },
+        { name: "test name 4", email: "test4@sleektiv.com" },
+        { name: "test name 5", email: "test5@sleektiv.com" },
+        { name: "test name 6", email: "test6@sleektiv.com" },
     ]);
     for (const partner of partnerIds) {
         pyEnv["mail.followers"].create({
@@ -748,12 +748,12 @@ test("Show recipient list when there is more than 5 followers.", async () => {
     await openFormView("res.partner", partnerIds[0]);
     await click("button", { text: "Send message" });
     await click("button[title='Show all recipients']");
-    await contains("li", { text: "test1@odoo.com" });
-    await contains("li", { text: "test2@odoo.com" });
-    await contains("li", { text: "test3@odoo.com" });
-    await contains("li", { text: "test4@odoo.com" });
-    await contains("li", { text: "test5@odoo.com" });
-    await contains("li", { text: "test6@odoo.com" });
+    await contains("li", { text: "test1@sleektiv.com" });
+    await contains("li", { text: "test2@sleektiv.com" });
+    await contains("li", { text: "test3@sleektiv.com" });
+    await contains("li", { text: "test4@sleektiv.com" });
+    await contains("li", { text: "test5@sleektiv.com" });
+    await contains("li", { text: "test6@sleektiv.com" });
     await contains(".o-mail-Chatter", {
         text: "To: test1, test2, test3, test4, test5, and 1 more",
     });
@@ -761,7 +761,7 @@ test("Show recipient list when there is more than 5 followers.", async () => {
 
 test("Show 'No recipient found.' with 0 followers.", async () => {
     const pyEnv = await startServer();
-    const partnerId = pyEnv["res.partner"].create({ name: "test name 1", email: "test1@odoo.com" });
+    const partnerId = pyEnv["res.partner"].create({ name: "test name 1", email: "test1@sleektiv.com" });
     await start();
     await openFormView("res.partner", partnerId);
     await click("button", { text: "Send message" });

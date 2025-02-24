@@ -24,10 +24,10 @@ echo "export XAUTHORITY=/run/lightdm/pi/xauthority" >> /home/pi/.bashrc
 echo "export XAUTHORITY=/run/lightdm/root/:0" >> ~/.bashrc
 # Aliases
 echo  "alias ll='ls -al'" | tee -a ~/.bashrc /home/pi/.bashrc
-echo  "alias odoo='sudo systemctl stop odoo; /usr/bin/python3 /home/pi/odoo/odoo-bin --config /home/pi/odoo.conf --load=hw_drivers,hw_escpos,hw_posbox_homepage,point_of_sale,web'" | tee -a ~/.bashrc /home/pi/.bashrc
+echo  "alias odoo='sudo systemctl stop odoo; /usr/bin/python3 /home/pi/odoo/sleektiv-bin --config /home/pi/sleektiv.conf --load=hw_drivers,hw_escpos,hw_posbox_homepage,point_of_sale,web'" | tee -a ~/.bashrc /home/pi/.bashrc
 echo  "alias odoo_logs='less +F /var/log/odoo/odoo-server.log'" | tee -a ~/.bashrc /home/pi/.bashrc
 echo  "alias write_mode='sudo mount -o remount,rw / && sudo mount -o remount,rw /root_bypass_ramdisks'" | tee -a ~/.bashrc /home/pi/.bashrc
-echo  "alias odoo_conf='cat /home/pi/odoo.conf'" | tee -a ~/.bashrc /home/pi/.bashrc
+echo  "alias odoo_conf='cat /home/pi/sleektiv.conf'" | tee -a ~/.bashrc /home/pi/.bashrc
 echo  "alias read_mode='sudo mount -o remount,ro / && sudo mount -o remount,ro /root_bypass_ramdisks'" | tee -a ~/.bashrc /home/pi/.bashrc
 echo  "alias install='sudo mount -o remount,rw / && sudo mount -o remount,rw /root_bypass_ramdisks; sudo chroot /root_bypass_ramdisks/; mount -t proc proc /proc'" | tee -a ~/.bashrc /home/pi/.bashrc
 echo  "alias blackbox='ls /dev/serial/by-path/'" | tee -a ~/.bashrc /home/pi/.bashrc
@@ -40,7 +40,7 @@ echo  "alias odoo_restart='sudo systemctl restart odoo'" >> /home/pi/.bashrc
 echo "
 odoo_help() {
   echo 'Welcome to Odoo IoTBox tools'
-  echo 'odoo                Starts/Restarts Odoo server manually (not through odoo.service)'
+  echo 'odoo                Starts/Restarts Odoo server manually (not through sleektiv.service)'
   echo 'odoo_logs           Displays Odoo server logs in real time'
   echo 'odoo_conf           Displays Odoo configuration file content'
   echo 'write_mode          Enables system write mode'
@@ -83,9 +83,9 @@ pip() {
 source ~/.bashrc
 source /home/pi/.bashrc
 
-# copy the odoo.conf file to the overwrite directory
-mv -v "/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/odoo.conf" "/home/pi/"
-chown pi:pi "/home/pi/odoo.conf"
+# copy the sleektiv.conf file to the overwrite directory
+mv -v "/home/pi/odoo/addons/point_of_sale/tools/posbox/configuration/sleektiv.conf" "/home/pi/"
+chown pi:pi "/home/pi/sleektiv.conf"
 
 apt-get update
 
@@ -236,7 +236,7 @@ systemctl enable systemd-timesyncd.service
 systemctl unmask hostapd.service
 systemctl disable hostapd.service
 systemctl disable cups-browsed.service
-systemctl enable odoo.service
+systemctl enable sleektiv.service
 
 # disable overscan in /boot/config.txt, we can't use
 # overwrite_after_init because it's on a different device

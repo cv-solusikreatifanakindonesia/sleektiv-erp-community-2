@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #pylint: disable=too-many-lines
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
-from odoo import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged
+from sleektiv import Command
 
 
 @tagged('post_install', '-at_install')

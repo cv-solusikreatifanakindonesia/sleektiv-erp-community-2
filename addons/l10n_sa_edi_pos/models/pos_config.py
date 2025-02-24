@@ -1,5 +1,5 @@
-from odoo import models, _
-from odoo.exceptions import RedirectWarning
+from sleektiv import models, _
+from sleektiv.exceptions import RedirectWarning
 
 
 class PosConfig(models.Model):

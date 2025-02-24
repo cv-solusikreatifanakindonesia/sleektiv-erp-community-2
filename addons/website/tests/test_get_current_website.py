@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo import Command
-from odoo.addons.website.tools import MockRequest
-from odoo.tests import tagged
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from sleektiv import Command
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.tests import tagged
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo
 
 
 @tagged('post_install', '-at_install')
@@ -37,10 +37,10 @@ class TestGetCurrentWebsite(HttpCaseWithUserDemo):
         self.assertEqual(Website._get_current_website_id('my-site-1.fr'), website1.id)
 
         # CASE: domain set: get matching domain (scheme and port supported)
-        self.assertEqual(Website._get_current_website_id('my-site-1.fr:8069'), website1.id)
+        self.assertEqual(Website._get_current_website_id('my-site-1.fr:7073'), website1.id)
 
         self.assertEqual(Website._get_current_website_id('my2ndsite.com:80'), website2.id)
-        self.assertEqual(Website._get_current_website_id('my2ndsite.com:8069'), website2.id)
+        self.assertEqual(Website._get_current_website_id('my2ndsite.com:7073'), website2.id)
         self.assertEqual(Website._get_current_website_id('my2ndsite.com'), website2.id)
 
         # CASE: domain set, wrong domain: get first

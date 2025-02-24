@@ -4,14 +4,14 @@ from collections import defaultdict
 from datetime import timedelta, datetime, date
 import calendar
 
-from odoo import fields, models, api, _, Command
-from odoo.exceptions import ValidationError, UserError, RedirectWarning
-from odoo.osv import expression
-from odoo.tools import date_utils, format_list, SQL
-from odoo.tools.mail import is_html_empty
-from odoo.tools.misc import format_date
-from odoo.addons.account.models.account_move import MAX_HASH_VERSION
-from odoo.addons.base_vat.models.res_partner import _ref_vat
+from sleektiv import fields, models, api, _, Command
+from sleektiv.exceptions import ValidationError, UserError, RedirectWarning
+from sleektiv.osv import expression
+from sleektiv.tools import date_utils, format_list, SQL
+from sleektiv.tools.mail import is_html_empty
+from sleektiv.tools.misc import format_date
+from sleektiv.addons.account.models.account_move import MAX_HASH_VERSION
+from sleektiv.addons.base_vat.models.res_partner import _ref_vat
 
 
 MONTH_SELECTION = [

@@ -1,4 +1,4 @@
-from odoo import models, _
+from sleektiv import models, _
 
 
 CHORUS_PRO_PEPPOL_ID = "0009:11000201100044"

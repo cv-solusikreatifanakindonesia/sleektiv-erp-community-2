@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
-from odoo.osv.expression import AND, OR
+from sleektiv import models
+from sleektiv.osv.expression import AND, OR
 
 
 class AccountMoveLine(models.Model):

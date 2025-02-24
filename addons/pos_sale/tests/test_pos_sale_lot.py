@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo
-from odoo import fields
-from odoo.addons.point_of_sale.tests.common import TestPointOfSaleCommon
+import sleektiv
+from sleektiv import fields
+from sleektiv.addons.point_of_sale.tests.common import TestPointOfSaleCommon
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@sleektiv.tests.tagged('post_install', '-at_install')
 class TestPointOfSaleFlow(TestPointOfSaleCommon):
     def test_ship_later_lots(self):
         # open pos session

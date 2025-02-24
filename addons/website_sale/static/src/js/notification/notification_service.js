@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { xml } from "@odoo/owl";
+import { xml } from "@sleektiv/owl";
 import { registry } from "@web/core/registry";
 import { notificationService } from "@web/core/notifications/notification_service";
 import { NotificationContainer } from "@web/core/notifications/notification_container";

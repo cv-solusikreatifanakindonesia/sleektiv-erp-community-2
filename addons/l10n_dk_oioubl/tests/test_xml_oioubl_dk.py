@@ -1,11 +1,11 @@
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
-from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools import file_open
+from sleektiv import Command, fields
+from sleektiv.addons.l10n_account_edi_ubl_cii_tests.tests.common import TestUBLCommon
+from sleektiv.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
+from sleektiv.tools import file_open
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -122,7 +122,7 @@ class TestUBLDK(TestUBLCommon, TestAccountMoveSendCommon):
     def test_export_invoice_two_line_partner_dk(self):
         invoice = self.create_post_and_send_invoice()
         self.assertTrue(invoice.ubl_cii_xml_id)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_invoice_partner_dk.xml")
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_invoice_partner_dk.xml")
 
     @freeze_time('2017-01-01')
     def test_export_invoice_two_line_foreign_partner_be(self):
@@ -130,32 +130,32 @@ class TestUBLDK(TestUBLCommon, TestAccountMoveSendCommon):
         self.company_data['company'].partner_id.peppol_endpoint = '0239843188'
         invoice = self.create_post_and_send_invoice(partner=self.partner_b)
         self.assertTrue(invoice.ubl_cii_xml_id)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_invoice_foreign_partner_be.xml")
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_invoice_foreign_partner_be.xml")
 
     @freeze_time('2017-01-01')
     def test_export_invoice_two_line_foreign_partner_fr(self):
         invoice = self.create_post_and_send_invoice(partner=self.partner_c)
         self.assertTrue(invoice.ubl_cii_xml_id)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_invoice_foreign_partner_fr.xml")
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_invoice_foreign_partner_fr.xml")
 
     @freeze_time('2017-01-01')
     def test_export_credit_note_two_line_partner_dk(self):
         refund = self.create_post_and_send_invoice(move_type='out_refund')
         self.assertTrue(refund.ubl_cii_xml_id)
-        self._assert_invoice_attachment(refund.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_refund_partner_dk.xml")
+        self._assert_invoice_attachment(refund.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_refund_partner_dk.xml")
 
     @freeze_time('2017-01-01')
     def test_export_credit_note_two_line_partner_fr(self):
         refund = self.create_post_and_send_invoice(partner=self.partner_c, move_type='out_refund')
         self.assertTrue(refund.ubl_cii_xml_id)
-        self._assert_invoice_attachment(refund.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_refund_foreign_partner_fr.xml")
+        self._assert_invoice_attachment(refund.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_refund_foreign_partner_fr.xml")
 
     @freeze_time('2017-01-01')
     def test_oioubl_export_should_still_be_valid_when_currency_has_more_precision_digit(self):
         self.company_data['company'].currency_id.rounding = 0.001
         invoice = self.create_post_and_send_invoice()
         self.assertTrue(invoice.ubl_cii_xml_id)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_invoice_partner_dk.xml")
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_invoice_partner_dk.xml")
 
     @freeze_time('2017-01-01')
     def test_oioubl_export_should_raise_an_error_when_partner_building_number_is_missing(self):
@@ -177,7 +177,7 @@ class TestUBLDK(TestUBLCommon, TestAccountMoveSendCommon):
         self.partner_a.peppol_endpoint = False
         invoice = self.create_post_and_send_invoice()
         self.assertTrue(invoice.ubl_cii_xml_id)
-        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_odoo/oioubl_out_invoice_partner_dk.xml")
+        self._assert_invoice_attachment(invoice.ubl_cii_xml_id, xpaths=None, expected_file_path="from_sleektiv/oioubl_out_invoice_partner_dk.xml")
 
     @freeze_time('2017-01-01')
     def test_export_partner_fr_without_siret_should_raise_an_error(self):

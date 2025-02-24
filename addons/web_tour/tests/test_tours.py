@@ -1,6 +1,6 @@
-from odoo.tests import tagged
-from odoo import Command
-from odoo.addons.base.tests.common import BaseCommon
+from sleektiv.tests import tagged
+from sleektiv import Command
+from sleektiv.addons.base.tests.common import BaseCommon
 from markupsafe import Markup
 
 

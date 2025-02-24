@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import random
 import uuid
@@ -7,10 +7,10 @@ from collections import defaultdict
 
 import werkzeug
 
-from odoo import api, exceptions, fields, models, _
-from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import is_html_empty
+from sleektiv import api, exceptions, fields, models, _
+from sleektiv.exceptions import AccessError, UserError, ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools import is_html_empty
 
 
 class Survey(models.Model):

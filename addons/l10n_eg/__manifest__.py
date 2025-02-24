@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': "Egypt - Accounting",
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/egypt.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/egypt.html',
     'icon': '/account/static/description/l10n.png',
     'countries': ['eg'],
     'description': """
-This is the base module to manage the accounting chart for Egypt in Odoo.
+This is the base module to manage the accounting chart for Egypt in Odoo, Sleektiv.
 ==============================================================================
     """,
     'category': 'Accounting/Localizations/Account Charts',

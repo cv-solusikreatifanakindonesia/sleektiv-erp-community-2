@@ -10,7 +10,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { useSetupAction } from "@web/search/action_hook";
 
 //-------------------------------------------------------------------------

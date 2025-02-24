@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { click, queryAllTexts } from "@odoo/hoot-dom";
-import { tick } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { click, queryAllTexts } from "@sleektiv/hoot-dom";
+import { tick } from "@sleektiv/hoot-mock";
 import {
     defineModels,
     fields,
@@ -24,7 +24,7 @@ test("Simple render", async () => {
     onRpc("/base_setup/demo_active", () => {
         return true;
     });
-    redirect("/odoo");
+    redirect("/sleektiv");
     await mountView({
         type: "form",
         arch: /* xml */ `
@@ -54,7 +54,7 @@ test("Activate the developer mode", async () => {
             expect.step("location reload");
         },
     });
-    redirect("/odoo");
+    redirect("/sleektiv");
     await mountView({
         type: "form",
         arch: /* xml */ `
@@ -81,7 +81,7 @@ test("Activate the developer mode (with assets)", async () => {
             expect.step("location reload");
         },
     });
-    redirect("/odoo");
+    redirect("/sleektiv");
     await mountView({
         type: "form",
         arch: /* xml */ `
@@ -108,7 +108,7 @@ test("Activate the developer mode (with tests assets)", async () => {
             expect.step("location reload");
         },
     });
-    redirect("/odoo");
+    redirect("/sleektiv");
     await mountView({
         type: "form",
         arch: /* xml */ `
@@ -137,7 +137,7 @@ test("Activate the developer modeddd (with tests assets)", async () => {
             expect.step("location reload");
         },
     });
-    redirect("/odoo?debug=assets%2Ctests");
+    redirect("/sleektiv?debug=assets%2Ctests");
     await mountView({
         type: "form",
         arch: /* xml */ `

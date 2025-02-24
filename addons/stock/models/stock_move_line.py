@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import Counter, defaultdict
 
-from odoo import _, api, fields, tools, models, Command
-from odoo.exceptions import UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools import OrderedSet, format_list, groupby
-from odoo.tools.float_utils import float_compare, float_is_zero, float_round
+from sleektiv import _, api, fields, tools, models, Command
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.osv import expression
+from sleektiv.tools import OrderedSet, format_list, groupby
+from sleektiv.tools.float_utils import float_compare, float_is_zero, float_round
 
 
 class StockMoveLine(models.Model):

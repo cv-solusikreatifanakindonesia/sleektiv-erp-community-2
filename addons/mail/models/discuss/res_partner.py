@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import SQL
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import SQL
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class ResPartner(models.Model):

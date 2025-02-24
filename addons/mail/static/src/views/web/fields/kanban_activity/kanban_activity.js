@@ -1,6 +1,6 @@
 import { ActivityButton } from "@mail/core/web/activity_button";
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 import { registry } from "@web/core/registry";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";

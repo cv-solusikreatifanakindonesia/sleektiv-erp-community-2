@@ -2,7 +2,7 @@
 
 import json
 
-from odoo import fields
+from sleektiv import fields
 
 
 def monkey_patch(cls):

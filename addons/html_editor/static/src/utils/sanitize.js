@@ -1,6 +1,6 @@
 import { containsAnyInline } from "./dom_info";
 import { wrapInlinesInBlocks } from "./dom";
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 export function initElementForEdition(element, options = {}) {
     if (

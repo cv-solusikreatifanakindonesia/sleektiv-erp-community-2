@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
-from odoo.fields import Command
-from odoo.tests import Form, tagged
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from sleektiv.fields import Command
+from sleektiv.tests import Form, tagged
 
 @tagged('post_install', '-at_install')
 class TestProjectBilling(TestCommonSaleTimesheet):

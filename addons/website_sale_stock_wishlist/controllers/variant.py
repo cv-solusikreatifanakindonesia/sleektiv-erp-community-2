@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request, route
+from sleektiv.http import request, route
 
-from odoo.addons.website_sale.controllers.variant import WebsiteSaleVariantController
+from sleektiv.addons.website_sale.controllers.variant import WebsiteSaleVariantController
 
 
 class WebsiteSaleStockWishlistVariantController(WebsiteSaleVariantController):

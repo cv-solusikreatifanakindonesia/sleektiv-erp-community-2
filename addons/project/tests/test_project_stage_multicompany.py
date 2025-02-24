@@ -1,6 +1,6 @@
 from .test_multicompany import TestMultiCompanyProject
 
-from odoo.exceptions import UserError
+from sleektiv.exceptions import UserError
 
 
 class TestProjectStagesMulticompany(TestMultiCompanyProject):

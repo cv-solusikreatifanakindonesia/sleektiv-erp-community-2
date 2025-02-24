@@ -1,14 +1,14 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import ast
 import json
 from collections import defaultdict
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import Query, SQL
-from odoo.tools.misc import unquote
-from odoo.tools.translate import _
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import Query, SQL
+from sleektiv.tools.misc import unquote
+from sleektiv.tools.translate import _
 
 
 class ProjectProject(models.Model):

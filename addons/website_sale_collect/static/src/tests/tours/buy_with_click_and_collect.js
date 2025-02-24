@@ -28,7 +28,7 @@ registry.category('web_tour.tours').add('website_sale_collect_buy_product', {
         },
         {
             trigger: 'input[name="email"]',
-            run: 'edit test@odoo.com',
+            run: 'edit test@sleektiv.com',
         },
         {
             trigger: 'input[name="street"]',

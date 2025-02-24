@@ -1,4 +1,4 @@
-from odoo import _, models
+from sleektiv import _, models
 
 
 class AccountMoveSendWizard(models.TransientModel):

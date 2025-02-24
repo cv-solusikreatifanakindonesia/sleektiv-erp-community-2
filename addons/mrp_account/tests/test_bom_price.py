@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import UserError
-from odoo.tests import common, Form
-from odoo.tools.float_utils import float_round, float_compare
+from sleektiv.exceptions import UserError
+from sleektiv.tests import common, Form
+from sleektiv.tools.float_utils import float_round, float_compare
 
 
 class TestBomPriceCommon(common.TransactionCase):

@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import json
 
 from datetime import date
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.exceptions import UserError
-from odoo.tests import users, warmup, tagged
-from odoo.tools import formataddr, mute_logger
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import users, warmup, tagged
+from sleektiv.tools import formataddr, mute_logger
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -149,7 +149,7 @@ class TestAccountComposerPerformance(AccountTestInvoicingCommon, MailCommon):
 
     @users('user_account')
     @warmup
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail', 'sleektiv.models.unlink')
     def test_move_composer_multi(self):
         """ Test with multi mode """
         test_moves = self.test_account_moves.with_env(self.env)
@@ -218,7 +218,7 @@ class TestAccountComposerPerformance(AccountTestInvoicingCommon, MailCommon):
 
     @users('user_account')
     @warmup
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail', 'sleektiv.models.unlink')
     def test_move_composer_single(self):
         """ Test single mode """
         test_move = self.test_account_moves[0].with_env(self.env)
@@ -305,7 +305,7 @@ class TestAccountComposerPerformance(AccountTestInvoicingCommon, MailCommon):
 
     @users('user_account')
     @warmup
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail', 'sleektiv.models.unlink')
     def test_move_composer_single_lang(self):
         """ Test single with another language """
         test_move = self.test_account_moves[1].with_env(self.env)
@@ -394,7 +394,7 @@ class TestAccountComposerPerformance(AccountTestInvoicingCommon, MailCommon):
 
     @users('user_account')
     @warmup
-    @mute_logger('odoo.addons.mail.models.mail_mail', 'odoo.models.unlink')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail', 'sleektiv.models.unlink')
     def test_move_composer_with_dynamic_reports(self):
         """
         It makes sure that when an invoice is sent using a template that
@@ -574,7 +574,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         # Send it again. The PDF must not be created again.
         wizard = self.create_send_and_print(invoice, sending_methods=['email', 'manual'])
-        with patch('odoo.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_after_pdf_report_render') as mocked_method:
+        with patch('sleektiv.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_after_pdf_report_render') as mocked_method:
             results = wizard.action_send_and_print()
             mocked_method.assert_not_called()
         self.assertEqual(results['type'], 'ir.actions.act_url')
@@ -709,8 +709,8 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
             }
 
         with (
-            patch('odoo.addons.account.models.account_move_send.AccountMoveSend._get_default_extra_edis', get_default_extra_edis),
-            patch('odoo.addons.account.models.account_move_send.AccountMoveSend._get_all_extra_edis', get_all_extra_edis)
+            patch('sleektiv.addons.account.models.account_move_send.AccountMoveSend._get_default_extra_edis', get_default_extra_edis),
+            patch('sleektiv.addons.account.models.account_move_send.AccountMoveSend._get_all_extra_edis', get_all_extra_edis)
         ):
             wizard = self.create_send_and_print(invoice1 + invoice2)
             self.assertEqual(wizard.summary_data, {
@@ -849,7 +849,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
                 invoice_data['error'] = "turlututu"
 
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._call_web_service_after_invoice_pdf_render',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._call_web_service_after_invoice_pdf_render',
                 call_web_service_after_invoice_pdf_render
         ):
             try:
@@ -871,7 +871,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         # Process.
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_before_pdf_report_render',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_before_pdf_report_render',
                 _hook_invoice_document_before_pdf_report_render
         ):
             results = wizard.action_send_and_print(allow_fallback_pdf=True)
@@ -893,7 +893,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         # Process.
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_before_pdf_report_render',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_before_pdf_report_render',
                 _hook_invoice_document_before_pdf_report_render
         ):
             results = wizard.action_send_and_print(allow_fallback_pdf=True)
@@ -952,7 +952,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         # Process.
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._call_web_service_after_invoice_pdf_render',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._call_web_service_after_invoice_pdf_render',
                 _call_web_service_after_invoice_pdf_render
         ):
             wizard.action_send_and_print(allow_fallback_pdf=True)
@@ -974,7 +974,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         # Process.
         with patch(
-                'odoo.addons.account.models.account_move_send.AccountMoveSend._call_web_service_before_invoice_pdf_render',
+                'sleektiv.addons.account.models.account_move_send.AccountMoveSend._call_web_service_before_invoice_pdf_render',
                 _call_web_service_before_invoice_pdf_render
         ):
             wizard.action_send_and_print(allow_fallback_pdf=True)
@@ -1018,7 +1018,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
         wizard_partner_1 = self.create_send_and_print(invoices_success)
         wizard_partner_1.action_send_and_print()
 
-        sp_partner_2 = self.env['res.partner'].create({'name': 'Partner 2', 'email': 'test@test.odoo.com'})
+        sp_partner_2 = self.env['res.partner'].create({'name': 'Partner 2', 'email': 'test@test.sleektiv.com'})
         self.env.user.partner_id = sp_partner_2
         wizard_partner_2 = self.create_send_and_print(invoices_error)
         wizard_partner_2.action_send_and_print()
@@ -1032,7 +1032,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
         self.assertTrue(all(invoice.sending_data.get('author_partner_id') == sp_partner_2.id for invoice in invoices_error))
 
         with patch(
-            'odoo.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_before_pdf_report_render',
+            'sleektiv.addons.account.models.account_move_send.AccountMoveSend._hook_invoice_document_before_pdf_report_render',
             _hook_invoice_document_before_pdf_report_render,
         ):
             self.env.ref('account.ir_cron_account_move_send').method_direct_trigger()

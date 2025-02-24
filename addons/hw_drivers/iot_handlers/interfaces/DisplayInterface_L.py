@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import os
@@ -12,7 +12,7 @@ except ImportError:
     import RPi.GPIO as GPIO
     from vcgencmd import Vcgencmd
 
-from odoo.addons.hw_drivers.interface import Interface
+from sleektiv.addons.hw_drivers.interface import Interface
 
 _logger = logging.getLogger(__name__)
 

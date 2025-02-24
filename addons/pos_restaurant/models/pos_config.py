@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
+from sleektiv import api, fields, models, _
 import json
 from collections import defaultdict
-from odoo.tools import convert
+from sleektiv.tools import convert
 
 
 class PosConfig(models.Model):

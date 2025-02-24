@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { after, describe, expect, test } from "@odoo/hoot";
-import { click } from "@odoo/hoot-dom";
-import { animationFrame, Deferred } from "@odoo/hoot-mock";
-import { Component, reactive, useState, xml } from "@odoo/owl";
+import { after, describe, expect, test } from "@sleektiv/hoot";
+import { click } from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred } from "@sleektiv/hoot-mock";
+import { Component, reactive, useState, xml } from "@sleektiv/owl";
 import { mountForTest, parseUrl } from "../local_helpers";
 
 import { logger } from "../../core/logger";

@@ -1,15 +1,15 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import logging
 import re
 import requests
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_adyen import const
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment_adyen import const
 
 _logger = logging.getLogger(__name__)
 
@@ -144,7 +144,7 @@ class PaymentProvider(models.Model):
         :return: The unique reference for the partner
         :rtype: str
         """
-        return f'ODOO_PARTNER_{partner_id}'
+        return f'SLEEKTIV_PARTNER_{partner_id}'
 
     #=== BUSINESS METHODS - GETTERS ===#
 

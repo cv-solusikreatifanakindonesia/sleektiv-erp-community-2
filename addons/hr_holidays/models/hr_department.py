@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timezone
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models
-from odoo.osv import expression
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
 import ast
 
 

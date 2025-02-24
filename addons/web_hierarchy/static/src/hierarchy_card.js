@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 import { evaluateBooleanExpr } from "@web/core/py_js/py";
 import { Field } from "@web/views/fields/field";

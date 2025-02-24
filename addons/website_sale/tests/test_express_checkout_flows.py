@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug import urls
 
-from odoo import Command
-from odoo.http import root
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.http import root
+from sleektiv.tests import tagged
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo
+from sleektiv.addons.website_sale.controllers.main import WebsiteSale
 
 
 @tagged('at_install')
@@ -90,7 +90,7 @@ class TestWebsiteSaleExpressCheckoutFlows(HttpCaseWithUserDemo):
 
     def test_express_checkout_registered_user(self):
         """ Test that when you use express checkout as a registered user and the address sent by the
-            express checkout form exactly matches the one registered in odoo, we do not create a new
+            express checkout form exactly matches the one registered in sleektiv, we do not create a new
             partner and reuse the existing one.
         """
         self.sale_order.partner_id = self.user_demo.partner_id.id
@@ -122,7 +122,7 @@ class TestWebsiteSaleExpressCheckoutFlows(HttpCaseWithUserDemo):
     def test_express_checkout_registered_user_existing_address(self):
         """ Test that when you use the express checkout as a registered user and the address sent by
             the express checkout form exactly matches to one of the addresses linked to this user in
-            odoo, we do not create a new partner and reuse the existing one.
+            sleektiv, we do not create a new partner and reuse the existing one.
         """
         # Create a child partner for the demo partner
         child_partner_address = dict(self.express_checkout_billing_values)
@@ -160,7 +160,7 @@ class TestWebsiteSaleExpressCheckoutFlows(HttpCaseWithUserDemo):
     def test_express_checkout_registered_user_new_address(self):
         """ Test that when you use the express checkout as a registered user and the address sent by
             the express checkout form doesn't match to one of the addresses linked to this user in
-            odoo, we create a new partner.
+            sleektiv, we create a new partner.
         """
         self.sale_order.partner_id = self.user_demo.partner_id.id
         session = self.authenticate(self.user_demo.login, self.user_demo.login)

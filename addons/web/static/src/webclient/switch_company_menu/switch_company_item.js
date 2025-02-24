@@ -1,5 +1,5 @@
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class SwitchCompanyItem extends Component {

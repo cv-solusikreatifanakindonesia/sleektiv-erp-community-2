@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import new_test_user, tagged
-from odoo.addons.im_livechat.tests.common import TestImLivechatCommon
+from sleektiv.tests import new_test_user, tagged
+from sleektiv.addons.im_livechat.tests.common import TestImLivechatCommon
 
 
 @tagged("-at_install", "post_install")
@@ -18,4 +18,4 @@ class TestImLivechatSessionHistory(TestImLivechatCommon):
         })
         channel = self.env["discuss.channel"].browse(data["discuss.channel"][0]["id"])
         channel.with_user(operator).message_post(body="Hello, how can I help you?")
-        self.start_tour("/odoo", "im_livechat_history_back_and_forth_tour", login="operator")
+        self.start_tour("/sleektiv", "im_livechat_history_back_and_forth_tour", login="operator")

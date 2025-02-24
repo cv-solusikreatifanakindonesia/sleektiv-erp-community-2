@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
+from sleektiv.tools import mute_logger
 
 from .common import AuthorizeCommon
 
@@ -28,15 +28,15 @@ class AuthorizeTest(AuthorizeCommon):
     def test_processing_values(self):
         """Test custom 'access_token' processing_values for authorize provider."""
         tx = self._create_transaction(flow='direct')
-        with mute_logger('odoo.addons.payment.models.payment_transaction'), \
+        with mute_logger('sleektiv.addons.payment.models.payment_transaction'), \
             patch(
-                'odoo.addons.payment.utils.generate_access_token',
+                'sleektiv.addons.payment.utils.generate_access_token',
                 new=self._generate_test_access_token
             ):
             processing_values = tx._get_processing_values()
 
         with patch(
-            'odoo.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
+            'sleektiv.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
         ):
             self.assertTrue(payment_utils.check_access_token(
                 processing_values['access_token'], self.reference, self.partner.id,

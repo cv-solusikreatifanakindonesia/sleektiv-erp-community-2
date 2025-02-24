@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { importRecordsItem } from "@base_import/import_records/import_records";
 

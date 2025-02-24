@@ -1,6 +1,6 @@
-import { after, describe, expect, test } from "@odoo/hoot";
-import { on } from "@odoo/hoot-dom";
-import { mockFetch } from "@odoo/hoot-mock";
+import { after, describe, expect, test } from "@sleektiv/hoot";
+import { on } from "@sleektiv/hoot-dom";
+import { mockFetch } from "@sleektiv/hoot-mock";
 
 import {
     ConnectionAbortedError,

@@ -1,7 +1,7 @@
 import logging
-from odoo.addons.pos_adyen.controllers.main import PosAdyenController
-from odoo import fields
-from odoo.http import request
+from sleektiv.addons.pos_adyen.controllers.main import PosAdyenController
+from sleektiv import fields
+from sleektiv.http import request
 
 _logger = logging.getLogger(__name__)
 

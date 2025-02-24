@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.http import request
+from sleektiv.http import request
 
-from odoo.addons.portal.controllers.mail import PortalChatter
+from sleektiv.addons.portal.controllers.mail import PortalChatter
 from .portal import ProjectCustomerPortal
 
 

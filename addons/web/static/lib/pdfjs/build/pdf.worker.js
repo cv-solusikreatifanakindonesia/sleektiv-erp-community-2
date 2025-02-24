@@ -26425,7 +26425,7 @@ class PDFFunctionFactory {
     isEvalSupported = true
   }) {
     this.xref = xref;
-      // Odoo: don't support scripting
+      // Sleektiv: don't support scripting
       this.isEvalSupported = false;
   }
   create(fn) {
@@ -56107,4 +56107,4 @@ const pdfjsBuild = "0cec64437";
 var __webpack_exports__WorkerMessageHandler = __webpack_exports__.WorkerMessageHandler;
 export { __webpack_exports__WorkerMessageHandler as WorkerMessageHandler };
 
-//# sourceMappingURL=pdf.worker.js.map
+//# sourceMappingURL=pdf.worker.js.map 

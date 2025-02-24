@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import http, Command
-from odoo.tests import tagged, HttpCase
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_sale_loyalty.controllers.main import WebsiteSale
-from odoo.addons.website_sale.tests.common import WebsiteSaleCommon
+from sleektiv import http, Command
+from sleektiv.tests import tagged, HttpCase
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_sale_loyalty.controllers.main import WebsiteSale
+from sleektiv.addons.website_sale.tests.common import WebsiteSaleCommon
 
 @tagged('post_install', '-at_install')
 class TestEwallet(HttpCase, WebsiteSaleCommon):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
@@ -7,12 +7,12 @@ from datetime import datetime, timedelta
 from freezegun import freeze_time
 from json import loads
 
-from odoo import Command
-from odoo.exceptions import UserError
-from odoo.fields import Date
-from odoo.tests import Form, tagged, loaded_demo_data
+from sleektiv import Command
+from sleektiv.exceptions import UserError
+from sleektiv.fields import Date
+from sleektiv.tests import Form, tagged, loaded_demo_data
 
-from odoo.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
+from sleektiv.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
 
 _logger = logging.getLogger(__name__)
 

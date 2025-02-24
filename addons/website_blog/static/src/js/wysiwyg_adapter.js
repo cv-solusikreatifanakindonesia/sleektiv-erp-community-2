@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { WysiwygAdapterComponent } from '@website/components/wysiwyg_adapter/wysiwyg_adapter';
 import { patch } from "@web/core/utils/patch";
@@ -62,7 +62,7 @@ patch(WysiwygAdapterComponent.prototype, {
 
     /**
      * @private
-     * @param {OdooEvent} ev
+     * @param {SleektivEvent} ev
      */
     _onSetBlogPostUpdatedTags: function (ev) {
         this.blogTagsPerBlogPost[ev.data.blogPostID] = ev.data.tags;

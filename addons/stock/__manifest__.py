@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Inventory',
     'version': '1.1',
     'summary': 'Manage your stock and logistics activities',
-    'website': 'https://www.odoo.com/app/inventory',
+    'website': 'https://sleektiv.com/app/inventory',
     'depends': ['product', 'barcodes_gs1_nomenclature', 'digest'],
     'category': 'Inventory/Inventory',
     'sequence': 25,

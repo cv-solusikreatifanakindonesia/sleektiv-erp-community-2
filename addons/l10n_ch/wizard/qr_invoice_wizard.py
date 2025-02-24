@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api, _
-from odoo.exceptions import UserError
+from sleektiv import models, fields, api, _
+from sleektiv.exceptions import UserError
 
 
 class QrInvoiceWizard(models.TransientModel):

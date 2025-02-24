@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { BarcodeParser } from "@barcodes/js/barcode_parser";
 

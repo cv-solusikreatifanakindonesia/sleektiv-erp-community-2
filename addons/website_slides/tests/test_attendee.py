@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from http import HTTPStatus
 from urllib.parse import parse_qs
 
-from odoo import fields
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
-from odoo.addons.website_slides.tests import common
-from odoo.tests import tagged, users
+from sleektiv import fields
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.base.tests.common import HttpCaseWithUserPortal
+from sleektiv.addons.website_slides.tests import common
+from sleektiv.tests import tagged, users
 
 @tagged('post_install', '-at_install')
 class TestAttendee(common.SlidesCase):

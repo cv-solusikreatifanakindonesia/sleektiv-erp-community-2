@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
-from odoo import _, models
-from odoo.tools import float_compare
+from sleektiv import _, models
+from sleektiv.tools import float_compare
 import base64
 
 class PosOrder(models.Model):

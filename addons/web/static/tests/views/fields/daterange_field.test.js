@@ -1,4 +1,4 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
 import {
     click,
     queryAll,
@@ -9,8 +9,8 @@ import {
     queryValue,
     resize,
     select,
-} from "@odoo/hoot-dom";
-import { animationFrame, Deferred, mockDate, mockTimeZone } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred, mockDate, mockTimeZone } from "@sleektiv/hoot-mock";
 import { getTimePickers } from "@web/../tests/core/datetime/datetime_test_helpers";
 import {
     clickSave,

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 import time
@@ -8,13 +8,13 @@ import logging
 
 from psycopg2 import errors as pgerrors
 
-from odoo import api, fields, models, _
-from odoo.osv import expression
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, mute_logger
-from odoo.exceptions import ValidationError, UserError
-from odoo.addons.base.models.res_partner import WARNING_MESSAGE, WARNING_HELP
-from odoo.tools import SQL, unique
-from odoo.addons.base_vat.models.res_partner import _ref_vat
+from sleektiv import api, fields, models, _
+from sleektiv.osv import expression
+from sleektiv.tools import DEFAULT_SERVER_DATETIME_FORMAT, mute_logger
+from sleektiv.exceptions import ValidationError, UserError
+from sleektiv.addons.base.models.res_partner import WARNING_MESSAGE, WARNING_HELP
+from sleektiv.tools import SQL, unique
+from sleektiv.addons.base_vat.models.res_partner import _ref_vat
 
 _logger = logging.getLogger(__name__)
 
@@ -784,7 +784,7 @@ class ResPartner(models.Model):
     def _increase_rank(self, field, n=1):
         if self.ids and field in ['customer_rank', 'supplier_rank']:
             try:
-                with self.env.cr.savepoint(flush=False), mute_logger('odoo.sql_db'):
+                with self.env.cr.savepoint(flush=False), mute_logger('sleektiv.sql_db'):
                     self.env.execute_query(SQL("""
                         SELECT %(field)s FROM res_partner WHERE ID IN %(partner_ids)s FOR NO KEY UPDATE NOWAIT;
                         UPDATE res_partner SET %(field)s = %(field)s + %(n)s

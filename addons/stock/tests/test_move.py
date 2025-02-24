@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command, fields
-from odoo.exceptions import UserError
-from odoo.tests import Form, new_test_user
-from odoo.tests.common import TransactionCase
-from odoo.addons.mail.tests.common import mail_new_test_user
+from sleektiv import Command, fields
+from sleektiv.exceptions import UserError
+from sleektiv.tests import Form, new_test_user
+from sleektiv.tests.common import TransactionCase
+from sleektiv.addons.mail.tests.common import mail_new_test_user
 
 
 class StockMove(TransactionCase):
@@ -5341,7 +5341,7 @@ class StockMove(TransactionCase):
             ('product_id', '=', self.product_lot.id),
             ('lot_id', '=', lot1.id),
         ])
-        from odoo.fields import Datetime
+        from sleektiv.fields import Datetime
         from datetime import timedelta
         initial_in_date_lot1 = Datetime.now() - timedelta(days=5)
         quant_lot1.in_date = initial_in_date_lot1
@@ -5453,7 +5453,7 @@ class StockMove(TransactionCase):
             ('lot_id', '=', lot1.id),
             ('quantity', '!=', 0),
         ])
-        from odoo.fields import Datetime
+        from sleektiv.fields import Datetime
         from datetime import timedelta
         initial_in_date_lot1 = Datetime.now() - timedelta(days=5)
         quant_lot1.in_date = initial_in_date_lot1

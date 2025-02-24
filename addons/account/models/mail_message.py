@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.osv.expression import OR
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.osv.expression import OR
 
 bypass_token = object()
 DOMAINS = {

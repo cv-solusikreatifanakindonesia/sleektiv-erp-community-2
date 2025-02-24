@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import BadRequest
 
-from odoo import _
-from odoo.http import Controller, request, route
-from odoo.tools.mail import email_re
+from sleektiv import _
+from sleektiv.http import Controller, request, route
+from sleektiv.tools.mail import email_re
 
 
 class WebsiteSaleStock(Controller):

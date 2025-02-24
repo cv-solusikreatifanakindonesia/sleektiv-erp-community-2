@@ -1,6 +1,6 @@
 import requests
 
-from odoo import models, fields, _, api, modules, tools
+from sleektiv import models, fields, _, api, modules, tools
 
 
 class AccountMove(models.Model):

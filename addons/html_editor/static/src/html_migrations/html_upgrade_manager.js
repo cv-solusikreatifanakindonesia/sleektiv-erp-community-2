@@ -82,7 +82,7 @@ export class HtmlUpgradeManager {
         for (const version of upgradeSequence) {
             const modules = this.upgradeRegistry.category(version);
             for (const [key, module] of modules.getEntries()) {
-                const upgrade = odoo.loader.modules.get(module).upgrade;
+                const upgrade = sleektiv.loader.modules.get(module).upgrade;
                 if (!upgrade) {
                     console.error(
                         `An "${key}" upgrade function could not be found at "${module}" or it did not load.`

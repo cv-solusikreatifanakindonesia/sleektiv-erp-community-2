@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo import fields
-from odoo.tests import tagged
+from sleektiv import fields
+from sleektiv.tests import tagged
 
 from .common import TestEsEdiTbaiCommon
 

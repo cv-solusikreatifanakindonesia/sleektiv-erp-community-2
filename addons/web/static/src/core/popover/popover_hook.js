@@ -1,4 +1,4 @@
-import { onWillUnmount, status, useComponent } from "@odoo/owl";
+import { onWillUnmount, status, useComponent } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 
 /**
@@ -19,7 +19,7 @@ import { useService } from "@web/core/utils/hooks";
 
 /**
  * @param {PopoverServiceAddFunction} addFn
- * @param {typeof import("@odoo/owl").Component} component
+ * @param {typeof import("@sleektiv/owl").Component} component
  * @param {PopoverServiceAddOptions} options
  * @returns {PopoverHookReturnType}
  */
@@ -48,7 +48,7 @@ export function makePopover(addFn, component, options) {
 /**
  * Manages a component to be used as a popover.
  *
- * @param {typeof import("@odoo/owl").Component} component
+ * @param {typeof import("@sleektiv/owl").Component} component
  * @param {PopoverServiceAddOptions} [options]
  * @returns {PopoverHookReturnType}
  */

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import itertools
 import time
 
-from odoo import api, fields, models
-from odoo.tools.sql import SQL
+from sleektiv import api, fields, models
+from sleektiv.tools.sql import SQL
 
 
 class ProductProduct(models.Model):

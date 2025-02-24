@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _
-from odoo.exceptions import AccessError, MissingError, ValidationError
-from odoo.fields import Command
-from odoo.http import request, route
-from odoo.tools import float_compare
+from sleektiv import _
+from sleektiv.exceptions import AccessError, MissingError, ValidationError
+from sleektiv.fields import Command
+from sleektiv.http import request, route
+from sleektiv.tools import float_compare
 
-from odoo.addons.payment.controllers import portal as payment_portal
+from sleektiv.addons.payment.controllers import portal as payment_portal
 
 # TODO ANVFE part of payment routes ? /shop/payment ? express_checkout ?
 

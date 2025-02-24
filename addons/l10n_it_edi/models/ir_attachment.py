@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, models
-from odoo.addons.l10n_it_edi.tools.remove_signature import remove_signature
+from sleektiv import api, models
+from sleektiv.addons.l10n_it_edi.tools.remove_signature import remove_signature
 
 from lxml import etree
 import logging

@@ -1,6 +1,6 @@
-import { after, expect, test } from "@odoo/hoot";
-import { click, queryOne, queryValue, setInputFiles, waitFor } from "@odoo/hoot-dom";
-import { Deferred, animationFrame } from "@odoo/hoot-mock";
+import { after, expect, test } from "@sleektiv/hoot";
+import { click, queryOne, queryValue, setInputFiles, waitFor } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame } from "@sleektiv/hoot-mock";
 import {
     clickSave,
     contains,

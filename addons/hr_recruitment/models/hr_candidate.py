@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo.addons.hr_recruitment.models.hr_applicant import AVAILABLE_PRIORITIES
+from sleektiv.addons.hr_recruitment.models.hr_applicant import AVAILABLE_PRIORITIES
 
-from odoo import api, models, fields, SUPERUSER_ID, tools, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from sleektiv import api, models, fields, SUPERUSER_ID, tools, _
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
 
 
 class HrCandidate(models.Model):

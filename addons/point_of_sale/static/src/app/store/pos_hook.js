@@ -1,4 +1,4 @@
-import { useState } from "@odoo/owl";
+import { useState } from "@sleektiv/owl";
 import { useService } from "@web/core/utils/hooks";
 
 /**

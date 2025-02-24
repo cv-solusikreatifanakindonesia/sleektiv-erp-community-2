@@ -1,4 +1,4 @@
-/** @odoo-module alias=@odoo/hoot default=false */
+/** @sleektiv-module alias=@sleektiv/hoot default=false */
 
 import { logger } from "./core/logger";
 import { Runner } from "./core/runner";

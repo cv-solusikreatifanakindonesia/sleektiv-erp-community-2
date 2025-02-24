@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.tests import Form, tagged
-from odoo.tools import float_compare
+from sleektiv import Command
+from sleektiv.tests import Form, tagged
+from sleektiv.tools import float_compare
 
-from odoo.addons.delivery.tests.common import DeliveryCommon
-from odoo.addons.sale.tests.common import SaleCommon
+from sleektiv.addons.delivery.tests.common import DeliveryCommon
+from sleektiv.addons.sale.tests.common import SaleCommon
 
 
 @tagged('post_install', '-at_install')

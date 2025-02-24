@@ -1,7 +1,7 @@
 import { browser } from "@web/core/browser/browser";
 import { user } from "@web/core/user";
 import { useAutofocus, useChildRef } from "@web/core/utils/hooks";
-import { useState, useEffect, useRef } from "@odoo/owl";
+import { useState, useEffect, useRef } from "@sleektiv/owl";
 import { ChatGPTDialog } from "./chatgpt_dialog";
 import { scrollTo } from "@web/core/utils/scrolling";
 
@@ -18,7 +18,7 @@ export class ChatGPTPromptDialog extends ChatGPTDialog {
 
     setup() {
         super.setup();
-        this.assistantAvatarUrl = `${browser.location.origin}/web_editor/static/src/img/odoobot_transparent.png`;
+        this.assistantAvatarUrl = `${browser.location.origin}/web_editor/static/src/img/sleektivbot_transparent.png`;
         this.userAvatarUrl = `${
             browser.location.origin
         }/web/image?model=res.users&field=avatar_128&id=${encodeURIComponent(user.userId)}`;

@@ -1,7 +1,7 @@
 import { HtmlViewer } from "@html_editor/fields/html_viewer";
-import { expect, test } from "@odoo/hoot";
-import { animationFrame } from "@odoo/hoot-mock";
-import { markup } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { markup } from "@sleektiv/owl";
 import { mountWithCleanup } from "@web/../tests/web_test_helpers";
 import { registry } from "@web/core/registry";
 import { WebClient } from "@web/webclient/webclient";

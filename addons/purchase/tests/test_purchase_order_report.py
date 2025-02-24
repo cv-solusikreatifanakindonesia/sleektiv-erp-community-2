@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import Form, tagged
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import Form, tagged
 
 from datetime import datetime, timedelta
 

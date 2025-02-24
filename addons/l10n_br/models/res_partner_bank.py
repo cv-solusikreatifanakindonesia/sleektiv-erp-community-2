@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import re
 
-from odoo import models, fields, api, _
-from odoo.addons.mail.tools.mail_validation import mail_validate
-from odoo.exceptions import ValidationError
-from odoo.tools import float_repr
+from sleektiv import models, fields, api, _
+from sleektiv.addons.mail.tools.mail_validation import mail_validate
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import float_repr
 
 
 class ResPartnerBank(models.Model):

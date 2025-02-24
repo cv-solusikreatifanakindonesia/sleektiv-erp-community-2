@@ -1,9 +1,9 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.addons.l10n_in_edi.tests.test_edi_json import TestEdiJson
-from odoo.addons.l10n_in_edi_ewaybill.models.account_edi_format import AccountEdiFormat
-from odoo.tests import tagged
+from sleektiv.addons.l10n_in_edi.tests.test_edi_json import TestEdiJson
+from sleektiv.addons.l10n_in_edi_ewaybill.models.account_edi_format import AccountEdiFormat
+from sleektiv.tests import tagged
 
 
 @tagged("post_install_l10n", "post_install", "-at_install")

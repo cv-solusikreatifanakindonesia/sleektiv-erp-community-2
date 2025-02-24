@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo.addons.survey.controllers.main import Survey
-from odoo.addons.survey.tests import common
-from odoo.addons.website.tools import MockRequest
+from sleektiv.addons.survey.controllers.main import Survey
+from sleektiv.addons.survey.tests import common
+from sleektiv.addons.website.tools import MockRequest
 
 
 class TestSurveyResults(common.TestSurveyResultsCommon):

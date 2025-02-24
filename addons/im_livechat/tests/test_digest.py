@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.digest.tests.common import TestDigestCommon
-from odoo.tools import mute_logger
-from odoo.tests import tagged
+from sleektiv.addons.digest.tests.common import TestDigestCommon
+from sleektiv.tools import mute_logger
+from sleektiv.tests import tagged
 
 
 @tagged('post_install', '-at_install')
 class TestLiveChatDigest(TestDigestCommon):
 
     @classmethod
-    @mute_logger('odoo.models.unlink')
+    @mute_logger('sleektiv.models.unlink')
     def setUpClass(cls):
         super().setUpClass()
 

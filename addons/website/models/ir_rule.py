@@ -1,5 +1,5 @@
-from odoo import api, models
-from odoo.addons.website.models import ir_http
+from sleektiv import api, models
+from sleektiv.addons.website.models import ir_http
 
 
 class IrRule(models.Model):

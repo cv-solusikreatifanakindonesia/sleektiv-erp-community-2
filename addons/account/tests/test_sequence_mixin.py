@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged, TransactionCase
-from odoo import fields, api, SUPERUSER_ID, Command
-from odoo.tools import mute_logger
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import Form, tagged, TransactionCase
+from sleektiv import fields, api, SUPERUSER_ID, Command
+from sleektiv.tools import mute_logger
 
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
@@ -274,9 +274,9 @@ class TestSequenceMixin(TestSequenceMixinCommon):
         copy2.action_post()
         copy2.button_draft()
         with Form(copy2) as move_form:  # It is editable in the form
-            with self.assertLogs('odoo.tests.form') as cm:
+            with self.assertLogs('sleektiv.tests.form') as cm:
                 move_form.name = 'MyMISC/2016/0001'
-                self.assertTrue(cm.output[0].startswith('WARNING:odoo.tests.form.onchange:'))
+                self.assertTrue(cm.output[0].startswith('WARNING:sleektiv.tests.form.onchange:'))
                 self.assertIn('The sequence will restart at 1 at the start of every year', cm.output[0])
 
         copy2.name = False  # Can't modify journal_id if name is set
@@ -501,7 +501,7 @@ class TestSequenceMixin(TestSequenceMixinCommon):
         self.assertMoveName(copies[5], 'XMISC/2019/00004')
 
         # Can't have twice the same name
-        with self.assertRaises(psycopg2.DatabaseError), mute_logger('odoo.sql_db'), self.env.cr.savepoint():
+        with self.assertRaises(psycopg2.DatabaseError), mute_logger('sleektiv.sql_db'), self.env.cr.savepoint():
             copies[0].name = 'XMISC/2019/00001'
 
         # Lets remove the order by date

@@ -1,5 +1,5 @@
-import { expect, test, beforeEach } from "@odoo/hoot";
-import { queryAllTexts } from "@odoo/hoot-dom";
+import { expect, test, beforeEach } from "@sleektiv/hoot";
+import { queryAllTexts } from "@sleektiv/hoot-dom";
 
 import { mountView, contains, onRpc } from "@web/../tests/web_test_helpers";
 

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import re
@@ -7,16 +7,16 @@ import time
 import lxml.html
 from werkzeug import urls
 
-import odoo
+import sleektiv
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo
 
 _logger = logging.getLogger(__name__)
 
 
-@odoo.tests.common.tagged('post_install', '-at_install', 'crawl')
+@sleektiv.tests.common.tagged('post_install', '-at_install', 'crawl')
 class Crawler(HttpCaseWithUserDemo):
-    """ Test suite crawling an Odoo CMS instance and checking that all
+    """ Test suite crawling an Sleektiv CMS instance and checking that all
     internal links lead to a 200 response.
 
     If a username and a password are provided, authenticates the user before
@@ -26,13 +26,13 @@ class Crawler(HttpCaseWithUserDemo):
     def setUp(self):
         super(Crawler, self).setUp()
         self.env.ref('website.default_website').write({
-            'social_facebook': "https://www.facebook.com/Odoo",
-            'social_twitter': 'https://twitter.com/Odoo',
-            'social_linkedin': 'https://www.linkedin.com/company/odoo',
-            'social_youtube': 'https://www.youtube.com/user/OpenERPonline',
-            'social_github': 'https://github.com/odoo',
-            'social_instagram': 'https://www.instagram.com/explore/tags/odoo/',
-            'social_tiktok': 'https://www.tiktok.com/@odoo',
+            'social_facebook': "https://www.facebook.com/Sleektiv",
+            'social_twitter': 'https://twitter.com/Sleektiv',
+            'social_linkedin': 'https://www.linkedin.com/company/sleektiv',
+            'social_youtube': 'https://www.youtube.com/user/Sleektivonline',
+            'social_github': 'https://github.com/sleektiv',
+            'social_instagram': 'https://www.instagram.com/explore/tags/sleektiv/',
+            'social_tiktok': 'https://www.tiktok.com/@sleektiv',
         })
 
         if hasattr(self.env['res.partner'], 'grade_id'):
@@ -98,7 +98,7 @@ class Crawler(HttpCaseWithUserDemo):
                 # FIXME: handle relative link (not parts.path.startswith /)
                 if parts.netloc or \
                     not parts.path.startswith('/') or \
-                    parts.path == '/odoo' or\
+                    parts.path == '/sleektiv' or\
                     parts.path.startswith('/web/') or \
                     parts.path.startswith('/en/') or \
                    (parts.scheme and parts.scheme not in ('http', 'https')):

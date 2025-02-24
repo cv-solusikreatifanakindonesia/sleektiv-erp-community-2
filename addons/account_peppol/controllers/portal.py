@@ -1,7 +1,7 @@
-from odoo import _
-from odoo.addons.portal.controllers.portal import CustomerPortal
-from odoo.addons.account.models.company import PEPPOL_LIST
-from odoo.http import request
+from sleektiv import _
+from sleektiv.addons.portal.controllers.portal import CustomerPortal
+from sleektiv.addons.account.models.company import PEPPOL_LIST
+from sleektiv.http import request
 
 
 class PortalAccount(CustomerPortal):

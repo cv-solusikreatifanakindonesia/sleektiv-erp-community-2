@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.project.tests.test_access_rights import TestProjectPortalCommon
-from odoo.exceptions import AccessError
-from odoo.tests import HttpCase
-from odoo.tools import mute_logger
+from sleektiv import Command
+from sleektiv.addons.project.tests.test_access_rights import TestProjectPortalCommon
+from sleektiv.exceptions import AccessError
+from sleektiv.tests import HttpCase
+from sleektiv.tools import mute_logger
 
 
 class TestPortalProject(TestProjectPortalCommon, HttpCase):
-    @mute_logger('odoo.addons.base.models.ir_model')
+    @mute_logger('sleektiv.addons.base.models.ir_model')
     def test_portal_project_access_rights(self):
         pigs = self.project_pigs
         pigs.write({'privacy_visibility': 'portal'})

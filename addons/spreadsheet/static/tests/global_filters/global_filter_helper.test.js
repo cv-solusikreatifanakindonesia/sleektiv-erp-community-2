@@ -1,5 +1,5 @@
 /** @ts-check */
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { getRelativeDateDomain } from "@spreadsheet/global_filters/helpers";
 import {
     getDateDomainDurationInDays,

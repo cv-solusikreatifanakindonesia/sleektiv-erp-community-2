@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import io
 import json
 
-from odoo import _, api, models
-from odoo.tools import format_amount, format_date, format_datetime, pdf
-from odoo.tools.pdf import PdfFileWriter, PdfFileReader, NameObject, NumberObject, createStringObject
+from sleektiv import _, api, models
+from sleektiv.tools import format_amount, format_date, format_datetime, pdf
+from sleektiv.tools.pdf import PdfFileWriter, PdfFileReader, NameObject, NumberObject, createStringObject
 
 
 class IrActionsReport(models.Model):

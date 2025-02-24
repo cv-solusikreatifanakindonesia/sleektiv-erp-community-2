@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo.addons.event_booth.tests.common import TestEventBoothCommon
-from odoo.fields import Datetime as FieldsDatetime
-from odoo.tests.common import users, tagged
+from sleektiv.addons.event_booth.tests.common import TestEventBoothCommon
+from sleektiv.fields import Datetime as FieldsDatetime
+from sleektiv.tests.common import users, tagged
 
 
 @tagged('post_install', '-at_install', 'event_booth')

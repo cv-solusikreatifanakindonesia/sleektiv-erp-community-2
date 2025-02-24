@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, useState, onWillUpdateProps } from "@odoo/owl";
+import { Component, useState, onWillUpdateProps } from "@sleektiv/owl";
 
 export class ChatterPager extends Component {
     static template = "project.ChatterPager";

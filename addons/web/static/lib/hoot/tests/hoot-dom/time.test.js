@@ -1,8 +1,8 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { describe, expect, test } from "@odoo/hoot";
-import { animationFrame, delay, microTick, waitUntil } from "@odoo/hoot-dom";
-import { Deferred, advanceTime, runAllTimers, tick } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { animationFrame, delay, microTick, waitUntil } from "@sleektiv/hoot-dom";
+import { Deferred, advanceTime, runAllTimers, tick } from "@sleektiv/hoot-mock";
 import { parseUrl } from "../local_helpers";
 
 // timeout of 1 second to ensure all timeouts are actually mocked

@@ -1,4 +1,4 @@
-import { queryAttribute, queryValue, waitUntil } from '@odoo/hoot-dom';
+import { queryAttribute, queryValue, waitUntil } from '@sleektiv/hoot-dom';
 
 function productSelector(productName) {
     return `

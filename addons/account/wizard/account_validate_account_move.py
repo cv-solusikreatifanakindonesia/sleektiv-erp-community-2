@@ -1,6 +1,6 @@
-from odoo import Command, models, fields, api, _
-from odoo.addons.account.models.exceptions import TaxClosingNonPostedDependingMovesError
-from odoo.exceptions import UserError
+from sleektiv import Command, models, fields, api, _
+from sleektiv.addons.account.models.exceptions import TaxClosingNonPostedDependingMovesError
+from sleektiv.exceptions import UserError
 
 
 class ValidateAccountMove(models.TransientModel):

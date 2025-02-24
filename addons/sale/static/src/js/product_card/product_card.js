@@ -1,4 +1,4 @@
-import { Component } from '@odoo/owl';
+import { Component } from '@sleektiv/owl';
 import { BadgeExtraPrice } from '../badge_extra_price/badge_extra_price';
 import { ProductProduct } from '../models/product_product';
 

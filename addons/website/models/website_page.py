@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 
-from odoo.addons.website.tools import text_from_html
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import escape_psql, SQL
-from odoo.tools.translate import _
+from sleektiv.addons.website.tools import text_from_html
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import escape_psql, SQL
+from sleektiv.tools.translate import _
 
 
 class Page(models.Model):

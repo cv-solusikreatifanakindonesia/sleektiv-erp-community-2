@@ -10,8 +10,8 @@ function makeFetchLoadMenus() {
     return async function fetchLoadMenus(reload) {
         if (reload) {
             loadMenusHash = new Date().getTime().toString();
-        } else if (odoo.loadMenusPromise) {
-            return odoo.loadMenusPromise;
+        } else if (sleektiv.loadMenusPromise) {
+            return sleektiv.loadMenusPromise;
         }
         const res = await browser.fetch(`${loadMenusUrl}/${loadMenusHash}`);
         if (!res.ok) {

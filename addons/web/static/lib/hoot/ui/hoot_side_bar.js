@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, onWillRender, useRef, useState, xml } from "@odoo/owl";
+import { Component, onWillRender, useRef, useState, xml } from "@sleektiv/owl";
 import { Suite } from "../core/suite";
 import { createUrlFromId } from "../core/url";
 import { lookup, normalize } from "../hoot_utils";

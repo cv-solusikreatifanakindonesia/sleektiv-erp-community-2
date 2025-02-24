@@ -1,11 +1,11 @@
-/** @odoo-module */
+/** @sleektiv-module */
 // @ts-check
 
-import { helpers } from "@odoo/o-spreadsheet";
+import { helpers } from "@sleektiv/o-spreadsheet";
 
 const { getFunctionsFromTokens } = helpers;
 
-/** @typedef {import("@odoo/o-spreadsheet").Token} Token */
+/** @typedef {import("@sleektiv/o-spreadsheet").Token} Token */
 
 /**
  * Parse a spreadsheet formula and detect the number of LIST functions that are
@@ -16,7 +16,7 @@ const { getFunctionsFromTokens } = helpers;
  * @returns {number}
  */
 export function getNumberOfListFormulas(tokens) {
-    return getFunctionsFromTokens(tokens, ["ODOO.LIST", "ODOO.LIST.HEADER"]).length;
+    return getFunctionsFromTokens(tokens, ["SLEEKTIV.LIST", "SLEEKTIV.LIST.HEADER"]).length;
 }
 
 /**
@@ -24,8 +24,8 @@ export function getNumberOfListFormulas(tokens) {
  *
  * @param {Token[]} tokens
  *
- * @returns {import("../helpers/odoo_functions_helpers").OdooFunctionDescription|undefined}
+ * @returns {import("../helpers/sleektiv_functions_helpers").SleektivFunctionDescription|undefined}
  */
 export function getFirstListFunction(tokens) {
-    return getFunctionsFromTokens(tokens, ["ODOO.LIST", "ODOO.LIST.HEADER"])[0];
+    return getFunctionsFromTokens(tokens, ["SLEEKTIV.LIST", "SLEEKTIV.LIST.HEADER"])[0];
 }

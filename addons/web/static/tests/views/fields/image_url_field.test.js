@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { click, edit } from "@odoo/hoot-dom";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { click, edit } from "@sleektiv/hoot-dom";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
 import {
     defineModels,
     fields,

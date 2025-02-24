@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, onWillStart } from "@sleektiv/owl";
 
 export class PurchaseDashBoard extends Component {
     static template = "purchase.PurchaseDashboard";

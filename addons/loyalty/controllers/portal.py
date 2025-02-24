@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, fields
-from odoo.http import request, route
+from sleektiv import _, fields
+from sleektiv.http import request, route
 
-from odoo.addons.portal.controllers.portal import CustomerPortal
-from odoo.addons.portal.controllers.portal import pager as portal_pager
+from sleektiv.addons.portal.controllers.portal import CustomerPortal
+from sleektiv.addons.portal.controllers.portal import pager as portal_pager
 
 
 class CustomerPortalLoyalty(CustomerPortal):

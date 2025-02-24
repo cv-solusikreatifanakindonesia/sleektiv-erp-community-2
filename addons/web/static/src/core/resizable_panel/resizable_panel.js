@@ -7,7 +7,7 @@ import {
     useExternalListener,
     useRef,
     useComponent,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 
 function useResizable({
     containerRef,

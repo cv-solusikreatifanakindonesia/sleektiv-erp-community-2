@@ -1,4 +1,4 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 
 import { KanbanCompiler } from "@web/views/kanban/kanban_compiler";
 

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import csv
 import io
@@ -6,8 +6,8 @@ import json
 
 import xlsxwriter
 
-from odoo import _
-from odoo.http import Controller, request, route, content_disposition
+from sleektiv import _
+from sleektiv.http import Controller, request, route, content_disposition
 
 
 class ProductPricelistExportController(Controller):

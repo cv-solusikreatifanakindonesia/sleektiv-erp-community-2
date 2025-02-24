@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 
-from odoo import Command, _, api, fields, models
-from odoo.exceptions import ValidationError
+from sleektiv import Command, _, api, fields, models
+from sleektiv.exceptions import ValidationError
 
-from odoo.addons.sale_pdf_quote_builder import utils
+from sleektiv.addons.sale_pdf_quote_builder import utils
 
 
 class SalePdfFormField(models.Model):

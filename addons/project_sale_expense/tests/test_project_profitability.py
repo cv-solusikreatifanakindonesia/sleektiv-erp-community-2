@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 
-from odoo.addons.project_hr_expense.tests.test_project_profitability import TestProjectHrExpenseProfitabilityCommon
-from odoo.addons.sale.tests.common import TestSaleCommon
-from odoo.addons.sale_project.tests.test_project_profitability import TestProjectProfitabilityCommon
+from sleektiv.addons.project_hr_expense.tests.test_project_profitability import TestProjectHrExpenseProfitabilityCommon
+from sleektiv.addons.sale.tests.common import TestSaleCommon
+from sleektiv.addons.sale_project.tests.test_project_profitability import TestProjectProfitabilityCommon
 
 
 @tagged('-at_install', 'post_install')

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from PIL import Image, ImageOps
 import logging
@@ -8,13 +8,13 @@ import io
 import win32print
 import ghostscript
 
-from odoo.addons.hw_drivers.controllers.proxy import proxy_drivers
-from odoo.addons.hw_drivers.driver import Driver
-from odoo.addons.hw_drivers.event_manager import event_manager
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.tools.mimetypes import guess_mimetype
-from odoo.addons.hw_drivers.websocket_client import send_to_controller
+from sleektiv.addons.hw_drivers.controllers.proxy import proxy_drivers
+from sleektiv.addons.hw_drivers.driver import Driver
+from sleektiv.addons.hw_drivers.event_manager import event_manager
+from sleektiv.addons.hw_drivers.main import iot_devices
+from sleektiv.addons.hw_drivers.tools import helpers
+from sleektiv.tools.mimetypes import guess_mimetype
+from sleektiv.addons.hw_drivers.websocket_client import send_to_controller
 
 _logger = logging.getLogger(__name__)
 
@@ -98,7 +98,7 @@ class PrinterDriver(Driver):
             self.send_status()
 
     def send_status(self):
-        """ Sends the current status of the printer to the connected Odoo instance.
+        """ Sends the current status of the printer to the connected Sleektiv instance.
         """
         self.data = {
             'value': '',

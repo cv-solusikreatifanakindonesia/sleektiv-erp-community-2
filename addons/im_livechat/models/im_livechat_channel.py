@@ -1,18 +1,18 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 import random
 import re
 
-from odoo import api, Command, fields, models, _
-from odoo.addons.mail.tools.discuss import Store
-from odoo.addons.bus.websocket import WebsocketConnectionHandler
+from sleektiv import api, Command, fields, models, _
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.addons.bus.websocket import WebsocketConnectionHandler
 
 
 class ImLivechatChannel(models.Model):
     """ Livechat Channel
         Define a communication channel, which can be accessed with 'script_external' (script tag to put on
-        external website), 'script_internal' (code to be integrated with odoo website) or via 'web_page' link.
+        external website), 'script_internal' (code to be integrated with sleektiv website) or via 'web_page' link.
         It provides rating tools, and access rules for anonymous people.
     """
 

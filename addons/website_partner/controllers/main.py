@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import http
-from odoo.http import request
+from sleektiv import http
+from sleektiv.http import request
 
 
 class WebsitePartnerPage(http.Controller):

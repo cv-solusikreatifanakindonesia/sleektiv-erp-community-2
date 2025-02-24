@@ -5,7 +5,7 @@ import { View } from "@web/views/view";
 
 import { FormViewDialog } from "./form_view_dialog";
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState } from "@sleektiv/owl";
 import { registry } from "@web/core/registry";
 
 let _defaultNoContentHelp;

@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import tagged
 
 
 @tagged("post_install_l10n", "post_install", "-at_install")

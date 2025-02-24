@@ -1,5 +1,5 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, _
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import fields, models, _
 
 
 class AccountMove(models.Model):

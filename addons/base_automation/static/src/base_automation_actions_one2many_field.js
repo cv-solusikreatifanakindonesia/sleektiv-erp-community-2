@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { Component, useExternalListener, useEffect, useRef } from "@odoo/owl";
+import { Component, useExternalListener, useEffect, useRef } from "@sleektiv/owl";
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { useThrottleForAnimation } from "@web/core/utils/timing";

@@ -1,4 +1,4 @@
-import { expect } from "@odoo/hoot";
+import { expect } from "@sleektiv/hoot";
 import {
     click,
     queryAll,
@@ -6,8 +6,8 @@ import {
     queryAllValues,
     queryFirst,
     queryText,
-} from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 
 const PICKER_COLS = 7;
 

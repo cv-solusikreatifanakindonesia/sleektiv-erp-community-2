@@ -1,4 +1,4 @@
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 import { registry } from "@web/core/registry";
 
 /** @typedef {import("./record").Record} Record */

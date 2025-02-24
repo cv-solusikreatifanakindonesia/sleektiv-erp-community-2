@@ -1,8 +1,8 @@
 import { Plugin } from "@html_editor/plugin";
 import { MAIN_PLUGINS } from "@html_editor/plugin_sets";
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import { setupEditor } from "../_helpers/editor";
-import { press } from "@odoo/hoot-dom";
+import { press } from "@sleektiv/hoot-dom";
 
 test("shortcut plugin allow registering shortcuts", async () => {
     let count = 0;

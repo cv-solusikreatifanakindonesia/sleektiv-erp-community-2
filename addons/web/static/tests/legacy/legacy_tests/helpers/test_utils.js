@@ -1,4 +1,4 @@
-/** @odoo-module alias=@web/../tests/legacy_tests/helpers/test_utils default=false */
+/** @sleektiv-module alias=@web/../tests/legacy_tests/helpers/test_utils default=false */
 
     /**
      * Test Utils

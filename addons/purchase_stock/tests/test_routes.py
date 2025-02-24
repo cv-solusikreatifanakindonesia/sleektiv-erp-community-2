@@ -1,5 +1,5 @@
-from odoo import Command
-from odoo.tests import Form, TransactionCase
+from sleektiv import Command
+from sleektiv.tests import Form, TransactionCase
 
 
 class TestRoutes(TransactionCase):

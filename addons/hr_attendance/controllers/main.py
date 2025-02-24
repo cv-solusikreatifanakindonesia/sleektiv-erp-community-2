@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.service.common import exp_version
-from odoo import http, _
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import float_round, py_to_js_locale, SQL
-from odoo.tools.image import image_data_uri
+from sleektiv.service.common import exp_version
+from sleektiv import http, _
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools import float_round, py_to_js_locale, SQL
+from sleektiv.tools.image import image_data_uri
 
 import datetime
 

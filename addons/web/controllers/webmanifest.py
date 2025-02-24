@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 import mimetypes
 
 from urllib.parse import unquote, urlencode
 
-from odoo import http, modules
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.tools import file_open, file_path, image_process
+from sleektiv import http, modules
+from sleektiv.exceptions import AccessError
+from sleektiv.http import request
+from sleektiv.tools import file_open, file_path, image_process
 
 
 class WebManifest(http.Controller):
@@ -30,7 +30,7 @@ class WebManifest(http.Controller):
             if data:
                 shortcuts.append({
                     'name': module.display_name,
-                    'url': '/odoo?menu_id=%s' % data.mapped('res_id')[0],
+                    'url': '/sleektiv?menu_id=%s' % data.mapped('res_id')[0],
                     'description': module.summary,
                     'icons': [{
                         'sizes': '100x100',
@@ -41,11 +41,11 @@ class WebManifest(http.Controller):
         return shortcuts
 
     def _get_webmanifest(self):
-        web_app_name = request.env['ir.config_parameter'].sudo().get_param('web.web_app_name', 'Odoo')
+        web_app_name = request.env['ir.config_parameter'].sudo().get_param('web.web_app_name', 'Sleektiv')
         manifest = {
             'name': web_app_name,
-            'scope': '/odoo',
-            'start_url': '/odoo',
+            'scope': '/sleektiv',
+            'start_url': '/sleektiv',
             'display': 'standalone',
             'background_color': '#714B67',
             'theme_color': '#714B67',
@@ -53,7 +53,7 @@ class WebManifest(http.Controller):
         }
         icon_sizes = ['192x192', '512x512']
         manifest['icons'] = [{
-            'src': '/web/static/img/odoo-icon-%s.png' % size,
+            'src': '/web/static/img/sleektiv-icon-%s.png' % size,
             'sizes': size,
             'type': 'image/png',
         } for size in icon_sizes]
@@ -76,26 +76,26 @@ class WebManifest(http.Controller):
             self._get_service_worker_content(),
             [
                 ('Content-Type', 'text/javascript'),
-                ('Service-Worker-Allowed', '/odoo'),
+                ('Service-Worker-Allowed', '/sleektiv'),
             ]
         )
         return response
 
     def _get_service_worker_content(self):
-        """ Returns a ServiceWorker javascript file scoped for the backend (aka. '/odoo')
+        """ Returns a ServiceWorker javascript file scoped for the backend (aka. '/sleektiv')
         """
         with file_open('web/static/src/service_worker.js') as f:
             body = f.read()
             return body
 
     def _icon_path(self):
-        return 'web/static/img/odoo-icon-192x192.png'
+        return 'web/static/img/sleektiv-icon-192x192.png'
 
-    @http.route('/odoo/offline', type='http', auth='public', methods=['GET'], readonly=True)
+    @http.route('/sleektiv/offline', type='http', auth='public', methods=['GET'], readonly=True)
     def offline(self):
         """ Returns the offline page delivered by the service worker """
         return request.render('web.webclient_offline', {
-            'odoo_icon': base64.b64encode(file_open(self._icon_path(), 'rb').read())
+            'sleektiv_icon': base64.b64encode(file_open(self._icon_path(), 'rb').read())
         })
 
     @http.route('/scoped_app', type='http', auth='public', methods=['GET'])
@@ -105,7 +105,7 @@ class WebManifest(http.Controller):
         path = f"/{unquote(path)}"
         scoped_app_values = {
             'app_id': app_id,
-            'apple_touch_icon': '/web/static/img/odoo-icon-ios.png',
+            'apple_touch_icon': '/web/static/img/sleektiv-icon-ios.png',
             'app_name': app_name,
             'path': path,
             'safe_manifest_url': "/web/manifest.scoped_app_manifest?" + urlencode({
@@ -144,7 +144,7 @@ class WebManifest(http.Controller):
     @http.route('/web/manifest.scoped_app_manifest', type='http', auth='public', methods=['GET'])
     def scoped_app_manifest(self, app_id, path, app_name=''):
         """ Returns a WebManifest dedicated to the scope of the given app. A custom scope and start
-            url are set to make sure no other installed PWA can overlap the scope (e.g. /odoo)
+            url are set to make sure no other installed PWA can overlap the scope (e.g. /sleektiv)
         """
         path = unquote(path)
         app_name = unquote(app_name) if app_name else self._get_scoped_app_name(app_id)

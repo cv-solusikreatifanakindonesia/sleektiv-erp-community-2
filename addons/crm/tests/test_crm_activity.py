@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, timedelta
 
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.tests.common import users
+from sleektiv.addons.crm.tests.common import TestCrmCommon
+from sleektiv.tests.common import users
 
 
 class TestCrmMailActivity(TestCrmCommon):

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from ast import literal_eval
 
-import odoo.tests
+import sleektiv.tests
 
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class TestUi(odoo.tests.HttpCase):
+@sleektiv.tests.tagged('-at_install', 'post_install')
+class TestUi(sleektiv.tests.HttpCase):
     def test_set_defaults(self):
         """Tests the "Set Defaults" feature of the debug menu on the res.partner form.
 
@@ -30,4 +30,4 @@ class TestUi(odoo.tests.HttpCase):
         ]).unlink()
         self.assertEqual(self.env['res.partner'].with_context(**action_context).new().company_type, "company")
 
-        self.start_tour("/odoo", 'debug_menu_set_defaults', login="admin")
+        self.start_tour("/sleektiv", 'debug_menu_set_defaults', login="admin")

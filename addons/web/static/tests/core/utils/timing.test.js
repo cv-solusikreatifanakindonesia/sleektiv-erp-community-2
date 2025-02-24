@@ -1,7 +1,7 @@
-import { describe, destroy, expect, getFixture, test } from "@odoo/hoot";
-import { click, tick } from "@odoo/hoot-dom";
-import { Deferred, advanceTime, animationFrame, microTick, runAllTimers } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { describe, destroy, expect, getFixture, test } from "@sleektiv/hoot";
+import { click, tick } from "@sleektiv/hoot-dom";
+import { Deferred, advanceTime, animationFrame, microTick, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import { mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import {

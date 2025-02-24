@@ -1,5 +1,9 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Contact: Odoo <info@odoo.com>
+Upstream-Contact: Sleektiv <info@solusikreatifanakindonesia.com>
+
+Files: *
+Copyright: Copyright (C) 2025 Sleektiv Community. (www.sleektiv.com)
+License: LGPL-3+
 
 Files: *
 Copyright: Copyright (C) 2004-2015 Odoo SA. (www.odoo.com)

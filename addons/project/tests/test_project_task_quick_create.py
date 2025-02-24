@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
-from odoo.tests import Form
+from sleektiv.addons.project.tests.test_project_base import TestProjectCommon
+from sleektiv.tests import Form
 
 
 class TestProjectTaskQuickCreate(TestProjectCommon):

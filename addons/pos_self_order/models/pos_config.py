@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import uuid
 import base64
 from os.path import join as opj
 from typing import Optional, List, Dict
 from werkzeug.urls import url_quote
-from odoo.exceptions import UserError, ValidationError, AccessError
+from sleektiv.exceptions import UserError, ValidationError, AccessError
 
-from odoo import api, fields, models, _, service
-from odoo.tools import file_open, split_every
+from sleektiv import api, fields, models, _, service
+from sleektiv.tools import file_open, split_every
 
 
 class PosConfig(models.Model):
@@ -159,7 +159,7 @@ class PosConfig(models.Model):
         selection_each_label = _("Each Order")
         version_info = service.common.exp_version()['server_version_info']
         if version_info[-1] == '':
-            selection_each_label = f"{selection_each_label} {_('(require Odoo Enterprise)')}"
+            selection_each_label = f"{selection_each_label} {_('(require Sleektiv Enterprise)')}"
         return [("meal", _("Meal")), ("each", selection_each_label)]
 
     @api.constrains('self_ordering_default_user_id')

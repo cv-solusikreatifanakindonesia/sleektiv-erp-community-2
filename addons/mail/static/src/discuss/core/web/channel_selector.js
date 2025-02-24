@@ -1,7 +1,7 @@
 import { NavigableList } from "@mail/core/common/navigable_list";
 import { cleanTerm } from "@mail/utils/common/format";
 
-import { Component, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, useEffect, useRef, useState } from "@sleektiv/owl";
 
 import { getActiveHotkey } from "@web/core/hotkeys/hotkey_service";
 import { _t } from "@web/core/l10n/translation";

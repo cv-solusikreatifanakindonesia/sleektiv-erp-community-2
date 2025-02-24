@@ -7,7 +7,7 @@ import { usePopover } from "@web/core/popover/popover_hook";
 import { useService } from "@web/core/utils/hooks";
 import { capitalize } from "../utils/strings";
 
-import { Component, useRef, useState, markup } from "@odoo/owl";
+import { Component, useRef, useState, markup } from "@sleektiv/owl";
 
 const { DateTime } = luxon;
 
@@ -27,16 +27,16 @@ export const standardErrorDialogProps = {
     close: Function, // prop added by the Dialog service
 };
 
-export const odooExceptionTitleMap = new Map(
+export const sleektivExceptionTitleMap = new Map(
     Object.entries({
-        "odoo.addons.base.models.ir_mail_server.MailDeliveryException": _t("MailDeliveryException"),
-        "odoo.exceptions.AccessDenied": _t("Access Denied"),
-        "odoo.exceptions.MissingError": _t("Missing Record"),
-        "odoo.addons.web.controllers.action.MissingActionError": _t("Missing Action"),
-        "odoo.exceptions.UserError": _t("Invalid Operation"),
-        "odoo.exceptions.ValidationError": _t("Validation Error"),
-        "odoo.exceptions.AccessError": _t("Access Error"),
-        "odoo.exceptions.Warning": _t("Warning"),
+        "sleektiv.addons.base.models.ir_mail_server.MailDeliveryException": _t("MailDeliveryException"),
+        "sleektiv.exceptions.AccessDenied": _t("Access Denied"),
+        "sleektiv.exceptions.MissingError": _t("Missing Record"),
+        "sleektiv.addons.web.controllers.action.MissingActionError": _t("Missing Action"),
+        "sleektiv.exceptions.UserError": _t("Invalid Operation"),
+        "sleektiv.exceptions.ValidationError": _t("Validation Error"),
+        "sleektiv.exceptions.AccessError": _t("Access Error"),
+        "sleektiv.exceptions.Warning": _t("Warning"),
     })
 );
 
@@ -46,7 +46,7 @@ export const odooExceptionTitleMap = new Map(
 export class ErrorDialog extends Component {
     static template = "web.ErrorDialog";
     static components = { Dialog };
-    static title = _t("Odoo Error");
+    static title = _t("Sleektiv Error");
     static showTracebackButtonText = _t("See technical details");
     static hideTracebackButtonText = _t("Hide technical details");
     static props = { ...standardErrorDialogProps };
@@ -86,13 +86,13 @@ export class ErrorDialog extends Component {
 // Client Error Dialog
 // -----------------------------------------------------------------------------
 export class ClientErrorDialog extends ErrorDialog {}
-ClientErrorDialog.title = _t("Odoo Client Error");
+ClientErrorDialog.title = _t("Sleektiv Client Error");
 
 // -----------------------------------------------------------------------------
 // Network Error Dialog
 // -----------------------------------------------------------------------------
 export class NetworkErrorDialog extends ErrorDialog {}
-NetworkErrorDialog.title = _t("Odoo Network Error");
+NetworkErrorDialog.title = _t("Sleektiv Network Error");
 
 // -----------------------------------------------------------------------------
 // RPC Error Dialog
@@ -108,8 +108,8 @@ export class RPCErrorDialog extends ErrorDialog {
     }
     inferTitle() {
         // If the server provides an exception name that we have in a registry.
-        if (this.props.exceptionName && odooExceptionTitleMap.has(this.props.exceptionName)) {
-            this.title = odooExceptionTitleMap.get(this.props.exceptionName).toString();
+        if (this.props.exceptionName && sleektivExceptionTitleMap.has(this.props.exceptionName)) {
+            this.title = sleektivExceptionTitleMap.get(this.props.exceptionName).toString();
             return;
         }
         // Fall back to a name based on the error type.
@@ -118,13 +118,13 @@ export class RPCErrorDialog extends ErrorDialog {
         }
         switch (this.props.type) {
             case "server":
-                this.title = _t("Odoo Server Error");
+                this.title = _t("Sleektiv Server Error");
                 break;
             case "script":
-                this.title = _t("Odoo Client Error");
+                this.title = _t("Sleektiv Client Error");
                 break;
             case "network":
-                this.title = _t("Odoo Network Error");
+                this.title = _t("Sleektiv Network Error");
                 break;
         }
     }
@@ -158,10 +158,10 @@ export class WarningDialog extends Component {
         }
     }
     inferTitle() {
-        if (this.props.exceptionName && odooExceptionTitleMap.has(this.props.exceptionName)) {
-            return odooExceptionTitleMap.get(this.props.exceptionName).toString();
+        if (this.props.exceptionName && sleektivExceptionTitleMap.has(this.props.exceptionName)) {
+            return sleektivExceptionTitleMap.get(this.props.exceptionName).toString();
         }
-        return this.props.title || _t("Odoo Warning");
+        return this.props.title || _t("Sleektiv Warning");
     }
 }
 
@@ -177,7 +177,7 @@ export class RedirectWarningDialog extends Component {
         this.actionService = useService("action");
         const { data, subType } = this.props;
         const [message, actionId, buttonText, additionalContext] = data.arguments;
-        this.title = capitalize(subType) || _t("Odoo Warning");
+        this.title = capitalize(subType) || _t("Sleektiv Warning");
         this.message = message;
         this.actionId = actionId;
         this.buttonText = buttonText;
@@ -220,13 +220,13 @@ export class SessionExpiredDialog extends Component {
 
 registry
     .category("error_dialogs")
-    .add("odoo.exceptions.AccessDenied", WarningDialog)
-    .add("odoo.exceptions.AccessError", WarningDialog)
-    .add("odoo.exceptions.MissingError", WarningDialog)
-    .add("odoo.addons.web.controllers.action.MissingActionError", WarningDialog)
-    .add("odoo.exceptions.UserError", WarningDialog)
-    .add("odoo.exceptions.ValidationError", WarningDialog)
-    .add("odoo.exceptions.RedirectWarning", RedirectWarningDialog)
-    .add("odoo.http.SessionExpiredException", SessionExpiredDialog)
+    .add("sleektiv.exceptions.AccessDenied", WarningDialog)
+    .add("sleektiv.exceptions.AccessError", WarningDialog)
+    .add("sleektiv.exceptions.MissingError", WarningDialog)
+    .add("sleektiv.addons.web.controllers.action.MissingActionError", WarningDialog)
+    .add("sleektiv.exceptions.UserError", WarningDialog)
+    .add("sleektiv.exceptions.ValidationError", WarningDialog)
+    .add("sleektiv.exceptions.RedirectWarning", RedirectWarningDialog)
+    .add("sleektiv.http.SessionExpiredException", SessionExpiredDialog)
     .add("werkzeug.exceptions.Forbidden", SessionExpiredDialog)
     .add("504", Error504Dialog);

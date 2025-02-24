@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo import fields
-from odoo.addons.website.tests.test_website_visitor import WebsiteVisitorTestsCommon
-from odoo.addons.website_event.tests.common import TestEventOnlineCommon
-from odoo.tests import tagged
+from sleektiv import fields
+from sleektiv.addons.website.tests.test_website_visitor import WebsiteVisitorTestsCommon
+from sleektiv.addons.website_event.tests.common import TestEventOnlineCommon
+from sleektiv.tests import tagged
 
 
 @tagged('website_visitor')

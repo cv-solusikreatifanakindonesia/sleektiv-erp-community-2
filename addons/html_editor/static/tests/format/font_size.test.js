@@ -1,13 +1,13 @@
-import { test, expect } from "@odoo/hoot";
+import { test, expect } from "@sleektiv/hoot";
 import { setupEditor, testEditor } from "../_helpers/editor";
 import { unformat } from "../_helpers/format";
 import { strong } from "../_helpers/tags";
 import { setFontSize } from "../_helpers/user_actions";
 import { Plugin } from "@html_editor/plugin";
 import { MAIN_PLUGINS } from "@html_editor/plugin_sets";
-import { animationFrame } from "@odoo/hoot-mock";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { execCommand } from "../_helpers/userCommands";
-import { press } from "@odoo/hoot-dom";
+import { press } from "@sleektiv/hoot-dom";
 import { getContent } from "../_helpers/selection";
 
 test("should change the font size of a few characters", async () => {

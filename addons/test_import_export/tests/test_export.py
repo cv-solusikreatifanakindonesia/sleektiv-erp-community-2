@@ -2,10 +2,10 @@ import json
 from datetime import date
 from unittest.mock import patch
 
-from odoo import http
-from odoo.tests import common, tagged
-from odoo.tools.misc import get_lang
-from odoo.addons.web.controllers.export import ExportXlsxWriter
+from sleektiv import http
+from sleektiv.tests import common, tagged
+from sleektiv.tools.misc import get_lang
+from sleektiv.addons.web.controllers.export import ExportXlsxWriter
 
 
 class XlsxCreatorCase(common.HttpCase):

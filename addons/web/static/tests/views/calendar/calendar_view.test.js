@@ -1,4 +1,4 @@
-import { beforeEach, expect, test } from "@odoo/hoot";
+import { beforeEach, expect, test } from "@sleektiv/hoot";
 import {
     click,
     hover,
@@ -10,7 +10,7 @@ import {
     queryFirst,
     queryOne,
     queryRect,
-} from "@odoo/hoot-dom";
+} from "@sleektiv/hoot-dom";
 import {
     Deferred,
     advanceTime,
@@ -18,8 +18,8 @@ import {
     mockDate,
     mockTimeZone,
     runAllTimers,
-} from "@odoo/hoot-mock";
-import { Component, onWillRender, onWillStart, xml } from "@odoo/owl";
+} from "@sleektiv/hoot-mock";
+import { Component, onWillRender, onWillStart, xml } from "@sleektiv/owl";
 import {
     MockServer,
     contains,
@@ -286,8 +286,8 @@ beforeEach(() => {
 onRpc("has_group", () => true);
 
 /**
- * @param {import("@odoo/hoot-dom").Target} from
- * @param {import("@odoo/hoot-dom").Target} to
+ * @param {import("@sleektiv/hoot-dom").Target} from
+ * @param {import("@sleektiv/hoot-dom").Target} to
  * @param {{
  *  start: "top" | "center" | "bottom";
  *  end: "top" | "center" | "bottom";

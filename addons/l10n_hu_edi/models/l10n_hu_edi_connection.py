@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from base64 import b64decode, b64encode
 import binascii
@@ -13,8 +13,8 @@ import dateutil.parser
 from lxml import etree
 import requests
 
-from odoo import _, release
-from odoo.tools import cleanup_xml_node
+from sleektiv import _, release
+from sleektiv.tools import cleanup_xml_node
 
 
 _logger = logging.getLogger(__name__)
@@ -64,7 +64,7 @@ class L10nHuEdiConnection:
         Use this as a context manager (`with L10nHuEdiConnection(...) as connection`)
         to ensure the TCP connection is closed when you are finished calling endpoints.
 
-        :param env: the Odoo environment
+        :param env: the Sleektiv environment
         """
         self.env = env
         self.session = requests.Session()
@@ -103,7 +103,7 @@ class L10nHuEdiConnection:
         encrypted_token = response_xml.findtext('api:encodedExchangeToken', namespaces=XML_NAMESPACES)
         token_validity_to = response_xml.findtext('api:tokenValidityTo', namespaces=XML_NAMESPACES)
         try:
-            # Convert into a naive UTC datetime, since Odoo can't store timezone-aware datetimes
+            # Convert into a naive UTC datetime, since Sleektiv can't store timezone-aware datetimes
             token_validity_to = dateutil.parser.isoparse(token_validity_to).astimezone(timezone.utc).replace(tzinfo=None)
         except ValueError:
             _logger.warning('Could not parse token validity end timestamp!')
@@ -354,9 +354,9 @@ class L10nHuEdiConnection:
 
     def _get_header_values(self, credentials, invoice_hashs=None):
         timestamp = datetime.utcnow()
-        request_id = 'ODOO' + secrets.token_hex(13)
+        request_id = 'SLEEKTIV' + secrets.token_hex(13)
         request_signature = self._calculate_request_signature(credentials['signature_key'], request_id, timestamp, invoice_hashs=invoice_hashs)
-        odoo_version = release.version
+        sleektiv_version = release.version
         module_version = self.env['ir.module.module'].get_module_info('l10n_hu_edi').get('version').replace('saas~', '').replace('.', '')
 
         return {
@@ -367,11 +367,11 @@ class L10nHuEdiConnection:
             'taxNumber': credentials['vat'][:8],
             'requestSignature': request_signature,
             'softwareId': f'BE477472701-{module_version}'[:18],
-            'softwareName': 'Odoo Enterprise',
+            'softwareName': 'Sleektiv Enterprise',
             'softwareOperation': 'ONLINE_SERVICE',
-            'softwareMainVersion': odoo_version,
-            'softwareDevName': 'Odoo SA',
-            'softwareDevContact': 'andu@odoo.com',
+            'softwareMainVersion': sleektiv_version,
+            'softwareDevName': 'Sleektiv SA',
+            'softwareDevContact': 'andu@sleektiv.com',
             'softwareDevCountryCode': 'BE',
             'softwareDevTaxNumber': '477472701',
             'format_bool': format_bool,

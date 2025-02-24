@@ -1,5 +1,5 @@
-import { expect, test } from "@odoo/hoot";
-import { click } from "@odoo/hoot-dom";
+import { expect, test } from "@sleektiv/hoot";
+import { click } from "@sleektiv/hoot-dom";
 import { fields, mountView } from "@web/../tests/web_test_helpers";
 
 import { defineProjectModels, ProjectProject } from "./project_models";

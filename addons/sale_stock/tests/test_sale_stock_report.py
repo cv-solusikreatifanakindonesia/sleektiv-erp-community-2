@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
-from odoo.tools import html2plaintext
+from sleektiv.tools import html2plaintext
 
-from odoo import Command
-from odoo.tests import Form, tagged
-from odoo.exceptions import AccessError
-from odoo.addons.stock.tests.test_report import TestReportsCommon
-from odoo.addons.sale.tests.common import TestSaleCommon
+from sleektiv import Command
+from sleektiv.tests import Form, tagged
+from sleektiv.exceptions import AccessError
+from sleektiv.addons.stock.tests.test_report import TestReportsCommon
+from sleektiv.addons.sale.tests.common import TestSaleCommon
 
 
 class TestSaleStockReports(TestReportsCommon):

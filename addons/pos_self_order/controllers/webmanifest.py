@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import mimetypes
 import re
 
 from urllib.parse import unquote
-from odoo import http
-from odoo.http import request
-from odoo.addons.web.controllers import webmanifest
+from sleektiv import http
+from sleektiv.http import request
+from sleektiv.addons.web.controllers import webmanifest
 
 
 class WebManifest(webmanifest.WebManifest):

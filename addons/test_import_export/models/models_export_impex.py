@@ -1,5 +1,5 @@
-from odoo import api, fields, models, _
-from odoo.osv.expression import FALSE_DOMAIN
+from sleektiv import api, fields, models, _
+from sleektiv.osv.expression import FALSE_DOMAIN
 
 
 def selection_fn(self):

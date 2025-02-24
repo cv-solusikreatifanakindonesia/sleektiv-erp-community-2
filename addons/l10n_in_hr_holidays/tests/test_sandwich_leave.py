@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from freezegun import freeze_time
-from odoo.tests import tagged, TransactionCase
+from sleektiv.tests import tagged, TransactionCase
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

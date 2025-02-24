@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
-from odoo.http import request, route, Controller
+from sleektiv import fields
+from sleektiv.http import request, route, Controller
 
 
 class DiscussSettingsController(Controller):

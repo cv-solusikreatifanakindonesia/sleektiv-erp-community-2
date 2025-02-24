@@ -1,4 +1,4 @@
-import { Component, markup } from "@odoo/owl";
+import { Component, markup } from "@sleektiv/owl";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";

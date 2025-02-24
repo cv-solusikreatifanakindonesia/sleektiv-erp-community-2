@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { AccordionItem } from "@point_of_sale/app/generic_components/accordion_item/accordion_item";
 
 export class PaymentMethodBreakdown extends Component {

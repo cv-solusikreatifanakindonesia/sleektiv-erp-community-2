@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 
-from odoo.tests import Form, TransactionCase, tagged
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo import fields
-from odoo.fields import Command
+from sleektiv.tests import Form, TransactionCase, tagged
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv import fields
+from sleektiv.fields import Command
 
 
 @tagged('post_install', '-at_install')

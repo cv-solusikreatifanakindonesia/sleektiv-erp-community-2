@@ -1,6 +1,6 @@
-import { expect, getFixture, test } from "@odoo/hoot";
-import { animationFrame, mockFetch } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { expect, getFixture, test } from "@sleektiv/hoot";
+import { animationFrame, mockFetch } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import {
     contains,
     makeMockEnv,

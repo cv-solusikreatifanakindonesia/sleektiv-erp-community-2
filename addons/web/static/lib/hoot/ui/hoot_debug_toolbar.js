@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, onWillRender, useState, xml } from "@odoo/owl";
+import { Component, onWillRender, useState, xml } from "@sleektiv/owl";
 import { Test } from "../core/test";
 import { refresh } from "../core/url";
 import { formatTime } from "../hoot_utils";

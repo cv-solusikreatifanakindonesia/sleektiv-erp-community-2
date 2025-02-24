@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import pprint
@@ -6,12 +6,12 @@ from urllib.parse import quote as url_quote
 
 from werkzeug import urls
 
-from odoo import _, api, models
-from odoo.exceptions import ValidationError
-from odoo.tools import float_round
+from sleektiv import _, api, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import float_round
 
-from odoo.addons.payment_mercado_pago import const
-from odoo.addons.payment_mercado_pago.controllers.main import MercadoPagoController
+from sleektiv.addons.payment_mercado_pago import const
+from sleektiv.addons.payment_mercado_pago.controllers.main import MercadoPagoController
 
 
 _logger = logging.getLogger(__name__)
@@ -152,15 +152,15 @@ class PaymentTransaction(models.Model):
 
         # Update the payment method.
         payment_method_type = verified_payment_data.get('payment_type_id', '')
-        for odoo_code, mp_codes in const.PAYMENT_METHODS_MAPPING.items():
+        for sleektiv_code, mp_codes in const.PAYMENT_METHODS_MAPPING.items():
             if any(payment_method_type == mp_code for mp_code in mp_codes.split(',')):
-                payment_method_type = odoo_code
+                payment_method_type = sleektiv_code
                 break
         payment_method = self.env['payment.method']._get_from_code(
             payment_method_type, mapping=const.PAYMENT_METHODS_MAPPING
         )
         # Fall back to "unknown" if the payment method is not found (and if "unknown" is found), as
-        # the user might have picked a different payment method than on Odoo's payment form.
+        # the user might have picked a different payment method than on Sleektiv's payment form.
         if not payment_method:
             payment_method = self.env['payment.method'].search([('code', '=', 'unknown')], limit=1)
         self.payment_method_id = payment_method or self.payment_method_id

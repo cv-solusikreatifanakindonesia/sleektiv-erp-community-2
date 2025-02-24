@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 import logging
 
 _logger = logging.getLogger(__name__)

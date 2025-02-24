@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import time
 
-from odoo import models, fields
-from odoo.exceptions import UserError
-from odoo.addons.l10n_hu_edi.models.l10n_hu_edi_connection import L10nHuEdiConnection
+from sleektiv import models, fields
+from sleektiv.exceptions import UserError
+from sleektiv.addons.l10n_hu_edi.models.l10n_hu_edi_connection import L10nHuEdiConnection
 
 
 class L10nHuEdiCancellation(models.TransientModel):

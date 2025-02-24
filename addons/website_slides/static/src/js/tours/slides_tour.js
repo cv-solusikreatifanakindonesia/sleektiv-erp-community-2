@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registerWebsitePreviewTour } from '@website/js/tours/tour_utils';
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 registerWebsitePreviewTour('slides_tour', {
     url: '/slides',

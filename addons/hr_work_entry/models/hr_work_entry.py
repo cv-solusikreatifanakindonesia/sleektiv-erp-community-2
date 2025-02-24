@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from contextlib import contextmanager
 from dateutil.relativedelta import relativedelta
 import itertools
 from psycopg2 import OperationalError
-from odoo.exceptions import UserError
+from sleektiv.exceptions import UserError
 
-from odoo import api, fields, models, tools, _
-from odoo.osv import expression
+from sleektiv import api, fields, models, tools, _
+from sleektiv.osv import expression
 
 
 class HrWorkEntry(models.Model):

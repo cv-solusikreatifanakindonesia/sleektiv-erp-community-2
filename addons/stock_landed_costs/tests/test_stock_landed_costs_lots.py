@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.stock_account.tests.test_lot_valuation import TestLotValuation
-from odoo.tests import tagged, Form
-from odoo import Command
+from sleektiv.addons.stock_account.tests.test_lot_valuation import TestLotValuation
+from sleektiv.tests import tagged, Form
+from sleektiv import Command
 
 
 @tagged('post_install', '-at_install')

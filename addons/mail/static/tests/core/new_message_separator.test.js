@@ -14,9 +14,9 @@ import {
     step,
     triggerHotkey,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, test } from "@odoo/hoot";
-import { queryFirst } from "@odoo/hoot-dom";
-import { mockDate, tick } from "@odoo/hoot-mock";
+import { describe, test } from "@sleektiv/hoot";
+import { queryFirst } from "@sleektiv/hoot-dom";
+import { mockDate, tick } from "@sleektiv/hoot-mock";
 import { Command, mockService, serverState, withUser } from "@web/../tests/web_test_helpers";
 
 import { rpc } from "@web/core/network/rpc";
@@ -112,10 +112,10 @@ test("keep new message separator until user goes back to the thread", async () =
     await contains(".o-mail-Thread-newMessage hr + span", { count: 0, text: "New" });
 });
 
-test("show new message separator on receiving new message when out of odoo focus", async () => {
+test("show new message separator on receiving new message when out of sleektiv focus", async () => {
     mockService("presence", () => ({
         ...presenceService.start(),
-        isOdooFocused: () => false,
+        isSleektivFocused: () => false,
     }));
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({ name: "Foreigner partner" });

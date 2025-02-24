@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, Command, fields, models
-from odoo.addons.onboarding.models.onboarding_progress import ONBOARDING_PROGRESS_STATES
-from odoo.exceptions import ValidationError
+from sleektiv import _, api, Command, fields, models
+from sleektiv.addons.onboarding.models.onboarding_progress import ONBOARDING_PROGRESS_STATES
+from sleektiv.exceptions import ValidationError
 
 
 class OnboardingStep(models.Model):

@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Sweden - Accounting',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'icon': '/account/static/description/l10n.png',
     'countries': ['se'],
     'version': '1.1',
@@ -11,7 +11,7 @@
 Swedish Accounting
 ------------------
 
-This is the base module to manage the accounting chart for Sweden in Odoo.
+This is the base module to manage the accounting chart for Sweden in Odoo, Sleektiv.
 It also includes the invoice OCR payment reference handling.
     """,
     'depends': [

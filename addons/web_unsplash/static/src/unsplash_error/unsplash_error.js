@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { UnsplashCredentials } from "../unsplash_credentials/unsplash_credentials";
 
 export class UnsplashError extends Component {

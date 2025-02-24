@@ -1,7 +1,7 @@
 
-from odoo.addons.account.controllers.portal import PortalAccount
-from odoo import http
-from odoo.http import request
+from sleektiv.addons.account.controllers.portal import PortalAccount
+from sleektiv import http
+from sleektiv.http import request
 
 
 class Portal(PortalAccount):

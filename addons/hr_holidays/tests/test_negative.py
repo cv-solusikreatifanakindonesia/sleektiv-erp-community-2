@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 from freezegun import freeze_time
 
-from odoo.tests.common import tagged
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
-from odoo.models import ValidationError
+from sleektiv.tests.common import tagged
+from sleektiv.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from sleektiv.models import ValidationError
 
 
 @tagged('negative_time_off')

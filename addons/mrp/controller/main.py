@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.product.controllers.product_document import ProductDocumentController
+from sleektiv.addons.product.controllers.product_document import ProductDocumentController
 
 
 class MRPProductDocumentController(ProductDocumentController):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form, TransactionCase
+from sleektiv.tests import Form, TransactionCase
 
 class TestMrpSubcontractingCommon(TransactionCase):
 
@@ -88,4 +88,4 @@ class TestMrpSubcontractingCommon(TransactionCase):
         product_category_all.property_stock_account_input_categ_id = a_in
         product_category_all.property_stock_account_output_categ_id = a_out
         product_category_all.property_stock_valuation_account_id = a_val
-        product_category_all.property_stock_journal = stock_journal
+        product_category_all.property_stock_journal = stock_journal 

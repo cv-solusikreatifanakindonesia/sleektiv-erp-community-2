@@ -1,6 +1,6 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { dblclick, queryAll, queryAllTexts } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { dblclick, queryAll, queryAllTexts } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { createSpreadsheetDashboard } from "@spreadsheet_dashboard/../tests/helpers/dashboard_action";
 import {
     defineSpreadsheetDashboardModels,

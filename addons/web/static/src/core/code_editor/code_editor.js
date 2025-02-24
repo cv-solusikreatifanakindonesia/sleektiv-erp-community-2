@@ -1,4 +1,4 @@
-import { Component, onWillDestroy, onWillStart, useEffect, useRef, useState } from "@odoo/owl";
+import { Component, onWillDestroy, onWillStart, useEffect, useRef, useState } from "@sleektiv/owl";
 import { loadBundle } from "@web/core/assets";
 import { useDebounced } from "@web/core/utils/timing";
 

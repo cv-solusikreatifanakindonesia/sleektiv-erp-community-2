@@ -1,5 +1,5 @@
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.fields import Command
+from sleektiv.addons.crm.tests.common import TestCrmCommon
+from sleektiv.fields import Command
 
 
 class TestSaleCrm(TestCrmCommon):

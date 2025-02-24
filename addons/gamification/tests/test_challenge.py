@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import datetime
 from freezegun import freeze_time
 
-from odoo.addons.gamification.tests.common import TransactionCaseGamification
-from odoo.exceptions import UserError
-from odoo.tools import mute_logger
+from sleektiv.addons.gamification.tests.common import TransactionCaseGamification
+from sleektiv.exceptions import UserError
+from sleektiv.tools import mute_logger
 
 
 class TestGamificationCommon(TransactionCaseGamification):
@@ -19,8 +19,8 @@ class TestGamificationCommon(TransactionCaseGamification):
         self.env.ref('gamification.challenge_base_discover')._update_all()
         self.robot = self.env['res.users'].with_context(no_reset_password=True).create({
             'name': 'R2D2',
-            'login': 'r2d2@openerp.com',
-            'email': 'r2d2@openerp.com',
+            'login': 'r2d2@sleektiv.com',
+            'email': 'r2d2@sleektiv.com',
             'groups_id': [(6, 0, [employees_group.id])]
         })
         self.badge_good_job = self.env.ref('gamification.badge_good_job')
@@ -62,7 +62,7 @@ class test_challenge(TestGamificationCommon):
         badge_ids = self.env['gamification.badge.user'].search([('badge_id', '=', badge_id), ('user_id', '=', demo.id)])
         self.assertEqual(len(badge_ids), 1, "Demo user has not received the badge")
 
-    @mute_logger('odoo.models.unlink', 'odoo.addons.mail', 'odoo.addons.auth_signup')
+    @mute_logger('sleektiv.models.unlink', 'sleektiv.addons.mail', 'sleektiv.addons.auth_signup')
     def test_20_update_all_goals_filter(self):
         # Enroll two internal and two portal users in the challenge
         (

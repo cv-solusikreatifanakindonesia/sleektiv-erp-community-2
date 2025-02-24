@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from "@sleektiv/owl";
 
 /**
  * @typedef {{

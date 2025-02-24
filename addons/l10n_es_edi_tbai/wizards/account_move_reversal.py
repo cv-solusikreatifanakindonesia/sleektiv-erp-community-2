@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, api
-from odoo.addons.l10n_es_edi_tbai.models.account_move import TBAI_REFUND_REASONS
-from odoo.exceptions import UserError
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import fields, models, api
+from sleektiv.addons.l10n_es_edi_tbai.models.account_move import TBAI_REFUND_REASONS
+from sleektiv.exceptions import UserError
 
 
 class AccountMoveReversal(models.TransientModel):

@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import time
 
 from datetime import date
-from odoo.tests.common import TransactionCase, tagged
+from sleektiv.tests.common import TransactionCase, tagged
 
 _logger = logging.getLogger(__name__)
 

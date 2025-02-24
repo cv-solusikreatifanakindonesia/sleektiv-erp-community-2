@@ -8,8 +8,8 @@ import {
     startServer,
 } from "@mail/../tests/mail_test_helpers";
 import { withGuest } from "@mail/../tests/mock_server/mail_mock_server";
-import { describe, test } from "@odoo/hoot";
-import { mockDate, tick } from "@odoo/hoot-mock";
+import { describe, test } from "@sleektiv/hoot";
+import { mockDate, tick } from "@sleektiv/hoot-mock";
 import { asyncStep, Command, serverState, waitForSteps } from "@web/../tests/web_test_helpers";
 
 import { deserializeDateTime } from "@web/core/l10n/dates";

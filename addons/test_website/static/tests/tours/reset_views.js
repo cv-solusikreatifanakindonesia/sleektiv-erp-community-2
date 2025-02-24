@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 /* global ace */
 
 import { clickOnSave, registerWebsitePreviewTour } from "@website/js/tours/tour_utils";

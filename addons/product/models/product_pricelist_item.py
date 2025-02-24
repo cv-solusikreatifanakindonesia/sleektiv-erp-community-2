@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import SUPERUSER_ID, _, api, fields, models, tools
-from odoo.exceptions import ValidationError
-from odoo.tools import format_amount, format_datetime, formatLang
+from sleektiv import SUPERUSER_ID, _, api, fields, models, tools
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import format_amount, format_datetime, formatLang
 
 
 class PricelistItem(models.Model):

@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
 from markupsafe import Markup
 
-from odoo import _, api, fields, models
-from odoo.exceptions import AccessError, UserError
-from odoo.osv import expression
-from odoo.tools.mail import email_normalize, append_content_to_html
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import AccessError, UserError
+from sleektiv.osv import expression
+from sleektiv.tools.mail import email_normalize, append_content_to_html
 
 _logger = logging.getLogger(__name__)
 

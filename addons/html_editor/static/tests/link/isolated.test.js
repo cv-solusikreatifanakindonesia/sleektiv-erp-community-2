@@ -1,11 +1,11 @@
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import { deleteBackward, insertText } from "../_helpers/user_actions";
 import { setupEditor, testEditor } from "../_helpers/editor";
 import { descendants } from "@html_editor/utils/dom_traversal";
-import { tick } from "@odoo/hoot-mock";
+import { tick } from "@sleektiv/hoot-mock";
 import { getContent, setSelection } from "../_helpers/selection";
 import { cleanLinkArtifacts } from "../_helpers/format";
-import { waitFor } from "@odoo/hoot-dom";
+import { waitFor } from "@sleektiv/hoot-dom";
 import { dispatchNormalize } from "../_helpers/dispatch";
 
 test("should pad a link with ZWNBSPs and add visual indication", async () => {

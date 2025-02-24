@@ -1,4 +1,4 @@
-import { useComponent, useEffect } from "@odoo/owl";
+import { useComponent, useEffect } from "@sleektiv/owl";
 
 /**
  * Hook used to enrich html and provide automatic links to action.

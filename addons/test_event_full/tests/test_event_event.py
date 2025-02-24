@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
-from odoo import Command, exceptions
-from odoo.addons.test_event_full.tests.common import TestEventFullCommon
-from odoo.tests.common import users
+from sleektiv import Command, exceptions
+from sleektiv.addons.test_event_full.tests.common import TestEventFullCommon
+from sleektiv.tests.common import users
 
 
 class TestEventEvent(TestEventFullCommon):

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 from werkzeug.urls import url_join
 
-from odoo import fields, models, _
-from odoo.addons.sms.tools.sms_api import SmsApi
+from sleektiv import fields, models, _
+from sleektiv.addons.sms.tools.sms_api import SmsApi
 
 
 class MassSMSTest(models.TransientModel):

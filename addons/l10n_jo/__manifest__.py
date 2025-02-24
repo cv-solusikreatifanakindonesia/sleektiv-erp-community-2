@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Jordan - Accounting',
     'countries': ['jo'],
     'description': """
-This is the base module to manage the accounting chart for Jordan in Odoo.
+This is the base module to manage the accounting chart for Jordan in Odoo, Sleektiv.
 ==============================================================================
 
 Jordan accounting basic charts and localization.

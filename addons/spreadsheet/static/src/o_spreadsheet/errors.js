@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { registries, EvaluationError } from "@odoo/o-spreadsheet";
+import { registries, EvaluationError } from "@sleektiv/o-spreadsheet";
 
 const LOADING_ERROR = "Loading...";
 

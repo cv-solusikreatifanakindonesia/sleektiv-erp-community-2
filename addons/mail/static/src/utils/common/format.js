@@ -5,7 +5,7 @@ import {
     htmlTrim,
 } from "@mail/utils/common/html";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 import { stateToUrl } from "@web/core/browser/router";
 import { loadEmoji } from "@web/core/emoji_picker/emoji_picker";

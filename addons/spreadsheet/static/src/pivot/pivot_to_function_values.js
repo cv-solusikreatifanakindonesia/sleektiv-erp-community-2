@@ -1,11 +1,11 @@
-import { registries, helpers, constants } from "@odoo/o-spreadsheet";
+import { registries, helpers, constants } from "@sleektiv/o-spreadsheet";
 
 const { DEFAULT_LOCALE } = constants;
 const { pivotToFunctionValueRegistry } = registries;
 const { toString, toNumber } = helpers;
 
 /**
- * Add pivot formatting functions to support odoo specific fields
+ * Add pivot formatting functions to support sleektiv specific fields
  * in spreadsheet
  */
 

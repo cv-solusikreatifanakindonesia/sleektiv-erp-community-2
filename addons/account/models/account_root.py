@@ -1,9 +1,9 @@
 
 from itertools import accumulate
 
-from odoo import api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import Query
+from sleektiv import api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import Query
 
 
 class AccountRoot(models.Model):

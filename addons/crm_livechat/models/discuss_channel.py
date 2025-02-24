@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 
-from odoo import models, _
-from odoo.tools import html2plaintext
+from sleektiv import models, _
+from sleektiv.tools import html2plaintext
 
 
 class DiscussChannel(models.Model):

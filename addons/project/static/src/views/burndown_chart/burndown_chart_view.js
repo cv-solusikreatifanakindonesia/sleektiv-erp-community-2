@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { BurndownChartModel } from "./burndown_chart_model";
 import { graphView } from "@web/views/graph/graph_view";

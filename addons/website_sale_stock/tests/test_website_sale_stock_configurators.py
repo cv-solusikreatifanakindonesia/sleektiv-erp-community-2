@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.tests import HttpCase, tagged
+from sleektiv.fields import Command
+from sleektiv.tests import HttpCase, tagged
 
-from odoo.addons.website_sale_stock.tests.common import WebsiteSaleStockCommon
+from sleektiv.addons.website_sale_stock.tests.common import WebsiteSaleStockCommon
 
 
 @tagged('post_install', '-at_install')

@@ -1,5 +1,5 @@
 import { defineAccountModels } from "./account_test_helpers";
-import { test } from "@odoo/hoot";
+import { test } from "@sleektiv/hoot";
 import {
     assertSteps,
     click,

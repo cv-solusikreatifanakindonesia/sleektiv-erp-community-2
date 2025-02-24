@@ -4,11 +4,11 @@ from contextlib import contextmanager
 from freezegun import freeze_time
 from unittest.mock import patch
 
-from odoo import exceptions, tools
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.phone_validation.tools import phone_validation
-from odoo.addons.sms.models.sms_sms import SmsApi, SmsSms
-from odoo.tests import common
+from sleektiv import exceptions, tools
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.addons.phone_validation.tools import phone_validation
+from sleektiv.addons.sms.models.sms_sms import SmsApi, SmsSms
+from sleektiv.tests import common
 
 
 class MockSMS(common.TransactionCase):
@@ -293,7 +293,7 @@ class SMSCase(MockSMS):
         if messages is not None:
             sanitize_tags = {**tools.mail.SANITIZE_TAGS}
             sanitize_tags['remove_tags'] = [*sanitize_tags['remove_tags'] + ['a']]
-            with patch('odoo.tools.mail.SANITIZE_TAGS', sanitize_tags):
+            with patch('sleektiv.tools.mail.SANITIZE_TAGS', sanitize_tags):
                 for message in messages:
                     self.assertEqual(content, tools.html2plaintext(tools.html_sanitize(message.body)).rstrip('\n'))
 

@@ -1,4 +1,4 @@
-from odoo import api, models
+from sleektiv import api, models
 
 class PosConfig(models.Model):
     _inherit = 'pos.config'

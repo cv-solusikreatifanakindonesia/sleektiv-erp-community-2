@@ -1,7 +1,7 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Model } from "@odoo/o-spreadsheet";
-import { OdooDataProvider } from "@spreadsheet/data_sources/odoo_data_provider";
+import { Model } from "@sleektiv/o-spreadsheet";
+import { SleektivDataProvider } from "@spreadsheet/data_sources/sleektiv_data_provider";
 import { createDefaultCurrency } from "@spreadsheet/currency/helpers";
 
 /**
@@ -37,14 +37,14 @@ export const Status = {
  * @property {string} name
  * @property {Array<Dashboard>} dashboards
  *
- * @typedef {import("@web/env").OdooEnv} OdooEnv
+ * @typedef {import("@web/env").SleektivEnv} SleektivEnv
  *
  * @typedef {import("@web/core/orm_service").ORM} ORM
  */
 
 export class DashboardLoader {
     /**
-     * @param {OdooEnv} env
+     * @param {SleektivEnv} env
      * @param {ORM} orm
      */
     constructor(env, orm) {
@@ -200,18 +200,18 @@ export class DashboardLoader {
      * @returns {Model}
      */
     _createSpreadsheetModel(snapshot, revisions = [], currency) {
-        const odooDataProvider = new OdooDataProvider(this.env);
+        const sleektivDataProvider = new SleektivDataProvider(this.env);
         const model = new Model(
             snapshot,
             {
-                custom: { env: this.env, orm: this.orm, odooDataProvider },
+                custom: { env: this.env, orm: this.orm, sleektivDataProvider },
                 mode: "dashboard",
                 defaultCurrency: createDefaultCurrency(currency),
             },
             revisions
         );
         this._activateFirstSheet(model);
-        odooDataProvider.addEventListener("data-source-updated", () =>
+        sleektivDataProvider.addEventListener("data-source-updated", () =>
             model.dispatch("EVALUATE_CELLS")
         );
         return model;

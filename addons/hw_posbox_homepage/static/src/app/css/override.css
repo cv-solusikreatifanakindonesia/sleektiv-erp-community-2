@@ -1,14 +1,14 @@
 :root {
-    --odoo-purple: #714B67
+    --sleektiv-purple: #714B67
 } 
 
 .color-primary {
-    color: var(--odoo-purple);
+    color: var(--sleektiv-purple);
 }
 
 .btn.btn-primary {
-    background-color: var(--odoo-purple) !important;
-    border-color: var(--odoo-purple) !important;
+    background-color: var(--sleektiv-purple) !important;
+    border-color: var(--sleektiv-purple) !important;
 }
 
 .alert.alert-secondary {
@@ -17,12 +17,12 @@
     border-color: #017E8480 !important;
 }
 
-.odoo-bg-primary, .bg-primary, .form-check-input:checked, .nav-pills .nav-link.active {
-    background-color: var(--odoo-purple) !important;
-    border-color: var(--odoo-purple) !important;
+.sleektiv-bg-primary, .bg-primary, .form-check-input:checked, .nav-pills .nav-link.active {
+    background-color: var(--sleektiv-purple) !important;
+    border-color: var(--sleektiv-purple) !important;
 }
 
-.odoo-bg-secondary, .bg-secondary {
+.sleektiv-bg-secondary, .bg-secondary {
     background-color: #017E84 !important;
 }
 
@@ -37,6 +37,6 @@
 }
 
 .link-primary {
-    color: var(--odoo-purple) !important;
+    color: var(--sleektiv-purple) !important;
     font-size: 12px;
 }

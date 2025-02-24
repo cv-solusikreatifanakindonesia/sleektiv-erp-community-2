@@ -1,7 +1,7 @@
-/** @odoo-module */
-import { OdooCorePlugin } from "@spreadsheet/plugins";
+/** @sleektiv-module */
+import { SleektivCorePlugin } from "@spreadsheet/plugins";
 
-export class IrMenuPlugin extends OdooCorePlugin {
+export class IrMenuPlugin extends SleektivCorePlugin {
     static getters = /** @type {const} */ (["getIrMenu"]);
     constructor(config) {
         super(config);

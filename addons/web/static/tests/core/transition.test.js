@@ -1,9 +1,9 @@
-import { test, expect } from "@odoo/hoot";
+import { test, expect } from "@sleektiv/hoot";
 import { Transition, useTransition, config as transitionConfig } from "@web/core/transition";
 import { mountWithCleanup, patchWithCleanup } from "@web/../tests/web_test_helpers";
 
-import { Component, xml, useState } from "@odoo/owl";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
+import { Component, xml, useState } from "@sleektiv/owl";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
 
 test("useTransition hook (default params)", async () => {
     patchWithCleanup(transitionConfig, {

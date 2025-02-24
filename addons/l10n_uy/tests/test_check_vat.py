@@ -1,7 +1,7 @@
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import tagged
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged("post_install_l10n", "post_install", "-at_install")

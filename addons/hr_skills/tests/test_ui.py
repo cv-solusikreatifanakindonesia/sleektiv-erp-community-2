@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
+import sleektiv.tests
 
-@odoo.tests.tagged('-at_install', 'post_install')
-class SkillsTestUI(odoo.tests.HttpCase):
+@sleektiv.tests.tagged('-at_install', 'post_install')
+class SkillsTestUI(sleektiv.tests.HttpCase):
     def test_ui(self):
         levels = self.env['hr.skill.level'].create([{
             'name': f'Level {x}',
@@ -21,4 +21,4 @@ class SkillsTestUI(odoo.tests.HttpCase):
             'skill_type_id': skill_type.id,
         }])
 
-        self.start_tour("/odoo", 'hr_skills_tour', login='admin')
+        self.start_tour("/sleektiv", 'hr_skills_tour', login='admin')

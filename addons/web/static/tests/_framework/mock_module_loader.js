@@ -3,8 +3,8 @@
 export const CONFIG_SUFFIX = ".hoot";
 export const TEST_SUFFIX = ".test";
 
-odoo.define = {
+sleektiv.define = {
     ["define (mocked)"](name, dependencies, factory) {
-        return odoo.loader.define(name, dependencies, factory, !name.endsWith(CONFIG_SUFFIX));
+        return sleektiv.loader.define(name, dependencies, factory, !name.endsWith(CONFIG_SUFFIX));
     },
 }["define (mocked)"];

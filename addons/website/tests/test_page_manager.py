@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
-import odoo.tests
+import sleektiv.tests
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestWebsitePageManager(odoo.tests.HttpCase):
+@sleektiv.tests.common.tagged('post_install', '-at_install')
+class TestWebsitePageManager(sleektiv.tests.HttpCase):
 
     def test_01_page_manager(self):
         website = self.env['website'].create({
@@ -21,7 +21,7 @@ class TestWebsitePageManager(odoo.tests.HttpCase):
         })
 
         website.domain = self.base_url()
-        self.start_tour('/odoo#action=website.action_website_pages_list', 'website_page_manager_direct_access', login='admin')
+        self.start_tour('/sleektiv#action=website.action_website_pages_list', 'website_page_manager_direct_access', login='admin')
 
     def test_generic_page_diverged_not_shown(self):
         Page = self.env['website.page']

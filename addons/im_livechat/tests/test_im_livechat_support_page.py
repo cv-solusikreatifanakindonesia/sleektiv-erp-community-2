@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo
-from odoo.tests import HttpCase
+import sleektiv
+from sleektiv.tests import HttpCase
 
-@odoo.tests.tagged('-at_install', 'post_install')
+@sleektiv.tests.tagged('-at_install', 'post_install')
 class TestImLivechatSupportPage(HttpCase):
     def test_load_modules(self):
         """Checks that all javascript modules load correctly on the livechat support page"""
@@ -12,8 +12,8 @@ class TestImLivechatSupportPage(HttpCase):
         # Give some time to the assets to load to prevent fetch
         # interrupt errors then ensures all the assets are loaded.
         check_js_modules = """
-            odoo.livechatReady.then(() => {
-                const errors = odoo.loader.findErrors();
+            sleektiv.livechatReady.then(() => {
+                const errors = sleektiv.loader.findErrors();
                 if (Object.keys(errors).length) {
                     console.error(
                         "Couldn't load all JS modules.",

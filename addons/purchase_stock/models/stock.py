@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import api, fields, models, _
-from odoo.osv.expression import AND
+from sleektiv import api, fields, models, _
+from sleektiv.osv.expression import AND
 
 
 class StockPicking(models.Model):
@@ -213,7 +213,7 @@ class Orderpoint(models.Model):
                     'message': '%s',
                     'links': [{
                         'label': order.display_name,
-                        'url': f'/odoo/action-purchase.action_rfq_form/{order.id}',
+                        'url': f'/sleektiv/action-purchase.action_rfq_form/{order.id}',
                     }],
                     'sticky': False,
                     'next': {'type': 'ir.actions.act_window_close'},

@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Ecuadorian Accounting',
     'icon': '/account/static/description/l10n.png',
@@ -36,7 +36,7 @@ Master Data:
     'author': 'TRESCLOUD (https://trescloud.com)',
     'category': 'Accounting/Localizations/Account Charts',
     'maintainer': 'TRESCLOUD',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations/ecuador.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/ecuador.html',
     'license': 'LGPL-3',
     'depends': [
         'base',

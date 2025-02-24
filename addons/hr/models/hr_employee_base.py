@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from pytz import timezone, UTC, utc
 from datetime import timedelta, datetime
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import format_time
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import format_time
 
 
 class HrEmployeeBase(models.AbstractModel):

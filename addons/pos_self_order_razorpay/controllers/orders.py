@@ -1,5 +1,5 @@
-from odoo import http
-from odoo.addons.pos_self_order.controllers.orders import PosSelfOrderController
+from sleektiv import http
+from sleektiv.addons.pos_self_order.controllers.orders import PosSelfOrderController
 from werkzeug.exceptions import Unauthorized
 
 

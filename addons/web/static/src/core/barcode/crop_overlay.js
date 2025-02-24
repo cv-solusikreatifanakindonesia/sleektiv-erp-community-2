@@ -1,4 +1,4 @@
-import { Component, useRef, onPatched } from "@odoo/owl";
+import { Component, useRef, onPatched } from "@sleektiv/owl";
 import { browser } from "@web/core/browser/browser";
 import { clamp } from "@web/core/utils/numbers";
 

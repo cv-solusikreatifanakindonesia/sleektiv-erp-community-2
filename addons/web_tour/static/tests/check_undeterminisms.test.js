@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { afterEach, beforeEach, describe, expect, test } from "@odoo/hoot";
-import { queryFirst } from "@odoo/hoot-dom";
-import { advanceTime, runAllTimers } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { afterEach, beforeEach, describe, expect, test } from "@sleektiv/hoot";
+import { queryFirst } from "@sleektiv/hoot-dom";
+import { advanceTime, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import { mountWithCleanup, patchWithCleanup } from "@web/../tests/web_test_helpers";
 import { browser } from "@web/core/browser/browser";
 import { Macro } from "@web/core/macro";
@@ -88,7 +88,7 @@ beforeEach(async () => {
         dir: () => {},
     });
     await mountWithCleanup(Root);
-    await odoo.startTour("tour_to_check_undeterminisms", {
+    await sleektiv.startTour("tour_to_check_undeterminisms", {
         mode: "auto",
         delayToCheckUndeterminisms: 3000,
     });

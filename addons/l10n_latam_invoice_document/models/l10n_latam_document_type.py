@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields, models, api
-from odoo.osv import expression
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import fields, models, api
+from sleektiv.osv import expression
 
 
 class L10nLatamDocumentType(models.Model):
@@ -24,7 +24,7 @@ class L10nLatamDocumentType(models.Model):
     report_name = fields.Char('Name on Reports', help='Name that will be printed in reports, for example "CREDIT NOTE"', translate=True)
     internal_type = fields.Selection(
         [('invoice', 'Invoices'), ('debit_note', 'Debit Notes'), ('credit_note', 'Credit Notes'), ('all', 'All Documents')],
-        help='Analog to odoo account.move.move_type but with more options allowing to identify the kind of document we are'
+        help='Analog to sleektiv account.move.move_type but with more options allowing to identify the kind of document we are'
         ' working with. (not only related to account.move, could be for documents of other models like stock.picking)')
 
     def _format_document_number(self, document_number):

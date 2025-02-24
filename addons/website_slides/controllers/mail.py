@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import NotFound, Forbidden
 
-from odoo import http
-from odoo.http import request
-from odoo.addons.portal.controllers.mail import PortalChatter
-from odoo.tools import plaintext2html, html2plaintext
+from sleektiv import http
+from sleektiv.http import request
+from sleektiv.addons.portal.controllers.mail import PortalChatter
+from sleektiv.tools import plaintext2html, html2plaintext
 
 
 class SlidesPortalChatter(PortalChatter):

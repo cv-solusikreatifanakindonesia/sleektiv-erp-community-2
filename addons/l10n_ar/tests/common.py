@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import fields
-from odoo.tests import Form
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import fields
+from sleektiv.tests import Form
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 import random
 import logging
 import time
@@ -35,7 +35,7 @@ class TestAr(AccountTestInvoicingCommon):
             "country_id": cls.env.ref("base.ar").id,
             "state_id": cls.env.ref("base.state_ar_s").id,
             "zip": '2000',
-            "phone": '+1 555 123 8069',
+            "phone": '+1 555 123 7073',
             "email": 'info@example.com',
             "website": 'www.example.com',
         })
@@ -58,7 +58,7 @@ class TestAr(AccountTestInvoicingCommon):
             "country_id": cls.env.ref("base.ar").id,
             "state_id": cls.env.ref("base.state_ar_s").id,
             "zip": '2000',
-            "phone": '+1 555 123 8069',
+            "phone": '+1 555 123 7073',
             "email": 'info@example.com',
             "website": 'www.example.com',
         })
@@ -260,7 +260,7 @@ class TestAr(AccountTestInvoicingCommon):
         })
         cls.product_iva_exento = cls.env['product.product'].create({
             # demo product_product_exento
-            'name': 'Book: Development in Odoo (VAT Exempt)',
+            'name': 'Book: Development in Sleektiv (VAT Exempt)',
             'uom_id': uom_unit.id,
             'uom_po_id': uom_unit.id,
             'standard_price': 100.0,

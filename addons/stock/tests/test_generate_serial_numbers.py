@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.exceptions import ValidationError
-from odoo.tests import TransactionCase
+from sleektiv import Command
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import TransactionCase
 
 
 class StockGenerateCommon(TransactionCase):

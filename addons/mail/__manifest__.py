@@ -11,7 +11,7 @@
 Chat, mail gateway and private channel.
 =======================================
 
-Communicate with your colleagues/customers/guest within Odoo.
+Communicate with your colleagues/customers/guest within Odoo, Sleektiv.
 
 Discuss/Chat
 ------------
@@ -58,7 +58,7 @@ same *conversation* document.
 For more specific needs, you may also assign custom-defined actions
 (technically: Server Actions) to be triggered for each incoming mail.
     """,
-    'website': 'https://www.odoo.com/app/discuss',
+    'website': 'https://sleektiv.com/app/discuss',
     'depends': ['base', 'base_setup', 'bus', 'web_tour', 'html_editor'],
     'data': [
         'data/mail_groups.xml',
@@ -198,15 +198,15 @@ For more specific needs, you may also assign custom-defined actions
             'mail/static/tests/legacy/**/*',
             ('remove', 'mail/static/tests/legacy/helpers/**/*'),
         ],
-        'mail.assets_odoo_sfu': [
-            'mail/static/lib/odoo_sfu/odoo_sfu.js',
+        'mail.assets_sleektiv_sfu': [
+            'mail/static/lib/sleektiv_sfu/sleektiv_sfu.js',
         ],
         'mail.assets_lamejs': [
             'mail/static/lib/lame/lame.js',
         ],
         'mail.assets_public': [
             'web/static/lib/jquery/jquery.js',
-            'web/static/lib/odoo_ui_icons/style.css',
+            'web/static/lib/sleektiv_ui_icons/style.css',
             ('include', 'web._assets_helpers'),
             ('include', 'web._assets_backend_helpers'),
             'web/static/src/scss/pre_variables.scss',

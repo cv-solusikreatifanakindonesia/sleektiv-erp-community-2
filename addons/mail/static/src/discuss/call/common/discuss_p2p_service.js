@@ -4,7 +4,7 @@ import { PeerToPeer } from "@mail/discuss/call/common/peer_to_peer";
 export const discussP2P = {
     dependencies: ["bus_service"],
     /**
-     * @param {import("@web/env").OdooEnv} env
+     * @param {import("@web/env").SleektivEnv} env
      * @param {Partial<import("services").Services>} services
      */
     start(env, services) {

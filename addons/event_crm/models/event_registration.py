@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from markupsafe import Markup
 
-from odoo import api, fields, models, tools, _
-from odoo.addons.phone_validation.tools import phone_validation
+from sleektiv import api, fields, models, tools, _
+from sleektiv.addons.phone_validation.tools import phone_validation
 
 
 class EventRegistration(models.Model):

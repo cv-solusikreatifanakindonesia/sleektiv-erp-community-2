@@ -1,7 +1,7 @@
-import { destroy, expect, test } from "@odoo/hoot";
-import { keyDown, keyUp, press, queryAllTexts, queryOne, resize } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, onMounted, useState, xml } from "@odoo/owl";
+import { destroy, expect, test } from "@sleektiv/hoot";
+import { keyDown, keyUp, press, queryAllTexts, queryOne, resize } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, onMounted, useState, xml } from "@sleektiv/owl";
 import {
     contains,
     getService,

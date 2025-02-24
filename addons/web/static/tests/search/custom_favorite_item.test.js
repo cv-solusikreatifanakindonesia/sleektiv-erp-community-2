@@ -1,6 +1,6 @@
-import { after, expect, test } from "@odoo/hoot";
-import { press, queryAllTexts } from "@odoo/hoot-dom";
-import { Component, xml } from "@odoo/owl";
+import { after, expect, test } from "@sleektiv/hoot";
+import { press, queryAllTexts } from "@sleektiv/hoot-dom";
+import { Component, xml } from "@sleektiv/owl";
 import {
     contains,
     defineModels,

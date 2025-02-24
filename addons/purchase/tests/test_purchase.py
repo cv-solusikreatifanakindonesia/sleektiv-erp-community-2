@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged, Form
-from odoo import Command, fields
-from odoo.exceptions import UserError
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged, Form
+from sleektiv import Command, fields
+from sleektiv.exceptions import UserError
 
 
 from datetime import timedelta

@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import io
 import xlrd
 import base64
 
-from odoo import Command
-from odoo.tests import tagged
-from odoo.addons.l10n_ph.tests.common import TestPhCommon
+from sleektiv import Command
+from sleektiv.tests import tagged
+from sleektiv.addons.l10n_ph.tests.common import TestPhCommon
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

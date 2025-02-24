@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 import random
@@ -7,11 +7,11 @@ import string
 
 from werkzeug import urls
 
-from odoo import tools, models, fields, api, _
-from odoo.addons.mail.tools import link_preview
-from odoo.exceptions import UserError
-from odoo.osv import expression
-from odoo.tools.mail import validate_url
+from sleektiv import tools, models, fields, api, _
+from sleektiv.addons.mail.tools import link_preview
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
+from sleektiv.tools.mail import validate_url
 
 LINK_TRACKER_UNIQUE_FIELDS = ('url', 'campaign_id', 'medium_id', 'source_id', 'label')
 
@@ -22,7 +22,7 @@ LINK_TRACKER_MIN_CODE_LENGTH = 3
 
 class LinkTracker(models.Model):
     """ Link trackers allow users to wrap any URL into a short URL that can be
-    tracked by Odoo. Clicks are counter on each link. A tracker is linked to
+    tracked by Sleektiv. Clicks are counter on each link. A tracker is linked to
     UTMs allowing to analyze marketing actions.
 
     This model is also used in mass_mailing where each link in html body is

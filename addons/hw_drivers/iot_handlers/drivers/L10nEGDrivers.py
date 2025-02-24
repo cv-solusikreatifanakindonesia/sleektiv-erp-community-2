@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 import logging
 import platform
@@ -7,8 +7,8 @@ import json
 
 from passlib.context import CryptContext
 
-from odoo import http
-from odoo.tools.config import config
+from sleektiv import http
+from sleektiv.tools.config import config
 
 _logger = logging.getLogger(__name__)
 
@@ -33,10 +33,10 @@ class EtaUsbController(http.Controller):
     @http.route('/hw_l10n_eg_eta/certificate', type='http', auth='none', cors='*', csrf=False, save_session=False, methods=['POST'])
     def eta_certificate(self, pin, access_token):
         """
-        Gets the certificate from the token and returns it to the main odoo instance so that we can prepare the
-        cades-bes object on the main odoo instance rather than this middleware
+        Gets the certificate from the token and returns it to the main sleektiv instance so that we can prepare the
+        cades-bes object on the main sleektiv instance rather than this middleware
         @param pin: pin of the token
-        @param access_token: token shared with the main odoo instance
+        @param access_token: token shared with the main sleektiv instance
         """
         if not PyKCS11:
             return self._get_error_template('no_pykcs11')
@@ -64,7 +64,7 @@ class EtaUsbController(http.Controller):
         """
         Check if the access_token is valid and sign the invoices accessing the usb key with the pin.
         @param pin: pin of the token
-        @param access_token: token shared with the main odoo instance
+        @param access_token: token shared with the main sleektiv instance
         @param invoices: dictionary of invoices. Keys are invoices ids, value are the base64 encoded binaries to sign
         """
         if not PyKCS11:

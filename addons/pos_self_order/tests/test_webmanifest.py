@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import tagged
-from odoo.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
+from sleektiv.tests.common import tagged
+from sleektiv.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
 
 
 @tagged('-at_install', 'post_install')

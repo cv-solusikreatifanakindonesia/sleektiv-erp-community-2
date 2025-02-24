@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 import { cookie } from "@web/core/browser/cookie";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 import { omit } from "@web/core/utils/objects";
 
 export function addMedia(position = "right") {
@@ -397,7 +397,7 @@ export function prepend_trigger(steps, prepend_text='') {
 }
 
 export function getClientActionUrl(path, edition) {
-    let url = `/odoo/action-website.website_preview`;
+    let url = `/sleektiv/action-website.website_preview`;
     if (path) {
         url += `?path=${encodeURIComponent(path)}`;
     }
@@ -491,7 +491,7 @@ export function registerBackendAndFrontendTour(name, options, steps) {
     if (typeof steps !== "function") {
         throw new Error(`tour.steps has to be a function that returns TourStep[]`);
     }
-    if (window.location.pathname === '/odoo') {
+    if (window.location.pathname === '/sleektiv') {
         return registerWebsitePreviewTour(name, options, () => {
             const newSteps = [];
             for (const step of steps()) {

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, models
-from odoo.tools import float_round
+from sleektiv import _, models
+from sleektiv.tools import float_round
 
-from odoo.addons.payment_razorpay import const
+from sleektiv.addons.payment_razorpay import const
 
 
 class PaymentToken(models.Model):

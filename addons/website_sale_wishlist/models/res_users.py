@@ -1,5 +1,5 @@
-from odoo import api, fields, models
-from odoo.http import request
+from sleektiv import api, fields, models
+from sleektiv.http import request
 
 
 class ResUsers(models.Model):

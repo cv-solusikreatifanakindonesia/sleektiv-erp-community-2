@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 from json import loads
 
-from odoo.tests import Form
-from odoo.addons.mrp.tests.common import TestMrpCommon
-from odoo import Command, fields
+from sleektiv.tests import Form
+from sleektiv.addons.mrp.tests.common import TestMrpCommon
+from sleektiv import Command, fields
 
 
 

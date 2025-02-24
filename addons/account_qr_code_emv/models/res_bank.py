@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 
-from odoo import _, api, fields, models
-from odoo.tools.misc import remove_accents
-from odoo.addons.account_qr_code_emv.const import CURRENCY_MAPPING
+from sleektiv import _, api, fields, models
+from sleektiv.tools.misc import remove_accents
+from sleektiv.addons.account_qr_code_emv.const import CURRENCY_MAPPING
 
 
 class ResPartnerBank(models.Model):

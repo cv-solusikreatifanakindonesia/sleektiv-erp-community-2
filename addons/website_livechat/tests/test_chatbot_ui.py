@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, tests
-from odoo.addons.im_livechat.tests.chatbot_common import ChatbotCase
-from odoo.addons.website_livechat.tests.common import TestLivechatCommon as TestWebsiteLivechatCommon
-from odoo.addons.im_livechat.tests.common import TestImLivechatCommon
+from sleektiv import Command, tests
+from sleektiv.addons.im_livechat.tests.chatbot_common import ChatbotCase
+from sleektiv.addons.website_livechat.tests.common import TestLivechatCommon as TestWebsiteLivechatCommon
+from sleektiv.addons.im_livechat.tests.common import TestImLivechatCommon
 
 
 @tests.tagged('post_install', '-at_install')

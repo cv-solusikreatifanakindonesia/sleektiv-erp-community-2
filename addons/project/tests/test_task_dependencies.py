@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo.fields import Command, Datetime
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
+from sleektiv.fields import Command, Datetime
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import tagged
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from sleektiv.addons.project.tests.test_project_base import TestProjectCommon
 
 from datetime import date
 

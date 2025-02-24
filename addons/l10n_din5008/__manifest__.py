@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'DIN 5008',
     'version': '1.0',
     'category': 'Accounting/Localizations',
-    'description': "This is the base module that defines the DIN 5008 standard in Odoo.",
+    'description': "This is the base module that defines the DIN 5008 standard in Odoo, Sleektiv.",
     'depends': ['account'],
     'auto_install': True,
     'countries': ['de', 'ch'],

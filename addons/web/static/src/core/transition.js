@@ -8,7 +8,7 @@ import {
     useEffect,
     useState,
     xml,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 
 // Allows to disable transitions globally, useful for testing (and maybe for
 // a reduced motion setting in the future?)

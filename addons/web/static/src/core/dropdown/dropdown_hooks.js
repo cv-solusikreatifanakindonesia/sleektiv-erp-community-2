@@ -1,4 +1,4 @@
-import { useEnv, useState } from "@odoo/owl";
+import { useEnv, useState } from "@sleektiv/owl";
 import { DROPDOWN_NESTING } from "@web/core/dropdown/_behaviours/dropdown_nesting";
 
 /**

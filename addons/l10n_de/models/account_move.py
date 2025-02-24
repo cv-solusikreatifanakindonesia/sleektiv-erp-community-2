@@ -1,4 +1,4 @@
-from odoo import models, api
+from sleektiv import models, api
 
 class AccountMove(models.Model):
     _inherit = 'account.move'

@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, getFixture, test } from "@odoo/hoot";
-import { queryAllProperties, queryOne, queryRect, resize } from "@odoo/hoot-dom";
-import { animationFrame, runAllTimers } from "@odoo/hoot-mock";
-import { Component, xml } from "@odoo/owl";
+import { beforeEach, describe, expect, getFixture, test } from "@sleektiv/hoot";
+import { queryAllProperties, queryOne, queryRect, resize } from "@sleektiv/hoot-dom";
+import { animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, xml } from "@sleektiv/owl";
 import {
     contains,
     defineModels,

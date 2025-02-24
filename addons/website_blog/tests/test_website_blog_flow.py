@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import json
 
-from odoo.exceptions import UserError
-from odoo.tests.common import users, HttpCase, tagged
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_blog.tests.common import TestWebsiteBlogCommon
-from odoo.addons.mail.controllers.thread import ThreadController
+from sleektiv.exceptions import UserError
+from sleektiv.tests.common import users, HttpCase, tagged
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_blog.tests.common import TestWebsiteBlogCommon
+from sleektiv.addons.mail.controllers.thread import ThreadController
 
 
 class TestWebsiteBlogFlow(TestWebsiteBlogCommon):

@@ -1,8 +1,8 @@
 import time
 from datetime import timedelta
 
-from odoo import api, fields, models, _
-from odoo.addons.l10n_hu_edi.models.l10n_hu_edi_connection import L10nHuEdiConnection
+from sleektiv import api, fields, models, _
+from sleektiv.addons.l10n_hu_edi.models.l10n_hu_edi_connection import L10nHuEdiConnection
 
 
 class AccountMoveSend(models.AbstractModel):
@@ -65,7 +65,7 @@ class AccountMoveSend(models.AbstractModel):
 
         # Pre-emptively acquire write lock on all invoices to be processed
         # Otherwise, we will get a serialization error later
-        # (bad, because Odoo will try to retry the entire request, leading to duplicate sending to NAV)
+        # (bad, because Sleektiv will try to retry the entire request, leading to duplicate sending to NAV)
         invoices_hu._l10n_hu_edi_acquire_lock()
 
         # STEP 1: Generate and send the invoice XMLs.

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models,fields, api, _
-from odoo.tools import SQL
+from sleektiv import models,fields, api, _
+from sleektiv.tools import SQL
 
 
 class CrmTeam(models.Model):

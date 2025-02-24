@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import requests
 from datetime import datetime, timedelta, timezone
 
-from odoo import models, fields, _
-from odoo.exceptions import ValidationError, UserError
+from sleektiv import models, fields, _
+from sleektiv.exceptions import ValidationError, UserError
 
 
 class CloudStorageSettings(models.TransientModel):

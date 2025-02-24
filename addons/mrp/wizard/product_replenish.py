@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
 
 class ProductReplenish(models.TransientModel):
@@ -22,7 +22,7 @@ class ProductReplenish(models.TransientModel):
         if production._name == 'mrp.production':
             return [{
                 'label': production.name,
-                'url': f'/odoo/action-mrp.action_mrp_production_form/{production.id}'
+                'url': f'/sleektiv/action-mrp.action_mrp_production_form/{production.id}'
             }]
         return super()._get_replenishment_order_notification_link(production)
 

@@ -16,8 +16,8 @@ import {
     step,
     triggerHotkey,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, expect, test } from "@odoo/hoot";
-import { Deferred, advanceTime } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { Deferred, advanceTime } from "@sleektiv/hoot-mock";
 import {
     defineActions,
     getService,
@@ -27,7 +27,7 @@ import {
 } from "@web/../tests/web_test_helpers";
 
 import { DELAY_FOR_SPINNER } from "@mail/chatter/web_portal/chatter";
-import { queryFirst } from "@odoo/hoot-dom";
+import { queryFirst } from "@sleektiv/hoot-dom";
 
 describe.current.tags("desktop");
 defineMailModels();
@@ -637,7 +637,7 @@ test("Mentions in composer should still work when using pager", async () => {
     await click("button", { text: "Log note" });
     await click(".o_pager_next");
     await insertText(".o-mail-Composer-input", "@");
-    // all records in DB: Mitchell Admin | Hermit | Public user except OdooBot
+    // all records in DB: Mitchell Admin | Hermit | Public user except SleektivBot
     await contains(".o-mail-Composer-suggestion", { count: 3 });
 });
 

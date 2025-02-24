@@ -1,5 +1,5 @@
-from odoo.tests.common import TransactionCase
-from odoo.tests import tagged
+from sleektiv.tests.common import TransactionCase
+from sleektiv.tests import tagged
 
 
 @tagged('hr_applicant')

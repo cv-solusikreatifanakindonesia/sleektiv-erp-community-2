@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
-from odoo.tools import mute_logger
+import sleektiv.tests
+from sleektiv.tools import mute_logger
 
 
-@odoo.tests.common.tagged('post_install', '-at_install')
-class TestRestrictedEditor(odoo.tests.HttpCase):
+@sleektiv.tests.common.tagged('post_install', '-at_install')
+class TestRestrictedEditor(sleektiv.tests.HttpCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -25,7 +25,7 @@ class TestRestrictedEditor(odoo.tests.HttpCase):
             'sequence': 100,
         })
 
-    @mute_logger('odoo.addons.http_routing.models.ir_http', 'odoo.http')
+    @mute_logger('sleektiv.addons.http_routing.models.ir_http', 'sleektiv.http')
     def test_01_restricted_editor_only(self):
         self.restricted_editor = self.env['res.users'].create({
             'name': 'Restricted Editor',
@@ -38,7 +38,7 @@ class TestRestrictedEditor(odoo.tests.HttpCase):
         })
         self.start_tour(self.env['website'].get_client_action_url('/'), 'test_restricted_editor_only', login='restricted')
 
-    @mute_logger('odoo.addons.http_routing.models.ir_http', 'odoo.http')
+    @mute_logger('sleektiv.addons.http_routing.models.ir_http', 'sleektiv.http')
     def test_02_restricted_editor_test_admin(self):
         self.restricted_editor = self.env['res.users'].create({
             'name': 'Restricted Editor',

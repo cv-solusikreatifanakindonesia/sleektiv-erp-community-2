@@ -1,7 +1,7 @@
 /* global waitForWebfonts */
 
 import { Mutex } from "@web/core/utils/concurrency";
-import { markRaw } from "@odoo/owl";
+import { markRaw } from "@sleektiv/owl";
 import { floatIsZero } from "@web/core/utils/numbers";
 import { renderToElement } from "@web/core/utils/render";
 import { registry } from "@web/core/registry";
@@ -154,7 +154,7 @@ export class PosStore extends Reactive {
     }
 
     get firstScreen() {
-        if (odoo.from_backend) {
+        if (sleektiv.from_backend) {
             // Remove from_backend params in the URL but keep the rest
             const url = new URL(window.location.href);
             url.searchParams.delete("from_backend");
@@ -295,7 +295,7 @@ export class PosStore extends Reactive {
         this.currency = this.config.currency_id;
         this.pickingType = this.data.models["stock.picking.type"].getFirst();
         this.models = this.data.models;
-        this.models["pos.session"].getFirst().login_number = parseInt(odoo.login_number);
+        this.models["pos.session"].getFirst().login_number = parseInt(sleektiv.login_number);
 
         const models = Object.keys(this.models);
         const dynamicModels = this.data.opts.dynamicModels;
@@ -579,7 +579,7 @@ export class PosStore extends Reactive {
         const product_tmpl_ids = validProducts.map((product) => product.raw.product_tmpl_id);
         const product_ids = validProducts.map((product) => product.id);
         await this.data.callRelated("pos.session", "get_pos_ui_product_pricelist_item_by_product", [
-            odoo.pos_session_id,
+            sleektiv.pos_session_id,
             product_tmpl_ids,
             product_ids,
             this.config.id,
@@ -2206,7 +2206,7 @@ export class PosStore extends Reactive {
     }
 
     redirectToBackend() {
-        window.location = "/odoo/action-point_of_sale.action_client_pos_menu";
+        window.location = "/sleektiv/action-point_of_sale.action_client_pos_menu";
     }
 
     getDisplayDeviceIP() {

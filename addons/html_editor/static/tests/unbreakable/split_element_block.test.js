@@ -1,4 +1,4 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import { setupEditor, testEditor } from "../_helpers/editor";
 import { splitBlock } from "../_helpers/user_actions";
 import { getContent } from "../_helpers/selection";

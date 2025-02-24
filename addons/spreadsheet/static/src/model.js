@@ -1,9 +1,9 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Model } from "@odoo/o-spreadsheet";
+import { Model } from "@sleektiv/o-spreadsheet";
 
 /**
- * An o-spreadsheet model with all custom Odoo plugins
- * @type {import("@spreadsheet").OdooSpreadsheetModelConstructor}
+ * An o-spreadsheet model with all custom Sleektiv plugins
+ * @type {import("@spreadsheet").SleektivSpreadsheetModelConstructor}
  **/
-export const OdooSpreadsheetModel = Model;
+export const SleektivSpreadsheetModel = Model;

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 # Author: Leonardo Pistone
 # Copyright 2015 Camptocamp SA
 
-from odoo.addons.stock.tests.common import TestStockCommon
-from odoo.exceptions import UserError
-from odoo.tests import Form
+from sleektiv.addons.stock.tests.common import TestStockCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import Form
 
 
 class TestVirtualAvailable(TestStockCommon):

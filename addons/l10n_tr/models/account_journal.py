@@ -1,4 +1,4 @@
-from odoo import api, models, fields
+from sleektiv import api, models, fields
 
 
 class AccountJournal(models.Model):

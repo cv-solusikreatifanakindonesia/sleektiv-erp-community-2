@@ -15,4 +15,4 @@
 "tax_group_withhold_income_sale","Sale Profit Withhold","withhold_income_sale","90","base.ec","ec_profit_tax_deduction","ec_profit_tax_credit","Retención Renta en Ventas"
 "tax_group_withhold_income_purchase","Purchase Profit Withhold","withhold_income_purchase","95","base.ec","ec_profit_tax_deduction","ec_profit_tax_credit"
 "tax_group_outflows","Exchange Outflows","outflows_tax","100","base.ec","ec_others_tax_deduction","ec_others_tax_credit","Salidas por cambio"
-"tax_group_others","Others","other","110","base.ec","ec_others_tax_deduction","ec_others_tax_credit","Otros"
+"tax_group_others","Others","other","110","base.ec","ec_others_tax_deduction","ec_others_tax_credit","Otros" 

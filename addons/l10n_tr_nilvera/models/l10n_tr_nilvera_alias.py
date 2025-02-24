@@ -1,4 +1,4 @@
-from odoo import fields, models
+from sleektiv import fields, models
 
 
 class L10nTrNilveraAlias(models.Model):

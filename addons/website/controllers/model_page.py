@@ -2,8 +2,8 @@ import ast
 
 import werkzeug
 
-from odoo.http import Controller, request, route
-from odoo.osv.expression import AND, OR
+from sleektiv.http import Controller, request, route
+from sleektiv.osv.expression import AND, OR
 
 
 class ModelPageController(Controller):

@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
 from freezegun import freeze_time
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
-from odoo.exceptions import UserError
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
 from unittest.mock import patch
 
-CONTACT_PROXY_METHOD = 'odoo.addons.l10n_my_edi.models.account_edi_proxy_user.AccountEdiProxyClientUser._l10n_my_edi_contact_proxy'
+CONTACT_PROXY_METHOD = 'sleektiv.addons.l10n_my_edi.models.account_edi_proxy_user.AccountEdiProxyClientUser._l10n_my_edi_contact_proxy'
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -95,7 +95,7 @@ class L10nMyEDITestNewSubmission(TestAccountMoveSendCommon):
         As we submit a single invoice, we expect a UserError to be raised.
         """
         with patch(CONTACT_PROXY_METHOD, new=self._test_02_mock):
-            with self.assertRaisesRegex(UserError, 'Server error; If the problem persists, please contact the Odoo support.'):
+            with self.assertRaisesRegex(UserError, 'Server error; If the problem persists, please contact the Sleektiv support.'):
                 self.basic_invoice.action_l10n_my_edi_send_invoice()
 
     @freeze_time('2024-07-15 10:00:00')
@@ -271,7 +271,7 @@ class L10nMyEDITestNewSubmission(TestAccountMoveSendCommon):
         self.submission_invoice |= self.basic_invoice
 
         with patch(CONTACT_PROXY_METHOD, new=self._test_08_mock), \
-             patch('odoo.addons.l10n_my_edi.models.account_move.SUBMISSION_MAX_SIZE', 2):
+             patch('sleektiv.addons.l10n_my_edi.models.account_move.SUBMISSION_MAX_SIZE', 2):
             self.submission_invoice.action_l10n_my_edi_send_invoice()
 
         # we have 10 invoices, with a max size of 2 we expect 5 different submissions.
@@ -347,7 +347,7 @@ class L10nMyEDITestNewSubmission(TestAccountMoveSendCommon):
         self.submission_invoice |= self.basic_invoice
 
         with patch(CONTACT_PROXY_METHOD, new=self._test_12_mock), \
-             patch('odoo.addons.l10n_my_edi.models.account_move.SUBMISSION_MAX_SIZE', 1):
+             patch('sleektiv.addons.l10n_my_edi.models.account_move.SUBMISSION_MAX_SIZE', 1):
             self.submission_invoice.action_l10n_my_edi_send_invoice()
 
         self.assertEqual(self.submission_count, 5)

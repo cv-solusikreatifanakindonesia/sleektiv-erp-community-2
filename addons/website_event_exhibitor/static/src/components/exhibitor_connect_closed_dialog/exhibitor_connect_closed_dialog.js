@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component, onWillStart, markup } from "@odoo/owl";
+import { Component, onWillStart, markup } from "@sleektiv/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 import { rpc } from "@web/core/network/rpc";
 import { formatDuration } from "@web/core/l10n/dates";

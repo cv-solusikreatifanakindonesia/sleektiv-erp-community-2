@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields
-from odoo.http import request
-from odoo.tools import email_normalize, get_lang, html2plaintext, is_html_empty, plaintext2html
-from odoo.exceptions import ValidationError
+from sleektiv import api, models, fields
+from sleektiv.http import request
+from sleektiv.tools import email_normalize, get_lang, html2plaintext, is_html_empty, plaintext2html
+from sleektiv.exceptions import ValidationError
 
 
 class ChatbotScript(models.Model):

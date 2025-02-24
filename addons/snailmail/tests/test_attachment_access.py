@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo.exceptions import AccessError
-from odoo.tests import TransactionCase
+from sleektiv.exceptions import AccessError
+from sleektiv.tests import TransactionCase
 
 
 class testAttachmentAccess(TransactionCase):

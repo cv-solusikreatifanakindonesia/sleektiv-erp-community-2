@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
-from odoo.fields import Command
-from odoo.tests import tagged
+from sleektiv.fields import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website_sale.tests.common import WebsiteSaleCommon
+from sleektiv.addons.base.tests.common import HttpCaseWithUserDemo
+from sleektiv.addons.website_sale.tests.common import WebsiteSaleCommon
 
 _logger = logging.getLogger(__name__)
 

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 #
 # Please note that these reports are not multi-currency !!!
 #
 
-from odoo import fields, models, api
-from odoo.tools.query import Query
-from odoo.tools.sql import SQL
+from sleektiv import fields, models, api
+from sleektiv.tools.query import Query
+from sleektiv.tools.sql import SQL
 
 
 class PurchaseReport(models.Model):

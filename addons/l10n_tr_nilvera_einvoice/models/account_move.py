@@ -2,9 +2,9 @@ import uuid
 from markupsafe import Markup
 from urllib.parse import quote, urlencode, urlparse
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.addons.l10n_tr_nilvera.lib.nilvera_client import _get_nilvera_client
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.addons.l10n_tr_nilvera.lib.nilvera_client import _get_nilvera_client
 
 
 class AccountMove(models.Model):

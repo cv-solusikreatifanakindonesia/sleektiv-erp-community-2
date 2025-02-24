@@ -1,5 +1,5 @@
 import { HtmlField } from "@html_editor/fields/html_field";
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
 import {
     defineModels,
     fields,

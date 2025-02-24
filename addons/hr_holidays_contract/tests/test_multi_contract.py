@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, date
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged, freeze_time
-from odoo.addons.hr_holidays_contract.tests.common import TestHolidayContract
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import tagged, freeze_time
+from sleektiv.addons.hr_holidays_contract.tests.common import TestHolidayContract
 
 
 @tagged('multi_contract')

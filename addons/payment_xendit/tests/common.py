@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.payment.tests.common import PaymentCommon
+from sleektiv.addons.payment.tests.common import PaymentCommon
 
 
 class XenditCommon(PaymentCommon):
@@ -27,7 +27,7 @@ class XenditCommon(PaymentCommon):
             'description': cls.reference,
             'external_id': cls.reference,
             'paid_amount': 1740,
-            'merchant_name': 'Odoo',
+            'merchant_name': 'Sleektiv',
             'initial_amount': 1740,
             'payment_method': 'BANK_TRANSFER',
             'payment_channel': 'BNI',
@@ -49,7 +49,7 @@ class XenditCommon(PaymentCommon):
             'masked_card_number': '520000XXXXXX2151',
             'card_brand': 'MASTERCARD',
             'card_type': 'CREDIT',
-            'descriptor': 'XDT*ODOO',
+            'descriptor': 'XDT*SLEEKTIV',
             'authorization_id': '6645aaa3f00da60017cdc66b',
             'bank_reconciliation_id': '7158417004836852803955',
             'issuing_bank_name': 'PT BANK NEGARA INDONESIA TBK',

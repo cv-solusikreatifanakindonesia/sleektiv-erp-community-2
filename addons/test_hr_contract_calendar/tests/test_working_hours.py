@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests import tagged
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.tests import tagged
 from datetime import datetime
-from odoo.addons.test_hr_contract_calendar.tests.common import TestHrContractCalendarCommon
+from sleektiv.addons.test_hr_contract_calendar.tests.common import TestHrContractCalendarCommon
 
 
 @tagged('work_hours')

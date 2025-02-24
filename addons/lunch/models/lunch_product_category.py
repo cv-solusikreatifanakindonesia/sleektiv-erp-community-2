@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 
-from odoo import api, fields, models
+from sleektiv import api, fields, models
 
-from odoo.tools.misc import file_open
+from sleektiv.tools.misc import file_open
 
 
 class LunchProductCategory(models.Model):

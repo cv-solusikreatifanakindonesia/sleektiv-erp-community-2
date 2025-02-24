@@ -1,11 +1,11 @@
 import base64
 from datetime import datetime
 
-from odoo import fields
-from odoo.tests import tagged
-from odoo.tools import file_open
+from sleektiv import fields
+from sleektiv.tests import tagged
+from sleektiv.tools import file_open
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 @tagged('post_install', '-at_install')

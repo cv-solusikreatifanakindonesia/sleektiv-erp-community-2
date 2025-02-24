@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import re
 
 from collections import defaultdict, deque
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import OrderedSet
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import OrderedSet
 
 
 class MrpBatchProduct(models.TransientModel):

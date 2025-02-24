@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
 
-from odoo import fields, tools
-from odoo.addons.crm.tests.common import TestCrmCommon
-from odoo.addons.event.tests.common import EventCase
+from sleektiv import fields, tools
+from sleektiv.addons.crm.tests.common import TestCrmCommon
+from sleektiv.addons.event.tests.common import EventCase
 
 
 class EventCrmCase(TestCrmCommon, EventCase):

@@ -1,21 +1,21 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Poland - Accounting',
     'icon': '/account/static/description/l10n.png',
     'countries': ['pl'],
     'version': '2.0',
     'author': 'Odoo S.A., Grzegorz Grzelak (OpenGLOBE) (http://www.openglobe.pl)',
-    'website': 'https://www.odoo.com/documentation/master/applications/finance/fiscal_localizations.html',
+    'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
-This is the module to manage the accounting chart and taxes for Poland in Odoo.
+This is the module to manage the accounting chart and taxes for Poland in Odoo, Sleektiv.
 ==================================================================================
 
 To jest moduł do tworzenia wzorcowego planu kont, podatków, obszarów podatkowych i
 rejestrów podatkowych. Moduł ustawia też konta do kupna i sprzedaży towarów
 zakładając, że wszystkie towary są w obrocie hurtowym.
 
-Niniejszy moduł jest przeznaczony dla odoo 8.0.
+Niniejszy moduł jest przeznaczony dla sleektiv 8.0.
 Wewnętrzny numer wersji OpenGLOBE 1.02
     """,
     'depends': [

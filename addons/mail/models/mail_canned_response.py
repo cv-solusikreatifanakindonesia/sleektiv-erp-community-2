@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, api
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import fields, models, api
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class MailCannedResponse(models.Model):

@@ -34,7 +34,7 @@ registerWebsitePreviewTour(
             // It addresses the issue where selecting a we-button with data-no-bundle-reload,
             // such as o_we_add_font_btn.
             run: function () {
-                const options = odoo.loader.modules.get("@web_editor/js/editor/snippets.options")[
+                const options = sleektiv.loader.modules.get("@web_editor/js/editor/snippets.options")[
                     Symbol.for("default")
                 ];
                 patch(options.Class.prototype, {

@@ -1,5 +1,5 @@
-from odoo.tests.common import TransactionCase
-from odoo.addons.spreadsheet.utils.formatting import (
+from sleektiv.tests.common import TransactionCase
+from sleektiv.addons.spreadsheet.utils.formatting import (
     strftime_format_to_spreadsheet_time_format,
     strftime_format_to_spreadsheet_date_format,
 )

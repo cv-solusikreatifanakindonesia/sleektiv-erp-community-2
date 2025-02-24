@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.account.controllers.portal import CustomerPortal
-from odoo.http import request
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.addons.account.controllers.portal import CustomerPortal
+from sleektiv.http import request
 
 class CustomerPortalBr(CustomerPortal):
 

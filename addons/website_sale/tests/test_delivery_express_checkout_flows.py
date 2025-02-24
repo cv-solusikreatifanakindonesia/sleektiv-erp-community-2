@@ -1,17 +1,17 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import Mock, patch
 
 from werkzeug import urls
 
-from odoo.http import root
-from odoo.tests import HttpCase, tagged
+from sleektiv.http import root
+from sleektiv.tests import HttpCase, tagged
 
-from odoo.addons.base.tests.common import BaseUsersCommon
-from odoo.addons.website_sale.controllers.delivery import (
+from sleektiv.addons.base.tests.common import BaseUsersCommon
+from sleektiv.addons.website_sale.controllers.delivery import (
     Delivery as WebsiteSaleDeliveryController,
 )
-from odoo.addons.website_sale.tests.common import WebsiteSaleCommon
+from sleektiv.addons.website_sale.tests.common import WebsiteSaleCommon
 
 
 @tagged('post_install', '-at_install')
@@ -127,7 +127,7 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             self.make_jsonrpc_request(
@@ -154,7 +154,7 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             self.make_jsonrpc_request(
@@ -187,7 +187,7 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             self.make_jsonrpc_request(
@@ -209,7 +209,7 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             self.make_jsonrpc_request(
@@ -238,7 +238,7 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             self.make_jsonrpc_request(
@@ -282,14 +282,14 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
     def test_express_checkout_registered_user_with_shipping_option(self):
         """ Test that when you use the express checkout as a registered user and the shipping
             address sent by the express checkout form exactly matches to one of the addresses linked
-            to this user in odoo, we do not create a new partner and reuse the existing one.
+            to this user in sleektiv, we do not create a new partner and reuse the existing one.
         """
         self.sale_order.partner_id = self.user_demo.partner_id.id
         session = self.authenticate(self.user_demo.login, self.user_demo.login)
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             shipping_options = self.make_jsonrpc_request(
@@ -310,14 +310,14 @@ class TestWebsiteSaleDeliveryExpressCheckoutFlows(BaseUsersCommon, WebsiteSaleCo
 
     def test_express_checkout_registered_user_with_shipping_option_new_address(self):
         """ Test that when you use the express checkout as a registered user and the shipping
-            address sent by the express checkout form doesn't exist in odoo, we create a new partner.
+            address sent by the express checkout form doesn't exist in sleektiv, we create a new partner.
         """
         self.sale_order.partner_id = self.user_demo.partner_id.id
         session = self.authenticate(self.user_demo.login, self.user_demo.login)
         session['sale_order_id'] = self.sale_order.id
         root.session_store.save(session)
         with patch(
-            'odoo.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
+            'sleektiv.addons.delivery.models.delivery_carrier.DeliveryCarrier.rate_shipment',
             return_value=self.rate_shipment_result
         ):
             # Won't create a new partner because the partial information are the same the an

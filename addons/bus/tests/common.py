@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 import struct
@@ -11,8 +11,8 @@ try:
 except ImportError:
     websocket = None
 
-from odoo.tests.common import HOST
-from odoo.tests import HttpCase
+from sleektiv.tests.common import HOST
+from sleektiv.tests import HttpCase
 from ..websocket import CloseCode, Websocket, WebsocketConnectionHandler
 from ..models.bus import dispatch, hashable, channel_with_db
 

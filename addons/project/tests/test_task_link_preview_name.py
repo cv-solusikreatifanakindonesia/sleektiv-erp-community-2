@@ -1,9 +1,9 @@
-import odoo.tests
-from odoo.tests.common import HttpCase, new_test_user
-from odoo.tools.json import scriptsafe as json_safe
+import sleektiv.tests
+from sleektiv.tests.common import HttpCase, new_test_user
+from sleektiv.tools.json import scriptsafe as json_safe
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@sleektiv.tests.tagged('post_install', '-at_install')
 class TestTaskLinkPreviewName(HttpCase):
     @classmethod
     def setUpClass(cls):
@@ -32,7 +32,7 @@ class TestTaskLinkPreviewName(HttpCase):
             '/html_editor/link_preview_internal',
             data=json_safe.dumps({
                 "params": {
-                    "preview_url": f"/odoo/all-tasks/{self.task_internal_link_customized.id}",
+                    "preview_url": f"/sleektiv/all-tasks/{self.task_internal_link_customized.id}",
                 }
             }),
             headers={"Content-Type": "application/json"}

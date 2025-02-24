@@ -1,5 +1,5 @@
-from odoo.tests.common import TransactionCase
-from odoo.addons.web.controllers.utils import get_action_triples, get_action
+from sleektiv.tests.common import TransactionCase
+from sleektiv.addons.web.controllers.utils import get_action_triples, get_action
 
 
 class TestWebRouter(TransactionCase):

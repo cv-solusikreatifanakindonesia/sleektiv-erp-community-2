@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 import functools
 import json
@@ -10,14 +10,14 @@ import werkzeug.urls
 import werkzeug.utils
 from werkzeug.exceptions import BadRequest
 
-from odoo import api, http, SUPERUSER_ID, _
-from odoo.exceptions import AccessDenied
-from odoo.http import request, Response
-from odoo import registry as registry_get
-from odoo.tools.misc import clean_context
+from sleektiv import api, http, SUPERUSER_ID, _
+from sleektiv.exceptions import AccessDenied
+from sleektiv.http import request, Response
+from sleektiv import registry as registry_get
+from sleektiv.tools.misc import clean_context
 
-from odoo.addons.auth_signup.controllers.main import AuthSignupHome as Home
-from odoo.addons.web.controllers.utils import ensure_db, _get_login_redirect_url
+from sleektiv.addons.auth_signup.controllers.main import AuthSignupHome as Home
+from sleektiv.addons.web.controllers.utils import ensure_db, _get_login_redirect_url
 
 
 _logger = logging.getLogger(__name__)
@@ -142,13 +142,13 @@ class OAuthController(http.Controller):
             action = state.get('a')
             menu = state.get('m')
             redirect = werkzeug.urls.url_unquote_plus(state['r']) if state.get('r') else False
-            url = '/odoo'
+            url = '/sleektiv'
             if redirect:
                 url = redirect
             elif action:
-                url = '/odoo/action-%s' % action
+                url = '/sleektiv/action-%s' % action
             elif menu:
-                url = '/odoo?menu_id=%s' % menu
+                url = '/sleektiv?menu_id=%s' % menu
 
             credential = {'login': login, 'token': key, 'type': 'oauth_token'}
             auth_info = request.session.authenticate(dbname, credential)
@@ -178,7 +178,7 @@ class OAuthController(http.Controller):
 
     @http.route('/auth_oauth/oea', type='http', auth='none', readonly=False)
     def oea(self, **kw):
-        """login user via Odoo Account provider"""
+        """login user via Sleektiv Account provider"""
         dbname = kw.pop('db', None)
         if not dbname:
             dbname = request.db
@@ -191,7 +191,7 @@ class OAuthController(http.Controller):
         with registry.cursor() as cr:
             try:
                 env = api.Environment(cr, SUPERUSER_ID, {})
-                provider = env.ref('auth_oauth.provider_openerp')
+                provider = env.ref('auth_oauth.provider_sleektiv')
             except ValueError:
                 redirect = request.redirect(f'/web?db={dbname}', 303)
                 redirect.autocorrect_location_header = False

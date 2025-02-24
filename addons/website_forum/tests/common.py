@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common
-from odoo.tools import mute_logger
+from sleektiv.tests import common
+from sleektiv.tools import mute_logger
 
 KARMA = {
     'ask': 5, 'ans': 10,
@@ -114,7 +114,7 @@ class TestForumCommon(common.TransactionCase):
             'name': 'Second Website on same company',
         })
 
-    @mute_logger("odoo.models.unlink")
+    @mute_logger("sleektiv.models.unlink")
     def _activate_tags_for_counts(self):
         self.env['forum.tag'].search([]).unlink()
         self.tags = self.env['forum.tag'].create(

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import {
     Component,
@@ -7,7 +7,7 @@ import {
     xml as owlXml,
     toRaw,
     useState,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { isNode, toSelector } from "@web/../lib/hoot-dom/helpers/dom";
 import { isIterable } from "@web/../lib/hoot-dom/hoot_dom_utils";
 import { logger } from "../core/logger";

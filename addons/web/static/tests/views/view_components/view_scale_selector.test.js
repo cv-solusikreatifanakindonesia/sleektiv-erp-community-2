@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { click, queryAll } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
-import { Component, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { click, queryAll } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
+import { Component, useState, xml } from "@sleektiv/owl";
 import { contains, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { ViewScaleSelector } from "@web/views/view_components/view_scale_selector";

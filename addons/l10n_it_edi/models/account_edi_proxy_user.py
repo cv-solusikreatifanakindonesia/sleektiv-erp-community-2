@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
-from odoo import _, fields, models
-from odoo.exceptions import UserError
+from sleektiv import _, fields, models
+from sleektiv.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -17,8 +17,8 @@ class AccountEdiProxyClientUser(models.Model):
         urls = super()._get_proxy_urls()
         urls['l10n_it_edi'] = {
             'demo': False,
-            'prod': 'https://l10n-it-edi.api.odoo.com',
-            'test': 'https://iap-services-test.odoo.com',
+            'prod': 'https://l10n-it-edi.api.sleektiv.com',
+            'test': 'https://iap-services-test.sleektiv.com',
         }
         return urls
 

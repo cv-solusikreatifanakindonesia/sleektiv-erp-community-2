@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from sleektiv.addons.project.tests.test_project_base import TestProjectCommon
 
 
 @tagged('-at_install', 'post_install')

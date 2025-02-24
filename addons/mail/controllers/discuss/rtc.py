@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from werkzeug.exceptions import NotFound
 
-from odoo import http
-from odoo.http import request
-from odoo.tools import file_open
-from odoo.addons.mail.models.discuss.mail_guest import add_guest_to_context
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import http
+from sleektiv.http import request
+from sleektiv.tools import file_open
+from sleektiv.addons.mail.models.discuss.mail_guest import add_guest_to_context
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 class RtcController(http.Controller):

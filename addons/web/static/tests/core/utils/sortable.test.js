@@ -1,9 +1,9 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAllTexts, queryFirst } from "@odoo/hoot-dom";
-import { advanceFrame, animationFrame } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAllTexts, queryFirst } from "@sleektiv/hoot-dom";
+import { advanceFrame, animationFrame } from "@sleektiv/hoot-mock";
 import { contains, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
-import { Component, reactive, useRef, useState, xml } from "@odoo/owl";
+import { Component, reactive, useRef, useState, xml } from "@sleektiv/owl";
 import { useSortable } from "@web/core/utils/sortable_owl";
 
 test("Parameters error handling", async () => {

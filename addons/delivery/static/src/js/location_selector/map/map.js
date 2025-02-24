@@ -1,7 +1,7 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 /*global L*/
 
-import { Component, useEffect, useRef } from '@odoo/owl';
+import { Component, useEffect, useRef } from '@sleektiv/owl';
 import { renderToString } from '@web/core/utils/render';
 
 export class Map extends Component {

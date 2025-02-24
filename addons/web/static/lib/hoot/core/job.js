@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { generateHash, HootError, isOfType, normalize } from "../hoot_utils";
 import { Tag } from "./tag";

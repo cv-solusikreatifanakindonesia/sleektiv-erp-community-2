@@ -1,4 +1,4 @@
-from odoo import models, Command
+from sleektiv import models, Command
 
 
 class SaleEdiXmlUBLBIS3(models.AbstractModel):

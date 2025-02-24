@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, api, _
-from odoo.api import ondelete
-from odoo.exceptions import UserError
-from odoo.tools.misc import frozendict
+from sleektiv import models, fields, api, _
+from sleektiv.api import ondelete
+from sleektiv.exceptions import UserError
+from sleektiv.tools.misc import frozendict
 
 
 class AccountMove(models.Model):

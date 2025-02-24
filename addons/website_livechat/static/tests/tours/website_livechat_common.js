@@ -1,4 +1,4 @@
-import { queryAll } from "@odoo/hoot-dom";
+import { queryAll } from "@sleektiv/hoot-dom";
 
 /*******************************
  *         Common Steps

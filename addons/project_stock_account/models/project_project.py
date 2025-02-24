@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.osv import expression
+from sleektiv.osv import expression
 
-from odoo import models, _lt
+from sleektiv import models, _lt
 
 
 class Project(models.Model):

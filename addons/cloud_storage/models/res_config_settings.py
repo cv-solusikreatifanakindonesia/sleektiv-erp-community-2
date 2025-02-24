@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
+from sleektiv import models, fields, _
+from sleektiv.exceptions import UserError
 
 
 DEFAULT_CLOUD_STORAGE_MIN_FILE_SIZE = 20_000_000

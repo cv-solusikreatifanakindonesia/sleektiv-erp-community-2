@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import float_repr
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.tools import float_repr
 
 
 class AccountMove(models.Model):

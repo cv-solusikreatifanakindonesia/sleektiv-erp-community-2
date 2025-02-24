@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { queryAll, waitFor } from "@odoo/hoot-dom";
+import { queryAll, waitFor } from "@sleektiv/hoot-dom";
 import { rpc } from "@web/core/network/rpc";
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
@@ -11,7 +11,7 @@ function openRoot() {
         trigger: 'body',
         run() {
             document.querySelector("body").classList.add("wait");
-            window.location = '/odoo';
+            window.location = '/sleektiv';
         }
     }, {
         content: "wait for client reload",
@@ -73,7 +73,7 @@ function closeProfileDialog({content, totp_state}) {
 }
 
 registry.category("web_tour.tours").add('totp_tour_setup', {
-    url: '/odoo',
+    url: '/sleektiv',
     steps: () => [...openUserProfileAtSecurityTab(), {
     content: "Open totp wizard",
     trigger: 'button[name=action_totp_enable_wizard]',
@@ -241,7 +241,7 @@ registry.category("web_tour.tours").add('totp_login_device', {
 ...openUserProfileAtSecurityTab(),
 {
     content: "Open totp wizard",
-    //TODO: remove when PIPU macro PR is merged: https://github.com/odoo/odoo/pull/194508
+    //TODO: remove when PIPU macro PR is merged: https://github.com/sleektiv/sleektiv/pull/194508
     trigger: 'a[role=tab]:contains("Account Security").active',
     async run(actions) {
         const el = await waitFor('button[name=action_totp_disable]', { timeout: 5000 });
@@ -301,7 +301,7 @@ registry.category("web_tour.tours").add('totp_login_disabled', {
 
 const columns = {};
 registry.category("web_tour.tours").add('totp_admin_disables', {
-    url: '/odoo',
+    url: '/sleektiv',
     steps: () => [stepUtils.showAppsMenuItem(), {
     content: 'Go to settings',
     trigger: '[data-menu-xmlid="base.menu_administration"]',

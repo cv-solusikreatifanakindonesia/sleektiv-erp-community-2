@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import jinja2
 import json
@@ -11,15 +11,15 @@ import threading
 import time
 
 from pathlib import Path
-from odoo import http
-from odoo.addons.hw_drivers.tools import helpers
-from odoo.addons.hw_drivers.main import iot_devices
-from odoo.addons.web.controllers.home import Home
-from odoo.addons.hw_drivers.connection_manager import connection_manager
-from odoo.tools.misc import file_path
-from odoo.addons.hw_drivers.server_logger import (
-    check_and_update_odoo_config_log_to_server_option,
-    get_odoo_config_log_to_server_option,
+from sleektiv import http
+from sleektiv.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers.main import iot_devices
+from sleektiv.addons.web.controllers.home import Home
+from sleektiv.addons.hw_drivers.connection_manager import connection_manager
+from sleektiv.tools.misc import file_path
+from sleektiv.addons.hw_drivers.server_logger import (
+    check_and_update_sleektiv_config_log_to_server_option,
+    get_sleektiv_config_log_to_server_option,
     close_server_log_sender_handler,
 )
 
@@ -36,7 +36,7 @@ if hasattr(sys, 'frozen'):
     path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'views'))
     loader = jinja2.FileSystemLoader(path)
 else:
-    loader = jinja2.PackageLoader('odoo.addons.hw_posbox_homepage', "views")
+    loader = jinja2.PackageLoader('sleektiv.addons.hw_posbox_homepage', "views")
 
 jinja_env = jinja2.Environment(loader=loader, autoescape=True)
 jinja_env.filters["json"] = json.dumps
@@ -62,17 +62,17 @@ class IotBoxOwlHomePage(Home):
     # GET methods                                                #
     # -> Always use json.dumps() to return a JSON response       #
     # ---------------------------------------------------------- #
-    @http.route('/hw_posbox_homepage/restart_odoo_service', auth='none', type='http', cors='*')
-    def odoo_service_restart(self):
-        helpers.odoo_restart(0)
+    @http.route('/hw_posbox_homepage/restart_sleektiv_service', auth='none', type='http', cors='*')
+    def sleektiv_service_restart(self):
+        helpers.sleektiv_restart(0)
         return json.dumps({
             'status': 'success',
-            'message': 'Odoo service restarted',
+            'message': 'Sleektiv service restarted',
         })
 
     @http.route('/hw_posbox_homepage/iot_logs', auth='none', type='http', cors='*')
     def get_iot_logs(self):
-        with open("/var/log/odoo/odoo-server.log", encoding="utf-8") as file:
+        with open("/var/log/sleektiv/sleektiv-server.log", encoding="utf-8") as file:
             return json.dumps({
                 'status': 'success',
                 'logs': file.read(),
@@ -92,7 +92,7 @@ class IotBoxOwlHomePage(Home):
             'db_uuid': '',
             'enterprise_code': '',
         })
-        helpers.odoo_restart(0)
+        helpers.sleektiv_restart(0)
         return json.dumps({
             'status': 'success',
             'message': 'Successfully cleared credentials',
@@ -160,7 +160,7 @@ class IotBoxOwlHomePage(Home):
             'ip': helpers.get_ip(),
             'mac': helpers.get_mac_address(),
             'iot_device_status': iot_device,
-            'server_status': helpers.get_odoo_server_url() or 'Not Configured',
+            'server_status': helpers.get_sleektiv_server_url() or 'Not Configured',
             'pairing_code': connection_manager.pairing_code,
             'six_terminal': six_terminal,
             'network_status': network,
@@ -182,7 +182,7 @@ class IotBoxOwlHomePage(Home):
 
     @http.route('/hw_posbox_homepage/version_info', auth="none", type="http", cors='*')
     def get_version_info(self):
-        git = ["git", "--work-tree=/home/pi/odoo/", "--git-dir=/home/pi/odoo/.git"]
+        git = ["git", "--work-tree=/home/pi/sleektiv/", "--git-dir=/home/pi/sleektiv/.git"]
         # Check branch name and last commit hash on IoT Box
         current_commit = subprocess.run([*git, "rev-parse", "HEAD"], capture_output=True, check=False, text=True)
         current_branch = subprocess.run(
@@ -204,7 +204,7 @@ class IotBoxOwlHomePage(Home):
         return json.dumps({
             'status': 'success',
             # Checkout requires db to align with its version (=branch)
-            'odooIsUpToDate': current_commit == last_available_commit or not bool(helpers.get_odoo_server_url()),
+            'sleektivIsUpToDate': current_commit == last_available_commit or not bool(helpers.get_sleektiv_server_url()),
             'imageIsUpToDate': not bool(helpers.check_image()),
             'currentCommitHash': current_commit,
         })
@@ -216,14 +216,14 @@ class IotBoxOwlHomePage(Home):
         interfaces_list = helpers.list_file_by_os(
             file_path('hw_drivers/iot_handlers/interfaces'))
         return json.dumps({
-            'title': "Odoo's IoT Box - Handlers list",
+            'title': "Sleektiv's IoT Box - Handlers list",
             'breadcrumb': 'Handlers list',
             'drivers_list': drivers_list,
             'interfaces_list': interfaces_list,
-            'server': helpers.get_odoo_server_url(),
-            'is_log_to_server_activated': get_odoo_config_log_to_server_option(),
+            'server': helpers.get_sleektiv_server_url(),
+            'is_log_to_server_activated': get_sleektiv_config_log_to_server_option(),
             'root_logger_log_level': self._get_logger_effective_level_str(logging.getLogger()),
-            'odoo_current_log_level': self._get_logger_effective_level_str(logging.getLogger('odoo')),
+            'sleektiv_current_log_level': self._get_logger_effective_level_str(logging.getLogger('sleektiv')),
             'recommended_log_level': 'warning',
             'available_log_levels': AVAILABLE_LOG_LEVELS,
             'drivers_logger_info': self._get_iot_handlers_logger(drivers_list, 'drivers'),
@@ -233,7 +233,7 @@ class IotBoxOwlHomePage(Home):
     @http.route('/hw_posbox_homepage/load_iot_handlers', auth="none", type="http", cors='*')
     def load_iot_log_level(self):
         helpers.download_iot_handlers(False)
-        helpers.odoo_restart(0)
+        helpers.sleektiv_restart(0)
         return json.dumps({
             'status': 'success',
             'message': 'IoT Handlers loaded successfully',
@@ -273,7 +273,7 @@ class IotBoxOwlHomePage(Home):
             'db_uuid': db_uuid,
             'enterprise_code': enterprise_code,
         })
-        helpers.odoo_restart(0)
+        helpers.sleektiv_restart(0)
         return {
             'status': 'success',
             'message': 'Successfully saved credentials',
@@ -284,14 +284,14 @@ class IotBoxOwlHomePage(Home):
         persistent = "1" if persistent else ""
         subprocess.check_call([file_path(
             'point_of_sale/tools/posbox/configuration/connect_to_wifi.sh'), essid, password, persistent])
-        server = helpers.get_odoo_server_url()
+        server = helpers.get_sleektiv_server_url()
 
         res_payload = {
             'status': 'success',
             'message': 'Connecting to ' + essid,
             'server': {
-                'url': server or 'http://' + helpers.get_ip() + ':8069',
-                'message': 'Redirect to Odoo Server' if server else 'Redirect to IoT Box'
+                'url': server or 'http://' + helpers.get_ip() + ':7073',
+                'message': 'Redirect to Sleektiv Server' if server else 'Redirect to IoT Box'
             }
         }
 
@@ -309,7 +309,7 @@ class IotBoxOwlHomePage(Home):
         }
 
     @http.route('/hw_posbox_homepage/connect_to_server', auth="none", type="json", methods=['POST'], cors='*')
-    def connect_to_odoo_server(self, token=False, iotname=False):
+    def connect_to_sleektiv_server(self, token=False, iotname=False):
         if token:
             try:
                 if len(token.split('|')) == 4:
@@ -338,7 +338,7 @@ class IotBoxOwlHomePage(Home):
                 'point_of_sale/tools/posbox/configuration/rename_iot.sh'), iotname], check=False)
 
         # 1 sec delay for IO operations (save_conf_server)
-        helpers.odoo_restart(1)
+        helpers.sleektiv_restart(1)
         return {
             'status': 'success',
             'message': 'Successfully connected to db, IoT will restart to update the configuration.',
@@ -353,13 +353,13 @@ class IotBoxOwlHomePage(Home):
             }
 
         if name == 'log-to-server':
-            check_and_update_odoo_config_log_to_server_option(value)
+            check_and_update_sleektiv_config_log_to_server_option(value)
 
         name = name[len(IOT_LOGGING_PREFIX):]
         if name == 'root':
             self._update_logger_level('', value, AVAILABLE_LOG_LEVELS)
-        elif name == 'odoo':
-            self._update_logger_level('odoo', value, AVAILABLE_LOG_LEVELS)
+        elif name == 'sleektiv':
+            self._update_logger_level('sleektiv', value, AVAILABLE_LOG_LEVELS)
             self._update_logger_level('werkzeug', value if value != 'debug' else 'info', AVAILABLE_LOG_LEVELS)
         elif name.startswith(INTERFACE_PREFIX):
             logger_name = name[len(INTERFACE_PREFIX):]
@@ -405,7 +405,7 @@ class IotBoxOwlHomePage(Home):
         return handlers_loggers_level
 
     def _update_logger_level(self, logger_name, new_level, available_log_levels, handler_folder=False):
-        """Update (if necessary) Odoo's configuration and logger to the given logger_name to the given level.
+        """Update (if necessary) Sleektiv's configuration and logger to the given logger_name to the given level.
         The responsibility of saving the config file is not managed here.
 
         :param logger_name: name of the logging logger to change level
@@ -428,8 +428,8 @@ class IotBoxOwlHomePage(Home):
                 return
             logger_name = logger.name
 
-        ODOO_TOOL_CONFIG_HANDLER_NAME = 'log_handler'
-        LOG_HANDLERS = (helpers.get_conf(ODOO_TOOL_CONFIG_HANDLER_NAME, section='options') or []).split(',')
+        SLEEKTIV_TOOL_CONFIG_HANDLER_NAME = 'log_handler'
+        LOG_HANDLERS = (helpers.get_conf(SLEEKTIV_TOOL_CONFIG_HANDLER_NAME, section='options') or []).split(',')
         LOGGER_PREFIX = logger_name + ':'
         IS_NEW_LEVEL_PARENT = new_level == 'parent'
 
@@ -457,8 +457,8 @@ class IotBoxOwlHomePage(Home):
         if not IS_NEW_LEVEL_PARENT:
             new_entry = LOGGER_PREFIX + new_level_upper_case
             log_handlers_without_logger.append(new_entry)
-            _logger.debug('Adding to odoo config log_handler: %s', new_entry)
-        conf[ODOO_TOOL_CONFIG_HANDLER_NAME] = ','.join(log_handlers_without_logger)
+            _logger.debug('Adding to sleektiv config log_handler: %s', new_entry)
+        conf[SLEEKTIV_TOOL_CONFIG_HANDLER_NAME] = ','.join(log_handlers_without_logger)
 
         # Update the logger dynamically
         real_new_level = logging.NOTSET if IS_NEW_LEVEL_PARENT else new_level_upper_case
@@ -472,11 +472,11 @@ class IotBoxOwlHomePage(Home):
 
     def _get_iot_handler_logger(self, handler_name, handler_folder_name):
         """
-        Get Odoo Iot logger given an IoT handler name
+        Get Sleektiv Iot logger given an IoT handler name
         :param handler_name: name of the IoT handler
         :param handler_folder_name: IoT handler folder name (interfaces or drivers)
         :return: logger if any, False otherwise
         """
-        odoo_addon_handler_path = helpers.compute_iot_handlers_addon_name(handler_folder_name, handler_name)
-        return odoo_addon_handler_path in logging.Logger.manager.loggerDict and \
-               logging.getLogger(odoo_addon_handler_path)
+        sleektiv_addon_handler_path = helpers.compute_iot_handlers_addon_name(handler_folder_name, handler_name)
+        return sleektiv_addon_handler_path in logging.Logger.manager.loggerDict and \
+               logging.getLogger(sleektiv_addon_handler_path)

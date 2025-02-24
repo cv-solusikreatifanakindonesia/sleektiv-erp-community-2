@@ -1,5 +1,5 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Registry } from "@odoo/o-spreadsheet";
+import { Registry } from "@sleektiv/o-spreadsheet";
 
 export const initCallbackRegistry = new Registry();

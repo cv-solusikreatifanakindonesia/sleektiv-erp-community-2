@@ -63,11 +63,11 @@ Unicode True
 !endif
 
 !ifndef SERVICENAME
-	!define SERVICENAME 'odoo-server-${VERSION}'
+	!define SERVICENAME 'sleektiv-server-${VERSION}'
 !endif
 
 !ifndef TOOLSDIR
-	!define TOOLSDIR 'c:\odoobuild'
+	!define TOOLSDIR 'c:\sleektivbuild'
 !endif
 
 !define PRODUCT_NAME "Odoo"
@@ -87,7 +87,7 @@ Unicode True
 
 Name '${DISPLAY_NAME}'
 Caption "${PRODUCT_NAME} ${VERSION} Setup"
-OutFile "${TOOLSDIR}\server\odoo_setup_${VERSION}.exe"
+OutFile "${TOOLSDIR}\server\sleektiv_setup_${VERSION}.exe"
 SetCompressor /SOLID /FINAL lzma
 ShowInstDetails hide
 
@@ -121,12 +121,12 @@ Var ProxyTokenPwd
 !define PIXMAPS_PATH "${STATIC_PATH}\pixmaps"
 
 !define MUI_ABORTWARNING
-!define MUI_ICON "${PIXMAPS_PATH}\odoo-icon.ico"
+!define MUI_ICON "${PIXMAPS_PATH}\sleektiv-icon.ico"
 
-!define MUI_WELCOMEFINISHPAGE_BITMAP "${PIXMAPS_PATH}\odoo-intro.bmp"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "${PIXMAPS_PATH}\odoo-intro.bmp"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "${PIXMAPS_PATH}\sleektiv-intro.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "${PIXMAPS_PATH}\sleektiv-intro.bmp"
 !define MUI_HEADERIMAGE
-!define MUI_HEADERIMAGE_BITMAP "${PIXMAPS_PATH}\odoo-slogan.bmp"
+!define MUI_HEADERIMAGE_BITMAP "${PIXMAPS_PATH}\sleektiv-slogan.bmp"
 !define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
 !define MUI_HEADER_TRANSPARENT_TEXT ""
 
@@ -146,7 +146,7 @@ Page Custom ShowProxyTokenDialogPage
 !define MUI_FINISHPAGE_RUN_TEXT "$(DESC_FinishPageText)"
 !define MUI_FINISHPAGE_RUN_FUNCTION "LaunchLink"
 !define MUI_FINISHPAGE_LINK $(DESC_FinishPage_Link)
-!define MUI_FINISHPAGE_LINK_LOCATION "https://www.odoo.com/page/contactus"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://www.sleektiv.com/page/contactus"
 !insertmacro MUI_PAGE_FINISH
 
 !insertmacro MUI_UNPAGE_WELCOME
@@ -239,29 +239,29 @@ Section $(TITLE_Odoo_Server) SectionOdoo_Server
     File /r "${TOOLSDIR}\wkhtmltopdf\*"
 
     # If there is a previous install of the Odoo Server, keep the login/password from the config file
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "db_host" $TextPostgreSQLHostname
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "db_user" $TextPostgreSQLUsername
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "db_password" $TextPostgreSQLPassword
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "db_port" $TextPostgreSQLPort
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "db_host" $TextPostgreSQLHostname
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "db_user" $TextPostgreSQLUsername
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "db_password" $TextPostgreSQLPassword
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "db_port" $TextPostgreSQLPort
     # Fix the addons path
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "addons_path" "$INSTDIR\server\odoo\addons"
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "bin_path" "$INSTDIR\thirdparty"
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "addons_path" "$INSTDIR\server\sleektiv\addons"
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "bin_path" "$INSTDIR\thirdparty"
     # Set data_dir
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "data_dir" "$INSTDIR\sessions"
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "data_dir" "$INSTDIR\sessions"
 
     # if we're going to install postgresql force it's path,
     # otherwise we consider it's always done and/or correctly tune by users
     ${If} $HasPostgreSQL == 0
-        WriteIniStr "$INSTDIR\server\odoo.conf" "options" "pg_path" "$INSTDIR\PostgreSQL\bin"
+        WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "pg_path" "$INSTDIR\PostgreSQL\bin"
     ${EndIf}
 
     # Productivity Apps
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "default_productivity_apps" "True"
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "default_productivity_apps" "True"
     DetailPrint "Installing Windows service"
-    nsExec::ExecTOLog '"$INSTDIR\python\python.exe" "$INSTDIR\server\odoo-bin" --stop-after-init -c "$INSTDIR\server\odoo.conf" --logfile "$INSTDIR\server\odoo.log" -s'
+    nsExec::ExecTOLog '"$INSTDIR\python\python.exe" "$INSTDIR\server\sleektiv-bin" --stop-after-init -c "$INSTDIR\server\sleektiv.conf" --logfile "$INSTDIR\server\sleektiv.log" -s'
     nsExec::ExecToLog '"$INSTDIR\nssm\win64\nssm.exe" install ${SERVICENAME} "$INSTDIR\python\python.exe"'
     nsExec::ExecToLog '"$INSTDIR\nssm\win64\nssm.exe" set ${SERVICENAME} AppDirectory "$\"$INSTDIR\python$\""'
-    nsExec::ExecToLog '"$INSTDIR\nssm\win64\nssm.exe" set ${SERVICENAME} AppParameters "\"$INSTDIR\server\odoo-bin\" -c "\"$INSTDIR\server\odoo.conf\"'
+    nsExec::ExecToLog '"$INSTDIR\nssm\win64\nssm.exe" set ${SERVICENAME} AppParameters "\"$INSTDIR\server\sleektiv-bin\" -c "\"$INSTDIR\server\sleektiv.conf\"'
     nsExec::ExecToLog '"$INSTDIR\nssm\win64\nssm.exe" set ${SERVICENAME} ObjectName "LOCALSERVICE"'
     AccessControl::GrantOnFile  "$INSTDIR" "LOCALSERVICE" "FullAccess"
 
@@ -304,10 +304,10 @@ SectionEnd
 Section $(TITLE_IOT) IOT
     SectionIn 3
     DetailPrint "Configuring TITLE_IOT"
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "server_wide_modules" "web,hw_posbox_homepage,hw_drivers"
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "list_db" "False"
-    WriteIniStr "$INSTDIR\server\odoo.conf" "options" "max_cron_threads" "0"
-    nsExec::ExecToStack '"$INSTDIR\python\python.exe" "$INSTDIR\server\odoo-bin" genproxytoken'
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "server_wide_modules" "web,hw_posbox_homepage,hw_drivers"
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "list_db" "False"
+    WriteIniStr "$INSTDIR\server\sleektiv.conf" "options" "max_cron_threads" "0"
+    nsExec::ExecToStack '"$INSTDIR\python\python.exe" "$INSTDIR\server\sleektiv-bin" genproxytoken'
     pop $0
     pop $ProxyTokenPwd
 SectionEnd
@@ -343,8 +343,8 @@ Section $(TITLE_Nginx) Nginx
     FindClose $0
     File "conf\nginx\nginx.conf"
     # Temporary certs for the first start
-    File "..\..\odoo\addons\point_of_sale\tools\posbox\overwrite_after_init\etc\ssl\certs\nginx-cert.crt"
-    File "..\..\odoo\addons\point_of_sale\tools\posbox\overwrite_after_init\etc\ssl\private\nginx-cert.key"
+    File "..\..\sleektiv\addons\point_of_sale\tools\posbox\overwrite_after_init\etc\ssl\certs\nginx-cert.crt"
+    File "..\..\sleektiv\addons\point_of_sale\tools\posbox\overwrite_after_init\etc\ssl\private\nginx-cert.key"
 SectionEnd
 
 Section $(TITLE_Ghostscript) SectionGhostscript
@@ -374,10 +374,10 @@ Section -Post
     WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "DisplayName" "${DISPLAY_NAME}"
     WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "DisplayVersion" "${MAJOR_VERSION}.${MINOR_VERSION}"
     WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "Publisher" "${PUBLISHER}"
-    WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "HelpLink" "support@odoo.com"
+    WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "HelpLink" "support@sleektiv.com"
     WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "HelpTelephone" "+32.81.81.37.00"
-    WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "URLInfoAbout" "https://www.odoo.com"
-    WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "Contact" "sales@odoo.com"
+    WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "URLInfoAbout" "https://www.sleektiv.com"
+    WriteRegStr HKLM       "${UNINSTALL_REGISTRY_KEY}" "Contact" "sales@sleektiv.com"
     WriteRegDWORD HKLM     "${UNINSTALL_REGISTRY_KEY}" "NoModify" "1"
     WriteRegDWORD HKLM     "${UNINSTALL_REGISTRY_KEY}" "NoRepair" "1"
     WriteUninstaller "$INSTDIR\Uninstall.exe"

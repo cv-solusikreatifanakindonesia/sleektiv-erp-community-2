@@ -1,7 +1,7 @@
-from odoo.exceptions import ValidationError
-from odoo.tests import Form, tagged
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import Form, tagged
 
-from odoo.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
+from sleektiv.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
 
 
 @tagged('post_install', '-at_install')

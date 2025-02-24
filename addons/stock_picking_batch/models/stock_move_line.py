@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import _, Command, fields, models
-from odoo.osv import expression
-from odoo.tools.float_utils import float_is_zero
-from odoo.tools.misc import OrderedSet
+from sleektiv import _, Command, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools.float_utils import float_is_zero
+from sleektiv.tools.misc import OrderedSet
 
 
 class StockMoveLine(models.Model):

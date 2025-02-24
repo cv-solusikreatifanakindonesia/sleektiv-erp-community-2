@@ -1,7 +1,7 @@
 import { threadActionsRegistry } from "@mail/core/common/thread_actions";
 import { PinnedMessagesPanel } from "@mail/discuss/message_pin/common/pinned_messages_panel";
 
-import { useChildSubEnv } from "@odoo/owl";
+import { useChildSubEnv } from "@sleektiv/owl";
 
 import { _t } from "@web/core/l10n/translation";
 

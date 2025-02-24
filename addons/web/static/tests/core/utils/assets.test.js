@@ -1,5 +1,5 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { manuallyDispatchProgrammaticEvent } from "@odoo/hoot-dom";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { manuallyDispatchProgrammaticEvent } from "@sleektiv/hoot-dom";
 import { patchWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { assets, loadCSS, loadJS } from "@web/core/assets";

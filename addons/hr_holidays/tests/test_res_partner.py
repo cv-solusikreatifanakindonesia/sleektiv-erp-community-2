@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
 from dateutil.relativedelta import relativedelta
 
 from freezegun import freeze_time
 
-from odoo import Command, fields
-from odoo.tests.common import tagged, TransactionCase
-from odoo.addons.mail.tools.discuss import Store
+from sleektiv import Command, fields
+from sleektiv.tests.common import tagged, TransactionCase
+from sleektiv.addons.mail.tools.discuss import Store
 
 
 @tagged('post_install', '-at_install')

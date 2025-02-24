@@ -1,9 +1,9 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { formatFloat, formatFloatTime, formatMonetary } from "@web/views/fields/formatters";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class BomOverviewLine extends Component {
     static template = "mrp.BomOverviewLine";

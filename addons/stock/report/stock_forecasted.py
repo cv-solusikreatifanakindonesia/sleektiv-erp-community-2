@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from datetime import date
 
-from odoo import api, models
-from odoo.osv.expression import AND
-from odoo.tools import float_is_zero, format_date, float_round, float_compare
+from sleektiv import api, models
+from sleektiv.osv.expression import AND
+from sleektiv.tools import float_is_zero, format_date, float_round, float_compare
 
 class StockForecasted(models.AbstractModel):
     _name = 'stock.forecasted_product_product'

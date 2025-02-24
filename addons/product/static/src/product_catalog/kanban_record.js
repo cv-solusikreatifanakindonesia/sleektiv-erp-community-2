@@ -1,5 +1,5 @@
-/** @odoo-module */
-import { useSubEnv } from "@odoo/owl";
+/** @sleektiv-module */
+import { useSubEnv } from "@sleektiv/owl";
 import { rpc } from "@web/core/network/rpc";
 import { useDebounced } from "@web/core/utils/timing";
 import { KanbanRecord } from "@web/views/kanban/kanban_record";

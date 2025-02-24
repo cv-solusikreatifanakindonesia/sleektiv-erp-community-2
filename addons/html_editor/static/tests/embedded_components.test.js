@@ -16,9 +16,9 @@ import {
 } from "@html_editor/others/embedded_component_utils";
 import { MAIN_PLUGINS } from "@html_editor/plugin_sets";
 import { parseHTML } from "@html_editor/utils/html";
-import { beforeEach, describe, expect, getFixture, test } from "@odoo/hoot";
-import { click, queryFirst } from "@odoo/hoot-dom";
-import { animationFrame, tick } from "@odoo/hoot-mock";
+import { beforeEach, describe, expect, getFixture, test } from "@sleektiv/hoot";
+import { click, queryFirst } from "@sleektiv/hoot-dom";
+import { animationFrame, tick } from "@sleektiv/hoot-mock";
 import {
     App,
     Component,
@@ -30,7 +30,7 @@ import {
     useRef,
     useState,
     xml,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { EmbeddedComponentPlugin } from "../src/others/embedded_component_plugin";
 import { setupEditor } from "./_helpers/editor";
 import { unformat } from "./_helpers/format";
@@ -448,7 +448,7 @@ describe("Mount and Destroy embedded components", () => {
         const fixture = getFixture();
         expect(
             [...fixture.querySelectorAll("[data-embedded]")].filter((elem) => {
-                return !elem.closest(".odoo-editor-editable");
+                return !elem.closest(".sleektiv-editor-editable");
             })
         ).toEqual([]);
     });
@@ -477,7 +477,7 @@ describe("Mount and Destroy embedded components", () => {
         const fixture = getFixture();
         expect(
             [...fixture.querySelectorAll("[data-embedded]")].filter((elem) => {
-                return !elem.closest(".odoo-editor-editable");
+                return !elem.closest(".sleektiv-editor-editable");
             })
         ).toEqual([]);
     });
@@ -508,7 +508,7 @@ describe("Mount and Destroy embedded components", () => {
         const fixture = getFixture();
         expect(
             [...fixture.querySelectorAll("[data-embedded]")].filter((elem) => {
-                return !elem.closest(".odoo-editor-editable");
+                return !elem.closest(".sleektiv-editor-editable");
             })
         ).toEqual([]);
         expect(editor.editable.contains(parent)).toBe(false);

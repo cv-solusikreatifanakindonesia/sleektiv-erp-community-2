@@ -1,6 +1,6 @@
 import { useService } from "@web/core/utils/hooks";
 
-import { useEffect } from "@odoo/owl";
+import { useEffect } from "@sleektiv/owl";
 
 /**
  * @typedef {import("./command_service").CommandOptions} CommandOptions

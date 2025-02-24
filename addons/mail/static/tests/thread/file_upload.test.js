@@ -8,8 +8,8 @@ import {
     start,
     startServer,
 } from "@mail/../tests/mail_test_helpers";
-import { describe, test } from "@odoo/hoot";
-import { Deferred } from "@odoo/hoot-mock";
+import { describe, test } from "@sleektiv/hoot";
+import { Deferred } from "@sleektiv/hoot-mock";
 import { onRpc } from "@web/../tests/web_test_helpers";
 
 describe.current.tags("desktop");

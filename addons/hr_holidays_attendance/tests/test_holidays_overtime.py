@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo.tests import new_test_user
-from odoo.tests.common import TransactionCase, tagged
+from sleektiv.tests import new_test_user
+from sleektiv.tests.common import TransactionCase, tagged
 
-from odoo.exceptions import AccessError, ValidationError
+from sleektiv.exceptions import AccessError, ValidationError
 
 from freezegun import freeze_time
 import time

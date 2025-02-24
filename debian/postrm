@@ -2,9 +2,9 @@
 
 set -e
 
-ODOO_LIB_DIR=/var/lib/odoo
-ODOO_USER="odoo"
-ODOO_GROUP="odoo"
+ODOO_LIB_DIR=/var/lib/sleektiv
+ODOO_USER="sleektiv"
+ODOO_GROUP="sleektiv"
 GSFONTS_DIR=/usr/share/fonts/type1/gsfonts
 
 case "${1}" in
@@ -14,7 +14,7 @@ case "${1}" in
         	# remove workaround for https://bugs.debian.org/1059326
         if [ -L ${GSFONTS_DIR}/n021003l.pfb ] ; then
             rm ${GSFONTS_DIR}/n021003l.pfb
-            if [ "$(ls -A ${GSFONTS_DIR})" = ".created-by-odoo-package" ] ; then
+            if [ "$(ls -A ${GSFONTS_DIR})" = ".created-by-sleektiv-package" ] ; then
                 rm -fr ${GSFONTS_DIR}
             fi
     	fi

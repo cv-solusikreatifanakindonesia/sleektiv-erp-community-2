@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.urls import url_encode, url_parse
 
-from odoo import _
-from odoo.exceptions import UserError
-from odoo.http import request, route
+from sleektiv import _
+from sleektiv.exceptions import UserError
+from sleektiv.http import request, route
 
-from odoo.addons.website_sale.controllers import main
+from sleektiv.addons.website_sale.controllers import main
 
 
 class WebsiteSale(main.WebsiteSale):
@@ -55,7 +55,7 @@ class WebsiteSale(main.WebsiteSale):
     def activate_coupon(self, code, r='/shop', **kw):
         url_parts = url_parse(r)
         url_query = url_parts.decode_query()
-        url_query.pop('coupon_error', False)  # trust only Odoo error message
+        url_query.pop('coupon_error', False)  # trust only Sleektiv error message
         url_query.pop('coupon_error_type', False)
         code = code.strip()
 

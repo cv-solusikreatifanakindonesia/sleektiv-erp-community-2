@@ -1,5 +1,5 @@
 import { WebsocketWorker } from "@bus/workers/websocket_worker";
-import { after } from "@odoo/hoot";
+import { after } from "@sleektiv/hoot";
 import { browser } from "@web/core/browser/browser";
 import { patchWithCleanup } from "@web/../tests/web_test_helpers";
 

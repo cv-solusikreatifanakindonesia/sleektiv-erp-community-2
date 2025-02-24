@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, date
 from dateutil.relativedelta import relativedelta
 import pytz
 
-from odoo.exceptions import ValidationError
-from odoo.tests.common import tagged
-from odoo.fields import Date
-from odoo.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests.common import tagged
+from sleektiv.fields import Date
+from sleektiv.addons.hr_work_entry_holidays.tests.common import TestWorkEntryHolidaysBase
 
 
 @tagged('work_entry')

@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, fields, models, SUPERUSER_ID
-from odoo.exceptions import UserError
-from odoo.fields import Command
-from odoo.tools import format_date, frozendict
+from sleektiv import _, api, fields, models, SUPERUSER_ID
+from sleektiv.exceptions import UserError
+from sleektiv.fields import Command
+from sleektiv.tools import format_date, frozendict
 
 
 class SaleAdvancePaymentInv(models.TransientModel):

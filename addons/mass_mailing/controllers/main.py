@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import urllib.parse
@@ -10,9 +10,9 @@ from markupsafe import Markup, escape
 from lxml import etree
 from werkzeug.exceptions import BadRequest, NotFound, Unauthorized
 
-from odoo import _, fields, http, tools
-from odoo.http import request, Response
-from odoo.tools import consteq
+from sleektiv import _, fields, http, tools
+from sleektiv.http import request, Response
+from sleektiv.tools import consteq
 
 
 class MassMailController(http.Controller):

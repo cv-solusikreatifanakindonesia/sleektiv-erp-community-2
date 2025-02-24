@@ -1,5 +1,5 @@
-import { expect, test } from "@odoo/hoot";
-import { animationFrame, tick } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { animationFrame, tick } from "@sleektiv/hoot-mock";
 import { setupEditor } from "./_helpers/editor";
 import { unformat } from "./_helpers/format";
 import {

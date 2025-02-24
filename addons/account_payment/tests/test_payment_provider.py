@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 
-from odoo.addons.account_payment.tests.common import AccountPaymentCommon
+from sleektiv.addons.account_payment.tests.common import AccountPaymentCommon
 
 
 @tagged('-at_install', 'post_install')

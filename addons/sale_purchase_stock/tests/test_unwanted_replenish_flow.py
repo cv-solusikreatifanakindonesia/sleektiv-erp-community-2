@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-from odoo import Command
-from odoo.tests import common, Form, tagged
+from sleektiv import Command
+from sleektiv.tests import common, Form, tagged
 
 @tagged('post_install', '-at_install')
 class TestWarnUnwantedReplenish(common.TransactionCase):

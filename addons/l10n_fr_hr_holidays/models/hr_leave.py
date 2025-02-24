@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields, models, api, _
-from odoo.exceptions import UserError
+from sleektiv import fields, models, api, _
+from sleektiv.exceptions import UserError
 
 class HrLeave(models.Model):
     _inherit = 'hr.leave'

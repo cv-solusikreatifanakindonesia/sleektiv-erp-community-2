@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { queryAllTexts, queryFirst } from "@odoo/hoot-dom";
-import { runAllTimers } from "@odoo/hoot-mock";
-import { Component, onError, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { queryAllTexts, queryFirst } from "@sleektiv/hoot-dom";
+import { runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, onError, useState, xml } from "@sleektiv/owl";
 import {
     contains,
     defineModels,

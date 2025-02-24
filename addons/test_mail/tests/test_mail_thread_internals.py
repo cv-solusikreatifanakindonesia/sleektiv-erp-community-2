@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from markupsafe import Markup
 from unittest.mock import patch
 from unittest.mock import DEFAULT
 import base64
 
-from odoo import exceptions
-from odoo.addons.mail.tests.common import MailCommon
-from odoo.addons.test_mail.models.test_mail_models import MailTestSimple
-from odoo.addons.test_mail.tests.common import TestRecipients
-from odoo.addons.mail.tools.discuss import Store
-from odoo.tests import Form, tagged, users
-from odoo.tools import mute_logger
+from sleektiv import exceptions
+from sleektiv.addons.mail.tests.common import MailCommon
+from sleektiv.addons.test_mail.models.test_mail_models import MailTestSimple
+from sleektiv.addons.test_mail.tests.common import TestRecipients
+from sleektiv.addons.mail.tools.discuss import Store
+from sleektiv.tests import Form, tagged, users
+from sleektiv.tools import mute_logger
 
 
 @tagged('mail_thread')
@@ -98,7 +98,7 @@ class TestAPI(MailCommon, TestRecipients):
         ticket_record._message_update_content(message, "Hello <R&D/>")
         self.assertEqual(message.body, Markup('<p>Hello &lt;R&amp;D/&gt;<span class="o-mail-Message-edited"></span></p>'))
 
-    @mute_logger('openerp.addons.mail.models.mail_mail')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail')
     @users('employee')
     def test_message_update_content(self):
         """ Test updating message content. """
@@ -148,7 +148,7 @@ class TestAPI(MailCommon, TestRecipients):
         self.assertFalse((attachments + new_attachments).exists())
         self.assertEqual(message.body, Markup('<p>Another Body, void attachments</p><span class="o-mail-Message-edited"></span>'))
 
-    @mute_logger('openerp.addons.mail.models.mail_mail')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail')
     @users('employee')
     def test_message_update_content_check(self):
         """ Test cases where updating content should be prevented """
@@ -191,21 +191,21 @@ class TestChatterTweaks(MailCommon, TestRecipients):
             body='Test Body', message_type='comment', subtype_xmlid='mail.mt_comment')
         self.assertEqual(self.test_record.message_follower_ids.mapped('partner_id'), original.mapped('partner_id'))
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail')
     def test_post_no_subscribe_recipients(self):
         original = self.test_record.message_follower_ids
         self.test_record.with_user(self.user_employee).with_context({'mail_create_nosubscribe': True}).message_post(
             body='Test Body', message_type='comment', subtype_xmlid='mail.mt_comment', partner_ids=[self.partner_1.id, self.partner_2.id])
         self.assertEqual(self.test_record.message_follower_ids.mapped('partner_id'), original.mapped('partner_id'))
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail')
     def test_post_subscribe_recipients(self):
         original = self.test_record.message_follower_ids
         self.test_record.with_user(self.user_employee).with_context({'mail_create_nosubscribe': True, 'mail_post_autofollow': True}).message_post(
             body='Test Body', message_type='comment', subtype_xmlid='mail.mt_comment', partner_ids=[self.partner_1.id, self.partner_2.id])
         self.assertEqual(self.test_record.message_follower_ids.mapped('partner_id'), original.mapped('partner_id') | self.partner_1 | self.partner_2)
 
-    @mute_logger('odoo.addons.mail.models.mail_mail')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail')
     def test_chatter_context_cleaning(self):
         """ Test default keys are not propagated to message creation as it may
         induce wrong values for some fields, like parent_id. """
@@ -288,7 +288,7 @@ class TestDiscuss(MailCommon, TestRecipients):
             'email_from': 'ignasse@example.com'
         })
 
-    @mute_logger('openerp.addons.mail.models.mail_mail')
+    @mute_logger('sleektiv.addons.mail.models.mail_mail')
     def test_mark_all_as_read(self):
         def _employee_crash(recordset, operation):
             """ If employee is test employee, consider they have no access on document """

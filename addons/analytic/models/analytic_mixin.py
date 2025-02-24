@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, fields, api, _
-from odoo.tools import SQL, Query, unique
-from odoo.tools.float_utils import float_round, float_compare
-from odoo.exceptions import UserError, ValidationError
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import models, fields, api, _
+from sleektiv.tools import SQL, Query, unique
+from sleektiv.tools.float_utils import float_round, float_compare
+from sleektiv.exceptions import UserError, ValidationError
 
 class AnalyticMixin(models.AbstractModel):
     _name = 'analytic.mixin'

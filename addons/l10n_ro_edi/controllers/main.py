@@ -3,9 +3,9 @@ import requests
 
 from werkzeug.urls import url_encode, url_join
 
-from odoo import _, http
-from odoo.exceptions import UserError, ValidationError
-from odoo.http import request
+from sleektiv import _, http
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.http import request
 
 
 URL_ANAF_AUTHORIZE = 'https://logincert.anaf.ro/anaf-oauth2/v1/authorize'
@@ -59,7 +59,7 @@ class L10nRoEdiController(http.Controller):
                 },
                 headers={
                     'accept': 'application/json',
-                    'user-agent': 'Odoo (http://www.odoo.com/contactus)',
+                    'user-agent': 'Sleektiv (http://www.sleektiv.com/contactus)',
                 },
                 timeout=10,
             )

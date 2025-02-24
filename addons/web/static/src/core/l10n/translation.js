@@ -1,4 +1,4 @@
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 import { Deferred } from "@web/core/utils/concurrency";
 import { escape, sprintf } from "@web/core/utils/strings";

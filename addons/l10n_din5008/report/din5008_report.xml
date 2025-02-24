@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<sleektiv>
     <data>
 
         <!-- New report paperformat for din5008 format -->
@@ -257,4 +257,4 @@
             </xpath>
         </template>
     </data>
-</odoo>
+</sleektiv>

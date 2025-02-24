@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from odoo.exceptions import AccessError
-from odoo.tests import tagged
-from odoo.tests.common import users
+from sleektiv.exceptions import AccessError
+from sleektiv.tests import tagged
+from sleektiv.tests.common import users
 
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.project.tests.test_project_base import TestProjectCommon
+from sleektiv.addons.mail.tests.common import mail_new_test_user
+from sleektiv.addons.project.tests.test_project_base import TestProjectCommon
 
 @tagged('-at_install', 'post_install')
 class TestProjectUpdateAccessRights(TestProjectCommon):

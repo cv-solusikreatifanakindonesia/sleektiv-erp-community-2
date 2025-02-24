@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details
 
-from odoo import Command
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
+from sleektiv.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 
 
 @tagged('post_install', '-at_install')

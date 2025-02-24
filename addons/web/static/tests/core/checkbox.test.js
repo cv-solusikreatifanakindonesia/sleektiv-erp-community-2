@@ -1,6 +1,6 @@
-import { expect, test } from "@odoo/hoot";
-import { check, uncheck } from "@odoo/hoot-dom";
-import { Component, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { check, uncheck } from "@sleektiv/hoot-dom";
+import { Component, useState, xml } from "@sleektiv/owl";
 import { contains, defineParams, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { CheckBox } from "@web/core/checkbox/checkbox";

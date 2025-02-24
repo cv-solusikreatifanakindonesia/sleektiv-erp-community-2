@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from PIL import Image
 
-from odoo.tests import tagged
-from odoo.tests.common import TransactionCase
-from odoo.tools.image import base64_to_image, image_to_base64
+from sleektiv.tests import tagged
+from sleektiv.tests.common import TransactionCase
+from sleektiv.tools.image import base64_to_image, image_to_base64
 
 
 @tagged('post_install', '-at_install')

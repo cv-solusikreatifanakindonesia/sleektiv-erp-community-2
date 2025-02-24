@@ -1,5 +1,5 @@
-import { expect, test, describe } from "@odoo/hoot";
-import { queryAll } from "@odoo/hoot-dom";
+import { expect, test, describe } from "@sleektiv/hoot";
+import { queryAll } from "@sleektiv/hoot-dom";
 
 import { mountWithCleanup, onRpc } from "@web/../tests/web_test_helpers";
 

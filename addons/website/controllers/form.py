@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import json
@@ -8,13 +8,13 @@ from psycopg2 import IntegrityError
 import re
 from werkzeug.exceptions import BadRequest
 
-from odoo import http, SUPERUSER_ID
-from odoo.addons.base.models.ir_qweb_fields import nl2br, nl2br_enclose
-from odoo.http import request
-from odoo.tools import plaintext2html
-from odoo.exceptions import AccessDenied, ValidationError, UserError
-from odoo.tools.misc import hmac, consteq
-from odoo.tools.translate import _, LazyTranslate
+from sleektiv import http, SUPERUSER_ID
+from sleektiv.addons.base.models.ir_qweb_fields import nl2br, nl2br_enclose
+from sleektiv.http import request
+from sleektiv.tools import plaintext2html
+from sleektiv.exceptions import AccessDenied, ValidationError, UserError
+from sleektiv.tools.misc import hmac, consteq
+from sleektiv.tools.translate import _, LazyTranslate
 
 _lt = LazyTranslate(__name__)
 

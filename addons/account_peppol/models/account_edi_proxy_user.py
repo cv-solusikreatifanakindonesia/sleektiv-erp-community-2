@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
-from odoo import _, api, fields, models, modules, tools
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-from odoo.addons.account_peppol.tools.demo_utils import handle_demo
-from odoo.exceptions import UserError
-from odoo.tools import split_every
+from sleektiv import _, api, fields, models, modules, tools
+from sleektiv.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from sleektiv.addons.account_peppol.tools.demo_utils import handle_demo
+from sleektiv.exceptions import UserError
+from sleektiv.tools import split_every
 
 _logger = logging.getLogger(__name__)
 BATCH_SIZE = 50
@@ -24,8 +24,8 @@ class AccountEdiProxyClientUser(models.Model):
     def _get_proxy_urls(self):
         urls = super()._get_proxy_urls()
         urls['peppol'] = {
-            'prod': 'https://peppol.api.odoo.com',
-            'test': 'https://peppol.test.odoo.com',
+            'prod': 'https://peppol.api.sleektiv.com',
+            'test': 'https://peppol.test.sleektiv.com',
             'demo': 'demo',
         }
         return urls
@@ -274,7 +274,7 @@ class AccountEdiProxyClientUser(models.Model):
 
     @handle_demo
     def _peppol_migrate_registration(self):
-        """Migrates AWAY from Odoo's SMP."""
+        """Migrates AWAY from Sleektiv's SMP."""
         self.ensure_one()
         response = self._call_peppol_proxy(endpoint='/api/peppol/1/migrate_peppol_registration')
         if migration_key := response.get('migration_key'):
@@ -338,7 +338,7 @@ class AccountEdiProxyClientUser(models.Model):
             },
         )
         # once we sent the migration key over, we don't need it
-        # but we need the field for future in case the user decided to migrate away from Odoo
+        # but we need the field for future in case the user decided to migrate away from Sleektiv
         company.account_peppol_migration_key = False
         company.account_peppol_proxy_state = 'smp_registration'
 

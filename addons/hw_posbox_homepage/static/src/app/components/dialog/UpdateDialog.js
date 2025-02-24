@@ -16,7 +16,7 @@ export class UpdateDialog extends Component {
             initialization: true,
             loading: false,
             waitRestart: false,
-            odooIsUpToDate: false,
+            sleektivIsUpToDate: false,
             imageIsUpToDate: false,
             currentCommitHash: "",
         });
@@ -28,7 +28,7 @@ export class UpdateDialog extends Component {
 
     async getVersionInfo() {
         if (!this.store.isLinux) {
-            this.state.odooIsUpToDate = true;
+            this.state.sleektivIsUpToDate = true;
             this.state.imageIsUpToDate = true;
             this.state.initialization = false;
             return
@@ -38,7 +38,7 @@ export class UpdateDialog extends Component {
                 url: "/hw_posbox_homepage/version_info",
             });
 
-            this.state.odooIsUpToDate = data.odooIsUpToDate;
+            this.state.sleektivIsUpToDate = data.sleektivIsUpToDate;
             this.state.imageIsUpToDate = data.imageIsUpToDate;
             this.state.currentCommitHash = data.currentCommitHash;
             this.state.initialization = false;
@@ -74,7 +74,7 @@ export class UpdateDialog extends Component {
     }
 
     get everythingIsUpToDate() {
-        return this.state.odooIsUpToDate && this.state.imageIsUpToDate;
+        return this.state.sleektivIsUpToDate && this.state.imageIsUpToDate;
     }
 
     static template = xml`
@@ -88,7 +88,7 @@ export class UpdateDialog extends Component {
             <t t-set-slot="header">
                 <div>
                     Update
-                    <a href="https://www.odoo.com/documentation/18.0/applications/general/iot/config/updating_iot.html" class="fa fa-question-circle text-decoration-none text-dark" target="_blank"></a>
+                    <a href="https://www.sleektiv.com/documentation/18.0/applications/general/iot/config/updating_iot.html" class="fa fa-question-circle text-decoration-none text-dark" target="_blank"></a>
                 </div>
             </t>
             <t t-set-slot="body">
@@ -106,12 +106,12 @@ export class UpdateDialog extends Component {
                     </div>
                     <div t-else="" class="alert alert-warning small mb-0">
                         A new version of the operating system is available, see:
-                        <a href="https://www.odoo.com/documentation/18.0/applications/general/iot/config/updating_iot.html#flashing-the-sd-card-on-iot-box" target="_blank" class="alert-link">
+                        <a href="https://www.sleektiv.com/documentation/18.0/applications/general/iot/config/updating_iot.html#flashing-the-sd-card-on-iot-box" target="_blank" class="alert-link">
                             Flashing the SD Card on IoT Box
                         </a>
                     </div>
                     <div t-if="this.store.dev" class="alert alert-light small">
-                        <a href="https://nightly.odoo.com/master/iotbox/" target="_blank" class="alert-link">
+                        <a href="https://nightly.sleektiv.com/master/iotbox/" target="_blank" class="alert-link">
                             Current: <t t-esc="this.store.base.version"/>
                         </a>
                     </div>
@@ -119,7 +119,7 @@ export class UpdateDialog extends Component {
 
                 <div class="mb-3" t-if="this.store.isLinux">
                     <h6>IoT Box Update</h6>
-                    <div t-if="this.state.odooIsUpToDate" class="text-success px-2 small">
+                    <div t-if="this.state.sleektivIsUpToDate" class="text-success px-2 small">
                         IoT Box is up to date.
                     </div>
                     <div t-else="" class="d-flex justify-content-between align-items-center alert alert-warning small">
@@ -128,7 +128,7 @@ export class UpdateDialog extends Component {
                     </div>
                     <div t-if="this.store.dev" class="alert alert-light small">
                         Current: 
-                        <a t-att-href="'https://github.com/odoo/odoo/commit/' + this.state.currentCommitHash" target="_blank" class="alert-link">
+                        <a t-att-href="'https://github.com/sleektiv/sleektiv/commit/' + this.state.currentCommitHash" target="_blank" class="alert-link">
                             <t t-esc="this.state.currentCommitHash"/>
                         </a>
                     </div>

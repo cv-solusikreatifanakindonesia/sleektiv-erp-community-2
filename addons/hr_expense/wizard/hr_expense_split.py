@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from copy import deepcopy
 
-from odoo import fields, models, api, Command
-from odoo.tools import float_compare
+from sleektiv import fields, models, api, Command
+from sleektiv.tools import float_compare
 
 
 class HrExpenseSplit(models.TransientModel):

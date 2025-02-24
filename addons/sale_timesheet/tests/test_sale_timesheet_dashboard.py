@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
-from odoo.addons.sale_project.tests.test_sale_project_dashboard import TestProjectDashboardCommon as Common
+from sleektiv.tests import tagged
+from sleektiv.addons.sale_project.tests.test_sale_project_dashboard import TestProjectDashboardCommon as Common
 
 
 @tagged('-at_install', 'post_install')

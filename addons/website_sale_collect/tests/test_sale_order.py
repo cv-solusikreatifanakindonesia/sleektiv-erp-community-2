@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.fields import Command
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
+from sleektiv.fields import Command
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import tagged
 
-from odoo.addons.website_sale_collect.tests.common import ClickAndCollectCommon
+from sleektiv.addons.website_sale_collect.tests.common import ClickAndCollectCommon
 
 
 @tagged('post_install', '-at_install')

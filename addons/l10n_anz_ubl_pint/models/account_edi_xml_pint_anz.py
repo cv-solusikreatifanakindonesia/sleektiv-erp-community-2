@@ -1,5 +1,5 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, _
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import models, _
 
 ANZ_TAX_CATEGORIES = {'S', 'E', 'Z', 'G', 'O'}
 

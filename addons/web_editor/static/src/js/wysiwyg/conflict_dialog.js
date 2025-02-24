@@ -1,6 +1,6 @@
-/* @odoo-module */
+/* @sleektiv-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { Dialog } from "@web/core/dialog/dialog";
 
 export class ConflictDialog extends Component {

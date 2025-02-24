@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from datetime import datetime
 
 from freezegun import freeze_time
 from lxml import etree
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tools import cleanup_xml_node
-from odoo.tests import tagged
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tools import cleanup_xml_node
+from sleektiv.tests import tagged
 
 NS_MAP = {
     'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',

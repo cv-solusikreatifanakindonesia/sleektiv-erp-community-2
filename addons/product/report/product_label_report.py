@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import _, models
-from odoo.exceptions import UserError
+from sleektiv import _, models
+from sleektiv.exceptions import UserError
 
 
 def _prepare_data(env, docids, data):

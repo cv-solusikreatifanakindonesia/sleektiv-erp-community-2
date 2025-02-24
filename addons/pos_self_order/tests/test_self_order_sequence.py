@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
-from odoo.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
+import sleektiv.tests
+from sleektiv.addons.pos_self_order.tests.self_order_common_test import SelfOrderCommonTest
 
 
-@odoo.tests.tagged("post_install", "-at_install")
+@sleektiv.tests.tagged("post_install", "-at_install")
 class TestSelfOrderSequence(SelfOrderCommonTest):
     browser_size = "1920,1080"
 

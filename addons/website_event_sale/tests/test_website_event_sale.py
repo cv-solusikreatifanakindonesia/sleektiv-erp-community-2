@@ -1,6 +1,6 @@
-from odoo import http
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
-from odoo.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
+from sleektiv import http
+from sleektiv.addons.base.tests.common import HttpCaseWithUserPortal
+from sleektiv.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
 
 
 class TestWebsiteEventSale(HttpCaseWithUserPortal, TestWebsiteEventSaleCommon):

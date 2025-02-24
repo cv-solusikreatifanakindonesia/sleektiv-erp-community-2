@@ -1,5 +1,5 @@
-from odoo.exceptions import ValidationError
-from odoo.tests import common
+from sleektiv.exceptions import ValidationError
+from sleektiv.tests import common
 
 
 class TestBarcodeNomenclature(common.TransactionCase):

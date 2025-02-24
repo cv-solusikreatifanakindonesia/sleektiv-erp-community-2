@@ -1,7 +1,7 @@
 import uuid
 
-from odoo.tests import tagged
-from odoo import Command
+from sleektiv.tests import tagged
+from sleektiv import Command
 from .common import TestSaleCommon
 
 

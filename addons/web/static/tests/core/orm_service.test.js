@@ -1,6 +1,6 @@
-import { after, describe, expect, test } from "@odoo/hoot";
-import { on } from "@odoo/hoot-dom";
-import { Component, xml } from "@odoo/owl";
+import { after, describe, expect, test } from "@sleektiv/hoot";
+import { on } from "@sleektiv/hoot-dom";
+import { Component, xml } from "@sleektiv/owl";
 import { getService, makeMockEnv, mountWithCleanup, onRpc } from "@web/../tests/web_test_helpers";
 
 import { rpcBus } from "@web/core/network/rpc";

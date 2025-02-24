@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _
-from odoo.exceptions import UserError, ValidationError
-from odoo.http import request, route
+from sleektiv import _
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.http import request, route
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.website_sale.controllers.main import WebsiteSale
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.website_sale.controllers.main import WebsiteSale
 
 
 class Delivery(WebsiteSale):

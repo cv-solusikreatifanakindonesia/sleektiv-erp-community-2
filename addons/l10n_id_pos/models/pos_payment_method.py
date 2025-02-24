@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.exceptions import UserError
-from odoo import _, models
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv.exceptions import UserError
+from sleektiv import _, models
 
 
 class PosPaymentMethod(models.Model):

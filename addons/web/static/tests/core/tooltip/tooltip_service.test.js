@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { click, drag, hover, leave, pointerDown, pointerUp, queryOne } from "@odoo/hoot-dom";
-import { advanceTime, animationFrame, mockTouch, runAllTimers } from "@odoo/hoot-mock";
-import { Component, useState, xml } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { click, drag, hover, leave, pointerDown, pointerUp, queryOne } from "@sleektiv/hoot-dom";
+import { advanceTime, animationFrame, mockTouch, runAllTimers } from "@sleektiv/hoot-mock";
+import { Component, useState, xml } from "@sleektiv/owl";
 import { makeMockEnv, mockService, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { popoverService } from "@web/core/popover/popover_service";

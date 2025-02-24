@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import werkzeug
 
-from odoo import http
-from odoo.http import request
+from sleektiv import http
+from sleektiv.http import request
 
 
 class WebsiteBackend(http.Controller):

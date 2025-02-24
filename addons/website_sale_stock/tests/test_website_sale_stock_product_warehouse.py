@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import tagged
+from sleektiv.tests import tagged
 
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_sale_stock.tests.common import WebsiteSaleStockCommon
+from sleektiv.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_sale_stock.tests.common import WebsiteSaleStockCommon
 
 
 @tagged('post_install', '-at_install')

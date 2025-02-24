@@ -1,14 +1,14 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { registry } from "@web/core/registry";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 import tourUtils from "@sale/js/tours/tour_utils";
 
-import { markup } from "@odoo/owl";
-import { queryText } from "@odoo/hoot-dom";
+import { markup } from "@sleektiv/owl";
+import { queryText } from "@sleektiv/hoot-dom";
 
 registry.category("web_tour.tours").add('sale_timesheet_tour', {
-    url: '/odoo',
+    url: '/sleektiv',
     steps: () => [
         ...stepUtils.goToAppSteps("sale.sale_menu_root", "Go to the Sales App"),
         ...tourUtils.createNewSalesOrder(),

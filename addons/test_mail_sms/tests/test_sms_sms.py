@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 from unittest.mock import DEFAULT
 
-from odoo import exceptions
-from odoo.addons.link_tracker.tests.common import MockLinkTracker
-from odoo.addons.sms.models.sms_sms import SmsSms as SmsModel
-from odoo.addons.sms.tests.common import SMSCommon
-from odoo.tests import tagged
+from sleektiv import exceptions
+from sleektiv.addons.link_tracker.tests.common import MockLinkTracker
+from sleektiv.addons.sms.models.sms_sms import SmsSms as SmsModel
+from sleektiv.addons.sms.tests.common import SMSCommon
+from sleektiv.tests import tagged
 
 
 @tagged('link_tracker')

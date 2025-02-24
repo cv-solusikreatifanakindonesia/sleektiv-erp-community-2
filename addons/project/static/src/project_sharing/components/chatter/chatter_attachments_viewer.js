@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 export class ChatterAttachmentsViewer extends Component {
     static template = "project.ChatterAttachmentsViewer";

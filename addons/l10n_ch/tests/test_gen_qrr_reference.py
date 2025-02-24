@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import Command
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
+from sleektiv import Command
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import tagged
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.tests import tagged
 
 QR_IBAN = 'CH21 3080 8001 2345 6782 7'
 

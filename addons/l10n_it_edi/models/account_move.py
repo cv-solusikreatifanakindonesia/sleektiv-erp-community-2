@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from base64 import b64encode
 from datetime import datetime
@@ -6,11 +6,11 @@ import logging
 from lxml import etree
 import uuid
 
-from odoo import _, api, Command, fields, models, modules
-from odoo.addons.base.models.ir_qweb_fields import Markup, nl2br, nl2br_enclose
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-from odoo.exceptions import UserError
-from odoo.tools import float_compare, float_repr, cleanup_xml_node, float_is_zero
+from sleektiv import _, api, Command, fields, models, modules
+from sleektiv.addons.base.models.ir_qweb_fields import Markup, nl2br, nl2br_enclose
+from sleektiv.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
+from sleektiv.exceptions import UserError
+from sleektiv.tools import float_compare, float_repr, cleanup_xml_node, float_is_zero
 
 _logger = logging.getLogger(__name__)
 
@@ -1010,7 +1010,7 @@ class AccountMove(models.Model):
         }, []
 
     def _l10n_it_edi_import_invoice(self, invoice, data, is_new):
-        """ Decodes a l10n_it_edi move into an Odoo move.
+        """ Decodes a l10n_it_edi move into an Sleektiv move.
 
         :param data:   the dictionary with the content to be imported
                        keys: 'filename', 'content', 'xml_tree', 'type', 'sort_weight'

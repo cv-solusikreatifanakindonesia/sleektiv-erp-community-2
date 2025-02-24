@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
-from odoo.addons.website_blog.tests.common import TestWebsiteBlogCommon
+import sleektiv.tests
+from sleektiv.addons.website_blog.tests.common import TestWebsiteBlogCommon
 
 
-@odoo.tests.tagged('post_install', '-at_install')
-class TestWebsiteBlogUi(odoo.tests.HttpCase, TestWebsiteBlogCommon):
+@sleektiv.tests.tagged('post_install', '-at_install')
+class TestWebsiteBlogUi(sleektiv.tests.HttpCase, TestWebsiteBlogCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

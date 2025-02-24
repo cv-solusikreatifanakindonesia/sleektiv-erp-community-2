@@ -1,2 +1,2 @@
-debian/odoo.conf /etc/odoo
-README.md /usr/share/doc/odoo
+debian/sleektiv.conf /etc/sleektiv
+README.md /usr/share/doc/sleektiv

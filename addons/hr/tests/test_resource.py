@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 from pytz import utc
 
-from odoo.addons.resource.models.utils import Intervals
+from sleektiv.addons.resource.models.utils import Intervals
 
 from .common import TestHrCommon
 
@@ -64,7 +64,7 @@ class TestResource(TestHrCommon):
         user = self.env['res.users'].create([{
             'name': 'Test user',
             'login': 'test',
-            'email': 'test@odoo.perso',
+            'email': 'test@sleektiv.perso',
             'phone': '+32488990011',
         }])
         department = self.env['hr.department'].create([{
@@ -80,7 +80,7 @@ class TestResource(TestHrCommon):
             'user_id': user.id,
             'job_title': 'Tester',
             'department_id': department.id,
-            'work_email': 'test@odoo.pro',
+            'work_email': 'test@sleektiv.pro',
             'work_phone': '+32800100100',
             'resource_id': resource.id,
         }])

@@ -1,6 +1,6 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
-import { helpers } from "@odoo/o-spreadsheet";
+import { helpers } from "@sleektiv/o-spreadsheet";
 
 const { toUnboundedZone } = helpers;
 

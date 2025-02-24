@@ -9,8 +9,8 @@ import {
     patchWithCleanup,
     contains,
 } from "@web/../tests/web_test_helpers";
-import { beforeEach, test, expect } from "@odoo/hoot";
-import { click, waitFor } from "@odoo/hoot-dom";
+import { beforeEach, test, expect } from "@sleektiv/hoot";
+import { click, waitFor } from "@sleektiv/hoot-dom";
 
 class Partner extends models.Model {
     display_name = fields.Char();

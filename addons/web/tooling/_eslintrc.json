@@ -37,7 +37,7 @@
     }]
   },
   "globals": {
-    "odoo": "readonly",
+    "sleektiv": "readonly",
     "$": "readonly",
     "jQuery": "readonly",
     "Chart": "readonly",

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import Form, tagged
-from odoo import Command
+from sleektiv.tests import Form, tagged
+from sleektiv import Command
 
-from odoo.addons.analytic.tests.common import AnalyticCommon
+from sleektiv.addons.analytic.tests.common import AnalyticCommon
 
 
 @tagged('post_install', '-at_install')

@@ -1,4 +1,4 @@
-/** @odoo-module */
+/** @sleektiv-module */
 
 import { Notification } from "@mail/core/common/notification_model";
 import { _t } from "@web/core/l10n/translation";

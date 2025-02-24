@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, SUPERUSER_ID, _
+from sleektiv import api, fields, models, SUPERUSER_ID, _
 
 
 class PaymentTransaction(models.Model):

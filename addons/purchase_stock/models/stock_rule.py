@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from odoo.tools import float_compare
+from sleektiv.tools import float_compare
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.addons.stock.models.stock_rule import ProcurementException
-from odoo.tools import groupby
+from sleektiv import api, fields, models, SUPERUSER_ID, _
+from sleektiv.addons.stock.models.stock_rule import ProcurementException
+from sleektiv.tools import groupby
 
 
 class StockRule(models.Model):

@@ -1,8 +1,8 @@
-// @odoo-module ignore
+// @sleektiv-module ignore
 
-odoo.loader.bus.addEventListener("module-started", (e) => {
+sleektiv.loader.bus.addEventListener("module-started", (e) => {
     if (e.detail.moduleName === "@web_editor/js/frontend/loadWysiwygFromTextarea") {
-        const publicWidget = odoo.loader.modules.get("@web/legacy/js/public/public_widget")[Symbol.for('default')];
+        const publicWidget = sleektiv.loader.modules.get("@web/legacy/js/public/public_widget")[Symbol.for('default')];
         const { loadWysiwygFromTextarea } = e.detail.module;
 
         publicWidget.registry['public_user_editor_test'] = publicWidget.Widget.extend({

@@ -1,8 +1,8 @@
 import base64
 from lxml import etree
 
-from odoo.tests.common import TransactionCase
-from odoo.tools.mimetypes import guess_mimetype
+from sleektiv.tests.common import TransactionCase
+from sleektiv.tools.mimetypes import guess_mimetype
 
 class TestIrQweb(TransactionCase):
     def test_image_field(self):

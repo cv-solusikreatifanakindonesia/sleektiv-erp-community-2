@@ -1,6 +1,6 @@
 import { Plugin } from "@html_editor/plugin";
 import { CORE_PLUGINS, MAIN_PLUGINS } from "@html_editor/plugin_sets";
-import { describe, expect, test } from "@odoo/hoot";
+import { describe, expect, test } from "@sleektiv/hoot";
 import {
     click,
     hover,
@@ -9,8 +9,8 @@ import {
     queryAllTexts,
     scroll,
     waitFor,
-} from "@odoo/hoot-dom";
-import { animationFrame, tick } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { animationFrame, tick } from "@sleektiv/hoot-mock";
 import {
     applyConcurrentActions,
     mergePeersSteps,
@@ -699,7 +699,7 @@ test("select command with 'mouseenter'", async () => {
 
     // Hoot don't trigger a mousemove event at the start of an hover, if we don't hover
     // another element before. So we need to do a first hover to set a previous element.
-    await hover(".odoo-editor-editable");
+    await hover(".sleektiv-editor-editable");
 
     await insertText(editor, "/head");
     await animationFrame();

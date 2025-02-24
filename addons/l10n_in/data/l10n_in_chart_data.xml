@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<sleektiv>
         <menuitem id="account_reports_in_statements_menu" name="India" parent="account.menu_finance_reports" sequence="5"/>
 
         <record id="sgst_tag_account" model="account.account.tag">
@@ -18,4 +18,4 @@
             <field name="name">CESS</field>
             <field name="applicability">accounts</field>
         </record>
-        </odoo>
+        </sleektiv>

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models
+from sleektiv import fields, models
 
 
 class ActWindowView(models.Model):

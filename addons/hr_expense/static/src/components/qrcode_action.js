@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 
 import { registry } from "@web/core/registry";
 import { sprintf } from "@web/core/utils/strings";

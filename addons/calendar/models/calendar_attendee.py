@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import uuid
 import base64
 import logging
 
 from collections import defaultdict
-from odoo import api, fields, models, _
-from odoo.addons.base.models.res_partner import _tz_get
-from odoo.exceptions import UserError
-from odoo.tools.misc import clean_context
-from odoo.tools import split_every
+from sleektiv import api, fields, models, _
+from sleektiv.addons.base.models.res_partner import _tz_get
+from sleektiv.exceptions import UserError
+from sleektiv.tools.misc import clean_context
+from sleektiv.tools import split_every
 
 _logger = logging.getLogger(__name__)
 

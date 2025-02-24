@@ -1,6 +1,6 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
-import { onMounted } from "@odoo/owl";
+import { onMounted } from "@sleektiv/owl";
 import { FormController } from "@web/views/form/form_controller";
 
 export class TodoActivityWizardController extends FormController {

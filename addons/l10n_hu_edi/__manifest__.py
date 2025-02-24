@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 {
     'name': 'Hungary - E-invoicing',
@@ -9,7 +9,7 @@
 * Electronically report invoices to the NAV (Hungarian Tax Agency) when issuing physical (paper) invoices.
 * Perform the Tax Audit Export (Adóhatósági Ellenőrzési Adatszolgáltatás) in NAV 3.0 format.
     """,
-    'website': 'https://www.odootech.hu',
+    'website': 'https://www.sleektivtech.hu',
     'depends': ['account_debit_note', 'base_iban', 'l10n_hu'],
     'data': [
         'security/ir.model.access.csv',

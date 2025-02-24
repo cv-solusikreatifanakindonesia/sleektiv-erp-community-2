@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import io
 
-from odoo import _
-from odoo.exceptions import ValidationError
-from odoo.tools import pdf
+from sleektiv import _
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import pdf
 
 
 def _ensure_document_not_encrypted(document):

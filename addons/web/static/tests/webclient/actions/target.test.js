@@ -1,7 +1,7 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { queryAll, queryAllTexts, queryText } from "@odoo/hoot-dom";
-import { animationFrame, Deferred } from "@odoo/hoot-mock";
-import { Component, onMounted, xml } from "@odoo/owl";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { queryAll, queryAllTexts, queryText } from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred } from "@sleektiv/hoot-mock";
+import { Component, onMounted, xml } from "@sleektiv/owl";
 import {
     contains,
     defineActions,

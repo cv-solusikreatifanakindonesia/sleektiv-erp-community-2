@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields
+from sleektiv import api, models, fields
 
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"

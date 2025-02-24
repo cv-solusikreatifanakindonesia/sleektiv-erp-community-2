@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
-from odoo.addons.phone_validation.tools import phone_validation
+from sleektiv import api, models
+from sleektiv.addons.phone_validation.tools import phone_validation
 
 
 class Partner(models.Model):

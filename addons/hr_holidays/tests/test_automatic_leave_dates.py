@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from datetime import date, datetime
 
-from odoo.tests import Form
+from sleektiv.tests import Form
 
-from odoo.addons.hr_holidays.tests.common import TestHrHolidaysCommon
-from odoo.exceptions import ValidationError
+from sleektiv.addons.hr_holidays.tests.common import TestHrHolidaysCommon
+from sleektiv.exceptions import ValidationError
 
 
 class TestAutomaticLeaveDates(TestHrHolidaysCommon):

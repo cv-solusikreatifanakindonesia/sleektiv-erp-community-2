@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import float_is_zero, is_html_empty
-from odoo.tools.translate import html_translate
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import float_is_zero, is_html_empty
+from sleektiv.tools.translate import html_translate
 
-from odoo.addons.website.models import ir_http
+from sleektiv.addons.website.models import ir_http
 
 _logger = logging.getLogger(__name__)
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.osv import expression
+from sleektiv import api, fields, models, _
+from sleektiv.exceptions import UserError
+from sleektiv.osv import expression
 
 
 class AccountPaymentMethodLine(models.Model):

@@ -8,21 +8,21 @@ import websocket
 
 from threading import Thread
 
-from odoo.addons.hw_drivers import main
-from odoo.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers import main
+from sleektiv.addons.hw_drivers.tools import helpers
 
 _logger = logging.getLogger(__name__)
 websocket.enableTrace(True, level=logging.getLevelName(_logger.getEffectiveLevel()))
 
 def send_to_controller(device_type, params):
     """
-    Confirm the operation's completion by sending a response back to the Odoo server
+    Confirm the operation's completion by sending a response back to the Sleektiv server
     """
     routes = {
         "printer": "/iot/printer/status",
     }
     params['iot_mac'] = helpers.get_mac_address()
-    server_url = helpers.get_odoo_server_url() + routes[device_type]
+    server_url = helpers.get_sleektiv_server_url() + routes[device_type]
     try:
         urllib3.disable_warnings()
         http = urllib3.PoolManager(cert_reqs='CERT_NONE')
@@ -92,7 +92,7 @@ class WebsocketClient(Thread):
 
     def run(self):
         self.ws = websocket.WebSocketApp(self.url,
-            header={"User-Agent": "OdooIoTBox/1.0"},
+            header={"User-Agent": "SleektivIoTBox/1.0"},
             on_open=self.on_open, on_message=on_message,
             on_error=on_error, on_close=on_close)
 

@@ -1,7 +1,7 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv import Command
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 import datetime
 

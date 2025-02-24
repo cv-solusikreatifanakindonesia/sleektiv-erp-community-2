@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
 from itertools import chain, starmap, zip_longest
 
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-from odoo.tools import is_html_empty
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import ValidationError
+from sleektiv.tools import is_html_empty
 
 
 class SaleOrder(models.Model):

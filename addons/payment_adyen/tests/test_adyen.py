@@ -1,18 +1,18 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from unittest.mock import patch
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.tools import mute_logger
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
+from sleektiv.tools import mute_logger
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.tests.http_common import PaymentHttpCommon
-from odoo.addons.payment_adyen import utils as adyen_utils
-from odoo.addons.payment_adyen.controllers.main import AdyenController
-from odoo.addons.payment_adyen.tests.common import AdyenCommon
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment.tests.http_common import PaymentHttpCommon
+from sleektiv.addons.payment_adyen import utils as adyen_utils
+from sleektiv.addons.payment_adyen.controllers.main import AdyenController
+from sleektiv.addons.payment_adyen.tests.common import AdyenCommon
 
 
 @tagged('post_install', '-at_install')
@@ -20,9 +20,9 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
 
     def test_processing_values(self):
         tx = self._create_transaction(flow='direct')
-        with mute_logger('odoo.addons.payment.models.payment_transaction'), \
+        with mute_logger('sleektiv.addons.payment.models.payment_transaction'), \
             patch(
-                'odoo.addons.payment.utils.generate_access_token',
+                'sleektiv.addons.payment.utils.generate_access_token',
                 new=self._generate_test_access_token
             ):
             processing_values = tx._get_processing_values()
@@ -34,13 +34,13 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
         )
         self.assertEqual(processing_values['converted_amount'], converted_amount)
         with patch(
-            'odoo.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
+            'sleektiv.addons.payment.utils.generate_access_token', new=self._generate_test_access_token
         ):
             self.assertTrue(payment_utils.check_access_token(
                 processing_values['access_token'], self.reference, converted_amount, self.currency.id, self.partner.id
             ))
 
-    @mute_logger('odoo.addons.payment_adyen.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_adyen.models.payment_transaction')
     def test_send_refund_request(self):
         self.provider.support_refund = 'full_only'  # Should simply not be False
         tx = self._create_transaction(
@@ -50,7 +50,7 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
 
         # Send the refund request
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             new=lambda *args, **kwargs: {'pspReference': "refund_reference", 'status': "received"}
         ):
             tx._send_refund_request()
@@ -212,7 +212,7 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
         self.provider.capture_manually = True
         source_tx = self._create_transaction(flow='direct', state='authorized')
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received', 'pspreference': 'dummy ref'},
         ):
             child_tx = source_tx._send_capture_request()
@@ -224,7 +224,7 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
         self.provider.capture_manually = True
         source_tx = self._create_transaction(flow='direct', state='authorized')
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received', 'pspreference': 'dummy ref'},
         ):
             child_tx = source_tx._send_capture_request(amount_to_capture=10)
@@ -239,13 +239,13 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
             child_tx.state, 'draft', msg="Child transaction are created in draft until confirmed."
         )
 
-    @mute_logger('odoo.addons.payment_adyen.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_adyen.models.payment_transaction')
     def test_tx_state_after_send_full_capture_request(self):
         self.provider.capture_manually = True
         tx = self._create_transaction('direct', state='authorized')
 
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received'},
         ):
             tx._send_capture_request()
@@ -256,13 +256,13 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
                 "'authorized' until a success notification is sent",
         )
 
-    @mute_logger('odoo.addons.payment_adyen.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_adyen.models.payment_transaction')
     def test_tx_state_after_send_partial_capture_request(self):
         self.provider.capture_manually = True
         tx = self._create_transaction('direct', state='authorized')
 
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received'},
         ):
             tx._send_capture_request(amount_to_capture=10)
@@ -283,7 +283,7 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
         self.provider.capture_manually = True
         source_tx = self._create_transaction(flow='direct', state='authorized')
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received', 'pspreference': 'dummy ref'},
         ):
             child_tx = source_tx._send_void_request()
@@ -295,7 +295,7 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
         self.provider.capture_manually = True
         source_tx = self._create_transaction(flow='direct', state='authorized')
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received', 'pspreference': 'dummy ref'},
         ):
             child_tx = source_tx._send_void_request(amount_to_void=10)
@@ -310,13 +310,13 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
             child_tx.state, 'draft', msg="Child transaction are created in draft until confirmed."
         )
 
-    @mute_logger('odoo.addons.payment_adyen.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_adyen.models.payment_transaction')
     def test_tx_state_after_send_void_request(self):
         self.provider.capture_manually = True
         tx = self._create_transaction('direct', state='authorized')
 
         with patch(
-            'odoo.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
+            'sleektiv.addons.payment_adyen.models.payment_provider.PaymentProvider._adyen_make_request',
             return_value={'status': 'received'},
         ):
             tx._send_void_request()
@@ -460,13 +460,13 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
             msg="After a failed refund notification, the refund state should be in 'error'.",
         )
 
-    @mute_logger('odoo.addons.payment_adyen.controllers.main')
-    @mute_logger('odoo.addons.payment_adyen.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_adyen.controllers.main')
+    @mute_logger('sleektiv.addons.payment_adyen.models.payment_transaction')
     def _webhook_notification_flow(self, payload):
         """ Send a notification to the webhook, ignore the signature, and check the response. """
         url = self._build_url(AdyenController._webhook_url)
         with patch(
-            'odoo.addons.payment_adyen.controllers.main.AdyenController'
+            'sleektiv.addons.payment_adyen.controllers.main.AdyenController'
             '._verify_notification_signature'
         ):
             response = self._make_json_request(url, data=payload).json()
@@ -474,16 +474,16 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
             response, '[accepted]', msg="The webhook should always respond '[accepted]'",
         )
 
-    @mute_logger('odoo.addons.payment_adyen.controllers.main')
+    @mute_logger('sleektiv.addons.payment_adyen.controllers.main')
     def test_webhook_notification_triggers_signature_check(self):
         """ Test that receiving a webhook notification triggers a signature check. """
         self._create_transaction('direct')
         url = self._build_url(AdyenController._webhook_url)
         with patch(
-            'odoo.addons.payment_adyen.controllers.main.AdyenController'
+            'sleektiv.addons.payment_adyen.controllers.main.AdyenController'
             '._verify_notification_signature'
         ) as signature_check_mock, patch(
-            'odoo.addons.payment.models.payment_transaction.PaymentTransaction'
+            'sleektiv.addons.payment.models.payment_transaction.PaymentTransaction'
             '._handle_notification_data'
         ):
             self._make_json_request(url, data=self.webhook_notification_batch_data)
@@ -499,21 +499,21 @@ class AdyenTest(AdyenCommon, PaymentHttpCommon):
             tx,
         )
 
-    @mute_logger('odoo.addons.payment_adyen.controllers.main')
+    @mute_logger('sleektiv.addons.payment_adyen.controllers.main')
     def test_reject_webhook_notification_with_missing_signature(self):
         """ Test the verification of a webhook notification with a missing signature. """
         payload = dict(self.webhook_notification_payload, additionalData={'hmacSignature': None})
         tx = self._create_transaction('direct')
         self.assertRaises(Forbidden, AdyenController._verify_notification_signature, payload, tx)
 
-    @mute_logger('odoo.addons.payment_adyen.controllers.main')
+    @mute_logger('sleektiv.addons.payment_adyen.controllers.main')
     def test_reject_webhook_notification_with_invalid_signature(self):
         """ Test the verification of a webhook notification with an invalid signature. """
         payload = dict(self.webhook_notification_payload, additionalData={'hmacSignature': 'dummy'})
         tx = self._create_transaction('direct')
         self.assertRaises(Forbidden, AdyenController._verify_notification_signature, payload, tx)
 
-    @mute_logger('odoo.addons.payment_adyen.models.payment_transaction')
+    @mute_logger('sleektiv.addons.payment_adyen.models.payment_transaction')
     def test_no_information_missing_from_partner_address(self):
         test_partner = self.env['res.partner'].create({
             'name': 'Dummy Partner',

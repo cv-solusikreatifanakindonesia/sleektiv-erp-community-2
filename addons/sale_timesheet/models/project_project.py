@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import json
 
-from odoo import api, fields, models
-from odoo.osv import expression
-from odoo.tools import SQL
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools.translate import _
+from sleektiv import api, fields, models
+from sleektiv.osv import expression
+from sleektiv.tools import SQL
+from sleektiv.exceptions import ValidationError, UserError
+from sleektiv.tools.translate import _
 
 
 class ProjectProject(models.Model):

@@ -1,5 +1,5 @@
-import { expect, test } from "@odoo/hoot";
-import { mockDate } from "@odoo/hoot-mock";
+import { expect, test } from "@sleektiv/hoot";
+import { mockDate } from "@sleektiv/hoot-mock";
 import {
     getFacetTexts,
     mountWithSearch,
@@ -11,7 +11,7 @@ import {
 import { defineSearchBarModels } from "./models";
 
 import { SearchBarMenu } from "@web/search/search_bar_menu/search_bar_menu";
-import { queryAll, queryAllTexts } from "@odoo/hoot-dom";
+import { queryAll, queryAllTexts } from "@sleektiv/hoot-dom";
 import { SearchBar } from "@web/search/search_bar/search_bar";
 
 defineSearchBarModels();

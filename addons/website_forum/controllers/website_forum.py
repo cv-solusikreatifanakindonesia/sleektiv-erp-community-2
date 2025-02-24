@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import json
 import logging
 
@@ -9,13 +9,13 @@ import werkzeug.exceptions
 import werkzeug.urls
 import werkzeug.wrappers
 
-from odoo import _, http, tools
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website_profile.controllers.main import WebsiteProfile
-from odoo.exceptions import AccessError, UserError
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import is_html_empty
+from sleektiv import _, http, tools
+from sleektiv.addons.website.models.ir_http import sitemap_qs2dom
+from sleektiv.addons.website_profile.controllers.main import WebsiteProfile
+from sleektiv.exceptions import AccessError, UserError
+from sleektiv.http import request
+from sleektiv.osv import expression
+from sleektiv.tools import is_html_empty
 
 _logger = logging.getLogger(__name__)
 

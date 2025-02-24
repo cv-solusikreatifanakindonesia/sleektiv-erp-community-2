@@ -1,4 +1,4 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import base64
 import io
@@ -11,8 +11,8 @@ from datetime import datetime, timedelta
 import requests
 from requests import RequestException
 
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from sleektiv import _, api, fields, models
+from sleektiv.exceptions import UserError
 
 SINVOICE_API_URL = 'https://api-vinvoice.viettel.vn/services/einvoiceapplication/api/'
 SINVOICE_TIMEOUT = 60  # They recommend between 60 and 90 seconds, but 60s is already quite long.
@@ -311,7 +311,7 @@ class AccountMove(models.Model):
         for invoice in invoices:
             sinvoice_status = 'unpaid'
 
-            # SInvoice will return a NOT_FOUND_DATA error if the status in Odoo matches the one on their side.
+            # SInvoice will return a NOT_FOUND_DATA error if the status in Sleektiv matches the one on their side.
             # Because of that we wouldn't be able to differentiate a real issue (invoice on our side not matching theirs)
             # With simply a status already up to date. So we need to check the status first to see if we need to update.
             invoice_lookup, error_message = invoice._l10n_vn_edi_lookup_invoice()
@@ -521,7 +521,7 @@ class AccountMove(models.Model):
         except UserError as e:
             self.with_context(no_new_invoice=True).message_post(
                 body=_('The invoice has been canceled on sinvoice for reason: %(reason)s'
-                       'But the cancellation in Odoo failed with error: %(error)s', reason=reason, error=e),
+                       'But the cancellation in Sleektiv failed with error: %(error)s', reason=reason, error=e),
             )
 
         if self._can_commit():

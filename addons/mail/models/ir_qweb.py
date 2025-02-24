@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models
+from sleektiv import models
 
 
 class IrQweb(models.AbstractModel):

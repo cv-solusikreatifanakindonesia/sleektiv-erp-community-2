@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
 
-from odoo.addons.mass_mailing_sms.tests.common import MassSMSCommon
-from odoo.addons.mass_mailing.tests.test_mailing_ab_testing import TestMailingABTesting
-from odoo.tests import tagged
+from sleektiv.addons.mass_mailing_sms.tests.common import MassSMSCommon
+from sleektiv.addons.mass_mailing.tests.test_mailing_ab_testing import TestMailingABTesting
+from sleektiv.tests import tagged
 
 
 @tagged('post_install', '-at_install')

@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.tools import LazyTranslate
+from sleektiv.tools import LazyTranslate
 _lt = LazyTranslate(__name__)
 
 

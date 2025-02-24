@@ -1,6 +1,6 @@
-import { describe, expect, test } from "@odoo/hoot";
-import { click, press, tick, waitFor } from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+import { describe, expect, test } from "@sleektiv/hoot";
+import { click, press, tick, waitFor } from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import { setupEditor } from "./_helpers/editor";
 import { getContent, setSelection } from "./_helpers/selection";
 import { insertText } from "./_helpers/user_actions";

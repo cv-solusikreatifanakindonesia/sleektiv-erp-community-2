@@ -1,4 +1,4 @@
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { useForwardRefToParent } from "@web/core/utils/hooks";
 
 export class EmbeddedComponentToolbar extends Component {

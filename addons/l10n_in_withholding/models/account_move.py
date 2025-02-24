@@ -1,6 +1,6 @@
-from odoo import api, models, fields, _, Command
-from odoo.tools import SQL
-from odoo.tools.date_utils import get_month
+from sleektiv import api, models, fields, _, Command
+from sleektiv.tools import SQL
+from sleektiv.tools.date_utils import get_month
 
 
 class AccountMove(models.Model):

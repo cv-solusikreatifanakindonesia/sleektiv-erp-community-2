@@ -1,10 +1,10 @@
 import { _t } from "@web/core/l10n/translation";
 import { registry } from "@web/core/registry";
 
-import { markup } from "@odoo/owl";
+import { markup } from "@sleektiv/owl";
 
 registry.category("web_tour.tours").add("discuss_channel_tour", {
-    url: "/odoo",
+    url: "/sleektiv",
     steps: () => [
         {
             isActive: ["enterprise"],

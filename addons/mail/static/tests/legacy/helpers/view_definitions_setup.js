@@ -1,4 +1,4 @@
-/** @odoo-module alias=@mail/../tests/helpers/view_definitions_setup default=false */
+/** @sleektiv-module alias=@mail/../tests/helpers/view_definitions_setup default=false */
 
 import { registry } from "@web/core/registry";
 

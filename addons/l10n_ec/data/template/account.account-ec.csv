@@ -491,4 +491,4 @@
 "ec520401","520401","Loss on investments in associates / subsidiaries and others","False","expense","Perdida en inversiones en asociadas / subsidiarias y otras"
 "ec_early_pay_discount_gain","52040201","(-) Early Cash Discount Gain from purchases","False","expense","(-) Descuento pronto pago en compras de servicios"
 "ec_expense_cash_difference","52040202","(-) Expenses for Cash Differences","False","expense","(-) Egresos por diferencias en efectivo"
-"ec_expense_others","52040203","Other expenses","False",expense,"Otros gastos"
+"ec_expense_others","52040203","Other expenses","False",expense,"Otros gastos" 

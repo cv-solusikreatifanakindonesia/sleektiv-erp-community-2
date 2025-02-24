@@ -1,4 +1,4 @@
-import { Component, onError, xml } from "@odoo/owl";
+import { Component, onError, xml } from "@sleektiv/owl";
 
 export class ErrorHandler extends Component {
     static template = xml`<t t-slot="default" />`;

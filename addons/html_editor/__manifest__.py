@@ -9,8 +9,8 @@ Html Editor
 This addon provides an extensible, maintainable editor.
     """,
 
-    'author': "odoo",
-    'website': "https://www.odoo.com",
+    'author': "sleektiv",
+    'website': "https://sleektiv.com",
     'version': '1.0',
     'category': 'Hidden',
     'depends': ['base', 'bus', 'web'],

@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command, fields, models
+from sleektiv import Command, fields, models
 
 
 class HrDepartureWizard(models.TransientModel):

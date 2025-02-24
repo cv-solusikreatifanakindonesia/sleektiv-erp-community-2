@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-from odoo.tests import freeze_time, tagged
-from odoo.addons.l10n_it_edi.tests.common import TestItEdi
+from sleektiv import Command
+from sleektiv.tests import freeze_time, tagged
+from sleektiv.addons.l10n_it_edi.tests.common import TestItEdi
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

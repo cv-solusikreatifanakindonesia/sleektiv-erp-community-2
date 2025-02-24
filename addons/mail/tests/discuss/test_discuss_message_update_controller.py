@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-import odoo
-from odoo.addons.mail.tests.test_message_update_controller import TestMessageUpdateControllerCommon
+import sleektiv
+from sleektiv.addons.mail.tests.test_message_update_controller import TestMessageUpdateControllerCommon
 
 
-@odoo.tests.tagged("-at_install", "post_install")
+@sleektiv.tests.tagged("-at_install", "post_install")
 class TestDiscussMessageUpdateController(TestMessageUpdateControllerCommon):
     def test_message_update_guest_as_owner(self):
         """Test only admin user and message author can update the message content in a channel."""

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _, Command
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import format_date, formatLang, frozendict, date_utils
-from odoo.tools.float_utils import float_round
+from sleektiv import api, fields, models, _, Command
+from sleektiv.exceptions import UserError, ValidationError
+from sleektiv.tools import format_date, formatLang, frozendict, date_utils
+from sleektiv.tools.float_utils import float_round
 
 from dateutil.relativedelta import relativedelta
 

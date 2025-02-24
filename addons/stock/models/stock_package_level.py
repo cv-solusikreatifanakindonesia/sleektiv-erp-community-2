@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
 
-from odoo import _, api, fields, models
-from odoo.tools.float_utils import float_is_zero
+from sleektiv import _, api, fields, models
+from sleektiv.tools.float_utils import float_is_zero
 
 
 class StockPackageLevel(models.Model):

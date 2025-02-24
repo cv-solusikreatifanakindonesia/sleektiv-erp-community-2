@@ -1,7 +1,7 @@
-import { expect, test } from "@odoo/hoot";
-import { click, hover, leave } from "@odoo/hoot-dom";
-import { advanceTime, animationFrame, runAllTimers } from "@odoo/hoot-mock";
-import { markup } from "@odoo/owl";
+import { expect, test } from "@sleektiv/hoot";
+import { click, hover, leave } from "@sleektiv/hoot-dom";
+import { advanceTime, animationFrame, runAllTimers } from "@sleektiv/hoot-mock";
+import { markup } from "@sleektiv/owl";
 import { getService, makeMockEnv, mountWithCleanup } from "@web/../tests/web_test_helpers";
 
 import { registry } from "@web/core/registry";

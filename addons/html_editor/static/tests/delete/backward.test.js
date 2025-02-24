@@ -1,8 +1,8 @@
-import { beforeEach, describe, expect, test } from "@odoo/hoot";
+import { beforeEach, describe, expect, test } from "@sleektiv/hoot";
 import { setupEditor, testEditor } from "../_helpers/editor";
 import { unformat } from "../_helpers/format";
-import { manuallyDispatchProgrammaticEvent, microTick, press } from "@odoo/hoot-dom";
-import { animationFrame, tick } from "@odoo/hoot-mock";
+import { manuallyDispatchProgrammaticEvent, microTick, press } from "@sleektiv/hoot-dom";
+import { animationFrame, tick } from "@sleektiv/hoot-mock";
 import { deleteBackward, insertText, tripleClick, undo } from "../_helpers/user_actions";
 import { getContent, setSelection } from "../_helpers/selection";
 import { patchWithCleanup } from "@web/../tests/web_test_helpers";

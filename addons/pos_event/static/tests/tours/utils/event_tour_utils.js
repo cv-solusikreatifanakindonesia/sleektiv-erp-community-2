@@ -1,4 +1,4 @@
-// Part of Odoo. See LICENSE file for full copyright and licensing details.
+// Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 export function increaseQuantityOfTicket(ticket) {
     return [
         {

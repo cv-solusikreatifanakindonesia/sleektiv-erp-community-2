@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_forum.controllers.website_forum import WebsiteForum
-from odoo.addons.website_forum.tests.common import KARMA, TestForumCommon
+from sleektiv.addons.website.tools import MockRequest
+from sleektiv.addons.website_forum.controllers.website_forum import WebsiteForum
+from sleektiv.addons.website_forum.tests.common import KARMA, TestForumCommon
 
 
 class TestForumController(TestForumCommon):

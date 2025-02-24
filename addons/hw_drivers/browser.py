@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 import logging
 import subprocess
 from enum import Enum
-from odoo.addons.hw_drivers.tools import helpers
+from sleektiv.addons.hw_drivers.tools import helpers
 
 
 _logger = logging.getLogger(__name__)
@@ -93,8 +93,8 @@ class Browser:
 
     def close_browser(self):
         """close the browser"""
-        # Kill browser instance (can't `instance.pkill()` as we can't keep the instance after Odoo service restarts)
-        # We need to terminate it because Odoo will create a new instance each time it is restarted.
+        # Kill browser instance (can't `instance.pkill()` as we can't keep the instance after Sleektiv service restarts)
+        # We need to terminate it because Sleektiv will create a new instance each time it is restarted.
         subprocess.run(['pkill', self.browser_process_name], check=False)
 
     def xdotool_keystroke(self, keystroke):

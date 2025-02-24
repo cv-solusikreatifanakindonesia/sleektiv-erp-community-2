@@ -1,6 +1,6 @@
-from odoo import api, fields, _
-from odoo.exceptions import UserError, AccessDenied
-from odoo.addons.base.models.res_users import CheckIdentity
+from sleektiv import api, fields, _
+from sleektiv.exceptions import UserError, AccessDenied
+from sleektiv.addons.base.models.res_users import CheckIdentity
 
 
 class CheckIdentityPasskeys(CheckIdentity):

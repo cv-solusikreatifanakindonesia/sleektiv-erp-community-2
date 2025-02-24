@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.exceptions import Forbidden
 
-from odoo.addons.website_event.controllers.community import EventCommunityController
-from odoo.http import request, route
+from sleektiv.addons.website_event.controllers.community import EventCommunityController
+from sleektiv.http import request, route
 
 
 class WebsiteEventTrackQuizMeetController(EventCommunityController):

@@ -1,6 +1,6 @@
 import re
 
-from odoo import _, fields, models, api
+from sleektiv import _, fields, models, api
 
 
 class AccountAnalyticApplicability(models.Model):

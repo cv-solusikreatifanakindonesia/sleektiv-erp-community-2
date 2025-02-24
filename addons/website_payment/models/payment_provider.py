@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from werkzeug.urls import iri_to_uri
 
-from odoo import api, fields, models
-from odoo.http import request
+from sleektiv import api, fields, models
+from sleektiv.http import request
 
-from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment.const import REPORT_REASONS_MAPPING
+from sleektiv.addons.payment import utils as payment_utils
+from sleektiv.addons.payment.const import REPORT_REASONS_MAPPING
 
 
 class PaymentProvider(models.Model):

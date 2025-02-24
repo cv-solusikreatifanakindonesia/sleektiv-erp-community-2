@@ -1,9 +1,9 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import contextlib
 
-from odoo import api, models
-from odoo.exceptions import AccessError
+from sleektiv import api, models
+from sleektiv.exceptions import AccessError
 
 
 class IrUiMenu(models.Model):

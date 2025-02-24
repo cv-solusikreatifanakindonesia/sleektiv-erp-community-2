@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, Command, fields, models
-from odoo.exceptions import UserError
-from odoo.tools.float_utils import float_round, float_is_zero
+from sleektiv import _, api, Command, fields, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools.float_utils import float_round, float_is_zero
 
 
 class ReturnPickingLine(models.TransientModel):

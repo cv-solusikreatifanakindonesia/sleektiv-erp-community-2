@@ -1,4 +1,4 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import {
     click,
     pointerDown,
@@ -7,8 +7,8 @@ import {
     queryFirst,
     queryOne,
     select,
-} from "@odoo/hoot-dom";
-import { animationFrame } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { animationFrame } from "@sleektiv/hoot-mock";
 import {
     clickSave,
     defineModels,

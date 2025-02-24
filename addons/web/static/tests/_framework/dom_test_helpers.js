@@ -1,4 +1,4 @@
-import { after, afterEach } from "@odoo/hoot";
+import { after, afterEach } from "@sleektiv/hoot";
 import {
     check,
     clear,
@@ -19,19 +19,19 @@ import {
     select,
     uncheck,
     waitFor,
-} from "@odoo/hoot-dom";
-import { advanceFrame, advanceTime, animationFrame } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { advanceFrame, advanceTime, animationFrame } from "@sleektiv/hoot-mock";
 import { hasTouch } from "@web/core/browser/feature_detection";
 
 /**
- * @typedef {import("@odoo/hoot-dom").DragHelpers} DragHelpers
- * @typedef {import("@odoo/hoot-dom").FillOptions} FillOptions
- * @typedef {import("@odoo/hoot-dom").InputValue} InputValue
- * @typedef {import("@odoo/hoot-dom").KeyStrokes} KeyStrokes
- * @typedef {import("@odoo/hoot-dom").PointerOptions} PointerOptions
- * @typedef {import("@odoo/hoot-dom").Position} Position
- * @typedef {import("@odoo/hoot-dom").QueryOptions} QueryOptions
- * @typedef {import("@odoo/hoot-dom").Target} Target
+ * @typedef {import("@sleektiv/hoot-dom").DragHelpers} DragHelpers
+ * @typedef {import("@sleektiv/hoot-dom").FillOptions} FillOptions
+ * @typedef {import("@sleektiv/hoot-dom").InputValue} InputValue
+ * @typedef {import("@sleektiv/hoot-dom").KeyStrokes} KeyStrokes
+ * @typedef {import("@sleektiv/hoot-dom").PointerOptions} PointerOptions
+ * @typedef {import("@sleektiv/hoot-dom").Position} Position
+ * @typedef {import("@sleektiv/hoot-dom").QueryOptions} QueryOptions
+ * @typedef {import("@sleektiv/hoot-dom").Target} Target
  *
  * @typedef {PointerOptions & {
  *  initialPointerMoveDistance?: number;
@@ -48,7 +48,7 @@ import { hasTouch } from "@web/core/browser/feature_detection";
 
 /**
  * @template T
- * @typedef {import("@odoo/hoot-dom").MaybePromise<T>} MaybePromise
+ * @typedef {import("@sleektiv/hoot-dom").MaybePromise<T>} MaybePromise
  */
 
 /**

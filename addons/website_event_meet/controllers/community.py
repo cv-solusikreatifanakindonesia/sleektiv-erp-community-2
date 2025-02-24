@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import logging
 from werkzeug.exceptions import Forbidden, NotFound
 
-from odoo import exceptions, http
-from odoo.http import request
-from odoo.addons.website_event.controllers.community import EventCommunityController
-from odoo.osv import expression
+from sleektiv import exceptions, http
+from sleektiv.http import request
+from sleektiv.addons.website_event.controllers.community import EventCommunityController
+from sleektiv.osv import expression
 
 _logger = logging.getLogger(__name__)
 

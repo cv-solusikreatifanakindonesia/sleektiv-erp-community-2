@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo import exceptions
-from odoo.addons.iap.tools import iap_tools
-from odoo.addons.iap.models.iap_enrich_api import IapEnrichAPI
-from odoo.tests import common
+from sleektiv import exceptions
+from sleektiv.addons.iap.tools import iap_tools
+from sleektiv.addons.iap.models.iap_enrich_api import IapEnrichAPI
+from sleektiv.tests import common
 
 
 class MockIAPEnrich(common.TransactionCase):

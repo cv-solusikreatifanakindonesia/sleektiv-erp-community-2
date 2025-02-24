@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from psycopg2.errors import UniqueViolation
 
-from odoo.tests import Form, users
-from odoo.addons.hr.tests.common import TestHrCommon
-from odoo.tools import mute_logger
-from odoo.exceptions import ValidationError
+from sleektiv.tests import Form, users
+from sleektiv.addons.hr.tests.common import TestHrCommon
+from sleektiv.tools import mute_logger
+from sleektiv.exceptions import ValidationError
 
 class TestHrEmployee(TestHrCommon):
 
@@ -173,18 +173,18 @@ class TestHrEmployee(TestHrCommon):
             {
                 'name': 'Test User',
                 'login': 'test_user',
-                'email': 'test_user@odoo.com',
+                'email': 'test_user@sleektiv.com',
             },
             {
                 'name': 'Test User 2',
                 'login': 'test_user_2',
-                'email': 'test_user_2@odoo.com',
+                'email': 'test_user_2@sleektiv.com',
                 'create_employee': True,
             },
             {
                 'name': 'Test User 3',
                 'login': 'test_user_3',
-                'email': 'test_user_3@odoo.com',
+                'email': 'test_user_3@sleektiv.com',
                 'create_employee_id': employee.id,
             },
         ])
@@ -203,7 +203,7 @@ class TestHrEmployee(TestHrCommon):
         self.env['res.users'].signup({
             'name': 'Test User',
             'login': 'test_user',
-            'email': 'test_user@odoo.com',
+            'email': 'test_user@sleektiv.com',
             'password': 'test_user_password',
             'partner_id': partner.id,
         })
@@ -246,7 +246,7 @@ class TestHrEmployee(TestHrCommon):
         user = self.env['res.users'].create([{
             'name': 'Test user',
             'login': 'test',
-            'email': 'test@odoo.perso',
+            'email': 'test@sleektiv.perso',
             'phone': '+32488990011',
         }])
         employee = self.env['hr.employee'].create([{
@@ -273,7 +273,7 @@ class TestHrEmployee(TestHrCommon):
         employee_form = Form(self.env['hr.employee'].with_user(self.res_users_hr_officer).with_company(company=test_company.id))
         employee_form.name = "Second employee"
         employee_form.user_id = self.res_users_hr_officer
-        with mute_logger('odoo.sql_db'), self.assertRaises(UniqueViolation), self.assertRaises(ValidationError), self.cr.savepoint():
+        with mute_logger('sleektiv.sql_db'), self.assertRaises(UniqueViolation), self.assertRaises(ValidationError), self.cr.savepoint():
             employee_form.save()
 
         employee_2 = self.env['hr.employee'].create({
@@ -284,7 +284,7 @@ class TestHrEmployee(TestHrCommon):
         # Try to set the user with existing employee in the company, on another existing employee
         employee_2_form = Form(employee_2.with_user(self.res_users_hr_officer).with_company(company=test_company.id))
         employee_2_form.user_id = self.res_users_hr_officer
-        with mute_logger('odoo.sql_db'), self.assertRaises(UniqueViolation), self.assertRaises(ValidationError), self.cr.savepoint():
+        with mute_logger('sleektiv.sql_db'), self.assertRaises(UniqueViolation), self.assertRaises(ValidationError), self.cr.savepoint():
             employee_2_form.save()
 
 
@@ -393,7 +393,7 @@ class TestHrEmployee(TestHrCommon):
             'company_id': company_A.id,
         })
         # User cannot be assigned to more than one employee in the same company. work_contact_id should not be removed.
-        with mute_logger('odoo.sql_db'), self.assertRaises(UniqueViolation), self.assertRaises(ValidationError), self.cr.savepoint():
+        with mute_logger('sleektiv.sql_db'), self.assertRaises(UniqueViolation), self.assertRaises(ValidationError), self.cr.savepoint():
             self.env['hr.employee'].create({
                 'name': 'new_employee_B',
                 'user_id': user.id,

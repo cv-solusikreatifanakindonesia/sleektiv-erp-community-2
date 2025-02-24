@@ -1,6 +1,6 @@
-import { describe, expect, getFixture, test } from "@odoo/hoot";
-import { click, queryOne } from "@odoo/hoot-dom";
-import { Deferred, animationFrame, mockTouch } from "@odoo/hoot-mock";
+import { describe, expect, getFixture, test } from "@sleektiv/hoot";
+import { click, queryOne } from "@sleektiv/hoot-dom";
+import { Deferred, animationFrame, mockTouch } from "@sleektiv/hoot-mock";
 import {
     contains,
     getService,
@@ -9,7 +9,7 @@ import {
     patchWithCleanup,
 } from "@web/../tests/web_test_helpers";
 
-import { Component, onMounted, reactive, useState, xml } from "@odoo/owl";
+import { Component, onMounted, reactive, useState, xml } from "@sleektiv/owl";
 import { browser } from "@web/core/browser/browser";
 import { CommandPalette } from "@web/core/commands/command_palette";
 import { registry } from "@web/core/registry";

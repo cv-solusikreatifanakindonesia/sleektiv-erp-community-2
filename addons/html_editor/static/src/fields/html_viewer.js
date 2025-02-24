@@ -8,7 +8,7 @@ import {
     useEffect,
     useRef,
     useState,
-} from "@odoo/owl";
+} from "@sleektiv/owl";
 import { getBundle } from "@web/core/assets";
 import { memoize } from "@web/core/utils/functions";
 import { fixInvalidHTML, instanceofMarkup } from "@html_editor/utils/sanitize";

@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { getFixture, patchWithCleanup } from "@web/../tests/helpers/utils";
 import { menuService } from "@web/webclient/menus/menu_service";

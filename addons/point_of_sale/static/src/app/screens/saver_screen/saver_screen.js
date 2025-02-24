@@ -1,5 +1,5 @@
 import { registry } from "@web/core/registry";
-import { Component } from "@odoo/owl";
+import { Component } from "@sleektiv/owl";
 import { useTime } from "@point_of_sale/app/utils/time_hook";
 
 export class SaverScreen extends Component {

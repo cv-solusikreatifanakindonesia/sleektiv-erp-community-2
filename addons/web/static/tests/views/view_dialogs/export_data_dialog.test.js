@@ -1,4 +1,4 @@
-import { expect, test } from "@odoo/hoot";
+import { expect, test } from "@sleektiv/hoot";
 import {
     check,
     dblclick,
@@ -7,8 +7,8 @@ import {
     queryAllTexts,
     queryFirst,
     select,
-} from "@odoo/hoot-dom";
-import { animationFrame, Deferred, runAllTimers } from "@odoo/hoot-mock";
+} from "@sleektiv/hoot-dom";
+import { animationFrame, Deferred, runAllTimers } from "@sleektiv/hoot-mock";
 import {
     contains,
     defineModels,

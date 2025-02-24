@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, api
+from sleektiv import models, api
 
 
 class PosSession(models.Model):

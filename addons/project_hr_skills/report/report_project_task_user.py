@@ -1,6 +1,6 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
+from sleektiv import fields, models
 
 class ReportProjectTaskUser(models.Model):
     _inherit = 'report.project.task.user'

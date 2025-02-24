@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 
 import json
@@ -7,11 +7,11 @@ import logging
 import requests
 from werkzeug.urls import url_quote
 from base64 import b64encode
-from odoo.addons.account.tools import LegacyHTTPAdapter
+from sleektiv.addons.account.tools import LegacyHTTPAdapter
 from json.decoder import JSONDecodeError
 
-from odoo import api, models, _
-from odoo.tools.float_utils import json_float_round
+from sleektiv import api, models, _
+from sleektiv.tools.float_utils import json_float_round
 
 _logger = logging.getLogger(__name__)
 

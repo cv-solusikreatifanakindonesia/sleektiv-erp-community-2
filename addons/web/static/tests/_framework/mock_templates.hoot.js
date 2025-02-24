@@ -44,7 +44,7 @@ const ATTRIBUTE_DEFAULT_VALUES = [
 ];
 const ATTRIBUTE_PREFIXES = ["", "t-att-", "t-attf-"];
 
-const { loader } = odoo;
+const { loader } = sleektiv;
 
 //-----------------------------------------------------------------------------
 // Exports
@@ -52,7 +52,7 @@ const { loader } = odoo;
 
 /**
  * @param {string} name
- * @param {OdooModuleFactory} factory
+ * @param {SleektivModuleFactory} factory
  */
 export function makeTemplateFactory(name, factory) {
     return () => {

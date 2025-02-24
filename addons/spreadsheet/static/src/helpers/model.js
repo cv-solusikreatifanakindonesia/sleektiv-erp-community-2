@@ -1,21 +1,21 @@
-/** @odoo-module */
+/** @sleektiv-module */
 // @ts-check
 
-import { parse, helpers, iterateAstNodes } from "@odoo/o-spreadsheet";
+import { parse, helpers, iterateAstNodes } from "@sleektiv/o-spreadsheet";
 import { isLoadingError } from "@spreadsheet/o_spreadsheet/errors";
 import { loadBundle } from "@web/core/assets";
-import { OdooSpreadsheetModel } from "@spreadsheet/model";
-import { OdooDataProvider } from "@spreadsheet/data_sources/odoo_data_provider";
+import { SleektivSpreadsheetModel } from "@spreadsheet/model";
+import { SleektivDataProvider } from "@spreadsheet/data_sources/sleektiv_data_provider";
 
 const { formatValue, isDefined, toCartesian, toXC } = helpers;
 import {
     isMarkdownViewUrl,
     isMarkdownIrMenuIdUrl,
     isIrMenuXmlUrl,
-} from "@spreadsheet/ir_ui_menu/odoo_menu_link_cell";
+} from "@spreadsheet/ir_ui_menu/sleektiv_menu_link_cell";
 
 /**
- * @typedef {import("@spreadsheet").OdooSpreadsheetModel} OdooSpreadsheetModel
+ * @typedef {import("@spreadsheet").SleektivSpreadsheetModel} SleektivSpreadsheetModel
  */
 
 export async function fetchSpreadsheetModel(env, resModel, resId) {
@@ -26,22 +26,22 @@ export async function fetchSpreadsheetModel(env, resModel, resId) {
 }
 
 export function createSpreadsheetModel({ env, data, revisions }) {
-    const odooDataProvider = new OdooDataProvider(env);
-    const model = new OdooSpreadsheetModel(data, { custom: { odooDataProvider } }, revisions);
+    const sleektivDataProvider = new SleektivDataProvider(env);
+    const model = new SleektivSpreadsheetModel(data, { custom: { sleektivDataProvider } }, revisions);
     return model;
 }
 
 /**
- * @param {OdooSpreadsheetModel} model
+ * @param {SleektivSpreadsheetModel} model
  */
-export async function waitForOdooSources(model) {
+export async function waitForSleektivSources(model) {
     const promises = model.getters
-        .getOdooChartIds()
+        .getSleektivChartIds()
         .map((chartId) => model.getters.getChartDataSource(chartId).load());
     promises.push(
         ...model.getters
             .getPivotIds()
-            .filter((pivotId) => model.getters.getPivotCoreDefinition(pivotId).type === "ODOO")
+            .filter((pivotId) => model.getters.getPivotCoreDefinition(pivotId).type === "SLEEKTIV")
             .map((pivotId) => model.getters.getPivot(pivotId))
             .map((pivot) => pivot.load())
     );
@@ -56,29 +56,29 @@ export async function waitForOdooSources(model) {
 
 /**
  * Ensure that the spreadsheet does not contains cells that are in loading state
- * @param {OdooSpreadsheetModel} model
+ * @param {SleektivSpreadsheetModel} model
  * @returns {Promise<void>}
  */
 export async function waitForDataLoaded(model) {
-    await waitForOdooSources(model);
-    const odooDataProvider = model.config.custom.odooDataProvider;
-    if (!odooDataProvider) {
+    await waitForSleektivSources(model);
+    const sleektivDataProvider = model.config.custom.sleektivDataProvider;
+    if (!sleektivDataProvider) {
         return;
     }
     await new Promise((resolve, reject) => {
         function check() {
             model.dispatch("EVALUATE_CELLS");
             if (isLoaded(model)) {
-                odooDataProvider.removeEventListener("data-source-updated", check);
+                sleektivDataProvider.removeEventListener("data-source-updated", check);
                 resolve();
             }
         }
-        odooDataProvider.addEventListener("data-source-updated", check);
+        sleektivDataProvider.addEventListener("data-source-updated", check);
         check();
     });
 }
 
-function containsLinkToOdoo(link) {
+function containsLinkToSleektiv(link) {
     if (link && link.url) {
         return (
             isMarkdownViewUrl(link.url) ||
@@ -89,10 +89,10 @@ function containsLinkToOdoo(link) {
 }
 
 /**
- * @param {OdooSpreadsheetModel} model
+ * @param {SleektivSpreadsheetModel} model
  * @returns {Promise<object>}
  */
-export async function freezeOdooData(model) {
+export async function freezeSleektivData(model) {
     await waitForDataLoaded(model);
     const data = model.exportData();
     for (const sheet of Object.values(data.sheets)) {
@@ -102,9 +102,9 @@ export async function freezeOdooData(model) {
             const sheetId = sheet.id;
             const position = { sheetId, col, row };
             const evaluatedCell = model.getters.getEvaluatedCell(position);
-            if (containsOdooFunction(cell.content)) {
+            if (containsSleektivFunction(cell.content)) {
                 const pivotId = model.getters.getPivotIdFromPosition(position);
-                if (pivotId && model.getters.getPivotCoreDefinition(pivotId).type !== "ODOO") {
+                if (pivotId && model.getters.getPivotCoreDefinition(pivotId).type !== "SLEEKTIV") {
                     continue;
                 }
                 cell.content = evaluatedCell.value.toString();
@@ -133,14 +133,14 @@ export async function freezeOdooData(model) {
                     }
                 }
             }
-            if (containsLinkToOdoo(evaluatedCell.link)) {
+            if (containsLinkToSleektiv(evaluatedCell.link)) {
                 cell.content = evaluatedCell.link.label;
             }
         }
         for (const figure of sheet.figures) {
-            if (figure.tag === "chart" && figure.data.type.startsWith("odoo_")) {
+            if (figure.tag === "chart" && figure.data.type.startsWith("sleektiv_")) {
                 await loadBundle("web.chartjs_lib");
-                const img = odooChartToImage(model, figure);
+                const img = sleektivChartToImage(model, figure);
                 figure.tag = "image";
                 figure.data = {
                     path: img,
@@ -151,7 +151,7 @@ export async function freezeOdooData(model) {
     }
     if (data.pivots) {
         data.pivots = Object.fromEntries(
-            Object.entries(data.pivots).filter(([id, def]) => def.type !== "ODOO")
+            Object.entries(data.pivots).filter(([id, def]) => def.type !== "SLEEKTIV")
         );
     }
     data.lists = {};
@@ -160,7 +160,7 @@ export async function freezeOdooData(model) {
 }
 
 /**
- * @param {OdooSpreadsheetModel} model
+ * @param {SleektivSpreadsheetModel} model
  * @returns {object}
  */
 function exportGlobalFiltersToSheet(model, data) {
@@ -202,11 +202,11 @@ export function getItemId(item, itemsDic) {
  * @param {string | undefined} content
  * @returns {boolean}
  */
-function containsOdooFunction(content) {
+function containsSleektivFunction(content) {
     if (
         !content ||
         !content.startsWith("=") ||
-        (!content.toUpperCase().includes("ODOO.") &&
+        (!content.toUpperCase().includes("SLEEKTIV.") &&
             !content.toUpperCase().includes("_T") &&
             !content.toUpperCase().includes("PIVOT"))
     ) {
@@ -217,7 +217,7 @@ function containsOdooFunction(content) {
         return iterateAstNodes(ast).some(
             (ast) =>
                 ast.type === "FUNCALL" &&
-                (ast.value.toUpperCase().startsWith("ODOO.") ||
+                (ast.value.toUpperCase().startsWith("SLEEKTIV.") ||
                     ast.value.toUpperCase().startsWith("_T") ||
                     ast.value.toUpperCase().startsWith("PIVOT"))
         );
@@ -227,7 +227,7 @@ function containsOdooFunction(content) {
 }
 
 /**
- * @param {OdooSpreadsheetModel} model
+ * @param {SleektivSpreadsheetModel} model
  * @returns {boolean}
  */
 function isLoaded(model) {
@@ -244,11 +244,11 @@ function isLoaded(model) {
 /**
  * Return the chart figure as a base64 image.
  * "data:image/png;base64,iVBORw0KGg..."
- * @param {OdooSpreadsheetModel} model
+ * @param {SleektivSpreadsheetModel} model
  * @param {object} figure
  * @returns {string}
  */
-function odooChartToImage(model, figure) {
+function sleektivChartToImage(model, figure) {
     const runtime = model.getters.getChartRuntime(figure.id);
     // wrap the canvas in a div with a fixed size because chart.js would
     // fill the whole page otherwise

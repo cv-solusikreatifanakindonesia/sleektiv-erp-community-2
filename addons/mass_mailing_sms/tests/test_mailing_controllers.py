@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import werkzeug.urls
 
-from odoo.tests.common import users
-from odoo.addons.mass_mailing_sms.tests.common import MassSMSCommon
-from odoo.tests import HttpCase
+from sleektiv.tests.common import users
+from sleektiv.addons.mass_mailing_sms.tests.common import MassSMSCommon
+from sleektiv.tests import HttpCase
 
 class TestMailingListSms(HttpCase, MassSMSCommon):
 

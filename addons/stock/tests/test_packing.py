@@ -1,11 +1,11 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import Command
-import odoo.tests
-from odoo.tests import Form
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import UserError
-from odoo import Command
+from sleektiv import Command
+import sleektiv.tests
+from sleektiv.tests import Form
+from sleektiv.tests.common import TransactionCase
+from sleektiv.exceptions import UserError
+from sleektiv import Command
 
 
 class TestPackingCommon(TransactionCase):
@@ -1938,7 +1938,7 @@ class TestPacking(TestPackingCommon):
         self.assertEqual(pack.location_id, delivery.location_dest_id)
 
 
-@odoo.tests.tagged('post_install', '-at_install')
+@sleektiv.tests.tagged('post_install', '-at_install')
 class TestPackagePropagation(TestPackingCommon):
 
     def test_reusable_package_propagation(self):

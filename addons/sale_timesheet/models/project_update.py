@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models
-from odoo.tools import float_utils, formatLang
-from odoo.tools.misc import format_duration
+from sleektiv import api, models
+from sleektiv.tools import float_utils, formatLang
+from sleektiv.tools.misc import format_duration
 
 
 class ProjectUpdate(models.Model):

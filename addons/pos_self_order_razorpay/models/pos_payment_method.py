@@ -1,6 +1,6 @@
 import uuid
-from odoo import models, api
-from odoo.osv import expression
+from sleektiv import models, api
+from sleektiv.osv import expression
 
 
 class PosPaymentMethod(models.Model):

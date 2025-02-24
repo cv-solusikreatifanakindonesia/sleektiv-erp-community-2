@@ -1,8 +1,8 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
-from odoo import http, _
-from odoo.http import request
-from odoo.addons.account.controllers.download_docs import _get_headers
+from sleektiv import http, _
+from sleektiv.http import request
+from sleektiv.addons.account.controllers.download_docs import _get_headers
 
 
 class EfakturDownloadController(http.Controller):

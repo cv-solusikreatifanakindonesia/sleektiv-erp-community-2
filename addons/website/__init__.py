@@ -1,12 +1,12 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Odoo, Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from . import controllers
 from . import models
 from . import wizard
 
-import odoo
-from odoo import api, SUPERUSER_ID
-from odoo.http import request
+import sleektiv
+from sleektiv import api, SUPERUSER_ID
+from sleektiv.http import request
 from functools import partial
 
 
@@ -27,7 +27,7 @@ def uninstall_hook(env):
 
     # Properly unlink website_id from ir.model.fields
     def rem_website_id_null(dbname):
-        db_registry = odoo.modules.registry.Registry.new(dbname)
+        db_registry = sleektiv.modules.registry.Registry.new(dbname)
         with db_registry.cursor() as cr:
             env = api.Environment(cr, SUPERUSER_ID, {})
             env['ir.model.fields'].search([

@@ -1,13 +1,13 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 from hashlib import sha1
 
-from odoo import fields
-from odoo.http import request
-from odoo.tools import consteq, float_round, ustr
-from odoo.tools.misc import hmac as hmac_tool
+from sleektiv import fields
+from sleektiv.http import request
+from sleektiv.tools import consteq, float_round, ustr
+from sleektiv.tools.misc import hmac as hmac_tool
 
-from odoo.addons.payment.const import CURRENCY_MINOR_UNITS
+from sleektiv.addons.payment.const import CURRENCY_MINOR_UNITS
 
 
 # Access token management

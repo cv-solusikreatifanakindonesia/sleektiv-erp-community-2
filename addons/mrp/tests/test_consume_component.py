@@ -1,7 +1,7 @@
 import copy
 
-from odoo.exceptions import UserError
-from odoo.tests import common, tagged, Form
+from sleektiv.exceptions import UserError
+from sleektiv.tests import common, tagged, Form
 
 
 class TestConsumeComponentCommon(common.TransactionCase):

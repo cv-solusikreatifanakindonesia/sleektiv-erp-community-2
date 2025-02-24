@@ -1,11 +1,11 @@
 
 from unittest.mock import patch
 
-from odoo import Command
-from odoo.tests import tagged
+from sleektiv import Command
+from sleektiv.tests import tagged
 
-from odoo.addons.account.models.chart_template import AccountChartTemplate
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.account.models.chart_template import AccountChartTemplate
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
 
 
 def _get_chart_template_mapping(self, get_all=False):

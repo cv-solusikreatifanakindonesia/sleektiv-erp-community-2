@@ -1,9 +1,9 @@
 from datetime import timedelta
 
-from odoo import fields
-from odoo.exceptions import UserError
-from odoo.tests import tagged
-from odoo.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
+from sleektiv import fields
+from sleektiv.exceptions import UserError
+from sleektiv.tests import tagged
+from sleektiv.addons.account.tests.test_account_move_send import TestAccountMoveSendCommon
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

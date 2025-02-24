@@ -1,9 +1,9 @@
 from lxml import etree
 
-from odoo import Command, fields
-from odoo.tests import Form, users
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import UserError
+from sleektiv import Command, fields
+from sleektiv.tests import Form, users
+from sleektiv.tests.common import TransactionCase
+from sleektiv.exceptions import UserError
 
 
 class TestProjectCommon(TransactionCase):

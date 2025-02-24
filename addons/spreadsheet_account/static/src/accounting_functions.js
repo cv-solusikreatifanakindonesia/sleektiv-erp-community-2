@@ -1,10 +1,10 @@
-/** @odoo-module **/
+/** @sleektiv-module **/
 
 import { _t } from "@web/core/l10n/translation";
 import { sprintf } from "@web/core/utils/strings";
 
-import * as spreadsheet from "@odoo/o-spreadsheet";
-import { EvaluationError } from "@odoo/o-spreadsheet";
+import * as spreadsheet from "@sleektiv/o-spreadsheet";
+import { EvaluationError } from "@sleektiv/o-spreadsheet";
 const { functionRegistry } = spreadsheet.registries;
 const { arg, toBoolean, toString, toNumber, toJsDate } = spreadsheet.helpers;
 
@@ -147,7 +147,7 @@ const POSTED_ARG = arg(
     _t("Set to TRUE to include unposted entries.")
 )
 
-const ODOO_FIN_ARGS = () => [
+const SLEEKTIV_FIN_ARGS = () => [
     arg("account_codes (string)", _t("The prefix of the accounts.")),
     arg(
         "date_range (string, date)",
@@ -158,7 +158,7 @@ const ODOO_FIN_ARGS = () => [
     POSTED_ARG,
 ];
 
-const ODOO_RESIDUAL_ARGS = () => [
+const SLEEKTIV_RESIDUAL_ARGS = () => [
     arg(
         "account_codes (string, optional)",
         _t("The prefix of the accounts. If none provided, all receivable and payable accounts will be used.")
@@ -172,15 +172,15 @@ const ODOO_RESIDUAL_ARGS = () => [
     POSTED_ARG,
 ];
 
-const ODOO_PARTNER_BALANCE_ARGS = () => {
+const SLEEKTIV_PARTNER_BALANCE_ARGS = () => {
     const partner_arg = arg("partner_ids (string)", _t("The partner ids (separated by a comma)."));
-    return [partner_arg, ...ODOO_RESIDUAL_ARGS()];
+    return [partner_arg, ...SLEEKTIV_RESIDUAL_ARGS()];
 }
 
-functionRegistry.add("ODOO.CREDIT", {
+functionRegistry.add("SLEEKTIV.CREDIT", {
     description: _t("Get the total credit for the specified account(s) and period."),
-    args: ODOO_FIN_ARGS(),
-    category: "Odoo",
+    args: SLEEKTIV_FIN_ARGS(),
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (
         accountCodes,
@@ -210,10 +210,10 @@ functionRegistry.add("ODOO.CREDIT", {
     },
 });
 
-functionRegistry.add("ODOO.DEBIT", {
+functionRegistry.add("SLEEKTIV.DEBIT", {
     description: _t("Get the total debit for the specified account(s) and period."),
-    args: ODOO_FIN_ARGS(),
-    category: "Odoo",
+    args: SLEEKTIV_FIN_ARGS(),
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (
         accountCodes,
@@ -243,10 +243,10 @@ functionRegistry.add("ODOO.DEBIT", {
     },
 });
 
-functionRegistry.add("ODOO.BALANCE", {
+functionRegistry.add("SLEEKTIV.BALANCE", {
     description: _t("Get the total balance for the specified account(s) and period."),
-    args: ODOO_FIN_ARGS(),
-    category: "Odoo",
+    args: SLEEKTIV_FIN_ARGS(),
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (
         accountCodes,
@@ -282,13 +282,13 @@ functionRegistry.add("ODOO.BALANCE", {
     },
 });
 
-functionRegistry.add("ODOO.FISCALYEAR.START", {
+functionRegistry.add("SLEEKTIV.FISCALYEAR.START", {
     description: _t("Returns the starting date of the fiscal year encompassing the provided date."),
     args: [
         arg("day (date)", _t("The day from which to extract the fiscal year start.")),
         arg("company_id (number, optional)", _t("The company.")),
     ],
-    category: "Odoo",
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (date, companyId = { value: null }) {
         const startDate = this.getters.getFiscalStartDate(
@@ -302,13 +302,13 @@ functionRegistry.add("ODOO.FISCALYEAR.START", {
     },
 });
 
-functionRegistry.add("ODOO.FISCALYEAR.END", {
+functionRegistry.add("SLEEKTIV.FISCALYEAR.END", {
     description: _t("Returns the ending date of the fiscal year encompassing the provided date."),
     args: [
         arg("day (date)", _t("The day from which to extract the fiscal year end.")),
         arg("company_id (number, optional)", _t("The company.")),
     ],
-    category: "Odoo",
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (date, companyId = { value: null }) {
         const endDate = this.getters.getFiscalEndDate(
@@ -343,7 +343,7 @@ const ACCOUNT_TYPES = [
     "off_balance",
 ];
 
-functionRegistry.add("ODOO.ACCOUNT.GROUP", {
+functionRegistry.add("SLEEKTIV.ACCOUNT.GROUP", {
     description: _t("Returns the account codes of a given group."),
     args: [
         arg(
@@ -351,7 +351,7 @@ functionRegistry.add("ODOO.ACCOUNT.GROUP", {
             _t("The technical account type (possible values are: %s).", ACCOUNT_TYPES.join(", "))
         ),
     ],
-    category: "Odoo",
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (accountType) {
         const accountTypes = this.getters.getAccountGroupCodes(toString(accountType));
@@ -359,10 +359,10 @@ functionRegistry.add("ODOO.ACCOUNT.GROUP", {
     },
 });
 
-functionRegistry.add("ODOO.RESIDUAL", {
+functionRegistry.add("SLEEKTIV.RESIDUAL", {
     description: _t("Return the residual amount for the specified account(s) and period"),
-    args: ODOO_RESIDUAL_ARGS(),
-    category: "Odoo",
+    args: SLEEKTIV_RESIDUAL_ARGS(),
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (
         accountCodes,
@@ -395,10 +395,10 @@ functionRegistry.add("ODOO.RESIDUAL", {
     },
 })
 
-functionRegistry.add("ODOO.PARTNER.BALANCE", {
+functionRegistry.add("SLEEKTIV.PARTNER.BALANCE", {
     description: _t("Return the partner balance for the specified account(s) and period"),
-    args: ODOO_PARTNER_BALANCE_ARGS(),
-    category: "Odoo",
+    args: SLEEKTIV_PARTNER_BALANCE_ARGS(),
+    category: "Sleektiv",
     returns: ["NUMBER"],
     compute: function (
         partnerIds,

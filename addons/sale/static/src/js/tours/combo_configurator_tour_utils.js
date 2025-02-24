@@ -1,4 +1,4 @@
-import { queryAll, queryValue, waitUntil } from '@odoo/hoot-dom';
+import { queryAll, queryValue, waitUntil } from '@sleektiv/hoot-dom';
 
 function comboSelector(comboName) {
     return `

@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 from freezegun import freeze_time
 from lxml import etree
 
-from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.addons.l10n_my_edi.tests.test_file_generation import NS_MAP
-from odoo.tests import tagged
+from sleektiv.addons.account.tests.common import AccountTestInvoicingCommon
+from sleektiv.addons.l10n_my_edi.tests.test_file_generation import NS_MAP
+from sleektiv.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

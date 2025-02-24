@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import _, api, models
-from odoo.exceptions import UserError
-from odoo.tools import split_every
+from sleektiv import _, api, models
+from sleektiv.exceptions import UserError
+from sleektiv.tools import split_every
 
 
 class AccountTax(models.Model):

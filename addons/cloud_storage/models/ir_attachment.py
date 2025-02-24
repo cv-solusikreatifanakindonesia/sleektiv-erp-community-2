@@ -1,10 +1,10 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Sleektiv. See LICENSE file for full copyright and licensing details.
 
 import uuid
 
-from odoo import models, fields, _
-from odoo.exceptions import UserError
-from odoo.http import Stream
+from sleektiv import models, fields, _
+from sleektiv.exceptions import UserError
+from sleektiv.http import Stream
 
 
 class CloudStorageAttachment(models.Model):
