@@ -370,7 +370,7 @@ class L10nHuEdiConnection:
             'softwareName': 'Sleektiv Enterprise',
             'softwareOperation': 'ONLINE_SERVICE',
             'softwareMainVersion': sleektiv_version,
-            'softwareDevName': 'Sleektiv SA',
+            'softwareDevName': 'Sleektiv',
             'softwareDevContact': 'andu@sleektiv.com',
             'softwareDevCountryCode': 'BE',
             'softwareDevTaxNumber': '477472701',

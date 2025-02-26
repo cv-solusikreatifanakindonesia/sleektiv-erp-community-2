@@ -49,7 +49,7 @@ registry.category("web_tour.tours").add('website_crm_tour', {
 }, {
     content: "Complete Company",
     trigger: "input[name=partner_name]",
-    run: "edit Sleektiv S.A.",
+    run: "edit Sleektiv.",
 }, {
     content: "Complete Subject",
     trigger: "input[name=name]",
