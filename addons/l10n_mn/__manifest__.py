@@ -6,7 +6,7 @@
     'icon': '/account/static/description/l10n.png',
     'countries': ['mn'],
     'category': 'Accounting/Localizations/Account Charts',
-    'author': 'BumanIT LLC, Odoo S.A.',
+    'author': 'BumanIT LLC, Odoo S.A., Sleektiv',
     'description': """
 This is the module to manage the accounting chart for Mongolia.
 ===============================================================

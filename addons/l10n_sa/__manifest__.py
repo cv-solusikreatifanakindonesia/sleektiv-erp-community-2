@@ -4,7 +4,7 @@
     'icon': '/account/static/description/l10n.png',
     'countries': ['sa'],
     'version': '2.0',
-    'author': 'Odoo S.A., DVIT.ME (http://www.dvit.me)',
+    'author': 'Odoo S.A., DVIT.ME (http://www.dvit.me), Sleektiv',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Odoo Arabic localization for most Saudi Arabia.

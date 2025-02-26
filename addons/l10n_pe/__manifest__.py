@@ -5,7 +5,7 @@
     'countries': ['pe'],
     'version': '3.0',
     'category': 'Accounting/Localizations/Account Charts',
-    'author': 'Vauxoo, Odoo S.A.',
+    'author': 'Vauxoo, Odoo S.A., Sleektiv',
     'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/peru.html',
     'license': 'LGPL-3',
     'depends': [

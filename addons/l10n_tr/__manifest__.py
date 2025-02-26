@@ -17,7 +17,7 @@ Activates:
 - Taxes
 - Tax Report
     """,
-    'author': 'Odoo S.A., Drysharks Consulting and Trading Ltd.',
+    'author': 'Odoo S.A., Drysharks Consulting and Trading Ltd., Sleektiv',
     'depends': [
         'account',
     ],

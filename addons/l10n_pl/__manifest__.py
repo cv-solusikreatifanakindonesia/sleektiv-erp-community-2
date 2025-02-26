@@ -4,7 +4,7 @@
     'icon': '/account/static/description/l10n.png',
     'countries': ['pl'],
     'version': '2.0',
-    'author': 'Odoo S.A., Grzegorz Grzelak (OpenGLOBE) (http://www.openglobe.pl)',
+    'author': 'Odoo S.A., Grzegorz Grzelak (OpenGLOBE) (http://www.openglobe.pl), Sleektiv',
     'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """

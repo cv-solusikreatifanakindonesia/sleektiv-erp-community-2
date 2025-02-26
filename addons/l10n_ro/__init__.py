@@ -7,5 +7,6 @@
 # Copyright (C) 2015 Forest and Biomass Services Romania (http://www.forbiom.eu).
 # Copyright (C) 2011 TOTAL PC SYSTEMS (http://www.erpsystems.ro).
 # Copyright (C) 2009 (<http://www.filsystem.ro>)
+# Copyright (C) 2025 Sleektiv
 
 from . import models

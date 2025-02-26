@@ -4,7 +4,7 @@
     'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'icon': '/account/static/description/l10n.png',
     'countries': ['ve'],
-    'author': 'Odoo S.A., Vauxoo',
+    'author': 'Odoo S.A., Vauxoo, Sleektiv',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Chart of Account for Venezuela.

@@ -2,7 +2,7 @@
 {
     'name': 'Romania - Accounting',
     'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations/romania.html',
-    'author': 'Fekete Mihai (NextERP Romania SRL), Odoo S.A.',
+    'author': 'Fekete Mihai (NextERP Romania SRL), Odoo S.A., Sleektiv',
     'icon': '/account/static/description/l10n.png',
     'countries': ['ro'],
     'category': 'Accounting/Localizations/Account Charts',

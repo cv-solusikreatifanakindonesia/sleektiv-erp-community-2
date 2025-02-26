@@ -5,7 +5,7 @@
     'icon': '/account/static/description/l10n.png',
     'countries': ['se'],
     'version': '1.1',
-    'author': 'XCLUDE, Odoo S.A.',
+    'author': 'XCLUDE, Odoo S.A., Sleektiv',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Swedish Accounting

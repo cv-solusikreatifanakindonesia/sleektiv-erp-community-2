@@ -20,7 +20,7 @@ Notes:
       see the first sheet of tax.xls for details of coverage
     * to update the chart of tax template, update tax.xls and run tax2csv.py
 """,
-    'author': 'Odoo S.A., ADN, ACSONE SA/NV',
+    'author': 'Odoo S.A., ADN, ACSONE SA/NV, Sleektiv',
     'depends': [
         'account',
         'base_iban',

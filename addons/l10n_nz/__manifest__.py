@@ -15,7 +15,7 @@ Also:
     - activates a number of regional currencies.
     - sets up New Zealand taxes.
     """,
-    'author': 'Odoo S.A., Richard deMeester - Willow IT',
+    'author': 'Odoo S.A., Richard deMeester - Willow IT, Sleektiv',
     'website': 'https://sleektiv.com/documentation/master/applications/finance/fiscal_localizations.html',
     'depends': [
         'account',
