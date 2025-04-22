@@ -1,0 +1,916 @@
+2025-04-22 17:50:03,077 11231 INFO ? sleektiv: Odoo version 18.0 
+2025-04-22 17:50:03,078 11231 INFO ? sleektiv: Using configuration file at /Volumes/DATA_HDD/SKAI-NEW-PROJ/sleektiv-erp-community-2/sleektiv-config.conf 
+2025-04-22 17:50:03,078 11231 INFO ? sleektiv: addons paths: ['/Volumes/DATA_HDD/SKAI-NEW-PROJ/sleektiv-erp-community-2/sleektiv/addons', '/Users/user/Library/Application Support/Sleektiv/addons/18.0', '/Volumes/DATA_HDD/SKAI-NEW-PROJ/sleektiv-erp-community-2/addons', '/Volumes/DATA_HDD/SKAI-NEW-PROJ/sleektiv-erp-community-2/themes'] 
+2025-04-22 17:50:03,078 11231 INFO ? sleektiv: database: superperson@127.0.0.1:5432 
+2025-04-22 17:50:03,285 11231 INFO ? sleektiv.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2025-04-22 17:50:03,424 11231 INFO ? sleektiv.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2025-04-22 17:50:03,839 11231 INFO ? sleektiv.service.server: HTTP service (werkzeug) running on root:8069 
+2025-04-22 17:50:03,865 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: init db 
+2025-04-22 17:50:06,797 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading 1 modules... 
+2025-04-22 17:50:06,797 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module base (1/1) 
+2025-04-22 17:50:06,878 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module base: creating or updating database tables 
+2025-04-22 17:50:07,622 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.module.module.menus_by_module 
+2025-04-22 17:50:07,623 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.module.module.reports_by_module 
+2025-04-22 17:50:07,623 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.module.module.views_by_module 
+2025-04-22 17:50:07,819 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.user_id 
+2025-04-22 17:50:07,820 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.commercial_partner_id 
+2025-04-22 17:50:07,820 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.complete_name 
+2025-04-22 17:50:07,820 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.company_registry 
+2025-04-22 17:50:07,820 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.commercial_company_name 
+2025-04-22 17:50:07,820 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.partner_share 
+2025-04-22 17:50:07,876 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.currency.decimal_places 
+2025-04-22 17:50:07,917 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.company.uses_default_logo 
+2025-04-22 17:50:07,917 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.company.logo_web 
+2025-04-22 17:50:07,920 11231 INFO sleektiv_erp_community_2 sleektiv.models: Computing parent_path for table res_company... 
+2025-04-22 17:50:07,962 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.users.signature 
+2025-04-22 17:50:07,962 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.users.share 
+2025-04-22 17:50:10,867 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_bank.xml 
+2025-04-22 17:50:10,875 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res.lang.csv 
+2025-04-22 17:50:10,968 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_lang_data.xml 
+2025-04-22 17:50:11,035 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_partner_data.xml 
+2025-04-22 17:50:11,136 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_currency_data.xml 
+2025-04-22 17:50:11,995 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_company_data.xml 
+2025-04-22 17:50:12,009 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_users_data.xml 
+2025-04-22 17:50:13,391 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/report_paperformat_data.xml 
+2025-04-22 17:50:13,405 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_country_data.xml 
+2025-04-22 17:50:14,162 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/ir_demo_data.xml 
+2025-04-22 17:50:14,181 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/security/base_groups.xml 
+2025-04-22 17:50:14,637 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/security/base_security.xml 
+2025-04-22 17:50:14,886 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/base_menus.xml 
+2025-04-22 17:50:14,996 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/decimal_precision_views.xml 
+2025-04-22 17:50:15,024 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_config_views.xml 
+2025-04-22 17:50:15,035 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res.country.state.csv 
+2025-04-22 17:50:16,120 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_actions_views.xml 
+2025-04-22 17:50:16,365 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_asset_views.xml 
+2025-04-22 17:50:16,396 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2025-04-22 17:50:16,428 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_cron_views.xml 
+2025-04-22 17:50:16,478 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2025-04-22 17:50:16,507 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_filters_views.xml 
+2025-04-22 17:50:16,541 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_mail_server_views.xml 
+2025-04-22 17:50:16,577 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_model_views.xml 
+2025-04-22 17:50:16,840 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_attachment_views.xml 
+2025-04-22 17:50:16,878 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_rule_views.xml 
+2025-04-22 17:50:16,914 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_sequence_views.xml 
+2025-04-22 17:50:16,950 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2025-04-22 17:50:16,985 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_ui_view_views.xml 
+2025-04-22 17:50:17,066 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_default_views.xml 
+2025-04-22 17:50:17,097 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2025-04-22 17:50:17,103 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/ir_cron_data.xml 
+2025-04-22 17:50:17,121 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/report/ir_model_report.xml 
+2025-04-22 17:50:17,129 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/report/ir_model_templates.xml 
+2025-04-22 17:50:17,145 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_logging_views.xml 
+2025-04-22 17:50:17,177 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2025-04-22 17:50:17,198 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_module_views.xml 
+2025-04-22 17:50:17,338 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/ir_module_category_data.xml 
+2025-04-22 17:50:17,486 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/ir_module_module.xml 
+2025-04-22 17:50:17,608 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/report/ir_module_reports.xml 
+2025-04-22 17:50:17,616 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/report/ir_module_report_templates.xml 
+2025-04-22 17:50:17,631 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_module_update_views.xml 
+2025-04-22 17:50:17,665 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_language_install_views.xml 
+2025-04-22 17:50:17,688 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_import_language_views.xml 
+2025-04-22 17:50:17,727 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2025-04-22 17:50:17,768 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2025-04-22 17:50:17,792 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_export_language_views.xml 
+2025-04-22 17:50:17,817 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2025-04-22 17:50:17,844 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2025-04-22 17:50:17,871 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/ir_profile_views.xml 
+2025-04-22 17:50:17,910 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_company_views.xml 
+2025-04-22 17:50:17,949 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_lang_views.xml 
+2025-04-22 17:50:17,988 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_partner_views.xml 
+2025-04-22 17:50:18,179 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_bank_views.xml 
+2025-04-22 17:50:18,235 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_country_views.xml 
+2025-04-22 17:50:18,308 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_currency_views.xml 
+2025-04-22 17:50:18,374 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_users_views.xml 
+2025-04-22 17:50:18,599 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_device_views.xml 
+2025-04-22 17:50:18,635 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2025-04-22 17:50:18,647 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/res_config_settings_views.xml 
+2025-04-22 17:50:18,661 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/views/report_paperformat_views.xml 
+2025-04-22 17:50:18,702 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/security/ir.model.access.csv 
+2025-04-22 17:50:18,907 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module base: loading demo 
+2025-04-22 17:50:18,907 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_users_demo.xml 
+2025-04-22 17:50:21,619 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_partner_bank_demo.xml 
+2025-04-22 17:50:21,628 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_currency_demo.xml 
+2025-04-22 17:50:21,635 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_currency_rate_demo.xml 
+2025-04-22 17:50:22,070 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_bank_demo.xml 
+2025-04-22 17:50:22,079 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_partner_demo.xml 
+2025-04-22 17:50:22,380 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base/data/res_partner_image_demo.xml 
+2025-04-22 17:50:23,428 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module base loaded in 16.63s, 9255 queries (+9255 other) 
+2025-04-22 17:50:23,428 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: 1 modules loaded in 16.63s, 9255 queries (+9255 extra) 
+2025-04-22 17:50:23,463 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: updating modules list 
+2025-04-22 17:50:23,465 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2025-04-22 17:50:24,810 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading 13 modules... 
+2025-04-22 17:50:24,810 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module web (2/13) 
+2025-04-22 17:50:24,861 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module web: creating or updating database tables 
+2025-04-22 17:50:25,695 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/security/ir.model.access.csv 
+2025-04-22 17:50:25,718 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/views/webclient_templates.xml 
+2025-04-22 17:50:25,826 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/views/report_templates.xml 
+2025-04-22 17:50:26,017 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/views/base_document_layout_views.xml 
+2025-04-22 17:50:26,042 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/views/partner_view.xml 
+2025-04-22 17:50:26,054 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/views/speedscope_template.xml 
+2025-04-22 17:50:26,063 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/views/neutralize_views.xml 
+2025-04-22 17:50:26,073 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/data/ir_attachment.xml 
+2025-04-22 17:50:26,081 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web/data/report_layout.xml 
+2025-04-22 17:50:26,163 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module web loaded in 1.35s, 1097 queries (+1097 other) 
+2025-04-22 17:50:26,163 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module auth_totp (3/13) 
+2025-04-22 17:50:26,274 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module auth_totp: creating or updating database tables 
+2025-04-22 17:50:26,367 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp/security/security.xml 
+2025-04-22 17:50:26,411 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2025-04-22 17:50:26,425 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2025-04-22 17:50:26,438 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp/views/res_users_views.xml 
+2025-04-22 17:50:26,494 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp/views/templates.xml 
+2025-04-22 17:50:26,504 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2025-04-22 17:50:26,590 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module auth_totp loaded in 0.43s, 188 queries (+188 other) 
+2025-04-22 17:50:26,590 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module base_import (4/13) 
+2025-04-22 17:50:26,883 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module base_import: creating or updating database tables 
+2025-04-22 17:50:27,701 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_import/security/ir.model.access.csv 
+2025-04-22 17:50:27,732 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module base_import loaded in 1.14s, 874 queries (+874 other) 
+2025-04-22 17:50:27,732 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module base_import_module (5/13) 
+2025-04-22 17:50:27,772 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module base_import_module: creating or updating database tables 
+2025-04-22 17:50:27,902 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2025-04-22 17:50:27,920 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2025-04-22 17:50:27,956 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2025-04-22 17:50:28,041 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module base_import_module loaded in 0.31s, 164 queries (+164 other) 
+2025-04-22 17:50:28,041 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module base_setup (6/13) 
+2025-04-22 17:50:28,086 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module base_setup: creating or updating database tables 
+2025-04-22 17:50:28,212 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_setup/data/base_setup_data.xml 
+2025-04-22 17:50:28,226 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2025-04-22 17:50:28,289 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_setup/views/res_partner_views.xml 
+2025-04-22 17:50:28,325 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module base_setup loaded in 0.28s, 150 queries (+150 other) 
+2025-04-22 17:50:28,325 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module bus (7/13) 
+2025-04-22 17:50:28,385 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module bus: creating or updating database tables 
+2025-04-22 17:50:28,586 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading bus/security/ir.model.access.csv 
+2025-04-22 17:50:28,620 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module bus loaded in 0.30s, 165 queries (+165 other) 
+2025-04-22 17:50:28,620 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module web_tour (8/13) 
+2025-04-22 17:50:28,703 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module web_tour: creating or updating database tables 
+2025-04-22 17:50:28,712 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.users.tour_enabled 
+2025-04-22 17:50:28,843 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_tour/security/ir.model.access.csv 
+2025-04-22 17:50:28,862 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_tour/views/tour_views.xml 
+2025-04-22 17:50:28,909 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_tour/views/res_users_views.xml 
+2025-04-22 17:50:28,964 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module web_tour loaded in 0.34s, 188 queries (+188 other) 
+2025-04-22 17:50:28,964 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module html_editor (9/13) 
+2025-04-22 17:50:29,161 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module html_editor: creating or updating database tables 
+2025-04-22 17:50:29,224 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module html_editor loaded in 0.26s, 42 queries (+42 other) 
+2025-04-22 17:50:29,224 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module iap (10/13) 
+2025-04-22 17:50:29,260 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module iap: creating or updating database tables 
+2025-04-22 17:50:29,389 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap/data/services.xml 
+2025-04-22 17:50:29,399 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap/security/ir.model.access.csv 
+2025-04-22 17:50:29,417 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap/security/ir_rule.xml 
+2025-04-22 17:50:29,431 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap/views/iap_views.xml 
+2025-04-22 17:50:29,473 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap/views/res_config_settings.xml 
+2025-04-22 17:50:29,514 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module iap loaded in 0.29s, 183 queries (+183 other) 
+2025-04-22 17:50:29,514 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module remove_enterprise (11/13) 
+2025-04-22 17:50:29,566 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module remove_enterprise: creating or updating database tables 
+2025-04-22 17:50:30,444 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading remove_enterprise/views/res_config_settings_views.xml 
+2025-04-22 17:50:30,494 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module remove_enterprise loaded in 0.98s, 920 queries (+920 other) 
+2025-04-22 17:50:30,495 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module web_editor (12/13) 
+2025-04-22 17:50:30,636 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module web_editor: creating or updating database tables 
+2025-04-22 17:50:31,521 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_editor/security/ir.model.access.csv 
+2025-04-22 17:50:31,538 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_editor/data/editor_assets.xml 
+2025-04-22 17:50:31,546 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_editor/views/editor.xml 
+2025-04-22 17:50:31,571 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_editor/views/snippets.xml 
+2025-04-22 17:50:31,664 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module web_editor loaded in 1.17s, 998 queries (+998 other) 
+2025-04-22 17:50:31,664 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module web_unsplash (13/13) 
+2025-04-22 17:50:31,710 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module web_unsplash: creating or updating database tables 
+2025-04-22 17:50:31,781 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2025-04-22 17:50:31,834 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module web_unsplash loaded in 0.17s, 98 queries (+98 other) 
+2025-04-22 17:50:31,834 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: 13 modules loaded in 7.02s, 5067 queries (+5067 extra) 
+2025-04-22 17:50:32,289 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Modules loaded. 
+2025-04-22 17:50:32,294 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: Registry changed, signaling through the database 
+2025-04-22 17:50:32,295 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: Registry loaded in 28.456s 
+2025-04-22 17:50:36,723 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_http: Generating routing map for key None 
+2025-04-22 17:50:36,786 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:36] "GET /websocket?version=18.0-3 HTTP/1.1" 101 - 6 0.004 0.066
+2025-04-22 17:50:36,806 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:36] "POST /bus/get_autovacuum_info HTTP/1.1" 200 - 5 0.003 0.005
+2025-04-22 17:50:37,100 11231 INFO ? sleektiv.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2025-04-22 17:50:51,774 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:51] "GET /sleektiv/apps HTTP/1.1" 303 - 1 0.002 0.006
+2025-04-22 17:50:52,139 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:52] "GET /web/login?redirect=%2Fsleektiv%2Fapps%3F HTTP/1.1" 200 - 48 0.029 0.327
+2025-04-22 17:50:52,395 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:52] "GET /web/binary/company_logo HTTP/1.1" 200 - 2 0.002 0.166
+2025-04-22 17:50:52,520 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:52] "GET /web/webclient/translations/1745344252499 HTTP/1.1" 200 - 2 0.001 0.015
+2025-04-22 17:50:59,077 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_users: Login successful for db:sleektiv_erp_community_2 login:admin from 127.0.0.1 
+2025-04-22 17:50:59,107 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: Caches invalidated, signaling through the database: ['default'] 
+2025-04-22 17:50:59,109 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:59] "POST /web/login HTTP/1.1" 303 - 43 0.072 0.837
+2025-04-22 17:50:59,130 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_device: User 2 inserts device log (0DExRd_tv5nAC-vkRyu23U93oqXtkAJaaky7bsV24A) 
+2025-04-22 17:50:59,798 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:50:59] "GET /sleektiv/apps HTTP/1.1" 200 - 71 0.055 0.621
+2025-04-22 17:51:00,224 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/7b48696/bus.websocket_worker_assets.min.js (id:194) 
+2025-04-22 17:51:00,232 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "GET /bus/websocket_worker_bundle?v=18.0-3 HTTP/1.1" 304 - 11 0.017 0.126
+2025-04-22 17:51:00,291 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "POST /web/action/load HTTP/1.1" 200 - 12 0.041 0.053
+2025-04-22 17:51:00,305 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "GET /web/image/res.partner/3/avatar_128?unique=1745319058000 HTTP/1.1" 200 - 16 0.040 0.071
+2025-04-22 17:51:00,306 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "GET /websocket?version=18.0-3 HTTP/1.1" 101 - 1 0.006 0.044
+2025-04-22 17:51:00,324 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 16 0.062 0.055
+2025-04-22 17:51:00,409 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 7 0.019 0.021
+2025-04-22 17:51:00,539 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 57 0.079 0.154
+2025-04-22 17:51:00,589 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 1 0.004 0.017
+2025-04-22 17:51:00,719 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 51 0.078 0.071
+2025-04-22 17:51:00,732 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:00] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.011 0.152
+2025-04-22 17:51:02,670 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:51:02] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.004
+2025-04-22 17:51:02,852 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Sales'] to user admin #2 via 127.0.0.1 
+2025-04-22 17:51:02,852 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: User #2 triggered module installation 
+2025-04-22 17:51:02,864 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: ALLOW access to module.button_install on ['Sales'] to user admin #2 via 127.0.0.1 
+2025-04-22 17:51:03,231 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading 1 modules... 
+2025-04-22 17:51:03,244 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2025-04-22 17:51:03,286 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: updating modules list 
+2025-04-22 17:51:03,289 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2025-04-22 17:51:04,466 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading 13 modules... 
+2025-04-22 17:51:04,485 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: 13 modules loaded in 0.02s, 0 queries (+0 extra) 
+2025-04-22 17:51:04,495 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading 55 modules... 
+2025-04-22 17:51:04,495 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module l10n_us (2/55) 
+2025-04-22 17:51:04,618 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module l10n_us: creating or updating database tables 
+2025-04-22 17:51:04,671 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading l10n_us/data/res_company_data.xml 
+2025-04-22 17:51:04,680 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading l10n_us/views/res_partner_bank_views.xml 
+2025-04-22 17:51:04,719 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module l10n_us loaded in 0.22s, 60 queries (+60 other) 
+2025-04-22 17:51:04,719 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module uom (3/55) 
+2025-04-22 17:51:04,775 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module uom: creating or updating database tables 
+2025-04-22 17:51:04,878 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading uom/data/uom_data.xml 
+2025-04-22 17:51:04,998 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading uom/security/uom_security.xml 
+2025-04-22 17:51:05,039 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading uom/security/ir.model.access.csv 
+2025-04-22 17:51:05,054 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading uom/views/uom_uom_views.xml 
+2025-04-22 17:51:05,135 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module uom loaded in 0.42s, 298 queries (+298 other) 
+2025-04-22 17:51:05,135 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module http_routing (10/55) 
+2025-04-22 17:51:05,240 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module http_routing: creating or updating database tables 
+2025-04-22 17:51:05,294 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading http_routing/views/http_routing_template.xml 
+2025-04-22 17:51:05,366 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading http_routing/views/res_lang_views.xml 
+2025-04-22 17:51:05,421 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module http_routing loaded in 0.29s, 100 queries (+100 other) 
+2025-04-22 17:51:05,421 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module onboarding (11/55) 
+2025-04-22 17:51:05,480 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module onboarding: creating or updating database tables 
+2025-04-22 17:51:05,713 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2025-04-22 17:51:05,739 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading onboarding/views/onboarding_views.xml 
+2025-04-22 17:51:05,789 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2025-04-22 17:51:05,805 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading onboarding/security/ir.model.access.csv 
+2025-04-22 17:51:05,848 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module onboarding loaded in 0.43s, 222 queries (+222 other) 
+2025-04-22 17:51:05,849 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module resource (12/55) 
+2025-04-22 17:51:05,988 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module resource: creating or updating database tables 
+2025-04-22 17:51:06,245 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/data/resource_data.xml 
+2025-04-22 17:51:06,272 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/security/ir.model.access.csv 
+2025-04-22 17:51:06,294 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/security/resource_security.xml 
+2025-04-22 17:51:06,335 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/views/resource_resource_views.xml 
+2025-04-22 17:51:06,378 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2025-04-22 17:51:06,425 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2025-04-22 17:51:06,444 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/views/resource_calendar_views.xml 
+2025-04-22 17:51:06,477 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/views/menuitems.xml 
+2025-04-22 17:51:06,501 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module resource: loading demo 
+2025-04-22 17:51:06,502 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading resource/data/resource_demo.xml 
+2025-04-22 17:51:06,572 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module resource loaded in 0.72s, 423 queries (+423 other) 
+2025-04-22 17:51:06,572 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module utm (13/55) 
+2025-04-22 17:51:06,665 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module utm: creating or updating database tables 
+2025-04-22 17:51:07,344 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/data/utm_medium_data.xml 
+2025-04-22 17:51:07,382 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/data/utm_source_data.xml 
+2025-04-22 17:51:07,412 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/data/utm_stage_data.xml 
+2025-04-22 17:51:07,419 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/data/utm_tag_data.xml 
+2025-04-22 17:51:07,426 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/views/utm_campaign_views.xml 
+2025-04-22 17:51:07,477 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/views/utm_medium_views.xml 
+2025-04-22 17:51:07,506 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/views/utm_source_views.xml 
+2025-04-22 17:51:07,527 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/views/utm_stage_views.xml 
+2025-04-22 17:51:07,556 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/views/utm_tag_views.xml 
+2025-04-22 17:51:07,573 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/views/utm_menus.xml 
+2025-04-22 17:51:07,616 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/security/ir.model.access.csv 
+2025-04-22 17:51:07,635 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module utm: loading demo 
+2025-04-22 17:51:07,635 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/data/utm_campaign_demo.xml 
+2025-04-22 17:51:07,656 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading utm/data/utm_stage_demo.xml 
+2025-04-22 17:51:07,688 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module utm loaded in 1.12s, 438 queries (+438 other) 
+2025-04-22 17:51:07,688 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module mail (18/55) 
+2025-04-22 17:51:07,793 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module mail: creating or updating database tables 
+2025-04-22 17:51:08,175 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.partner_ids 
+2025-04-22 17:51:08,175 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.template_id 
+2025-04-22 17:51:08,175 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_type_id 
+2025-04-22 17:51:08,176 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2025-04-22 17:51:08,176 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_user_id 
+2025-04-22 17:51:08,176 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.mail_post_method 
+2025-04-22 17:51:08,176 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_summary 
+2025-04-22 17:51:08,176 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2025-04-22 17:51:08,176 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_user_type 
+2025-04-22 17:51:08,177 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2025-04-22 17:51:08,177 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.activity_note 
+2025-04-22 17:51:08,177 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2025-04-22 17:51:08,250 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.company.email_primary_color 
+2025-04-22 17:51:08,250 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.company.email_secondary_color 
+2025-04-22 17:51:08,280 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.users.notification_type 
+2025-04-22 17:51:08,388 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.email_normalized 
+2025-04-22 17:51:11,270 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_groups.xml 
+2025-04-22 17:51:11,420 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2025-04-22 17:51:11,440 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2025-04-22 17:51:11,451 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2025-04-22 17:51:11,483 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2025-04-22 17:51:11,503 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2025-04-22 17:51:11,519 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2025-04-22 17:51:11,537 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2025-04-22 17:51:11,549 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2025-04-22 17:51:11,564 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/fetchmail_views.xml 
+2025-04-22 17:51:11,598 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2025-04-22 17:51:11,625 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2025-04-22 17:51:11,647 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_notification_views.xml 
+2025-04-22 17:51:11,668 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_message_views.xml 
+2025-04-22 17:51:11,720 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2025-04-22 17:51:11,747 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_mail_views.xml 
+2025-04-22 17:51:11,790 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_followers_views.xml 
+2025-04-22 17:51:11,811 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2025-04-22 17:51:11,832 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2025-04-22 17:51:11,853 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2025-04-22 17:51:11,880 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2025-04-22 17:51:11,900 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2025-04-22 17:51:11,921 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/discuss_channel_views.xml 
+2025-04-22 17:51:11,967 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_canned_response_views.xml 
+2025-04-22 17:51:11,997 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_activity_views.xml 
+2025-04-22 17:51:12,606 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2025-04-22 17:51:12,672 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2025-04-22 17:51:12,691 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/res_config_settings_views.xml 
+2025-04-22 17:51:12,736 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2025-04-22 17:51:12,747 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/res_partner_data.xml 
+2025-04-22 17:51:12,894 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2025-04-22 17:51:12,909 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2025-04-22 17:51:12,942 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2025-04-22 17:51:12,977 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2025-04-22 17:51:13,003 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/discuss_channel_data.xml 
+2025-04-22 17:51:13,078 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_activity_data.xml 
+2025-04-22 17:51:13,101 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/security_notifications_templates.xml 
+2025-04-22 17:51:13,111 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/ir_cron_data.xml 
+2025-04-22 17:51:13,191 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/ir_actions_client.xml 
+2025-04-22 17:51:13,200 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/security/mail_security.xml 
+2025-04-22 17:51:13,449 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/security/ir.model.access.csv 
+2025-04-22 17:51:13,541 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/discuss_public_templates.xml 
+2025-04-22 17:51:13,551 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2025-04-22 17:51:13,579 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_alias_views.xml 
+2025-04-22 17:51:13,611 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2025-04-22 17:51:13,631 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_guest_views.xml 
+2025-04-22 17:51:13,654 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2025-04-22 17:51:13,674 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_templates_public.xml 
+2025-04-22 17:51:13,689 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/res_users_views.xml 
+2025-04-22 17:51:13,726 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/res_users_settings_views.xml 
+2025-04-22 17:51:13,750 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_template_views.xml 
+2025-04-22 17:51:13,793 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2025-04-22 17:51:13,818 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/ir_model_views.xml 
+2025-04-22 17:51:13,878 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/res_partner_views.xml 
+2025-04-22 17:51:14,123 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2025-04-22 17:51:14,156 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_menus.xml 
+2025-04-22 17:51:14,611 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/res_company_views.xml 
+2025-04-22 17:51:14,629 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/views/mail_scheduled_message_views.xml 
+2025-04-22 17:51:14,643 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_canned_response_data.xml 
+2025-04-22 17:51:14,651 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/mail_templates_invite.xml 
+2025-04-22 17:51:14,665 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/data/web_tour_tour.xml 
+2025-04-22 17:51:14,674 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module mail: loading demo 
+2025-04-22 17:51:14,675 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/demo/discuss_channel_demo.xml 
+2025-04-22 17:51:14,890 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail/demo/mail_canned_response_demo.xml 
+2025-04-22 17:51:15,036 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module mail loaded in 7.35s, 4741 queries (+4742 other) 
+2025-04-22 17:51:15,036 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module analytic (20/55) 
+2025-04-22 17:51:15,148 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module analytic: creating or updating database tables 
+2025-04-22 17:51:15,501 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/security/analytic_security.xml 
+2025-04-22 17:51:15,601 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/security/ir.model.access.csv 
+2025-04-22 17:51:15,624 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/views/analytic_line_views.xml 
+2025-04-22 17:51:15,698 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/views/analytic_account_views.xml 
+2025-04-22 17:51:15,749 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2025-04-22 17:51:15,780 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2025-04-22 17:51:15,802 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/data/analytic_data.xml 
+2025-04-22 17:51:15,896 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module analytic: loading demo 
+2025-04-22 17:51:15,896 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading analytic/data/analytic_account_demo.xml 
+2025-04-22 17:51:16,162 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan2_id_index on table account_analytic_line 
+2025-04-22 17:51:16,409 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module analytic loaded in 1.37s, 614 queries (+614 other) 
+2025-04-22 17:51:16,409 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module auth_signup (21/55) 
+2025-04-22 17:51:16,487 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module auth_signup: creating or updating database tables 
+2025-04-22 17:51:16,639 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2025-04-22 17:51:16,648 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2025-04-22 17:51:16,666 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2025-04-22 17:51:16,711 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2025-04-22 17:51:16,743 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/views/res_users_views.xml 
+2025-04-22 17:51:16,782 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2025-04-22 17:51:16,814 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2025-04-22 17:51:16,835 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2025-04-22 17:51:16,871 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module auth_signup loaded in 0.46s, 207 queries (+207 other) 
+2025-04-22 17:51:16,871 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module auth_totp_mail (22/55) 
+2025-04-22 17:51:16,980 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module auth_totp_mail: creating or updating database tables 
+2025-04-22 17:51:17,027 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2025-04-22 17:51:17,130 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2025-04-22 17:51:17,142 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2025-04-22 17:51:17,155 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2025-04-22 17:51:17,223 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module auth_totp_mail loaded in 0.35s, 121 queries (+121 other) 
+2025-04-22 17:51:17,223 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module base_install_request (23/55) 
+2025-04-22 17:51:17,307 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module base_install_request: creating or updating database tables 
+2025-04-22 17:51:17,423 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2025-04-22 17:51:17,438 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2025-04-22 17:51:17,469 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2025-04-22 17:51:17,483 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2025-04-22 17:51:17,494 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2025-04-22 17:51:17,538 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module base_install_request loaded in 0.32s, 149 queries (+149 other) 
+2025-04-22 17:51:17,538 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module google_gmail (24/55) 
+2025-04-22 17:51:17,652 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module google_gmail: creating or updating database tables 
+2025-04-22 17:51:17,742 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2025-04-22 17:51:17,770 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2025-04-22 17:51:17,788 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2025-04-22 17:51:17,842 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module google_gmail loaded in 0.30s, 124 queries (+124 other) 
+2025-04-22 17:51:17,842 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module iap_mail (25/55) 
+2025-04-22 17:51:17,938 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module iap_mail: creating or updating database tables 
+2025-04-22 17:51:17,996 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap_mail/data/mail_templates.xml 
+2025-04-22 17:51:18,013 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading iap_mail/views/iap_views.xml 
+2025-04-22 17:51:18,047 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module iap_mail loaded in 0.20s, 66 queries (+66 other) 
+2025-04-22 17:51:18,047 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module mail_bot (26/55) 
+2025-04-22 17:51:18,136 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module mail_bot: creating or updating database tables 
+2025-04-22 17:51:18,237 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail_bot/views/res_users_views.xml 
+2025-04-22 17:51:18,309 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2025-04-22 17:51:18,351 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module mail_bot loaded in 0.30s, 131 queries (+131 other) 
+2025-04-22 17:51:18,352 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module phone_validation (27/55) 
+2025-04-22 17:51:18,545 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module phone_validation: creating or updating database tables 
+2025-04-22 17:51:19,931 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan2_id_index on table account_analytic_line 
+2025-04-22 17:51:19,932 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan3_id_index on table account_analytic_line 
+2025-04-22 17:51:19,986 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2025-04-22 17:51:20,000 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2025-04-22 17:51:20,086 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2025-04-22 17:51:20,120 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module phone_validation loaded in 1.77s, 1580 queries (+1580 other) 
+2025-04-22 17:51:20,120 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module privacy_lookup (28/55) 
+2025-04-22 17:51:20,235 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module privacy_lookup: creating or updating database tables 
+2025-04-22 17:51:20,480 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2025-04-22 17:51:20,640 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2025-04-22 17:51:20,695 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2025-04-22 17:51:20,717 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2025-04-22 17:51:20,761 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module privacy_lookup loaded in 0.64s, 240 queries (+240 other) 
+2025-04-22 17:51:20,761 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module product (29/55) 
+2025-04-22 17:51:20,949 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module product: creating or updating database tables 
+2025-04-22 17:51:22,212 11231 WARNING sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: docutils' system message present: <system_message level="2" line="3" source="<string>" type="WARNING"><paragraph>Title underline too short.</paragraph><literal_block xml:space="preserve">This is the base module for managing products and pricelists in Odoo, Sleektiv.
+========================================================================</literal_block></system_message> 
+2025-04-22 17:51:22,225 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/data/product_data.xml 
+2025-04-22 17:51:22,386 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/security/product_security.xml 
+2025-04-22 17:51:22,859 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/security/ir.model.access.csv 
+2025-04-22 17:51:22,911 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2025-04-22 17:51:23,010 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/wizard/update_product_attribute_value_views.xml 
+2025-04-22 17:51:23,025 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_tag_views.xml 
+2025-04-22 17:51:23,051 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_views.xml 
+2025-04-22 17:51:23,261 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/res_config_settings_views.xml 
+2025-04-22 17:51:23,314 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_attribute_views.xml 
+2025-04-22 17:51:23,403 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_attribute_value_views.xml 
+2025-04-22 17:51:23,413 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_category_views.xml 
+2025-04-22 17:51:23,451 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_combo_views.xml 
+2025-04-22 17:51:23,482 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_document_views.xml 
+2025-04-22 17:51:23,527 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_packaging_views.xml 
+2025-04-22 17:51:23,588 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2025-04-22 17:51:23,635 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_pricelist_views.xml 
+2025-04-22 17:51:23,682 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2025-04-22 17:51:23,727 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_template_attribute_line_views.xml 
+2025-04-22 17:51:23,741 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/product_template_views.xml 
+2025-04-22 17:51:23,808 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/res_country_group_views.xml 
+2025-04-22 17:51:23,825 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/views/res_partner_views.xml 
+2025-04-22 17:51:23,847 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/report/product_reports.xml 
+2025-04-22 17:51:23,895 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/report/product_product_templates.xml 
+2025-04-22 17:51:23,946 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/report/product_template_templates.xml 
+2025-04-22 17:51:23,978 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/report/product_packaging.xml 
+2025-04-22 17:51:23,988 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2025-04-22 17:51:24,006 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module product: loading demo 
+2025-04-22 17:51:24,007 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/data/product_attribute_demo.xml 
+2025-04-22 17:51:24,133 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/data/product_category_demo.xml 
+2025-04-22 17:51:24,209 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/data/product_demo.xml 
+2025-04-22 17:51:24,856 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted mail.message records with IDs: [66] 
+2025-04-22 17:51:24,864 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted product.product records with IDs: [9] 
+2025-04-22 17:51:24,961 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted mail.message records with IDs: [68, 67] 
+2025-04-22 17:51:24,967 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted product.product records with IDs: [10, 11] 
+2025-04-22 17:51:26,100 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted mail.message records with IDs: [86] 
+2025-04-22 17:51:26,106 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted product.product records with IDs: [22] 
+2025-04-22 17:51:26,270 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted mail.message records with IDs: [72] 
+2025-04-22 17:51:26,275 11231 INFO sleektiv_erp_community_2 sleektiv.models.unlink: User #1 deleted product.product records with IDs: [15] 
+2025-04-22 17:51:28,895 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/data/product_document_demo.xml 
+2025-04-22 17:51:28,927 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading product/data/product_supplierinfo_demo.xml 
+2025-04-22 17:51:29,748 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module product loaded in 8.99s, 3787 queries (+3787 other) 
+2025-04-22 17:51:29,748 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module resource_mail (30/55) 
+2025-04-22 17:51:29,911 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module resource_mail: creating or updating database tables 
+2025-04-22 17:51:29,990 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module resource_mail loaded in 0.24s, 35 queries (+35 other) 
+2025-04-22 17:51:29,990 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sales_team (31/55) 
+2025-04-22 17:51:30,110 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sales_team: creating or updating database tables 
+2025-04-22 17:51:30,150 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.users.sale_team_id 
+2025-04-22 17:51:30,340 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/security/sales_team_security.xml 
+2025-04-22 17:51:30,680 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/security/ir.model.access.csv 
+2025-04-22 17:51:30,701 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/data/crm_team_data.xml 
+2025-04-22 17:51:30,814 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/views/crm_tag_views.xml 
+2025-04-22 17:51:30,843 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/views/crm_team_views.xml 
+2025-04-22 17:51:30,917 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/views/crm_team_member_views.xml 
+2025-04-22 17:51:30,999 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/views/mail_activity_views.xml 
+2025-04-22 17:51:31,010 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sales_team: loading demo 
+2025-04-22 17:51:31,011 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/data/crm_team_demo.xml 
+2025-04-22 17:51:31,122 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sales_team/data/crm_tag_demo.xml 
+2025-04-22 17:51:31,174 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sales_team loaded in 1.18s, 690 queries (+690 other) 
+2025-04-22 17:51:31,174 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module partner_autocomplete (33/55) 
+2025-04-22 17:51:31,361 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module partner_autocomplete: creating or updating database tables 
+2025-04-22 17:51:31,560 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2025-04-22 17:51:31,573 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2025-04-22 17:51:31,625 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2025-04-22 17:51:31,644 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2025-04-22 17:51:31,670 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading partner_autocomplete/data/cron.xml 
+2025-04-22 17:51:31,692 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading partner_autocomplete/data/iap_service_data.xml 
+2025-04-22 17:51:31,724 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module partner_autocomplete loaded in 0.55s, 203 queries (+203 other) 
+2025-04-22 17:51:31,724 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module portal (34/55) 
+2025-04-22 17:51:31,887 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module portal: creating or updating database tables 
+2025-04-22 17:51:32,343 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/security/ir.model.access.csv 
+2025-04-22 17:51:32,357 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/data/mail_template_data.xml 
+2025-04-22 17:51:32,418 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/data/mail_templates.xml 
+2025-04-22 17:51:32,431 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/views/mail_templates_public.xml 
+2025-04-22 17:51:32,457 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/views/portal_templates.xml 
+2025-04-22 17:51:32,666 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/views/res_config_settings_views.xml 
+2025-04-22 17:51:32,699 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/wizard/portal_share_views.xml 
+2025-04-22 17:51:32,718 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2025-04-22 17:51:32,778 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module portal loaded in 1.05s, 533 queries (+533 other) 
+2025-04-22 17:51:32,778 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sms (35/55) 
+2025-04-22 17:51:33,008 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sms: creating or updating database tables 
+2025-04-22 17:51:33,025 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.sms_template_id 
+2025-04-22 17:51:33,026 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of ir.actions.server.sms_method 
+2025-04-22 17:51:33,063 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.phone_sanitized 
+2025-04-22 17:51:33,572 11231 INFO sleektiv_erp_community_2 sleektiv.addons.phone_validation.tools.phone_validation: The `phonenumbers` Python module is not installed, contact numbers will not be verified. Please install the `phonenumbers` Python module. 
+2025-04-22 17:51:33,861 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/data/iap_service_data.xml 
+2025-04-22 17:51:33,910 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/data/ir_cron_data.xml 
+2025-04-22 17:51:33,925 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_account_code_views.xml 
+2025-04-22 17:51:33,951 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_account_phone_views.xml 
+2025-04-22 17:51:33,964 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_account_sender_views.xml 
+2025-04-22 17:51:33,977 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2025-04-22 17:51:33,998 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2025-04-22 17:51:34,018 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2025-04-22 17:51:34,040 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2025-04-22 17:51:34,057 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2025-04-22 17:51:34,079 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/mail_notification_views.xml 
+2025-04-22 17:51:34,104 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/res_config_settings_views.xml 
+2025-04-22 17:51:34,131 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/res_partner_views.xml 
+2025-04-22 17:51:34,187 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/iap_account_views.xml 
+2025-04-22 17:51:34,207 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/sms_sms_views.xml 
+2025-04-22 17:51:34,250 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/views/sms_template_views.xml 
+2025-04-22 17:51:34,289 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/security/ir.model.access.csv 
+2025-04-22 17:51:34,324 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/security/sms_security.xml 
+2025-04-22 17:51:34,338 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sms: loading demo 
+2025-04-22 17:51:34,338 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/data/sms_demo.xml 
+2025-04-22 17:51:34,347 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sms/data/mail_demo.xml 
+2025-04-22 17:51:34,493 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sms loaded in 1.71s, 880 queries (+880 other) 
+2025-04-22 17:51:34,493 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module snailmail (36/55) 
+2025-04-22 17:51:34,650 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module snailmail: creating or updating database tables 
+2025-04-22 17:51:35,160 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/data/iap_service_data.xml 
+2025-04-22 17:51:35,171 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/data/snailmail_data.xml 
+2025-04-22 17:51:35,186 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/views/report_assets.xml 
+2025-04-22 17:51:35,208 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/views/snailmail_views.xml 
+2025-04-22 17:51:35,245 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2025-04-22 17:51:35,263 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2025-04-22 17:51:35,280 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail/security/ir.model.access.csv 
+2025-04-22 17:51:35,323 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module snailmail loaded in 0.83s, 477 queries (+477 other) 
+2025-04-22 17:51:35,323 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module auth_totp_portal (37/55) 
+2025-04-22 17:51:35,472 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module auth_totp_portal: creating or updating database tables 
+2025-04-22 17:51:35,523 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp_portal/security/security.xml 
+2025-04-22 17:51:35,554 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading auth_totp_portal/views/templates.xml 
+2025-04-22 17:51:35,588 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module auth_totp_portal loaded in 0.26s, 66 queries (+66 other) 
+2025-04-22 17:51:35,588 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module digest (38/55) 
+2025-04-22 17:51:35,722 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module digest: creating or updating database tables 
+2025-04-22 17:51:35,963 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/security/ir.model.access.csv 
+2025-04-22 17:51:35,977 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/data/digest_data.xml 
+2025-04-22 17:51:36,013 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/data/digest_tips_data.xml 
+2025-04-22 17:51:36,047 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/data/ir_cron_data.xml 
+2025-04-22 17:51:36,061 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/data/res_config_settings_data.xml 
+2025-04-22 17:51:36,072 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/views/digest_views.xml 
+2025-04-22 17:51:36,153 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/views/digest_templates.xml 
+2025-04-22 17:51:36,162 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading digest/views/res_config_settings_views.xml 
+2025-04-22 17:51:36,223 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module digest loaded in 0.63s, 300 queries (+300 other) 
+2025-04-22 17:51:36,223 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module payment (39/55) 
+2025-04-22 17:51:36,447 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module payment: creating or updating database tables 
+2025-04-22 17:51:37,065 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/data/ir_actions_server_data.xml 
+2025-04-22 17:51:37,110 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/data/onboarding_data.xml 
+2025-04-22 17:51:37,119 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/data/payment_method_data.xml 
+2025-04-22 17:51:40,434 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/data/payment_provider_data.xml 
+2025-04-22 17:51:40,650 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/data/payment_cron.xml 
+2025-04-22 17:51:40,663 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/express_checkout_templates.xml 
+2025-04-22 17:51:40,716 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/payment_form_templates.xml 
+2025-04-22 17:51:40,787 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/portal_templates.xml 
+2025-04-22 17:51:40,854 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/payment_provider_views.xml 
+2025-04-22 17:51:40,906 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/payment_method_views.xml 
+2025-04-22 17:51:40,947 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/payment_transaction_views.xml 
+2025-04-22 17:51:40,991 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/payment_token_views.xml 
+2025-04-22 17:51:41,023 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/views/res_partner_views.xml 
+2025-04-22 17:51:41,052 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/security/ir.model.access.csv 
+2025-04-22 17:51:42,457 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/security/payment_security.xml 
+2025-04-22 17:51:42,536 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2025-04-22 17:51:42,552 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2025-04-22 17:51:42,564 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2025-04-22 17:51:42,604 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module payment loaded in 6.38s, 2264 queries (+2264 other) 
+2025-04-22 17:51:42,604 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module spreadsheet (40/55) 
+2025-04-22 17:51:42,746 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module spreadsheet: creating or updating database tables 
+2025-04-22 17:51:42,835 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2025-04-22 17:51:42,876 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module spreadsheet loaded in 0.27s, 86 queries (+86 other) 
+2025-04-22 17:51:42,876 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module account (41/55) 
+2025-04-22 17:51:43,493 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module account: creating or updating database tables 
+2025-04-22 17:51:43,592 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.bank.has_iban_warning 
+2025-04-22 17:51:43,593 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.bank.has_money_transfer_warning 
+2025-04-22 17:51:43,809 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.company.account_fiscal_country_id 
+2025-04-22 17:51:43,809 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.company.invoice_terms_html 
+2025-04-22 17:51:45,842 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan2_id_index on table account_analytic_line 
+2025-04-22 17:51:45,842 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan3_id_index on table account_analytic_line 
+2025-04-22 17:51:47,844 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/security/account_security.xml 
+2025-04-22 17:51:48,726 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/security/ir.model.access.csv 
+2025-04-22 17:51:48,875 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/account_data.xml 
+2025-04-22 17:51:49,061 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/digest_data.xml 
+2025-04-22 17:51:49,078 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_report.xml 
+2025-04-22 17:51:49,128 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/mail_template_data.xml 
+2025-04-22 17:51:49,171 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/onboarding_data.xml 
+2025-04-22 17:51:49,226 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/account_tour.xml 
+2025-04-22 17:51:49,236 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/ir_sequence.xml 
+2025-04-22 17:51:49,243 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_payment_view.xml 
+2025-04-22 17:51:49,357 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2025-04-22 17:51:49,377 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_autopost_bills_wizard.xml 
+2025-04-22 17:51:49,392 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2025-04-22 17:51:49,401 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2025-04-22 17:51:49,421 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_resequence_views.xml 
+2025-04-22 17:51:49,440 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2025-04-22 17:51:49,464 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_move_views.xml 
+2025-04-22 17:51:50,402 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2025-04-22 17:51:50,439 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_account_views.xml 
+2025-04-22 17:51:50,536 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_group_views.xml 
+2025-04-22 17:51:50,559 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_journal_views.xml 
+2025-04-22 17:51:50,645 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_account_tag_views.xml 
+2025-04-22 17:51:50,670 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_bank_statement_views.xml 
+2025-04-22 17:51:50,724 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2025-04-22 17:51:50,784 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_tax_views.xml 
+2025-04-22 17:51:50,886 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2025-04-22 17:51:50,899 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_payment_term_views.xml 
+2025-04-22 17:51:50,940 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_payment_method.xml 
+2025-04-22 17:51:50,957 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/res_partner_bank_views.xml 
+2025-04-22 17:51:51,002 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/report_statement.xml 
+2025-04-22 17:51:51,025 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/terms_template.xml 
+2025-04-22 17:51:51,050 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2025-04-22 17:51:51,072 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/res_company_views.xml 
+2025-04-22 17:51:51,114 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/product_view.xml 
+2025-04-22 17:51:51,167 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2025-04-22 17:51:51,186 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_analytic_account_views.xml 
+2025-04-22 17:51:51,213 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2025-04-22 17:51:51,240 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_analytic_line_views.xml 
+2025-04-22 17:51:51,295 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/report_invoice.xml 
+2025-04-22 17:51:51,360 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/report/account_invoice_report_view.xml 
+2025-04-22 17:51:51,421 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2025-04-22 17:51:51,452 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/ir_actions_views.xml 
+2025-04-22 17:51:51,467 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/ir_module_views.xml 
+2025-04-22 17:51:51,484 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/res_config_settings_views.xml 
+2025-04-22 17:51:51,553 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/partner_view.xml 
+2025-04-22 17:51:51,712 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2025-04-22 17:51:51,761 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_portal_templates.xml 
+2025-04-22 17:51:51,845 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2025-04-22 17:51:51,866 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/service_cron.xml 
+2025-04-22 17:51:51,891 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_incoterms_view.xml 
+2025-04-22 17:51:51,931 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/account_incoterms_data.xml 
+2025-04-22 17:51:51,987 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/digest_views.xml 
+2025-04-22 17:51:52,015 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_move_send_wizard.xml 
+2025-04-22 17:51:52,038 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_move_send_batch_wizard.xml 
+2025-04-22 17:51:52,051 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2025-04-22 17:51:52,065 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/res_currency.xml 
+2025-04-22 17:51:52,085 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_menuitem.xml 
+2025-04-22 17:51:52,390 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_secure_entries_wizard.xml 
+2025-04-22 17:51:52,416 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/mail_message_views.xml 
+2025-04-22 17:51:52,450 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/accrued_orders.xml 
+2025-04-22 17:51:52,464 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/bill_preview_template.xml 
+2025-04-22 17:51:52,483 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/data/account_reports_data.xml 
+2025-04-22 17:51:52,517 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/uom_uom_views.xml 
+2025-04-22 17:51:52,533 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/product_views.xml 
+2025-04-22 17:51:52,558 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/tests_shared_js_python.xml 
+2025-04-22 17:51:52,566 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/base_document_layout_views.xml 
+2025-04-22 17:51:52,586 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/account_lock_exception_views.xml 
+2025-04-22 17:51:52,602 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/views/report_templates.xml 
+2025-04-22 17:51:52,621 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/wizard/account_merge_wizard_views.xml 
+2025-04-22 17:51:52,646 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module account: loading demo 
+2025-04-22 17:51:52,646 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account/demo/account_demo.xml 
+2025-04-22 17:52:00,232 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module account loaded in 17.36s, 8324 queries (+8325 other) 
+2025-04-22 17:52:00,232 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module spreadsheet_dashboard (42/55) 
+2025-04-22 17:52:00,479 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2025-04-22 17:52:00,700 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2025-04-22 17:52:00,909 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2025-04-22 17:52:00,925 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2025-04-22 17:52:00,964 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2025-04-22 17:52:01,011 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2025-04-22 17:52:01,073 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module spreadsheet_dashboard loaded in 0.84s, 332 queries (+332 other) 
+2025-04-22 17:52:01,074 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module account_edi_ubl_cii (43/55) 
+2025-04-22 17:52:01,369 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2025-04-22 17:52:01,406 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.peppol_endpoint 
+2025-04-22 17:52:01,406 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of res.partner.peppol_eas 
+2025-04-22 17:52:01,773 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2025-04-22 17:52:01,855 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2025-04-22 17:52:02,013 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2025-04-22 17:52:02,101 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2025-04-22 17:52:02,213 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module account_edi_ubl_cii loaded in 1.14s, 369 queries (+369 other) 
+2025-04-22 17:52:02,213 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module account_payment (44/55) 
+2025-04-22 17:52:02,564 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module account_payment: creating or updating database tables 
+2025-04-22 17:52:02,618 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of account.payment.method.line.payment_provider_id 
+2025-04-22 17:52:02,921 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2025-04-22 17:52:02,932 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/data/onboarding_data.xml 
+2025-04-22 17:52:02,948 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/security/ir.model.access.csv 
+2025-04-22 17:52:02,962 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/security/ir_rules.xml 
+2025-04-22 17:52:02,976 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2025-04-22 17:52:03,011 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2025-04-22 17:52:03,120 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/account_move_views.xml 
+2025-04-22 17:52:03,162 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/account_journal_views.xml 
+2025-04-22 17:52:03,189 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/account_payment_views.xml 
+2025-04-22 17:52:03,209 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/payment_form_templates.xml 
+2025-04-22 17:52:03,221 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2025-04-22 17:52:03,239 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2025-04-22 17:52:03,255 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2025-04-22 17:52:03,273 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2025-04-22 17:52:03,297 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2025-04-22 17:52:03,309 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2025-04-22 17:52:03,433 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module account_payment loaded in 1.22s, 529 queries (+529 other) 
+2025-04-22 17:52:03,434 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module l10n_us_account (45/55) 
+2025-04-22 17:52:03,666 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module l10n_us_account loaded in 0.23s, 14 queries (+14 other) 
+2025-04-22 17:52:03,667 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module snailmail_account (46/55) 
+2025-04-22 17:52:03,905 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module snailmail_account: creating or updating database tables 
+2025-04-22 17:52:04,101 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2025-04-22 17:52:04,164 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module snailmail_account loaded in 0.50s, 117 queries (+117 other) 
+2025-04-22 17:52:04,164 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module spreadsheet_account (47/55) 
+2025-04-22 17:52:04,395 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module spreadsheet_account: creating or updating database tables 
+2025-04-22 17:52:04,527 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module spreadsheet_account loaded in 0.36s, 57 queries (+57 other) 
+2025-04-22 17:52:04,528 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module spreadsheet_dashboard_account (48/55) 
+2025-04-22 17:52:04,816 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard_account/data/dashboards.xml 
+2025-04-22 17:52:04,905 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module spreadsheet_dashboard_account loaded in 0.38s, 29 queries (+29 other) 
+2025-04-22 17:52:04,906 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sale (49/55) 
+2025-04-22 17:52:05,319 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sale: creating or updating database tables 
+2025-04-22 17:52:05,351 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of account.move.team_id 
+2025-04-22 17:52:05,480 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of product.template.service_type 
+2025-04-22 17:52:05,480 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of product.template.expense_policy 
+2025-04-22 17:52:05,481 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of product.template.invoice_policy 
+2025-04-22 17:52:06,205 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan2_id_index on table account_analytic_line 
+2025-04-22 17:52:06,206 11231 INFO sleektiv_erp_community_2 sleektiv.schema: Keep unexpected index account_analytic_line__x_plan3_id_index on table account_analytic_line 
+2025-04-22 17:52:06,934 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/security/ir.model.access.csv 
+2025-04-22 17:52:07,173 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/security/res_groups.xml 
+2025-04-22 17:52:07,305 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/security/ir_rules.xml 
+2025-04-22 17:52:07,576 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/report/account_invoice_report_views.xml 
+2025-04-22 17:52:07,614 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/report/ir_actions_report_templates.xml 
+2025-04-22 17:52:07,664 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/report/ir_actions_report.xml 
+2025-04-22 17:52:07,678 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/report/sale_report_views.xml 
+2025-04-22 17:52:07,763 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/ir_cron.xml 
+2025-04-22 17:52:07,779 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/ir_sequence_data.xml 
+2025-04-22 17:52:07,787 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/mail_activity_type_data.xml 
+2025-04-22 17:52:07,798 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/mail_message_subtype_data.xml 
+2025-04-22 17:52:07,832 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/mail_template_data.xml 
+2025-04-22 17:52:07,894 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/sale_tour.xml 
+2025-04-22 17:52:07,903 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/ir_config_parameter.xml 
+2025-04-22 17:52:07,914 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/account_accrued_orders_wizard_views.xml 
+2025-04-22 17:52:07,923 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/mass_cancel_orders_views.xml 
+2025-04-22 17:52:07,941 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/payment_link_wizard_views.xml 
+2025-04-22 17:52:07,964 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/res_config_settings_views.xml 
+2025-04-22 17:52:08,019 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/sale_make_invoice_advance_views.xml 
+2025-04-22 17:52:08,038 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/sale_order_cancel_views.xml 
+2025-04-22 17:52:08,052 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/wizard/sale_order_discount_views.xml 
+2025-04-22 17:52:08,065 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/sale_order_views.xml 
+2025-04-22 17:52:08,367 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/account_views.xml 
+2025-04-22 17:52:08,463 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/crm_team_views.xml 
+2025-04-22 17:52:08,530 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/mail_activity_views.xml 
+2025-04-22 17:52:08,538 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/mail_activity_plan_views.xml 
+2025-04-22 17:52:08,547 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/payment_views.xml 
+2025-04-22 17:52:08,589 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/product_document_views.xml 
+2025-04-22 17:52:08,642 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/product_packaging_views.xml 
+2025-04-22 17:52:08,671 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/product_template_views.xml 
+2025-04-22 17:52:08,696 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/product_views.xml 
+2025-04-22 17:52:08,823 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/res_partner_views.xml 
+2025-04-22 17:52:08,969 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/sale_order_line_views.xml 
+2025-04-22 17:52:09,011 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/sale_portal_templates.xml 
+2025-04-22 17:52:09,104 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/utm_campaign_views.xml 
+2025-04-22 17:52:09,132 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/views/sale_menus.xml 
+2025-04-22 17:52:09,381 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale: loading demo 
+2025-04-22 17:52:09,382 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/product_demo.xml 
+2025-04-22 17:52:10,208 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale/data/sale_demo.xml 
+2025-04-22 17:52:13,123 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale loaded in 8.22s, 4590 queries (+4591 other) 
+2025-04-22 17:52:13,124 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sale_async_emails (50/55) 
+2025-04-22 17:52:13,312 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sale_async_emails: creating or updating database tables 
+2025-04-22 17:52:13,508 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_async_emails/data/ir_config_parameter.xml 
+2025-04-22 17:52:13,517 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_async_emails/data/ir_cron.xml 
+2025-04-22 17:52:13,556 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_async_emails loaded in 0.43s, 74 queries (+74 other) 
+2025-04-22 17:52:13,556 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sale_edi_ubl (51/55) 
+2025-04-22 17:52:13,788 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sale_edi_ubl: creating or updating database tables 
+2025-04-22 17:52:13,914 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_edi_ubl loaded in 0.36s, 59 queries (+59 other) 
+2025-04-22 17:52:13,914 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sale_management (52/55) 
+2025-04-22 17:52:14,408 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sale_management: creating or updating database tables 
+2025-04-22 17:52:15,327 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/data/digest_data.xml 
+2025-04-22 17:52:15,350 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/security/ir.model.access.csv 
+2025-04-22 17:52:15,378 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/security/sale_management_security.xml 
+2025-04-22 17:52:15,435 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/report/sale_report_templates.xml 
+2025-04-22 17:52:15,452 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/views/sale_order_template_views.xml 
+2025-04-22 17:52:15,502 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/views/digest_views.xml 
+2025-04-22 17:52:15,524 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/views/res_config_settings_views.xml 
+2025-04-22 17:52:15,576 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/views/sale_order_views.xml 
+2025-04-22 17:52:15,620 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/views/sale_portal_templates.xml 
+2025-04-22 17:52:15,639 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/views/sale_management_menus.xml 
+2025-04-22 17:52:15,658 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_management: loading demo 
+2025-04-22 17:52:15,659 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_management/data/sale_order_template_demo.xml 
+2025-04-22 17:52:15,834 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_management loaded in 1.92s, 558 queries (+558 other) 
+2025-04-22 17:52:15,835 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sale_sms (53/55) 
+2025-04-22 17:52:16,079 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_sms/security/ir.model.access.csv 
+2025-04-22 17:52:16,129 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_sms/security/security.xml 
+2025-04-22 17:52:16,160 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_sms loaded in 0.33s, 36 queries (+36 other) 
+2025-04-22 17:52:16,160 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module spreadsheet_dashboard_sale (54/55) 
+2025-04-22 17:52:16,375 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading spreadsheet_dashboard_sale/data/dashboards.xml 
+2025-04-22 17:52:16,497 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.34s, 34 queries (+34 other) 
+2025-04-22 17:52:16,497 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Loading module sale_pdf_quote_builder (55/55) 
+2025-04-22 17:52:16,903 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: module sale_pdf_quote_builder: creating or updating database tables 
+2025-04-22 17:52:16,921 11231 INFO sleektiv_erp_community_2 sleektiv.models: Prepare computation of product.document.form_field_ids 
+2025-04-22 17:52:17,211 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/data/ir_cron.xml 
+2025-04-22 17:52:17,228 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/data/sale_pdf_form_field.xml 
+2025-04-22 17:52:17,243 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/report/ir_actions_report.xml 
+2025-04-22 17:52:17,255 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/security/ir.model.access.csv 
+2025-04-22 17:52:17,278 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/security/ir_rules.xml 
+2025-04-22 17:52:17,292 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/views/product_document_views.xml 
+2025-04-22 17:52:17,317 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/views/quotation_document_views.xml 
+2025-04-22 17:52:17,359 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/views/sale_order_template_views.xml 
+2025-04-22 17:52:17,384 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/views/sale_order_views.xml 
+2025-04-22 17:52:17,422 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/views/sale_pdf_form_field_views.xml 
+2025-04-22 17:52:17,439 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/views/sale_pdf_quote_builder_menus.xml 
+2025-04-22 17:52:17,450 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/wizards/res_config_settings_views.xml 
+2025-04-22 17:52:17,494 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_pdf_quote_builder: loading demo 
+2025-04-22 17:52:17,494 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: loading sale_pdf_quote_builder/data/sale_pdf_quote_builder_demo.xml 
+2025-04-22 17:52:17,918 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Module sale_pdf_quote_builder loaded in 1.42s, 508 queries (+508 other) 
+2025-04-22 17:52:17,918 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: 55 modules loaded in 73.42s, 34465 queries (+34468 extra) 
+2025-04-22 17:52:19,281 11231 INFO sleektiv_erp_community_2 sleektiv.modules.loading: Modules loaded. 
+2025-04-22 17:52:19,671 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: Registry changed, signaling through the database 
+2025-04-22 17:52:19,673 11231 INFO sleektiv_erp_community_2 sleektiv.modules.registry: Registry loaded in 76.454s 
+2025-04-22 17:52:19,674 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_module: getting next ir.actions.todo() 
+2025-04-22 17:52:19,686 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:19] "POST /web/dataset/call_button/ir.module.module/button_immediate_install HTTP/1.1" 200 - 37621 31.968 44.901
+2025-04-22 17:52:19,737 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_http: Generating routing map for key None 
+2025-04-22 17:52:21,201 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:21] "GET /sleektiv HTTP/1.1" 200 - 128 0.139 1.329
+2025-04-22 17:52:21,340 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:21] "GET /web/webclient/translations/38d3686d5a72f983d36c7cca4f398397b7a90407?lang=en_US HTTP/1.1" 200 - 1 0.003 0.044
+2025-04-22 17:52:21,550 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:21] "GET /web/webclient/load_menus/6f77719a504b9e8d216fc73ccfa32962a87a1f446407c0bcd9bfeb9d962b1b5d HTTP/1.1" 200 - 53 0.169 0.095
+2025-04-22 17:52:25,431 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/3d903d5/web.assets_web.min.css (id:803) 
+2025-04-22 17:52:25,452 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:25] "GET /web/assets/3d903d5/web.assets_web.min.css HTTP/1.1" 200 - 14 0.053 4.119
+2025-04-22 17:52:28,741 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/8ff914f/web.assets_web_print.min.css (id:804) 
+2025-04-22 17:52:28,746 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:28] "GET /web/assets/8ff914f/web.assets_web_print.min.css HTTP/1.1" 200 - 8 0.046 3.227
+2025-04-22 17:52:32,358 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2025-04-22 17:52:32,719 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_attachment: filestore gc 40 checked, 0 removed 
+2025-04-22 17:52:32,841 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_users: GC'd 0 user log entries 
+2025-04-22 17:52:32,866 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2025-04-22 17:52:32,876 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_device: GC device logs delete 0 entries 
+2025-04-22 17:52:32,887 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_device: GC device logs delete 0 entries 
+2025-04-22 17:52:32,935 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2025-04-22 17:52:33,144 11231 INFO sleektiv_erp_community_2 sleektiv.addons.sms.models.sms_sms: GC'd 0 sms marked for deletion 
+2025-04-22 17:52:33,331 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) done in 0.973s 
+2025-04-22 17:52:33,465 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) processed 0 records, 0 records remaining 
+2025-04-22 17:52:33,473 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) completed 
+2025-04-22 17:52:33,535 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/1a75172/web.assets_web.min.js (id:805) 
+2025-04-22 17:52:33,541 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) starting 
+2025-04-22 17:52:33,554 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) done in 0.010s 
+2025-04-22 17:52:33,561 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) processed 0 records, 0 records remaining 
+2025-04-22 17:52:33,568 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:33] "GET /web/assets/1a75172/web.assets_web.min.js HTTP/1.1" 200 - 11 0.026 12.259
+2025-04-22 17:52:33,571 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) completed 
+2025-04-22 17:52:33,667 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Post scheduled messages' (7) starting 
+2025-04-22 17:52:33,693 11231 INFO sleektiv_erp_community_2 sleektiv.addons.mail.models.mail_scheduled_message: Posting 0 scheduled messages 
+2025-04-22 17:52:33,695 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Post scheduled messages' (7) done in 0.026s 
+2025-04-22 17:52:33,724 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Post scheduled messages' (7) processed 0 records, 0 records remaining 
+2025-04-22 17:52:33,765 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Post scheduled messages' (7) completed 
+2025-04-22 17:52:33,798 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Notify scheduled messages' (8) starting 
+2025-04-22 17:52:33,813 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Notify scheduled messages' (8) done in 0.014s 
+2025-04-22 17:52:33,820 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Notify scheduled messages' (8) processed 0 records, 0 records remaining 
+2025-04-22 17:52:33,829 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Notification: Notify scheduled messages' (8) completed 
+2025-04-22 17:52:33,861 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: send web push notification' (9) starting 
+2025-04-22 17:52:33,872 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: send web push notification' (9) done in 0.011s 
+2025-04-22 17:52:33,885 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: send web push notification' (9) processed 0 records, 0 records remaining 
+2025-04-22 17:52:33,894 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: send web push notification' (9) completed 
+2025-04-22 17:52:33,950 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (10) starting 
+2025-04-22 17:52:33,957 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (10) done in 0.007s 
+2025-04-22 17:52:33,965 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (10) processed 0 records, 0 records remaining 
+2025-04-22 17:52:33,970 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (10) completed 
+2025-04-22 17:52:33,985 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (11) starting 
+2025-04-22 17:52:33,993 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (11) done in 0.007s 
+2025-04-22 17:52:33,997 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (11) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,002 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (11) completed 
+2025-04-22 17:52:34,017 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) starting 
+2025-04-22 17:52:34,037 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) done in 0.020s 
+2025-04-22 17:52:34,044 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,075 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) completed 
+2025-04-22 17:52:34,102 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) starting 
+2025-04-22 17:52:34,117 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) done in 0.014s 
+2025-04-22 17:52:34,124 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,140 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) completed 
+2025-04-22 17:52:34,288 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Send invoices automatically' (19) starting 
+2025-04-22 17:52:34,306 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Send invoices automatically' (19) done in 0.018s 
+2025-04-22 17:52:34,317 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Send invoices automatically' (19) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,330 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Send invoices automatically' (19) completed 
+2025-04-22 17:52:34,360 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:34] "GET /bus/websocket_worker_bundle?v=18.0-3 HTTP/1.1" 304 - 4 0.008 0.026
+2025-04-22 17:52:34,370 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (21) starting 
+2025-04-22 17:52:34,392 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sale Pdf Quote Builder: assign form fields to documents post upgrade' (22) starting 
+2025-04-22 17:52:34,394 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (21) done in 0.023s 
+2025-04-22 17:52:34,414 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (21) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,427 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (21) completed 
+2025-04-22 17:52:34,474 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) starting 
+2025-04-22 17:52:34,515 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) done in 0.026s 
+2025-04-22 17:52:34,524 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,525 11231 INFO sleektiv_erp_community_2 sleektiv.addons.partner_autocomplete.models.res_company: Starting enrich of company YourCompany (1) 
+2025-04-22 17:52:34,533 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) completed 
+2025-04-22 17:52:34,674 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (12) starting 
+2025-04-22 17:52:34,679 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sale Pdf Quote Builder: assign form fields to documents post upgrade' (22) done in 0.287s 
+2025-04-22 17:52:34,708 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sale Pdf Quote Builder: assign form fields to documents post upgrade' (22) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,713 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (12) done in 0.035s 
+2025-04-22 17:52:34,728 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (12) processed 0 records, 0 records remaining 
+2025-04-22 17:52:34,743 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Sale Pdf Quote Builder: assign form fields to documents post upgrade' (22) completed 
+2025-04-22 17:52:34,759 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (12) completed 
+2025-04-22 17:52:34,786 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:34] "POST /web/action/load HTTP/1.1" 200 - 6 0.043 0.081
+2025-04-22 17:52:34,803 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:34] "GET /websocket?version=18.0-3 HTTP/1.1" 101 - 1 0.003 0.111
+2025-04-22 17:52:34,863 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:34] "GET /web/image/res.partner/3/avatar_128?unique=1745319133000 HTTP/1.1" 200 - 8 0.073 0.117
+2025-04-22 17:52:34,878 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:34] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 9 0.108 0.107
+2025-04-22 17:52:34,886 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) starting 
+2025-04-22 17:52:34,993 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2025-04-22 17:52:35,012 11231 INFO sleektiv_erp_community_2 sleektiv.addons.iap.tools.iap_tools: iap jsonrpc https://partner-autocomplete.sleektiv.com/iap/partner_autocomplete/enrich 
+2025-04-22 17:52:35,012 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) done in 0.123s 
+2025-04-22 17:52:35,025 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) done in 0.028s 
+2025-04-22 17:52:35,037 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) processed 0 records, 0 records remaining 
+2025-04-22 17:52:35,042 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) processed 0 records, 0 records remaining 
+2025-04-22 17:52:35,065 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) completed 
+2025-04-22 17:52:35,067 11231 INFO sleektiv_erp_community_2 sleektiv.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) completed 
+2025-04-22 17:52:35,077 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 9 0.033 0.037
+2025-04-22 17:52:35,146 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "POST /mail/data HTTP/1.1" 200 - 48 0.317 0.149
+2025-04-22 17:52:35,239 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "POST /mail/data HTTP/1.1" 200 - 57 0.147 0.097
+2025-04-22 17:52:35,513 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "POST /mail/inbox/messages HTTP/1.1" 200 - 5 0.074 0.029
+2025-04-22 17:52:35,537 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "GET /web/image/discuss.channel/2/avatar_128?unique=5c0b97b9c08d06eec2920358476db4c701ab8c680ee57c1e9684d8157f017a8f75acd8b7cec8f73c24a8c1a8e4c9a149a2c8b8aaf07cf6679f92b5a74acda759 HTTP/1.1" 200 - 9 0.062 0.064
+2025-04-22 17:52:35,545 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "GET /web/image/discuss.channel/1/avatar_128?unique=fa8b8a08bd3cf4179e8e06f95cdbee14bb1e944c6761e2b1aa77838f3956dd9a375b9a3f310677705d001ba2e1fd26f9d5bc53e3d23098364d5dabceedbdb813 HTTP/1.1" 200 - 9 0.087 0.044
+2025-04-22 17:52:35,552 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:35] "GET /web/image/res.partner/2/avatar_128?unique=1745344333000 HTTP/1.1" 200 - 7 0.036 0.100
+2025-04-22 17:52:37,175 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:37] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.046
+2025-04-22 17:52:37,233 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:37] "GET /sleektiv/offline HTTP/1.1" 200 - 6 0.004 0.021
+2025-04-22 17:52:46,012 11231 WARNING sleektiv_erp_community_2 sleektiv.addons.iap.tools.iap_tools: Request timeout with the URL: https://partner-autocomplete.sleektiv.com/iap/partner_autocomplete/enrich 
+2025-04-22 17:52:46,065 11231 INFO sleektiv_erp_community_2 werkzeug: 127.0.0.1 - - [22/Apr/2025 17:52:46] "POST /web/dataset/call_kw/res.company/iap_enrich_auto HTTP/1.1" 200 - 51 0.284 11.308
+2025-04-22 17:53:55,600 11231 INFO sleektiv_erp_community_2 sleektiv.service.server: Initiating shutdown 
+2025-04-22 17:53:55,601 11231 INFO sleektiv_erp_community_2 sleektiv.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-04-22 17:53:56,063 11231 INFO sleektiv_erp_community_2 sleektiv.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 12 connections  

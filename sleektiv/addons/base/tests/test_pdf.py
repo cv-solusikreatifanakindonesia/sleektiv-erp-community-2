@@ -39,7 +39,7 @@ class TestPdf(TransactionCase):
             ('test_attachment.txt', b'My awesome attachment'),
             ('another_attachment.txt', b'My awesome OTHER attachment'),
         ], start=1):
-            pdf_writer = pdf.OdooPdfFileWriter()
+            pdf_writer = pdf.SleektivPdfFileWriter()
             pdf_writer.cloneReaderDocumentRoot(r)
             pdf_writer.addAttachment(name, data)
             out = io.BytesIO()
@@ -49,7 +49,7 @@ class TestPdf(TransactionCase):
             self.assertEqual(len(list(r.getAttachments())), count)
 
     def test_sleektiv_pdf_file_reader_with_owner_encryption(self):
-        pdf_writer = pdf.OdooPdfFileWriter()
+        pdf_writer = pdf.SleektivPdfFileWriter()
         pdf_writer.cloneReaderDocumentRoot(self.minimal_pdf_reader)
 
         pdf_writer.addAttachment('test_attachment.txt', b'My awesome attachment')

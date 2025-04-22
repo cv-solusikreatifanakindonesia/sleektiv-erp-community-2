@@ -318,7 +318,7 @@ def reshape_text(text):
     return text
 
 
-class OdooPdfFileReader(PdfFileReader):
+class SleektivPdfFileReader(PdfFileReader):
     # OVERRIDE of PdfFileReader to add the management of multiple embedded files.
 
     ''' Returns the files inside the PDF.
@@ -342,7 +342,7 @@ class OdooPdfFileReader(PdfFileReader):
             return []
 
 
-class OdooPdfFileWriter(PdfFileWriter):
+class SleektivPdfFileWriter(PdfFileWriter):
 
     def __init__(self, *args, **kwargs):
         """
