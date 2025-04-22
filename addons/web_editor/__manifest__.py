@@ -140,7 +140,7 @@ Odoo Web Editor widget.
             'web/static/lib/dompurify/DOMpurify.js',
 
             # sleektiv-editor
-            'web_editor/static/src/js/editor/sleektiv-editor/src/OdooEditor.js',
+            'web_editor/static/src/js/editor/sleektiv-editor/src/SleektivEditor.js',
             'web_editor/static/src/js/editor/sleektiv-editor/src/utils/constants.js',
             'web_editor/static/src/js/editor/sleektiv-editor/src/utils/sanitize.js',
             'web_editor/static/src/js/editor/sleektiv-editor/src/utils/serialize.js',
