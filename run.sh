@@ -1,1 +1,1 @@
-./sleektiv-bin -c sleektiv-config.conf -i base
+./sleektiv-bin -c sleektiv-config.conf -i "base,sleektiv_default_theme"

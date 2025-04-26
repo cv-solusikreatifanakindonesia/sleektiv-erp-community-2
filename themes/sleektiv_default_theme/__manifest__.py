@@ -30,11 +30,11 @@
     "category": "Themes/Backend",
     "summary": "Sleektiv Default Theme is an attractive theme for backend",
     "description": """Minimalist and elegant theme for Sleektiv backend""",
-    "author": "Cybrosys Techno Solutions, CV. SOLUSI KREATIF ANAK INDONESIA",
+    "author": "CV. SOLUSI KREATIF ANAK INDONESIA",
     "company": "CV. SOLUSI KREATIF ANAK INDONESIA",
     "maintainer": "CV. SOLUSI KREATIF ANAK INDONESIA",
     "website": "https://www.solusikreatifanakindonesia.com",
-    "depends": ["web", "mail"],
+    "depends": ["base_setup", "web", "mail"],
     "data": [
         "views/layout_templates.xml",
         "views/base_menus.xml",
@@ -62,7 +62,7 @@
     ],
     "license": "LGPL-3",
     "installable": True,
-    "auto_install": False,
+    "auto_install": True,  # Aktifkan auto install
     "application": False,
     "pre_init_hook": "test_pre_init_hook",
     "post_init_hook": "test_post_init_hook",
