@@ -55,7 +55,7 @@ def report_configuration():
     This function assumes the configuration has been initialized.
     """
     config = sleektiv.tools.config
-    _logger.info("Odoo version %s", __version__)
+    _logger.info("Sleektiv ERP Community Version 2 | software version %s", __version__)
     if os.path.isfile(config.rcfile):
         _logger.info("Using configuration file at " + config.rcfile)
     _logger.info('addons paths: %s', sleektiv.addons.__path__)
