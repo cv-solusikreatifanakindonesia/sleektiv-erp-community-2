@@ -34,7 +34,7 @@ class IrModule(models.Model):
     imported = fields.Boolean(string="Imported Module")
     module_type = fields.Selection([
         ('official', 'Official Apps'),
-        ('industries', 'Industries'),
+    #    ('industries', 'Industries'),
     ], default='official')
 
     def _get_modules_to_load_domain(self):
