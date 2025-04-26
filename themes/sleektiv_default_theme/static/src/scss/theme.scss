@@ -1694,3 +1694,49 @@ button.oe_stat_button {
 .o_searchview_input_container .o_searchview_facet .rounded-end-2{
     align-content: center !important;
 }
+
+.o_control_panel_actions{
+    border: 1px solid #CCC;
+}
+
+.o_searchview, .o_searchview_dropdown_toggler{
+    border: none !important;
+}
+
+.o_searchview_facet_label span.position-absolute{
+    margin-top: 3px;
+    height: fit-content;
+}
+
+.o_cp_searchview .btn.btn-primary {
+    max-height: 28px !important;
+}
+
+.o_domain_selector .o_tree_editor_editor .o_input,.o_domain_selector .o_tree_editor_editor .o_model_field_selector{
+    height: 40px;
+}
+
+.o_domain_selector .o_tree_editor_editor{
+    height: 50px;
+}
+
+.o_domain_selector .o_tree_editor_editor .o_model_field_selector_value .o_model_field_selector_chain_part{
+    position: absolute;
+    bottom: 3px;
+}
+
+#sidebar_panel{
+    background-color: #992f2f !important;
+}
+
+.sidebar_panel .sidebar .sidebar_head{
+    color: #cc9a9a !important;
+}
+
+.o_app_icon.me-2{
+    height: 24px !important;
+}
+
+.sidebar_panel .sidebar .sidebar_logo{
+    background: #e0b8b8;
+}
