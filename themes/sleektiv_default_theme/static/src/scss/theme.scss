@@ -1803,12 +1803,6 @@ button.oe_stat_button {
     background-color: #871111;
 }
 
-.card button {
-    background-color: #5f1c1c !important;
-    color: #FFFFFF;
-    border: 1px solid #631717 !important;
-}
-
 a {
     color: #e65555;
 }
@@ -1831,4 +1825,13 @@ a {
     background: #e65555;
     background-color: #e65555 !important;
     color: #ffffff !important;
+}
+
+.form-check-input:checked {
+    background-color: #c44848;
+    border-color: #ad1414;
+}
+
+.o_input{
+    height:43px !important;
 }

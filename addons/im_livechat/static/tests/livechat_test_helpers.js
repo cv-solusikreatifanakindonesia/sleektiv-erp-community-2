@@ -48,8 +48,8 @@ export async function loadDefaultEmbedConfig() {
             isAvailable: true,
             serverUrl: window.origin,
             options: {
-                header_background_color: "#875A7B",
-                button_background_color: "#875A7B",
+                header_background_color: "#ad1414",
+                button_background_color: "#ad1414",
                 title_color: "#FFFFFF",
                 button_text_color: "#FFFFFF",
                 button_text: "Have a Question? Chat with us.",

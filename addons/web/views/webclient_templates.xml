@@ -274,7 +274,7 @@
         <t t-call="web.layout">
             <t t-set="head_web">
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-                <meta name="theme-color" content="#71639e"/>
+                <meta name="theme-color" content="#ad1414"/>
                 <link rel="manifest" href="/web/manifest.webmanifest" crossorigin="use-credentials"/>
                 <link rel="apple-touch-icon" href="/web/static/img/sleektiv-icon-ios.png"/>
                 <script type="text/javascript">
@@ -349,9 +349,9 @@
                     filter: grayscale(.6);
                     }
                     .card button {
-                    background-color: #714B67;
+                    background-color: #5f1c1c;
                     color: #FFFFFF;
-                    border: 1px solid #714B67;
+                    border: 1px solid #5f1c1c;
                     border-radius: .25rem;
                     padding: .5rem 1rem;
                     cursor: pointer;

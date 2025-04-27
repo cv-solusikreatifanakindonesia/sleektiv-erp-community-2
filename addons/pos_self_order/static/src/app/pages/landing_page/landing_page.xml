@@ -24,7 +24,7 @@
                         type="button"
                         t-on-click="clickMyOrder"
                         class="btn btn-lg btn-secondary"
-                        style="border-color: #714B67">
+                        style="border-color: #5f1c1c">
                         <t t-if="draftOrder.length > 0">
                             My Order
                         </t>
