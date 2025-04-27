@@ -1832,6 +1832,14 @@ a {
     border-color: #ad1414;
 }
 
-.o_input{
+.o_input, .btn-primary, .btn-secondary{
     height:43px !important;
+}
+
+a.btn {
+    height: 43px !important;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
 }
