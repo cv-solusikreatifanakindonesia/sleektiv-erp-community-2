@@ -1740,3 +1740,95 @@ button.oe_stat_button {
 .sidebar_panel .sidebar .sidebar_logo{
     background: #e0b8b8;
 }
+
+.btn-primary {
+    color: #FFF !important;
+    background: #7e0c0c !important;
+    border: 1px solid #550707 !important;
+}
+
+.btn-link, .text-primary, .text-info {
+    color: #ab2c2c !important;
+}
+
+.text-bg-info{
+    background: #9a2c2c !important;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited , .disabled, .o-mail-DiscussSidebar-item.o-active, .o-mail-DiscussSidebar-item:hover .o-mail-DiscussSidebarChannel-commands .btn-group .btn:hover {
+    color: #FFF !important;
+    background: #9a2c2c !important;
+    border: 1px solid #550707 !important;
+}
+
+.btn-link:hover, .text-primary:hover, .btn-link:active, .text-primary:active , .btn-link:visited, .text-primary:visited , .disabled {
+    color: #d95353 !important;
+}
+
+.btn-secondary {
+    color: #FFF !important;
+    background: #9a1905 !important;
+    border: 1px solid #550707 !important;
+}
+
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    color: #FFF !important;
+    background: #c73720 !important;
+    border: 1px solid #550707 !important;
+}
+
+.o-mail-DiscussSidebar-item.o-active{
+    color: #fff !important;
+}
+
+.o-mail-DiscussSidebar-unreadIndicator {
+    font-size: 10px !important;
+    right: 7px !important;
+    color: #7be167;
+}
+
+.o-mail-DiscussSidebar-unreadIndicator, .o-mail-DiscussSidebarSubchannel .o-mail-DiscussSidebar-unreadIndicator:not(.o-compact) {
+    left: auto !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f27777 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #871111;
+}
+
+.card button {
+    background-color: #5f1c1c !important;
+    color: #FFFFFF;
+    border: 1px solid #631717 !important;
+}
+
+a {
+    color: #e65555;
+}
+
+.breadcrumb-item > a, .o_menu_item > a {
+    color: #ad1414 !important;
+}
+
+.o_form_view .o_form_uri {
+    display: inline-block;
+    color: #8f5959;
+}
+
+.btn-check:focus + .btn-primary, .btn-primary:focus{
+    background-color: #c44848 !important;
+    border-color: #b84444 !important;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background: #e65555;
+    background-color: #e65555 !important;
+    color: #ffffff !important;
+}

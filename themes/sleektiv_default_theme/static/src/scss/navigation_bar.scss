@@ -198,14 +198,14 @@ color: #7BA94F !important;
 border: solid 2px #7BA94F !important;
 }
 .o-kanban-button-new, .o_list_button_add,.o_form_button_create{
-background: #b9408d !important;
+background: #cf4137 !important;
 color: white !important;
-border: solid 2px #b9408d !important;
+border: solid 2px #cf4137 !important;
 }
 .o-kanban-button-new:hover, .o_list_button_add:hover,.o_form_button_create:hover,.o-kanban-button-new:active, .o_list_button_add:active,.o_form_button_create:active{
 background: white !important;
-color: #b9408d !important;
-border: solid 2px #b9408d !important;
+color: #cf4137 !important;
+border: solid 2px #cf4137 !important;
 }
 .o_form_button_cancel,.o_import_cancel{
 background: #cf4137 !important;
@@ -237,7 +237,7 @@ border-bottom: solid;
 font-weight: bold;
 }
 .o_data_row:has(.custom-control-input:checked){
-background: blue !important;
+background: rgb(255, 0, 0) !important;
 }
 .o_field_one2many{
     .o_list_view{
@@ -289,7 +289,7 @@ z-index: 999;
     max-height:100px;
 }
 .o_progressbar .o_progress .o_progressbar_complete {
-background-color: #3d9bbb;
+background-color: #bb3d3d;
 }
 .o_cp_left .btn {
     margin-right: 10px !important;

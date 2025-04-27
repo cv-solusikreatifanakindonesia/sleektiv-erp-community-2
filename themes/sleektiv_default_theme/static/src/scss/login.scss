@@ -18,20 +18,20 @@ body.bg-100 {
     box-shadow: 0 0.75rem 1.5rem rgba(18,38,63, .03) !important;
 }
 a {
-    color: #556ee6;
+    color: #e65555;
     text-decoration: none;
 }
 a:hover {
-    color: #4458b8;
+    color: #b84444;
     text-decoration: underline;
 }
 .alert-info {
-    color: #306391;
-    background-color: #dcedfc;
-    border-color: #cbe4fb;
+    color: #913030;
+    background-color: #fcdcdc;
+    border-color: #fbcbcb;
 }
 .oe_login_form button.btn-link {
-    color: #495057;
+    color: #574949;
     font-weight: 500;
     font-size: 14px !important;
 }
@@ -41,28 +41,28 @@ a:hover {
 // Login button starts
 .btn-primary {
     color: #fff;
-    background-color: #556ee6;
-    border-color: #556ee6;
+    background-color: #e65555;
+    border-color: #e65555;
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #485ec4;
-    border-color: #4458b8;
+    background-color: #c44848;
+    border-color: #b84444;
 }
 .btn-check:active+.btn-primary,
 .btn-check:checked+.btn-primary,
 .btn-primary.active,.btn-primary:active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #4458b8 !important;
-    border-color: #4053ad !important;
+    background-color: #b84444 !important;
+    border-color: #ad4040 !important;
 }
 .btn-check:focus+.btn-primary, .btn-primary:focus {
     color: #fff;
-    background-color: #485ec4 !important;
-    border-color: #4458b8 !important;
-    -webkit-box-shadow: 0 0 0 .15rem rgba(111,132,234,.5) !important;
-    box-shadow: 0 0 0 .15rem rgba(111,132,234,.5) !important;
+    background-color: #c44848 !important;
+    border-color: #b84444 !important;
+    -webkit-box-shadow: 0 0 0 .15rem rgba(234, 111, 111, 0.5) !important;
+    box-shadow: 0 0 0 .15rem rgba(234, 111, 111, 0.5) !important;
 }
 .oe_login_form .btn {
     display: inline-block;
@@ -80,18 +80,18 @@ a:hover {
 }
 .btn-secondary {
     color: #fff !important;
-    background-color: #74788d !important;
-    border-color: #74788d !important;
+    background-color: #8d7474 !important;
+    border-color: #8d7474 !important;
 }
 .btn-secondary:hover {
     color: #fff !important;
-    background-color: #636678 !important;
-    border-color: #5d6071 !important;
+    background-color: #786363 !important;
+    border-color: #715d5d !important;
 }
 .btn-secondary:active {
     color: #fff;
-    background-color: #5d6071 !important;
-    border-color: #575a6a !important;
+    background-color: #715d5d !important;
+    border-color: #6a5757 !important;
 }
 .btn-secondary i,.btn-secondary span {
     color: #fff !important;
@@ -110,10 +110,10 @@ a:hover {
     font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: #574949;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #ced4da !important;
+    border: 1px solid #dacece !important;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -137,4 +137,18 @@ form label {
 }
 .oe_login_form a.btn.btn-secondary i.fa.fa-database {
     margin-left: 5px;
+}
+
+.btn-link {
+    color: #ab2c2c !important;
+}
+
+.btn-link:hover {
+    color: #d95353 !important;
+}
+
+.disabled {
+    color: #d95353 !important;
+    background: #9a2c2c !important;
+    border: 1px solid #550707 !important;
 }
