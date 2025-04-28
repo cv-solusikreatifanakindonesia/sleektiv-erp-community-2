@@ -1,1 +1,8 @@
-<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M13 8a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v34a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V8Z" fill="#FC868B"/><path d="M37 19v18a9 9 0 1 1 0-18Z" fill="#1A6F66"/><path d="M13 31V13a9 9 0 1 1 0 18Z" fill="#2D6388"/><path d="M13 13H4v9a9 9 0 0 0 9 9V13Z" fill="#2EBCFA"/><path d="M37 37h9v-9a9 9 0 0 0-9-9v18Z" fill="#1AD3BB"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100px" height="100px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g><path style="opacity:0.989" fill="#019688" d="M 19.5,9.5 C 39.5028,9.33338 59.5028,9.50005 79.5,10C 84.6667,11.1667 87.8333,14.3333 89,19.5C 89.6667,36.8333 89.6667,54.1667 89,71.5C 87.7348,77.0615 84.2348,80.2282 78.5,81C 59.8333,81.3333 41.1667,81.6667 22.5,82C 18.6334,86.2016 14.4668,90.0349 10,93.5C 9.33333,68.5 9.33333,43.5 10,18.5C 11.775,13.888 14.9417,10.888 19.5,9.5 Z"/></g>
+<g><path style="opacity:1" fill="#f8fcfb" d="M 25.5,39.5 C 32.6647,38.4966 35.498,41.4966 34,48.5C 31.0293,52.0917 27.696,52.4251 24,49.5C 21.7292,45.6965 22.2292,42.3632 25.5,39.5 Z"/></g>
+<g><path style="opacity:1" fill="#f9fcfc" d="M 46.5,39.5 C 54.9909,38.9903 57.3242,42.4903 53.5,50C 47.7867,53.0594 44.4533,51.3927 43.5,45C 43.6132,42.6013 44.6132,40.7679 46.5,39.5 Z"/></g>
+<g><path style="opacity:1" fill="#f9fcfc" d="M 66.5,39.5 C 75.2404,38.7172 77.907,42.2172 74.5,50C 65.0504,52.0335 62.3838,48.5335 66.5,39.5 Z"/></g>
+</svg>
