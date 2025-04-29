@@ -48,3 +48,5 @@ Used :
 - Icon by [WiStudio](https://freeicons.io/generation-z-icon-set-5/resourceful-smart-solve-solution-solving-problemsolving-skillful-skill-problem-icon-305918) on [freeicons.io](https://freeicons.io)
 - Icon by [MD Badsha Meah](https://freeicons.io/job-interview/information-advice-online-instruction-job-icon-38583) on [freeicons.io](https://freeicons.io)
 - Icon by [MD Badsha Meah](https://freeicons.io/business-set-1/agreement-business-contract-document-convention-sign-treaty-icon-38073) on [freeicons.io](https://freeicons.io)
+- Icon by [ColourCreatype](https://freeicons.io/user-interface-24/menu-add-new-apps-category-icon-123858) on [freeicons.io]
+- Icon by [MD Badsha Meah](https://freeicons.io/basic-symbol/gear-services-gears-preferences-settings-icon-38524) on [freeicons.io]
