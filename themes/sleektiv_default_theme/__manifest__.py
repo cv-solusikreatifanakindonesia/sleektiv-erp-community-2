@@ -30,7 +30,7 @@
     "category": "Themes/Backend",
     "summary": "Sleektiv Default Theme is an attractive theme for backend",
     "description": """Minimalist and elegant theme for Sleektiv backend""",
-    "author": "CV. SOLUSI KREATIF ANAK INDONESIA",
+    "author": "Cybrosys Techno Solutions, CV. SOLUSI KREATIF ANAK INDONESIA",
     "company": "CV. SOLUSI KREATIF ANAK INDONESIA",
     "maintainer": "CV. SOLUSI KREATIF ANAK INDONESIA",
     "website": "https://www.solusikreatifanakindonesia.com",
