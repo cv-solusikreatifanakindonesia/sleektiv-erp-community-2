@@ -2,7 +2,7 @@
 import { registry } from '@web/core/registry';
 import { ListController } from "@web/views/list/list_controller";
 import { listView } from "@web/views/list/list_view";
-import { useState, useRef } from "@odoo/owl";
+import { useState, useRef } from "@sleektiv/owl";
 import { useListener, useService} from "@web/core/utils/hooks";
 export class AccountMoveLineListController extends ListController {
      constructor() {
