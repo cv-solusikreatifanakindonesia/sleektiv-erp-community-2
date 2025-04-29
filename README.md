@@ -11,7 +11,6 @@ Used :
 3. NodeJS 22.14.0
 
 ## Credits:
-----
 - [Odoo S.A](https://www.odoo.com/)
 - [Cybrosys Technologies Pvt. Ltd](https://www.cybrosys.com/)
 - Icon by [Reda](https://freeicons.io/ecommerce-and-marketing-icons-set/sales-coins-shop-marketing-marketing-icons-icon-52689) on [freeicons.io](https://freeicons.io)
